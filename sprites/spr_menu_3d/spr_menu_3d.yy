@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_menu_3d",
-  "bbox_bottom": 24,
+  "bbox_bottom": 23,
   "bbox_left": 0,
   "bbox_right": 17,
   "bbox_top": 0,

@@ -1,5 +1,6 @@
-/// @description	Description
-/// @param {real}	ability
+/// @description				Adds an active ability for the player
+/// @param {real} ability		Ability enum from playerAbilities
+
 
 function add_ability(ability) {
 	
@@ -31,7 +32,7 @@ function add_ability(ability) {
 		break
 		
 		default:
-			show_message("Ability not in list")
+			show_message("Ability not in list: " + ability)
 		break
 	}
 	

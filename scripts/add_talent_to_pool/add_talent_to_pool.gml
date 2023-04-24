@@ -9,10 +9,12 @@ function add_talent_to_pool(talentEnum, name, heroEnum = heroes.any, maxLevel = 
 		talents[talentEnum][talentProps.enabled] = true
 		talents[talentEnum][talentProps.hero] = heroEnum
 		talents[talentEnum][talentProps.name] = name
-		talents[talentEnum][talentProps.curLevel] = 0
+		//talents[talentEnum][talentProps.curLevel] = 0
 		talents[talentEnum][talentProps.maxLevel] = maxLevel
 		talents[talentEnum][talentProps.levelRequirement] = 0
 		talents[talentEnum][talentProps.talentRequirement] = -1
 		talents[talentEnum][talentProps.rarity] = 2
+		
+		
 	}
 }

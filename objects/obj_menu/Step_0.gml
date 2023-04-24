@@ -74,7 +74,5 @@ if (centeredY) {
 	y = round(marginY / 2)
 }
 
-
 scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
-

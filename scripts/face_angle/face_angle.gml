@@ -1,5 +1,5 @@
-/// @description Sets facingAngle or xVel and yVel to requested angle
-/// @param {real} angle vector to calculate
+/// @description			Sets facingAngle or xVel and yVel to requested angle
+/// @param {real} angle		Vector to calculate
 
 function face_angle(angle) {
 	//if (variable_instance_exists(id, facingAngle)) {

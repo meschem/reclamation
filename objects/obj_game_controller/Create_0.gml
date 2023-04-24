@@ -4,16 +4,20 @@ talents = []
 
 activeAbilityControllers = []
 
-init_talents_jonah()
+init_run_globals()
+
+//init_talents_jonah()
 define_colors()
 set_available_talents()
 
 // some of these will need to be made global
 
-playerTotalGold = 0
-playerGold = 0
-playerXp = 0
-playerLevel = 1
+playerTotalGold = global.playerTotalGold
+playerGold = global.playerGold
+playerXp = global.playerXp
+playerLevel = global.playerLevel
+playerAbilityTreeLevel = global.abilityTreeLevel
+
 playerXpLevelTable = [
 	250,
 	500,
@@ -37,13 +41,19 @@ playerXpLevelTable = [
 	16000
 ]
 
+levelUpRewardTable = [
+	levelUpRewards.abilitySelect,
+	levelUpRewards.abilitySelect,
+	levelUpRewards.abilitySelect,
+	levelUpRewards.abilitySelect,
+	levelUpRewards.abilitySelect
+]
+
 window_set_cursor(cr_none)
 
 cursor_sprite = spr_cursor_aiming
 
-instance_create_depth(
-	room_width / 2,
-	room_height / 2,
-	depths.player,
-	obj_jonah
-)
+spawn_player()
+spawn_ability_trees()
+
+process_all_talents()

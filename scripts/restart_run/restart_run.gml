@@ -1,5 +1,6 @@
 ///@description   Restarts the run
 
 function restart_run() {
-	room_goto(rm_combat_testing)
+	global.runStarted = false
+	room_goto(rm_start_dev)
 }

@@ -1,3 +1,5 @@
+///@description						Activates a button
+///@param {id.Instance}	button		Button to activate
 
 function activate_button(button = id) {
 	switch (button.onClick) {
@@ -9,7 +11,7 @@ function activate_button(button = id) {
 		 break
 		 
 		 case buttonOnClickBehaviors.restartGame:
-			room_goto(rm_combat_testing)
+			room_goto(rm_start_dev)
 		 break
 		 
 		 case buttonOnClickBehaviors.quitGame:

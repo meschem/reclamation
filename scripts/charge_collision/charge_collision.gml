@@ -1,8 +1,8 @@
-/// @description   Description
+/// @description			Description
 /// @param {real}			xPos		Position to create AOE
 /// @param {real}			yPos		Position to create AOE
 /// @param {real}			angle		Angle of collision
-/// @param {id.instance}	target		Target to deal direct damage to
+/// @param {id.Instance}	target		Target to deal direct damage to
 
 function charge_collision(xPos, yPos, angle, target = noone) {
 	var directDamage = 50

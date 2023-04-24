@@ -1,22 +1,39 @@
+// Draw XP Bar
+
+draw_text(
+	5, camera_get_view_height(view_camera[0]) - 24,
+	obj_game_controller.playerLevel
+)
+
 draw_sprite_ext(
 	spr_px_black, 0,
 	0,
-	camera_get_view_height(view_camera[0]) - 7,
+	camera_get_view_height(view_camera[0]) - 10,
 	camera_get_view_width(view_camera[0]),
-	4,
+	10,
 	0,
 	c_white,
 	1
 )
+
+draw_sprite_ext(
+	spr_px_purple, 0,
+	1,
+	camera_get_view_height(view_camera[0]) - 10 + 1,
+	xpRatio * (camera_get_view_width(view_camera[0]) - 1),
+	8 - 1,
+	0,
+	c_white,
+	1
+)
+
+// Draw Health Pips
 
 var maxPips = ceil(obj_player.maxHp / playerHealthPerPip)
 var fillPips = floor(obj_player.hp / playerHealthPerPip)
 var sprWidth = sprite_get_width(spr_health_pip) - 2
 var healthBarX = 2
 var healthBarY = 18
-
-draw_text(100, 5, fillPips)
-draw_text(110, 5, maxPips)
 
 for (var i = 0; i < maxPips; i++) {
 	var yOffset = (i % 2 = 0) ? 0 : 3

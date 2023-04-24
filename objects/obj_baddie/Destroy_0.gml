@@ -12,8 +12,8 @@ obj_game_controller.playerXp += xp
 
 check_for_level_up()
 
-var roomEnd = check_for_room_end()
+//var roomEnd = check_for_room_end()
 
-if (roomEnd) {
-	show_message("LEVEL ENDED")
-}
+//if (roomEnd) {
+//	show_message("LEVEL ENDED")
+//}

@@ -10,6 +10,18 @@ age++
 
 timeDisplay = get_time_from_age(age)
 
+if (
+	state != roomStates.completed &&
+	instance_number(obj_baddie) == 0 &&
+	instance_number(obj_spawner) == 0
+) {
+	state = roomStates.completed
+	room_end_store_globals()
+	show_message("Level Complete!")
+	room_goto(nextLevel)
+}
+
+
 /// Spawners are setup in creation code
 
 //skellySpawnCd--

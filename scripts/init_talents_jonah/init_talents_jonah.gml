@@ -23,6 +23,7 @@ function init_talents_jonah() {
 	}
 	
 	enum talentList {
+		none,
 		heavyHammers,
 		shockwave,
 		damageBoost,
@@ -41,6 +42,8 @@ function init_talents_jonah() {
 	
 	for (var i = 0; i < talentList.length; i++) {
 		obj_game_controller.talents[i][talentProps.enabled] = false
+		obj_game_controller.talents[i][talentProps.curLevel] = 0
+		obj_game_controller.talents[i][talentProps.name] = "Unnamed"
 	}
 	
 	add_talent_to_pool(talentList.heavyHammers, "Heavy Hammer")
@@ -53,4 +56,6 @@ function init_talents_jonah() {
 	add_talent_to_pool(talentList.healthUp, "Health Boost")
 	add_talent_to_pool(talentList.warStomp, "War Stomp")
 	add_talent_to_pool(talentList.razors, "Razors")
+	
+	
 }

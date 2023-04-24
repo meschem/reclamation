@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_menu_button_orange",
+    "path": "sprites/spr_menu_button_orange/spr_menu_button_orange.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

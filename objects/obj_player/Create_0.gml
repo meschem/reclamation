@@ -25,6 +25,13 @@ enum playerAbilities {
 	length
 }
 
+enum levelUpRewards {
+	abilitySelect,
+	weaponUpgrade,
+	heroTalent,
+	statPoint
+}
+
 depth = depths.player
 
 maxHp = 30
@@ -70,6 +77,10 @@ sideArms = []
 chargeCurrentFrame = 0
 chargeMaxLength = 1
 isCharging = false
+
+abilityTrees = [
+	
+]
 
 add_weapon(playerWeapons.warHammer)
 //add_ability(playerAbilities.warStomp)

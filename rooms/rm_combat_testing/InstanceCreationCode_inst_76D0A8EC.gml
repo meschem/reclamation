@@ -1,12 +1,15 @@
+nextLevel = rm_combat_testing_b
+
 var spawner
 
 setup_spawner(obj_skeleton, 0, 6)
 
 //setup_spawner(obj_zombie, 0, 40, 360)
 
-//spawner = setup_spawner(obj_skeleton, 1, 9)
-//spawner.add_enemy_type(obj_skeleton)
-//spawner.add_enemy_type(obj_burning_skeleton)
+spawner = setup_spawner(obj_skeleton, 1, 4)
+spawner.add_enemy_type(obj_skeleton)
+spawner.add_enemy_type(obj_skeleton)
+spawner.add_enemy_type(obj_burning_skeleton)
 
 //setup_spawner(obj_skeleton, 2, 6)
 //setup_spawner(obj_skeleton_warrior, 2, 1, 600)
