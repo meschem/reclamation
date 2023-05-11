@@ -1,21 +1,78 @@
-/// @description Insert description here
-// You can write your code in this editor
 
 name = "No Name"
 description = "No description yet"
+
 icon = spr_not_set
+iconX = -999
+iconY = -999
+
+autoCast = false
+enabled = false
+onHitAbility = false
+onStrikeAbility = false
 active = false
+curCharges = 1
+maxCharges = 1
+
+age = 0
 
 level = 0
 maxLevel = 3
 
-curCd = 0
+curCd = 300
 maxCd = 300
 
-enabled = false
+treeLevel = 2
+hotkey = -1
+
+///@return {bool}
+canActivate = function() {
+	if (!active)
+		return false
+	
+	if (curCharges <= 0)
+		return false
+	
+	return true
+}
 
 activate = function() {
-	show_message("activate() not set on ability object")
+	if (curCharges == maxCharges) {
+		curCd = maxCd	
+	}
+
+	curCharges--
+	
+	use()
+}
+
+use = function() {
+	show_message("use() not set on ability object")
+}
+
+levelUp = function () {
+	level++
+	
+	enabled = true
+	
+	iconX = 1 + (26 * (treeLevel - 1))
+	iconY = 42
+	
+	if (active) {
+		obj_player.activeAbilities[treeLevel - 1] = id
+	}
+	
+	if (onHitAbility) {
+		array_push(obj_player.onHitAbilities, id)
+		//obj_player.onHitAbilities[array_length(obj_player.onHitAbilities)] = id
+	}
+	
+	if (onStrikeAbility) {
+		array_push(obj_player.onStrikeAbilities, id)
+		//obj_player.onStrikeAbilities[array_length(obj_player.onStrikeAbilities)] = id
+	}
+	
+	onLevel()
 }
 
 onLevel = function () {

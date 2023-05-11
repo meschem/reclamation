@@ -19,7 +19,7 @@ function init_run_globals() {
 		
 		global.talents = []
 		
-		global.abilityTreeLevel = 0
+		global.abilityTreeLevel = 1
 		
 		init_talents_jonah()
 	} else {

@@ -17,19 +17,21 @@ if (distanceMax > 0) {
 		return 0
 	}
 }
+
+clean_hit_list(hitList)
 	
 if (angleSpriteToVelocity)
 	image_angle = get_angle(xVel, yVel)
 	
 var target = instance_place(x, y, obj_baddie)
 
-if (target != noone) {
-	//audio_play_sound(soundOnHit, 1, false)
+if (target != noone && !array_contains(hitList, target)) {
+	array_push(hitList, new hitListEntry(target, 60))
 	
 	onCollideFx()
 	
 	var critHit = (critChance > random(1))
-	var damage = critHit ? damageDirect * 2 : damageDirect
+	var damage = critHit ? damageDirect * critMultiplier : damageDirect
 	var killed = damage_baddie(target, damage, critHit) //target.hp -= damageDirect
 
 	if (!killed && knockback > 0) {
@@ -39,17 +41,19 @@ if (target != noone) {
 	
 	targetsHit++
 	
-	if (targetsHit >= targetsMax) {
-		var shockwaveLevel = obj_game_controller.talents[talentList.shockwave][talentProps.curLevel]
-		
-		if (shockwaveLevel > 0) activate_shockwave(shockwaveLevel, x, y, get_angle(xVel, yVel))
-
-		instance_destroy()
-		return 0
+	if (checkOnStrikeAbilities) {
+		for (var i = 0; i < array_length(obj_player.onStrikeAbilities); i++) {
+			obj_player.onStrikeAbilities[i].activate(id)
+		}
 	}
+	
+	if (targetsHit >= targetsMax) {
+		instance_destroy()
+	}
+} else {
+	x += xVel
+	y += yVel
+
+	depth = depths.playerProjectile - y
 }
 
-x += xVel
-y += yVel
-
-depth = depths.playerProjectile - y

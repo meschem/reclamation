@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "active_abilities",
-    "path": "folders/Scripts/active_abilities.yy",
+    "name": "jonah",
+    "path": "folders/Scripts/active_abilities/jonah.yy",
   },
 }

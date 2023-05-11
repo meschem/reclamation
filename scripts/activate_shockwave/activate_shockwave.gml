@@ -11,10 +11,10 @@ function activate_shockwave(level, xPos, yPos, angle) {
 	inst.sprite_index = spr_shockwave_cone
 	inst.image_angle = angle
 	
-	var damage = get_shockwave_damage()
+	var damage = get_shockwave_damage(level)
 
 	var list = ds_list_create();
-	var count = collision_circle_list(x, y, 64, obj_baddie, false, true, list, false);
+	var count = collision_circle_list(xPos, yPos, 64, obj_baddie, false, true, list, false);
 	
 	if (count > 0)
 	{

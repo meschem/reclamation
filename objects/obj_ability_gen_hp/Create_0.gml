@@ -17,4 +17,5 @@ enabled = false
 
 onLevel = function() {
 	obj_player.maxHp += 10
+	obj_player.hp = obj_player.maxHp
 }

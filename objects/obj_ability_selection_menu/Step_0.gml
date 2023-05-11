@@ -32,3 +32,10 @@ if (keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1
 
 scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
+
+var buttonsWidth = menuWidth - (paddingX * 2)
+
+for (var i = 0; i < array_length(buttons); i++) {
+	buttons[i].x = x + paddingX + (i * 120)
+	buttons[i].y = y + paddingTop + headerHeight
+}

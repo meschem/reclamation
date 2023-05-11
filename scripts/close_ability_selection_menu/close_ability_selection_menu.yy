@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "create_ability_button",
+  "name": "close_ability_selection_menu",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

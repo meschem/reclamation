@@ -4,6 +4,32 @@ function define_structs() {
 
 }
 
+///@description						Pairing of instance and clearframe to manage hitList arrays
+///@param {id.Instance} _instance	Instance to reference
+///@param {real} _maxAge			How many frames before the instance is cleared
+function hitListEntry(_instance, _maxAge) constructor {
+	instance = _instance
+	clearFrame = get_current_frame() + _maxAge
+}
+
+function keyMouseInput() constructor {
+	moveUp = ord("W")
+	moveRight = ord("D")
+	moveDown = ord("S")
+	moveLeft = ord("A")
+	
+	useWeaponPrimary = mb_left
+	useWeaponSecondary = mb_right
+	
+	useAbility = [
+		ord("Q"),
+		ord("E"),
+		ord("R"),
+		ord("T"),
+		ord("G")
+	]
+}
+
 ///@param {real} _top
 ///@param {real} _right
 ///@param {real} _bottom
@@ -23,8 +49,8 @@ function vec2(_x, _y) constructor {
 }
 
 ///@param {string} _body  
-///@param {string}  _font 
-///@param {enum}  _color
+///@param {asset.GMFont}  _font 
+///@param {real}  _color
 ///@param {any} _location 
 ///@param {bool} _centered 
 ///@param {real} _maxWidth

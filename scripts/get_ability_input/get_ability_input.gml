@@ -4,16 +4,21 @@ function get_ability_input() {
 	var index = -1
 	var controller	
 	var validated = false
+	var canUse
 	
-	if (keyboard_check_pressed(ord("Q"))) {
-		index = 0
+	for (var i = 0; i < array_length(kmInput.useAbility); i++) {
+		if (keyboard_check_pressed(kmInput.useAbility[i])) {
+			index = i
+			
+			if (activeAbilities[i] != noone) {
+				canUse = activeAbilities[i].canActivate()
+				
+				if (canUse) {
+					activeAbilities[i].activate()
+				}
+			}			
+		}	
 	}
-	
-	if (keyboard_check_pressed(ord("E")))
-		index = 1
-	
-	if (keyboard_check_pressed(ord("R")))
-		index = 2
 		
 	if (index == -1) {
 		return 0
@@ -25,16 +30,16 @@ function get_ability_input() {
 		return 0
 	}
 		
-	with (obj_game_controller.activeAbilityControllers[index]) {
-		if (cooldown == 0) {
-			validated = true
-			cooldown = maxCd
-		} else {
-			show_debug_message(cooldown)
-		}
-	} 
+	//with (obj_game_controller.activeAbilityControllers[index]) {
+	//	if (cooldown == 0) {
+	//		validated = true
+	//		cooldown = maxCd
+	//	} else {
+	//		show_debug_message(cooldown)
+	//	}
+	//} 
 
-	if (validated) {
-		activate_ability(ability)
-	}
+	//if (validated) {
+	//	activate_ability(ability)
+	//}
 }

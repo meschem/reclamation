@@ -13,6 +13,12 @@ active = true
 curCd = 0
 maxCd = 440
 
-activate = function() {
+treeLevel = 1
+
+use = function() {
 	activate_war_stomp(level)
+}
+
+onLevel = function() {
+	
 }

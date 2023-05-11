@@ -27,6 +27,6 @@ function get_attack_input() {
 	if (isAttacking) {
 		return point_direction(0, 0, rightAxisHor, rightAxisVert)
 	} else {
-		return 0
+		return point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 	}
 }

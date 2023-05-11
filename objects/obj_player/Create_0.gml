@@ -32,6 +32,8 @@ enum levelUpRewards {
 	statPoint
 }
 
+kmInput = new keyMouseInput()
+
 depth = depths.player
 
 maxHp = 30
@@ -71,7 +73,18 @@ hitWall = false
 razorCd = 240
 razorMaxCd = 480
 
-activeAbilities = []
+activeAbilities = [
+	noone,
+	noone,
+	noone,
+	noone,
+	noone
+]
+
+onHitAbilities = []
+onAttackAbilities = []
+onStrikeAbilities = []
+
 sideArms = []
 
 chargeCurrentFrame = 0
@@ -79,7 +92,9 @@ chargeMaxLength = 1
 isCharging = false
 
 abilityTrees = [
-	
+	obj_abil_tree_jonah_combat,
+	obj_abil_tree_jonah_defense,
+	obj_abil_tree_jonah_storm
 ]
 
 add_weapon(playerWeapons.warHammer)
@@ -87,3 +102,5 @@ add_weapon(playerWeapons.warHammer)
 //add_ability(playerAbilities.charge)
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
+
+generate_ability_instances()

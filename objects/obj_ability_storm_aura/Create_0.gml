@@ -12,3 +12,9 @@ active = false
 
 curCd = 0
 maxCd = 200
+
+treeLevel = 1
+
+activate = function() {
+	
+}

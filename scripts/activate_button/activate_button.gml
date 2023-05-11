@@ -17,5 +17,9 @@ function activate_button(button = id) {
 		 case buttonOnClickBehaviors.quitGame:
 			game_end()
 		 break
+		 
+		 case buttonOnClickBehaviors.addAbility:
+			
+		 break
 	}
 }

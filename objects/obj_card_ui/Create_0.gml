@@ -1,3 +1,7 @@
+// FIXME.0
+x = -999
+y = -999
+
 parentMenu = noone
 
 state = buttonStates.normal
@@ -22,3 +26,9 @@ bodyText = new text(
 )
 
 menuOffset = new vec2(0, 0)
+
+ability = noone
+
+onClick = function() {
+	show_message("onClick not set")
+}

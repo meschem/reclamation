@@ -1,5 +1,7 @@
 /// @description Init
 
+event_inherited()
+
 angleSpriteToVelocity = false
 
 lifeSpan = -1
@@ -27,6 +29,8 @@ shadowSprite = spr_war_hammer_shadow
 soundOnHit = snd_clack
 
 critChance = 0.1
+
+hitList = []
 
 onCollideFx = function()
 {

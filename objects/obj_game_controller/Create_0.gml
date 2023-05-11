@@ -1,10 +1,13 @@
 /// @description Init
 
+gameFrame = 0
+
 talents = []
 
 activeAbilityControllers = []
 
 init_run_globals()
+
 
 //init_talents_jonah()
 define_colors()

@@ -14,14 +14,7 @@ function damage_player(hitBy, damage = -1) {
 	
 	obj_player.lastHitOn = age
 	
-	with (obj_game_controller) {
-		var spikedArmorLvl = talents[talentList.spikedArmor][talentProps.curLevel]
-		
-		if (spikedArmorLvl > 0) {
-			activate_spiked_armor(spikedArmorLvl)
-		
-		}
-	}
+	activate_player_on_hit_abilities()
 	
 	inst = instance_create_depth(x, y - 4, depths.ui, obj_moving_text)
 	

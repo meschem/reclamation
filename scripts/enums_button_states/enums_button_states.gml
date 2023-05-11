@@ -11,7 +11,8 @@ function enums_button_states(){
 		loadSubMenu,
 		addTalent,
 		quitGame,
-		restartGame
+		restartGame,
+		addAbility
 	}
 	
 	enum buttonStates {

@@ -1,15 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function use_weapon(weapon) {
-	
 	// Will move weapons to individual scripts
 	
 	switch (weapon) {
 		case playerWeapons.warHammer:
 			if (warHammerCdCur <= 0) {
-				attack_war_hammer()
+				attack_war_hammer(attackAngle)
 			}
-		break;
+		break
 		
 		case playerWeapons.dagger:
 				attack_dagger()
@@ -24,6 +23,6 @@ function use_weapon(weapon) {
 				daggerCdCur = daggerCdMax
 				audio_play_sound(snd_woosh, 1, false)
 			}
-		break;
+		break
 	}
 }

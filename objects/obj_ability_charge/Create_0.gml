@@ -15,6 +15,8 @@ maxCd = 400
 
 enabled = false
 
-activate = function() {
+treeLevel = 1
+
+use = function() {
 	activate_charge(level)
 }

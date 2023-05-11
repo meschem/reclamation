@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "jonah",
-    "path": "folders/Objects/abilities/jonah.yy",
+    "name": "combat",
+    "path": "folders/Objects/abilities/jonah/trees/combat.yy",
   },
   "parentObjectId": {
     "name": "obj_ability",
