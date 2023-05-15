@@ -1,3 +1,7 @@
+enum playerCharacters {
+	jonah
+}
+
 // Weapons are used on right stick directional input
 enum playerWeapons {
 	warHammer,
@@ -103,4 +107,4 @@ add_weapon(playerWeapons.warHammer)
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
 
-generate_ability_instances()
+//generate_ability_instances()

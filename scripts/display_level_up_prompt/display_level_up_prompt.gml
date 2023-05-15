@@ -1,26 +1,30 @@
 ///@description		Provides talent selection to player
 
 function display_level_up_prompt() {
-	var availableTalentIndexes = get_available_talents()
-	var shuffledTalents = array_shuffle(availableTalentIndexes)
-	var selectionSize = min(array_length(shuffledTalents), 3)
-	var menu = create_menu("Level Up!")	
-	var button, displayText, talentIndex
-
-	menu.menuWidth = menuWidths.talents
-	
-	set_game_pause_state(true)
-	
-	for (var i = 0; i < selectionSize; i++) {
-		talentIndex = shuffledTalents[i]
-		displayText = obj_game_controller.talents[talentIndex][talentProps.name]
+	with (obj_game_controller) { 
+		show_debug_message("plvl = " + string(playerLevel))
 		
-		button = create_button(displayText)
-		button.onClick = buttonOnClickBehaviors.addTalent
-		button.talentToAdd = talentIndex
+		if (playerLevel - 1 >= array_length(levelUpRewardTable)) {
+			show_debug_message("Player Level exceeds max length of reward table")
+			return 0
+		}
 
-		add_button_to_menu(menu, button)
+		switch (levelUpRewardTable[playerLevel - 2]) {
+			case levelUpRewards.abilitySelect:
+				display_level_abil_select_prompt()
+				break
+			
+			case levelUpRewards.heroTalent:
+				display_level_talent_prompt()
+				break
+			
+			case levelUpRewards.statPoint:
+				show_message("stat point prompt goes here")
+				break
+			
+			case levelUpRewards.weaponUpgrade:
+				show_message("weapon upgrade prompt goes here")
+				break
+		}
 	}
-	
-	menu.display = true
 }

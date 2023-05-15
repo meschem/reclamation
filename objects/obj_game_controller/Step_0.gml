@@ -12,6 +12,10 @@ if (keyboard_check_pressed(vk_f4)) {
 }
 
 // f5 is used for pause
+if (keyboard_check_pressed(vk_f5)) {
+	with (obj_game_controller.abilityTrees[0]) { testest = 567 }
+	show_debug_message("Breaking")
+}
 
 if (keyboard_check_pressed(vk_f6)) {
 	show_debug_message("Spawning wraith group")
@@ -28,14 +32,7 @@ if (keyboard_check_pressed(vk_f8)) {
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
-	var menu = instance_create_depth(0, 0, depths.ui, obj_ability_selection_menu)
-	var abilityIndex = obj_game_controller.playerAbilityTreeLevel - 1
-	
-	create_ability_up_button(obj_player.abilityTrees[0], menu)
-	create_ability_up_button(obj_player.abilityTrees[1], menu)
-	create_ability_up_button(obj_player.abilityTrees[2], menu)
-	
-	obj_game_controller.playerAbilityTreeLevel++
+	display_level_abil_select_prompt()
 }
 
 if (mouse_check_button_pressed(mb_right)) {

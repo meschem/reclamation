@@ -12,7 +12,7 @@ if (enabled) {
 		switch (ascii) {
 			case 69: hotkey = "Q" break
 			case 82: hotkey = "E" break
-
+			case 84: hotkey = "R" break
 			default: hotkey = string(ascii) break
 		}
 

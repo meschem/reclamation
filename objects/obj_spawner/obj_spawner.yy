@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "spawning",
-    "path": "folders/Objects/logic/spawning.yy",
+    "path": "folders/Objects/controllers/spawning.yy",
   },
   "parentObjectId": null,
   "persistent": false,

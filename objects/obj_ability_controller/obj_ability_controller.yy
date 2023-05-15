@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "abilities",
-    "path": "folders/Objects/logic/abilities.yy",
+    "path": "folders/Objects/controllers/abilities.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -6,6 +6,8 @@ function init_run_globals() {
 	
 	if (!global.runStarted) {
 		show_debug_message("Initiating globals")
+		
+		window_set_size(1280, 720)
 
 		global.runStarted = true
 		
@@ -20,6 +22,8 @@ function init_run_globals() {
 		global.talents = []
 		
 		global.abilityTreeLevel = 1
+		
+		global.treeStore = []
 		
 		init_talents_jonah()
 	} else {

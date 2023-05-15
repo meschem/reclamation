@@ -18,14 +18,33 @@ if (distanceMax > 0) {
 	}
 }
 
+spawnPeriodicFx()
+
+calcVelocity()
+
+if (movementType = projMovementTypes.velocity) {
+	x += xVel
+	y += yVel
+
+	depth = depths.playerProjectile - y
+} else if (movementType = projMovementTypes.explicit) {
+	if (attachedTo != noone) {
+		x = attachedTo.x + xVel
+		y = attachedTo.y + yVel
+	} else {
+		x = xVel
+		y = yVel
+	}
+} 
+
 clean_hit_list(hitList)
-	
+
 if (angleSpriteToVelocity)
 	image_angle = get_angle(xVel, yVel)
 	
 var target = instance_place(x, y, obj_baddie)
 
-if (target != noone && !array_contains(hitList, target)) {
+if (target != noone && !hitlist_contains(hitList, target)) {
 	array_push(hitList, new hitListEntry(target, 60))
 	
 	onCollideFx()
@@ -47,13 +66,8 @@ if (target != noone && !array_contains(hitList, target)) {
 		}
 	}
 	
-	if (targetsHit >= targetsMax) {
+	if (targetsMax > 0 && targetsHit >= targetsMax) {
 		instance_destroy()
 	}
-} else {
-	x += xVel
-	y += yVel
-
-	depth = depths.playerProjectile - y
 }
 

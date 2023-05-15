@@ -10,9 +10,5 @@ function room_end_store_globals() {
 	global.playerLevel = obj_game_controller.playerLevel
 	global.talents = obj_game_controller.talents
 
-	//with (obj_game_controller) {
-	//	for (var i = 0; i < array_length(talents); i++) {
-	//		global.talents[] = talents[i][talentProps.curLevel]
-	//	}
-	//}	
+	store_ability_trees()
 }

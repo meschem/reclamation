@@ -8,6 +8,8 @@ function generate_ability_instances() {
 		for (var i = 0; i < array_length(abilityTrees); i++) {
 			tree = create_instance(abilityTrees[0])
 			
+			show_debug_message("created tree")
+			
 			for (var j = 0; j < array_length(tree.abilities); j++) {
 				//create_instance(tree.abilities[j])
 			}

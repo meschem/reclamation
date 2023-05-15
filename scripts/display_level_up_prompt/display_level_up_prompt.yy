@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "general",
-    "path": "folders/Scripts/talents/general.yy",
+    "name": "levels",
+    "path": "folders/Scripts/levels.yy",
   },
 }

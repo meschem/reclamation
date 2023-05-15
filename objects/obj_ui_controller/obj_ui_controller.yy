@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "logic",
-    "path": "folders/Objects/logic.yy",
+    "name": "controllers",
+    "path": "folders/Objects/controllers.yy",
   },
   "parentObjectId": null,
   "persistent": false,

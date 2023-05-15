@@ -47,15 +47,13 @@ function init_talents_jonah() {
 	}
 	
 	add_talent_to_pool(talentList.heavyHammers, "Heavy Hammer")
-	add_talent_to_pool(talentList.shockwave, "Shockwave")
+	//add_talent_to_pool(talentList.shockwave, "Shockwave")
 	add_talent_to_pool(talentList.damageBoost, "Damage Boost")
 	add_talent_to_pool(talentList.increasedRange, "Increased Range")
-	add_talent_to_pool(talentList.spikedArmor, "Spiked Armor")
-	add_talent_to_pool(talentList.stormAura, "Storm Aura")
+	//add_talent_to_pool(talentList.spikedArmor, "Spiked Armor")
+	//add_talent_to_pool(talentList.stormAura, "Storm Aura")
 	add_talent_to_pool(talentList.moveSpeedUp, "Speed Boost")
 	add_talent_to_pool(talentList.healthUp, "Health Boost")
-	add_talent_to_pool(talentList.warStomp, "War Stomp")
-	add_talent_to_pool(talentList.razors, "Razors")
-	
-	
+	//add_talent_to_pool(talentList.warStomp, "War Stomp")
+	//add_talent_to_pool(talentList.razors, "Razors")
 }

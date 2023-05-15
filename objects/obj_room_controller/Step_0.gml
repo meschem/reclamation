@@ -20,37 +20,3 @@ if (
 	show_message("Level Complete!")
 	room_goto(nextLevel)
 }
-
-
-/// Spawners are setup in creation code
-
-//skellySpawnCd--
-//skellyWarriorCd--
-//wraithCd--
-
-//if (skellySpawnCd <= 0) {
-//	spawn_baddie(obj_skeleton)
-//	skellySpawnCd = skellySpawnCdMax
-//}
-
-//if (skellyWarriorCd <= 0) {
-//	spawn_baddie(obj_skeleton_warrior)
-//	skellyWarriorCd = skellyWarriorCdMax
-//}
-
-//if (wraithCd <= 0) {
-//	spawn_baddie(obj_wraith)
-//	wraithCd = wraithCdMax
-//}
-
-//if (skellySpawnCdMax > 15 && age % 240 = 0) {
-//	skellySpawnCdMax--
-//}
-
-//if (skellyWarriorCdMax > 15 && age % 120 = 0) {
-//	skellyWarriorCdMax -= 5
-//}
-
-//if (wraithCdMax > 15 && age % 120 = 0) {
-//	wraithCdMax -= 5
-//}

@@ -8,7 +8,6 @@ activeAbilityControllers = []
 
 init_run_globals()
 
-
 //init_talents_jonah()
 define_colors()
 set_available_talents()
@@ -46,6 +45,7 @@ playerXpLevelTable = [
 
 levelUpRewardTable = [
 	levelUpRewards.abilitySelect,
+	levelUpRewards.heroTalent,
 	levelUpRewards.abilitySelect,
 	levelUpRewards.abilitySelect,
 	levelUpRewards.abilitySelect,
@@ -57,6 +57,6 @@ window_set_cursor(cr_none)
 cursor_sprite = spr_cursor_aiming
 
 spawn_player()
-spawn_ability_trees()
+//spawn_ability_trees()
 
 process_all_talents()

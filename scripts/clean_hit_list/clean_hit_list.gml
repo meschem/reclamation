@@ -5,7 +5,7 @@ function clean_hit_list(hitList) {
 	
 	//FIXME PERF
 	for (var i = 0; i < array_length(hitList); i++) {
-		if (hitList[i].clearFrame >= frame) {
+		if (frame >= hitList[i].clearFrame) {
 			array_delete(hitList, i, 1)
 		}
 	}
