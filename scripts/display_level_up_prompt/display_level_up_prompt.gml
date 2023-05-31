@@ -1,7 +1,7 @@
 ///@description		Provides talent selection to player
 
 function display_level_up_prompt() {
-	with (obj_game_controller) { 
+	with (obj_game_controller) {
 		show_debug_message("plvl = " + string(playerLevel))
 		
 		if (playerLevel - 1 >= array_length(levelUpRewardTable)) {

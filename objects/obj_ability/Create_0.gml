@@ -25,6 +25,8 @@ maxCd = 300
 treeLevel = 2
 hotkey = -1
 
+runes = []
+
 ///@return {bool}
 canActivate = function() {
 	if (!active)
@@ -77,4 +79,16 @@ levelUp = function () {
 
 onLevel = function () {
 	show_debug_message(name + " leveled up!")
+}
+
+///@description						Adds a rune to the ability
+///@param {string} _name			Name of the rune
+///@param {string} _description		Description for selecting the rune
+addRune = function (_name, _description) {
+	var runeIndex = array_length(runes)
+	
+	runes[runeIndex] = {
+		name: _name,
+		description: _description
+	}
 }

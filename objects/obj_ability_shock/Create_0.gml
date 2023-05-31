@@ -5,8 +5,8 @@
 // Inherit the parent event
 event_inherited()
 
-name = "Lightning Bolt"
-description = "Strikes the closest target with a lightning bolt"
+name = "Chain Lightning"
+description = "Shoots out a bolt of lightning that bounces between targets"
 icon = spr_ability_icon_war_stomp
 maxCharges = 3
 active = true

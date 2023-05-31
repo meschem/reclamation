@@ -45,7 +45,7 @@ if (angleSpriteToVelocity)
 var target = instance_place(x, y, obj_baddie)
 
 if (target != noone && !hitlist_contains(hitList, target)) {
-	array_push(hitList, new hitListEntry(target, 60))
+	array_push(hitList, new hitListEntry(target, damageFrameCooldown))
 	
 	onCollideFx()
 	

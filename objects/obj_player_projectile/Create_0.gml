@@ -27,7 +27,7 @@ damageDirect = 1
 targetsMax = 1
 targetsHit = 0
 
-damageFrameCooldown = 60 // not used yet...
+damageFrameCooldown = 60 // frames before the same target can be hit again
 
 shadowSprite = spr_war_hammer_shadow
 

@@ -7,7 +7,7 @@ function activate_war_stomp(level) {
 		var enemies = ds_list_create()
 
 		var radius = 128
-		var pushDistance = 10
+		var pushDistance = obj_ability_war_stomp.runes[enumRunes.voldan] ? 10 : 0
 		var stunLength = 2
 		var amount = 20
 
@@ -20,7 +20,7 @@ function activate_war_stomp(level) {
 			true,
 			enemies,
 			false
-		);
+		)
 	
 		var fxCircle = spawn_fx_circle(128)
 
@@ -29,8 +29,8 @@ function activate_war_stomp(level) {
 			{
 			    target = enemies[| i]			
 				pushAngle = point_direction(x, y, target.x, target.y)
-			
-				knockback_baddie(target, 10, pushAngle)
+
+				knockback_baddie(target, pushDistance, pushAngle)
 				stun_baddie(target, 2)
 			
 				inst = instance_create_depth(target.x, target.y, depths.fx, obj_particle_single_cycle)
