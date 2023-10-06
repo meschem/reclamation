@@ -5,13 +5,15 @@ gameFrame++
 if (keyboard_check_pressed(vk_f3))
 	window_set_fullscreen(!window_get_fullscreen())
 
-if (keyboard_check_pressed(vk_f4)) {
-	obj_player.xp = playerXpLevelTable[obj_player.level]
-	check_for_level_up()
+if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) {
+	if (instance_number(obj_big_selection_menu == 0)) {
+		obj_player.xp = playerXpLevelTable[obj_player.level]
+		check_for_level_up()
+	}
 }
 
 // f5 is used for pause
-if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape)) {
+if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
 	show_debug_message("Breaking")
 }
 

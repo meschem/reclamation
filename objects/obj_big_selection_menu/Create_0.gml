@@ -1,3 +1,10 @@
+enum buttonFocusTypes {
+	keyboard,
+	mouse,
+	controller,
+	none
+}
+
 title = "Unnamed"
 
 menuWidth = view_width() - (x * 2)
@@ -21,6 +28,8 @@ scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
 
 buttons = []
+
+useMouseFocus = true
 
 close = function() {
 	instance_destroy()

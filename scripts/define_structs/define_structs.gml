@@ -159,13 +159,12 @@ function keyMouseInput() constructor {
 
 function gamepadInput() constructor {
 	useAbility = [
-		gp_face3,
-		gp_face2,
-		gp_face1,
-		gp_face4,
-		gp_shoulderrb
-	]	
-	
+		gp_shoulderrb,
+		gp_shoulderlb,
+		gp_shoulderr,
+		gp_shoulderl,
+		gp_face1
+	]
 }
 
 ///@param {real} _top

@@ -139,6 +139,10 @@ chargeShockFrames = 0
 maxTrinkets = 4
 trinkets = []
 
+controllerAimingCursorPos = new vec2()
+controllerAimingCursorOffset = 50
+uiDrawOffset = new vec2()
+
 equipment = {
 	head: noone,
 	chest: noone,

@@ -8,6 +8,7 @@ function get_attack_input() {
 		var targetX = mouse_x
 		
 		isAttacking = true
+		inputFocus = enumInputTypes.keyboardMouse
 		
 		return point_direction(obj_player.x, obj_player.y, targetX, targetY)		
 	} 
@@ -25,6 +26,8 @@ function get_attack_input() {
 	isAttacking = !(rightAxisHor == 0 && rightAxisVert == 0)
 
 	if (isAttacking) {
+		inputFocus = enumInputTypes.controller
+		
 		return point_direction(0, 0, rightAxisHor, rightAxisVert)
 	} else {
 		return point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)

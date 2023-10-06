@@ -12,6 +12,7 @@ function create_select_rune_button(rune, menu = noone) {
 		button.rune = rune
 	
 		if (menu != noone) {
+			button.parentMenu = menu
 			menu.buttons[array_length(menu.buttons)] = button
 			button.depth = menu.depth - 1
 		}

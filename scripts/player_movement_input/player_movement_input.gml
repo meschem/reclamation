@@ -16,8 +16,15 @@ function player_movement_input(){
 	} else {
 		var moveInput = get_controller_movement()
 
-		if (moveInput[0] == 0 && moveInput[1] == 0)
+		if (moveInput[0] == 0 && moveInput[1] == 0) {
 			moveInput = get_keyboard_movement()
+			
+			if (moveInput[0] != 0 || moveInput[1] != 0) {
+				inputFocus = enumInputTypes.keyboardMouse
+			} 
+		} else {
+			inputFocus = enumInputTypes.controller
+		}
 	
 		if (moveInput[0] == 0 && moveInput[1] == 0) {
 			xVel = 0

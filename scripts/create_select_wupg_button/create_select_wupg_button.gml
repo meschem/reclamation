@@ -13,6 +13,7 @@ function create_select_wupg_button(upgrade, menu = noone) {
 		menu.title = "You Leveled up!"
 	
 		if (menu != noone) {
+			button.parentMenu = menu
 			menu.buttons[array_length(menu.buttons)] = button
 			button.depth = menu.depth - 1
 		}

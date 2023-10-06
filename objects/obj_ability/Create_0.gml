@@ -13,6 +13,7 @@ onStrikeAbility = false
 active = false
 curCharges = 1
 maxCharges = 1
+owner = obj_player
 
 age = 0
 
@@ -29,6 +30,7 @@ activationCdMax = 0
 
 treeLevel = 2
 hotkey = -1
+controllerIcon = spr_btn_xbox_y
 
 owner = get_player_target()
 

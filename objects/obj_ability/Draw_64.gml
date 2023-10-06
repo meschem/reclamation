@@ -10,10 +10,24 @@ if (enabled) {
 	
 	if (active) {
 		switch (ascii) {
-			case 69: hotkey = "Q" break
-			case 82: hotkey = "E" break
-			case 84: hotkey = "R" break
-			default: hotkey = string(ascii) break
+			case 69: 
+				hotkey = "Q"
+				controllerIcon = spr_btn_xbox_rt
+			break
+			
+			case 82: 
+				hotkey = "E"
+				controllerIcon = spr_btn_xbox_lt
+			break
+			
+			case 84: 
+				hotkey = "R"
+				controllerIcon = spr_btn_xbox_rb
+			break
+
+			default: 
+				hotkey = string(ascii)
+			break
 		}
 
 		// Draw Cooldown or Hotkey		
@@ -26,11 +40,15 @@ if (enabled) {
 			draw_set_color(c_orange)
 			draw_text(iconX + 5, iconY + yOffset, drawString)
 		} else {
-			draw_set_color(c_black)
-			draw_text(iconX + 9, iconY + yOffset + 1, hotkey)
-	
-			draw_set_color(c_white)
-			draw_text(iconX + 8, iconY + yOffset, hotkey)
+			if (owner.inputFocus == enumInputTypes.keyboardMouse) {
+				draw_set_color(c_black)
+				draw_text(iconX + 9, iconY + yOffset + 1, hotkey)
+				
+				draw_set_color(c_white)
+				draw_text(iconX + 8, iconY + yOffset, hotkey)
+			} else {
+				draw_sprite(controllerIcon, 0, iconX + 14, iconY + yOffset + 2) 
+			}			
 		}
 		
 		// Draw Charges

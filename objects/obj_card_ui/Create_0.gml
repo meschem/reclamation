@@ -8,6 +8,7 @@ state = buttonStates.normal
 index = 0
 enabled = true
 subTitleEnabled = false
+isFocused = false
 
 if (mouse_check_button(mb_left)) {
 	enabled = false
