@@ -6,12 +6,12 @@ function player_movement_input(){
 		if (chargeCurrentFrame >= chargeMaxLength) {
 			isCharging = false
 		} else {
-			var chargeSpeed = 3
+			var chargeSpeed = obj_ability_charge.chargeSpeed
 		
 			xVel = get_angle_xvel(moveAngle) * chargeSpeed
 			yVel = get_angle_yvel(moveAngle) * chargeSpeed	
 		
-			if (age % 10 == 0) show_debug_message("charging!")
+			//if (age % 10 == 0) show_debug_message("charging!")
 		}
 	} else {
 		var moveInput = get_controller_movement()

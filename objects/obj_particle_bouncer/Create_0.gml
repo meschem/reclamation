@@ -19,3 +19,4 @@ lateralSpeed = 0
 minBounceVelocity = 0.25
 
 shadow = spr_shadow_med
+singleCycle = false

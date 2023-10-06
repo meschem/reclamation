@@ -1,6 +1,6 @@
 /// @description			Grabs a color
-/// @param {real}	color	Uses enum color
-/// @return {any}
+/// @param {real}	color	Uses enum "colors"
+/// @return {constant.Color}
 
 function get_color(color) {
 	enum colors {

@@ -1,7 +1,8 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function fly_to_location() {
-	hitWall = false;
+///@description				Flies a baddie to a location
+///@param {real} xVel
+///@param {real} yVel
+function fly_to_location(xVel, yVel) {
+	var hitWall = false;
 
 	if (!phases && place_meeting(x + xVel, y, obj_solid)) {
 		hitWall = true;
@@ -26,4 +27,6 @@ function fly_to_location() {
 	} else {
 		y += yVel;
 	}
+	
+	return hitWall
 }

@@ -3,9 +3,20 @@ yVel = 0
 
 homesOnPlayer = true
 homingActive = false
-homingRadius = 24
+homingRadius = 40
 homingAccel = 0.2
 
-target = obj_player
+/// FIXME: MULTIPLAYER
+
+target = get_player_target()
 
 age = 0
+
+lifeSpan = 480
+
+floats = false
+
+onPickup = function() {
+
+}
+

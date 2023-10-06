@@ -14,7 +14,10 @@
     "name": "ui",
     "path": "folders/Objects/ui.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_big_selection_menu",
+    "path": "objects/obj_big_selection_menu/obj_big_selection_menu.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

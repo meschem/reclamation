@@ -7,6 +7,7 @@ function use_weapon(weapon) {
 		case playerWeapons.warHammer:
 			if (warHammerCdCur <= 0) {
 				attack_war_hammer(attackAngle)
+				warHammerCdCur = warHammerCdMax * (1 / attackSpeedScalar)
 			}
 		break
 		

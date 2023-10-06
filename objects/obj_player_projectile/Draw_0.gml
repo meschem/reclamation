@@ -1,4 +1,3 @@
-
 draw_sprite_ext(
 	shadowSprite, 0,
 	x, y + 5,

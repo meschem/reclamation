@@ -1,30 +1,45 @@
 ///@description		Provides talent selection to player
+///@param {id.Instance} player
 
-function display_level_up_prompt() {
+function display_level_up_prompt(player = noone) {
+	if (player == noone) {
+		player = get_player_target()
+	}
+	
 	with (obj_game_controller) {
-		show_debug_message("plvl = " + string(playerLevel))
-		
-		if (playerLevel - 1 >= array_length(levelUpRewardTable)) {
-			show_debug_message("Player Level exceeds max length of reward table")
+		if (player.level - 1 >= array_length(levelUpRewardTable)) {
+			show_message("Player Level exceeds max length of reward table")
 			return 0
 		}
 
-		switch (levelUpRewardTable[playerLevel - 2]) {
+		switch (levelUpRewardTable[player.level - 2]) {
 			case levelUpRewards.abilitySelect:
 				display_level_abil_select_prompt()
-				break
+			break
+				
+			case levelUpRewards.trinket:
+				display_level_trinket_prompt()
+			break
+				
+			case levelUpRewards.rune:
+				display_level_rune_prompt()
+			break
+				
+			case levelUpRewards.abilityLevelUp:
+				display_level_abil_lvlup_prompt()
+			break
 			
 			case levelUpRewards.heroTalent:
 				display_level_talent_prompt()
-				break
+			break
 			
 			case levelUpRewards.statPoint:
 				show_message("stat point prompt goes here")
-				break
+			break
 			
 			case levelUpRewards.weaponUpgrade:
-				show_message("weapon upgrade prompt goes here")
-				break
+				display_weapon_upgrade_prompt()
+			break
 		}
 	}
 }

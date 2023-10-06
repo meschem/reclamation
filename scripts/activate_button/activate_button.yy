@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "ui",
-    "path": "folders/Scripts/ui.yy",
+    "name": "buttons",
+    "path": "folders/Scripts/ui/buttons.yy",
   },
 }

@@ -1,7 +1,11 @@
-///@description   Description
-function damage_baddies_in_area(radius, amount) {
+///@description								Deals damage to enemies in a radius
+///@param {real} radius						Radius to select enemies in
+///@param {real} amount						Amount of damage
+///@param {gmasset.Object} spawnObject		Object to spawn on enemies for extra effects
+function damage_baddies_in_area(radius, amount, spawnObject = obj_none) {
 	var target, inst
 	var enemies = ds_list_create()	
+
 	var count = collision_circle_list(
 		x,
 		y,
@@ -11,12 +15,18 @@ function damage_baddies_in_area(radius, amount) {
 		true,
 		enemies,
 		false
-	);
+	)
+	
+	show_debug_message(radius)
 
 	if (count > 0) {
 		for (var i = 0; i < count; i++)
 		{
 		    target = enemies[| i]
+			
+			if (spawnObject != obj_none) {
+				instance_create_depth(target.x, target.y, depths.fx, spawnObject)
+			}
 		
 			damage_baddie(target, amount)
 			

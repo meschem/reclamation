@@ -11,7 +11,7 @@ function activate_button(button = id) {
 		 break
 		 
 		 case buttonOnClickBehaviors.restartGame:
-			room_goto(rm_start_dev)
+			restart_run()
 		 break
 		 
 		 case buttonOnClickBehaviors.quitGame:

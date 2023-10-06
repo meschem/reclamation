@@ -2,7 +2,8 @@
 
 enum enemyMoveBehaviors {
 	none,
-	charge
+	simple,
+	charge,
 }
 
 enum deathFxTypes {
@@ -26,10 +27,21 @@ deathFx = deathFxTypes.bones
 
 moveBehavior = enemyMoveBehaviors.charge
 
-moveSpeedMax = 0.5
+facingAngle = 0
+
+damageReactionLength = 16
+damageReactionCurve = animcurve_get(ac_baddie_hit_reaction)
+damageReactionCurveXScale = animcurve_get_channel(damageReactionCurve, 0)
+damageReactionCurveYScale = animcurve_get_channel(damageReactionCurve, 1)
+damageXScaleMultiplier = 1
+damageYScaleMultiplier = 1
+
+moveSpeedMax = 0.6
 moveSpeed = 0
 moveRotationRate = -1 // -1 is "infinite"
 moveAccel = 0.2
+
+spawnSide = "unset"
 
 pushDeaccel = 0.075
 
@@ -49,6 +61,8 @@ floatRange = 0
 xVel = 0
 yVel = 0
 
+hitWall = false
+
 xScale = 1
 yScale = 1
 
@@ -59,11 +73,12 @@ hpMax = 100
 hp = hpMax
 
 damagedOn = -10
-//damagedBy = []
 
 weight = 3
 
 soundOnDeath = snd_hard_hit // -1 is no sound
+
+debuffShockAmount = 0
 
 xp = 25
 
@@ -75,6 +90,7 @@ shadowOffset = 3 // vertical offset
 pushRadius = 6
 
 stunLength = 0
+shockedLength = 0
 
 knockbackSlowRatio = 1
 knockbackSlowDuration = 0
@@ -82,3 +98,19 @@ knockbackSlowHitFrame = 0
 knockbackMaxSpeedRatio = 0.25
 
 rotationBehavior = enemyRotateBehavior.none
+
+bossScale = 2
+isElite = false
+isBoss = false
+outlineColor = c_black
+killedByBounds = false
+
+baddie_teleport_init()
+
+outline_init()
+
+loot = []
+
+beginStep = function() {}
+endStep = function() {}
+onDestroy = function() {}

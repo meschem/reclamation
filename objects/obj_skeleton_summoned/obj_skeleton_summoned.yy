@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_skeleton_c",
-    "path": "sprites/spr_skeleton_c/spr_skeleton_c.yy",
+    "name": "spr_poison_skeleton",
+    "path": "sprites/spr_poison_skeleton/spr_poison_skeleton.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -6,10 +6,10 @@ function activate_war_stomp(level) {
 		var target, inst, pushAngle
 		var enemies = ds_list_create()
 
-		var radius = 128
-		var pushDistance = obj_ability_war_stomp.runes[enumRunes.voldan] ? 10 : 0
-		var stunLength = 2
-		var amount = 20
+		var radius = obj_ability_war_stomp.baseRadius
+		var amount = obj_ability_war_stomp.baseDamage
+		var pushDistance = obj_ability_war_stomp.runes[enumRunes.voldan].enabled ? 10 : 0
+		var stunLength = obj_ability_war_stomp.stunLength
 
 		var count = collision_circle_list(
 			x,
@@ -22,9 +22,20 @@ function activate_war_stomp(level) {
 			false
 		)
 	
-		var fxCircle = spawn_fx_circle(128)
+		//var fxCircle = spawn_fx_circle(radius)
+		
+		inst = create_fx_fading_circle(x, y, radius, 30)
+		inst.alphaStart = 0.4
 
 		if (count > 0) {
+			if (obj_ability_war_stomp.runes[enumRunes.dreygoth].enabled) {
+				var dmgScalePerEnemy = 0.10
+				var maxEnemyCount = 10
+				var bonusDamage = amount * min(count, maxEnemyCount) * dmgScalePerEnemy
+
+				amount += bonusDamage
+			}
+			
 			for (var i = 0; i < count; i++)
 			{
 			    target = enemies[| i]			
@@ -38,6 +49,15 @@ function activate_war_stomp(level) {
 
 				damage_baddie(target, amount)
 			}
+		}
+		
+		if (obj_ability_war_stomp.runes[enumRunes.magdela].enabled) {
+			instance_create_depth(
+				obj_player.x,
+				obj_player.y,
+				depths.playerProjectile,
+				obj_jonah_stomp_aftershock
+			)
 		}
 
 		ds_list_destroy(enemies)

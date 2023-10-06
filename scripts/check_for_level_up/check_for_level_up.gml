@@ -1,20 +1,24 @@
 ///@description Tries to level a player up if valid. Returns true if it does.
+///@param {id.Instance} player
 
-function check_for_level_up() {
+function check_for_level_up(player = noone) {
+	if (player == noone) {
+		player = get_player_target()
+	}
+	
 	var leveled = false
 
-	with (obj_game_controller) {
-		if (playerXp >= playerXpLevelTable[playerLevel - 1]) {
-			playerXp -= playerXpLevelTable[playerLevel - 1]
-			playerLevel++			
+	with (player) {
+		if (xp >= obj_game_controller.playerXpLevelTable[level - 1]) {
+			xp -= obj_game_controller.playerXpLevelTable[level - 1]
+			level++			
 			leveled = true
 		}
-		
-		//show_debug_message("xp: " + string(playerXp))
 	}	
 	
-	if (leveled)
-		display_level_up_prompt()
+	if (leveled) {
+		display_level_up_prompt(player)
+	}
 	
 	return leveled
 }

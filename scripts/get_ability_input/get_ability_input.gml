@@ -5,9 +5,13 @@ function get_ability_input() {
 	var controller	
 	var validated = false
 	var canUse
+	var maxHotkeys = 5
 	
-	for (var i = 0; i < array_length(kmInput.useAbility); i++) {
-		if (keyboard_check_pressed(kmInput.useAbility[i])) {
+	for (var i = 0; i < maxHotkeys; i++) {
+		if (
+			keyboard_check_pressed(kmInput.useAbility[i]) ||
+			gamepad_button_check_pressed(controllerIndex, controllerInput.useAbility[i])
+		) {
 			index = i
 			
 			if (activeAbilities[i] != noone) {

@@ -8,14 +8,14 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "combat",
-    "path": "folders/Objects/abilities/jonah/trees/combat.yy",
+    "name": "trees",
+    "path": "folders/Objects/abilities/jonah/trees.yy",
   },
   "parentObjectId": {
     "name": "obj_ability_tree",
     "path": "objects/obj_ability_tree/obj_ability_tree.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,

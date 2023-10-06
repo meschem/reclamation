@@ -1,8 +1,10 @@
 // Draw XP Bar
 
+draw_set_color(c_white)
+
 draw_text(
 	5, camera_get_view_height(view_camera[0]) - 24,
-	obj_game_controller.playerLevel
+	obj_player.level
 )
 
 draw_sprite_ext(
@@ -55,3 +57,11 @@ for (var i = 0; i < maxPips; i++) {
 		healthBarY + yOffset
 	)
 }
+
+// Draw Gold
+
+draw_text(
+	camera_get_view_width(view_camera[0]) - 80,
+	2,
+	"Gold: " + string(obj_player.gold)
+)

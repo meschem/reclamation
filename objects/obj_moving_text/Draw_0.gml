@@ -8,7 +8,7 @@ if (fontShadow > 0) {
 		displayText, 1,
 		32,
 		c_black, c_black, c_black, c_black,
-		0.5 * textAlpha
+		textAlpha
 	)
 }
 

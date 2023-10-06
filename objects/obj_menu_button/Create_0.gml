@@ -25,6 +25,3 @@ state = buttonStates.normal
 
 onClick = buttonOnClickBehaviors.addTalent
 talentToAdd = 0
-
-// menuHeight = height
-// menuHeight = height

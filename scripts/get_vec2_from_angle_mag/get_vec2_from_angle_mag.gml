@@ -1,7 +1,7 @@
 /// @description Creates a 'vector' from angle and magnitude
 /// @param1 {real} angle
 /// @param2 {real} magnitude
-/// @return {array<real>}
+/// @return {struct.vec2}
 
 function get_vec2_from_angle_mag(angle, magnitude){
 	var _x = angle_xvel(angle) * magnitude

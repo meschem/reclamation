@@ -17,15 +17,32 @@ maxCharges = 1
 age = 0
 
 level = 0
-maxLevel = 3
+maxLevel = 4
 
 curCd = 300
 maxCd = 300
 
+baseCdModifier = 1
+
+activationCdCur = 0
+activationCdMax = 0
+
 treeLevel = 2
 hotkey = -1
 
+owner = get_player_target()
+
 runes = []
+
+tags = []
+
+resetCooldown = function () {
+	var cdModifier = max(maxCd * baseCdModifier, 0.25)
+
+	curCd = cdModifier * owner.abilityCooldownScalar
+}
+
+stats = []
 
 ///@return {bool}
 canActivate = function() {
@@ -34,22 +51,37 @@ canActivate = function() {
 	
 	if (curCharges <= 0)
 		return false
+		
+	if (activationCdCur > 0)
+		return false
 	
 	return true
 }
 
 activate = function() {
 	if (curCharges == maxCharges) {
-		curCd = maxCd	
+		resetCooldown()
 	}
+	
+	activationCdCur = activationCdMax * owner.abilityCooldownScalar
 
 	curCharges--
 	
 	use()
 }
 
+activateOnHit = function() {
+	show_message("activateOnHit() not set on ability object")
+}
+
 use = function() {
 	show_message("use() not set on ability object")
+}
+
+applyStats = function () {
+	for (var i = 0; i < array_length(stats); i++) {
+		variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
+	}
 }
 
 levelUp = function () {
@@ -64,21 +96,24 @@ levelUp = function () {
 		obj_player.activeAbilities[treeLevel - 1] = id
 	}
 	
-	if (onHitAbility) {
+	if (onHitAbility && level == 1) {
 		array_push(obj_player.onHitAbilities, id)
 		//obj_player.onHitAbilities[array_length(obj_player.onHitAbilities)] = id
 	}
 	
-	if (onStrikeAbility) {
+	if (onStrikeAbility && level == 1) {
 		array_push(obj_player.onStrikeAbilities, id)
 		//obj_player.onStrikeAbilities[array_length(obj_player.onStrikeAbilities)] = id
 	}
 	
+	applyStats()
+	
 	onLevel()
 }
 
+///@description						Occurs after level has been incremented
 onLevel = function () {
-	show_debug_message(name + " leveled up!")
+	show_debug_message(name + " leveled up to " + string(level))
 }
 
 ///@description						Adds a rune to the ability
@@ -89,6 +124,46 @@ addRune = function (_name, _description) {
 	
 	runes[runeIndex] = {
 		name: _name,
-		description: _description
+		description: _description,
+		enabled: false,
+		ability: id
 	}
+}
+
+///@description						Enables a rune
+///@param {real} index				Index. Can use enumRunes
+enableRune = function (index) {
+	runes[index].enabled = true
+	
+	applyRune(index)
+	
+	show_debug_message("Rune Enabled: " + runes[index].name)
+}
+
+///@description						Enables all runes for the ability
+enableAllRunes = function () {
+	for (var i = 0; i < array_length(runes); i++) {
+		enableRune(i)
+	}
+}
+
+///@description						Ability-specific actions on addition of a rune.
+///									Intended for updated obj_ability properties
+///@param {real} rune				Rune that is being applied
+applyRune = function(rune) {
+	
+}
+
+///@description						Gets available runes to be leveled
+///@return {array<Any>}
+getAvailableRunes = function() {
+	var availableRunes = []
+	
+	for (var i = 0; i < array_length(runes); i++) {
+		if (!runes[i].enabled) {
+			array_push(availableRunes, runes[i])
+		}
+	}
+	
+	return availableRunes
 }

@@ -1,0 +1,15 @@
+Move Types:
+
+None
+----
+Enemy will sit still, but still collide and process other behaviors normally.
+
+
+Charge
+----
+Moves directly towards the player/target. Can be modified with turn speeds and acceleration.
+
+
+Simple
+----
+Moves using xVel/yVel, but never orients towards a specific target

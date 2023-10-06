@@ -1,7 +1,102 @@
 ///@description   Defines structs for project
 
-function define_structs() {
+function define_structs() { }
 
+enum enumLootType {
+	gold,
+	equipment,
+	general,
+}
+
+///@description						Stat that can be applied to anything
+///@param {string} _name			Human-readable name of the stat
+///@param {string} _variable		Variable to adjust
+///@param {array<real>} _values		Values to apply at different levels
+function abilityStat(_name, _variable, _values) constructor {
+	name = _name
+	variable = _variable
+	values = _values
+}
+
+///@description						Provides info for leveling an ability
+///@param {string} _description		Description for leveling up
+///@param {array<struct>} _stats	Array of abilityStat variables
+function abilityLevelInfo(_description, _stats) constructor {
+	description = _description
+	stats = _stats
+}
+
+///@description						Loot component for a baddies
+///@param {real} _lootType			Uses enumLootType to add a type of loot
+///@param {id.Instance} _owner		Owner of said loot component
+///@param {real} _chance			Odds of this dropping from 0 to 1.0
+///@param {real} _amountMin			Minimum value or amount
+///@param {real} _amountMax			Maximum value or amount
+function lootComponent(_lootType, _owner, _chance = 1, _amountMin = 1, _amountMax = 1, _object = obj_none) constructor {
+	lootType = _lootType
+	chance = _chance
+	amountMin = _amountMin
+	amountMax = _amountMax
+	object = _object
+	owner = _owner
+	
+	///@description					Drops Loot
+	///@return {id.Instance}		Dropped loot. Returns noone if drop fails
+	drop = function() {
+		if (random(1) > chance) {
+			show_message("loot not dropped")
+			return noone
+		}
+		
+		var amount = irandom_range(amountMin, amountMax)
+		
+		if (lootType == enumLootType.gold) {
+			drop_gold(amount, owner.x, owner.y)
+		} else if (lootType == enumLootType.general) {
+			drop_object(object, owner.x, owner.y)
+		} else {
+			show_debug_message("Loot type not implemented")
+		}
+	}
+}
+
+///@description						Stat for a player character that is referenced as needed
+///@param {string} _name			Human readable name of the stat
+///@param {real} _baseValue
+function playerStat(_name, _baseValue) constructor {
+	name = _name
+	baseValue = _baseValue
+	value = baseValue
+	
+	scalar = 1
+	preScalarAdditive = 0
+	postScalarAdditive = 0
+	
+	///@description					Updates value
+	function update() {
+		baseValue = ((preScalarAdditive + baseValue) * scalar) + postScalarAdditive
+	}
+	
+	///@description					Sets scalar to a value
+	///@param {real} value			Value to set scalar to
+	function setScalar(value) {
+		scalar = value
+		update()
+	}
+	
+	///@description					Sets pre-scalar to a value, effectively increasing base
+	///@param {real} value			Value to set scalar to
+	function setPreScalarAdditive(value) {
+		preScalarAdditive = value
+		update()
+	}
+	
+	///@description					Sets post-scalar to a value
+	///@param {real} value			Value to set scalar to
+	function setPostScalarAdditive(value) {
+		postScalarAdditive = value
+		update()
+	}
 }
 
 ///@description						Pairing of instance and clearframe to manage hitList arrays
@@ -62,6 +157,17 @@ function keyMouseInput() constructor {
 	]
 }
 
+function gamepadInput() constructor {
+	useAbility = [
+		gp_face3,
+		gp_face2,
+		gp_face1,
+		gp_face4,
+		gp_shoulderrb
+	]	
+	
+}
+
 ///@param {real} _top
 ///@param {real} _right
 ///@param {real} _bottom
@@ -75,7 +181,7 @@ function bounds(_top, _right, _bottom, _left) constructor {
 
 ///@param {real} _x
 ///@param {real} _y
-function vec2(_x, _y) constructor {
+function vec2(_x = 0, _y = 0) constructor {
 	x = _x
 	y = _y
 }
@@ -109,26 +215,9 @@ function text(_body, _font, _color, _location, _centered = false, _maxWidth = -1
 	}
 }
 
-///@param {string} _name
-///@param {string} _description
-///@param {real} _maxLevel
-//function abilityStruct(_name, _description, _maxLevel = 3) constructor {
-//	name = _name
-//	description = _description
-//	maxLevel = _maxLevel
-//	curLevel = 0
-//}
-
-///@param {string} _name
-///@param {string} _description
-///@param {asset.GMObject} _hero
-///@param {asset.GMSprite} _icon
-//function abilityTree(_name, _description, _hero, _icon = spr_not_set) constructor {
-//	name = _name
-//	description = _description
-//	hero = _hero
-//	icon = _icon
+///@description						Equipment slots for the player
+///@param {real} slot				Slot this takes up on a character
+///@param {asset.GMObject} object	Object to reference
+function equipmentSlot(slot, object = obj_none) constructor {
 	
-//	abilities = []
-//}
-
+}

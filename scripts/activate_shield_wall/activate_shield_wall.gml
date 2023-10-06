@@ -14,5 +14,8 @@ function activate_shield_wall(count, distance, angleDiff) {
 		inst = instance_create_depth(caster.x + point.x, caster.y + point.y, depths.player, obj_shield_wall)
 		
 		inst.lifeSpan = seconds_to_frames(6)
+		
+		if (obj_ability_shield_wall.runes[enumRunes.dreygoth].enabled)
+			inst.slamming = true
 	}
 }

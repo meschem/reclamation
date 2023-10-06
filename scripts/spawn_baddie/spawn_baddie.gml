@@ -2,6 +2,7 @@
 ///@param {asset.GMObject} enemy	Enemy to spawn
 ///@param {real} count				Amount of enemies to spawn
 ///@param {real} spread				Distance between enemies if count > 1
+///@return {array<id.Instance>}
 
 function spawn_baddie(enemy, count = 1, spread = 20) {
 	var spawnDir = irandom(3)
@@ -10,20 +11,23 @@ function spawn_baddie(enemy, count = 1, spread = 20) {
 	
 	var zone = get_random_instance(obj_spawn_zone)
 	
-	var inst
+	var inst, i
+	var spawns = []
 	
 	//get random spot in zone
 	var spawnX = irandom(zone.bbox_right - zone.bbox_left) + zone.x
 	var spawnY = irandom(zone.bbox_bottom - zone.bbox_top) + zone.y
-
+	
 	if (count == 1) {
 		inst = instance_create_depth(spawnX, spawnY, depths.enemy, enemy)
+		
+		array_push(spawns, inst)
 		
 		with (inst) {
 			move_until_free()
 		}
 	} else {
-		for (var i = 0; i < count; i++) {
+		for (i = 0; i < count; i++) {
 			var angle = irandom(360)
 			var mag = irandom(spread)
 			
@@ -34,9 +38,17 @@ function spawn_baddie(enemy, count = 1, spread = 20) {
 				enemy
 			)
 			
+			array_push(spawns, inst)
+			
 			with (inst) {
 				move_until_free()
 			}
 		}
 	}
+	
+	for (i = 0; i < array_length(spawns); i++) {
+		spawns[i].spawnSide = zone.spawnSide
+	}	
+	
+	return spawns
 }

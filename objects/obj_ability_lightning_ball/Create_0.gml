@@ -13,17 +13,43 @@ active = true
 autoCast = false
 
 curCd = 0
-maxCd = 600
+maxCd = 680
 
 treeLevel = 3
 projectileCount = 3
 projectileDistance = 100
 projectileRotationRate = 2
+projectileDuration = 480
+projectileDamage = 20
+
+shortDistance = 40
+quickRotationRate = 5
+
+overloadDamage = 15
+overloadRadius = 30
+
+stats = [
+	new abilityStat(
+		"Damage", 
+		"projectileDamage", 
+		[20, 23, 26, 29, 32]
+	),
+	new abilityStat(
+		"Projectiles",
+		"projectileCount", 
+		[3, 3, 4, 4, 5]
+	)
+]
+
+addRune("Close and Quick", "Orbs spin faster and closer")
+addRune("Overload", "Explodes on death")
+addRune("Blood Lightning", "Somehow deals blood damage")
 
 use = function() {
-	var count = projectileCount
-	var distance = projectileDistance
 	var angle, spawnLoc
+	var count = projectileCount	+ owner.bonusProjectileCount
+	var distance = runes[enumRunes.magdela].enabled ? shortDistance : projectileDistance
+	var rotationRate = runes[enumRunes.magdela].enabled ? quickRotationRate : projectileRotationRate
 	
 	for (var i = 0; i < count; i++) {
 		angle = (360 / count) * i
@@ -37,8 +63,14 @@ use = function() {
 		
 		inst.attachedTo = obj_player
 		inst.angle = angle
+		inst.lifeSpan = projectileDuration
 		inst.distanceOffset = distance
-		inst.rotationRate = projectileRotationRate
+		inst.rotationRate = rotationRate
 		
+		if (runes[enumRunes.voldan].enabled) {
+			inst.explodeOnDeath = true
+		}
+		
+		inst.distanceMax = -1
 	}
 }

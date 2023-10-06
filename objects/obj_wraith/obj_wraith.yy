@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "baddies",
-    "path": "folders/Objects/baddies.yy",
+    "name": "reapers",
+    "path": "folders/Objects/baddies/reapers.yy",
   },
   "parentObjectId": {
     "name": "obj_baddie",

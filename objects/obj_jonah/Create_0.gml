@@ -2,8 +2,14 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-event_inherited();
+event_inherited()
 
-spawn_ability_trees(playerCharacters.jonah)
+//spawn_ability_trees(playerCharacters.jonah)
 
-level_up_abils_from_global()
+//level_up_abils_from_global()
+
+sprIdle = spr_jonah
+sprWalking = spr_jonah_walking
+abilityTrees = playerCharacters.jonah
+
+addWeapon(obj_weapon_war_hammer)

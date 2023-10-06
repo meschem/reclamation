@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "storm",
-    "path": "folders/Objects/abilities/jonah/trees/storm.yy",
+    "path": "folders/Objects/abilities/jonah/storm.yy",
   },
   "parentObjectId": {
     "name": "obj_ability",

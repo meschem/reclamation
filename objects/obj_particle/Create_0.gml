@@ -13,3 +13,5 @@ alphaEnd = 0
 changeScale = false
 scaleStart = 1
 scaleEnd = 0
+
+singleCycle = false

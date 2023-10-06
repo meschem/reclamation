@@ -9,13 +9,13 @@
   "overriddenProperties": [],
   "parent": {
     "name": "defense",
-    "path": "folders/Objects/abilities/jonah/trees/defense.yy",
+    "path": "folders/Objects/abilities/jonah/defense.yy",
   },
   "parentObjectId": {
     "name": "obj_ability",
     "path": "objects/obj_ability/obj_ability.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,

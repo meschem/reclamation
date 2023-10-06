@@ -1,7 +1,6 @@
 // Inherit the parent event
 event_inherited();
 
-
 if (state == enemyStates.normal) {
 	if (iceBlastSwarmCd > 0) {
 		iceBlastSwarmCd--

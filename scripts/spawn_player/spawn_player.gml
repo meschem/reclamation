@@ -1,4 +1,5 @@
 ///@description   Description
+///@return {Id.Instance}
 function spawn_player() {
 	var inst = instance_create_depth(
 		obj_player_spawn.x,
@@ -6,4 +7,6 @@ function spawn_player() {
 		depths.player,
 		obj_jonah
 	)
+	
+	return inst
 }

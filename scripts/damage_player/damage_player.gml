@@ -1,10 +1,14 @@
-/// @description    Returns true if killed
-
+/// @description				Returns true if killed
 /// @param {Id.Instance}		hitBy
 /// @param {real}				damage
 
 function damage_player(hitBy, damage = -1) {
-	var i, inst, proj
+	if (player_is_invuln()) {
+		activate_player_on_hit_abilities()
+		return false
+	}
+	
+	var i, inst, proj	
 
 	if (damage == -1) {
 		obj_player.hp -= hitBy.damageOnHit
@@ -12,7 +16,9 @@ function damage_player(hitBy, damage = -1) {
 		obj_player.hp -= damage
 	}
 	
-	obj_player.lastHitOn = age
+	obj_player.lastHitOn = obj_player.age
+	
+	//show_message(obj_player.lastHitOn)
 	
 	activate_player_on_hit_abilities()
 	

@@ -12,12 +12,32 @@ active = false
 autoCast = true
 
 curCd = 0
-maxCd = 180
+maxCd = 120
 
 treeLevel = 1
 
+radius = 100
+damage = 8
+
+stats = [
+	new abilityStat(
+		"Damage", "damage", 
+		[8, 10, 12, 14, 16]
+	),
+	new abilityStat(
+		"Hit Rate", "maxCd", 
+		[120, 120, 110, 110, 100]
+	)
+]
+
+addRune("Shock Buildup", "Adds shock buildup to damaged targets")
+addRune("Concentrate", "Halves radius but triples damage")
+addRune("Mega Bolt", "Strikes random target with high damage")
+
+radiusConcentrated = 40
+
 use = function() {
-	activate_storm_aura(level)
+	activate_storm_aura()
 }
 
 onLevel = function() {
@@ -30,3 +50,4 @@ onLevel = function() {
 		)
 	}
 }
+

@@ -17,3 +17,15 @@ isPaused = false
 timeDisplay = "0:00"
 
 nextLevel = rm_start_dev
+
+///@description			Builds a set of teleport locations to be utilized in the room
+buildTeleportLocations = function() {
+	var count = 40
+	var maxTries = 100
+	var sizeCheck = 32
+	var point = new vec2()
+	
+	for (var i = 0; i < maxTries; i++) {
+		
+	}
+}

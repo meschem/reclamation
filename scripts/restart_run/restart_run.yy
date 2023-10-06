@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "general",
-    "path": "folders/Scripts/general.yy",
+    "name": "run_cleanup",
+    "path": "folders/Scripts/general/run_cleanup.yy",
   },
 }

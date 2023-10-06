@@ -1,3 +1,4 @@
+
 if (game_is_paused())
 	return 0
 
@@ -14,16 +15,33 @@ if (beingSummoned) {
 } else {
 	age++
 	
-	velocity = get_velocity()
+	if  (accel != 0) {
+		velocity = get_velocity()
 	
-	if (velocity < moveSpeedMax) {
-		accel_towards_point(x + xVel, y + yVel, accel)
+		if (velocity < moveSpeedMax) {
+			accel_towards_point(x + xVel, y + yVel, accel)
+		}
 	}
-
+		
+	if (useZAxis) {
+		z = max(z + zVel, 0)
+		
+		if (z == 0) {
+			if (maxBounces > 0) {
+				zVel = zVel * bounceRatio
+				maxBounces--
+			} else {
+				instance_destroy()
+			}
+		} else {
+			zVel -= gravAccel
+		}		
+	}
+	
 	x += xVel
 	y += yVel
-
-	if (place_meeting(x, y, obj_player)) {
+	
+	if (z == 0 && place_meeting(x, y, obj_player)) {
 		damage_player(id)
 	
 		instance_destroy()

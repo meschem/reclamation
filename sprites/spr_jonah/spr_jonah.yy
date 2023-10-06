@@ -5,7 +5,7 @@
   "bbox_bottom": 31,
   "bbox_left": 7,
   "bbox_right": 27,
-  "bbox_top": 18,
+  "bbox_top": 19,
   "bboxMode": 2,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "player_characters",
-    "path": "folders/Sprites/player_characters.yy",
+    "name": "jonah",
+    "path": "folders/Sprites/player_characters/jonah.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 19,
+    "xorigin": 17,
     "yorigin": 24,
   },
   "swatchColours": null,

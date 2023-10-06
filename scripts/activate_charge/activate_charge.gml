@@ -3,7 +3,7 @@
 function activate_charge(level) {
 	with (obj_player) {
 		isCharging = true
-		chargeMaxLength = 120
+		chargeMaxLength = obj_ability_charge.maxLength
 		chargeCurrentFrame = 0
 	}
 }

@@ -4,7 +4,6 @@
   "name": "obj_chain_lit_bolt",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -12,8 +11,11 @@
     "name": "projectiles",
     "path": "folders/Objects/abilities/jonah/projectiles.yy",
   },
-  "parentObjectId": null,
-  "persistent": false,
+  "parentObjectId": {
+    "name": "obj_player_projectile",
+    "path": "objects/obj_player_projectile/obj_player_projectile.yy",
+  },
+  "persistent": true,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
@@ -28,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_lightning_bolt",
+    "path": "sprites/spr_lightning_bolt/spr_lightning_bolt.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

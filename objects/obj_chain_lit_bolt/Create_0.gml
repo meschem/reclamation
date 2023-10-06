@@ -1,5 +1,23 @@
-age = 0
-lifeSpan = 30
+event_inherited()
 
-// Must be set on spawn
-attachedTo = noone
+image_alpha = 0
+
+lifeSpan = 240
+
+shadowSprite = spr_none
+
+seeking = true
+maxTurnRate = 360
+moveSpeedMax = 8
+damageFrameCooldown = 120
+damageDirect = 20
+
+respawnCount = obj_ability_shock.getMaxBounces()
+
+bounceDistanceMax = 120
+
+spawnPoint = new vec2(x, y)
+
+onCollideFx = function (target) {
+	chain_lightning_collide(id, target)
+}

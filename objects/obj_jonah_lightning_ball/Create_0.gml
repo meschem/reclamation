@@ -1,13 +1,16 @@
 // Inherit the parent event
 event_inherited();
 
+hitsWalls = false
+
 movementType = projMovementTypes.explicit
 attachedTo = obj_player
+projectileType = projectileTypes.ability
 
 lifeSpan = 480
 
 targetsMax = -1
-damageDirect = 10
+damageDirect = obj_ability_lightning_ball.projectileDamage
 fxRate = 7
 shadowSprite = spr_none
 
@@ -16,6 +19,8 @@ angle = 0
 rotationRate = 0
 distanceOffset = 0
 
+explodeOnDeath = false
+
 calcVelocity = function () {
 	angle += rotationRate
 	
@@ -23,6 +28,16 @@ calcVelocity = function () {
 	
 	xVel = pos.x
 	yVel = pos.y
+}
+
+onDeathFx = function() {
+	if (explodeOnDeath) {
+		var radius = obj_ability_lightning_ball.overloadRadius
+		var damage = obj_ability_lightning_ball.overloadDamage
+		
+		damage_baddies_in_area(radius, damage)
+		spawn_fx_circle(radius)
+	}
 }
 
 spawnPeriodicFx = function() {

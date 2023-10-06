@@ -16,28 +16,57 @@ maxCd = 400
 
 treeLevel = 2
 
-damage = 20
+damage = 35
 maxDistance = 250
 criticalDistance = 60
 
+baseMaxBounces = 3
+
+stats = [
+	new abilityStat(
+		"Damage",
+		"baseDamage", 
+		[32, 40, 48, 56, 64]
+	),
+	new abilityStat(
+		"Max Bounces",
+		"baseMaxBounces", 
+		[4, 4, 5, 5, 6]
+	)
+]
+
+addRune("Bonus Bounce", "Adds extra bounce(s)")
+addRune("Extra Charges", "Adds extra max charge(s), reduces CD")
+addRune("Closed Loop", "No longer bounces, but hits the same target repeatedly")
+
 use = function() {
-	var target = instance_nearest(obj_player.x, obj_player.y, obj_baddie)
-	
-	var distance = point_distance(obj_player.x, obj_player.y, target.x, target.y)
+	var caster = get_player_target()
+	var target = instance_nearest(caster.x, caster.y, obj_baddie)
 	
 	if (target != noone) {
-		var inst = instance_create_depth(target.x, target.y, depths.fx, obj_particle_single_cycle)
+		var inst = instance_create_depth(target.x, target.y, depths.playerProjectile, obj_chain_lit_bolt)
 		
-		if (distance < criticalDistance) {
-			inst.sprite_index = spr_particle_lightning_medium	
-			inst.image_xscale = 1.5
-			inst.image_yscale = 1.5
-			
-			damage_baddie(target, damage * 2, true)
-		} else if (distance < maxDistance) {
-			inst.sprite_index = spr_particle_lightning_medium	
+		inst.spawnPoint = new vec2(caster.x, caster.y)
+	}
+}
 
-			damage_baddie(target, damage)
-		}
+getMaxBounces = function() {
+	var base = baseMaxBounces
+	
+	if (runes[enumRunes.magdela].enabled) {
+		base += 2
+	}
+	
+	base += owner.bonusProjectileCount
+	
+	return baseMaxBounces
+}
+
+///@description				When any rune is added, this function is run
+///@param {real} rune		Rune to apply from enumRunes
+applyRune = function(rune) {
+	if (rune == enumRunes.voldan) {
+		maxCharges = 4
+		maxCd = maxCd * 0.8
 	}
 }

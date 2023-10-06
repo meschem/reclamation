@@ -1,50 +1,84 @@
+///@description Init
+
 enum playerCharacters {
 	jonah
 }
 
-// Weapons are used on right stick directional input
-enum playerWeapons {
-	warHammer,
-	bow,
-	dagger
+enum enumInputTypes {
+	none,
+	keyboardMouse,
+	controller
 }
+
+// Weapons are used on right stick directional input
+//enum playerWeapons {
+//	warHammer,
+//	bow,
+//	dagger
+//}
 
 // Sidearms activate periodically
-enum playerSideArms {
-	razors
-}
+//enum playerSideArms {
+//	razors
+//}
 
 // Passives are always active
-enum playerPassives {
-	healthRegen
-}
+//enum playerPassives {
+//	healthRegen
+//}
 
 // Abilities are used on ability inputs
-enum playerAbilities {
-	null,
-	fortify,
-	warStomp,
-	dash,
-	charge,
-	length
-}
-
-enum levelUpRewards {
-	abilitySelect,
-	weaponUpgrade,
-	heroTalent,
-	statPoint
-}
+//enum playerAbilities {
+//	null,
+//	fortify,
+//	warStomp,
+//	dash,
+//	charge,
+//	length
+//}
 
 kmInput = new keyMouseInput()
+controllerInput = new gamepadInput()
+controllerIndex = 0
+
+inputFocus = enumInputTypes.keyboardMouse
 
 depth = depths.player
 
-maxHp = 30
+age = 0
+
+baseMaxHp = 50
+baseMoveSpeedMax = 1.4
+baseMaxArmor = 0
+baseCritChance = 0.1
+baseAreaOfEffectScalar = 1
+baseAbilityCooldownScalar = 1
+baseAttackSpeedScalar = 1
+
+bonusProjectileCount = 0
+bonusDamageScalar = 1
+bonusPickupRangeScalar = 1
+bonusPickupRewardScalar = 1
+
+totalGold = 0
+gold = 0
+xp = 0
+level = 1
+abilityTreeLevel = 1
+
+critChance = baseCritChance
+//projectileBonus = baseAbilityProjectileBonus
+areaOfEffectScalar = baseAreaOfEffectScalar
+abilityCooldownScalar = baseAbilityCooldownScalar
+attackSpeedScalar = baseAttackSpeedScalar
+
+maxHp = baseMaxHp
 hp = maxHp
 
-age = 0
-moveSpeedMax = 1.4
+maxArmor = baseMaxArmor
+armor = maxArmor
+
+moveSpeedMax = baseMoveSpeedMax
 moveAccel = 0.6
 moveDeaccel = 0.6
 moveAngle = 0
@@ -85,6 +119,9 @@ activeAbilities = [
 	noone
 ]
 
+sprIdle = spr_jonah
+sprWalking = spr_jonah_walking
+
 onHitAbilities = []
 onAttackAbilities = []
 onStrikeAbilities = []
@@ -95,16 +132,81 @@ chargeCurrentFrame = 0
 chargeMaxLength = 1
 isCharging = false
 
-abilityTrees = [
-	obj_abil_tree_jonah_combat,
-	obj_abil_tree_jonah_defense,
-	obj_abil_tree_jonah_storm
-]
+abilityTrees = []
 
-add_weapon(playerWeapons.warHammer)
-//add_ability(playerAbilities.warStomp)
-//add_ability(playerAbilities.charge)
+chargeShockFrames = 0
+
+maxTrinkets = 4
+trinkets = []
+
+equipment = {
+	head: noone,
+	chest: noone,
+	weapon: noone,
+	//offHand: noone,
+	boots: noone,
+	gloves: noone,
+	neck: noone,
+	ringLeft: noone,
+	ringRight: noone,
+}
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
 
-//generate_ability_instances()
+///@description						Adds a weapon to a player object
+///@param {asset.GMObject} weapon	Weapon to add of obj_weapon
+addWeapon = function(weapon) {
+	var inst = create_instance(weapon)
+	
+	if (!variable_instance_exists(inst, "isEquipment")) {
+		show_error("non-equipment weapon added", true)
+	}
+	
+	//ds_list_add(weaponList, inst)
+	
+	equipment.weapon = inst
+}
+
+
+///@description							Equip an item
+///@param {id.Instance}	item			Item to equipment
+equipItem = function(item) {
+	var structKey = getSlotStringFromEnum(item.slot)
+	var equippedItem = struct_get(equipment, structKey)
+	
+	if (equippedItem != noone) {
+		equippedItem.equipped = false
+	}
+	
+	item.equip()	
+	struct_set(equipment, structKey, item)
+	
+	process_player_stats()
+}
+
+///@description							Removes an item from a slot
+///@param {string} structKey			Equipment struct key
+removeEquipment = function(structKey) {
+	var equippedItem = struct_get(equipment, structKey)
+	
+	equippedItem.unequip()
+	struct_set(equipment, structKey, noone)
+	
+	process_player_stats()
+}
+
+///@description				Gets the string to use for the player's equipment struct
+///@param {real} slotEnum	equipmentSlots enum
+///@return {string}
+getSlotStringFromEnum = function(slotEnum) {
+	switch (slotEnum) {
+		case equipmentSlots.head: return "head"
+		case equipmentSlots.chest: return "chest"
+		case equipmentSlots.weapon: return "weapon"
+		case equipmentSlots.boots: return "boots"
+		case equipmentSlots.gloves: return "gloves"
+		case equipmentSlots.neck: return "neck"
+		case equipmentSlots.ringLeft: return "ringLeft"
+		case equipmentSlots.ringRight: return "ringRight"
+	}
+}

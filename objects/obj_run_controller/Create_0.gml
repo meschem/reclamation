@@ -1,0 +1,2 @@
+
+create_instance(obj_equipment_controller)

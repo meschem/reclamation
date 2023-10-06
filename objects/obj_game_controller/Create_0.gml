@@ -2,23 +2,33 @@
 
 gameFrame = 0
 
-talents = []
+/// FIXME DEBUG
+
+//audio_set_master_gain(0, 0)
+
+//talents = []
 
 activeAbilityControllers = []
 
 init_run_globals()
 
+//Create Controllers
+//create_instance(obj_trinket_controller)
+instance_create_depth(100, 0, depths.ui, obj_trinket_controller)
+create_instance(obj_run_controller)
+//create_instance(obj_camera_controller)
+
 //init_talents_jonah()
 define_colors()
-set_available_talents()
+//set_available_talents()
 
 // some of these will need to be made global
 
-playerTotalGold = global.playerTotalGold
-playerGold = global.playerGold
-playerXp = global.playerXp
-playerLevel = global.playerLevel
-playerAbilityTreeLevel = global.abilityTreeLevel
+//playerTotalGold = 0
+//playerGold = 0
+//playerXp = 0
+//playerLevel = 1
+//playerAbilityTreeLevel = 1
 
 playerXpLevelTable = [
 	250,
@@ -43,20 +53,49 @@ playerXpLevelTable = [
 	16000
 ]
 
+enum levelUpRewards {
+	abilitySelect,
+	weaponUpgrade,
+	heroTalent,
+	statPoint,
+	trinket,
+	rune,
+	abilityLevelUp
+}
+
 levelUpRewardTable = [
+	//levelUpRewards.weaponUpgrade,
 	levelUpRewards.abilitySelect,
-	levelUpRewards.heroTalent,
+	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
+	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
-	levelUpRewards.abilitySelect
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
+	levelUpRewards.trinket,
+	levelUpRewards.abilityLevelUp,
 ]
 
 window_set_cursor(cr_none)
 
 cursor_sprite = spr_cursor_aiming
 
-spawn_player()
-//spawn_ability_trees()
+//process_all_talents()
 
-process_all_talents()
+var player = spawn_player()

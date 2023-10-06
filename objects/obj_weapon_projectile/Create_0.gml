@@ -2,6 +2,8 @@
 
 event_inherited()
 
+projectileType = projectileTypes.weapon
+
 angleSpriteToVelocity = false
 
 lifeSpan = -1
@@ -16,8 +18,6 @@ yVel = 0
 
 knockback = 0
 
-weaponType = playerWeapons.warHammer
-
 damageDirect = 1
 targetsMax = 1
 targetsHit = 0
@@ -28,7 +28,9 @@ shadowSprite = spr_war_hammer_shadow
 
 soundOnHit = snd_clack
 
-critChance = 0.1
+var owner = get_player_target()
+
+critChance = owner.critChance
 
 hitList = []
 

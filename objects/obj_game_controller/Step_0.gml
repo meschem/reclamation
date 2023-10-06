@@ -6,20 +6,17 @@ if (keyboard_check_pressed(vk_f3))
 	window_set_fullscreen(!window_get_fullscreen())
 
 if (keyboard_check_pressed(vk_f4)) {
-	show_debug_message("Level++")
-	playerXp = playerXpLevelTable[playerLevel]
+	obj_player.xp = playerXpLevelTable[obj_player.level]
 	check_for_level_up()
 }
 
 // f5 is used for pause
-if (keyboard_check_pressed(vk_f5)) {
-	with (obj_game_controller.abilityTrees[0]) { testest = 567 }
+if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape)) {
 	show_debug_message("Breaking")
 }
 
 if (keyboard_check_pressed(vk_f6)) {
-	show_debug_message("Spawning wraith group")
-	spawn_baddie_old(obj_wraith, 12, 60)
+	create_shop_menu()
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
@@ -27,14 +24,19 @@ if (keyboard_check_pressed(vk_f7)) {
 		list_talents()
 }
 
-if (keyboard_check_pressed(vk_f8)) { 
-	spawn_baddie_at_location(obj_zombie, 240, 240)
+if (keyboard_check_pressed(vk_f8)) {
+	obj_player.gold += 500
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
-	display_level_abil_select_prompt()
+	process_player_stats()
 }
 
 if (mouse_check_button_pressed(mb_right)) {
-	instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_skeleton)
+	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_wraith)
+}
+
+if (mouse_check_button_pressed(mb_middle)) {
+	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
+	//enhance_baddie(baddieSpecialTypes.boss, inst)
 }
