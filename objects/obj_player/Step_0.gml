@@ -30,13 +30,25 @@ if (isCharging) {
 	}	
 }
 
-//if (daggerEquipped)
-//	daggerCdCur = max(0, daggerCdCur - 1)
+if (player_can_attack() && !autoAttack) {
+	//if (autoAttack) {
+		// isAttacking = true 
+	//} else {
+		attackAngle = get_attack_input()
+	//}
+	
+}
 
-//if (warHammerEquipped)
-//	warHammerCdCur = max(0, warHammerCdCur - 1)
-
-attackAngle = get_attack_input()
+if (autoAttack) {
+	var target = instance_nearest(x, y, obj_baddie)
+	
+	if (target != noone && point_distance(x, y, target.x, target.y) < autoAttackMaxRange) {
+		attackAngle = point_direction(x, y, target.x, target.y)
+		isAttacking = true
+	} else {
+		isAttacking = false
+	}
+}
 
 if (inputFocus == enumInputTypes.controller) {
 	controllerAimingCursorPos = get_vec2_from_angle_mag(attackAngle, controllerAimingCursorOffset)

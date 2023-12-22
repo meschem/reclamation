@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_chain_lit",
+    "path": "sprites/spr_ability_icon_chain_lit/spr_ability_icon_chain_lit.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -1,8 +1,9 @@
+///@description Ability parent setup
 
 name = "No Name"
 description = "No description yet"
 
-icon = spr_not_set
+icon = spr_ability_icon_null
 iconX = -999
 iconY = -999
 
@@ -31,6 +32,8 @@ activationCdMax = 0
 treeLevel = 2
 hotkey = -1
 controllerIcon = spr_btn_xbox_y
+
+selectionIcon = spr_abil_select_icon_unset
 
 owner = get_player_target()
 

@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_war_stomp",
+    "path": "sprites/spr_ability_icon_war_stomp/spr_ability_icon_war_stomp.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

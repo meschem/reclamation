@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_storm_aura",
+    "path": "sprites/spr_ability_icon_storm_aura/spr_ability_icon_storm_aura.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

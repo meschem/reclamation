@@ -2,6 +2,6 @@
 event_inherited()
 
 name = "Black Ichor"
-description = "Increases area of effect for abilities"
+description = "Increases area of effect for your primary weapon"
 
-bonusAreaOfEffect = [0.1, 0.15, 0.2, 0.35]
+bonusWeaponAoe = [0.2, 0.25, 0.3, 0.4]

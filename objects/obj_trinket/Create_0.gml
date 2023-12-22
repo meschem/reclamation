@@ -3,6 +3,7 @@ event_inherited()
 
 name = "Unnamed"
 description = "No Description"
+statTextList = [] // Array of stat text
 
 level = 1
 maxLevel = 4
@@ -18,13 +19,25 @@ bonusMoveSpeed = []
 bonusAttackSpeed = []
 bonusAbilityCooldown = []
 bonusDamageScalar = []
+bonusWeaponAoe = []
 
 template = false
 equipped = false
 owner = noone
 slot = equipmentSlots.trinket
+rarity = enumRarity.normal
 
 persistent = true
+
+///@description					Creates stat info for leveling
+getStatLevelText = function(level) {
+	//var statStrings = get_bonus_stat_vars()
+	var itemStats = obj_game_controller.itemStats
+	
+	for (var i = 0; i < array_length(itemStats); i++) {
+		
+	}
+}
 
 ///@description					Effects that are applied on leveling up.
 ///								Occurs AFTER stats applied.
@@ -76,4 +89,46 @@ create = function(owner = noone) {
 	process_player_stats()
 	
 	inst.onLevelUp()
+}
+
+///@description						Runs through all set stats and creates a statTextList
+///									array that can be utilized for displaying stats
+///									Must be run AFTER setting up stat blocks
+setupStatTextLists = function() {
+	var statVars = get_bonus_stat_vars()
+	var statName, statValue
+	var levelIndex, statIndex, curVar
+	
+	//show_message(statVars)
+	
+	for (levelIndex = 0; levelIndex < maxLevel; levelIndex++) {
+		statTextList[levelIndex] = []
+		
+		for (statIndex = 0; statIndex < array_length(statVars); statIndex++) {
+			statValue = variable_instance_get(id, statVars[statIndex])
+			statName = get_bonus_stat_name(statVars[statIndex])
+			
+			if (array_length(statValue) > 0) {
+				if (levelIndex == 0) {
+					array_push(
+						statTextList[levelIndex], 
+						new itemStatText(
+							statValue[levelIndex],
+							statName
+						)
+					)
+				} else {
+					array_push(
+						statTextList[levelIndex],
+						new itemStatText(
+							statValue[levelIndex],
+							statName,
+							get_bonus_stat_unit(statName),
+							statValue[levelIndex - 1]
+						)
+					)
+				}
+			}
+		}
+	}
 }

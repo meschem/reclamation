@@ -15,3 +15,11 @@ if (subTitleEnabled) {
 draw_set_font(font_pixelmix_s)
 
 bodyText.draw(x + menuOffset.x, y + menuOffset.y)
+
+if (statTextEnabled) {
+	statText.draw(x + menuOffset.x, y + menuOffset.y)
+}
+
+if (topIcon != spr_none) {
+	draw_sprite(topIcon, 0, x + 34, y - 13)
+}

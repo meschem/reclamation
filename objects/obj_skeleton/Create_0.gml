@@ -5,6 +5,8 @@ event_inherited();
 hpMax = 20
 hp = hpMax
 
+moveSpeedMax = 0.3
+
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 

@@ -29,6 +29,8 @@ moveBehavior = enemyMoveBehaviors.charge
 
 facingAngle = 0
 
+targetType = targetTypes.baddie
+
 damageReactionLength = 16
 damageReactionCurve = animcurve_get(ac_baddie_hit_reaction)
 damageReactionCurveXScale = animcurve_get_channel(damageReactionCurve, 0)
@@ -36,7 +38,7 @@ damageReactionCurveYScale = animcurve_get_channel(damageReactionCurve, 1)
 damageXScaleMultiplier = 1
 damageYScaleMultiplier = 1
 
-moveSpeedMax = 0.6
+moveSpeedMax = 0.4
 moveSpeed = 0
 moveRotationRate = -1 // -1 is "infinite"
 moveAccel = 0.2

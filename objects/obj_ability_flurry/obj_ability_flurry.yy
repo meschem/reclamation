@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "combat",
-    "path": "folders/Objects/abilities/jonah/combat.yy",
+    "name": "storm",
+    "path": "folders/Objects/abilities/jonah/storm.yy",
   },
   "parentObjectId": {
     "name": "obj_ability",
@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_flurry",
+    "path": "sprites/spr_ability_icon_flurry/spr_ability_icon_flurry.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

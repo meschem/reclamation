@@ -1,0 +1,38 @@
+Converting GML script: C:\Users\mesch\AppData\Local\GameMakerStudio2\GMS2TEMP\1408916657_Regular_Expressions_Bundle_8e48288a\mvc\conv\1408916657_Regular_Expressions_Bundle_4704efff\mvc\objects\obj_demo_regex_windows\Create_0.gml
+Converted description /// @description  Windows Regular Expressions Demo
+String not found: ConversionLog_ConvertedString 9 "^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$" "^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$"
+String not found: ConversionLog_ConvertedString 10 "\b[a-z]{4,}" "\\b[a-z]{4,}"
+String not found: ConversionLog_ConvertedString 11 "\b[a-z]{3,4}\b\s{1}" "\\b[a-z]{3,4}\\b\\s{1}"
+String not found: ConversionLog_ConvertedString 12 "^\s*\b[a-zA-Z]+\b" "^\\s*\\b[a-zA-Z]+\\b"
+String not found: ConversionLog_ConvertedString 13 "\b[a-z]{3}\b" "\\b[a-z]{3}\\b"
+String not found: ConversionLog_ConvertedString 26 "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##" "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##"
+String not found: ConversionLog_ConvertedString 29 "Searching for regex '\b[a-z]{4,}' in string '" "Searching for regex '\\b[a-z]{4,}' in string '"
+String not found: ConversionLog_ConvertedString 32 "Replacing all occurrences of regex '\b[a-z]{3,4}\b\s{1}' in string '" "Replacing all occurrences of regex '\\b[a-z]{3,4}\\b\\s{1}' in string '"
+String not found: ConversionLog_ConvertedString 35 "Replacing all occurrences of regex '^\s*\b[a-zA-Z]+\b' in string '" "Replacing all occurrences of regex '^\\s*\\b[a-zA-Z]+\\b' in string '"
+String not found: ConversionLog_ConvertedString 38 "Replacing first occurrence of regex '\b[a-z]{3}\b' in string '" "Replacing first occurrence of regex '\\b[a-z]{3}\\b' in string '"
+
+Converting GML script: C:\Users\mesch\AppData\Local\GameMakerStudio2\GMS2TEMP\1408916657_Regular_Expressions_Bundle_8e48288a\mvc\conv\1408916657_Regular_Expressions_Bundle_4704efff\mvc\objects\obj_demo_regex_android\Create_0.gml
+Converted description /// @description  Android Regular Expressions Demo
+String not found: ConversionLog_ConvertedString 9 "^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$" "^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$"
+String not found: ConversionLog_ConvertedString 10 "\b[a-z]{4,}" "\\b[a-z]{4,}"
+String not found: ConversionLog_ConvertedString 11 "\b[a-z]{3,4}\b\s{1}" "\\b[a-z]{3,4}\\b\\s{1}"
+String not found: ConversionLog_ConvertedString 12 "^\s*\b[a-zA-Z]+\b" "^\\s*\\b[a-zA-Z]+\\b"
+String not found: ConversionLog_ConvertedString 13 "\b[a-z]{3}\b" "\\b[a-z]{3}\\b"
+String not found: ConversionLog_ConvertedString 26 "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##" "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##"
+String not found: ConversionLog_ConvertedString 29 "Searching for regex '\b[a-z]{4,}' in string '" "Searching for regex '\\b[a-z]{4,}' in string '"
+String not found: ConversionLog_ConvertedString 32 "Replacing all occurrences of regex '\b[a-z]{3,4}\b\s{1}' in string '" "Replacing all occurrences of regex '\\b[a-z]{3,4}\\b\\s{1}' in string '"
+String not found: ConversionLog_ConvertedString 35 "Replacing all occurrences of regex '^\s*\b[a-zA-Z]+\b' in string '" "Replacing all occurrences of regex '^\\s*\\b[a-zA-Z]+\\b' in string '"
+String not found: ConversionLog_ConvertedString 38 "Replacing first occurrence of regex '\b[a-z]{3}\b' in string '" "Replacing first occurrence of regex '\\b[a-z]{3}\\b' in string '"
+
+Converting GML script: C:\Users\mesch\AppData\Local\GameMakerStudio2\GMS2TEMP\1408916657_Regular_Expressions_Bundle_8e48288a\mvc\conv\1408916657_Regular_Expressions_Bundle_4704efff\mvc\objects\obj_demo_regex_ios\Create_0.gml
+Converted description /// @description  iOS Regular Expressions Demo
+String not found: ConversionLog_ConvertedString 9 "^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$" "^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}.[a-z]{2,3})$"
+String not found: ConversionLog_ConvertedString 10 "\b[a-z]{4,}" "\\b[a-z]{4,}"
+String not found: ConversionLog_ConvertedString 11 "\b[a-z]{3,4}\b\s{1}" "\\b[a-z]{3,4}\\b\\s{1}"
+String not found: ConversionLog_ConvertedString 12 "^\s*\b[a-zA-Z]+\b" "^\\s*\\b[a-zA-Z]+\\b"
+String not found: ConversionLog_ConvertedString 13 "\b[a-z]{3}\b" "\\b[a-z]{3}\\b"
+String not found: ConversionLog_ConvertedString 26 "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\-_]+@[a-zA-Z0-9\-]+\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##" "Does 'myemail@domain.com' match regex '^[a-zA-Z0-9\\-_]+@[a-zA-Z0-9\\-]+\\.([a-z]{3}|[a-z]{2,3}[a-z]{2,3})$'?##"
+String not found: ConversionLog_ConvertedString 29 "Searching for regex '\b[a-z]{4,}' in string '" "Searching for regex '\\b[a-z]{4,}' in string '"
+String not found: ConversionLog_ConvertedString 32 "Replacing all occurrences of regex '\b[a-z]{3,4}\s' in string '" "Replacing all occurrences of regex '\\b[a-z]{3,4}\\s' in string '"
+String not found: ConversionLog_ConvertedString 35 "Replacing all occurrences of regex '^\s*\b[a-zA-Z]+\b' in string '" "Replacing all occurrences of regex '^\\s*\\b[a-zA-Z]+\\b' in string '"
+String not found: ConversionLog_ConvertedString 38 "Replacing first occurrence of regex '\b[a-z]{3}\b' in string '" "Replacing first occurrence of regex '\\b[a-z]{3}\\b' in string '"

@@ -26,6 +26,10 @@ function activate_war_stomp(level) {
 		
 		inst = create_fx_fading_circle(x, y, radius, 30)
 		inst.alphaStart = 0.4
+		
+		obj_camera_controller.applyShake()
+		
+		audio_play_sound(snd_thunder_slam, 0, false)
 
 		if (count > 0) {
 			if (obj_ability_war_stomp.runes[enumRunes.dreygoth].enabled) {

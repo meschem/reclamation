@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_demon_claw",
+    "path": "sprites/spr_icon_demon_claw/spr_icon_demon_claw.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

@@ -8,6 +8,7 @@ event_inherited();
 name = "War Stomp"
 description = "Stuns and damages an area around Jonah"
 icon = spr_ability_icon_war_stomp
+selectionIcon = spr_abil_select_icon_war_stomp
 active = true
 
 curCd = 0
@@ -38,5 +39,8 @@ addRune("Pushback", "Knocks targets back a distance")
 addRune("Echo Slam", "Deals more damage the more targets that are hit")
 
 use = function() {
-	activate_war_stomp(level)
+	owner.sprite_index = owner.sprSlam
+	owner.image_index = 0
+	
+	//animAbilityQueue = activate_war_stomp(level)
 }

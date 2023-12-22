@@ -47,8 +47,15 @@ depth = depths.player
 
 age = 0
 
+reticles = [
+	spr_reticle_arrow_sm,
+	spr_reticle_crossbow
+]
+
+reticleIndex = 0
+
 baseMaxHp = 50
-baseMoveSpeedMax = 1.4
+baseMoveSpeedMax = 1.1
 baseMaxArmor = 0
 baseCritChance = 0.1
 baseAreaOfEffectScalar = 1
@@ -71,6 +78,10 @@ critChance = baseCritChance
 areaOfEffectScalar = baseAreaOfEffectScalar
 abilityCooldownScalar = baseAbilityCooldownScalar
 attackSpeedScalar = baseAttackSpeedScalar
+
+autoAttack = true
+autoAttackMaxRange = 180
+isAttacking = false
 
 maxHp = baseMaxHp
 hp = maxHp
@@ -100,8 +111,8 @@ phases = false
 
 weaponList = ds_list_create()
 
-warHammerEquipped = false
-daggerEquipped = false
+//warHammerEquipped = false
+//daggerEquipped = false
 isAlwaysAttacking = false
 
 auraYOffset = 4
@@ -121,6 +132,9 @@ activeAbilities = [
 
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
+sprSlam = spr_jonah_slam
+
+animAbilityQueue = function() {}
 
 onHitAbilities = []
 onAttackAbilities = []

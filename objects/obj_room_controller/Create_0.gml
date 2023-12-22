@@ -18,6 +18,9 @@ timeDisplay = "0:00"
 
 nextLevel = rm_start_dev
 
+create_instance(obj_buff_controller)
+create_instance(obj_camera_controller)
+
 ///@description			Builds a set of teleport locations to be utilized in the room
 buildTeleportLocations = function() {
 	var count = 40

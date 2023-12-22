@@ -21,9 +21,12 @@ enum projectileTypes {
 projectileType = projectileTypes.unset
 
 angleSpriteToVelocity = false
+facingAngle = 0
 
 lifeSpan = -1
 age = 0
+
+animSpeed = 1
 
 distanceMax = 1200
 distanceTraveled = 0
@@ -35,6 +38,7 @@ attachedOrigin = new vec2(0, 0)
 attachedVelocity = new vec2(0, 0)
 xVel = 0
 yVel = 0
+moveSpeedMax = 100
 
 rotationSpeed = 0 // rotation per frame
 
@@ -45,6 +49,8 @@ checkOnStrikeAbilities = false
 damageDirect = 1
 targetsMax = 1
 targetsHit = 0
+canHitMultipleTargets = true // true if projectile can hit multiple targets per frame
+targetCollisionList = ds_list_create() // used per frame
 damageLostPerTarget = 0
 
 applyShock = 0

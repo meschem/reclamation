@@ -6,32 +6,43 @@
 event_inherited();
 
 name = "Flurry"
-description = "Rapidly attacks in a spread pattern"
+description = "Increases attack speed for a short duration. Each attack increases in size. Slows movement."
 active = true
+
+icon = spr_ability_icon_flurry
 
 curCd = 0
 maxCd = 240
 
 enabled = false
 projectileCount = 5
-bonusDamage = 0
+duration = seconds_to_frames(3)
 
-treeLevel = 2
+bonusAttackSpeed = 2
+bonusMoveSpeed = -0.5
+bonusAttackArea = 0
+duration = seconds_to_frames(1.5)
+
+treeLevel = 3
 
 stats = [
+	//new abilityStat(
+	//	"Duration", "duration",
+	//	[5, 5, 6, 6, 7]
+	//),
 	new abilityStat(
-		"Projectile Count", "projectileCount",
-		[5, 5, 6, 6, 7]
+		"Attack Speed", "bonusAttackSpeed",
+		[3, 3.4, 3.8, 4.2, 5]
 	),
-	new abilityStat(
-		"Bonus Damage", "bonusDamage", 
-		[0, 0, 5, 5, 10]
-	)
+	//new abilityStat(
+	//	"Size Increase", "bonusScale", 
+	//	[0.1, 0.25, 0.3, 0.35, 0.5]
+	//)
 ]
 
-addRune("Circle Flurry", "Throws 8 Hammers in a 360 degree arc")
-addRune("Exertion", "I dont know")
+addRune("Growing Rage", "Each attack increases damage by 5")
+addRune("Blood Fueled", "Kills extend duration by 0.1 seconds. Max +3 seconds.")
 
 use = function() {
-	activate_flurry(level)
+	create_instance(obj_jonah_flurry_swipe_caster)
 }

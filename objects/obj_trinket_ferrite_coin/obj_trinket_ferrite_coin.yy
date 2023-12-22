@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_ferrite_coin",
+    "path": "sprites/spr_icon_ferrite_coin/spr_icon_ferrite_coin.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

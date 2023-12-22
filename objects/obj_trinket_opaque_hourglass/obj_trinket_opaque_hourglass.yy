@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_opaque_hourglass",
+    "path": "sprites/spr_icon_opaque_hourglass/spr_icon_opaque_hourglass.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

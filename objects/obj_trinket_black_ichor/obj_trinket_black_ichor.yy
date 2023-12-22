@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_black_ichor",
+    "path": "sprites/spr_icon_black_ichor/spr_icon_black_ichor.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

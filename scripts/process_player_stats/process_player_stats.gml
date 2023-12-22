@@ -8,4 +8,5 @@ function process_player_stats() {
 	process_player_stats_crit_chance()
 	process_player_stats_damage_scalar()
 	process_player_stats_pickup()
+	process_player_stats_weapon_aoe()
 }

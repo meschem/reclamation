@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_aegis_pendant",
+    "path": "sprites/spr_icon_aegis_pendant/spr_icon_aegis_pendant.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

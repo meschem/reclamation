@@ -10,6 +10,7 @@ event_inherited()
 
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
+sprSlam = spr_jonah_slam
 abilityTrees = playerCharacters.jonah
 
 addWeapon(obj_weapon_war_hammer)

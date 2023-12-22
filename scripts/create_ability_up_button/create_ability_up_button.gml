@@ -13,7 +13,7 @@ function create_ability_up_button(abilTree, menu = noone) {
 		button.bodyText.body = description
 		button.ability = id
 	
-		menu.title = "You Leveled up!"
+		//menu.title = "You Leveled up!"
 	
 		if (menu != noone) {
 			button.parentMenu = menu

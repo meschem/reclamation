@@ -1,15 +1,19 @@
+P0:
+
+* Replace spawner setup using structs
+* Setup text for displaying stats
+
 1. Get basic game loop:
 	* Menu after death to restart
 	* Ending a room:
 		* Detect all monsters killed
 		* Menu for map navigation?
 			- Zoom out, create exits after?
-	* Fix starting abilities
-	* Fix razors on talent get
 2. Update talent screen
 	* Resize things
-	* Add text for description
 	* Create talent icons
 	* Show talent icons (pause screen?)
 3. Create pause screen
 	* Restart game
+	
+

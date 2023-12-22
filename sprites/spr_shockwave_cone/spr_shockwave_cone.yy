@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "particles",
-    "path": "folders/Sprites/fx/particles.yy",
+    "name": "slashes",
+    "path": "folders/Sprites/fx/slashes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

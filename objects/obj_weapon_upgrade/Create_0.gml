@@ -15,6 +15,7 @@ bonusCritChance = 0
 bonusProjectileCount = 0 
 bonusPickupRange = 0
 bonusPickupReward = 0
+bonusWeaponAoe = 0
 
 lifeCycleEvents = []
 

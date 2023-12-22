@@ -1,14 +1,14 @@
-
 if (enabled) {
 	if (state != buttonStates.disabled) {
 		if (parentMenu.useMouseFocus) {
 			if (mouse_is_over_hitbox()) {
 				var baseId = id
 		
+				// sets all others to unfocused
 				with (obj_card_ui) {
-					if (state != buttonStates.disabled) {
-						state = (id == baseId) ? isFocused = true : isFocused = false
-					}
+					if (state == buttonStates.selected) {
+						state = buttonStates.normal
+					}					
 				}
 
 				isFocused = true
@@ -26,15 +26,15 @@ if (enabled) {
 		if (
 			state == buttonStates.selected && (
 				keyboard_check_released(vk_enter) || 
-				gamepad_button_check_released(0, gp_face2)
+				gamepad_button_check_released(0, gp_face2) ||
+				mouse_check_button_released(mb_left)
 			)
 		) {
 			onClick()
 		}
 	}
+} else if (mouse_check_button_released(mb_left)) {
+	enabled = true
 }
 
 image_index = state
-
-//show_debug_message(camera_get_view_x(viewCamera))
-//show_debug_message(camera_get_view_Y(view_camera[0]))

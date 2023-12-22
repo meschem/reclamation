@@ -4,6 +4,10 @@ nextLevel = rm_combat_testing_b
 
 spawner = create_instance(obj_spawner_controller)
 
+//spawner.addPhase([
+//	spawner.setupFlybySpawn(obj_devil, false, 3),
+//])
+
 spawner.addPhase([
 	spawner.setupSpawn(obj_skeleton, 4),
 ])

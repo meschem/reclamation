@@ -15,6 +15,8 @@ paddingBottom = 14
 paddingX = 26
 paddingY = 2
 
+buttonSpacing = 120
+
 scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
 

@@ -10,6 +10,8 @@ description = "Returns pointy damage to attackers"
 onHitAbility = true
 active = true
 
+icon = spr_ability_icon_thorns
+
 treeLevel = 2
 
 maxCd = 900

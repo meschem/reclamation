@@ -1,6 +1,10 @@
 
 // Inherit the parent event
-event_inherited();
+event_inherited()
+
+titleText.location.y = 17
+//subTitleText.location.y = 
+bodyText.location.y = 37
 
 onClick = function () {
 	//FIXME Multiplayer: Assumes single player. Selection window needs owner.

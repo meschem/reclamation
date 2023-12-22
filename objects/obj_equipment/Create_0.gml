@@ -35,6 +35,7 @@ cost = 100
 rarity = enumRarity.normal
 
 bonusAttackSpeed = 0
+bonusAttackArea = 0
 bonusDamageScalar = 0
 bonusDamage = 0
 bonusArmor = 0
@@ -45,6 +46,7 @@ bonusCritChance = 0
 bonusProjectileCount = 0 
 bonusPickupRange = 0
 bonusPickupReward = 0
+bonusWeaponAoe = 0
 
 stats = []
 
@@ -123,3 +125,4 @@ getRarityString = function() {
 		case enumRarity.legendary: return "Legendary"
 	}
 }
+

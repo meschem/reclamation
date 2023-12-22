@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_petrified_heart",
+    "path": "sprites/spr_icon_petrified_heart/spr_icon_petrified_heart.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

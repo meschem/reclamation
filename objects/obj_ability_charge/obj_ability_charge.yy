@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_charge",
+    "path": "sprites/spr_ability_icon_charge/spr_ability_icon_charge.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

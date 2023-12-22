@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_thorns",
+    "path": "sprites/spr_ability_icon_thorns/spr_ability_icon_thorns.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

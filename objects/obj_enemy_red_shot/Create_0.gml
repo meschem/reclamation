@@ -1,4 +1,4 @@
 event_inherited();
 
-moveSpeedMax = 2
-accel = 0.08
+moveSpeedMax = 1
+accel = 0.05

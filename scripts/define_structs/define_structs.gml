@@ -8,14 +8,59 @@ enum enumLootType {
 	general,
 }
 
+enum enumStatUnits {
+	none,
+	meters,
+	percent,
+	length,
+}
+
+///@description						Stat that can be applied to anything
+///@param {real} _amount			Amount being provided, positive or negative.
+///@param {string} _name			Name to display after the amount
+///@param {string} _unit			enumStatUnits
+///@param {real} _previousAmount	If this is an upgrade, previous amount
+function itemStatText(_amount, _name, _unit = enumStatUnits.none, _previousAmount = 0) constructor {
+	var amountSymbol = string_char_at(_amount, 1)
+	
+	//show_message([_amount, _name, _unit, _previousAmount])
+	
+	amount = _amount
+	name = _name
+	unit = _unit
+	unitText = ""
+	previousAmount = _previousAmount
+	
+	displayAmount = amount
+	
+	if (unit == enumStatUnits.percent) {
+		unitText = "%"
+		displayAmount *= 100
+	} else if (unit == enumStatUnits.meters) {
+		unitText = "m"
+	} else {
+		unitText = ""
+	}
+	
+	signText = (amount >= 0) ? "+" : "-"
+	
+	if (_previousAmount == 0) {
+		fullString = $"{signText}{displayAmount}{unitText} {name}"
+	} else {
+		fullString = $"{signText}{previousAmount}{unitText} > {displayAmount}{unitText} {name}"
+	}
+}
+
 ///@description						Stat that can be applied to anything
 ///@param {string} _name			Human-readable name of the stat
 ///@param {string} _variable		Variable to adjust
 ///@param {array<real>} _values		Values to apply at different levels
-function abilityStat(_name, _variable, _values) constructor {
+///@param {bool} _display			Display value in tooltips and prompts
+function abilityStat(_name, _variable, _values, _display = true) constructor {
 	name = _name
 	variable = _variable
 	values = _values
+	display = _display
 }
 
 ///@description						Provides info for leveling an ability
@@ -60,10 +105,23 @@ function lootComponent(_lootType, _owner, _chance = 1, _amountMin = 1, _amountMa
 	}
 }
 
+///@param {string} _name
+///@param {string} _itemVar
+///@param {string} _playerVar
+///@param {bool} _isPercent
+///@param {bool} _isScalar
+function itemStat(_name, _itemVar, _playerVar, _isPercent = false, _isScalar = false) constructor {
+	name = _name
+	itemVar = _itemVar
+	playerVar = _playerVar
+	isPercent = _isPercent
+	isScalar = _isScalar
+}
+
 ///@description						Stat for a player character that is referenced as needed
 ///@param {string} _name			Human readable name of the stat
 ///@param {real} _baseValue
-function playerStat(_name, _baseValue) constructor {
+function playerStat_OLD(_name, _baseValue) constructor {
 	name = _name
 	baseValue = _baseValue
 	value = baseValue
@@ -163,7 +221,7 @@ function gamepadInput() constructor {
 		gp_shoulderlb,
 		gp_shoulderr,
 		gp_shoulderl,
-		gp_face1
+		gp_face2
 	]
 }
 

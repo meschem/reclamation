@@ -1,3 +1,5 @@
+///@description		Init
+
 // FIXME General: Big offset for initial location
 x = -999
 y = -999
@@ -9,6 +11,8 @@ index = 0
 enabled = true
 subTitleEnabled = false
 isFocused = false
+statTextEnabled = false
+topIcon = spr_none
 
 if (mouse_check_button(mb_left)) {
 	enabled = false
@@ -43,12 +47,48 @@ bodyText = new text(
 	92
 )
 
+statText = new text(
+	"",
+	font_pxlxxl_s,
+	colors.black,
+	new vec2(6, 0),
+	false,
+	92
+)
+
 menuOffset = new vec2(0, 0)
 
 ability = noone
 trinket = noone
 talent = noone
 
+//statTextList = []
+
 onClick = function() {
 	show_message("onClick not set")
+}
+
+///@description				Updates stat text
+///@param {array<Struct>}
+createStatText = function(statTextList) {
+	if (array_length(statTextList) == 0) { 
+		return 0
+	}
+	
+	statTextEnabled = true
+
+	var txt = ""
+		
+	for (var i = 0; i < array_length(statTextList); i++) {
+		txt += statTextList[i].fullString
+		
+		if (i != array_length(statTextList) - 1) {
+			txt += "\n"
+		}
+	}
+	
+	var yOffset = string_height(txt) + 10
+	
+	statText.location.y = sprite_height - 10 - yOffset
+	statText.body = txt
 }

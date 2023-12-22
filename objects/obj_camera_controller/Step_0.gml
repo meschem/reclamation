@@ -2,32 +2,17 @@
 if (focusObject == noone)
 	return 0
 	
-var centerX = getCenterX()
-var centerY = getCenterY()
-
-var distanceX = focusObject.x - centerX
-var distanceY = focusObject.y - centerY
-
-//var xPos = camera_get_view_x(cameraId)
-//var yPos = camera_get_view_x(cameraId)
-
-show_debug_message("Distance: " + string(distanceX) + ", " + string(distanceY))
-
-//if (distanceX < focusObjectBoundsX) {
-//	xPos--
-//} else if (distanceX > focusObjectBoundsX) {
-//	xPos++
-//}
-
-//if (distanceY < focusObjectBoundsY) {
-//	yPos--
-//} else 
-
-//if (distanceY > focusObjectBoundsY) {
-//	yPos++
-//	show_debug_message("moving y+")
-//}
-
-//camera_set_view_pos(view_camera[0], xPos, yPos)
-
-//show_debug_message("Pos: " + string(xPos) + ", " + string(yPos))
+var xOffset = 0
+var yOffset = 0
+	
+if (shakeForce > 0) {
+	var r = shakeForce * sqrt(random(1))
+	var theta = random(1) * 2 * pi
+	
+	xOffset = r * cos(theta)
+	yOffset = r * sin(theta)
+	
+	shakeForce -= max(shakeDecay, 0)
+}
+	
+center_view(focusObject, xOffset, yOffset)

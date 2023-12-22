@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_beast_blood",
+    "path": "sprites/spr_icon_beast_blood/spr_icon_beast_blood.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

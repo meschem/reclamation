@@ -1,4 +1,4 @@
-if (keyboard_check_pressed(vk_f5)) {
+if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
 	if (state == roomStates.pauseMenu || state == roomStates.playing) {
 		isPaused = !isPaused
 	}

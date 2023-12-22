@@ -7,7 +7,8 @@ event_inherited()
 
 name = "Chain Lightning"
 description = "Shoots out a bolt of lightning that bounces between targets"
-icon = spr_ability_icon_war_stomp
+icon = spr_ability_icon_chain_lit
+selectionIcon = spr_abil_select_icon_chain_lit
 maxCharges = 3
 active = true
 

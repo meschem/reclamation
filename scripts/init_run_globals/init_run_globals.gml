@@ -7,7 +7,7 @@ function init_run_globals() {
 	if (!global.runStarted) {
 		show_debug_message("Initiating globals")
 		
-		window_set_size(1280, 720)
+		//window_set_size(1280, 720)
 
 		global.runStarted = true
 		

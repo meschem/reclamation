@@ -1,5 +1,5 @@
 ///@description									Throws out a hammer
-///@param {id.Instance<obj_player>} attacker	Person making attack		
+///@param {id.Instance} attacker	Person making attack		
 ///@param {real} angleModifier					+/- to angle hammer is thrown at
 ///@return {id.Instance}
 function attack_war_hammer(attacker = noone, angleModifier = 0) {

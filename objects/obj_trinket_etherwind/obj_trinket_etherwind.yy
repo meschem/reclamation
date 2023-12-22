@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_etherwind",
+    "path": "sprites/spr_icon_etherwind/spr_icon_etherwind.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

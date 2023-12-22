@@ -17,12 +17,19 @@ use = function() {
 }
 
 ///@description						Parent function for attacking. Don't overwrite.
+///@return {bool}					Returns true if attack occurred
 attack = function() {
 	if (curCd <= 0) {
 		use()
 		
-		curCd = maxCd * (1 / owner.attackSpeedScalar)
+		var multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed)
+		
+		curCd = maxCd * (1 / multiplier)
+		
+		return true
 	}
+	
+	return false
 }
 
 ///@description						Launches a projectile

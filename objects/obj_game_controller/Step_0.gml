@@ -2,6 +2,9 @@
 
 gameFrame++
 
+if (keyboard_check_pressed(vk_f2))
+	game_restart()
+
 if (keyboard_check_pressed(vk_f3))
 	window_set_fullscreen(!window_get_fullscreen())
 
@@ -13,9 +16,7 @@ if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) 
 }
 
 // f5 is used for pause
-if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-	show_debug_message("Breaking")
-}
+// Pausing handled in obj_room_controller
 
 if (keyboard_check_pressed(vk_f6)) {
 	create_shop_menu()
@@ -34,8 +35,22 @@ if (keyboard_check_pressed(vk_f9)) {
 	process_player_stats()
 }
 
+if (keyboard_check_pressed(vk_f10)) { 
+	with (obj_player) {
+		maxHp += 10
+		baseMaxHp = maxHp
+		hp = maxHp
+	}
+}
+
+if (keyboard_check_pressed(vk_f11)) { 
+	obj_camera_controller.applyShake()
+}
+
 if (mouse_check_button_pressed(mb_right)) {
-	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_wraith)
+	spawn_baddie_at_location(
+		obj_skeleton, mouse_x, mouse_y
+	)
 }
 
 if (mouse_check_button_pressed(mb_middle)) {

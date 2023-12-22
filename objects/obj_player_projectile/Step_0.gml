@@ -1,4 +1,12 @@
-if (game_is_paused()) return 0
+if (game_is_paused()) {
+	image_speed = 0
+
+	return 0
+} else {
+	image_speed = animSpeed
+}
+
+var i
 
 if (age == 0) {
 	run_lifecycle_events(enumLifeCycleEvents.stepFirst)
@@ -27,6 +35,10 @@ run_lifecycle_events(enumLifeCycleEvents.stepBegin)
 spawnPeriodicFx()
 
 calcVelocity()
+
+if (xVel != 0 && yVel != 0) {
+	facingAngle = get_angle(xVel, yVel)
+}
 
 // Seeking behavior
 if (seeking && seekTarget != noone) {
@@ -79,7 +91,9 @@ if (movementType = projMovementTypes.velocity) {
 	}
 } 
 
-clean_hit_list(hitList)
+if (targetsMax > 0) {
+	clean_hit_list(hitList)
+}
 
 if (angleSpriteToVelocity)
 	image_angle = get_angle(xVel, yVel)
@@ -87,69 +101,72 @@ if (angleSpriteToVelocity)
 var target = noone
 var targetType = targetTypes.none
 var critHit = false
+var destroy = false
 
 if (onlyHitsSeekTarget) {
 	var hitsTarget = place_meeting(x, y, seekTarget)
+	
 	target = seekTarget
 } else {
-	target = instance_place(x, y, obj_baddie)
-}
-
-if (target == noone) {
-	if (hitsWalls) {
-		target = instance_place(x, y, obj_solid)
-	
-		if (target != noone) {
-			targetType = targetTypes.terrain
-		}
-	}
-} else {
-	targetType = targetTypes.baddie
-}
-
-if (targetType == targetTypes.terrain) {
-	instance_destroy()
-} else if (targetType == targetTypes.baddie && !hitlist_contains(hitList, target)) {
-	array_push(hitList, new hitListEntry(target, damageFrameCooldown))
-	
-	onCollideFx(target)
-	
-	if (target.shockedLength <= 0) {
-		critHit = (critChance > random(1))
+	if (canHitMultipleTargets) {
+		instance_place_list(x, y, [obj_baddie, obj_solid], targetCollisionList, true)
 	} else {
-		repeat (3) {
-			critHit = (critChance > random(1))
-			
-			if (critHit) {
-				break
-			}
-		}
-	}
-
-	// FIXME disconnected from script
-	if (applyShock > 0 && target.shockedLength < applyShock) {
-		target.shockedLength = applyShock
-	}
-
-	for (var i = 0; i < array_length(obj_player.onStrikeAbilities); i++) {
-		obj_player.onStrikeAbilities[i].activate(id, critHit)
-	}
-
-	var killed = damage_baddie(target, damageDirect, critHit)
-
-	if (!killed && knockback > 0) {
-		var pushAngle = point_direction(0, 0, xVel, yVel)
-		knockback_baddie(target, knockback, pushAngle)
-	}
-
-	targetsHit++
-	
-	damageDirect -= damageLostPerTarget
-
-	if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
-		//show_debug_message(targetsMax)
-		instance_destroy()
+		target = instance_place(x, y, [obj_baddie, obj_solid])
 	}
 }
+
+if (target != noone) {
+	ds_list_add(targetCollisionList, target)
+}
+
+
+
+for (i = 0; i < ds_list_size(targetCollisionList); i++) {
+	target = targetCollisionList[| i]
+	
+	if (target.targetType == targetTypes.baddie && !hitlist_contains(hitList, target)) {
+		array_push(hitList, new hitListEntry(target, damageFrameCooldown))
+	
+		onCollideFx(target)
+	
+		if (target.shockedLength <= 0) {
+			critHit = (critChance > random(1))
+		} else {
+			repeat (3) {
+				critHit = (critChance > random(1))
+			
+				if (critHit) {
+					break
+				}
+			}
+		} 
+
+		// FIXME disconnected from script
+		if (applyShock > 0 && target.shockedLength < applyShock) {
+			target.shockedLength = applyShock
+		}
+
+		for (i = 0; i < array_length(obj_player.onStrikeAbilities); i++) {
+			obj_player.onStrikeAbilities[i].activate(id, critHit)
+		}
+
+		var killed = damage_baddie(target, damageDirect, critHit)
+
+		if (!killed && knockback > 0) {
+			//var pushAngle = point_direction(0, 0, xVel, yVel)
+			knockback_baddie(target, knockback, facingAngle)
+		}
+
+		targetsHit++
+	
+		damageDirect -= damageLostPerTarget
+
+		if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
+			instance_destroy()
+		}
+	}
+}
+
+ds_list_clear(targetCollisionList)
 
 run_lifecycle_events(enumLifeCycleEvents.stepEnd)

@@ -1,7 +1,7 @@
 
 if (inputFocus == enumInputTypes.controller) {
 	draw_sprite_ext(
-		spr_controller_aiming,
+		reticles[reticleIndex],
 		0,
 		uiDrawOffset.x + controllerAimingCursorPos.x,
 		uiDrawOffset.y + controllerAimingCursorPos.y,

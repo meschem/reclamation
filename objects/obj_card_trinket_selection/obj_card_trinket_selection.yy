@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ability_selection",
-    "path": "sprites/spr_ability_selection/spr_ability_selection.yy",
+    "name": "spr_trinket_selection",
+    "path": "sprites/spr_trinket_selection/spr_trinket_selection.yy",
   },
   "spriteMaskId": null,
   "visible": true,

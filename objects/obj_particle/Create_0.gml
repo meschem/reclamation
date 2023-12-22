@@ -15,3 +15,5 @@ scaleStart = 1
 scaleEnd = 0
 
 singleCycle = false
+
+animSpeed = 1

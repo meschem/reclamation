@@ -25,11 +25,13 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2) {
 		//inst.yVel = -2
 		inst.xVel = random_range(-0.5, 0.5)
 		
+		var displayAmount = round(amount)
+		
 		if (isCrit) {
-			inst.displayText = string(amount) + "!"
+			inst.displayText = string(round(displayAmount)) + "!"
 			inst.fontColor = c_orange
 		} else {
-			inst.displayText = string(amount)
+			inst.displayText = string(round(displayAmount))
 		}
 	}
 

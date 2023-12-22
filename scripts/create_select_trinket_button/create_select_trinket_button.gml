@@ -9,7 +9,16 @@ function create_select_trinket_button(trinket, menu = noone) {
 		button.titleText.body = name
 		button.bodyText.body = description
 		button.trinket = id
-	
+		button.topIcon = sprite_index
+		
+		if (array_length(statTextList) > level) {
+			//button.statTextList = statTextList[level - 1]
+			
+			button.createStatText(statTextList[level - 1])
+		} else {
+			button.statInfo = []
+		}
+		
 		menu.title = "You Leveled up!"
 	
 		if (menu != noone) {
