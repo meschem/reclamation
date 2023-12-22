@@ -2,6 +2,14 @@ if (game_is_paused()) return 0
 
 age++
 
+if (keyboard_check_pressed(ord("P"))) {
+	autoAttack = !autoAttack
+	
+	var enabledText = autoAttack ? "ENABLED" : "DISABLED"
+	
+	create_toaster("Auto Attack " + enabledText)
+}	
+
 player_movement_input()
 
 hitWall = player_walk_to_location(xVel, yVel)

@@ -15,6 +15,7 @@ init_run_globals()
 //Create Controllers
 //create_instance(obj_trinket_controller)
 instance_create_depth(100, 0, depths.ui, obj_trinket_controller)
+create_instance(obj_toaster_controller)
 create_instance(obj_run_controller)
 //create_instance(obj_camera_controller)
 

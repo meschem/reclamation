@@ -41,13 +41,13 @@ if (beingSummoned) {
 	x += xVel
 	y += yVel
 	
-	if (z == 0 && place_meeting(x, y, obj_player)) {
-		damage_player(id)
+	//if (z == 0 && place_meeting(x, y, obj_player)) {
+	//	damage_player(id)
 	
-		instance_destroy()
+	//	instance_destroy()
 	
-		return 0
-	}
+	//	return 0
+	//}
 }
 
 if (age > lifeSpan)

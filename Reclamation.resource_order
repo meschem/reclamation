@@ -107,6 +107,8 @@
     {"name":"flourishes","order":10,"path":"folders/Sprites/ui/flourishes.yy",},
     {"name":"level_up","order":5,"path":"folders/Sprites/ui/level_up.yy",},
     {"name":"reticles","order":11,"path":"folders/Sprites/ui/reticles.yy",},
+    {"name":"toaster","order":15,"path":"folders/Objects/toaster.yy",},
+    {"name":"toaster","order":21,"path":"folders/Scripts/toaster.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_trinket_glass_feather","order":4,"path":"objects/obj_trinket_glass_feather/obj_trinket_glass_feather.yy",},
@@ -487,6 +489,7 @@
     {"name":"obj_menu_grid","order":7,"path":"objects/obj_menu_grid/obj_menu_grid.yy",},
     {"name":"display_level_abil_select_prompt","order":3,"path":"scripts/display_level_abil_select_prompt/display_level_abil_select_prompt.yy",},
     {"name":"obj_coin","order":1,"path":"objects/obj_coin/obj_coin.yy",},
+    {"name":"obj_toaster_controller","order":1,"path":"objects/obj_toaster_controller/obj_toaster_controller.yy",},
     {"name":"spr_palette","order":4,"path":"sprites/spr_palette/spr_palette.yy",},
     {"name":"get_available_weapon_upgrades","order":5,"path":"scripts/get_available_weapon_upgrades/get_available_weapon_upgrades.yy",},
     {"name":"obj_boots_fleet_feet","order":3,"path":"objects/obj_boots_fleet_feet/obj_boots_fleet_feet.yy",},

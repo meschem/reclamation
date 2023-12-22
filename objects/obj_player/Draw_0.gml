@@ -8,5 +8,5 @@ draw_sprite_ext(
 	image_yscale,
 	image_angle,
 	c_white,
-	1
+	image_alpha
 )

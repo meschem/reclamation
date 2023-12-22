@@ -33,3 +33,7 @@ turnRate = 1
 velocity = 0
 
 target = get_player_target()
+
+onInstanceCollision = function(inst) {
+	instance_destroy()
+}

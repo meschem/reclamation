@@ -15,6 +15,7 @@ function chain_lightning_collide(projectile, target) {
 	inst = instance_create_depth(target.x, target.y, depths.fx, obj_particle_single_cycle)
 	inst.sprite_index = spr_particle_32_circle_boom
 	
+	// FIXME: ERROR - Possible projectile does not exist at this point
 	create_chain_lightning_fx(projectile.spawnPoint, endPoint)
 	
 	if (projectile.respawnCount == 0) {

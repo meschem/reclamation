@@ -79,7 +79,7 @@ areaOfEffectScalar = baseAreaOfEffectScalar
 abilityCooldownScalar = baseAbilityCooldownScalar
 attackSpeedScalar = baseAttackSpeedScalar
 
-autoAttack = true
+autoAttack = false
 autoAttackMaxRange = 180
 isAttacking = false
 
