@@ -10,33 +10,6 @@ enum enumInputTypes {
 	controller
 }
 
-// Weapons are used on right stick directional input
-//enum playerWeapons {
-//	warHammer,
-//	bow,
-//	dagger
-//}
-
-// Sidearms activate periodically
-//enum playerSideArms {
-//	razors
-//}
-
-// Passives are always active
-//enum playerPassives {
-//	healthRegen
-//}
-
-// Abilities are used on ability inputs
-//enum playerAbilities {
-//	null,
-//	fortify,
-//	warStomp,
-//	dash,
-//	charge,
-//	length
-//}
-
 kmInput = new keyMouseInput()
 controllerInput = new gamepadInput()
 controllerIndex = 0
@@ -55,9 +28,10 @@ reticles = [
 reticleIndex = 0
 
 baseMaxHp = 50
-baseMoveSpeedMax = 1.1
+baseMoveSpeedMax = 1
 baseMaxArmor = 0
 baseCritChance = 0.1
+baseCritMultiplier = 1.5
 baseAreaOfEffectScalar = 1
 baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
@@ -74,6 +48,7 @@ level = 1
 abilityTreeLevel = 1
 
 critChance = baseCritChance
+critMultiplier = 1.5
 //projectileBonus = baseAbilityProjectileBonus
 areaOfEffectScalar = baseAreaOfEffectScalar
 abilityCooldownScalar = baseAbilityCooldownScalar

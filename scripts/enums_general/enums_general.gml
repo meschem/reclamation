@@ -17,4 +17,10 @@ function enums_general() {
 		_y,
 		_z
 	}
+	
+	enum errorLevels {
+		normal,
+		warning,
+		error
+	}
 }

@@ -7,7 +7,7 @@ spawnObject = obj_war_hammer_swipe
 
 reverseSwipe = false
 
-maxCd = 50
+maxCd = 80
 
 upgrades = [
 	create_instance(obj_wupg_wh_mega_hammer),
@@ -29,6 +29,7 @@ use = function() {
 	
 	inst.image_angle = owner.attackAngle
 	inst.facingAngle = owner.attackAngle
+	inst.owner = owner
 	
 	if (reverseSwipe) {
 		inst.reverseSwipe = true

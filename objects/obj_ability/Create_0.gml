@@ -4,6 +4,7 @@ name = "No Name"
 description = "No description yet"
 
 icon = spr_ability_icon_null
+icon = sprite_index
 iconX = -999
 iconY = -999
 

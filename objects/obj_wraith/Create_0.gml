@@ -2,12 +2,12 @@
 
 event_inherited();
 
-xp = 100 * 10
-hpMax = 35
+xp = 100
+hpMax = 20
 hp = hpMax
 
-moveAccel = 0.1
-moveSpeedMax = 1.6
+moveAccel = 0.08
+moveSpeedMax = 1.5
 
 shadowSprite = spr_shadow_lg
 

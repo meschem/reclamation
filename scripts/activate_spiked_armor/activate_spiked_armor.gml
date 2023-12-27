@@ -1,8 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function activate_spiked_armor() {
-	var caster = get_player_target()
-	
+function activate_spiked_armor(caster) {
 	var damage = obj_ability_thorns.spikeDamage
 	var lifeSpan = obj_ability_thorns.getLifeSpan()
 	var spikeCount = obj_ability_thorns.spikeCount
@@ -17,6 +15,7 @@ function activate_spiked_armor() {
 			depths.playerProjectile,
 			obj_armor_spike
 		)
+		
 		var angle = (360 / spikeCount) * i
 		var velocity = get_velocity_from_angle(angle, vel)
 			
@@ -25,6 +24,7 @@ function activate_spiked_armor() {
 		proj.damageDirect = damage
 		proj.lifeSpan = lifeSpan
 		proj.applyShock = obj_ability_thorns.lightningShockAmount
+		proj.owner = caster
 		
 		if (obj_ability_thorns.runes[enumRunes.magdela].enabled) {
 			proj.rotationSpeed = obj_ability_thorns.spiralRotationSpeed

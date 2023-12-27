@@ -9,11 +9,11 @@ spawner = create_instance(obj_spawner_controller)
 //])
 
 spawner.addPhase([
-	spawner.setupSpawn(obj_skeleton, 4),
+	spawner.setupSpawn(obj_skeleton, 6),
 ])
 
 spawner.addPhase([
-	spawner.setupSpawn(obj_skeleton, 5),
+	spawner.setupSpawn(obj_skeleton, 6),
 	spawner.setupSpawn(obj_zombie, 1)
 ])
 
@@ -29,27 +29,31 @@ spawner.addPhase([
 ])
 
 spawner.addPhase([
-	spawner.setupSpawn(obj_burning_skeleton, 4),
+	spawner.setupSpawn(obj_burning_skeleton, 2),
 	spawner.setupSpawn(obj_skeleton_warrior, 2),
-	spawner.setupSpawn(obj_zombie, 2),
+	spawner.setupSpawn(obj_zombie, 9),
 ])
 
 spawner.addPhase([
-	spawner.setupEliteSpawn(obj_wraith),
-	spawner.setupSpawn(obj_skeleton, 4),
-	spawner.setupSpawn(obj_skeleton_warrior, 1),
+	spawner.setupSpawn(obj_wraith, 12, 2)
 ])
 
-spawner.addPhase([
-	spawner.setupSpawn(obj_skeleton, 6),
-	spawner.setupSpawn(obj_skeleton_warrior, 1),
-])
+//spawner.addPhase([
+//	spawner.setupEliteSpawn(obj_wraith),
+//	spawner.setupSpawn(obj_skeleton, 4),
+//	spawner.setupSpawn(obj_skeleton_warrior, 4),
+//])
 
-spawner.addPhase([
-	spawner.setupSpawn(obj_skeleton, 6),
-	spawner.setupSpawn(obj_skeleton_warrior, 4),
-	spawner.setupBossSpawn(obj_skeleton),
-])
+//spawner.addPhase([
+//	spawner.setupSpawn(obj_skeleton, 18, 4),
+//	spawner.setupSpawn(obj_skeleton_warrior, 4),
+//])
+
+//spawner.addPhase([
+//	spawner.setupSpawn(obj_skeleton, 6),
+//	spawner.setupSpawn(obj_skeleton_warrior, 4),
+//	spawner.setupBossSpawn(obj_skeleton),
+//])
 
 
 //setup_spawner(obj_skeleton, 0, 2)

@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "weapons",
-    "path": "folders/Objects/weapons.yy",
+    "name": "weapon_projectiles",
+    "path": "folders/Objects/weapon_projectiles.yy",
   },
   "parentObjectId": {
     "name": "obj_player_projectile",

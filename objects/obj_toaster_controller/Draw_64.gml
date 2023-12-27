@@ -7,6 +7,7 @@ var _xPos = xPos
 var _padding = padding
 var _margin = margin
 var _spacing = 24
+var _textColor = c_white
 
 with (obj_toaster) {
 	draw_set_font(font_pixellari)
@@ -25,7 +26,13 @@ with (obj_toaster) {
 		false
 	)
 	
-	draw_set_color(c_white)
+	switch (errorLevel) {
+		case errorLevels.normal: _textColor = c_white break;
+		case errorLevels.warning: _textColor = c_yellow break;
+		case errorLevels.error: _textColor = c_red break;
+	}
+	
+	draw_set_color(_textColor)
 	
 	draw_text(
 		_xPos - width - _padding,

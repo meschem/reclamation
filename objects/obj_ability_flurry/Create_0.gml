@@ -8,8 +8,7 @@ event_inherited();
 name = "Flurry"
 description = "Increases attack speed for a short duration. Each attack increases in size. Slows movement."
 active = true
-
-icon = spr_ability_icon_flurry
+selectionIcon = spr_abil_select_icon_flurry
 
 curCd = 0
 maxCd = 240
@@ -44,5 +43,6 @@ addRune("Growing Rage", "Each attack increases damage by 5")
 addRune("Blood Fueled", "Kills extend duration by 0.1 seconds. Max +3 seconds.")
 
 use = function() {
+	owner.equipment.weapon.curCd = 0
 	create_instance(obj_jonah_flurry_swipe_caster)
 }

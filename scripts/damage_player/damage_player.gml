@@ -8,7 +8,7 @@ function damage_player(hitBy, damage = -1) {
 		return false
 	}
 	
-	var i, inst, proj	
+	var i, inst, proj
 
 	if (damage == -1) {
 		obj_player.hp -= hitBy.damageOnHit

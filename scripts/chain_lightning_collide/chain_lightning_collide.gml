@@ -1,11 +1,16 @@
 ///@description						Initiates damage and bouncing effect of chain lightning
 ///@param {id.Instance} projectile	Lightning projectile
 ///@param {id.Instance} target		Target that was hit
-///@param {real} respawnCount		respawns left
 
 function chain_lightning_collide(projectile, target) {
 	var endPoint = new vec2(x, y)
 	var inst, bolt
+	
+	if (!instance_exists(projectile)) {
+		create_toaster("Projectile not found for Chain Lit FX", errorLevels.error)
+		
+		return
+	}
 	
 	if (target != noone) {
 		endPoint.x = target.x
@@ -65,11 +70,12 @@ function chain_lightning_collide(projectile, target) {
 			var angle = point_direction(bolt.x, bolt.y, closestInst.x, closestInst.y)
 			var velocity = get_velocity_from_angle(angle, bolt.moveSpeedMax)
 
-			bolt.xVel = velocity[0]		
-			bolt.yVel = velocity[1]		
+			bolt.xVel = velocity[0]
+			bolt.yVel = velocity[1]
 			bolt.seekTarget = closestInst
 			bolt.respawnCount = projectile.respawnCount - 1
 			bolt.hitList = projectile.hitList
+			bolt.owner = projectile.owner
 			
 			//show_message("collision: " + string(inst.respawnCount))
 

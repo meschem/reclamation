@@ -7,7 +7,6 @@ event_inherited();
 
 name = "War Stomp"
 description = "Stuns and damages an area around Jonah"
-icon = spr_ability_icon_war_stomp
 selectionIcon = spr_abil_select_icon_war_stomp
 active = true
 

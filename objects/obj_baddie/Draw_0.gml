@@ -32,4 +32,8 @@ if (stunLength > 0) {
 	draw_sprite(spr_stun_spiral, 0, x, y - (sprite_height) + 9)
 }
 
+if (markedForCrit) {
+	draw_text(x, y, "marked")
+}
+
 shader_reset()

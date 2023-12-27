@@ -1,7 +1,7 @@
 
 event_inherited()
 
-name = "Bottled Storm"
-description = "Increases Critical Chance"
+name = "Glass Feather"
+description = "Increase Critical Damage"
 
-bonusCritChance = [0.1, 0.15, 0.2, 0.3] 
+bonusCritMultiplier = [0.1, 0.2, 0.3, 0.5]

@@ -6,7 +6,7 @@ if (game_is_paused()) {
 	image_speed = animSpeed
 }
 
-var i
+var i, j
 
 if (age == 0) {
 	run_lifecycle_events(enumLifeCycleEvents.stepFirst)
@@ -119,54 +119,60 @@ if (target != noone) {
 	ds_list_add(targetCollisionList, target)
 }
 
-
-
+// FIXME: Perf - using 2 ds_lists, ran into weird bug when trying to cull a single list
 for (i = 0; i < ds_list_size(targetCollisionList); i++) {
 	target = targetCollisionList[| i]
-	
+
 	if (target.targetType == targetTypes.baddie && !hitlist_contains(hitList, target)) {
 		array_push(hitList, new hitListEntry(target, damageFrameCooldown))
-	
-		onCollideFx(target)
-	
-		if (target.shockedLength <= 0) {
-			critHit = (critChance > random(1))
-		} else {
-			repeat (3) {
-				critHit = (critChance > random(1))
-			
-				if (critHit) {
-					break
-				}
-			}
-		} 
-
-		// FIXME disconnected from script
-		if (applyShock > 0 && target.shockedLength < applyShock) {
-			target.shockedLength = applyShock
-		}
-
-		for (i = 0; i < array_length(obj_player.onStrikeAbilities); i++) {
-			obj_player.onStrikeAbilities[i].activate(id, critHit)
-		}
-
-		var killed = damage_baddie(target, damageDirect, critHit)
-
-		if (!killed && knockback > 0) {
-			//var pushAngle = point_direction(0, 0, xVel, yVel)
-			knockback_baddie(target, knockback, facingAngle)
-		}
-
-		targetsHit++
-	
-		damageDirect -= damageLostPerTarget
-
-		if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
-			instance_destroy()
-		}
+		ds_list_add(validTargetList, target)
 	}
 }
 
+preDamage(validTargetList)
+
+for (i = 0; i < ds_list_size(validTargetList); i++) {
+	target = validTargetList[| i]
+		
+	critHit = false
+
+	onCollideFx(target)
+	
+	if (target.markedForCrit) {
+		critHit = true
+	}
+	
+	// FIXME disconnected from script
+	if (applyShock > 0 && target.shockedLength < applyShock) {
+		target.shockedLength = applyShock
+	}
+	
+	for (j = 0; j < array_length(obj_player.onStrikeAbilities); j++) {
+		obj_player.onStrikeAbilities[i].activate(id, critHit)
+	}
+	
+	if (owner == noone) {
+		create_toaster("Owner not set on projectile: " + object_get_name(object_index), errorLevels.error)
+		owner = get_player_target()
+	}
+	
+	var killed = damage_baddie(target, damageDirect, critHit, owner.critMultiplier)
+	
+	if (!killed && knockback > 0) {
+		//var pushAngle = point_direction(0, 0, xVel, yVel)
+		knockback_baddie(target, knockback, facingAngle)
+	}
+	
+	targetsHit++
+
+	damageDirect -= damageLostPerTarget
+	
+	if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
+		instance_destroy()
+	}
+}
+
+ds_list_clear(validTargetList)
 ds_list_clear(targetCollisionList)
 
 run_lifecycle_events(enumLifeCycleEvents.stepEnd)

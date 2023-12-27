@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ability_icon_shield_wall",
+    "path": "sprites/spr_ability_icon_shield_wall/spr_ability_icon_shield_wall.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

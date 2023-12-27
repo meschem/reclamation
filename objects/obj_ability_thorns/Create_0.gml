@@ -9,8 +9,7 @@ name = "Thorns"
 description = "Returns pointy damage to attackers"
 onHitAbility = true
 active = true
-
-icon = spr_ability_icon_thorns
+selectionIcon = spr_abil_select_icon_thorns
 
 treeLevel = 2
 
@@ -47,12 +46,12 @@ addRune("Last Gasp", "Once per run, instead of dying, release a huge burst of sp
 
 use = function () {
 	buff_player_invuln(buffTimeSeconds)
-	activate_spiked_armor()
+	activate_spiked_armor(owner)
 }
 
 activateOnHit = function() {
 	if (canActivate()) {
-		activate_spiked_armor()
+		activate_spiked_armor(owner)
 		activationCdCur = activationCdMax
 	}
 }

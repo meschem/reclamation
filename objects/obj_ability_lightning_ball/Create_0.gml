@@ -7,7 +7,8 @@ event_inherited()
 
 name = "Ball Lightning"
 description = "Summons some ball lightning"
-icon = spr_ability_icon_war_stomp
+selectionIcon = spr_abil_select_icon_ball_lit
+
 maxCharges = 1
 active = true
 autoCast = false

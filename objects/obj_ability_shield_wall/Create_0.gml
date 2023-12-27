@@ -7,7 +7,6 @@ event_inherited();
 
 name = "Shield Wall"
 description = "Spawns a few shields in a direction that blocks enemies"
-icon = spr_ability_icon_war_stomp
 active = true
 
 curCd = 0

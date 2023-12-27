@@ -7,7 +7,7 @@ event_inherited();
 
 name = "Charge"
 description = "Charges towards an area with explosive results"
-icon = spr_ability_icon_charge
+selectionIcon = spr_abil_select_icon_charge
 active = true
 
 curCd = 0

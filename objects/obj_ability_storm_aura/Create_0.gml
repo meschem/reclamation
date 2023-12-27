@@ -7,7 +7,6 @@ event_inherited();
 
 name = "Storm Aura"
 description = "Periodically strikes all nearby units with lightning"
-icon = spr_ability_icon_storm_aura
 active = false
 autoCast = true
 

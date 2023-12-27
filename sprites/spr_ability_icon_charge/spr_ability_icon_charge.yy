@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "abilities",
-    "path": "folders/Sprites/ui/abilities.yy",
+    "name": "jonah",
+    "path": "folders/Sprites/ui/abilities/jonah.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -78,7 +78,7 @@ damagedOn = -10
 
 weight = 3
 
-soundOnDeath = snd_hard_hit // -1 is no sound
+soundOnDeath = snd_big_slap
 
 debuffShockAmount = 0
 
@@ -106,6 +106,8 @@ isElite = false
 isBoss = false
 outlineColor = c_black
 killedByBounds = false
+
+markedForCrit = false // Guarantees crit, removed when activated
 
 baddie_teleport_init()
 

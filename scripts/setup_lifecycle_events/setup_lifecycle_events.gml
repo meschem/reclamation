@@ -8,6 +8,7 @@ function setup_lifecycle_events(inst = id) {
 		stepBegin,
 		stepEnd,		
 		collide,
+		criticalHit,
 		length
 	}
 	

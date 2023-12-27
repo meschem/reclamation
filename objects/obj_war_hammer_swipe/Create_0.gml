@@ -2,13 +2,9 @@
 
 event_inherited()
 
-//projectileType = projectileTypes.weapon
-
-//angleSpriteToVelocity = true
-
 distanceMax = 150
 
-damageDirect = 8
+damageDirect = 12
 targetsMax = -1
 targetsMaxPerFrame = -1
 damageLostPerTarget = 0
@@ -17,7 +13,7 @@ reverseSwipe = false
 
 damageFrameCooldown = 120
 
-// damageFrameCooldown = 60 // not used yet...
+enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
 
 knockback = 16
 
@@ -31,14 +27,25 @@ animSpeed = 1
 //image_xscale = 2
 //image_yscale = 2
 
-//shadowSprite = spr_war_hammer_shadow
+///@description						Marks enemies for crit
+///@param {id.DsList} enemyList
+preDamage = function(enemyList) {
+	ds_list_shuffle(enemyList)
+	
+	for (var i = 0; i < ds_list_size(enemyList); i++) {
+		if ((i + 1) % enemiesPerCrit == 0) {
+			enemyList[| i].markedForCrit = true
+			show_debug_message("marked")
+		}
+	}
+}
 
 ///@param {id.Instance} target		Target being hit
 onCollideFx = function(target)
 {
 	//damage_baddies_in_area(40, 15)
 	//instance_create_depth(x, y, depths.fx, obj_p_shockwave_circle)
-	spawn_fx_small_burst(target.x, target.y)
+	//spawn_fx_small_burst(target.x, target.y)
 	
 	var snd = irandom(2)
 	

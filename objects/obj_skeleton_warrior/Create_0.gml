@@ -3,7 +3,7 @@
 event_inherited();
 
 xp = 200
-hpMax = 150
+hpMax = 200
 hp = hpMax
 
 add_loot_gold(8, 10)

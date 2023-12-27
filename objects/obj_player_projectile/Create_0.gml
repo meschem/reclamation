@@ -51,6 +51,7 @@ targetsMax = 1
 targetsHit = 0
 canHitMultipleTargets = true // true if projectile can hit multiple targets per frame
 targetCollisionList = ds_list_create() // used per frame
+validTargetList = ds_list_create() // used per frame for targets that are valid to damage
 damageLostPerTarget = 0
 
 applyShock = 0
@@ -76,6 +77,8 @@ hitsWalls = true
 
 lifeCycleEvents = []
 
+owner = noone
+
 setup_lifecycle_events()
 
 weaponRef = noone // reference to obj_weapon that points to this object
@@ -94,6 +97,13 @@ setAngle = function(angle) {
 	
 	xVel = angle_xvel(angle)
 	yVel = angle_yvel(angle)
+}
+
+///@description					Applies FX or debuffs to enemy list that was hit
+///								before damage is applied. Good place to mark for crit
+///@param {id.DsList}			enemyList
+preDamage = function(enemyList) {
+
 }
 
 calcVelocity = function() {

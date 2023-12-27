@@ -47,9 +47,21 @@ if (keyboard_check_pressed(vk_f11)) {
 	obj_camera_controller.applyShake()
 }
 
-if (mouse_check_button_pressed(mb_right)) {
+if (keyboard_check_pressed(ord("Z"))) {
 	spawn_baddie_at_location(
 		obj_skeleton, mouse_x, mouse_y
+	)
+}
+
+if (keyboard_check_pressed(ord("X"))) {
+	spawn_baddie_at_location(
+		obj_zombie, mouse_x, mouse_y
+	)
+}
+
+if (keyboard_check_pressed(ord("C"))) {
+	spawn_baddie_at_location(
+		obj_wraith, mouse_x, mouse_y
 	)
 }
 

@@ -12,6 +12,7 @@ bonusHealth = 0
 bonusMoveSpeed = 0
 bonusAbilityCooldown = 0
 bonusCritChance = 0
+bonusCritMultiplier = 0
 bonusProjectileCount = 0 
 bonusPickupRange = 0
 bonusPickupReward = 0
