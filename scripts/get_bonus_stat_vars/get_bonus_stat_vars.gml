@@ -2,21 +2,22 @@
 ///@return {array<String>}
 
 function get_bonus_stat_vars() {
-	var returnInfo = [
+	var _returnInfo = [
 		"bonusHealth",
 		"bonusArmor",
 		"bonusProjectileCount",
-		"bonusCritChance",
+		"bonusCritMultiplier",
 		"bonusPickupRange",
 		"bonusPickupReward",
 		"bonusAreaOfEffect",
 		"bonusMoveSpeed",
 		"bonusAttackSpeed",
 		"bonusAbilityCooldown",
-		"bonusDamageScalar"
+		"bonusDamageScalar",
+		"bonusAttackAoe"
 	]
 	
-	return returnInfo
+	return _returnInfo
 }
 
 ///@description			Returns a stat block
@@ -34,7 +35,6 @@ function get_bonus_stat_info(stat, amount, bonusAmount = 0) {
 			}
 		
 		case "bonusArmor":
-			
 		
 		case "bonusProjectileCount":
 		
@@ -56,17 +56,22 @@ function get_bonus_stat_info(stat, amount, bonusAmount = 0) {
 	}
 }
 
-///@description				Stat info block
-///@param {string} _name
-///@param {string} _variable
+///@description						Creates a stat info text for a single property
+///@param {string} _variableName	Name of the variable
+///@param {string} _displayName		Name to display
 ///@param {real} _amount
 ///@param {real} _bonus
 ///@param {bool} _isPercentage
-function statInfo(_name, _variable, _amount, _bonus, _isPercentage) constructor {
-	name = _name
-	variable = _variable
-	amount = _amount
-	bonus = _bonus
-	isPercentage = _isPercentage
+function statInfo(_variableName, _displayName = "", _amount = 0, _displayMultiplier = 1, unit = "") constructor {
+	variableName = _variableName
+	
+	if (_displayName == "") {
+		// derive displayName from var
+		
+	}
+	
+	if (_amount == 0) {
+		// derive amount from var
+	}
 }
 

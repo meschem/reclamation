@@ -108,6 +108,7 @@ setupStatTextLists = function() {
 			statValue = variable_instance_get(id, statVars[statIndex])
 			statName = get_bonus_stat_name(statVars[statIndex])
 			
+			// works differently if first level VS gaining a level
 			if (array_length(statValue) > 0) {
 				if (levelIndex == 0) {
 					array_push(

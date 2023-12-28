@@ -56,11 +56,17 @@ function itemStatText(_amount, _name, _unit = enumStatUnits.none, _previousAmoun
 ///@param {string} _variable		Variable to adjust
 ///@param {array<real>} _values		Values to apply at different levels
 ///@param {bool} _display			Display value in tooltips and prompts
-function abilityStat(_name, _variable, _values, _display = true) constructor {
+///@param {real} _unit				Uses enum statUnit. Defaults to none.
+function abilityStat(_name, _variable, _values, _display = true, _unit = statUnits.none) constructor {
 	name = _name
 	variable = _variable
 	values = _values
 	display = _display
+	unit = _unit
+}
+
+function statUnit() constructor {
+
 }
 
 ///@description						Provides info for leveling an ability
@@ -105,17 +111,19 @@ function lootComponent(_lootType, _owner, _chance = 1, _amountMin = 1, _amountMa
 	}
 }
 
+
+
 ///@param {string} _name
 ///@param {string} _itemVar
 ///@param {string} _playerVar
-///@param {bool} _isPercent
-///@param {bool} _isScalar
-function itemStat(_name, _itemVar, _playerVar, _isPercent = false, _isScalar = false) constructor {
+///@param {real} _unit
+///@param {real} _displayMultiplier
+function itemStat(_name, _itemVar, _playerVar,  _unit = statUnits.none, _displayMultiplier = 1) constructor {
 	name = _name
 	itemVar = _itemVar
 	playerVar = _playerVar
-	isPercent = _isPercent
-	isScalar = _isScalar
+	unit = _unit
+	displayMultiplier = _displayMultiplier
 }
 
 ///@description						Stat for a player character that is referenced as needed

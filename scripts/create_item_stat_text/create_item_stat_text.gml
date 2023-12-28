@@ -2,5 +2,5 @@
 ///@param {real} enumStat		uses enumItemStat
 ///@param {real} amount
 function create_item_stat_text(enumStat, amount) {
-	
+	var _itemStat = 
 }

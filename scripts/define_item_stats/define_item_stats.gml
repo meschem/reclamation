@@ -13,24 +13,35 @@ function define_item_stats() {
 		bonusAttackSpeed,
 		bonusAbilityCooldown,
 		
-		bonusDamageScalar,		
+		bonusDamageScalar,
+		custom, // used any time a custom stat property is used
 	}
 	
+	enum statUnits {
+		none,
+		meters,
+		seconds,
+		percent,
+		moveSpeed,
+		length
+	}
+	
+	// These need to 1:1 match up with enumItemStats
 	with (obj_game_controller) {
 		itemStats = [
-			new itemStat("Hit Points", "bonusHealth", "maxHp"),
+			new itemStat("Hit Points", "bonusHealth", "maxHp", statUnits.none, 0.1),
 			new itemStat("Armor", "bonusArmor", "armor"),
 			new itemStat("Projectile Count", "bonusProjectileCount", "bonusProjectileCount"),
-			new itemStat("Crit Chance", "bonusCritChance", "critChance", true),
-			new itemStat("Pickup Range", "bonusPickupRange", "bonusPickupRangeScalar", true, true),
+			new itemStat("Crit Multiplier", "bonusCritMultiplier", "critMultiplier", statUnits.percent),
+			new itemStat("Pickup Range", "bonusPickupRange", "bonusPickupRangeScalar", statUnits.percent),
 			
-			new itemStat("Pickup Reward", "bonusPickupReward", "bonusPickupRewardScalar", true, true),
-			new itemStat("Area of Effect", "bonusAreaOfEffect", "areaOfEffectScalar", true, true),
-			new itemStat("Move Speed", "bonusMoveSpeed", "moveSpeedMax"),
-			new itemStat("Attack Speed", "bonusAttackSpeed", "attackSpeedScalar", true, true),
-			new itemStat("Ability Cooldown", "bonusAbilityCooldown", "abilityCooldownScalar", true, true),
+			new itemStat("Pickup Reward", "bonusPickupReward", "bonusPickupRewardScalar", statUnits.percent),
+			new itemStat("Area of Effect", "bonusAreaOfEffect", "areaOfEffectScalar", statUnits.percent),
+			new itemStat("Move Speed", "bonusMoveSpeed", "moveSpeedMax", statUnits.moveSpeed),
+			new itemStat("Attack Speed", "bonusAttackSpeed", "attackSpeedScalar", statUnits.percent),
+			new itemStat("Ability Cooldown", "bonusAbilityCooldown", "abilityCooldownScalar", statUnits.percent),
 			
-			new itemStat("Damage", "bonusDamageScalar", "bonusDamageScalar", true, true),
+			new itemStat("Damage", "bonusDamageScalar", "bonusDamageScalar", statUnits.percent),
 		]
 	}
 }
