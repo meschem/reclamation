@@ -51,22 +51,54 @@ function itemStatText(_amount, _name, _unit = enumStatUnits.none, _previousAmoun
 	}
 }
 
+///@param {string} _name
+///@param {string} _itemVar
+///@param {string} _playerVar
+///@param {real} _unit
+///@param {real} _displayMultiplier
+function itemStat(_name, _itemVar, _playerVar,  _unit = statUnits.none, _displayMultiplier = 1) constructor {
+	name = _name
+	itemVar = _itemVar
+	playerVar = _playerVar
+	unit = _unit
+	displayMultiplier = _displayMultiplier
+}
+
 ///@description						Stat that can be applied to anything
 ///@param {string} _name			Human-readable name of the stat
 ///@param {string} _variable		Variable to adjust
 ///@param {array<real>} _values		Values to apply at different levels
 ///@param {bool} _display			Display value in tooltips and prompts
-///@param {real} _unit				Uses enum statUnit. Defaults to none.
-function abilityStat(_name, _variable, _values, _display = true, _unit = statUnits.none) constructor {
+///@param {real} _unitEnum			Uses enum statUnit. Defaults to none.
+///@param {real} _multiplier		Display multplier if statsUnits is none
+function abilityStat(_name, _variable, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
 	name = _name
 	variable = _variable
 	values = _values
 	display = _display
-	unit = _unit
+	
+	if (_unitEnum == statUnits.auto) {
+		unit = get_stat_unit_from_name(_name)
+	} else {
+		unit = get_stat_unit_from_enum(_unitEnum)
+	}
+	
+	///@description			Gets the numeric value and unit as a single string
+	///@param {real} level	Level of the ability to get
+	///@return {string}
+	getDisplayValue = function(level) {
+		var rawValue = values[level]
+		var numeric = rawValue * unit.multiplier
+		
+		return $"{numeric}{unit.displayUnit}"
+	}
 }
 
-function statUnit() constructor {
-
+///@param {real} _multiplier		Multiplier to use for displaying the value
+///@param {string} _displayUnit		Displayed after the number
+function statUnit(_multiplier, _displayUnit) constructor {
+	multiplier = _multiplier
+	displayUnit = _displayUnit
 }
 
 ///@description						Provides info for leveling an ability
@@ -109,21 +141,6 @@ function lootComponent(_lootType, _owner, _chance = 1, _amountMin = 1, _amountMa
 			show_debug_message("Loot type not implemented")
 		}
 	}
-}
-
-
-
-///@param {string} _name
-///@param {string} _itemVar
-///@param {string} _playerVar
-///@param {real} _unit
-///@param {real} _displayMultiplier
-function itemStat(_name, _itemVar, _playerVar,  _unit = statUnits.none, _displayMultiplier = 1) constructor {
-	name = _name
-	itemVar = _itemVar
-	playerVar = _playerVar
-	unit = _unit
-	displayMultiplier = _displayMultiplier
 }
 
 ///@description						Stat for a player character that is referenced as needed

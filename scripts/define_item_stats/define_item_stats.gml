@@ -18,11 +18,13 @@ function define_item_stats() {
 	}
 	
 	enum statUnits {
+		auto,
 		none,
 		meters,
 		seconds,
 		percent,
 		moveSpeed,
+		frames,
 		length
 	}
 	

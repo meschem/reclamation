@@ -73,6 +73,6 @@ for (var i = 0; i < array_length(ability.stats); i++) {
 	draw_text(
 		x + menuOffset.x + paddingX + string_width(nameString),
 		y + menuOffset.y + height - paddingY - (i * statSpacing),
-		ability.stats[i].values[ability.level]
+		ability.stats[i].getDisplayValue(ability.level)
 	)
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "get_bonus_stat_name",
+  "name": "get_stat_unit_from_name",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
