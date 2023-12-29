@@ -55,16 +55,16 @@ stats = []
 persistent = true
 
 ///@description						Creates an item for a player
-///@param {id.Instance} owner		Owner of the item
+///@param {id.Instance} _owner		Owner of the item
 ///@return {id.Instance}
-create = function(owner = noone) {
-	var inst = create_instance(object_index)
+create = function(_owner = noone) {
+	var _inst = create_instance(object_index)
 	
-	inst.owner = owner
-	inst.template = false
-	inst.equipped = true
+	_inst.owner = _owner
+	_inst.template = false
+	_inst.equipped = true
 	
-	return inst
+	return _inst
 }
 
 ///@description						Purchase an item that isn't owned. Currently removes 

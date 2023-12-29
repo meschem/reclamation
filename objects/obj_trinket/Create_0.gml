@@ -94,42 +94,39 @@ create = function(owner = noone) {
 ///@description						Runs through all set stats and creates a statTextList
 ///									array that can be utilized for displaying stats
 ///									Must be run AFTER setting up stat blocks
-setupStatTextLists = function() {
-	var statVars = get_bonus_stat_vars()
-	var statName, statValue
-	var levelIndex, statIndex, curVar
+//setupStatTextLists = function() {
+//	var statVars = get_bonus_stat_vars()
+//	var statName, statValue
+//	var levelIndex, statIndex, curVar
 	
-	//show_message(statVars)
-	
-	for (levelIndex = 0; levelIndex < maxLevel; levelIndex++) {
-		statTextList[levelIndex] = []
+//	for (levelIndex = 0; levelIndex < maxLevel; levelIndex++) {
+//		statTextList[levelIndex] = []
 		
-		for (statIndex = 0; statIndex < array_length(statVars); statIndex++) {
-			statValue = variable_instance_get(id, statVars[statIndex])
-			statName = get_bonus_stat_name(statVars[statIndex])
+//		for (statIndex = 0; statIndex < array_length(statVars); statIndex++) {
+//			statValue = variable_instance_get(id, statVars[statIndex])
+//			statName = get_bonus_stat_name(statVars[statIndex])
 			
-			// works differently if first level VS gaining a level
-			if (array_length(statValue) > 0) {
-				if (levelIndex == 0) {
-					array_push(
-						statTextList[levelIndex], 
-						new itemStatText(
-							statValue[levelIndex],
-							statName
-						)
-					)
-				} else {
-					array_push(
-						statTextList[levelIndex],
-						new itemStatText(
-							statValue[levelIndex],
-							statName,
-							get_bonus_stat_unit(statName),
-							statValue[levelIndex - 1]
-						)
-					)
-				}
-			}
-		}
-	}
-}
+//			if (array_length(statValue) > 0) {
+//				if (levelIndex == 0) {
+//					array_push(
+//						statTextList[levelIndex], 
+//						new itemStatText(
+//							statValue[levelIndex],
+//							statName
+//						)
+//					)
+//				} else {
+//					array_push(
+//						statTextList[levelIndex],
+//						new itemStatText(
+//							statValue[levelIndex],
+//							statName,
+//							get_bonus_stat_unit(statName),
+//							statValue[levelIndex - 1]
+//						)
+//					)
+//				}
+//			}
+//		}
+//	}
+//}

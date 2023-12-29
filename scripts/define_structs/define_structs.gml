@@ -15,53 +15,27 @@ enum enumStatUnits {
 	length,
 }
 
-///@description						Stat that can be applied to anything
-///@param {real} _amount			Amount being provided, positive or negative.
-///@param {string} _name			Name to display after the amount
-///@param {string} _unit			enumStatUnits
+///@description						Defines an item stat type. These are defined in define_item_stats
+///@param {string} _name			Display name for the variable
+///@param {string} _bonusVar		Variable which references the bonus provides (on player and item)
+///@param {string} _playerVar		Variable which references the players current value
+///@param {string} _unit			Uses enumStatUnits. Unit used to display data.
 ///@param {real} _previousAmount	If this is an upgrade, previous amount
-function itemStatText(_amount, _name, _unit = enumStatUnits.none, _previousAmount = 0) constructor {
-	var amountSymbol = string_char_at(_amount, 1)
-	
-	//show_message([_amount, _name, _unit, _previousAmount])
-	
-	amount = _amount
+function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) constructor {
 	name = _name
-	unit = _unit
-	unitText = ""
-	previousAmount = _previousAmount
-	
-	displayAmount = amount
-	
-	if (unit == enumStatUnits.percent) {
-		unitText = "%"
-		displayAmount *= 100
-	} else if (unit == enumStatUnits.meters) {
-		unitText = "m"
-	} else {
-		unitText = ""
-	}
-	
-	signText = (amount >= 0) ? "+" : "-"
-	
-	if (_previousAmount == 0) {
-		fullString = $"{signText}{displayAmount}{unitText} {name}"
-	} else {
-		fullString = $"{signText}{previousAmount}{unitText} > {displayAmount}{unitText} {name}"
-	}
-}
-
-///@param {string} _name
-///@param {string} _itemVar
-///@param {string} _playerVar
-///@param {real} _unit
-///@param {real} _displayMultiplier
-function itemStat(_name, _itemVar, _playerVar,  _unit = statUnits.none, _displayMultiplier = 1) constructor {
-	name = _name
-	itemVar = _itemVar
+	bonusVar = _bonusVar
 	playerVar = _playerVar
 	unit = _unit
-	displayMultiplier = _displayMultiplier
+}
+
+///@description						Adds an item stat
+///@param {real} _stat				uses enumItemStats
+function itemStat(_stat, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
+	stat = _stat
+	values = _values
+	display = _display
+	
+	//get_item_stat()
 }
 
 ///@description						Stat that can be applied to anything
