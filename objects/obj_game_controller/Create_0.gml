@@ -21,6 +21,7 @@ create_instance(obj_run_controller)
 
 //init_talents_jonah()
 define_colors()
+define_item_stats()
 //set_available_talents()
 
 // some of these will need to be made global

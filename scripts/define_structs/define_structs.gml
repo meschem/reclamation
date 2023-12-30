@@ -22,20 +22,43 @@ enum enumStatUnits {
 ///@param {string} _unit			Uses enumStatUnits. Unit used to display data.
 ///@param {real} _previousAmount	If this is an upgrade, previous amount
 function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) constructor {
-	name = _name
+	displayName = _name
 	bonusVar = _bonusVar
 	playerVar = _playerVar
-	unit = _unit
+	unit = get_stat_unit_from_enum(_unit)
 }
 
 ///@description						Adds an item stat
 ///@param {real} _stat				uses enumItemStats
+///@param {array} _values			List of values per level
+///@param {bool} _display			Determines whether this stat is visible
+///@param {real} _unitEnum			uses enum statUnits
+///@param {real} _multiplier		Multiplier for disdplkay values
 function itemStat(_stat, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
 	stat = _stat
 	values = _values
 	display = _display
 	
-	//get_item_stat()
+	if (_stat != enumItemStats.custom) {
+		type = get_item_stat_type(stat)
+		unit = get_stat_unit_from_enum(type.unitEnum)
+	} else {
+		type = false
+		unit = get_stat_unit_from_enum(_unitEnum)
+	}
+	
+	getDisplayName = function() {
+		return type.displayName
+	}
+	
+	///@param {real} _level
+	getDisplayValue = function(_level) {
+		var _rawValue = values[_level]
+		var _numeric = _rawValue * unit.multiplier
+		var _prepend = (_numeric > 0) ? "+" : "" 
+		
+		return $"{_prepend}{_numeric}{unit.displayUnit}"
+	}
 }
 
 ///@description						Stat that can be applied to anything

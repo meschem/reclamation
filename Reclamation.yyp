@@ -454,6 +454,7 @@
     {"id":{"name":"activate_shield_wall","path":"scripts/activate_shield_wall/activate_shield_wall.yy",},},
     {"id":{"name":"get_attack_input","path":"scripts/get_attack_input/get_attack_input.yy",},},
     {"id":{"name":"create_toaster","path":"scripts/create_toaster/create_toaster.yy",},},
+    {"id":{"name":"round_ext","path":"scripts/round_ext/round_ext.yy",},},
     {"id":{"name":"obj_trinket_aegis_pendant","path":"objects/obj_trinket_aegis_pendant/obj_trinket_aegis_pendant.yy",},},
     {"id":{"name":"spr_shadow_lg","path":"sprites/spr_shadow_lg/spr_shadow_lg.yy",},},
     {"id":{"name":"spr_shield_wall_segment","path":"sprites/spr_shield_wall_segment/spr_shield_wall_segment.yy",},},

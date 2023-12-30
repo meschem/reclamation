@@ -332,6 +332,7 @@
     {"name":"obj_button","order":11,"path":"objects/obj_button/obj_button.yy",},
     {"name":"activate_shield_wall","order":6,"path":"scripts/activate_shield_wall/activate_shield_wall.yy",},
     {"name":"get_attack_input","order":2,"path":"scripts/get_attack_input/get_attack_input.yy",},
+    {"name":"round_ext","order":12,"path":"scripts/round_ext/round_ext.yy",},
     {"name":"obj_trinket_aegis_pendant","order":2,"path":"objects/obj_trinket_aegis_pendant/obj_trinket_aegis_pendant.yy",},
     {"name":"spr_shadow_lg","order":4,"path":"sprites/spr_shadow_lg/spr_shadow_lg.yy",},
     {"name":"spr_shield_wall_segment","order":1,"path":"sprites/spr_shield_wall_segment/spr_shield_wall_segment.yy",},

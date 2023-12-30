@@ -6,4 +6,7 @@ description = "Reduces ability cooldown"
 
 bonusAbilityCooldown = [0.16, 0.22, 0.3, 0.5] //reduction
 
+stats = [
+	new itemStat(enumItemStats.bonusAbilityCooldown, bonusAbilityCooldown)
+]
 //setupStatTextLists()

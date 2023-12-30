@@ -10,3 +10,7 @@ onLevelUp = function() {
 	var addHp = bonusHealth[level - 1]
 	owner.hp += addHp
 }
+
+stats = [
+	new itemStat(enumItemStats.bonusHealth, bonusHealth)
+]

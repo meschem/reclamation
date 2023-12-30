@@ -6,13 +6,16 @@ description = "Increases Armor"
 
 bonusArmor = [1, 2, 3, 5]
 
-for (var i = 0; i < array_length(bonusArmor); i++) {
-	array_push(statTextList, [
-		new itemStatText(
-			bonusArmor[i],
-			"Bonus Armor"
-		)
-	])
-}
+stats = [
+	new itemStat(enumItemStats.bonusArmor, bonusArmor)
+]
 
-show_message(statTextList)
+//for (var i = 0; i < array_length(bonusArmor); i++) {
+//	array_push(statTextList, [
+//		new itemStatText(
+//			bonusArmor[i],
+//			"Bonus Armor"
+//		)
+//	])
+//}
+
