@@ -1,5 +1,7 @@
 ///@description			Manages buffs for the game
 
+// FIXME: Multiplier - This bullshit assumes 1 player. Yikes.
+
 //  bonusHealth
 //  bonusArmor
 //  bonusProjectileCount

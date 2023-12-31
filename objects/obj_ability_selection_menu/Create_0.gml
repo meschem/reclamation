@@ -14,6 +14,7 @@ paddingTop = 4
 paddingBottom = 14
 paddingX = 26
 paddingY = 2
+buttonCount = 3
 
 buttonSpacing = 120
 
@@ -21,3 +22,8 @@ scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
 
 buttonFocusIndex = -1
+
+center = function() {
+	x = (view_width() - menuWidth) / 2
+	y = (view_height() - menuHeight) / 2
+}

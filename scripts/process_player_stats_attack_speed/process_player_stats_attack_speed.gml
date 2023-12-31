@@ -37,11 +37,11 @@ function process_player_stats_attack_speed() {
 		
 		// Process Items
 		
-		
 		//var addedHp = (baseMaxHp * rollingScalar + rollingStatic) - maxHp
 
-		show_debug_message("Attack Speed Scalar: " + string(rollingScalar))
+		attackSpeedScalar = rollingScalar
+		
+		show_debug_message("Attack Speed Scalar: " + string(attackSpeedScalar))
 	}
-	
-	obj_player.attackSpeedScalar = rollingScalar
 }
+

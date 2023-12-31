@@ -34,6 +34,16 @@ critChance = owner.critChance
 
 hitList = []
 
+///@param {id.Instance} _owner
+setScale = function(_owner) {
+	var _buffScale = obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
+	var _bonusAoeScale = _owner.bonusWeaponAoeScalar
+	var _scale = 1 * (_buffScale + _bonusAoeScale)
+
+	image_xscale = _scale
+	image_yscale = _scale
+}
+
 onCollideFx = function()
 {
 	spawn_fx_small_burst(x, y)

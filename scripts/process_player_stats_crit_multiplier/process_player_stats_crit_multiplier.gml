@@ -25,6 +25,6 @@ function process_player_stats_crit_multiplier() {
 		// Process Talents
 		critMultiplier = baseCritMultiplier + rollingStatic
 		
-		show_debug_message("Crit Multiplier: " + string(baseCritMultiplier))
+		show_debug_message("Crit Multiplier: " + string(critMultiplier))
 	}
 }

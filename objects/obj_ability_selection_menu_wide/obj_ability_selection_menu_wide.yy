@@ -1,21 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_card_trinket_selection",
+  "name": "obj_ability_selection_menu_wide",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "level_up",
-    "path": "folders/Objects/ui/level_up.yy",
+    "name": "ui",
+    "path": "folders/Objects/ui.yy",
   },
   "parentObjectId": {
-    "name": "obj_card_ui",
-    "path": "objects/obj_card_ui/obj_card_ui.yy",
+    "name": "obj_ability_selection_menu",
+    "path": "objects/obj_ability_selection_menu/obj_ability_selection_menu.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ability_selection_large",
-    "path": "sprites/spr_ability_selection_large/spr_ability_selection_large.yy",
+    "name": "spr_menu_3d",
+    "path": "sprites/spr_menu_3d/spr_menu_3d.yy",
   },
   "spriteMaskId": null,
   "visible": true,

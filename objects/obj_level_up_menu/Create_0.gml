@@ -23,4 +23,3 @@ selectedButtonIndex = 0
 
 scaleX = menuWidth / sprite_width
 scaleY = menuHeight / sprite_height
-

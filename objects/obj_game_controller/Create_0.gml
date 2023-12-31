@@ -66,7 +66,7 @@ enum levelUpRewards {
 }
 
 levelUpRewardTable = [
-	//levelUpRewards.weaponUpgrade,
+	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
 	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,

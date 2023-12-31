@@ -2,7 +2,7 @@
 function display_level_trinket_prompt() {
 	set_game_pause_state(true)
 	
-	var menu = instance_create_depth(0, 0, depths.ui, obj_ability_selection_menu)
+	var menu = instance_create_depth(0, 0, depths.ui, obj_ability_selection_menu_wide)
 	var trinkets = get_available_trinkets()
 	
 	var selectedTrinkets = array_shuffle(trinkets)

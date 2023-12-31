@@ -36,6 +36,6 @@ function process_player_stats_weapon_aoe() {
 		
 		// Process Items
 		
-		obj_player.moveSpeedMax = obj_player.baseMoveSpeedMax * rollingScalar + rollingStatic
+		bonusWeaponAoeScalar = rollingScalar + rollingStatic
 	}
 }

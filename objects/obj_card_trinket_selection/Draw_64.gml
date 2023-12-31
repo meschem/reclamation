@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
-
-
 // Inherit the parent event
 event_inherited();
 
@@ -26,6 +22,6 @@ for (var i = 0; i < array_length(trinket.stats); i++) {
 	draw_text(
 		x + menuOffset.x + paddingX + string_width(nameString),
 		y + menuOffset.y + height - paddingY - (i * statSpacing),
-		trinket.stats[i].getDisplayValue(trinket.level)
+		trinket.stats[i].getDisplayValue(displayLevel - 1)
 	)
 }

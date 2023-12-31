@@ -12,19 +12,25 @@ upgrades = []
 owner = get_player_target()
 
 ///@description						Attacks with the weapon. Set this.
+///@return {array<id.Instance>}
 use = function() {
 	show_message("weapon use() not set")
+	return []
 }
 
 ///@description						Parent function for attacking. Don't overwrite.
 ///@return {bool}					Returns true if attack occurred
 attack = function() {
 	if (curCd <= 0) {
-		use()
+		var _projectiles = use()
 		
-		var multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed)
+		for (var i = 0; i < array_length(_projectiles); i++) {
+			_projectiles[i].setScale(owner)
+		}
 		
-		curCd = maxCd * (1 / multiplier)
+		var _multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed)
+		
+		curCd = maxCd * (1 / _multiplier)
 		
 		return true
 	}

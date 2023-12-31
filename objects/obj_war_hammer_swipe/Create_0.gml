@@ -17,15 +17,7 @@ enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
 
 knockback = 16
 
-var scale = 1 + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
-
-image_xscale = scale
-image_yscale = scale
-
 animSpeed = 1
-
-//image_xscale = 2
-//image_yscale = 2
 
 ///@description						Marks enemies for crit
 ///@param {id.DsList} enemyList

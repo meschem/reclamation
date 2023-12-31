@@ -710,6 +710,7 @@
     {"id":{"name":"obj_level_up_menu","path":"objects/obj_level_up_menu/obj_level_up_menu.yy",},},
     {"id":{"name":"spr_btn_xbox_x","path":"sprites/spr_btn_xbox_x/spr_btn_xbox_x.yy",},},
     {"id":{"name":"spr_invuln_sphere","path":"sprites/spr_invuln_sphere/spr_invuln_sphere.yy",},},
+    {"id":{"name":"obj_ability_selection_menu_wide","path":"objects/obj_ability_selection_menu_wide/obj_ability_selection_menu_wide.yy",},},
     {"id":{"name":"spr_fire_med","path":"sprites/spr_fire_med/spr_fire_med.yy",},},
     {"id":{"name":"player_collision","path":"scripts/player_collision/player_collision.yy",},},
     {"id":{"name":"spr_ui_controller","path":"sprites/spr_ui_controller/spr_ui_controller.yy",},},

@@ -37,4 +37,8 @@ if (enabled) {
 	enabled = true
 }
 
+if (topIcon != spr_none) {
+	buttonXOffset = (width - sprite_get_width(topIcon)) / 2
+}
+
 image_index = state

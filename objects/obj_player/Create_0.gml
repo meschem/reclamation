@@ -40,6 +40,7 @@ bonusProjectileCount = 0
 bonusDamageScalar = 1
 bonusPickupRangeScalar = 1
 bonusPickupRewardScalar = 1
+bonusWeaponAoeScalar = 1
 
 totalGold = 0
 gold = 0
@@ -159,7 +160,6 @@ addWeapon = function(weapon) {
 	
 	equipment.weapon = inst
 }
-
 
 ///@description							Equip an item
 ///@param {id.Instance}	item			Item to equipment

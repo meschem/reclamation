@@ -4,7 +4,7 @@ event_inherited()
 name = "Etherwind"
 description = "Increases player Move Speed"
 
-bonusMoveSpeed = [0.08, 0.14, 0.2, 0.3]
+bonusMoveSpeed = [0.06, 0.12, 0.18, 0.25]
 
 onLevelUp = function() {
 	

@@ -32,9 +32,8 @@ function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) cons
 ///@param {real} _stat				uses enumItemStats
 ///@param {array} _values			List of values per level
 ///@param {bool} _display			Determines whether this stat is visible
-///@param {real} _unitEnum			uses enum statUnits
-///@param {real} _multiplier		Multiplier for disdplkay values
-function itemStat(_stat, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
+///@param {struct} _customType		Must include displayName (string), unit (statUnits)
+function itemStat(_stat, _values, _display = true, _customType = {}) constructor {
 	stat = _stat
 	values = _values
 	display = _display
@@ -43,8 +42,7 @@ function itemStat(_stat, _values, _display = true, _unitEnum = statUnits.auto, _
 		type = get_item_stat_type(stat)
 		unit = get_stat_unit_from_enum(type.unitEnum)
 	} else {
-		type = false
-		unit = get_stat_unit_from_enum(_unitEnum)
+		type = _customType
 	}
 	
 	getDisplayName = function() {

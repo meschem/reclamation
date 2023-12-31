@@ -44,7 +44,7 @@ if (keyboard_check_pressed(vk_f10)) {
 }
 
 if (keyboard_check_pressed(vk_f11)) { 
-	obj_camera_controller.applyShake()
+	show_message(obj_player.attackSpeedScalar)
 }
 
 if (keyboard_check_pressed(ord("Z"))) {

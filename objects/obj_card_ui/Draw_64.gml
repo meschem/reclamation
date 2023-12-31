@@ -21,5 +21,5 @@ if (statTextEnabled) {
 }
 
 if (topIcon != spr_none) {
-	draw_sprite(topIcon, 0, x + 34, y - 13)
+	draw_sprite(topIcon, 0, x + buttonXOffset, y + buttonYOffset)
 }

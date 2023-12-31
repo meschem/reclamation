@@ -1,30 +1,30 @@
 ///@description							Creates an ability upgrade button
-///@param {asset.GMObject} trinket		obj_ability_tree to pass
-///@param {id.Instance} menu			Menu to attach to
+///@param {asset.GMObject} _trinket		obj_ability_tree to pass
+///@param {id.Instance} _menu			Menu to attach to
 
-function create_select_trinket_button(trinket, menu = noone) {
-	with (trinket) {
-		var button = instance_create_depth(0, 0, depths.ui, obj_card_trinket_selection)
+function create_select_trinket_button(_trinket, _menu = noone) {
+	with (_trinket) {
+		var _button = instance_create_depth(0, 0, depths.ui, obj_card_trinket_selection)
 
-		button.titleText.body = name
-		button.bodyText.body = description
-		button.trinket = id
-		button.topIcon = sprite_index
+		_button.titleText.body = name
+		_button.bodyText.body = description
+		_button.trinket = id
+		_button.topIcon = sprite_index
 		
-		if (array_length(statTextList) > level) {
-			//button.statTextList = statTextList[level - 1]
-			
-			button.createStatText(statTextList[level - 1])
+		if (_button.trinket.owner != noone) {
+			_button.displayLevel = _button.trinket.level + 1
 		} else {
-			button.statInfo = []
+			_button.displayLevel = 1
 		}
 		
-		menu.title = "You Leveled up!"
+		_button.titleText.body += " " + string(_button.displayLevel)
 	
-		if (menu != noone) {
-			button.parentMenu = menu
-			menu.buttons[array_length(menu.buttons)] = button
-			button.depth = menu.depth - 1
+		_menu.title = "You Leveled up!"
+	
+		if (_menu != noone) {
+			_button.parentMenu = _menu
+			_menu.buttons[array_length(_menu.buttons)] = _button
+			_button.depth = _menu.depth - 1
 		}
 	}
 }

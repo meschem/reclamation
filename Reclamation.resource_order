@@ -531,6 +531,7 @@
     {"name":"drop_object","order":1,"path":"scripts/drop_object/drop_object.yy",},
     {"name":"push_baddies_away","order":7,"path":"scripts/push_baddies_away/push_baddies_away.yy",},
     {"name":"obj_level_up_menu","order":3,"path":"objects/obj_level_up_menu/obj_level_up_menu.yy",},
+    {"name":"obj_ability_selection_menu_wide","order":13,"path":"objects/obj_ability_selection_menu_wide/obj_ability_selection_menu_wide.yy",},
     {"name":"spr_fire_med","order":2,"path":"sprites/spr_fire_med/spr_fire_med.yy",},
     {"name":"spr_ui_controller","order":2,"path":"sprites/spr_ui_controller/spr_ui_controller.yy",},
     {"name":"spr_jonah_storm_walking","order":2,"path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},
