@@ -16,6 +16,6 @@ stats = [
 	new itemStat(enumItemStats.bonusHealth, bonusHealth),
 	new itemStat(enumItemStats.custom, bonusHitRecovery, true, {
 		displayName: "Hit Recovery Time",
-		unit: statUnits.percent
+		unitEnum: statUnits.percent
 	})
 ]

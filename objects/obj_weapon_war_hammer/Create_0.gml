@@ -2,7 +2,7 @@
 event_inherited()
 
 name = "War Hammer"
-spawnDistance = 32
+spawnDistance = 22
 spawnObject = obj_war_hammer_swipe
 
 reverseSwipe = false
