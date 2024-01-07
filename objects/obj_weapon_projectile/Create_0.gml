@@ -9,6 +9,8 @@ angleSpriteToVelocity = false
 lifeSpan = -1
 age = 0
 
+baseScale = 1
+
 distanceMax = 120
 distanceTraveled = 0
 distancePerFrame = 1
@@ -38,7 +40,7 @@ hitList = []
 setScale = function(_owner) {
 	var _buffScale = obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
 	var _bonusAoeScale = _owner.bonusWeaponAoeScalar
-	var _scale = 1 * (_buffScale + _bonusAoeScale)
+	var _scale = baseScale * (_buffScale + _bonusAoeScale)
 
 	image_xscale = _scale
 	image_yscale = _scale

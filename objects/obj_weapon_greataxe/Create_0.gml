@@ -1,9 +1,9 @@
 
 event_inherited()
 
-name = "War Hammer"
+name = "Great Axe"
 spawnDistance = 32
-spawnObject = obj_war_hammer_swipe
+spawnObject = obj_greataxe_swipe
 
 reverseSwipe = false
 

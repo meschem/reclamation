@@ -1,19 +1,21 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_trinket_petrified_heart",
+  "name": "obj_greataxe_swipe",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "trinkets",
-    "path": "folders/Objects/equipment/trinkets.yy",
+    "name": "weapon_projectiles",
+    "path": "folders/Objects/weapon_projectiles.yy",
   },
   "parentObjectId": {
-    "name": "obj_trinket",
-    "path": "objects/obj_trinket/obj_trinket.yy",
+    "name": "obj_weapon_projectile",
+    "path": "objects/obj_weapon_projectile/obj_weapon_projectile.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_icon_petrified_heart",
-    "path": "sprites/spr_icon_petrified_heart/spr_icon_petrified_heart.yy",
+    "name": "spr_greataxe_swipe",
+    "path": "sprites/spr_greataxe_swipe/spr_greataxe_swipe.yy",
   },
   "spriteMaskId": null,
   "visible": true,

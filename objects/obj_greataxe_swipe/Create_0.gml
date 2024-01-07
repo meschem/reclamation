@@ -10,7 +10,6 @@ targetsMaxPerFrame = -1
 damageLostPerTarget = 0
 hitsWalls = false
 reverseSwipe = false
-baseScale = 1.25
 
 damageFrameCooldown = 120
 
@@ -23,12 +22,10 @@ animSpeed = 1
 ///@description						Marks enemies for crit
 ///@param {id.DsList} enemyList
 preDamage = function(enemyList) {
-	var distance
+	ds_list_shuffle(enemyList)
 	
 	for (var i = 0; i < ds_list_size(enemyList); i++) {
-		distance = point_distance(x, y, enemyList[| i].x, enemyList[| i].y)
-		
-		if (distance < 24 * image_xscale) {
+		if ((i + 1) % enemiesPerCrit == 0) {
 			enemyList[| i].markedForCrit = true
 		}
 	}

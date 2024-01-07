@@ -32,19 +32,21 @@ function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) cons
 ///@param {real} _stat				uses enumItemStats
 ///@param {array} _values			List of values per level
 ///@param {bool} _display			Determines whether this stat is visible
-///@param {struct} _customType		Must include displayName (string), unit (statUnits)
+///@param {struct} _customType		Must include displayName (string), unitEnum (statUnits)
 function itemStat(_stat, _values, _display = true, _customType = {}) constructor {
 	stat = _stat
 	values = _values
 	display = _display
-	
+		
 	if (_stat != enumItemStats.custom) {
 		type = get_item_stat_type(stat)
 		unit = get_stat_unit_from_enum(type.unitEnum)
 	} else {
+		// FIXME: GENERAL - does not support bonusVar and playerVar members. Will crash if referenced
 		type = _customType
+		unit = get_stat_unit_from_enum(type.unitEnum)
 	}
-	
+
 	getDisplayName = function() {
 		return type.displayName
 	}
