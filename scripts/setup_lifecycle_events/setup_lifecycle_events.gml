@@ -8,6 +8,7 @@ function setup_lifecycle_events(inst = id) {
 		stepBegin,
 		stepEnd,		
 		collide,
+		damageEntity,
 		criticalHit,
 		length
 	}
@@ -24,16 +25,16 @@ function setup_lifecycle_events(inst = id) {
 ///@param {real} type
 ///@param {function} func
 ///@param {id.Instance} inst
-function add_lifecycle_event(type, func, inst = id) {
-	array_push(inst.lifeCycleEvents[type], func)
+function add_lifecycle_event(_type, _func, _inst = id) {
+	array_push(_inst.lifeCycleEvents[_type], _func)
 }
 
 ///@param {real} type
 ///@param {id.Instance} inst
-function run_lifecycle_events(type, inst = id) {
-	with (inst) {
-		for (var i = 0; i < array_length(lifeCycleEvents[type]); i++) {
-			lifeCycleEvents[type][i](inst)
+function run_lifecycle_events(_type, _inst = id, _vars = {}) {
+	with (_inst) {
+		for (var i = 0; i < array_length(lifeCycleEvents[_type]); i++) {
+			lifeCycleEvents[_type][i](_inst, _vars)
 		}
 	}
 }

@@ -592,6 +592,7 @@
     {"id":{"name":"obj_xp_globe_sm","path":"objects/obj_xp_globe_sm/obj_xp_globe_sm.yy",},},
     {"id":{"name":"activate_ability","path":"scripts/activate_ability/activate_ability.yy",},},
     {"id":{"name":"font_pixellari","path":"fonts/font_pixellari/font_pixellari.yy",},},
+    {"id":{"name":"obj_chain_lit_bolt_warhammer","path":"objects/obj_chain_lit_bolt_warhammer/obj_chain_lit_bolt_warhammer.yy",},},
     {"id":{"name":"array_contains","path":"scripts/array_contains/array_contains.yy",},},
     {"id":{"name":"font_pxlxxl_s","path":"fonts/font_pxlxxl_s/font_pxlxxl_s.yy",},},
     {"id":{"name":"obj_trinket_demon_claw","path":"objects/obj_trinket_demon_claw/obj_trinket_demon_claw.yy",},},

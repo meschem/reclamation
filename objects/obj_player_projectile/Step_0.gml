@@ -156,6 +156,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		owner = get_player_target()
 	}
 	
+	if (critHit) {
+		run_lifecycle_events(enumLifeCycleEvents.criticalHit)
+	}
+	
 	var killed = damage_baddie(target, damageDirect, critHit, owner.critMultiplier)
 	
 	if (!killed && knockback > 0) {
