@@ -13,4 +13,4 @@ sprWalking = spr_jonah_walking
 sprSlam = spr_jonah_slam
 abilityTrees = playerCharacters.jonah
 
-addWeapon(obj_weapon_war_hammer)
+addWeapon(obj_weapon_greataxe)

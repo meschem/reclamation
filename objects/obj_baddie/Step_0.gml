@@ -46,6 +46,10 @@ if (state == enemyStates.normal) {
 		case enemyMoveBehaviors.simple:
 			move_logic_charge()
 		break
+		
+		case enemyMoveBehaviors.wander:
+			move_logic_wander()
+		break
 	}
 
 	switch (rotationBehavior) {
@@ -98,6 +102,10 @@ if (stunLength > 0) {
 	appliedVel.y = 0
 
 	stunLength--
+	
+	if (stunLength <= 0) {
+		state = enemyStates.normal
+	}
 }
 
 depth = depths.enemy - y

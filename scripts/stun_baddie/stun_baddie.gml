@@ -9,5 +9,7 @@ function stun_baddie(baddie, lengthSeconds) {
 		if (baddie.stunLength < stunFrames) {
 			baddie.stunLength = stunFrames
 		}
+		
+		baddie.state = enemyStates.stunned
 	}
 }

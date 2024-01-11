@@ -81,13 +81,41 @@ function abilityStat(_name, _variable, _values, _display = true, _unitEnum = sta
 	}
 	
 	///@description			Gets the numeric value and unit as a single string
-	///@param {real} level	Level of the ability to get
+	///@param {real} _level	Level of the ability to get
 	///@return {string}
-	getDisplayValue = function(level) {
-		var rawValue = values[level]
-		var numeric = rawValue * unit.multiplier
+	getDisplayValue = function(_level) {
+		if (_level == 0) {
+			var _rawValue = values[_level]
+			var _numeric = _rawValue * unit.multiplier
 		
-		return $"{numeric}{unit.displayUnit}"
+			return $"{_numeric}{unit.displayUnit}"
+		}
+		
+		var _rawValue = values[_level]
+		var _rawValueOld = values[_level - 1]
+		
+		var _numeric = _rawValue * unit.multiplier
+		var _numericOld = _rawValueOld * unit.multiplier
+		
+		return $"{_numericOld} > {_numeric}{unit.displayUnit}"
+		
+	}
+	
+	///@description			Determines if this should be displayed on a level up
+	///@param {real} _level	Level of the ability to get
+	///@return {bool}
+	displayOnLevelUp = function(_level) {
+		if (_level == 0) {
+			return true
+		}
+		
+		var _rawValue = values[_level] - values[_level - 1]
+		
+		if (_rawValue != 0) {
+			return true
+		}
+		
+		return false
 	}
 }
 

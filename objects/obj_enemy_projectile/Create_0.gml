@@ -1,6 +1,6 @@
 
 age = 0
-lifeSpan = 220
+lifeSpan = 360
 
 xVel = 0
 yVel = 0
@@ -19,7 +19,7 @@ maxBounces = 0
 //moving = true
 //lateralSpeed = 0
 
-shadow = spr_none
+shadow = spr_shadow_med
 
 damageOnHit = 10
 

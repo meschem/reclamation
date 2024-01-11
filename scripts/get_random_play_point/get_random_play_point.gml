@@ -46,6 +46,8 @@ function get_random_play_point() {
 			return returnVec
 		}
 		
+		
+		// FIXME: ERROR HERE
 		roll -= areaWeights[i]
 	}
 	

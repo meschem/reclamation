@@ -4,6 +4,7 @@ enum enemyMoveBehaviors {
 	none,
 	simple,
 	charge,
+	wander,
 }
 
 enum deathFxTypes {

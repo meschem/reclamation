@@ -14,16 +14,8 @@ onLevelUp = function() {
 
 stats = [
 	new itemStat(enumItemStats.bonusHealth, bonusHealth),
-<<<<<<< HEAD
 	//new itemStat(enumItemStats.custom, bonusHitRecovery, true, {
 	//	displayName: "Hit Recovery Time",
 	//	unit: statUnits.percent
 	//})
 ]
-=======
-	new itemStat(enumItemStats.custom, bonusHitRecovery, true, {
-		displayName: "Hit Recovery Time",
-		unitEnum: statUnits.percent
-	})
-]
->>>>>>> 2e7b2a730eb3d2e796323df55b2637d4566582a3

@@ -2,8 +2,6 @@
 
 function walk_to_location() {
 	hitWall = false;
-
-	
 	
 	if (!phases && place_meeting(x + xVel, y, obj_pit)) {
 		hitWall = true;

@@ -142,6 +142,12 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		critHit = true
 	}
 	
+	run_lifecycle_events(enumLifeCycleEvents.targetHit, {
+		owner: owner,
+		target: target,
+		critHit: critHit
+	})
+	
 	// FIXME disconnected from script
 	if (applyShock > 0 && target.shockedLength < applyShock) {
 		target.shockedLength = applyShock
@@ -156,9 +162,12 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		owner = get_player_target()
 	}
 	
-	if (critHit) {
-		run_lifecycle_events(enumLifeCycleEvents.criticalHit)
-	}
+	//if (critHit) {
+	//	run_lifecycle_events(enumLifeCycleEvents.criticalHit, {
+	//		owner: owner,
+	//		target: target
+	//	})
+	//}
 	
 	var killed = damage_baddie(target, damageDirect, critHit, owner.critMultiplier)
 	

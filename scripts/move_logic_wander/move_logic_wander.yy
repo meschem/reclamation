@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "move_logic_charge",
+  "name": "move_logic_wander",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

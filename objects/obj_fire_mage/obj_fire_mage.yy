@@ -1,21 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_card_ability_lvlup_selection",
+  "name": "obj_fire_mage",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "level_up",
-    "path": "folders/Objects/ui/level_up.yy",
+    "name": "baddies",
+    "path": "folders/Objects/baddies.yy",
   },
   "parentObjectId": {
-    "name": "obj_card_ui",
-    "path": "objects/obj_card_ui/obj_card_ui.yy",
+    "name": "obj_baddie",
+    "path": "objects/obj_baddie/obj_baddie.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -33,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ability_selection_large",
-    "path": "sprites/spr_ability_selection_large/spr_ability_selection_large.yy",
+    "name": "spr_necromancer_fire",
+    "path": "sprites/spr_necromancer_fire/spr_necromancer_fire.yy",
   },
   "spriteMaskId": null,
   "visible": true,

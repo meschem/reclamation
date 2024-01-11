@@ -26,6 +26,17 @@ attack = function() {
 		
 		for (var i = 0; i < array_length(_projectiles); i++) {
 			_projectiles[i].setScale(owner)
+			
+			for (var j = 0; j < array_length(upgrades); j++) {
+				var upgrade = upgrades[j]
+		
+				if (upgrade.active) {
+					for (var k = 0; k < array_length(upgrade.lifeCycleEvents); k++) {
+						event = upgrade.lifeCycleEvents[k]
+						add_lifecycle_event(event.cycleType, event.cycleFunc, _projectiles[i])
+					}
+				}		
+			}
 		}
 		
 		var _multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed)
@@ -57,16 +68,17 @@ launch = function(obj, velocity, offset = new vec2(0, 0)) {
 	
 	var upgrade, event
 	
-	for (var i = 0; i < array_length(upgrades); i++) {
-		upgrade = upgrades[i]
+	//for (var i = 0; i < array_length(upgrades); i++) {
+	//	upgrade = upgrades[i]
 		
-		if (upgrade.active) {
-			for (var j = 0; j < array_length(upgrade.lifeCycleEvents); j++) {
-				event = upgrade.lifeCycleEvents[j]
-				add_lifecycle_event(event.cycleType, event.cycleFunc, inst)
-			}
-		}
-	}
+	//	if (upgrade.active) {
+	//		for (var j = 0; j < array_length(upgrade.lifeCycleEvents); j++) {
+	//			event = upgrade.lifeCycleEvents[j]
+	//			add_lifecycle_event(event.cycleType, event.cycleFunc, inst)
+	//		}
+	//	}
+		
+	//}
 
 	run_lifecycle_events(enumLifeCycleEvents.create, inst)
 	

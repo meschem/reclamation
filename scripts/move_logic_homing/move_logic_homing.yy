@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "movement",
-    "path": "folders/Scripts/baddies/movement.yy",
+    "name": "wander",
+    "path": "folders/Scripts/baddies/movement/wander.yy",
   },
 }
