@@ -29,4 +29,6 @@ function move_logic_charge() {
 		}
 		//turn_towards_point([obj_player.x, obj_player.y], moveRotationRate)				
 	}
+	
+	image_xscale = sign(target.x -x) * xScale
 }

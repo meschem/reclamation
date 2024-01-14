@@ -3,10 +3,10 @@
 event_inherited();
 
 xp = 200
-hpMax = 120
+hpMax = 80
 hp = hpMax
 
-moveBehavior = enemyMoveBehaviors.none
+move_wander_setup()
 
 baddie_teleport_enable(600)
 

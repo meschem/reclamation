@@ -3,6 +3,7 @@ event_inherited()
 
 name = "Aegis Pendant"
 description = "Increases Armor"
+rarity = enumRarity.magic
 
 bonusArmor = [1, 2, 3, 5]
 

@@ -35,7 +35,7 @@ function process_player_stats_weapon_aoe() {
 		// Process Talents
 		
 		// Process Items
-		
+		show_message(rollingScalar)
 		bonusWeaponAoeScalar = rollingScalar + rollingStatic
 	}
 }

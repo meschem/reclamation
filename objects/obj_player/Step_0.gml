@@ -66,11 +66,11 @@ if (inputFocus == enumInputTypes.controller) {
 get_ability_input()
 
 if (isAttacking) {
-	//for (var i = 0; i < ds_list_size(weaponList); i++) {
-	//	//use_weapon(ds_list_find_value(weaponList, i))
-	//	weaponList[| i].attack()
-	//}
-	equipment.weapon.attack()
+	if (equipment.weapon == noone) {
+		create_toaster("No Weapon")
+	} else {
+		equipment.weapon.attack()
+	}	
 }
 
 //activate_sidearms()

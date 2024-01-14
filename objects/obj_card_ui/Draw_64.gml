@@ -22,4 +22,8 @@ if (statTextEnabled) {
 
 if (topIcon != spr_none) {
 	draw_sprite(topIcon, 0, x + buttonXOffset, y + buttonYOffset)
+	
+	if (iconOverlay != spr_none) {
+		draw_sprite(iconOverlay, 0, x + buttonXOffset, y + buttonYOffset)
+	}
 }

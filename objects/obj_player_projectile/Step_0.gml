@@ -52,7 +52,10 @@ if (seeking && seekTarget != noone) {
 		if (reseekBehavior = reseekBehaviors.destroySelf) {
 			seeking = false
 			seekTarget = noone
+			
+			/// FIXME: General - this is ugly
 			instance_destroy()
+			return 0
 		} else if (reseekBehavior = reseekBehaviors.deactivateSeek) {
 			seeking = false
 			seekTarget = noone
@@ -181,7 +184,9 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	damageDirect -= damageLostPerTarget
 	
 	if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
-		instance_destroy()
+		//instance_destroy()
+		destroy = true
+		break
 	}
 }
 
@@ -189,3 +194,5 @@ ds_list_clear(validTargetList)
 ds_list_clear(targetCollisionList)
 
 run_lifecycle_events(enumLifeCycleEvents.stepEnd)
+
+if (destroy) instance_destroy()

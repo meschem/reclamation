@@ -22,5 +22,5 @@ function create_chain_lightning_fx(sourcePoint, targetPoint, lightningType = 0) 
 	
 	inst.sprite_index = sprite
 	inst.image_angle = angle + sprRotate
-	inst.image_xscale = distance / 40 // sprite_get_width(sprite)
+	inst.image_xscale = distance / inst.sprite_width // sprite_get_width(sprite)
 }

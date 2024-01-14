@@ -2,6 +2,12 @@
 if (game_is_paused())
 	return 0
 
+if (markForDestroy) {
+	instance_destroy()
+	
+	return 0
+}
+
 if (beingSummoned) {
 	summoningCd--
 	

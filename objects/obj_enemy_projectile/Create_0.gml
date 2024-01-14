@@ -32,6 +32,8 @@ moveSpeedMax = 5
 turnRate = 1
 velocity = 0
 
+markForDestroy = false
+
 target = get_player_target()
 
 onInstanceCollision = function(inst) {

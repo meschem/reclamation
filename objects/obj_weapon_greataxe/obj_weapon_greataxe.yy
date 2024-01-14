@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_icon_wicked_talon",
+    "path": "sprites/spr_icon_wicked_talon/spr_icon_wicked_talon.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

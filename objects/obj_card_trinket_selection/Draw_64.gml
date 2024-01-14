@@ -6,7 +6,6 @@ event_inherited();
 
 draw_set_color(c_black)
 
-
 for (var i = 0; i < array_length(trinket.stats); i++) {
 	var nameString = trinket.stats[i].getDisplayName() + ": "
 	

@@ -21,11 +21,17 @@ function player_collision() {
 		}
 	}
 	
+	for (var i = 0; i < array_length(confirmedHitList); i++) {
+		if (object_is_ancestor(confirmedHitList[i].object_index, obj_projectile)) {
+			// instance_destroy(confirmedHitList[i])
+			
+			confirmedHitList[i].markForDestroy = true
+		}
+	}	
+	
 	if (isCharging) {
 		for (var i = 0; i < array_length(confirmedHitList); i++) {
-			if (object_is_ancestor(confirmedHitList[i], obj_projectile)) {
-				instance_destroy(confirmedHitList[i])
-			} else {
+			if (!object_is_ancestor(confirmedHitList[i].object_index, obj_projectile)) {
 				isCharging = false
 	
 				var xOffset = get_angle_xvel(moveAngle) * 6

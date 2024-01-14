@@ -54,7 +54,7 @@ if (state == enemyStates.normal) {
 
 	switch (rotationBehavior) {
 		case enemyRotateBehavior.flipTowardsPlayer:
-			xScale = (x <= target.x ) ? 1 : -1
+			xScale = (x <= target.x) ? 1 : -1
 		break
 	}
 	

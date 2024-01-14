@@ -29,7 +29,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_particle_solid_32_circle",
+    "path": "sprites/spr_particle_solid_32_circle/spr_particle_solid_32_circle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

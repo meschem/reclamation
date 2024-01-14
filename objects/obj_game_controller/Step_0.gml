@@ -23,12 +23,11 @@ if (keyboard_check_pressed(vk_f6)) {
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
-	show_debug_message("Talents: ")
-		list_talents()
+	display_weapon_select_prompt()
 }
 
 if (keyboard_check_pressed(vk_f8)) {
-	obj_player.gold += 500
+	obj_player.gold += 2000
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
@@ -68,6 +67,12 @@ if (keyboard_check_pressed(ord("C"))) {
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
 		obj_fire_mage, mouse_x, mouse_y
+	)
+}
+
+if (keyboard_check_pressed(ord("B"))) {
+	spawn_baddie_at_location(
+		obj_greater_serpent, mouse_x, mouse_y
 	)
 }
 

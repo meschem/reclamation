@@ -3,6 +3,7 @@ event_inherited()
 
 name = "Black Ichor"
 description = "Increases area of effect for your primary weapon"
+rarity = enumRarity.magic
 
 bonusWeaponAoe = [0.15, 0.25, 0.35, 0.5]
 

@@ -2,12 +2,29 @@
 event_inherited()
 
 name = "War Hammer"
+description = "Damages in an expanding cone. Deals critical damage to close targets."
 spawnDistance = 22
 spawnObject = obj_war_hammer_swipe
 
-reverseSwipe = false
-
 maxCd = 80
+
+stats = [
+	new abilityStat(
+		"Damage", "damage",
+		[12]
+	),
+	new abilityStat(
+		"Cooldown", "maxCd",
+		[80]
+	),
+	new abilityStat(
+		"Range", "range",
+		[120], true,
+		statUnits.length
+	)
+]
+
+reverseSwipe = false
 
 upgrades = [
 	create_instance(obj_wupg_wh_mega_hammer),

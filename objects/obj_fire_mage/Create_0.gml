@@ -3,7 +3,7 @@
 event_inherited();
 
 xp = 200
-hpMax = 120
+hpMax = 90
 hp = hpMax
 
 move_wander_setup()

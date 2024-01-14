@@ -14,7 +14,7 @@ baseScale = 1.25
 
 damageFrameCooldown = 120
 
-enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
+//enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
 
 knockback = 16
 

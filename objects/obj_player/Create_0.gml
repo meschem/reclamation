@@ -106,6 +106,11 @@ activeAbilities = [
 	noone
 ]
 
+availableWeapons = [
+	obj_weapon_greataxe,
+	obj_weapon_war_hammer
+]
+
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
 sprSlam = spr_jonah_slam
@@ -159,6 +164,8 @@ addWeapon = function(weapon) {
 	//ds_list_add(weaponList, inst)
 	
 	equipment.weapon = inst
+	
+	inst.owner = id
 }
 
 ///@description							Equip an item

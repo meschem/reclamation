@@ -13,6 +13,7 @@ subTitleEnabled = false
 isFocused = false
 statTextEnabled = false
 topIcon = spr_none
+iconOverlay = spr_none
 
 buttonXOffset = 34
 buttonYOffset = -13

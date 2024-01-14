@@ -48,6 +48,9 @@ function spawn_baddie(enemy, count = 1, spread = 20) {
 	
 	for (i = 0; i < array_length(spawns); i++) {
 		spawns[i].spawnSide = zone.spawnSide
+		spawns[i].hpMax *= obj_run_controller.enemyScalingHp
+		spawns[i].hp = spawns[i].hpMax
+		spawns[i].moveSpeedMax *= obj_run_controller.enemyScalingMoveSpeed
 	}	
 	
 	return spawns

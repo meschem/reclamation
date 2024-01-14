@@ -4,7 +4,7 @@ event_inherited()
 
 distanceMax = 150
 
-damageDirect = 12
+damageDirect = 15
 targetsMax = -1
 targetsMaxPerFrame = -1
 damageLostPerTarget = 0

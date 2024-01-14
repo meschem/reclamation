@@ -6,6 +6,7 @@ titleText.location.y = 17
 bodyText.location.y = 37
 
 trinket = noone
+iconOverlay = spr_none
 
 width = 140
 height = 200

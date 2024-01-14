@@ -6,9 +6,7 @@ angleSpriteToVelocity = true
 
 distanceMax = 220
 
-weaponType = playerWeapons.warHammer
-
-damageDirect = 10
+damageDirect = 6
 targetsMax = 1
 targetsHit = 0
 
@@ -16,4 +14,4 @@ targetsHit = 0
 
 knockback = 0
 
-shadowSprite = spr_war_hammer_shadow
+shadowSprite = spr_dagger_shadow

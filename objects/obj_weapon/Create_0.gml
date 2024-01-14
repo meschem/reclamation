@@ -9,7 +9,7 @@ curCd = 0
 
 upgrades = []
 
-owner = get_player_target()
+owner = noone
 
 ///@description						Attacks with the weapon. Set this.
 ///@return {array<id.Instance>}

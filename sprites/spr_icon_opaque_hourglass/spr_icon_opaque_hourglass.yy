@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "trinket",
-    "path": "folders/Sprites/equipment/trinket.yy",
+    "name": "trinkets",
+    "path": "folders/Sprites/equipment/trinkets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

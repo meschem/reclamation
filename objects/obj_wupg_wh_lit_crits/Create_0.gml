@@ -4,8 +4,6 @@ event_inherited()
 name = "Lit Crit"
 description = "Sent out a bolt of chain lightning on critical hits"
 
-enable()
-
 addLifeCycleEvent(enumLifeCycleEvents.targetHit, function(_data) {
 	if (!_data.critHit) {
 		return 0
