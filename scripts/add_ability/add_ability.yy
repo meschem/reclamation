@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_ability",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "active_abilities",
-    "path": "folders/Scripts/active_abilities.yy",
+  "$GMScript":"",
+  "%Name":"add_ability",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_ability",
+  "parent":{
+    "name":"active_abilities",
+    "path":"folders/Scripts/active_abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

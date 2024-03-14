@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "baddie_teleport_setup_points",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "shared_abilities",
-    "path": "folders/Scripts/baddies/shared_abilities.yy",
+  "$GMScript":"",
+  "%Name":"baddie_teleport_setup_points",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_teleport_setup_points",
+  "parent":{
+    "name":"shared_abilities",
+    "path":"folders/Scripts/baddies/shared_abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

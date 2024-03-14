@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_color",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "general",
-    "path": "folders/Scripts/general.yy",
+  "$GMScript":"",
+  "%Name":"get_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_color",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

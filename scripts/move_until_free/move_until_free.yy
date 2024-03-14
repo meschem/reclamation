@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "move_until_free",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "baddies",
-    "path": "folders/Scripts/baddies.yy",
+  "$GMScript":"",
+  "%Name":"move_until_free",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"move_until_free",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

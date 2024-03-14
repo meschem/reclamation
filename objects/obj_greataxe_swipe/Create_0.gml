@@ -3,6 +3,7 @@
 event_inherited()
 
 distanceMax = 150
+hitCount = 0
 
 damageDirect = 15
 targetsMax = -1
@@ -19,28 +20,33 @@ knockback = 16
 
 animSpeed = 1
 
+onHitSounds = [
+	snd_punch_1, snd_punch_2, snd_punch_3
+]
+
 ///@description						Marks enemies for crit
 ///@param {id.DsList} enemyList
 preDamage = function(enemyList) {
-	ds_list_shuffle(enemyList)
+	if (ds_list_size(enemyList) == 0) {
+		return 0
+	}
 	
-	for (var i = 0; i < ds_list_size(enemyList); i++) {
-		if ((i + 1) % enemiesPerCrit == 0) {
-			enemyList[| i].markedForCrit = true
-		}
+	var i = 0
+	
+	hitCount += ds_list_size(enemyList)
+	
+	while (hitCount >= enemiesPerCrit) {
+		hitCount -= enemiesPerCrit
+		enemyList[| i].markedForCrit = true
+
+		i++
 	}
 }
 
 ///@param {id.Instance} target		Target being hit
 onCollideFx = function(target)
 {
-	//damage_baddies_in_area(40, 15)
-	//instance_create_depth(x, y, depths.fx, obj_p_shockwave_circle)
-	//spawn_fx_small_burst(target.x, target.y)
+	var i = irandom(array_length(onHitSounds) - 1)
 	
-	var snd = irandom(2)
-	
-	if (snd == 1) audio_play_sound(snd_bottlecap_1, 0, false)
-	else if (snd == 2) audio_play_sound(snd_bottlecap_2, 0, false)
-	else if (snd == 0) audio_play_sound(snd_bottlecap_3, 0, false)
+	audio_play_sound(onHitSounds[i], 0, false)
 }

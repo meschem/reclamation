@@ -5,7 +5,7 @@ name = "War Hammer"
 
 upgrades = [
 	create_instance(obj_wupg_wh_mega_hammer),
-	create_instance(obj_wupg_gen_rapid),
+	create_instance(obj_wupg_gen_attack_speed),
 ]
 
 use = function() {

@@ -2,8 +2,11 @@
 
 event_inherited();
 
-xp = 200
-hpMax = 200
-hp = hpMax
+moveSpeedMax = 0.3
 
-add_loot_gold(8, 10)
+xp = 150
+hpMax = 150
+hp = hpMax
+weight = baddie_weight_med
+
+add_loot_gold(5, 10)

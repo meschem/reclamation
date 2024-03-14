@@ -75,7 +75,7 @@ purchase = function(_owner) {
 	_owner.gold -= cost
 }
 
-///@description						Actions to perform when leveling
+///@description						Actions to perform when leveling. These will 
 onLevelUp = function() {
 	// unset
 }

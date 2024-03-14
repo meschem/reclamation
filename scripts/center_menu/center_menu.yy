@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "center_menu",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ui",
-    "path": "folders/Scripts/ui.yy",
+  "$GMScript":"",
+  "%Name":"center_menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"center_menu",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

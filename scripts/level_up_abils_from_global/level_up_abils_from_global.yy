@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "level_up_abils_from_global",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "global_var_tracking",
-    "path": "folders/Scripts/general/global_var_tracking.yy",
+  "$GMScript":"",
+  "%Name":"level_up_abils_from_global",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"level_up_abils_from_global",
+  "parent":{
+    "name":"global_var_tracking",
+    "path":"folders/Scripts/general/global_var_tracking.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "drop_object",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "loot",
-    "path": "folders/Scripts/baddies/loot.yy",
+  "$GMScript":"",
+  "%Name":"drop_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"drop_object",
+  "parent":{
+    "name":"loot",
+    "path":"folders/Scripts/baddies/loot.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

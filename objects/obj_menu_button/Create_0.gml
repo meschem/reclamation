@@ -15,6 +15,9 @@ centeredX = true
 paddingY = 7
 paddingX = 7
 
+marginY = 0
+marginX = 0
+
 offsetY = 0
 offsetX = 0
 

@@ -58,10 +58,18 @@ for (var i = 0; i < maxPips; i++) {
 	)
 }
 
-// Draw Gold
+draw_set_font(font_dogica_s)
 
+// Draw Gold
 draw_text(
 	camera_get_view_width(view_camera[0]) - 80,
 	2,
 	"Gold: " + string(obj_player.gold)
+)
+
+// Draw FPS
+draw_text(
+	camera_get_view_width(view_camera[0]) - 80,
+	22,
+	"FPS: " + string(floor(fps_real))
 )

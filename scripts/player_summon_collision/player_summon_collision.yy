@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_summon_collision",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "move_logic",
-    "path": "folders/Scripts/player/move_logic.yy",
+  "$GMScript":"",
+  "%Name":"player_summon_collision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_summon_collision",
+  "parent":{
+    "name":"move_logic",
+    "path":"folders/Scripts/player/move_logic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "spawn_ability_trees",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "player",
-    "path": "folders/Scripts/player.yy",
+  "$GMScript":"",
+  "%Name":"spawn_ability_trees",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_ability_trees",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

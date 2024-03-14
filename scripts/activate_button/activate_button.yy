@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "activate_button",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "buttons",
-    "path": "folders/Scripts/ui/buttons.yy",
+  "$GMScript":"",
+  "%Name":"activate_button",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_button",
+  "parent":{
+    "name":"buttons",
+    "path":"folders/Scripts/ui/buttons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

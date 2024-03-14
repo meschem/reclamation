@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"kill_all_baddies_in_room",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"kill_all_baddies_in_room",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

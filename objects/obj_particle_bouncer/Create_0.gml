@@ -20,3 +20,6 @@ minBounceVelocity = 0.25
 
 shadow = spr_shadow_med
 singleCycle = false
+
+bounces = 0
+maxBounces = -1

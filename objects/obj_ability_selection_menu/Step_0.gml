@@ -44,5 +44,5 @@ var buttonsWidth = menuWidth - (paddingX * 2)
 
 for (var i = 0; i < array_length(buttons); i++) {
 	buttons[i].x = x + paddingX + (i * buttonSpacing)
-	buttons[i].y = y + paddingTop + headerHeight
+	buttons[i].y = y + paddingTop + headerHeight + buttons[i].marginY
 }

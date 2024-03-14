@@ -2,8 +2,10 @@
 ///@param {asset.GMObject} enemy	Enemy to spawn
 ///@param {real} _x					Amount of enemies to spawn
 ///@param {real} _y					Distance between enemies if count > 1
+///@return {id.Instance}
 
 function spawn_baddie_at_location(enemy, _x, _y) {
+	create_toaster("Calling spawn_baddie_at_location", errorLevels.warning)
 	var spawnX = _x
 	var spawnY = _y
 	var inst
@@ -32,4 +34,6 @@ function spawn_baddie_at_location(enemy, _x, _y) {
 	//		}
 	//	}
 	//}
+	
+	return inst
 }

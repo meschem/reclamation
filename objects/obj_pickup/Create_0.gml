@@ -16,7 +16,8 @@ lifeSpan = 480
 
 floats = false
 
-onPickup = function() {
+///@param {id.Instance}	_player		Player picking up the item
+onPickup = function(_player) {
 
 }
 

@@ -4,13 +4,13 @@
 
 function create_select_wupg_button(upgrade, menu = noone) {
 	with (upgrade) {
-		var button = instance_create_depth(0, 0, depths.ui, obj_card_wupg_selection)
+		var button = instance_create_depth(0, 0, depths.ui, obj_card_weapon_upgrade_selection)
 
 		button.titleText.body = name
 		button.bodyText.body = description
 		button.upgrade = id
 	
-		menu.title = "You Leveled up!"
+		menu.title = "Upgrade that weapon!"
 	
 		if (menu != noone) {
 			button.parentMenu = menu

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "enhance_baddie",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "specials",
-    "path": "folders/Scripts/baddies/specials.yy",
+  "$GMScript":"",
+  "%Name":"enhance_baddie",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enhance_baddie",
+  "parent":{
+    "name":"specials",
+    "path":"folders/Scripts/baddies/specials.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_gear_roll",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "equipment",
-    "path": "folders/Scripts/equipment.yy",
+  "$GMScript":"",
+  "%Name":"create_gear_roll",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_gear_roll",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

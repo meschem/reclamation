@@ -10,5 +10,9 @@ if (inst != noone) {
 	
 	txt.fontColor = c_yellow
 	
+	if (inst.getTrinketLevel(obj_trinket_golden_puzzlebox)) {
+		
+	}
+	
 	instance_destroy()
 }

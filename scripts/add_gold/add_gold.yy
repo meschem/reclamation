@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_gold",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/player/stats.yy",
+  "$GMScript":"",
+  "%Name":"add_gold",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_gold",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/player/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

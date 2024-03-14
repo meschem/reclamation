@@ -4,10 +4,15 @@
 /// @param {real} angle				Angle in degrees to push it
 
 function knockback_baddie(target, distance, angle) {
-	//var angle = point_direction(0, 0, xVel, yVel)
-	var hitForce = get_velocity_from_angle(angle, max(0, (distance - target.weight)))
+	distance -= target.weight
+	
+	if (distance <= 0) {
+		return
+	}
+	
+	var hitForce = get_velocity_from_angle(angle, distance)
 	var stepVec = normalize_vector(hitForce[0], hitForce[1])
-
+	
 	with (target) {
 		for (var i = 0; i < distance; i++) {
 			if (
@@ -28,6 +33,9 @@ function knockback_baddie(target, distance, angle) {
 	target.knockbackSlowDuration = 60
 	target.knockbackSlowHitFrame = target.age
 	
-	target.xVel = 0
-	target.yVel = 0
+	var extra = target.weight - distance
+	var velocityRatio = max(0, extra / target.weight)
+	
+	target.xVel *= velocityRatio
+	target.yVel *= velocityRatio
 }

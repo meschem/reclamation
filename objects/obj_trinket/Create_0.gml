@@ -46,7 +46,8 @@ onLevelUp = function() {
 	// Nothing
 }
 
-///@description					Called when a trinket is leveled up from a menu
+///@description					Called when a trinket is leveled up from a menu. The 'level'
+///								variables will be equal to the new level achieved
 levelUp = function() {
 	level++
 	

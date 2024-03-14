@@ -41,8 +41,6 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2) {
 	}
 	
 	target.markedForCrit = false
-	show_debug_message("unmarked")
-	
 	target.damagedOn = target.age
 	
 	return false

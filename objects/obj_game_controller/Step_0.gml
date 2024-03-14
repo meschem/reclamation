@@ -19,7 +19,8 @@ if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) 
 // Pausing handled in obj_room_controller
 
 if (keyboard_check_pressed(vk_f6)) {
-	create_shop_menu()
+	//create_shop_menu()
+	//var lvl = obj_player.getTrinketLevel(obj_trinket_golden_puzzlebox)
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
@@ -31,7 +32,7 @@ if (keyboard_check_pressed(vk_f8)) {
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
-	process_player_stats()
+	// goes to next level, setup on room controller	
 }
 
 if (keyboard_check_pressed(vk_f10)) { 
@@ -54,27 +55,49 @@ if (keyboard_check_pressed(ord("Z"))) {
 
 if (keyboard_check_pressed(ord("X"))) {
 	spawn_baddie_at_location(
-		obj_zombie, mouse_x, mouse_y
+		obj_poison_skeleton, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("C"))) {
 	spawn_baddie_at_location(
-		obj_wraith, mouse_x, mouse_y
+		obj_slime_green, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
-		obj_fire_mage, mouse_x, mouse_y
+		obj_gold_skeleton_warrior, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("B"))) {
 	spawn_baddie_at_location(
-		obj_greater_serpent, mouse_x, mouse_y
+		obj_skeleton_warrior, mouse_x, mouse_y
 	)
 }
+
+if (keyboard_check_pressed(ord("N"))) {
+	spawn_baddie_at_location(
+		obj_greater_serpent_green, mouse_x, mouse_y
+	)
+}
+
+if (keyboard_check_pressed(ord("M"))) {
+	spawn_baddie_at_location(
+		obj_wraith, mouse_x, mouse_y
+	)
+}
+
+if (keyboard_check_pressed(ord("K"))) {
+	kill_all_baddies_in_room()
+}
+
+if (keyboard_check_pressed(ord("O"))) {
+	toggle_ability_autocast()
+}
+
+
 
 if (mouse_check_button_pressed(mb_middle)) {
 	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)

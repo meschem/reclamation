@@ -6,14 +6,16 @@
 event_inherited();
 
 name = "Thorns"
-description = "Returns pointy damage to attackers"
+description = "Become invulnerable and deal damage on touching enemies."
 onHitAbility = true
 active = true
 selectionIcon = spr_abil_select_icon_thorns
 
 treeLevel = 2
 
-maxCd = 900
+maxCd = seconds_to_frames(15)
+
+canAutoCast = true
 
 buffTimeSeconds = 6
 activationCdMax = 40

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "game_is_paused",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "general",
-    "path": "folders/Scripts/general.yy",
+  "$GMScript":"",
+  "%Name":"game_is_paused",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"game_is_paused",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

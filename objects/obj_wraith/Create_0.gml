@@ -7,7 +7,9 @@ hpMax = 20
 hp = hpMax
 
 moveAccel = 0.08
-moveSpeedMax = 1.5
+moveSpeedMax = 1.2
+
+weight = 0
 
 shadowSprite = spr_shadow_lg
 

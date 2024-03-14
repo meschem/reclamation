@@ -42,6 +42,15 @@ setupEliteSpawn = function(enemyType) {
 	inst.eliteSpawn = true
 }
 
+///@description							Sets up a spawner for an single basic enemy
+///@param {asset.GMObject} enemyType	Type of enemy to spawn
+setupSingleSpawn = function(enemyType) {
+	var inst = setup_spawner(enemyType, phase)
+
+	inst.spawnCount = 1
+	inst.singleSpawn = true
+}
+
 ///@description							Sets up a normal spawner
 ///@param {asset.GMObject} enemyType	Type of enemy to spawn
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)
@@ -59,7 +68,7 @@ setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8, type = spaw
 	return inst
 }
 
-///@description							Sets up a normal spawner
+///@description							Sets up a flyby spawner
 ///@param {asset.GMObject} enemyType	Type of enemy to spawn
 ///@param {bool} targetPlayer			If true, flies to player, otherwise flies laterally (true)
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)

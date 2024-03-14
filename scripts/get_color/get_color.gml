@@ -14,6 +14,7 @@ function get_color(color) {
 		purple,
 		aqua,
 		dark,
+		dark_purple,
 		length
 	}
 	
@@ -35,6 +36,9 @@ function get_color(color) {
 						
 		case colors.purple:
 			return obj_game_controller.color_purple
+			
+		case colors.dark_purple:
+			return obj_game_controller.color_dark_purple
 						
 		case colors.aqua:
 			return obj_game_controller.color_aqua

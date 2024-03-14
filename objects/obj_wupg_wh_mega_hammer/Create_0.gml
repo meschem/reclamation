@@ -9,6 +9,8 @@ bonusWeaponAoe = 1
 bonusDamage = 20
 bonusAttackSpeed = -0.5
 
+
+
 //bonusDamageScalar = 1.5
 //hammerSizeScalar = 2
 

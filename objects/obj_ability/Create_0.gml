@@ -1,5 +1,7 @@
 ///@description Ability parent setup
 
+persistent = true
+
 name = "No Name"
 description = "No description yet"
 
@@ -9,6 +11,7 @@ iconX = -999
 iconY = -999
 
 autoCast = false
+canAutoCast = false
 enabled = false
 onHitAbility = false
 onStrikeAbility = false

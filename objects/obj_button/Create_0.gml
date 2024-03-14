@@ -5,8 +5,12 @@ state = buttonStates.normal
 
 width = 100
 height = 60
+
 paddingX = 4
 paddingY = 4
+
+marginY = 0
+marginX = 0
 
 player = get_player_target() //FIXME: MULTIPLAYER
 

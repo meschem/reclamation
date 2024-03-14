@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_stat_unit_from_enum",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/stats.yy",
+  "$GMScript":"",
+  "%Name":"get_stat_unit_from_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_stat_unit_from_enum",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

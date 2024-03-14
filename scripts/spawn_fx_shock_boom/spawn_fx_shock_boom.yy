@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "spawn_fx_shock_boom",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "fx",
-    "path": "folders/Scripts/fx.yy",
+  "$GMScript":"",
+  "%Name":"spawn_fx_shock_boom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_fx_shock_boom",
+  "parent":{
+    "name":"fx",
+    "path":"folders/Scripts/fx.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

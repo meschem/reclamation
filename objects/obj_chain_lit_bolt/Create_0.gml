@@ -16,6 +16,8 @@ respawnCount = obj_ability_shock.getMaxBounces()
 
 bounceDistanceMax = 120
 
+reseekBehavior = reseekBehaviors.acquireNearest
+
 spawnPoint = new vec2(x, y)
 
 onCollideFx = function (target) {

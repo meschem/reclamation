@@ -27,8 +27,8 @@ stats = [
 reverseSwipe = false
 
 upgrades = [
-	create_instance(obj_wupg_wh_mega_hammer),
-	create_instance(obj_wupg_gen_rapid),
+	//create_instance(obj_wupg_wh_mega_hammer),
+	//create_instance(obj_wupg_gen_rapid),
 ]
 
 ///@description						Returns an array of all projectile(s)

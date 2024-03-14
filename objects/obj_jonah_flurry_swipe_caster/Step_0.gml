@@ -1,3 +1,7 @@
+if (game_is_paused()) {
+	return
+}
+
 age++
 
 var attacked = false

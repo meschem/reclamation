@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_ability_input",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "active_abilities",
-    "path": "folders/Scripts/active_abilities.yy",
+  "$GMScript":"",
+  "%Name":"get_ability_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_ability_input",
+  "parent":{
+    "name":"active_abilities",
+    "path":"folders/Scripts/active_abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

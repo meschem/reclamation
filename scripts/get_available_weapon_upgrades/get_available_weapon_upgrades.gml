@@ -1,20 +1,35 @@
 ///@description						Returns all available trinkets that could be acquired or leveled up
-///@param {id.Instance} player		Player to check for 
+///@param {id.Instance} _player		Player to check for 
+///@param {real} _type				Type of upgrades. Uses enum weaponUpgradeTypes.
 ///@return {array<id.Instance>}
 
-// FIXME General: Assumes trinkets are singleton objects
-// FIXME Multiplier: Assumes single obj_player
-
-function get_available_weapon_upgrades(player = noone) {
+function get_available_weapon_upgrades(_player = noone, _type = weaponUpgradeTypes.minor) {
 	var availableUpgrades = []
+	var _weaponUpgrades
 	
-	if (player == noone) {
-		player = get_player_target()
+	if (_player == noone) {
+		_player = get_player_target()
 	}
 	
-	with (obj_weapon_upgrade) {
-		if (!false) {
-			array_push(availableUpgrades, id)
+	switch (_type) {
+		case weaponUpgradeTypes.minor:
+			_weaponUpgrades = _player.equipment.weapon.upgradesMinor
+		break
+		
+		case weaponUpgradeTypes.major:
+			_weaponUpgrades = _player.equipment.weapon.upgradesMajor
+		break
+		
+		case weaponUpgradeTypes.evolution:
+			_weaponUpgrades = _player.equipment.weapon.upgradesEvolution
+		break
+	}
+	
+	//weaponUpgrades = _player.equipment.weapon.upgrades
+
+	for (var i = 0; i < array_length(_weaponUpgrades); i++) {
+		if (_weaponUpgrades[i].stackable || _weaponUpgrades[i].level == 0) {
+			array_push(availableUpgrades, _weaponUpgrades[i])
 		}
 	}
 	

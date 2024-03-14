@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_talent_level",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "general",
-    "path": "folders/Scripts/talents/general.yy",
+  "$GMScript":"",
+  "%Name":"get_talent_level",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_talent_level",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/talents/general.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

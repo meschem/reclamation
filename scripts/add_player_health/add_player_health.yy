@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_player_health",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/player/stats.yy",
+  "$GMScript":"",
+  "%Name":"add_player_health",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_player_health",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/player/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

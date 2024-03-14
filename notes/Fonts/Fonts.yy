@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "Fonts",
-  "parent": {
-    "name": "Refs",
-    "path": "folders/Notes/Refs.yy",
+  "$GMNotes":"",
+  "%Name":"Fonts",
+  "name":"Fonts",
+  "parent":{
+    "name":"Refs",
+    "path":"folders/Notes/Refs.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

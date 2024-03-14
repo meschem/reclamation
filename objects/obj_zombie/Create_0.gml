@@ -11,4 +11,4 @@ hp = hpMax
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 
-add_loot_gold(5, 7)
+add_loot_gold(4, 6)

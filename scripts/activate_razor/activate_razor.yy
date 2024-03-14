@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "activate_razor",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "sidearms",
-    "path": "folders/Scripts/player/sidearms.yy",
+  "$GMScript":"",
+  "%Name":"activate_razor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_razor",
+  "parent":{
+    "name":"sidearms",
+    "path":"folders/Scripts/player/sidearms.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

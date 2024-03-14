@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "process_player_stats_weapon_aoe",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "process_stats",
-    "path": "folders/Scripts/player/process_stats.yy",
+  "$GMScript":"",
+  "%Name":"process_player_stats_weapon_aoe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_player_stats_weapon_aoe",
+  "parent":{
+    "name":"process_stats",
+    "path":"folders/Scripts/player/process_stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

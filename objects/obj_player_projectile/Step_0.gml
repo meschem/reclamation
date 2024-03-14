@@ -9,7 +9,9 @@ if (game_is_paused()) {
 var i, j
 
 if (age == 0) {
-	run_lifecycle_events(enumLifeCycleEvents.stepFirst)
+	run_lifecycle_events(enumLifeCycleEvents.stepFirst, {
+		projectile: id
+	})
 }
 
 age++
@@ -30,7 +32,9 @@ if (distanceMax > 0) {
 	}
 }
 
-run_lifecycle_events(enumLifeCycleEvents.stepBegin)
+run_lifecycle_events(enumLifeCycleEvents.stepBegin, {
+		projectile: id
+	})
 
 spawnPeriodicFx()
 
@@ -59,6 +63,8 @@ if (seeking && seekTarget != noone) {
 		} else if (reseekBehavior = reseekBehaviors.deactivateSeek) {
 			seeking = false
 			seekTarget = noone
+		} else if (reseekBehavior = reseekBehaviors.acquireNearest) {
+			seekTarget = instance_nearest(x, y, obj_baddie)
 		}
 	}
 	
@@ -126,7 +132,11 @@ if (target != noone) {
 for (i = 0; i < ds_list_size(targetCollisionList); i++) {
 	target = targetCollisionList[| i]
 
-	if (target.targetType == targetTypes.baddie && !hitlist_contains(hitList, target)) {
+	if (
+		target.targetType == targetTypes.baddie &&
+		target.hp > 0 &&
+		!hitlist_contains(hitList, target)
+	) {
 		array_push(hitList, new hitListEntry(target, damageFrameCooldown))
 		ds_list_add(validTargetList, target)
 	}
@@ -193,6 +203,8 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 ds_list_clear(validTargetList)
 ds_list_clear(targetCollisionList)
 
-run_lifecycle_events(enumLifeCycleEvents.stepEnd)
+run_lifecycle_events(enumLifeCycleEvents.stepEnd, {
+	projectile: id
+})
 
 if (destroy) instance_destroy()

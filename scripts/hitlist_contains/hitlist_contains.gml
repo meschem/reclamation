@@ -4,9 +4,12 @@
 
 function hitlist_contains(hitList, target) {
 	for (var i = 0; i < array_length(hitList); i++) {
-		if (hitList[i].instance == target) {
+		if (
+			hitList[i].instance == target ||
+			hitList[i].instance == target.parentBaddie
+		) {
 			return true
-		}
+		}		
 	}
 	
 	return false

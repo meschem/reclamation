@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_abilities_with_tag",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "abilities",
-    "path": "folders/Objects/abilities.yy",
+  "$GMScript":"",
+  "%Name":"get_abilities_with_tag",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_abilities_with_tag",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Objects/abilities.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

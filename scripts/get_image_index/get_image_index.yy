@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_image_index",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "helper",
-    "path": "folders/Scripts/helper.yy",
+  "$GMScript":"",
+  "%Name":"get_image_index",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_image_index",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

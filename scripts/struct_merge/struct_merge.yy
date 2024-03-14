@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"struct_merge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"struct_merge",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

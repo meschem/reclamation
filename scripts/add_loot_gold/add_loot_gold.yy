@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_loot_gold",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "baddies",
-    "path": "folders/Scripts/baddies.yy",
+  "$GMScript":"",
+  "%Name":"add_loot_gold",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_loot_gold",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

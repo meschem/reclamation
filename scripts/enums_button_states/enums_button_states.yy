@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "enums_button_states",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "enums",
-    "path": "folders/Scripts/enums.yy",
+  "$GMScript":"",
+  "%Name":"enums_button_states",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enums_button_states",
+  "parent":{
+    "name":"enums",
+    "path":"folders/Scripts/enums.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

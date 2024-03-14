@@ -45,7 +45,7 @@ var inst = instance_place(x, y, obj_player)
 
 if (inst != noone) {
 	//audio_play_sound(snd_soft_click, 1, false)
-	onPickup()
+	onPickup(inst)
 	//add_player_health(pickupValue)
 	
 	//var txt = create_moving_text(pickupValue, x, y, movingTextTypes.floating)

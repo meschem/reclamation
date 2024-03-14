@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "init_floating",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "floating",
-    "path": "folders/Scripts/general/floating.yy",
+  "$GMScript":"",
+  "%Name":"init_floating",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"init_floating",
+  "parent":{
+    "name":"floating",
+    "path":"folders/Scripts/general/floating.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -18,6 +18,8 @@ iconOverlay = spr_none
 buttonXOffset = 34
 buttonYOffset = -13
 
+marginY = 0
+
 if (mouse_check_button(mb_left)) {
 	enabled = false
 }

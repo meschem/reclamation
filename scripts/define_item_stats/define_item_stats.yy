@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "define_item_stats",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "stats",
-    "path": "folders/Scripts/stats.yy",
+  "$GMScript":"",
+  "%Name":"define_item_stats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"define_item_stats",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/stats.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -14,6 +14,9 @@ curCd = 0
 maxCd = 440
 treeLevel = 1
 
+autoCast = true
+canAutoCast = true
+
 baseDamage = 10
 baseRadius = 5
 stunLength = 2

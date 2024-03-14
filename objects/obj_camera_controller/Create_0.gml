@@ -1,4 +1,9 @@
 
+#macro screenshake_light 2
+#macro screenshake_med 5
+#macro screenshake_heavy 8
+#macro screenshake_ultra 12
+
 cameraId = 0
 viewCamera = view_camera[cameraId]
 
@@ -23,6 +28,6 @@ yPos = 80
 shakeForce = 0
 shakeDecay = 0.25
 
-applyShake = function() {
-	shakeForce = 5
+applyShake = function(amount = screenshake_med) {
+	shakeForce = amount
 }

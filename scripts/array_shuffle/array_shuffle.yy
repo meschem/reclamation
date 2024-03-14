@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "array_shuffle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "helper",
-    "path": "folders/Scripts/helper.yy",
+  "$GMScript":"",
+  "%Name":"array_shuffle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_shuffle",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

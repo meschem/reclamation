@@ -46,9 +46,7 @@ function get_random_play_point() {
 			return returnVec
 		}
 		
-		
-		// FIXME: ERROR HERE
-		roll -= areaWeights[i]
+		roll -= areaWeights[i].weight
 	}
 	
 	show_error("Error in selecting valid area", true)

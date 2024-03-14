@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"toggle_ability_autocast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"toggle_ability_autocast",
+  "parent":{
+    "name":"active_abilities",
+    "path":"folders/Scripts/active_abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

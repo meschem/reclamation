@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "dump_trinket_info",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "trinkets",
-    "path": "folders/Scripts/trinkets.yy",
+  "$GMScript":"",
+  "%Name":"dump_trinket_info",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dump_trinket_info",
+  "parent":{
+    "name":"trinkets",
+    "path":"folders/Scripts/trinkets.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -37,10 +37,11 @@ critChance = owner.critChance
 hitList = []
 
 ///@param {id.Instance} _owner
-setScale = function(_owner) {
+setScale = function(_owner, _weapon = noone) {
 	var _buffScale = obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
 	var _bonusAoeScale = _owner.bonusWeaponAoeScalar
-	var _scale = baseScale * (_buffScale + _bonusAoeScale)
+	var _weaponBonus = (_weapon != noone) ? _weapon.aoeScalar : 0
+	var _scale = baseScale * (_buffScale + _bonusAoeScale + _weaponBonus)
 
 	image_xscale = _scale
 	image_yscale = _scale

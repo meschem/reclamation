@@ -8,11 +8,7 @@ function get_spawn_vec(obj, _x, _y) {
 	var xTest = _x
 	var yTest = _y
 	
-	do {
-		place_empty()
-	} until (
-		true
-	)
+	show_error("Unused function get_spawn_vec()", true)
 	
 	var spawnVec = new vec2(xTest, yTest)
 	

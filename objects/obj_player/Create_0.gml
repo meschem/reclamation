@@ -35,12 +35,14 @@ baseCritMultiplier = 1.5
 baseAreaOfEffectScalar = 1
 baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
+baseKnockbackMultiplier = 1
 
 bonusProjectileCount = 0
 bonusDamageScalar = 1
 bonusPickupRangeScalar = 1
 bonusPickupRewardScalar = 1
 bonusWeaponAoeScalar = 1
+bonusWeaponKnockbackScalar = 1
 
 totalGold = 0
 gold = 0
@@ -152,20 +154,33 @@ equipment = {
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
 
-///@description						Adds a weapon to a player object
-///@param {asset.GMObject} weapon	Weapon to add of obj_weapon
-addWeapon = function(weapon) {
-	var inst = create_instance(weapon)
+///@description							Checks if a player has a trinket. Returns 0 if no trinket.
+///@param {asset.GMObject} _trinket		Weapon to add of obj_weapon
+///@real {real}
+getTrinketLevel = function(_trinket) {
+	for (var i = 0; i < array_length(trinkets); i++) {
+		if (trinkets[i].object_index == _trinket) {
+			return trinkets[i].level
+		}
+	}
 	
-	if (!variable_instance_exists(inst, "isEquipment")) {
+	return 0
+}
+
+///@description							Adds a weapon to a player object
+///@param {asset.GMObject} _weapon		Weapon to add of obj_weapon
+addWeapon = function(_weapon) {
+	var _inst = create_instance(_weapon)
+	
+	if (!variable_instance_exists(_inst, "isEquipment")) {
 		show_error("non-equipment weapon added", true)
 	}
 	
 	//ds_list_add(weaponList, inst)
 	
-	equipment.weapon = inst
+	equipment.weapon = _inst
 	
-	inst.owner = id
+	_inst.owner = id
 }
 
 ///@description							Equip an item

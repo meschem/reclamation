@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "buff_player_invuln",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "buffs",
-    "path": "folders/Scripts/buffs.yy",
+  "$GMScript":"",
+  "%Name":"buff_player_invuln",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"buff_player_invuln",
+  "parent":{
+    "name":"buffs",
+    "path":"folders/Scripts/buffs.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

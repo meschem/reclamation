@@ -1,5 +1,5 @@
 ///@description   Description
-function player_movement_input(){
+function player_movement_input() {
 	if (isCharging) {
 		chargeCurrentFrame++
 	

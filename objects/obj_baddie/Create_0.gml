@@ -24,13 +24,20 @@ enum enemyStates {
 	stunned,
 }
 
-deathFx = deathFxTypes.bones
+enum baddieHpBarTypes {
+	none,
+	small,
+	bigCenter,
+	boss,
+}
 
 moveBehavior = enemyMoveBehaviors.charge
 
 facingAngle = 0
 
 targetType = targetTypes.baddie
+
+parentBaddie = noone
 
 damageReactionLength = 16
 damageReactionCurve = animcurve_get(ac_baddie_hit_reaction)
@@ -39,10 +46,10 @@ damageReactionCurveYScale = animcurve_get_channel(damageReactionCurve, 1)
 damageXScaleMultiplier = 1
 damageYScaleMultiplier = 1
 
-moveSpeedMax = 0.4
+moveSpeedMax = 0.35
 moveSpeed = 0
 moveRotationRate = -1 // -1 is "infinite"
-moveAccel = 0.2
+moveAccel = 0.1
 
 spawnSide = "unset"
 
@@ -72,14 +79,24 @@ yScale = 1
 rotation = 1
 
 age = 0
+lifeSpan = -1
+
 hpMax = 100
 hp = hpMax
+hpBarDisplay = baddieHpBarTypes.small
+hpBarInfo = {
+	setup: false,
+	yPos: 0,
+	xPos: 0,
+	width: 0,
+	yOffset: -5
+}
 
 damagedOn = -10
 
 weight = 3
 
-soundOnDeath = snd_big_slap
+soundOnDeath = snd_wood_roll
 
 debuffShockAmount = 0
 
@@ -119,3 +136,4 @@ loot = []
 beginStep = function() {}
 endStep = function() {}
 onDestroy = function() {}
+deathFx = function() {}

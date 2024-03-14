@@ -1,3 +1,5 @@
 onDeathFx()
 
-run_lifecycle_events(enumLifeCycleEvents.destroy)
+run_lifecycle_events(enumLifeCycleEvents.destroy, {
+	projectile: id
+})

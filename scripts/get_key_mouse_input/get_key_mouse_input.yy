@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_key_mouse_input",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "input",
-    "path": "folders/Scripts/player/input.yy",
+  "$GMScript":"",
+  "%Name":"get_key_mouse_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_key_mouse_input",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/player/input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

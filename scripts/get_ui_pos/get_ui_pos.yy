@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "get_ui_pos",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ui",
-    "path": "folders/Scripts/ui.yy",
+  "$GMScript":"",
+  "%Name":"get_ui_pos",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_ui_pos",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -21,9 +21,3 @@ if (curCd <= 0) {
 		}
 	}
 }
-
-//if (autoCast && curCd <= 0) {
-//	curCd = maxCd
-		
-//	activate()
-//}

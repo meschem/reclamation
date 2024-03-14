@@ -11,16 +11,17 @@ active = true
 selectionIcon = spr_abil_select_icon_flurry
 
 curCd = 0
-maxCd = 240
+maxCd = 600
+
+canAutoCast = true
 
 enabled = false
 projectileCount = 5
-duration = seconds_to_frames(3)
 
 bonusAttackSpeed = 2
 bonusMoveSpeed = -0.5
 bonusAttackArea = 0
-duration = seconds_to_frames(1.5)
+duration = seconds_to_frames(1)
 
 treeLevel = 3
 

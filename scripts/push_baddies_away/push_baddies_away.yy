@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "push_baddies_away",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "movement",
-    "path": "folders/Scripts/baddies/movement.yy",
+  "$GMScript":"",
+  "%Name":"push_baddies_away",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"push_baddies_away",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

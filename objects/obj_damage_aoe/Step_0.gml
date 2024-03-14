@@ -7,8 +7,8 @@ if (age >= lifeSpan) {
 
 image_xscale = damageRadius / sprite_width
 
-var inst = collision_circle(x, y, damageRadius, obj_player, false, false)
+//var inst = collision_circle(x, y, damageRadius, obj_player, false, false)
 
-if (inst != noone) {
-	damage_player(id)
-}
+//if (inst != noone) {
+//	damage_player(id)
+//}

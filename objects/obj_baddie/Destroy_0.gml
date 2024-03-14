@@ -2,14 +2,11 @@
 onDestroy()
 
 if (!killedByBounds) {
-	switch (deathFx) {
-		case deathFxTypes.bones:
-			death_fx_bones()
-			break;
-	}
+	deathFx()
 
-	if (soundOnDeath >= 0)
+	if (soundOnDeath >= 0 && !audio_is_playing(soundOnDeath)) {
 		audio_play_sound(soundOnDeath, 1, false)
+	}
 
 	obj_player.xp += xp
 

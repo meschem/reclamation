@@ -4,8 +4,9 @@ if (game_is_paused())
 	
 if (age > spawnStartFrame && age % spawnPeriod == 0) {
 	var spawns, i, j
+	var _spawnCount = spawnCount * obj_run_controller.getBaddieScaling(baddieScalars.spawnCount)
 
-	for (i = 0; i < spawnCount; i++) {
+	for (i = 0; i < _spawnCount; i++) {
 		
 		switch (spawnSelectionType) {
 			case spawnBehaviors.rand:

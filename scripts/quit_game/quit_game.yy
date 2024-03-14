@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "quit_game",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "general",
-    "path": "folders/Scripts/general.yy",
+  "$GMScript":"",
+  "%Name":"quit_game",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"quit_game",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

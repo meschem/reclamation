@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_biome",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_biome",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "center_view",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/camera.yy",
+  "$GMScript":"",
+  "%Name":"center_view",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"center_view",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/camera.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

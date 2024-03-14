@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wood_roll",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.510227,
+  "name":"snd_wood_roll",
+  "parent":{
+    "name":"deaths",
+    "path":"folders/Sounds/deaths.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wood_roll.wav",
+  "type":0,
+  "volume":1.0,
+}

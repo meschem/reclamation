@@ -21,7 +21,12 @@ if (moving) {
 			
 			age = (lifeSpan - 30)
 		} else {
+			bounces++
 			zVel = zVel * -bounceRatio
+			
+			if (maxBounces > 0 && bounces >= maxBounces) {
+				instance_destroy()
+			}
 		}		
 	} else {
 		zVel += gravAccel
@@ -29,6 +34,9 @@ if (moving) {
 	
 	x += xVel
 	y += yVel
-
 }
+
+
+
+
 

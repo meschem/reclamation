@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "draw_text_obj",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ui",
-    "path": "folders/Scripts/ui.yy",
+  "$GMScript":"",
+  "%Name":"draw_text_obj",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_text_obj",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

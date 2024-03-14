@@ -1,12 +1,12 @@
 
 event_inherited()
 
-name = "Great Axe"
+name = "Great Maul"
 description = "Big swings in wide arcs. Every third target in a single swing is hit with critical damage."
 
 spawnDistance = 32
 spawnObject = obj_greataxe_swipe
-maxCd = 50
+maxCd = 72
 
 stats = [
 	new abilityStat(
@@ -29,10 +29,16 @@ reverseSwipe = false
 owner = get_player_target()
 
 upgrades = [
-	create_instance(obj_wupg_wh_mega_hammer),
-	create_instance(obj_wupg_gen_rapid),
-	create_instance(obj_wupg_wh_lit_crits)
+	obj_wupg_gen_damage,
+	obj_wupg_gen_knockback,
+	obj_wupg_gen_weapon_size,
+
+	obj_wupg_wh_lit_crits,
+	obj_wupg_wh_extra_push,
+	obj_wupg_wh_stunning_blow
 ]
+
+processUpgrades()
 
 use = function() {
 	var spawnPoint = get_vec2_from_angle_mag(owner.attackAngle, spawnDistance)

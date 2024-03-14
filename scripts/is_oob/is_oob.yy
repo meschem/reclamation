@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_oob",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "baddies",
-    "path": "folders/Scripts/baddies.yy",
+  "$GMScript":"",
+  "%Name":"is_oob",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_oob",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

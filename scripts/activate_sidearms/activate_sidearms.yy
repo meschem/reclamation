@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "activate_sidearms",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "sidearms",
-    "path": "folders/Scripts/sidearms.yy",
+  "$GMScript":"",
+  "%Name":"activate_sidearms",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_sidearms",
+  "parent":{
+    "name":"sidearms",
+    "path":"folders/Scripts/sidearms.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

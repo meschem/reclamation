@@ -29,13 +29,16 @@ function process_player_stats_weapon_aoe() {
 		}
 		
 		with (obj_weapon_upgrade) {
-			rollingScalar += bonusWeaponAoe
+			if (active) {
+				rollingScalar += bonusWeaponAoe
+				create_toaster(rollingScalar)
+			}
 		}
 		
 		// Process Talents
 		
 		// Process Items
-		show_message(rollingScalar)
+		create_toaster(rollingScalar)
 		bonusWeaponAoeScalar = rollingScalar + rollingStatic
 	}
 }

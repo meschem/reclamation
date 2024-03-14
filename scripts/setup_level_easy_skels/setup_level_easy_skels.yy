@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"setup_level_easy_skels",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_level_easy_skels",
+  "parent":{
+    "name":"level_1",
+    "path":"folders/Scripts/levels/setups/level_1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

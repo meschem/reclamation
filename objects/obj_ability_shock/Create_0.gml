@@ -8,8 +8,11 @@ event_inherited()
 name = "Chain Lightning"
 description = "Shoots out a bolt of lightning that bounces between targets"
 selectionIcon = spr_abil_select_icon_chain_lit
-maxCharges = 3
+//maxCharges = 3
 active = true
+
+autoCast = true
+canAutoCast = true
 
 curCd = 0
 maxCd = 400
@@ -41,14 +44,10 @@ addRune("Closed Loop", "No longer bounces, but hits the same target repeatedly")
 
 use = function() {
 	var caster = get_player_target()
-	var target = instance_nearest(caster.x, caster.y, obj_baddie)
+	var inst = instance_create_depth(caster.x, caster.y, depths.fx, obj_chain_lit_caster)
 	
-	if (target != noone) {
-		var inst = instance_create_depth(target.x, target.y, depths.playerProjectile, obj_chain_lit_bolt)
-		
-		inst.spawnPoint = new vec2(caster.x, caster.y)
-		inst.owner = owner
-	}
+	inst.owner = owner
+	inst.spawnTarget = owner
 }
 
 getMaxBounces = function() {

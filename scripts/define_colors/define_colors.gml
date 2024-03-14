@@ -9,5 +9,6 @@ function define_colors() {
 		color_purple = make_color_rgb(159, 118, 255)
 		color_aqua = make_color_rgb(85, 213, 255)
 		color_black = make_color_rgb(5, 0, 57)
+		color_dark_purple = make_color_rgb(88, 66, 177)
 	}
 }

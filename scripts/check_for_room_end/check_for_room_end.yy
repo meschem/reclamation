@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "check_for_room_end",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "levels",
-    "path": "folders/Scripts/levels.yy",
+  "$GMScript":"",
+  "%Name":"check_for_room_end",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_for_room_end",
+  "parent":{
+    "name":"levels",
+    "path":"folders/Scripts/levels.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

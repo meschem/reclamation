@@ -11,7 +11,7 @@ function player_collision() {
 	image_alpha = 1
 
 	var hitByList = ds_list_create()
-	var baddieHitList = instance_place_list(x, y, [obj_baddie, obj_enemy_projectile], hitByList, true)
+	var baddieHitList = instance_place_list(x, y, [obj_baddie, obj_enemy_projectile, obj_damage_aoe], hitByList, true)
 	var confirmedHitList = []
 	
 	// Checks collision with player coordinates with enemy bbox
@@ -31,7 +31,8 @@ function player_collision() {
 	
 	if (isCharging) {
 		for (var i = 0; i < array_length(confirmedHitList); i++) {
-			if (!object_is_ancestor(confirmedHitList[i].object_index, obj_projectile)) {
+			if (!object_is_ancestor(confirmedHitList[i].object_index, obj_projectile) &&
+			    !object_is_ancestor(confirmedHitList[i].object_index, obj_damage_aoe)) {
 				isCharging = false
 	
 				var xOffset = get_angle_xvel(moveAngle) * 6

@@ -18,6 +18,12 @@ enum projectileTypes {
 	ability,
 }
 
+enum reseekBehaviors {
+	destroySelf,
+	deactivateSeek,
+	acquireNearest
+}
+
 projectileType = projectileTypes.unset
 
 angleSpriteToVelocity = false
@@ -83,12 +89,11 @@ setup_lifecycle_events()
 
 weaponRef = noone // reference to obj_weapon that points to this object
 
-enum reseekBehaviors {
-	destroySelf,
-	deactivateSeek
-}
-
 reseekBehavior = reseekBehaviors.deactivateSeek
+
+run_lifecycle_events(enumLifeCycleEvents.create, {
+	projectile: id
+})
 
 ///@description					Sets object to facing angle with the same velocity
 ///@param {real} angle

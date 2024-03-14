@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "activate_spiked_armor",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "activate",
-    "path": "folders/Scripts/talents/activate.yy",
+  "$GMScript":"",
+  "%Name":"activate_spiked_armor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_spiked_armor",
+  "parent":{
+    "name":"activate",
+    "path":"folders/Scripts/talents/activate.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

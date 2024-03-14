@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "process_all_talents",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "talents",
-    "path": "folders/Scripts/talents.yy",
+  "$GMScript":"",
+  "%Name":"process_all_talents",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_all_talents",
+  "parent":{
+    "name":"talents",
+    "path":"folders/Scripts/talents.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

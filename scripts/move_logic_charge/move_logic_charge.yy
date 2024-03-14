@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "move_logic_charge",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "wander",
-    "path": "folders/Scripts/baddies/movement/wander.yy",
+  "$GMScript":"",
+  "%Name":"move_logic_charge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"move_logic_charge",
+  "parent":{
+    "name":"wander",
+    "path":"folders/Scripts/baddies/movement/wander.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

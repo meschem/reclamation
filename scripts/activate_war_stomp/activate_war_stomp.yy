@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "activate_war_stomp",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "jonah",
-    "path": "folders/Scripts/active_abilities/jonah.yy",
+  "$GMScript":"",
+  "%Name":"activate_war_stomp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_war_stomp",
+  "parent":{
+    "name":"jonah",
+    "path":"folders/Scripts/active_abilities/jonah.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

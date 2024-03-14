@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "baddie_walk_to_location",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "baddies",
-    "path": "folders/Scripts/baddies.yy",
+  "$GMScript":"",
+  "%Name":"baddie_walk_to_location",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_walk_to_location",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

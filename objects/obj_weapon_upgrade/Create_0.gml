@@ -1,8 +1,16 @@
+enum weaponUpgradeTypes {
+	minor,
+	major,
+	evolution
+}
 
 name = "Unnamed"
 description = "No Description"
 active = false
 weapon = noone
+stackable = false
+
+upgradeType = weaponUpgradeTypes.minor
 
 bonusAttackSpeed = 0
 bonusDamageScalar = 0
@@ -20,11 +28,48 @@ bonusWeaponAoe = 0
 
 lifeCycleEvents = []
 
+level = 0
+
+stats = []
+
 ///@description					Enables a weapon upgrade
 enable = function() {
 	active = true
 	
-	process_player_stats()
+	level++
+	weapon.level++
+	
+	onLevel()
+	
+	applyStatsToWeapon()
+	
+	//process_player_stats()
+}
+
+///@description					Applies default stats to attached weapon object
+applyStatsToWeapon = function () {
+	for (var i = 0; i < array_length(stats); i++) {
+		var _var = stats[i].variable
+		
+		if (variable_instance_exists(weapon, _var)) {
+			var _values = stats[i].values  // [level - 1]
+			var _index = min(array_length(_values) - 1, level - 1)
+			var _val = _values[_index]		
+			var _curVal = variable_instance_get(weapon, _var)
+		
+			// show_message([_val, _var, _curVal])
+		
+			var _result = _val + _curVal
+	
+			variable_instance_set(weapon, _var, _result)
+		}
+	}
+}
+
+///@description					Occurs after level stat has been adjusted. Can do whatever.
+///								Update this instead of enable()
+onLevel = function() {
+	
 }
 
 ///@description					Adds a lifecycle event to apply to projectiles

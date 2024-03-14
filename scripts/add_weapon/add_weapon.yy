@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "add_weapon",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "weapons",
-    "path": "folders/Scripts/player/weapons.yy",
+  "$GMScript":"",
+  "%Name":"add_weapon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_weapon",
+  "parent":{
+    "name":"weapons",
+    "path":"folders/Scripts/player/weapons.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

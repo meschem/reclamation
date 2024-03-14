@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "turn_towards_point",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "commands",
-    "path": "folders/Scripts/baddies/movement/commands.yy",
+  "$GMScript":"",
+  "%Name":"turn_towards_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"turn_towards_point",
+  "parent":{
+    "name":"commands",
+    "path":"folders/Scripts/baddies/movement/commands.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

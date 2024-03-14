@@ -98,7 +98,6 @@ function abilityStat(_name, _variable, _values, _display = true, _unitEnum = sta
 		var _numericOld = _rawValueOld * unit.multiplier
 		
 		return $"{_numericOld} > {_numeric}{unit.displayUnit}"
-		
 	}
 	
 	///@description			Determines if this should be displayed on a level up

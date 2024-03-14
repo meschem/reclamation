@@ -7,6 +7,10 @@ if (is_oob()) {
 	killedByBounds = true
 }
 
+if (lifeSpan > 0 && age >= lifeSpan) {
+	hp = 0
+}
+
 if (hp <= 0) {
 	instance_destroy()
 	return
@@ -27,13 +31,12 @@ if (knockbackSlowDuration > 0) {
 	var knockbackAgeRatio = (age - knockbackSlowHitFrame) / knockbackSlowDuration
 
 	if (knockbackAgeRatio >= 1) {
-		//show_debug_message("Finished: " + string(frameMoveSpeedMax))
 		knockbackSlowDuration = 0
 	} else {
-		var appliedRatio = knockbackSlowRatio + knockbackAgeRatio
+		var channel = animcurve_get_channel(ac_baddie_knockback_accel, 0)
+		var appliedRatio = animcurve_channel_evaluate(channel, clamp(knockbackAgeRatio, 0, 1))
 		
 		frameAccel = moveAccel * appliedRatio
-		frameMoveSpeedMax = moveSpeedMax - (knockbackMaxSpeedRatio * (1 / appliedRatio))		
 	}
 } else {
 	frameMoveSpeedMax = moveSpeedMax
@@ -135,6 +138,12 @@ if (age - damagedOn <= damageReactionLength) {
 } else {
 	damageXScaleMultiplier = 1
 	damageYScaleMultiplier = 1
+}
+
+if (hpBarDisplay == baddieHpBarTypes.small) {
+	hpBarInfo.xPos = round((x - camera_get_view_x(view_camera[0])) - (sprite_width / 2))
+	hpBarInfo.yPos = round((y - camera_get_view_y(view_camera[0])) - (sprite_height / 2) + hpBarInfo.yOffset)
+	hpBarInfo.width = sprite_width
 }
 
 endStep()
