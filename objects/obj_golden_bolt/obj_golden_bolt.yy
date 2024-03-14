@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_coin",
-    "path":"sprites/spr_coin/spr_coin.yy",
+    "name":"spr_golden_bolt",
+    "path":"sprites/spr_golden_bolt/spr_golden_bolt.yy",
   },
   "spriteMaskId":null,
   "visible":true,

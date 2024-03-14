@@ -2,6 +2,8 @@
 
 event_inherited();
 
+name = "Zombie"
+
 moveSpeedMax = 0.35
 xp = 8
 

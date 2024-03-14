@@ -2,6 +2,7 @@ bonusHealth = 0
 bonusArmor = 0
 bonusProjectileCount = 0
 bonusCritChance = 0
+bonusCritMultiplier = 0
 bonusPickupRange = 0
 bonusPickupReward = 0
 bonusAreaOfEffect = 0
@@ -15,6 +16,8 @@ disarm = false
 invuln = false
 
 timer = 60
+
+age = 0
 
 owner = obj_player
 

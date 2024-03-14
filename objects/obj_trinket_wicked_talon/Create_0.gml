@@ -1,11 +1,21 @@
 
 event_inherited()
 
-name = "Red Fang"
-description = "Increases Primary Weapon Damage"
+name = "Wicked Talon"
+description = "Attack multiple times every few attacks"
 
-bonusDamageScalar = [0.10, 0.16, 0.22, 0.32]
+requiredAttacks = [6, 5, 4, 3, 3]
+bonusAttacks = [1, 1, 1, 1, 2]
 
 stats = [
-	new itemStat(enumItemStats.bonusDamageScalar, bonusDamageScalar)
+	new itemStat(enumItemStats.custom, requiredAttacks, true, {
+		displayName: "Every X Attacks",
+		unitEnum: statUnits.none,
+		prepend: false
+	}),
+	new itemStat(enumItemStats.custom, bonusAttacks, true, {
+		displayName: "Bonus Attacks",
+		unitEnum: statUnits.none,
+		prepend: false
+	})
 ]

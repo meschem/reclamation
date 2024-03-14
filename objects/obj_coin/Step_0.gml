@@ -10,8 +10,10 @@ if (inst != noone) {
 	
 	txt.fontColor = c_yellow
 	
-	if (inst.getTrinketLevel(obj_trinket_golden_puzzlebox)) {
-		
+	var puzzleBox = get_player_trinket(obj_trinket_golden_puzzlebox, inst)
+	
+	if (puzzleBox != noone) {
+		puzzleBox.use(id)
 	}
 	
 	instance_destroy()

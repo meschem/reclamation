@@ -57,7 +57,7 @@ use = function() {
 	if (reverseSwipe) {
 		inst.reverseSwipe = true
 	}
-	
+
 	reverseSwipe = !reverseSwipe
 	
 	audio_play_sound(snd_woosh, 1, false)

@@ -18,6 +18,7 @@ enum buffValueTypes {
 	bonusAttackSpeed,
 	bonusMoveSpeed,
 	bonusAttackArea,
+	bonusCritMultiplier,
 }
 
 enum buffBoolTypes {
@@ -44,7 +45,11 @@ getBuffValue = function(buffType) {
 		case buffValueTypes.bonusAttackArea:
 			buffVariable = "bonusAttackArea"
 			break
-			
+		
+		case buffValueTypes.bonusCritMultiplier:
+			buffVariable = "bonusCritMultiplier"
+			break
+		
 		default:
 			show_error("Undefined REAL buffType requested", true) 
 			break

@@ -31,6 +31,8 @@ enum baddieHpBarTypes {
 	boss,
 }
 
+name = "Unnamed"
+
 moveBehavior = enemyMoveBehaviors.charge
 
 facingAngle = 0

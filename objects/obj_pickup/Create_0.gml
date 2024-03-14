@@ -12,7 +12,7 @@ target = get_player_target()
 
 age = 0
 
-lifeSpan = 480
+lifeSpan = 48000
 
 floats = false
 

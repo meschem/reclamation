@@ -15,6 +15,39 @@ enum enumStatUnits {
 	length,
 }
 
+enum enumTrailStyle {
+	line
+}
+
+///@description							Trail segment drawn behind objects
+///@param {struct.vec2} _startPos
+///@param {struct.vec2} _endPos
+///@param {real} _startWidth
+///@param {real} _endWidth
+///@param {color} _color
+///@param {real} _style
+function trailSegment(_startPos, _endPos, _startWidth = 0, _endWidth = 0, _color = c_yellow, _style = enumTrailStyle.line) constructor {
+	startPos = _startPos
+	endPos = _endPos
+	startWidth = _startWidth
+	endWidth = _endWidth
+	color = _color
+	style = _style
+	
+	// Currently basic with lines
+	draw = function() {
+		draw_line_width_color(
+			startPos.x,
+			startPos.y,
+			endPos.x,
+			endPos.y,
+			startWidth,
+			color,
+			color
+		)
+	}
+}
+
 ///@description						Defines an item stat type. These are defined in define_item_stats
 ///@param {string} _name			Display name for the variable
 ///@param {string} _bonusVar		Variable which references the bonus provides (on player and item)
@@ -55,7 +88,12 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 	getDisplayValue = function(_level) {
 		var _rawValue = values[_level]
 		var _numeric = _rawValue * unit.multiplier
-		var _prepend = (_numeric > 0) ? "+" : "" 
+		
+		if (type.prepend) {
+			var _prepend = (_numeric > 0) ? "+" : "" 
+		} else {
+			var _prepend = ""
+		}
 		
 		return $"{_prepend}{_numeric}{unit.displayUnit}"
 	}
@@ -120,9 +158,11 @@ function abilityStat(_name, _variable, _values, _display = true, _unitEnum = sta
 
 ///@param {real} _multiplier		Multiplier to use for displaying the value
 ///@param {string} _displayUnit		Displayed after the number
-function statUnit(_multiplier, _displayUnit) constructor {
+///@param {bool} _prepend			Prepend stat with + or -
+function statUnit(_multiplier, _displayUnit, _prepend = true) constructor {
 	multiplier = _multiplier
 	displayUnit = _displayUnit
+	prepend = _prepend
 }
 
 ///@description						Provides info for leveling an ability

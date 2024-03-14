@@ -53,7 +53,7 @@ function define_item_stats() {
 ///@param {string} enumStat		Uses enumItemStats
 ///@return {struct}
 function get_item_stat_type(_enumStat) {
-	var _displayName, _bonusVar, _playerVar, _statUnit
+	var _displayName, _bonusVar, _playerVar, _statUnit, _prepend
 	
 	switch (_enumStat) {
 		case enumItemStats.bonusHealth:
@@ -145,6 +145,7 @@ function get_item_stat_type(_enumStat) {
 		displayName: _displayName,
 		bonusVar: _bonusVar,
 		playerVar: _playerVar,
-		unitEnum: _statUnit
+		unitEnum: _statUnit,
+		prepend: true
 	}
 }

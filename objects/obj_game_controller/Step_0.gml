@@ -21,6 +21,7 @@ if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) 
 if (keyboard_check_pressed(vk_f6)) {
 	//create_shop_menu()
 	//var lvl = obj_player.getTrinketLevel(obj_trinket_golden_puzzlebox)
+	heal_player(instance_find(obj_player, 0), 10)
 }
 
 if (keyboard_check_pressed(vk_f7)) { 

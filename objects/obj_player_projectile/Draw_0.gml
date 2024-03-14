@@ -5,4 +5,9 @@ draw_sprite_ext(
 	image_angle, c_white, 1
 )
 
+if (trail) {
+	drawTrail()
+}
+
 draw_self()
+

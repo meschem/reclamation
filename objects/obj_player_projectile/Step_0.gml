@@ -33,12 +33,19 @@ if (distanceMax > 0) {
 }
 
 run_lifecycle_events(enumLifeCycleEvents.stepBegin, {
-		projectile: id
-	})
+	projectile: id
+})
 
 spawnPeriodicFx()
 
 calcVelocity()
+
+if (trail && age > 1) {
+	buildTrail()
+}
+
+previousFramePos.x = x
+previousFramePos.y = y
 
 if (xVel != 0 && yVel != 0) {
 	facingAngle = get_angle(xVel, yVel)
@@ -70,6 +77,8 @@ if (seeking && seekTarget != noone) {
 	
 	if (seekTarget != noone) {
 		turn_towards_point([seekTarget.x, seekTarget.y], maxTurnRate)
+		
+		maxTurnRate += maxTurnRateGain
 	}
 }
 
@@ -111,11 +120,12 @@ var target = noone
 var targetType = targetTypes.none
 var critHit = false
 var destroy = false
+var critMultiplier = 1
 
 if (onlyHitsSeekTarget) {
-	var hitsTarget = place_meeting(x, y, seekTarget)
-	
-	target = seekTarget
+	if (place_meeting(x, y, seekTarget)) {
+		target = seekTarget
+	}
 } else {
 	if (canHitMultipleTargets) {
 		instance_place_list(x, y, [obj_baddie, obj_solid], targetCollisionList, true)
@@ -148,10 +158,11 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	target = validTargetList[| i]
 		
 	critHit = false
+	critMultiplier = owner.critMultiplier + obj_buff_controller.getBuffValue(buffValueTypes.bonusCritMultiplier)
 
 	onCollideFx(target)
 	
-	if (target.markedForCrit) {
+	if (target.markedForCrit || (random(1) < critChance)) {
 		critHit = true
 	}
 	
@@ -182,7 +193,7 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	//	})
 	//}
 	
-	var killed = damage_baddie(target, damageDirect, critHit, owner.critMultiplier)
+	var killed = damage_baddie(target, damageDirect, critHit, critMultiplier)
 	
 	if (!killed && knockback > 0) {
 		//var pushAngle = point_direction(0, 0, xVel, yVel)

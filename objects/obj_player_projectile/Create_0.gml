@@ -68,18 +68,27 @@ shadowSprite = spr_war_hammer_shadow
 
 soundOnHit = snd_clack
 
-critChance = 0.1
+critChance = 0
 critMultiplier = 2
 
 hitList = []
 
 seeking = false
 maxTurnRate = -1
+maxTurnRateGain = 0
 seekDistanceMax = -1
 seekTarget = noone
 onlyHitsSeekTarget = false
 
 hitsWalls = true
+
+trail = false
+trailSpawnWidth = 5
+trailLength = 10			//Count of segments. not pixels.
+trailSegments = []
+trailColor = c_white
+
+previousFramePos = new vec2()
 
 lifeCycleEvents = []
 
@@ -94,6 +103,48 @@ reseekBehavior = reseekBehaviors.deactivateSeek
 run_lifecycle_events(enumLifeCycleEvents.create, {
 	projectile: id
 })
+
+///@description				Builds trail components into trail[] array
+buildTrail = function() {
+	var _trailLengthCur = array_length(trailSegments)
+	var _segment
+	
+	// Add new segment
+	//_segment = new trailSegment(new vec2(x, y), previousFramePos)
+	_segment = new trailSegment(new vec2(x, y), new vec2(previousFramePos.x, previousFramePos.y), 3, 3)
+	array_push(trailSegments, _segment)
+	_trailLengthCur++
+	
+	// Cull if needed	
+	if (_trailLengthCur > trailLength) {
+		for (i = 0; i < trailLength; i++) {
+			trailSegments[i].startPos.x = trailSegments[i + 1].startPos.x
+			trailSegments[i].startPos.y = trailSegments[i + 1].startPos.y
+			
+			trailSegments[i].endPos.x = trailSegments[i + 1].endPos.x
+			trailSegments[i].endPos.y = trailSegments[i + 1].endPos.y
+		}
+		
+		array_pop(trailSegments)
+		_trailLengthCur--
+	}
+	
+	var _curWidth = trailSpawnWidth
+	var _decrement = trailSpawnWidth / _trailLengthCur
+
+	for (var i = _trailLengthCur - 1; i >= 0; i--) {
+		trailSegments[i].startWidth = _curWidth
+		_curWidth -= _decrement
+		trailSegments[i].endWidth = _curWidth
+	}
+}
+
+///@description				Draws components from trail[] array
+drawTrail = function() {
+	for (var i = 0; i < array_length(trailSegments); i++ ) {
+		trailSegments[i].draw()
+	}
+}
 
 ///@description					Sets object to facing angle with the same velocity
 ///@param {real} angle

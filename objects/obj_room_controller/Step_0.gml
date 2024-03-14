@@ -20,6 +20,10 @@ if (state == roomStates.overtime) {
 	timeDisplay = get_time_from_age(age)
 }
 
+if (room == rm_start_dev) {
+	return 0
+}
+
 if (
 	state != roomStates.overtime &&
 	instance_number(obj_ability_selection_menu) == 0 &&

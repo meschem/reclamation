@@ -18,7 +18,10 @@ function get_random_baddie_in_area(_range) {
 		
 	for (var i = 0; i < ds_list_size(baddieList); i++) {
 		//if (!array_contains(hitList, baddieList[| i])) {
-		return baddieList[i]
+
+		var target = baddieList[| 0]
+		create_toaster(target.name)
+		return baddieList[| i]
 			//break
 		//}
 	}

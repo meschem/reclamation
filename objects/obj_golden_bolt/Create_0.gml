@@ -2,16 +2,18 @@
 
 event_inherited()
 
-distanceMax = 1000
+name = "Coin"
+
+distanceMax = 1500
 
 damageDirect = 10
-targetsMax = 1
-targetsHit = 0
 
-knockback = 0
+trail = true
+trailColor = get_color(colors.yellow)
 
 seeking = true
-maxTurnRate = 5
+maxTurnRate = 0.6
+maxTurnRateGain = 0.2
 seekDistanceMax = -1
 seekTarget = noone
 onlyHitsSeekTarget = true
