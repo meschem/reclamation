@@ -40,8 +40,8 @@ upgrades = [
 
 processUpgrades()
 
-use = function() {
-	var spawnPoint = get_vec2_from_angle_mag(owner.attackAngle, spawnDistance)
+use = function(_attackAngle) {
+	var spawnPoint = get_vec2_from_angle_mag(_attackAngle, spawnDistance)
 	
 	var inst = instance_create_depth(
 		owner.x + spawnPoint.x,

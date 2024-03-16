@@ -68,8 +68,8 @@ get_ability_input()
 if (isAttacking) {
 	if (equipment.weapon == noone) {
 		create_toaster("No Weapon")
-	} else {
-		equipment.weapon.attack()
+	} else {		
+		equipment.weapon.attack(attackAngle)
 	}	
 }
 

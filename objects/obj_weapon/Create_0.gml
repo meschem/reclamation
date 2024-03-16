@@ -73,38 +73,37 @@ processUpgrades = function() {
 }
 
 ///@description						Attacks with the weapon. Set this.
+///@param {real} _attackAngle		Angle of attack
 ///@return {array<id.Instance>}
-use = function() {
+use = function(_attackAngle) {
 	show_message("weapon use() not set")
 	return []
 }
 
 ///@description						Parent function for attacking. Don't overwrite.
+///@param {real} _attackAngle		Angle to launch attack at
+///@param {bool} _bypassCd			Bypass setting cooldown
+///@param {bool} _baseAttack		True if caused directly by player, vs an ability or trinket
 ///@return {bool}					Returns true if attack occurred
-attack = function() {
-	if (curCd <= 0) {
-		var _projectiles = use()
+attack = function(_attackAngle = 0, _bypassCd = false, _baseAttack = true) {
+	if (curCd <= 0 || _bypassCd) {
+		with (owner) {
+			for (var i = 0; i < array_length(onAttackAbilities); i++) {
+				onAttackAbilities[i].activateOnAttack(_baseAttack)
+			}
+		}
+		
+		var _projectiles = use(_attackAngle)
 			
 		for (var i = 0; i < array_length(_projectiles); i++) {
-			//_projectiles[i].setScale(owner)
-			
-			//for (var j = 0; j < array_length(upgrades); j++) {
-			//	var upgrade = upgrades[j]
-		
-			//	if (upgrade.active) {
-			//		for (var k = 0; k < array_length(upgrade.lifeCycleEvents); k++) {
-			//			event = upgrade.lifeCycleEvents[k]
-			//			add_lifecycle_event(event.cycleType, event.cycleFunc, _projectiles[i])
-			//		}
-			//	}		
-			//}
-			
 			applyUpgradesToInstance(_projectiles[i])
 		}
 		
-		var _multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed) + attackSpeedScalar
-		
-		curCd = maxCd * (1 / _multiplier)
+		if (!_bypassCd) {
+			var _multiplier = owner.attackSpeedScalar + obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackSpeed) + attackSpeedScalar
+			
+			curCd = maxCd * (1 / _multiplier)
+		}
 		
 		return true
 	}

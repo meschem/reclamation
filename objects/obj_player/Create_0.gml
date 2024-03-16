@@ -120,8 +120,8 @@ sprSlam = spr_jonah_slam
 animAbilityQueue = function() {}
 
 onHitAbilities = []					// Array of instances that have activateOnHit() functions
-onAttackAbilities = []
-onStrikeAbilities = []
+onAttackAbilities = []				// Array of instances that have activateOnAttak() functions
+onStrikeAbilities = []				// Array of instances that have activateOnStrike() functions, when attack lands
 onHealAbilities = []				// Array of instances that have activateOnHeal() functions
 
 sideArms = []
