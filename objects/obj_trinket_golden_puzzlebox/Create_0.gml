@@ -35,7 +35,7 @@ use = function(_coin) {
 	
 	var _launchAngle = point_direction(_coin.x, _coin.y, _seekTarget.x, _seekTarget.y) + 180
 	
-	if (level = maxLevel ) {
+	if (level != maxLevel) {
 		launch(_seekTarget, _launchAngle)
 	} else {
 		launch(_seekTarget, _launchAngle + 15)

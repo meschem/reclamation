@@ -4,6 +4,8 @@ if (obj_room_controller.state == roomStates.overtime) {
 	return 0
 }
 
+event_inherited()
+
 desiredPos.x = owner.x + 20
 desiredPos.y = owner.y - 20
 
