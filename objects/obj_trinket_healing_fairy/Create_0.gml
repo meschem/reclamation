@@ -16,8 +16,6 @@ stats = [
 ]
 
 activateOnHit = function() {
-	create_toaster("activated on hit!")
-	
 	var _playerHasFairy = false
 	
 	with (obj_buff_healing_fairy) {

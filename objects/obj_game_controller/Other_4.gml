@@ -1,3 +1,5 @@
 
-obj_player.x = obj_player_spawn.x
-obj_player.y = obj_player_spawn.y
+with (obj_player) { 
+	x = obj_player_spawn.x
+	y = obj_player_spawn.y
+}

@@ -1,4 +1,4 @@
-///@description								Deals damage to enemies in a radius
+///@description								Deals damage to enemies in a radius. Should be called by obj_player?
 ///@param {real} radius						Radius to select enemies in
 ///@param {real} amount						Amount of damage
 ///@param {gmasset.Object} spawnObject		Object to spawn on enemies for extra effects
@@ -16,8 +16,6 @@ function damage_baddies_in_area(radius, amount, spawnObject = obj_none) {
 		enemies,
 		false
 	)
-	
-	show_debug_message(radius)
 
 	if (count > 0) {
 		for (var i = 0; i < count; i++)

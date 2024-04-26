@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"apply_baddie_scaling",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_baddie_scaling",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Scripts/baddies/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

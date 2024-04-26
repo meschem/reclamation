@@ -1,5 +1,37 @@
-// Draw XP Bar
+// Draw Ult Meter
+if (drawUltimateBar) {
+	draw_set_color(c_white)
+	
+	draw_rectangle(
+		(cameraViewWidth / 2) - (ultimateBarWidth / 2) - 1,
+		cameraViewHeight - 30 - (ultimateBarHeight) - 1,
+		(cameraViewWidth / 2) + (ultimateBarWidth / 2) + 1,
+		cameraViewHeight - 29,
+		false
+	)
+	
+	draw_set_color(c_black)
+	
+	draw_rectangle(
+		(cameraViewWidth / 2) - (ultimateBarWidth / 2),
+		cameraViewHeight - 30 - (ultimateBarHeight),
+		(cameraViewWidth / 2) + (ultimateBarWidth / 2),
+		cameraViewHeight - 30,
+		false
+	)
+	
+	draw_set_color(get_color(colors.aqua))
 
+	draw_rectangle(
+		(cameraViewWidth / 2) - (ultimateBarWidth / 2),
+		cameraViewHeight - 30 - (ultimateBarHeight),
+		((cameraViewWidth / 2) - (ultimateBarWidth / 2) + ultimateBarWidth * ultimateFillPercent) ,
+		cameraViewHeight - 30,
+		false
+	)
+}
+
+// Draw XP Bar
 draw_set_color(c_white)
 
 draw_text(
@@ -30,7 +62,6 @@ draw_sprite_ext(
 )
 
 // Draw Health Pips
-
 var maxPips = ceil(obj_player.maxHp / playerHealthPerPip)
 var fillPips = floor(obj_player.hp / playerHealthPerPip)
 var sprWidth = sprite_get_width(spr_health_pip) - 2
@@ -71,5 +102,5 @@ draw_text(
 draw_text(
 	camera_get_view_width(view_camera[0]) - 80,
 	22,
-	"FPS: " + string(floor(fps_real))
+	"FPS: " + string(floor(drawFps))
 )

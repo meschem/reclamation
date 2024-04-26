@@ -12,6 +12,11 @@ init_floating(2, 90)
 onPickup = function(_player) {
 	var _weapon = _player.equipment.weapon
 	
+	if (_weapon == noone) {
+		obj_player.addWeapon(obj_weapon_greataxe)
+		_weapon = _player.equipment.weapon
+	}
+	
 	audio_play_sound(snd_clang_clang, 0, false)
 	
 	if (_weapon.level >= _weapon.maxLevel) {

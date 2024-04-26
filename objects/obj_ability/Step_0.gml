@@ -21,3 +21,31 @@ if (curCd <= 0) {
 		}
 	}
 }
+
+var ascii = owner.kmInput.useAbility[treeLevel]
+	
+switch (ascii) {
+	case 69: 
+		hotkey = "Q"
+		controllerIcon = spr_btn_xbox_rt
+	break
+			
+	case 71:
+		hotkey = "T"
+		controllerIcon = spr_btn_xbox_lb
+	break
+			
+	case 82: 
+		hotkey = "E"
+		controllerIcon = spr_btn_xbox_lt
+	break
+			
+	case 84: 
+		hotkey = "R"
+		controllerIcon = spr_btn_xbox_rb
+	break
+
+	default: 
+		hotkey = string(ascii)
+	break
+}

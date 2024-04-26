@@ -1,14 +1,27 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Manages obj_spawner objects
 
-enum spawnTypes {
-	waves,
-	unique,
+//enum spawnTypes {
+//	waves,
+//	unique,
+//	boss
+//}
+
+enum spawnerTypes {
+	standard,
 	boss
 }
 
 phase = 0
-phaseFrames = get_spawner_phase_length()
+secondsPerPhase = 30
+
+phaseFrames = seconds_to_frames(secondsPerPhase)
+
+debugDrawLoc = new vec2(
+	8,
+	camera_get_view_height(view_camera[0]) - 40
+)
+
+spawnCountScalar = 1 // just used for debugging output
 
 ///@description							Sets up a phase of spawners
 ///@param {array} spawners				Uses an array using setupSpawn()
@@ -57,12 +70,12 @@ setupSingleSpawn = function(enemyType) {
 ///@param {real} waveCount				Amount of waves (8)
 ///@param {real} type					Uses enum spawnTypes() (spawnTypes.waves)
 ///@return {id.Instance}
-setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8, type = spawnTypes.waves) {
+setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8) {
 	var inst = setup_spawner(
 		enemyType,
 		phase,
 		enemiesPerWave,
-		phaseFrames / waveCount
+		floor(phaseFrames / waveCount)
 	)
 	
 	return inst
@@ -79,7 +92,7 @@ setupFlybySpawn = function(enemyType, targetPlayer = true, enemiesPerWave = 10, 
 		enemyType,
 		phase,
 		enemiesPerWave,
-		phaseFrames / waveCount
+		floor(phaseFrames / waveCount)
 	)
 	
 	// !!!add flags to inst!!!

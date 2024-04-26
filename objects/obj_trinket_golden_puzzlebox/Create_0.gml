@@ -4,6 +4,7 @@ event_inherited()
 name = "Golden Puzzlebox"
 description = "Damages random enemy upon picking up gold. Coin stacks deal critical damage."
 maxLevel = 5
+maxTargetDistance = 800		//search radius for targets on pickup
 
 launchSpeed = 5
 damageDirect = [10, 15, 20, 25, 30]
@@ -26,7 +27,7 @@ stats = [
 ///@description							Uses Puzzlebox
 ///@param {id.Instance} _coin			Instance picked up
 use = function(_coin) {
-	var _seekTarget = get_random_baddie_in_area(800)
+	var _seekTarget = get_random_baddie_in_area(maxTargetDistance, owner.x, owner.y)
 	var _proj
 	
 	if (_seekTarget == noone) {
@@ -40,7 +41,7 @@ use = function(_coin) {
 	} else {
 		launch(_seekTarget, _launchAngle + 15)
 		
-		_seekTarget = get_random_baddie_in_area(800)
+		_seekTarget = get_random_baddie_in_area(maxTargetDistance, owner.x, owner.y)
 		launch(_seekTarget, _launchAngle - 15)
 	}
 	
@@ -51,6 +52,8 @@ use = function(_coin) {
 ///@param {real} _launchAngle
 launch = function(_seekTarget, _launchAngle) {
 	var _proj = launch_projectile(obj_golden_bolt, _launchAngle, launchSpeed, owner)
+	
+	create_toaster("launching")
 	
 	_proj.seekTarget = _seekTarget
 	_proj.damageDirect = damageDirect[level - 1]

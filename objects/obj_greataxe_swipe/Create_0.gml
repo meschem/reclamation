@@ -43,6 +43,12 @@ preDamage = function(enemyList) {
 	}
 }
 
+onDeathFx = function() {
+	if (hitCount > 0) {
+		owner.addUltimateCharge(15)
+	}
+}
+
 ///@param {id.Instance} target		Target being hit
 onCollideFx = function(target)
 {

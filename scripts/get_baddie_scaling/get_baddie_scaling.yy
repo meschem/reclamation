@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_baddie_scaling",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_baddie_scaling",
+  "parent":{
+    "name":"room_config",
+    "path":"folders/Scripts/room_config.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

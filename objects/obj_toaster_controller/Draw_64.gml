@@ -6,11 +6,11 @@ var _yPos = yPos
 var _xPos = xPos
 var _padding = padding
 var _margin = margin
-var _spacing = 24
+var _spacing = spacing
 var _textColor = c_white
 
 with (obj_toaster) {
-	draw_set_font(font_pixellari)
+	draw_set_font(font_pixelmix_s)
 	draw_set_color(bgColor)
 	
 	// FIXME: Perf. Set this on msgs

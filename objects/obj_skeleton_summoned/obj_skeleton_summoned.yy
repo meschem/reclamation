@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_skeleton",
-    "path":"sprites/spr_skeleton/spr_skeleton.yy",
+    "name":"spr_cyclo_skeleton",
+    "path":"sprites/spr_cyclo_skeleton/spr_cyclo_skeleton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

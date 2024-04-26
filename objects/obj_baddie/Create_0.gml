@@ -135,6 +135,8 @@ outline_init()
 
 loot = []
 
+onDestroyList = []	// List of functions executed on death
+
 beginStep = function() {}
 endStep = function() {}
 onDestroy = function() {}

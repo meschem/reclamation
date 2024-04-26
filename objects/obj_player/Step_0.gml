@@ -67,7 +67,8 @@ get_ability_input()
 
 if (isAttacking) {
 	if (equipment.weapon == noone) {
-		create_toaster("No Weapon")
+		create_toaster("No Weapon. Adding Default.")
+		addWeapon(availableWeapons[0])
 	} else {		
 		equipment.weapon.attack(attackAngle)
 	}	

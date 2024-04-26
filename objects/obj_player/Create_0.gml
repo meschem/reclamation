@@ -87,6 +87,10 @@ attackAngle = 0
 flies = false
 phases = false
 
+ultimateCharge = 0
+ultimateChargeMax = 1000
+hasUltimate = false
+
 weaponList = ds_list_create()
 
 //warHammerEquipped = false
@@ -225,4 +229,19 @@ getSlotStringFromEnum = function(slotEnum) {
 		case equipmentSlots.ringLeft: return "ringLeft"
 		case equipmentSlots.ringRight: return "ringRight"
 	}
+}
+
+///@description				Returns whether or not the player can use his ultimate
+///@return {bool}
+canUseUltimate = function() {
+	if (ultimateCharge < ultimateChargeMax)
+		return false
+	
+	return true
+}
+
+///@description					Adds to the player's ultimate meter (maxes at 1000)
+///@param {real} _amount		Amount to add
+addUltimateCharge = function(_amount) {
+	ultimateCharge = min(ultimateCharge + _amount, ultimateChargeMax)
 }

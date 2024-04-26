@@ -11,6 +11,7 @@ function create_fx_fading_circle(xPos, yPos, radius, lifeSpan = 30, hue = c_whit
 	inst.radius = radius
 	inst.lifeSpan = lifeSpan
 	inst.hue = hue
+	inst.alphaStart = 0.5
 	
 	return inst
 }

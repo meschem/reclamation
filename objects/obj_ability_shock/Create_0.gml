@@ -19,8 +19,9 @@ maxCd = 400
 
 treeLevel = 2
 
-damage = 35
-maxDistance = 250
+damage = [32, 48, 64, 96, 96]
+maxBounces = [4, 4, 8, 8, 12]
+maxDistance = 260
 criticalDistance = 60
 
 baseMaxBounces = 3
@@ -29,12 +30,12 @@ stats = [
 	new abilityStat(
 		"Damage",
 		"baseDamage", 
-		[32, 40, 48, 56, 64]
+		damage
 	),
 	new abilityStat(
 		"Max Bounces",
 		"baseMaxBounces", 
-		[4, 4, 5, 5, 6]
+		maxBounces
 	)
 ]
 
@@ -43,21 +44,22 @@ addRune("Extra Charges", "Adds extra max charge(s), reduces CD")
 addRune("Closed Loop", "No longer bounces, but hits the same target repeatedly")
 
 use = function() {
-	var caster = get_player_target()
-	var inst = instance_create_depth(caster.x, caster.y, depths.fx, obj_chain_lit_caster)
+	var _inst = instance_create_depth(owner.x, owner.y, depths.fx, obj_chain_lit_caster)
 	
-	inst.owner = owner
-	inst.spawnTarget = owner
+	_inst.owner = owner
+	_inst.spawnTarget = owner
+	_inst.damage = damage[level - 1]
+	_inst.bounces = maxBounces[level - 1]
 }
 
 getMaxBounces = function() {
-	var base = baseMaxBounces
+	var _base = baseMaxBounces
 	
 	if (runes[enumRunes.magdela].enabled) {
-		base += 2
+		_base += 2
 	}
 	
-	base += owner.bonusProjectileCount
+	_base += owner.bonusProjectileCount
 	
 	return baseMaxBounces
 }

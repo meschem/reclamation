@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"create_ability_list",
   "parent":{
-    "name":"active_abilities",
-    "path":"folders/Scripts/active_abilities.yy",
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -15,16 +15,19 @@ function enhance_baddie(type, inst = id) {
 		break
 		
 		case baddieSpecialTypes.boss:
-			inst.isElite = true
-			inst.hpMax *= 25
-			inst.hp = inst.hpMax
-			inst.xp *= 20
-			inst.weight *= 2
-			inst.damageOnHit *= 2
+			if (!inst.isBoss) {
+				inst.isElite = true
+				inst.hpMax *= 25
+				inst.hp = inst.hpMax
+				inst.xp *= 20
+				inst.weight *= 2
+				inst.damageOnHit *= 2
+				inst.image_xscale = inst.bossScale
+				inst.image_yscale = inst.bossScale
+			}
+
 			inst.outlineColor = get_color(colors.red)
-			inst.image_xscale = inst.bossScale
-			inst.image_yscale = inst.bossScale
-			
+		
 			add_loot(obj_ore, 1, inst)
 		break
 	}

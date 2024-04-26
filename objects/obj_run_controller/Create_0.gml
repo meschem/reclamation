@@ -20,6 +20,7 @@ currentFloor = 0
 currentRoom = -1
 
 displayRunInfo = true
+displayStateSpacing = 10
 
 // Difficulty Scalars
 enemyScalingHp = 1
@@ -28,15 +29,17 @@ enemyScalingSpawnCount = 1
 
 enemyScalingSpawnCountTable = [
 	0.4,
-	0.6,
-	0.6,
-	0.8,
+	0.7,
 	1,
-	1.2,
-	1.3,
 	1.4,
-	1.5,
-	1.6
+	2,
+	
+
+	2.2,
+	2.4,
+	2.6,
+	2.8,
+	3
 ]
 
 enemyScalingCdMax = seconds_to_frames(60)

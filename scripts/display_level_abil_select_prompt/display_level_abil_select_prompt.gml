@@ -13,9 +13,17 @@ function display_level_abil_select_prompt(player = noone) {
 	menu.headerHeight = 0
 	//var abilityIndex = obj_game_controller.playerAbilityTreeLevel - 1
 	
-	create_ability_up_button(player.abilityTrees[0], menu)
-	create_ability_up_button(player.abilityTrees[1], menu)
-	//create_ability_up_button(player.abilityTrees[2], menu)
+	var abilities = get_abilities_for_select(player)
+	
+	if (array_length(abilities) == 0) {
+		create_toaster("Ability select array empty", errorLevels.error)
+		set_game_pause_state(false)
+		instance_destroy(menu)
+	} else {
+		for (var i = 0; i < array_length(abilities); i++) {
+			create_ability_up_button(abilities[i], menu, player)
+		}
+	}
 	
 	player.abilityTreeLevel++
 }

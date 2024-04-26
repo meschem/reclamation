@@ -10,7 +10,7 @@ move_wander_setup()
 
 baddie_teleport_enable(600)
 
-summonCdMax = 640
+summonCdMax = 800
 summonCdCur = summonCdMax
-summonCount = 8
+summonCount = 6
 summonType = obj_skeleton_summoned

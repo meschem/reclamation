@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_abilities_for_select",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_abilities_for_select",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

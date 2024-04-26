@@ -5,9 +5,11 @@
 /// @param {id.Instance}	target		Target to deal direct damage to
 
 function charge_collision(xPos, yPos, angle, target = noone) {
-	var directDamage = obj_ability_charge.damage
-	var stunLength = obj_ability_charge.stunLength
-	var knockback = obj_ability_charge.knockback
+	var _chargeAbility = id
+	
+	var directDamage = _chargeAbility.impactDamage[_chargeAbility.level - 1]
+	var stunLength = _chargeAbility.stunLength[_chargeAbility.level - 1]
+	var knockback = _chargeAbility.knockback
 	var isCrit = false
 	
 	spawn_fx_shock_boom(xPos, yPos)
@@ -18,12 +20,12 @@ function charge_collision(xPos, yPos, angle, target = noone) {
 		knockback_baddie(target, knockback, angle)
 		stun_baddie(target, stunLength)
 		
-		if (obj_ability_charge.runes[enumRunes.voldan].enabled) {
-			var halvingDamage = min(target.hp * 0.5, obj_ability_charge.maxHalvingDamage)
+		//if (obj_ability_charge.runes[enumRunes.voldan].enabled) {
+		//	var halvingDamage = min(target.hp * 0.5, obj_ability_charge.maxHalvingDamage)
 			
-			directDamage = max(directDamage, halvingDamage)
-			isCrit = true
-		}
+		//	directDamage = max(directDamage, halvingDamage)
+		//	isCrit = true
+		//}
 		
 		damage_baddie(target, directDamage, isCrit)
 				

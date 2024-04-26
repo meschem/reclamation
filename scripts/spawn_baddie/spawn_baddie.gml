@@ -3,7 +3,6 @@
 ///@param {real} count				Amount of enemies to spawn
 ///@param {real} spread				Distance between enemies if count > 1
 ///@return {array<id.Instance>}
-
 function spawn_baddie(enemy, count = 1, spread = 20) {
 	var spawnDir = irandom(3)
 	var randomX = irandom_range(-20, room_width + 20)
@@ -48,9 +47,11 @@ function spawn_baddie(enemy, count = 1, spread = 20) {
 	
 	for (i = 0; i < array_length(spawns); i++) {
 		spawns[i].spawnSide = zone.spawnSide
-		spawns[i].hpMax *= obj_run_controller.getBaddieScaling(baddieScalars.hp)
-		spawns[i].hp = spawns[i].hpMax
-		spawns[i].moveSpeedMax *= obj_run_controller.getBaddieScaling(baddieScalars.moveSpeed)
+		//spawns[i].hpMax *= obj_run_controller.getBaddieScaling(baddieScalars.hp)
+		//spawns[i].hp = spawns[i].hpMax
+		//spawns[i].moveSpeedMax *= obj_run_controller.getBaddieScaling(baddieScalars.moveSpeed)
+		
+		apply_baddie_scaling(spawns)
 	}	
 	
 	return spawns

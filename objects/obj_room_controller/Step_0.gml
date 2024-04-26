@@ -52,7 +52,13 @@ if (state == roomStates.overtime) {
 					restart_run()
 				}
 				
-				loadRoom(dungeon.floors[currentFloor].rooms[0])
+				var success = display_room_select_prompt()
+				
+				if (!success) {
+					room_goto(rm_dungeon_end)
+				}
+				
+				//loadRoom(dungeon.floors[currentFloor].rooms[0])
 			}
 		}
 	}

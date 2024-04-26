@@ -6,7 +6,7 @@
   "name":"war_stomp_collide",
   "parent":{
     "name":"jonah",
-    "path":"folders/Scripts/active_abilities/jonah.yy",
+    "path":"folders/Scripts/abilities/jonah.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

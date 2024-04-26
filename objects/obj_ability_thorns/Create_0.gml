@@ -15,6 +15,7 @@ treeLevel = 2
 
 maxCd = seconds_to_frames(15)
 
+autoCast = true
 canAutoCast = true
 
 buffTimeSeconds = 6
@@ -30,15 +31,15 @@ lightningShockAmount = 180
 stats = [
 	new abilityStat(
 		"Spike Count", "spikeCount", 
-		[8, 8, 10, 10, 10]
+		[8, 8, 12, 12, 12]
 	),
 	new abilityStat(
 		"Damage", "spikeDamage", 
-		[30, 30, 40, 40, 50]
+		[20, 40, 40, 60, 80]
 	),
 	new abilityStat(
 		"Cooldown", "maxCd", 
-		[900, 850, 800, 750, 700]
+		[900, 840, 780, 720, 640]
 	)
 ]
 

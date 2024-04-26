@@ -9,6 +9,7 @@ hp = hpMax
 moveAccel = 0.08
 moveSpeedMax = 1
 weight = 4
+isBoss = true
 //moveRotationRate = 4
 bossScale = 1
 

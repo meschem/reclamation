@@ -40,7 +40,5 @@ function process_player_stats_max_health() {
 		maxHp = baseMaxHp * rollingScalar + rollingStatic
 		//maxHp = baseMaxHp + addedHp
 		hp += addedHp
-		
-		//show_debug_message("Abil CD Scalar = " + string(obj_player.abilityCooldownScalar))
 	}
 }

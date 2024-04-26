@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"damage_baddies_in_radius",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"damage_baddies_in_radius",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

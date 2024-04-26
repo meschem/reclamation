@@ -14,6 +14,7 @@ bonusAttackArea = 0
 
 disarm = false
 invuln = false
+permanent = false
 
 timer = 60
 

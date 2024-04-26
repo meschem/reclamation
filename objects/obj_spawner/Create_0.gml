@@ -6,6 +6,8 @@ enemyTypes = [
 	obj_skeleton
 ]
 
+active = false
+
 enum spawnBehaviors {
 	cycle,
 	rand,

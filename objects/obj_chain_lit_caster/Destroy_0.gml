@@ -45,7 +45,7 @@ if (bounces > 0) {
 	var inst = instance_create_depth(target.x, target.y, depths.fx, obj_chain_lit_caster)
 		
 	inst.bounces = bounces - 1
-	inst.damage *= damageBounceModifier
+	inst.damage = damage * damageBounceModifier
 	inst.hitList = hitList
 }
 

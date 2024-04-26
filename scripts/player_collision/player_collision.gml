@@ -21,6 +21,7 @@ function player_collision() {
 		}
 	}
 	
+	// Destroys projectile on collision
 	for (var i = 0; i < array_length(confirmedHitList); i++) {
 		if (object_is_ancestor(confirmedHitList[i].object_index, obj_projectile)) {
 			// instance_destroy(confirmedHitList[i])
@@ -30,16 +31,29 @@ function player_collision() {
 	}	
 	
 	if (isCharging) {
+		var _target = noone
+
 		for (var i = 0; i < array_length(confirmedHitList); i++) {
-			if (!object_is_ancestor(confirmedHitList[i].object_index, obj_projectile) &&
-			    !object_is_ancestor(confirmedHitList[i].object_index, obj_damage_aoe)) {
-				isCharging = false
-	
-				var xOffset = get_angle_xvel(moveAngle) * 6
-				var yOffset = get_angle_yvel(moveAngle) * 6
-					charge_collision(x + xOffset, y + yOffset, moveAngle, confirmedHitList[i])
-				
-				break
+			
+			_target = confirmedHitList[i]
+			
+			if (!object_is_ancestor(_target.object_index, obj_projectile) &&
+			    !object_is_ancestor(_target.object_index, obj_damage_aoe)) {
+					
+				var _ability = get_ability_instance(id, obj_ability_charge)
+					
+				if (keyboard_check(ord("R"))) {
+					_ability.collision(_target)
+				} else {
+					isCharging = false
+					_ability.finalCollision(_target)
+
+					//var xOffset = get_angle_xvel(moveAngle) * 6
+					//var yOffset = get_angle_yvel(moveAngle) * 6
+					//charge_collision(x + xOffset, y + yOffset, moveAngle, confirmedHitList[i])
+			
+					break
+				}
 			}
 		}
 		

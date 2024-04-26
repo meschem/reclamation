@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_room_reward_from_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_room_reward_from_enum",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

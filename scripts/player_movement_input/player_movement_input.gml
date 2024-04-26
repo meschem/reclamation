@@ -10,8 +10,6 @@ function player_movement_input() {
 		
 			xVel = get_angle_xvel(moveAngle) * chargeSpeed
 			yVel = get_angle_yvel(moveAngle) * chargeSpeed	
-		
-			//if (age % 10 == 0) show_debug_message("charging!")
 		}
 	} else {
 		var moveInput = get_controller_movement()

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"display_room_select_prompt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_room_select_prompt",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

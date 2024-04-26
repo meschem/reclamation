@@ -1,11 +1,11 @@
 ///@description							Add a trinket to the caller
-///@param {gmasset.Object} _trinket		Trinket to add
+///@param {asset.GMObject} _trinket		Trinket to add
 
-function add_trinket(_trinket) {
-	var trinket = instance_create_depth(0, 0, 0, _trinket)
-	var owner = get_player_target()
+function add_trinket(_trinket, _owner = noone) {
+	var _inst = instance_create_depth(0, 0, 0, _trinket)
+	//var _owner = get_player_target()
 	
-	array_push(owner.trinkets, trinket)
+	array_push(_owner.trinkets, _inst)
 	
-	trinket.onSpawn()
+	_inst.onSpawn()
 }

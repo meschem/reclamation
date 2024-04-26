@@ -1,6 +1,10 @@
 
 onDestroy()
 
+for (var i = 0; i < array_length(onDestroyList); i++) {
+	onDestroyList[i](id)
+}
+
 if (!killedByBounds) {
 	deathFx()
 
@@ -8,7 +12,11 @@ if (!killedByBounds) {
 		audio_play_sound(soundOnDeath, 1, false)
 	}
 
+	/// FIXME: Hack
 	obj_player.xp += xp
+	obj_player.addUltimateCharge(25)
+	
+	//obj_player.ultimateCharge = min(obj_player.ultimateCharge + (xp * 1), obj_player.ultimateChargeMax)
 
 	check_for_level_up()
 

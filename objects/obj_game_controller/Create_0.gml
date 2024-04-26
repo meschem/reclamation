@@ -1,6 +1,7 @@
 /// @description Init
 
 gameFrame = 0
+debugMode = true
 
 /// FIXME DEBUG
 
@@ -99,6 +100,4 @@ window_set_cursor(cr_none)
 
 cursor_sprite = spr_cursor_aiming
 
-//process_all_talents()
-
-var player = spawn_player()
+spawn_player()

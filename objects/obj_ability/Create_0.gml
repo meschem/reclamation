@@ -19,6 +19,7 @@ active = false
 curCharges = 1
 maxCharges = 1
 owner = obj_player
+ultimate = false
 
 age = 0
 
@@ -63,6 +64,9 @@ canActivate = function() {
 		
 	if (activationCdCur > 0)
 		return false
+		
+	if (ultimate && !owner.canUseUltimate())
+		return false
 	
 	return true
 }
@@ -76,6 +80,10 @@ activate = function() {
 
 	curCharges--
 	
+	if (ultimate) {
+		owner.ultimateCharge = 0
+	}
+	
 	use()
 }
 
@@ -88,9 +96,9 @@ use = function() {
 }
 
 applyStats = function () {
-	for (var i = 0; i < array_length(stats); i++) {
-		variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
-	}
+	//for (var i = 0; i < array_length(stats); i++) {
+	//	variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
+	//}
 }
 
 levelUp = function () {
@@ -102,20 +110,25 @@ levelUp = function () {
 	iconY = 42
 	
 	if (active) {
-		obj_player.activeAbilities[treeLevel - 1] = id
+		owner.activeAbilities[treeLevel - 1] = id
 	}
 	
-	if (onHitAbility && level == 1) {
-		array_push(obj_player.onHitAbilities, id)
-		//obj_player.onHitAbilities[array_length(obj_player.onHitAbilities)] = id
-	}
+	if (level == 1) {
+		if (onHitAbility) {
+			array_push(owner.onHitAbilities, id)
+			//obj_player.onHitAbilities[array_length(obj_player.onHitAbilities)] = id
+		}
 	
-	if (onStrikeAbility && level == 1) {
-		array_push(obj_player.onStrikeAbilities, id)
-		//obj_player.onStrikeAbilities[array_length(obj_player.onStrikeAbilities)] = id
-	}
+		if (onStrikeAbility) {
+			array_push(owner.onStrikeAbilities, id)
+			//obj_player.onStrikeAbilities[array_length(obj_player.onStrikeAbilities)] = id
+		}
 	
-	applyStats()
+		if (ultimate) {
+			owner.hasUltimate = true
+			obj_ui_controller.drawUltimateBar = true
+		}
+	}
 	
 	onLevel()
 }

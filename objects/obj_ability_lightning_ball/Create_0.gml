@@ -12,6 +12,7 @@ selectionIcon = spr_abil_select_icon_ball_lit
 maxCharges = 1
 active = true
 
+autoCast = true
 canAutoCast = true
 
 curCd = 0

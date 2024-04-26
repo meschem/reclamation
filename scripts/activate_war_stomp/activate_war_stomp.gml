@@ -5,11 +5,19 @@ function activate_war_stomp(level) {
 	with (obj_player) {
 		var target, inst, pushAngle
 		var enemies = ds_list_create()
+		var _owner = id
+		var _abilityObj = noone
+		
+		with (obj_ability_war_stomp) {
+			if (owner == _owner) {
+				_abilityObj = id
+			}
+		}		
 
-		var radius = obj_ability_war_stomp.baseRadius
-		var amount = obj_ability_war_stomp.baseDamage
-		var pushDistance = obj_ability_war_stomp.runes[enumRunes.voldan].enabled ? 10 : 0
-		var stunLength = obj_ability_war_stomp.stunLength
+		var radius = _abilityObj.baseRadius[_abilityObj.level - 1]
+		var amount = _abilityObj.baseDamage[_abilityObj.level - 1]
+		var pushDistance = _abilityObj.runes[enumRunes.voldan].enabled ? 10 : 0
+		var stunLength = _abilityObj.stunLength[_abilityObj.level - 1]
 
 		var count = collision_circle_list(
 			x,
@@ -29,10 +37,10 @@ function activate_war_stomp(level) {
 		
 		obj_camera_controller.applyShake()
 		
-		audio_play_sound(snd_thunder_slam, 0, false)
+		audio_play_sound(snd_thunder_slam, 0, false, 0.6)
 
 		if (count > 0) {
-			if (obj_ability_war_stomp.runes[enumRunes.dreygoth].enabled) {
+			if (_abilityObj.runes[enumRunes.dreygoth].enabled) {
 				var dmgScalePerEnemy = 0.10
 				var maxEnemyCount = 10
 				var bonusDamage = amount * min(count, maxEnemyCount) * dmgScalePerEnemy
@@ -55,7 +63,7 @@ function activate_war_stomp(level) {
 			}
 		}
 		
-		if (obj_ability_war_stomp.runes[enumRunes.magdela].enabled) {
+		if (_abilityObj.runes[enumRunes.magdela].enabled) {
 			instance_create_depth(
 				obj_player.x,
 				obj_player.y,

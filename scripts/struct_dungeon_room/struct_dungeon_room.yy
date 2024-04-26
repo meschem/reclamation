@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"struct_dungeon_room",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"struct_dungeon_room",
+  "parent":{
+    "name":"structs",
+    "path":"folders/Scripts/general/structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

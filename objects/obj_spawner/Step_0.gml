@@ -4,7 +4,13 @@ if (game_is_paused())
 	
 if (age > spawnStartFrame && age % spawnPeriod == 0) {
 	var spawns, i, j
-	var _spawnCount = spawnCount * obj_run_controller.getBaddieScaling(baddieScalars.spawnCount)
+	var _spawnCount = spawnCount // * get_baddie_scaling(baddieScalars.spawnCount)
+	
+	if (!bossSpawn && !eliteSpawn && !singleSpawn) {
+		_spawnCount *= get_baddie_scaling(baddieScalars.spawnCount)
+	}
+	
+	active = true
 
 	for (i = 0; i < _spawnCount; i++) {
 		

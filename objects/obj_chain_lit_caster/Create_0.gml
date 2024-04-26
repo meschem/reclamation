@@ -5,7 +5,7 @@ target = noone
 lastTargetLocation = new vec2(x, y)
 
 damage = 10
-damageBounceModifier = 0.8
+damageBounceModifier = 0.9
 
 bounces = 3
 

@@ -3,7 +3,7 @@
 */
 
 // Inherit the parent event
-event_inherited();
+event_inherited()
 
 name = "War Stomp"
 description = "Stuns and damages an area around Jonah"
@@ -17,22 +17,25 @@ treeLevel = 1
 autoCast = true
 canAutoCast = true
 
-baseDamage = 10
-baseRadius = 5
-stunLength = 2
+baseDamage = [10, 15, 30, 40, 50]
+baseRadius = [70, 100, 100, 100, 130]
+stunLength = [2, 3, 4, 4, 5]
 
 stats = [
 	new abilityStat(
-		"Damage", "baseDamage", 
-		[10, 14, 18, 22, 30]
+		"Damage",
+		"baseDamage",
+		baseDamage
 	),
 	new abilityStat(
-		"Radius", "baseRadius", 
-		[70, 80, 80, 80, 90]
+		"Radius",
+		"baseRadius",
+		baseRadius
 	),
 	new abilityStat(
-		"Stun Length", "stunLength", 
-		[2, 2, 3, 3, 4]
+		"Stun Length",
+		"stunLength",
+		stunLength
 	)
 ]
 
@@ -45,4 +48,5 @@ use = function() {
 	owner.image_index = 0
 	
 	//animAbilityQueue = activate_war_stomp(level)
+	//ability is activated on the stomp animation for sprSlam
 }

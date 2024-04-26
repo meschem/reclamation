@@ -1,10 +1,10 @@
 ///@description							Creates an ability upgrade button
-///@param {id.Instance} abilTree		obj_ability_tree to pass
+///@param {id.Instance} ability			obj_ability instance to use
 ///@param {id.Instance} menu			Menu to attach to
+///@param {id.Instance} player			Player to get abilities from
 
-function create_ability_up_button(abilTree, menu = noone) {	
-	var player = get_player_target()
-	var ability = abilTree.abilities[player.abilityTreeLevel - 1]
+function create_ability_up_button(ability, menu = noone, player = noone) {	
+	//var ability = abilTree.abilities[player.abilityTreeLevel - 1]
 	
 	with (ability) {
 		var button = instance_create_depth(0, 0, depths.ui, obj_card_ability_selection)

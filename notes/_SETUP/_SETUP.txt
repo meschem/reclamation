@@ -1,0 +1,16 @@
+obj_run_controller tracks the currentFloor and currentRoom,
+and simply references obj_dungeon to get that information. obj_dungeon
+shouldn't DO anything active once setup, it's mainly for storing info.
+	
+To start this Process:
+
+create_dungeon(biome) creates an actual dungeon.
+	* This creates an instance of a dungeon
+	* This creates all the floors AND the rooms for those floors
+	* Floors are simply a collection of rooms, but dungeonRoom structs are more complex
+	* These structs effectively decide how things will be spawned
+	
+obj_run_controller does most of the heavy lifting, including using its
+loadRoom(dungeonRoom) method to load a room. Once the room is loaded,
+the obj_run_controller will setup the the spawners for the current room,
+based off of information in the obj_dungeon.
