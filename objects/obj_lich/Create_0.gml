@@ -2,8 +2,8 @@
 
 event_inherited();
 
-xp = 200
-hpMax = 200
+xp = 250
+hpMax = 500
 hp = hpMax
 
 moveAccel = 0.08

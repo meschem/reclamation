@@ -33,6 +33,7 @@ enum roomRewards {
 dungeonRoomObj = obj_dungeon_room
 
 baseDifficultyLevel = 1
+difficultyIncrement = 1
 
 biome = dungeonBiomes.castle
 floorCount = 5					// Defines length of run, not the amount of rooms that exist
@@ -49,7 +50,7 @@ build = function () {
 	biomeInst = create_biome(biome)
 
 	for (var i = 0; i < floorCount; i++) {
-		createFloor(i, baseDifficultyLevel + i)
+		createFloor(i, baseDifficultyLevel + (i * difficultyIncrement))
 	}
 	
 	obj_run_controller.dungeon = id
@@ -66,7 +67,7 @@ createFloor = function(_index, _difficulty = 1) {
 	if (_index == 0) {
 		// IF FIRST FLOOR:
 		
-		_room = createRoom(roomTypes.normal, _difficulty)
+		_room = createRoom(roomTypes.intro, _difficulty)
 		_floor.addRoom(_room)
 	} else if (_index == floorCount - 1) {
 		// IF LAST FLOOR:
@@ -104,39 +105,121 @@ createFloor = function(_index, _difficulty = 1) {
 ///@param {real} _difficulty
 ///@return {struct.dungeonRoom}
 createRoom = function(_roomType, _difficulty) {
-	var _room = new dungeonRoom(biomeInst.getRoomAsset())
-
-	_room.roomType = _roomType
-	_room.reward = getRandomRoomReward()
+	var _spawns = {
+		pest: biomeInst.getSpawnFromTier(baddieTiers.pest, _difficulty),
+		small: biomeInst.getSpawnFromTier(baddieTiers.small, _difficulty),
+		medium: biomeInst.getSpawnFromTier(baddieTiers.medium, _difficulty),
+		large: biomeInst.getSpawnFromTier(baddieTiers.large, _difficulty),
+		veryLarge: biomeInst.getSpawnFromTier(baddieTiers.very_large, _difficulty),
+		boss: biomeInst.getSpawnFromTier(baddieTiers.boss, _difficulty)
+	}
 	
-	if (_roomType == roomTypes.horde) {
-		_room.baseSpawn = biomeInst.getSpawnFromTier(baddieTiers.pest, _difficulty)
+	var _room
+	
+	switch (_roomType) {
+		case roomTypes.intro:
+			_room = biomeInst.createRoom(
+				roomSizes.small,
+				_difficulty,
+				{
+					base: _spawns.small
+				}
+			)
+		break
 		
-		if (_difficulty > 1) {
-			_room.toughSpawn = biomeInst.getSpawnFromTier(baddieTiers.small, _difficulty)
-		}
-	} else if (_roomType == roomTypes.heavy) { 
-		_room.toughSpawn = biomeInst.getSpawnFromTier(baddieTiers.medium, _difficulty)
-		_room.toughSpawn.spawnCountMultiplier *= 2 
-	} else {
-		_room.baseSpawn = biomeInst.getSpawnFromTier(baddieTiers.small, _difficulty)
-	
-		if (_difficulty > 1) {
-			_room.toughSpawn = biomeInst.getSpawnFromTier(baddieTiers.medium, _difficulty)
-		}
+		case roomTypes.normal:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.medium,
+					roomSizes.large
+				],
+				_difficulty,
+				{
+					base: _spawns.small,
+					tough: _spawns.medium,
+				}
+			)			
+		break
+		
+		case roomTypes.horde:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.large,
+					roomSizes.very_large,
+					roomSizes.massive
+				],
+				_difficulty, 
+				{
+					base: _spawns.pest,
+					tough: _spawns.medium,
+				}
+			)			
+		break
+		
+		case roomTypes.heavy:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.medium,
+					roomSizes.large
+				],
+				_difficulty,
+				{
+					base: _spawns.medium,
+					tough: _spawns.large
+				}
+			)
+			
+			//_room.baseSpawn.spawnCountMultiplier *= 0.3
+			//_room.toughSpawn.spawnCountMultiplier *= 0.3
+		break
+		
+		case roomTypes.brutal:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.medium,
+					roomSizes.large,
+					roomSizes.very_large,
+				],
+				_difficulty,
+				{
+					base: _spawns.base,
+					tough: _spawns.medium,
+					brutal: _spawns.large,
+				}
+			)
+		break
+		
+		case roomTypes.elite:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.medium,
+					roomSizes.large,
+					roomSizes.very_large,
+				],
+				_difficulty,
+				{
+					base: _spawns.base,
+					tough: _spawns.medium,
+					elite: _spawns.large,
+				}
+			)
+		break
+		
+		case roomTypes.boss:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.large,
+					roomSizes.very_large,
+				],
+				_difficulty,
+				{
+					base: _spawns.small,
+					tough: _spawns.medium,
+					boss: _spawns.boss,
+				}
+			)
+		break
 	}
-	
-	// THESE ROOM TYPES ADD ON TO A NORMAL SPAWN SETUP
-	if (_roomType == roomTypes.brutal) {
-		_room.brutalSpawn = biomeInst.getSpawnFromTier(baddieTiers.large, _difficulty)
-	} else if (_roomType == roomTypes.elite) {
-		_room.eliteSpawn = biomeInst.getSpawnFromTier(baddieTiers.very_large, _difficulty)
-	} else if (_roomType == roomTypes.boss) {
-		_room.bossSpawn = biomeInst.getSpawnFromTier(baddieTiers.boss, _difficulty)
-	}
-	
-	
-	//array_push(floors[_tier], _room)
 	
 	return _room
 }

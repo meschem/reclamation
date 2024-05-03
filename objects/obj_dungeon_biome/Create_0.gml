@@ -40,7 +40,33 @@ persistent = true
 
 baddieList = []
 roomList = []
-spawnList = []		
+spawnList = []
+
+///@description								Creates a room for the biome
+///@param {array<Real>} _sizes				Uses enum roomSizes
+///@param {real} _difficulty				Difficulty level
+///@param {struct.biomeSpawnList} _spawns	Spawns to reference for use
+createRoom = function(_sizes, _difficulty, _spawns) {
+	var _room = new dungeonRoom(getRoomAsset(_sizes), _difficulty)
+
+	if (variable_struct_exists(_spawns, "base")) {
+		_room.baseSpawn = _spawns.base
+	}
+	if (variable_struct_exists(_spawns, "tough")) {
+		_room.toughSpawn = _spawns.tough
+	}
+	if (variable_struct_exists(_spawns, "brutal")) {
+		_room.brutalSpawn = _spawns.brutal
+	}
+	if (variable_struct_exists(_spawns, "elite")) {
+		_room.eliteSpawn = _spawns.elite
+	}
+	if (variable_struct_exists(_spawns, "boss")) {
+		_room.bossSpawn = _spawns.boss
+	}
+
+	return _room	
+}
 
 ///@description								Gets a random room object
 ///@param {real | array<Real>} _sizes		Sizes to select from
@@ -53,7 +79,7 @@ getRoomAsset = function(_sizes = roomSizes.any) {
 			return _rooms[0].roomName
 		}	
 		
-		_sizes = _sizes[_sizes]
+		_sizes = [_sizes]
 	}
 	
 	for (var i = 0; i < array_length(_rooms); i++) {
@@ -125,11 +151,14 @@ getSpawnFromTier = function(_tier, _difficulty = -1) {
 	}
 	
 	if (array_length(_spawns) == 0) {
-		show_message([
-			_tier,
-			_difficulty,
-		])
-		show_error("No spawns of type found", true)
+		return new biomeSpawn(obj_skeleton_summoned)
+		
+		//show_message([
+		//	"No spawns of type found",
+		//	get_baddie_tier_from_enum(_tier),
+		//	_difficulty,
+		//])
+		//show_error("No spawns of type found", true)
 		
 	}
 	
@@ -230,6 +259,8 @@ function biomeSpawn(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spaw
 	tier = _tier
 	spawnCountMultiplier = _spawnCountMultiplier
 	active = true
+	difficultyMin = variable_struct_exists(_props, "difficultyMin") ? _props.difficultyMin : 1
+	difficultyMax = variable_struct_exists(_props, "difficultyMax") ? _props.difficultyMax : 99
 	spawnType = _spawnType
 	props = _props
 	
@@ -245,18 +276,28 @@ function biomeSpawn(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spaw
 		// Default to true and check for rule breaks
 		var _isValid = true
 		
-		if (variable_struct_exists(props, "difficultyMin") && _difficulty < props.difficultyMin) {
-			//show_message("validation failed")
+		if (_difficulty < difficultyMin) {
 			_isValid = false
-		} else {
-			//show_message(_difficulty)
-			//show_message(props)
 		}
 		
-		if (variable_struct_exists(props, "difficultyMax") && _difficulty > props.difficultyMax) {
+		if (_difficulty > difficultyMax) {
 			_isValid = false
 		}
 		
 		return _isValid
 	}
+}
+
+///@description								List of biome spawns that covers each type
+///@param {struct.biomeSpawn} _base			Base spawn
+///@param {struct.biomeSpawn} _tough		Tough spawn
+///@param {struct.biomeSpawn} _brutal		Brutal spawn
+///@param {struct.biomeSpawn} _elite		Elite spawn
+///@param {struct.biomeSpawn} _boss			Boss spawn
+function biomeSpawnList(_base, _tough, _brutal, _elite, _boss) constructor {
+	base = _base
+	tough = _tough
+	brutal = _brutal
+	elite = _elite
+	boss = _boss
 }

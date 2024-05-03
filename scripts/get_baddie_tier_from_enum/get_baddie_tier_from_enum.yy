@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_baddie_tier_from_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_baddie_tier_from_enum",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

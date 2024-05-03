@@ -14,9 +14,20 @@ addBaddie(obj_skeleton, baddieTiers.small)
 addBaddieStruct({
 	baddie: obj_slime_green,
 	spawnTier: baddieTiers.small,
+	spawnCountMultiplier: 0.5,
 	props: {
 		difficultyMin: 2
 	}	
+})
+
+addBaddieStruct({
+	baddie: obj_zombie,
+	spawnTier: baddieTiers.small,
+	spawnCountMultiplier: 0.75,
+	props: {
+		difficultyMin: 3
+	}
+	
 })
 
 addBaddieStruct({
@@ -30,8 +41,9 @@ addBaddieStruct({
 addBaddieStruct({
 	baddie: obj_wraith,
 	spawnTier: baddieTiers.medium,
+	spawnCountMultiplier: 0.5,
 	props: {
-		difficultyMin: 2
+		difficultyMin: 3
 	}
 })
 

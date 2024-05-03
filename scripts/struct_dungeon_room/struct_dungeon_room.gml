@@ -12,17 +12,19 @@ function struct_dungeon_room() {}
 ///										The enemies are set after the room is created
 ///@description							Room in a dungeon
 ///@param {asset.GMRoom} _roomId		Room to use
-///@param {real} _difficulty			Level of difficulty for the room
-///@param {real} _spawnScript			Script to use instead of procedural spawn setup
-function dungeonRoom(_roomId, _difficulty = 1, _spawnScript = -1) constructor {
+///@param {real} _difficulty			Level of difficulty for the room (1)
+///@param {real} _phases				Number of phases (1)
+///@param {real} _spawnScript			Script to use instead of procedural spawn setup (-1)
+function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) constructor {
 	roomId = _roomId
 	
 	difficulty = _difficulty
 	
-	phases = 1
+	phases = _phases
 	roomType = roomTypes.normal
 	reward = roomRewards.trinket
 	
+	// structs here are { active: <bool>, baddie: <obj_baddie> }
 	baseSpawn = {active: false}
 	toughSpawn = {active: false}
 	brutalSpawn = {active: false} 
@@ -40,7 +42,7 @@ function dungeonRoom(_roomId, _difficulty = 1, _spawnScript = -1) constructor {
 		}
 		
 		for (var i = 0; i < phases; i++) {
-			if (baseSpawn.active) {
+			if (baseSpawn.active) {				
 				setup_spawn(
 					baseSpawn.baddie,
 					baseSpawn.spawnCountMultiplier * spawnSizeBase * _countScalar,
