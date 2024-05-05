@@ -151,7 +151,7 @@ getSpawnFromTier = function(_tier, _difficulty = -1) {
 	}
 	
 	if (array_length(_spawns) == 0) {
-		return new biomeSpawn(obj_skeleton_summoned)
+		return new biomeSpawn(obj_skeleton_summoned, _tier)
 		
 		//show_message([
 		//	"No spawns of type found",
@@ -223,10 +223,13 @@ addBaddieStruct = function(_props) {
 	var _spawnType = variable_struct_exists(_props, "spawnType") ? _props.spawnType : spawnTypes.standard
 	var _properties = variable_struct_exists(_props, "props") ? _props.props : {}
 	
-	//var _spawnTier = _props.spawnTier ?? baddieTiers.small
-	//var _spawnMultipler = _props.spawnMultipler ?? 1
-	//var _spawnType = _props.spawnType ?? spawnTypes.standard
-	//var _properties = _props.props ?? {}
+	if (variable_struct_exists(_props, "difficultyMin")) {
+		_properties.difficultyMin = _props.difficultyMin
+	}
+	
+	if (variable_struct_exists(_props, "difficultyMax")) {
+		_properties.difficultyMax = _props.difficultyMax
+	}
 	
 	var _spawn = new biomeSpawn(
 		_props.baddie,

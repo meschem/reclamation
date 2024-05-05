@@ -6,13 +6,12 @@
 function move_until_free(
 	collisionSearchType = collisionSearchTypes.linear,
 	xSource = (room_width / 2),
-	ySource = (room_height / 2),
-	
+	ySource = (room_height / 2)
 ) {
-	var xTest, yTest
+	//var xTest, yTest
 	var sanity = 0
 	var pushAngle = point_direction(xSource, ySource, x, y)
-	var searchType = collisionSearchType
+	//var searchType = collisionSearchType
 	var pushDistance = 2
 	var pushAngleStep = 45
 	var baseX = x

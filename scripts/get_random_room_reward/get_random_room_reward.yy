@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_random_room_reward",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_random_room_reward",
+  "parent":{
+    "name":"biomes",
+    "path":"folders/Scripts/biomes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

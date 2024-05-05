@@ -5,7 +5,7 @@ function get_available_dungeon_rooms() {
 		return []
 	}
 	
-	var _nextFloor = get_current_floor_index() + 1
+	var _nextFloor = get_current_floor()
 	
 	if (_nextFloor >= array_length(obj_dungeon.floors)) {
 		create_toaster("Dungeon Complete")

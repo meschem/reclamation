@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"get_current_floor_index",
+  "%Name":"create_room_from_biome",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"get_current_floor_index",
+  "name":"create_room_from_biome",
   "parent":{
-    "name":"dungeons",
-    "path":"folders/Scripts/dungeons.yy",
+    "name":"biomes",
+    "path":"folders/Scripts/biomes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

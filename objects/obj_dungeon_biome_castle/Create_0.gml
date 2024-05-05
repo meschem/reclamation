@@ -15,52 +15,52 @@ addBaddieStruct({
 	baddie: obj_slime_green,
 	spawnTier: baddieTiers.small,
 	spawnCountMultiplier: 0.5,
-	props: {
+	//props: {
 		difficultyMin: 2
-	}	
+	//}	
 })
 
 addBaddieStruct({
 	baddie: obj_zombie,
 	spawnTier: baddieTiers.small,
 	spawnCountMultiplier: 0.75,
-	props: {
+	//props: {
 		difficultyMin: 3
-	}
+	//}
 	
 })
 
 addBaddieStruct({
 	baddie: obj_skeleton_warrior,
 	spawnTier: baddieTiers.medium,
-	props: {
+	//props: {
 		difficultyMin: 2
-	}
+	//}
 })
 
 addBaddieStruct({
 	baddie: obj_wraith,
 	spawnTier: baddieTiers.medium,
 	spawnCountMultiplier: 0.5,
-	props: {
+	//props: {
 		difficultyMin: 3
-	}
+	//}
 })
 
 addBaddieStruct({
 	baddie: obj_necromancer,
 	spawnTier: baddieTiers.large,
-	props: {
+	//props: {
 		difficultyMin: 2
-	}
+	//}
 })
 
 addBaddieStruct({
 	baddie: obj_banshee,
 	spawnTier: baddieTiers.very_large,
-	props: {
+	//props: {
 		difficultyMin: 2
-	}
+	//}
 })
 
 addBaddie(obj_greater_serpent_green, baddieTiers.boss)

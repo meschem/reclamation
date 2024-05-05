@@ -21,6 +21,9 @@ enum roomRewards {
 	weaponUpgrade,
 	abilityLevel,
 	fullHeal,
+	gold,
+	shop,
+	metaMoney
 }
 
 //#macro spawnSizeHorde 40
@@ -32,8 +35,9 @@ enum roomRewards {
 
 dungeonRoomObj = obj_dungeon_room
 
-baseDifficultyLevel = 1
+baseDifficulty = 1
 difficultyIncrement = 1
+difficultyArray = []			// Used if filled out
 
 biome = dungeonBiomes.castle
 floorCount = 5					// Defines length of run, not the amount of rooms that exist
@@ -50,7 +54,7 @@ build = function () {
 	biomeInst = create_biome(biome)
 
 	for (var i = 0; i < floorCount; i++) {
-		createFloor(i, baseDifficultyLevel + (i * difficultyIncrement))
+		createFloor(i, baseDifficulty + (i * difficultyIncrement))
 	}
 	
 	obj_run_controller.dungeon = id
@@ -104,7 +108,12 @@ createFloor = function(_index, _difficulty = 1) {
 ///@param {real} _roomType
 ///@param {real} _difficulty
 ///@return {struct.dungeonRoom}
-createRoom = function(_roomType, _difficulty) {
+createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
+	/*
+		1. Get a random spawn for each potential baddie slot (pest -> veryLarge / boss)
+		2. Calls the biome instance "createRoom" function to get a room
+		3. Returns that room to the "createFloor" function
+	*/
 	var _spawns = {
 		pest: biomeInst.getSpawnFromTier(baddieTiers.pest, _difficulty),
 		small: biomeInst.getSpawnFromTier(baddieTiers.small, _difficulty),
@@ -248,25 +257,3 @@ getRandomRoomType = function() {
 	return array_random(_types)
 }
 
-///@description					Gets a random reward type
-///@return {real}
-getRandomRoomReward = function() {
-	var _reward = [
-		roomRewards.trinket,
-		roomRewards.trinket,
-		roomRewards.trinket,
-		roomRewards.trinket,
-		roomRewards.trinket,
-		
-		roomRewards.abilityLevel,
-		roomRewards.abilityLevel,
-		
-		roomRewards.fullHeal,
-		roomRewards.fullHeal,
-		roomRewards.fullHeal,
-		
-		roomRewards.weaponUpgrade,
-	]
-	
-	return array_random(_reward)
-}

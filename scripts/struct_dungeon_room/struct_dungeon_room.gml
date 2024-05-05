@@ -1,7 +1,7 @@
 function struct_dungeon_room() {}
 
 #macro spawnSizeHorde 40
-#macro spawnSizeBase 10
+#macro spawnSizeBase 12
 #macro spawnSizeTough 4
 #macro spawnSizeBrutal 2
 
@@ -28,7 +28,6 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 	baseSpawn = {active: false}
 	toughSpawn = {active: false}
 	brutalSpawn = {active: false} 
-
 	eliteSpawn = {active: false}
 	bossSpawn = {active: false}
 
