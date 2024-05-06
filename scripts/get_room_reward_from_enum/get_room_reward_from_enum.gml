@@ -14,5 +14,23 @@ function get_room_reward_from_enum(_reward) {
 			
 		case roomRewards.weaponUpgrade:
 			return "Weapon Upgrade"
+		
+		case roomRewards.gold:
+			return "Gold"
+			
+		case roomRewards.shop:
+			return "Shop"
+			
+		case roomRewards.trinketRare:
+			return "Rare Trinket"
+			
+		case roomRewards.none:
+			return "None"
+			
+		case roomRewards.metaMoney:
+			return "Meta Money"
+			
+		default:
+			return "UNKNOWN"
 	}
 }

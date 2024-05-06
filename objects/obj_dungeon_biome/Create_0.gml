@@ -6,8 +6,9 @@ enum roomSizes {
 	small,
 	medium,
 	large,
-	very_large,
-	massive
+	veryLarge,
+	massive,
+	shop
 }
 
 enum baddieTiers {
@@ -15,7 +16,7 @@ enum baddieTiers {
 	small,
 	medium,
 	large,
-	very_large,
+	veryLarge,
 	boss
 }
 
@@ -23,7 +24,7 @@ enum spawnTiers {
 	small,
 	medium,
 	large,
-	very_large,
+	veryLarge,
 	boss
 }
 
@@ -41,6 +42,7 @@ persistent = true
 baddieList = []
 roomList = []
 spawnList = []
+floorStructure = []				// predefined setup for room types and rewards
 
 ///@description								Creates a room for the biome
 ///@param {array<Real>} _sizes				Uses enum roomSizes
@@ -48,6 +50,10 @@ spawnList = []
 ///@param {struct.biomeSpawnList} _spawns	Spawns to reference for use
 createRoom = function(_sizes, _difficulty, _spawns) {
 	var _room = new dungeonRoom(getRoomAsset(_sizes), _difficulty)
+	
+	//if (_sizes[0] == roomSizes.shop) {
+	//	_room.roomType = roomTypes.shop
+	//}
 
 	if (variable_struct_exists(_spawns, "base")) {
 		_room.baseSpawn = _spawns.base

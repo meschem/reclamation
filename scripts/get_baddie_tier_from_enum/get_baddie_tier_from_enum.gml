@@ -17,7 +17,7 @@ function get_baddie_tier_from_enum(_tier) {
 		case baddieTiers.small:
 			return "Small"
 			
-		case baddieTiers.very_large:
+		case baddieTiers.veryLarge:
 			return "Very Large"
 			
 		default:

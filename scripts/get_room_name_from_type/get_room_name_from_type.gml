@@ -24,6 +24,9 @@ function get_room_name_from_type(_type) {
 		case roomTypes.heavy:
 			return "Heavy"
 			
+		case roomTypes.shop:
+			return "Shop"
+		
 		default:
 			return "Undefined"
 	}

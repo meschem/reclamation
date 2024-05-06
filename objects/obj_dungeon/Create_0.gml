@@ -6,6 +6,7 @@ enum dungeonBiomes {
 }
 
 enum roomTypes {
+	// combat
 	intro,			// easy rooms
 	normal,			// standard room
 	heavy,			// only spawns tough and above
@@ -14,16 +15,21 @@ enum roomTypes {
 	elite,			// includes an elite enemy
 	boss,			// boss room
 	custom,			// custom room, pre-defined
+	
+	// non-combat
+	shop,			// buy equipment with gold
 }
 
 enum roomRewards {
 	trinket,
+	trinketRare,
 	weaponUpgrade,
 	abilityLevel,
 	fullHeal,
 	gold,
 	shop,
-	metaMoney
+	metaMoney,
+	none
 }
 
 //#macro spawnSizeHorde 40
@@ -52,12 +58,39 @@ floors = []						// Each floor contains a collection of rooms
 ///								run manually after spawning the dungeon instance
 build = function () {
 	biomeInst = create_biome(biome)
-
-	for (var i = 0; i < floorCount; i++) {
-		createFloor(i, baseDifficulty + (i * difficultyIncrement))
+	
+	if (array_length(biomeInst.floorStructure) > 0) {
+		for (var i = 0; i < array_length(biomeInst.floorStructure); i++) {
+			createFloorFromConfig(i, i + 1)
+		}
+	} else {
+		for (var i = 0; i < floorCount; i++) {
+			//createFloor(i, baseDifficulty + (i * difficultyIncrement))
+			createFloor(i, i + 1)
+		}
 	}
 	
 	obj_run_controller.dungeon = id
+}
+
+///@description						Creates a dungeonFloor, which sets up individual rooms
+///@param {real} _index				Index of the floor
+///@param {real} _difficulty		Difficulty of the floor
+createFloorFromConfig = function(_index, _difficulty) {
+	var _room, _configs, _type, _reward
+	var _floor = new dungeonFloor()
+
+	_configs = obj_dungeon_biome.floorStructure[_index].roomConfigs
+		
+	for (var i = 0; i < array_length(_configs); i++) {
+		_type = array_random(_configs[i].types)
+		_reward = array_random(_configs[i].rewards)
+		
+		_room = createRoom(_type, _difficulty, _reward)
+		_floor.addRoom(_room)
+	}
+	
+	floors[_index] = _floor
 }
 
 ///@description				Creates a dungeonFloor, which sets up individual rooms
@@ -119,7 +152,7 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 		small: biomeInst.getSpawnFromTier(baddieTiers.small, _difficulty),
 		medium: biomeInst.getSpawnFromTier(baddieTiers.medium, _difficulty),
 		large: biomeInst.getSpawnFromTier(baddieTiers.large, _difficulty),
-		veryLarge: biomeInst.getSpawnFromTier(baddieTiers.very_large, _difficulty),
+		veryLarge: biomeInst.getSpawnFromTier(baddieTiers.veryLarge, _difficulty),
 		boss: biomeInst.getSpawnFromTier(baddieTiers.boss, _difficulty)
 	}
 	
@@ -154,7 +187,7 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 			_room = biomeInst.createRoom(
 				[
 					roomSizes.large,
-					roomSizes.very_large,
+					roomSizes.veryLarge,
 					roomSizes.massive
 				],
 				_difficulty, 
@@ -187,13 +220,13 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				[
 					roomSizes.medium,
 					roomSizes.large,
-					roomSizes.very_large,
+					roomSizes.veryLarge,
 				],
 				_difficulty,
 				{
-					base: _spawns.base,
+					base: _spawns.small,
 					tough: _spawns.medium,
-					brutal: _spawns.large,
+					brutal: _spawns.veryLarge,
 				}
 			)
 		break
@@ -203,11 +236,11 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				[
 					roomSizes.medium,
 					roomSizes.large,
-					roomSizes.very_large,
+					roomSizes.veryLarge,
 				],
 				_difficulty,
 				{
-					base: _spawns.base,
+					base: _spawns.small,
 					tough: _spawns.medium,
 					elite: _spawns.large,
 				}
@@ -218,7 +251,7 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 			_room = biomeInst.createRoom(
 				[
 					roomSizes.large,
-					roomSizes.very_large,
+					roomSizes.veryLarge,
 				],
 				_difficulty,
 				{
@@ -228,7 +261,27 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				}
 			)
 		break
+		
+		case roomTypes.shop:
+			_room = biomeInst.createRoom(
+				[
+					roomSizes.shop
+				],
+				_difficulty,
+				{}
+			)
+			
+			_room.roomType = roomTypes.shop
+		break
+		
+		default:
+			var _typeStr = get_room_name_from_type(_roomType)
+			
+			show_message("Room type not setup in obj_dungeon Create() function: " + _typeStr)
+		break
 	}
+	
+	_room.reward = _reward
 	
 	return _room
 }

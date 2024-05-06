@@ -14,52 +14,45 @@ if (keyboard_check_pressed(vk_f9)) {
 
 age++
 
+if (state == roomStates.init) {
+	if (category == roomCategories.combat) {
+		initCombat()
+	}
+	
+	if (category == roomCategories.shop) {
+		initShopping()
+	}
+	
+	if (category == roomCategories.stats) {
+		initStats()
+	}
+}
+
 if (state == roomStates.overtime) {
 	timeDisplay = ceil(max(0, frames_to_seconds(overtimeLength - overtimeAge)))
 } else {
 	timeDisplay = get_time_from_age(age)
 }
 
-if (room == rm_start_dev) {
-	return 0
-}
+//if (room == rm_start_dev) {
+//	return 0
+//}
 
+// Combat room transition to OVERTIME
 if (
+	category == roomCategories.combat &&
 	state != roomStates.overtime &&
 	instance_number(obj_ability_selection_menu) == 0 &&
 	instance_number(obj_baddie) == 0 &&
 	instance_number(obj_spawner) == 0
 ) {
-	// USE ROOM REWARD SELECTION HERE
-	display_level_trinket_prompt()
-
-	state = roomStates.overtime
+	completeCombat()
 }
 
 if (state == roomStates.overtime) {
 	overtimeAge++
 	
 	if (overtimeAge > overtimeLength) {
-		obj_run_controller.challengeLevel++
-		
-		if (finalLevel) {
-			restart_run()
-		} else {
-			with (obj_run_controller) {
-				currentFloor++
-				
-				if (currentFloor == dungeon.floorCount) {
-					restart_run()
-				}
-				
-				var success = display_room_select_prompt()
-				
-				if (!success) {
-					room_goto(rm_dungeon_end)
-				}
-				
-				//loadRoom(dungeon.floors[currentFloor].rooms[0])
-			}
-		}
+		completeOvertime()
 	}
 }

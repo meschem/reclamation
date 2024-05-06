@@ -3,14 +3,25 @@
 // window_set_fullscreen(true)
 
 enum roomStates {
+	init,
 	playing,
+	shopping,
+	statsMenu,
 	pauseMenu,
 	upgradeMenu,
 	overtime,
-	completed
+	completed,
 }
 
-state = roomStates.playing
+enum roomCategories {
+	combat,
+	shop,
+	stats
+}
+
+category = roomCategories.combat
+
+state = roomStates.init
 
 age = 0
 
@@ -39,4 +50,54 @@ if (instance_number(obj_dungeon) > 0) {
 	//} else {
 	//	nextLevel = obj_dungeon.floors[obj_run_controller.currentFloor + 1].rooms[0].roomId
 	//}
+}
+
+initStats = function() {
+	state = roomStates.statsMenu
+}
+
+initCombat = function() {
+	state = roomStates.playing
+}
+
+completeCombat = function() {
+	display_level_trinket_prompt()
+
+	initOvertime()
+}
+
+initShopping = function() {
+	state = roomStates.shopping
+}
+
+completeShopping = function() {
+	initOvertime()
+}
+
+initOvertime = function() {
+	state = roomStates.overtime
+}
+
+completeOvertime = function() {
+	obj_run_controller.challengeLevel++
+		
+	if (finalLevel) {
+		restart_run()
+	} else {
+		with (obj_run_controller) {
+			currentFloor++
+				
+			if (currentFloor == dungeon.floorCount) {
+				restart_run()
+			}
+				
+			var _success = display_room_select_prompt()
+				
+			if (!_success) {
+				room_goto(rm_dungeon_end)
+			}
+				
+			//loadRoom(dungeon.floors[currentFloor].rooms[0])
+		}
+	}	
 }

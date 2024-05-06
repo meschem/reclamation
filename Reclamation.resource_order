@@ -420,6 +420,7 @@
     {"name":"get_color","order":7,"path":"scripts/get_color/get_color.yy",},
     {"name":"get_controller_movement","order":1,"path":"scripts/get_controller_movement/get_controller_movement.yy",},
     {"name":"get_cooldown_from_inverse_scalar","order":14,"path":"scripts/get_cooldown_from_inverse_scalar/get_cooldown_from_inverse_scalar.yy",},
+    {"name":"get_current_dungeon_room","order":8,"path":"scripts/get_current_dungeon_room/get_current_dungeon_room.yy",},
     {"name":"get_current_floor","order":4,"path":"scripts/get_current_floor/get_current_floor.yy",},
     {"name":"get_current_frame","order":4,"path":"scripts/get_current_frame/get_current_frame.yy",},
     {"name":"get_image_index","order":9,"path":"scripts/get_image_index/get_image_index.yy",},

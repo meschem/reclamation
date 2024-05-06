@@ -1,5 +1,6 @@
 ///@description							Creates a dungeon biome instance based on type
 ///@param {real} _dungeonBiomeEnum		Type of biome to create. Uses ENUM dungeonBiomes.
+///@return {id.Instance}
 function create_biome(_dungeonBiomeEnum) {
 	var _inst = noone
 	

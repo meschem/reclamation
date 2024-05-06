@@ -565,6 +565,7 @@
     {"id":{"name":"get_color","path":"scripts/get_color/get_color.yy",},},
     {"id":{"name":"get_controller_movement","path":"scripts/get_controller_movement/get_controller_movement.yy",},},
     {"id":{"name":"get_cooldown_from_inverse_scalar","path":"scripts/get_cooldown_from_inverse_scalar/get_cooldown_from_inverse_scalar.yy",},},
+    {"id":{"name":"get_current_dungeon_room","path":"scripts/get_current_dungeon_room/get_current_dungeon_room.yy",},},
     {"id":{"name":"get_current_floor","path":"scripts/get_current_floor/get_current_floor.yy",},},
     {"id":{"name":"get_current_frame","path":"scripts/get_current_frame/get_current_frame.yy",},},
     {"id":{"name":"get_image_index","path":"scripts/get_image_index/get_image_index.yy",},},
