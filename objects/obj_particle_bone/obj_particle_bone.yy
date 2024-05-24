@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_simple_bone_c",
-    "path":"sprites/spr_simple_bone_c/spr_simple_bone_c.yy",
+    "name":"spr_bones_purple",
+    "path":"sprites/spr_bones_purple/spr_bones_purple.yy",
   },
   "spriteMaskId":null,
   "visible":true,

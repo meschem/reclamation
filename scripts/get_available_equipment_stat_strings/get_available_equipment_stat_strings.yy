@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_available_equipment_stat_strings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_available_equipment_stat_strings",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

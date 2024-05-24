@@ -1,10 +1,10 @@
 ///@description   Description
 function player_movement_input() {
-	if (isCharging) {
+	if (state == playerStates.charging) {
 		chargeCurrentFrame++
 	
 		if (chargeCurrentFrame >= chargeMaxLength) {
-			isCharging = false
+			state = playerStates.idle
 		} else {
 			var chargeSpeed = obj_ability_charge.chargeSpeed
 		

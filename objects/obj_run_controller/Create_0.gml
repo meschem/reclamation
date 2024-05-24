@@ -30,16 +30,17 @@ enemyScalingSpawnCount = 1
 enemyScalingSpawnCountTable = [
 	0.4,
 	0.7,
+	0.8,
 	1,
-	1.4,
-	2,
+	1.2,
+	1.3,
 	
 
-	2.2,
-	2.4,
-	2.6,
-	2.8,
-	3
+	1.4,
+	1.5,
+	1.6,
+	1.7,
+	1.8
 ]
 
 enemyScalingCdMax = seconds_to_frames(60)

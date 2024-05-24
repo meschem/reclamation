@@ -33,7 +33,7 @@ if (target == noone) {
 	
 array_push(hitList, target)
 
-damage_baddie(target, damage, false)
+damage_baddie(target, damage, false, 2, 0.5)
 		
 create_chain_lightning_fx(spawnPoint, new vec2(target.x, target.y))
 

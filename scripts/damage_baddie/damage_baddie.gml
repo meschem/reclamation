@@ -5,7 +5,7 @@
 ///@param {real} critMultiplier		Base crit multiplier from damage source
 ///@return {bool}					Returns whether or not the target is killed
 
-function damage_baddie(target, amount, isCrit = false, critMultiplier = 2) {
+function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force = 1) {
 	var attacker = get_player_target()
 	
 	amount *= attacker.bonusDamageScalar
@@ -20,7 +20,12 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2) {
 
 	// If show dmg numbers is on
 	if (true) {
-		var inst = instance_create_depth(target.x, target.y, depths.ui, obj_moving_text)
+		var inst = instance_create_depth(
+			target.x + irandom_range(-5, 5),
+			target.y + irandom_range(-5, 5),
+			depths.ui,
+			obj_moving_text
+		)
 		
 		//inst.yVel = -2
 		inst.xVel = random_range(-0.5, 0.5)
@@ -36,7 +41,8 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2) {
 	}
 
 	if (target.hp <= 0) {
-		//instance_destroy(target)
+		target.lastDamageForce = force
+		target.lastDamageAngle = point_direction(attacker.x, attacker.y, target.x, target.y)
 		return true
 	}
 	

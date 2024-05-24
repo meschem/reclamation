@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_equipment_var_by_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_equipment_var_by_enum",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"create_burst_particles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_burst_particles",
+  "parent":{
+    "name":"fx",
+    "path":"folders/Scripts/fx.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -139,6 +139,10 @@ function get_item_stat_type(_enumStat) {
 			_playerVar = _bonusVar
 			_statUnit = statUnits.percent
 		break
+		
+		default:
+			throw("Invalid enumItemStats unit")
+		break
 	}
 	
 	return {

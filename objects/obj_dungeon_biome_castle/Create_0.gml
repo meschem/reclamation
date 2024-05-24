@@ -26,6 +26,10 @@ function roomConfig(_roomTypes, _roomRewards) constructor {
 // FLOORS //
 // 1
 addFloorConfig([
+	//new roomConfig(
+	//	[roomTypes.shop],
+	//	[roomRewards.none]
+	//)dw
 	new roomConfig(
 		[roomTypes.intro],
 		[roomRewards.trinket]
@@ -118,17 +122,17 @@ addRoom(rm_combat_testing_c, roomSizes.large)
 addRoom(rm_combat_testing_d, roomSizes.tiny)
 addRoom(rm_combat_testing_e, roomSizes.medium)
 addRoom(rm_combat_testing_f, roomSizes.medium)
+addRoom(rm_shop_testing, roomSizes.shop)
 
 // BADDIES //
 addBaddie(obj_skully_fly, baddieTiers.pest, 10, spawnTypes.horde)
-
 addBaddie(obj_skeleton, baddieTiers.small)
 
 addBaddieStruct({
 	baddie: obj_slime_green,
 	spawnTier: baddieTiers.small,
 	spawnCountMultiplier: 0.5,
-	difficultyMin: 2
+	difficultyMin: 5
 })
 
 addBaddieStruct({

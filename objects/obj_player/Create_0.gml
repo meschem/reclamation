@@ -1,5 +1,11 @@
 ///@description Init
 
+enum playerStates {
+	idle,
+	walking,
+	charging
+}
+
 enum playerCharacters {
 	jonah
 }
@@ -74,7 +80,6 @@ moveAngle = 0
 moveSpeed = 0
 accelX = 0
 accelY = 0
-isCharging = false
 
 xVel = 0
 yVel = 0
@@ -132,7 +137,7 @@ sideArms = []
 
 chargeCurrentFrame = 0
 chargeMaxLength = 1
-isCharging = false
+//isCharging = false
 
 abilityTrees = []
 
@@ -144,6 +149,8 @@ trinkets = []
 controllerAimingCursorPos = new vec2()
 controllerAimingCursorOffset = 50
 uiDrawOffset = new vec2()
+
+state = playerStates.idle
 
 equipment = {
 	head: noone,
@@ -158,6 +165,14 @@ equipment = {
 }
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
+
+applyHeal = function(_amount) {
+	hp += _amount
+	
+	if (hp > maxHp) {
+		hp = maxHp
+	}
+}
 
 ///@description							Checks if a player has a trinket. Returns 0 if no trinket.
 ///@param {asset.GMObject} _trinket		Weapon to add of obj_weapon

@@ -127,6 +127,10 @@ isBoss = false
 outlineColor = c_black
 killedByBounds = false
 
+lastDamageAngle = 0
+lastDamageForce = 1
+deathParticles = []
+
 markedForCrit = false // Guarantees crit, removed when activated
 
 baddie_teleport_init()
@@ -140,4 +144,6 @@ onDestroyList = []	// List of functions executed on death
 beginStep = function() {}
 endStep = function() {}
 onDestroy = function() {}
-deathFx = function() {}
+deathFx = function() {
+	spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)
+}

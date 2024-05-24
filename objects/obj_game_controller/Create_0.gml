@@ -13,6 +13,8 @@ activeAbilityControllers = []
 
 init_run_globals()
 
+display_reset(8, true)
+
 //Create Controllers
 //create_instance(obj_trinket_controller)
 instance_create_depth(100, 0, depths.ui, obj_trinket_controller)

@@ -3,10 +3,13 @@ event_inherited()
 
 slot = equipmentSlots.gloves
 
-bonusAttackSpeed = [10, 20]
+//bonusAttackSpeed = [10, 20]
 
 maxLevel = 2
 
-name = "Leather Gloves"
-description = "Great for hiding fingerprints."
-cost = 350
+name = "Fire Raisers"
+description = "Chance to create fire pillars on kill."
+cost = 1200
+rarity = enumRarity.legendary
+
+addRandomStats()

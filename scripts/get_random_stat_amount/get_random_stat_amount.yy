@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_random_stat_amount",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_random_stat_amount",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

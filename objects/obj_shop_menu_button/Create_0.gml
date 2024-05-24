@@ -16,7 +16,7 @@ onClick = function () {
 	}
 	
 	if (player.gold < item.cost) {
-		show_message("Not enough money")
+		create_toaster("Insufficient Gold")
 	} else {
 		item.purchase(player)
 		player.equipItem(item)

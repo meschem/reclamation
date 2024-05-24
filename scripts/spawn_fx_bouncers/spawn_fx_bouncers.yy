@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"spawn_fx_bouncers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_fx_bouncers",
+  "parent":{
+    "name":"fx",
+    "path":"folders/Scripts/fx.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

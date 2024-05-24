@@ -20,10 +20,15 @@ drawSpace = function(amount = round(lineSpacing)) {
 	drawSpacing += amount
 }
 
+getYOffset = function() {
+	return (padding + (lineSpacing * drawLine) + drawSpacing)
+}
+
 ///@description				Draws a string on a line with an effective line return
 ///@param {string} str		str to draw
 drawTextLine = function(str, align = enumAligns.left) {
-	var yOffset = padding + (lineSpacing * drawLine) + drawSpacing
+	var yOffset = getYOffset()
+	//var yOffset = padding + (lineSpacing * drawLine) + drawSpacing
 	//draw_text(x + padding, y + yOffset, str)
 	
 	draw_text_ext(

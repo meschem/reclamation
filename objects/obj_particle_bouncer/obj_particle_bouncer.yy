@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_not_set",
+    "path":"sprites/spr_not_set/spr_not_set.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

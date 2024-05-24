@@ -15,6 +15,7 @@ buttonRowCount = 2
 buttonColumnCount = 3
 buttonSpacing = 60
 display = false
+merchant = noone
 
 buttonWidth = 60
 buttonHeight = 80
@@ -72,6 +73,10 @@ addShopButton = function(equipment) {
 	button.menu = id
 	button.depth = depth - 10
 	
+	if (equipment.owner != noone) {
+		button.state = buttonStates.disabled
+	}
+	
 	array_push(buttons, button)
 }
 
@@ -79,6 +84,10 @@ close = function() {
 	array_foreach(buttons, function(button) {
 		instance_destroy(button)
 	})
+	
+	if (merchant != noone) {
+		merchant.deactivate()
+	}
 	
 	instance_destroy(detailsPanel)
 	instance_destroy(playerGearPanel)

@@ -9,7 +9,8 @@ if (game_is_paused()) {
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
-	room_goto(nextLevel)
+	//room_goto(nextLevel)
+	completeOvertime()
 }
 
 age++

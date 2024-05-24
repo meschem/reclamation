@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"get_rarity_string",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_rarity_string",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

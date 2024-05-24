@@ -3,14 +3,16 @@ event_inherited()
 
 slot = equipmentSlots.boots
 
-bonusMoveSpeed = [0.1, 0.1]
+//bonusMoveSpeed = [0.1, 0.1]
 
 maxLevel = 2
 
 name = "Storm Stompers"
-description = "Creates slowing thunder stomps every 25m"
+description = "Creates thundering stomps."
 cost = 800
 rarity = enumRarity.rare
+
+addRandomStats()
 
 travelDistance = 0
 travelDistanceMax = 250

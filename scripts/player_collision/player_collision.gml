@@ -30,7 +30,7 @@ function player_collision() {
 		}
 	}	
 	
-	if (isCharging) {
+	if (state == playerStates.charging) {
 		var _target = noone
 
 		for (var i = 0; i < array_length(confirmedHitList); i++) {
@@ -45,7 +45,7 @@ function player_collision() {
 				if (keyboard_check(ord("R"))) {
 					_ability.collision(_target)
 				} else {
-					isCharging = false
+					state = playerStates.idle
 					_ability.finalCollision(_target)
 
 					//var xOffset = get_angle_xvel(moveAngle) * 6

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"process_room_reward",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_room_reward",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

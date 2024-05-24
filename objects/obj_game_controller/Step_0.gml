@@ -1,4 +1,4 @@
-/// @description Step
+	/// @description Step
 
 gameFrame++
 
@@ -56,7 +56,7 @@ if (keyboard_check_pressed(ord("Z"))) {
 
 if (keyboard_check_pressed(ord("X"))) {
 	spawn_baddie_at_location(
-		obj_poison_skeleton, mouse_x, mouse_y
+		obj_skully_fly, mouse_x, mouse_y
 	)
 }
 

@@ -16,7 +16,8 @@ enum roomStates {
 enum roomCategories {
 	combat,
 	shop,
-	stats
+	stats,
+	inactive,
 }
 
 category = roomCategories.combat
@@ -35,6 +36,7 @@ nextLevel = rm_start_dev
 
 create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
+create_instance(obj_particle_controller)
 
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false
@@ -42,32 +44,50 @@ finalLevel = false
 // ROOM SETUP
 // use obj_dungeon to create spawn phases
 
-if (instance_number(obj_dungeon) > 0) {
-	obj_run_controller.currentRoom.setupSpawner()
+//if (instance_number(obj_dungeon) > 0) {
+//	obj_run_controller.currentRoom.setupSpawner()
 	
 	//if (obj_run_controller.currentFloor == array_length(obj_dungeon.floors) - 1) {
 	//	finalLevel = true
 	//} else {
 	//	nextLevel = obj_dungeon.floors[obj_run_controller.currentFloor + 1].rooms[0].roomId
 	//}
-}
+//}
 
 initStats = function() {
 	state = roomStates.statsMenu
 }
 
 initCombat = function() {
+	create_toaster("Initiating Combat")
+	if (instance_number(obj_dungeon) > 0) {
+		create_toaster("Setting up Spawner")
+		obj_run_controller.currentRoom.setupSpawner()
+	
+		//if (obj_run_controller.currentFloor == array_length(obj_dungeon.floors) - 1) {
+		//	finalLevel = true
+		//} else {
+		//	nextLevel = obj_dungeon.floors[obj_run_controller.currentFloor + 1].rooms[0].roomId
+		//}
+	}
+
 	state = roomStates.playing
 }
 
 completeCombat = function() {
-	display_level_trinket_prompt()
+	var _reward = get_current_room_reward()
+	
+	process_room_reward(_reward)
 
 	initOvertime()
 }
 
 initShopping = function() {
 	state = roomStates.shopping
+	
+	with (obj_merchant_zone) {
+		addEquipment(get_current_difficulty_level())
+	}
 }
 
 completeShopping = function() {
@@ -80,10 +100,15 @@ initOvertime = function() {
 
 completeOvertime = function() {
 	obj_run_controller.challengeLevel++
+	obj_particle_controller.roomCleanup()
 		
 	if (finalLevel) {
 		restart_run()
 	} else {
+		with (obj_player) {
+			state = playerStates.idle
+		}
+		
 		with (obj_run_controller) {
 			currentFloor++
 				

@@ -14,7 +14,7 @@ player_movement_input()
 
 hitWall = player_walk_to_location(xVel, yVel)
 
-if (isCharging) {
+if (state == playerStates.charging) {
 	if (obj_ability_charge.runes[enumRunes.dreygoth].enabled) {
 		chargeShockFrames++
 		
@@ -29,7 +29,7 @@ if (isCharging) {
 	}
 	
 	if (hitWall) {
-		isCharging = false
+		state = playerStates.idle
 	
 		var xOffset = get_angle_xvel(moveAngle) * 6
 		var yOffset = get_angle_yvel(moveAngle) * 6
