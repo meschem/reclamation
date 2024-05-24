@@ -10,8 +10,8 @@
   "name":"obj_info_panel_item_details",
   "overriddenProperties":[],
   "parent":{
-    "name":"equipment",
-    "path":"folders/Objects/ui/equipment.yy",
+    "name":"shop",
+    "path":"folders/Objects/ui/shop.yy",
   },
   "parentObjectId":{
     "name":"obj_info_panel",

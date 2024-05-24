@@ -103,6 +103,7 @@ completeOvertime = function() {
 	obj_particle_controller.roomCleanup()
 		
 	if (finalLevel) {
+		show_message("restarting run finalLevel")
 		restart_run()
 	} else {
 		with (obj_player) {
@@ -113,6 +114,7 @@ completeOvertime = function() {
 			currentFloor++
 				
 			if (currentFloor == dungeon.floorCount) {
+				show_message("restarting run floorCount")
 				restart_run()
 			}
 				

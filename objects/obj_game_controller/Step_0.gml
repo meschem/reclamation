@@ -5,8 +5,9 @@ gameFrame++
 if (keyboard_check_pressed(vk_f2))
 	game_restart()
 
-if (keyboard_check_pressed(vk_f3))
+if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderr)) {
 	window_set_fullscreen(!window_get_fullscreen())
+}
 
 if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) {
 	if (instance_number(obj_big_selection_menu == 0)) {

@@ -26,9 +26,9 @@ if (!killedByBounds) {
 		delete loot[i]
 	}
 
-	var player = get_player_target()
+	var _player = get_player_target()
 
-	if (player.hp < player.maxHp) {
+	if (_player.hp < _player.maxHp) {
 		if (random(1) < 0.02) {
 			instance_create_depth(x, y, depths.enemy, obj_health_globe_sm)
 		}

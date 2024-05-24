@@ -101,6 +101,8 @@ createFloor = function(_index, _difficulty = 1) {
 	var _room
 	var _floor = new dungeonFloor()
 	
+	show_message("making floor")
+	
 	if (_index == 0) {
 		// IF FIRST FLOOR:
 		
@@ -282,6 +284,7 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 	}
 	
 	_room.reward = _reward
+	_room.roomType = _roomType
 	
 	return _room
 }

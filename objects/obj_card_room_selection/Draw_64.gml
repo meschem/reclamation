@@ -10,21 +10,21 @@ var prop = ""
 var val = ""
 var i = 0
 
-draw_text(
-	x + menuOffset.x + paddingX,
-	y + menuOffset.y + height - paddingY - (i * statSpacing),
-	"Type: "
-)
+//draw_text(
+//	x + menuOffset.x + paddingX,
+//	y + menuOffset.y + height - paddingY - (i * statSpacing),
+//	"Type: "
+//)
 
-draw_set_color(get_color(colors.red))
+//draw_set_color(get_color(colors.red))
 	
-draw_text(
-	x + menuOffset.x + paddingX + string_width("Type: "),
-	y + menuOffset.y + height - paddingY - (i * statSpacing),
-	get_room_name_from_type(dungeonRm.roomType)
-)
+//draw_text(
+//	x + menuOffset.x + paddingX + string_width("Type: "),
+//	y + menuOffset.y + height - paddingY - (i * statSpacing),
+//	get_room_name_from_type(dungeonRm.roomType)
+//)
 
-i++
+//i++
 
 draw_set_color(c_black)
 

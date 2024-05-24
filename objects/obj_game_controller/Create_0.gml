@@ -3,6 +3,10 @@
 gameFrame = 0
 debugMode = true
 
+global.masterGain = 1
+global.createDeathParticles = true
+global.createParticleFx = true
+
 /// FIXME DEBUG
 
 //audio_set_master_gain(0, 0)

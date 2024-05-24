@@ -2,23 +2,30 @@
 /// shouldn't cause expense issues since game is almost always
 /// paused during menus
 
+if (!focused) {
+	return 0
+}
+
 var buttonFocus = 0
 
 if (mouse_check_button_released(mb_left)) {
 	for (var i = 0; i < array_length(buttons); i++) {
 		if (mouse_is_over_button(buttons[i])) {
-			//activate_button(buttons[i])
-			//return 0
+			activate_button(buttons[i])
+			return 0
 		}
 	}
 }
 
 if (keyboard_check_released(vk_enter) || gamepad_button_check_released(0, gp_face1)) {
 	activate_button(buttons[selectedButtonIndex])
+	buttonPressed = false
 	return 0
 }
 
-if (keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1)) {
+if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
+	close()
+} else if (keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1)) {
 	buttonPressed = true
 } else {
 	if (keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0, gp_padd)) {
@@ -38,13 +45,11 @@ if (dynamicHeight) {
 	menuHeight += titleHeight
 
 	var buttonOffset = 0
-	var buttonHeight = 0
+	var buttonHeight = buttonMarginY
 
 	for (var i = 0; i < array_length(buttons); i++) {
-		buttonHeight = buttons[i].buttonHeight + buttonMarginY
-
-		menuHeight += buttonHeight
-
+		//buttonHeight = buttons[i].buttonHeight + buttonMarginY
+		
 		buttons[i].x = x + paddingX
 		buttons[i].y = y + paddingY + titleHeight + buttonOffset
 
@@ -53,10 +58,13 @@ if (dynamicHeight) {
 			
 		if (selectedButtonIndex == i) {
 			buttons[i].state = buttonPressed ? buttonStates.clicked : buttonStates.selected
+			buttons[i].clickedOn = get_current_frame()
 		} else {
 			buttons[i].state = buttonStates.normal
 		}
-
+		
+		buttonHeight = buttons[i].buttonHeight + buttonMarginY
+		menuHeight += buttonHeight
 		buttonOffset += buttonHeight
 	}
 	

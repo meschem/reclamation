@@ -144,6 +144,9 @@ onDestroyList = []	// List of functions executed on death
 beginStep = function() {}
 endStep = function() {}
 onDestroy = function() {}
+
 deathFx = function() {
-	spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)
+	if (global.createDeathParticles) {
+		spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)
+	}
 }

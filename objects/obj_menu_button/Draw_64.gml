@@ -1,3 +1,7 @@
+if (!display) {
+	return 0
+}
+
 draw_set_color(c_white)
 
 draw_sprite_ext(

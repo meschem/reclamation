@@ -12,6 +12,7 @@ function create_dungeon(_dungeonBiomeEnum, _totalRooms = 8, _difficulty = 1, _di
 	_dungeon.baseDifficulty = _difficulty
 	_dungeon.difficultyIncrement = _difficultyIncrement
 	_dungeon.totalRooms = _totalRooms
+	_dungeon.floorCount = _totalRooms
 	
 	_dungeon.build()
 	

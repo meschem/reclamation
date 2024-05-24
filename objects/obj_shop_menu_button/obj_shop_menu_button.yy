@@ -11,8 +11,8 @@
   "name":"obj_shop_menu_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"equipment",
-    "path":"folders/Objects/ui/equipment.yy",
+    "name":"shop",
+    "path":"folders/Objects/ui/shop.yy",
   },
   "parentObjectId":{
     "name":"obj_button",

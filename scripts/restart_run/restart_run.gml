@@ -3,7 +3,7 @@
 function restart_run() {
 	cleanupObjects = [
 		obj_game_controller,
-		obj_room_controller,
+		//obj_room_controller,
 		obj_run_controller,
 		obj_dungeon,
 		obj_player,

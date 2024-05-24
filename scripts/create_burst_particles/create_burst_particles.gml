@@ -1,5 +1,5 @@
-///@description   Description
-///@param {gmasset.GMParticleSystem} _part	Particle system to create
+///@description				Creates a burst of particles using the particle system
+///@param {any} _part		Particle system to create
 ///@param {real} _x
 ///@param {real} _y
 ///@param {real} _angle

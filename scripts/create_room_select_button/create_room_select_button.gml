@@ -13,6 +13,8 @@ function create_room_select_button(_room, _menu = noone) {
 			_button.parentMenu = _menu
 			_menu.buttons[array_length(_menu.buttons)] = _button
 			_button.depth = _menu.depth - 1
+			_button.titleText.body = get_room_name_from_type(_room.roomType) + " Room"
+			_button.bodyText.body = get_room_description_from_type(_room.roomType)
 		}
 	}
 }

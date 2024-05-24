@@ -50,9 +50,11 @@ onDeathFx = function() {
 }
 
 ///@param {id.Instance} target		Target being hit
-onCollideFx = function(target)
+onCollideFx = function(_target)
 {
-	create_burst_particles(pts_greataxe_impact, target.x, target.y, image_angle)
+	if (global.createParticleFx) {
+		create_burst_particles(pts_greataxe_impact, _target.x, _target.y, image_angle)
+	}
 	
 	var i = irandom(array_length(onHitSounds) - 1)
 	

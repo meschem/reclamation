@@ -11,8 +11,8 @@
   "name":"obj_shop_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"equipment",
-    "path":"folders/Objects/ui/equipment.yy",
+    "name":"shop",
+    "path":"folders/Objects/ui/shop.yy",
   },
   "parentObjectId":null,
   "persistent":false,

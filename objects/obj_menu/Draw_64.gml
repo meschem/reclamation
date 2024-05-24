@@ -1,6 +1,7 @@
 
-if (!display)
+if (!display) {
 	return 0
+}
 
 draw_sprite_ext(
 	sprite_index, 
@@ -11,7 +12,9 @@ draw_sprite_ext(
 	0, c_white, 1
 )
 
-draw_text(x + paddingX, y + paddingY, title)
+draw_set_font(font_pxlxxl_m)
+draw_set_color(c_white)
+draw_text(x + paddingX, y + paddingTop, title)
 
 /*
 for (var i = 0; i < array_length(buttons); i++) {
@@ -22,4 +25,3 @@ for (var i = 0; i < array_length(buttons); i++) {
 	)
 }
 */
-
