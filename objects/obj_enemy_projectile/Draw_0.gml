@@ -1,5 +1,5 @@
 
-draw_sprite(shadow, 0, x, y)
+draw_sprite(shadowSprite, 0, x, y + shadowOffset)
 
 draw_sprite_ext(
 	sprite_index,

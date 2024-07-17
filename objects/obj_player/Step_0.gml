@@ -14,6 +14,10 @@ player_movement_input()
 
 hitWall = player_walk_to_location(xVel, yVel)
 
+if (ultimateChargeDelay > 0) {
+	ultimateChargeDelay--
+}
+
 if (state == playerStates.charging) {
 	if (obj_ability_charge.runes[enumRunes.dreygoth].enabled) {
 		chargeShockFrames++
@@ -80,13 +84,13 @@ player_collision()
 
 depth = depths.player - y
 
-if (inputFocus == enumInputTypes.controller) {
-	window_set_cursor(spr_none)
-	cursor_sprite = spr_none
-} else {
-	//window_set_cursor(spr_cursor_aiming)
-	cursor_sprite = spr_cursor_aiming
-}
+//if (inputFocus == enumInputTypes.controller) {
+//	window_set_cursor(spr_none)
+//	cursor_sprite = spr_none
+//} else {
+//	//window_set_cursor(spr_cursor_aiming)
+//	cursor_sprite = spr_cursor_aiming
+//}
 
 uiDrawOffset = get_ui_pos(id)
 

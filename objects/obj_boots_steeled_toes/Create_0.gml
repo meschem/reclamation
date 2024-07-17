@@ -2,6 +2,8 @@
 event_inherited()
 
 slot = equipmentSlots.boots
+icon = spr_inv_icon_boots
+iconSpriteIndex = 2
 
 //bonusHealth = [10, 20]
 bonusInvulnFrames = 30

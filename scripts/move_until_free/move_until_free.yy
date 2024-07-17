@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_until_free",
   "isCompatibility":false,
   "isDnD":false,

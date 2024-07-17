@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_room_from_biome",
   "isCompatibility":false,
   "isDnD":false,

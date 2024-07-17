@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_burst_particles",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"buff_player_invuln",
   "isCompatibility":false,
   "isDnD":false,

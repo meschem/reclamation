@@ -2,12 +2,24 @@
 
 event_inherited();
 
-xp = 100
-hpMax = 20
+xp = baddie_xp_tough
+hpMax = 40
 hp = hpMax
+hpBarDisplay = baddieHpBarTypes.small
 
-moveAccel = 0.08
-moveSpeedMax = 1.2
+pushRadius = 11
+pushForce = 10
+
+deathParticles = [
+	obj_ptb_skel_fly_skull,
+	obj_ptb_wraith_scythe_hilt,
+	obj_ptb_wraith_scythe_head,
+]
+
+moveAccel = baddie_move_accel_slow
+//moveSpeedMax = baddie_move_speed_ultra_fast
+moveSpeedMax = baddie_move_speed_very_fast
+collidesWith = baddie_collision_flier
 
 weight = 0
 
@@ -15,10 +27,10 @@ shadowSprite = spr_shadow_lg
 
 floatRange = 2
 
-moveRotationRate = 0.01
+moveRotationRate = 0.005 // not used
 flies = true
 
-add_loot_gold(25, 30, 0.4)
+add_baddie_gold_tough
 
 beginStep = function() {
 	if (age % 20 == 0) {

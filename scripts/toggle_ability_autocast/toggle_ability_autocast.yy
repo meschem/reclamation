@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"toggle_ability_autocast",
   "isCompatibility":false,
   "isDnD":false,

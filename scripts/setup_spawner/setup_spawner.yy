@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"setup_spawner",
   "isCompatibility":false,
   "isDnD":false,

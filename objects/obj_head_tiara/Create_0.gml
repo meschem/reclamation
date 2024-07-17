@@ -2,9 +2,11 @@
 event_inherited()
 
 slot = equipmentSlots.head
+icon = spr_inv_icon_head
+iconSpriteIndex = 3
 
 name = "Tiara"
-description = "Be the bell of the ball."
+description = "Be da bell of da ball."
 cost = 900
 rarity = enumRarity.rare
 

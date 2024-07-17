@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_logic_homing",
   "isCompatibility":false,
   "isDnD":false,

@@ -12,6 +12,7 @@ enum baddieScalars {
 }
 
 create_instance(obj_equipment_controller)
+create_instance(obj_run_stats_controller)
 
 type = runTypes.normal
 
@@ -29,10 +30,11 @@ enemyScalingSpawnCount = 1
 
 enemyScalingSpawnCountTable = [
 	0.5,
+	0.6,
 	0.7,
+	0.8,
 	0.9,
-	1,
-	1.1,
+	1.0,
 	1.1,
 	1.2,
 	1.2,

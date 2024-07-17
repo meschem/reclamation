@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"process_room_reward",
   "isCompatibility":false,
   "isDnD":false,

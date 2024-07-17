@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_bonus_stat_vars",
   "isCompatibility":false,
   "isDnD":false,

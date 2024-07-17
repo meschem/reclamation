@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_select_rune_button",
   "isCompatibility":false,
   "isDnD":false,

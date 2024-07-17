@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_war_stomp",
   "isCompatibility":false,
   "isDnD":false,

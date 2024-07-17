@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"summon_skeletons",
   "isCompatibility":false,
   "isDnD":false,

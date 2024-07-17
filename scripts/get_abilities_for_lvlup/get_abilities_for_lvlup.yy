@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_abilities_for_lvlup",
   "isCompatibility":false,
   "isDnD":false,

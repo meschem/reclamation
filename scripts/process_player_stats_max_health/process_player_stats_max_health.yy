@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"process_player_stats_max_health",
   "isCompatibility":false,
   "isDnD":false,

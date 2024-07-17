@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"spawn_fx_shock_boom",
   "isCompatibility":false,
   "isDnD":false,

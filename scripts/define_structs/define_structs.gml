@@ -99,6 +99,33 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 	}
 }
 
+
+///@description						Adds a weapon stat. These always represent the current state of the weapon. Always visible.
+///@param {real} _stat				uses enum enumWeaponStats
+///@param {real} _weapon				Value of stat
+///@param {struct} _customType		Must include displayName (string), unitEnum (statUnits)
+function weaponStat(_stat, _weapon, _customType = {}) constructor {
+	weapon = _weapon
+	stat = _stat
+	
+	if (_stat != enumWeaponStats.custom) {
+		type = get_weapon_stat_type(_stat)
+	} else {
+		type = _customType
+	}
+	
+	unit = get_stat_unit_from_enum(type.unitEnum)
+	
+	getDisplayName = function() {
+		return type.displayName
+	}
+	
+	///@return {string}
+	getDisplayValue = function() {
+		return $"{weapon.getWeaponStatValue(stat) * unit.multiplier}{unit.displayUnit}"
+	}
+}
+
 ///@description						Stat that can be applied to anything
 ///@param {string} _name			Human-readable name of the stat
 ///@param {string} _variable		Variable to adjust

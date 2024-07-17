@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_current_frame",
   "isCompatibility":false,
   "isDnD":false,

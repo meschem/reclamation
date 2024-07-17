@@ -2,40 +2,43 @@
 draw_self()
 
 if (equipment != noone) {
-	draw_sprite(spr_ability_icon_ball_lit, 0, x, y)
+	draw_sprite(equipment.icon, iconSpriteIndex, x + 3, y + 3)
+} else if (sprite != spr_none) {
+	draw_sprite(sprite, iconSpriteIndex, x + 3, y + 3)
 }
 
-if (drawEquipmentInfo) {
-	draw_sprite_ext(
-		sprite_index,
-		image_index,
-		x + xOffset,
-		y + yOffset,
-		width / sprite_width,
-		height / sprite_height,
-		image_angle,
-		image_blend,
-		image_alpha
-	)
+//if (drawEquipmentInfo) {
+//	drawLine = 0
 	
-	draw_set_color(c_white)
-	drawTextLine(equipment.name)
+//	draw_sprite_ext(
+//		sprite_index,
+//		image_index,
+//		x + xOffset,
+//		infoBoxYDraw,
+//		infoPanelWidth / sprWidth,
+//		infoPanelHeight / sprHeight,
+//		image_angle,
+//		image_blend,
+//		image_alpha
+//	)
 	
-	draw_set_color(get_rarity_color(equipment.rarity))
-	drawTextLine(equipment.getRarityString())
+//	draw_set_color(c_white)
+//	drawTextLine(equipment.name, infoBoxYDraw)
 	
-	drawSpace()
+//	draw_set_color(get_rarity_color(equipment.rarity))
+//	drawTextLine(equipment.getRarityString(), infoBoxYDraw)
 	
-	draw_set_color(c_white)
-	drawTextLine(equipment.description)
-	
-	//for (var i = 0; i < array_length(item.rawStatDisplay); i++) {
-	//	drawTextLine(item.rawStatDisplay[i])
-	//}
-	
-	draw_set_color(c_white)
-	
-	drawLine += 3
+//	draw_set_color(c_white)
+//	drawTextLine(equipment.description, infoBoxYDraw)
 
-	draw_stats_block(x + padding, y + getYOffset(), equipment.stats, 1, -12)
-}
+//	draw_set_color(c_white)
+	
+//	//show_message(equipment)
+	
+//	drawLine += 2
+//	draw_stats_block(
+//		x + xOffset + padding,
+//		infoBoxYDraw + getYOffset(),
+//		equipment.stats,
+//		equipment.level, lineSpacing)
+//}

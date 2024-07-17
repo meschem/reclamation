@@ -23,6 +23,7 @@ canAutoCast = false
 radius = 80
 baseDamage = [100, 150, 200]
 swordCount = [4, 5, 6]
+maxLevel = 3
 
 stats = [
 	new abilityStat(

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"init_talents_jonah",
   "isCompatibility":false,
   "isDnD":false,

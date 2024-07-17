@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"close_talent_menu",
   "isCompatibility":false,
   "isDnD":false,

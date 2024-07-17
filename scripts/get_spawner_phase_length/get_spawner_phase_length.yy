@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_spawner_phase_length",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"open_player_inventory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"open_player_inventory",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

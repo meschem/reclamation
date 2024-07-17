@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_vector_from_angle_mag",
   "isCompatibility":false,
   "isDnD":false,

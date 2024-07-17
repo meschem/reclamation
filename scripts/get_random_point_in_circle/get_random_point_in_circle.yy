@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_random_point_in_circle",
   "isCompatibility":false,
   "isDnD":false,

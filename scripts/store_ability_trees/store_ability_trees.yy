@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"store_ability_trees",
   "isCompatibility":false,
   "isDnD":false,

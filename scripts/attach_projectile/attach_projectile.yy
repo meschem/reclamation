@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"attach_projectile",
   "isCompatibility":false,
   "isDnD":false,

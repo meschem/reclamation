@@ -40,6 +40,8 @@ if (moving) {
 			// bounce
 			bounces++
 			
+			onBounce()
+			
 			zVel *= -bounceRatio
 			xVel *= bounceRatio
 			yVel *= bounceRatio

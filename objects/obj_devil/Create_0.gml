@@ -6,7 +6,7 @@ xp = 60
 hpMax = 60
 hp = hpMax
 
-moveSpeedMax = 2.3
+moveSpeedMax = baddie_move_speed_very_fast
 
 shadowSprite = spr_shadow_lg
 

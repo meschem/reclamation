@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_current_dungeon_room",
   "isCompatibility":false,
   "isDnD":false,

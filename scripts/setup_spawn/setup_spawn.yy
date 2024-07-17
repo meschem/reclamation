@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"setup_spawn",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,13 +1,18 @@
 
 event_inherited();
 
-hpMax = 50
+hpMax = 10
 hp = hpMax
+hpBarDisplay = false
 
 weight = baddie_weight_none
+moveAccel = baddie_move_accel_slow
+moveSpeedMax = baddie_move_speed_fast
 
 shadowSprite = spr_shadow_lg
-shadowOffset = -3
+shadowOffset = -4
+
+add_loot_gold(2, 4, 0.75)
 
 deathFx = function() {
 	var mag, angle, velocity, particle, rnd

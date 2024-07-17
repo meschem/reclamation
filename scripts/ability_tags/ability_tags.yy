@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ability_tags",
   "isCompatibility":false,
   "isDnD":false,

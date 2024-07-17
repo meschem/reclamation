@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"spawn_fx_circle",
   "isCompatibility":false,
   "isDnD":false,

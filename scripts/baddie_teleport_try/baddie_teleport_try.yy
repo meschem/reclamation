@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"baddie_teleport_try",
   "isCompatibility":false,
   "isDnD":false,

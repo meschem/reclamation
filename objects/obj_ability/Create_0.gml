@@ -81,6 +81,7 @@ activate = function() {
 	curCharges--
 	
 	if (ultimate) {
+		owner.ultimateChargeDelay = owner.ultimateChargeDelayMax
 		owner.ultimateCharge = 0
 	}
 	

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_room_reward_from_enum",
   "isCompatibility":false,
   "isDnD":false,

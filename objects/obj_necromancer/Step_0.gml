@@ -6,7 +6,7 @@ if (state == enemyStates.normal) {
 	summonCdCur--
 
 	if (summonCdCur <= 0) {
-		summonCdCur = summonCdMax
+		summonCdCur = random_range(summonCdMin, summonCdMax)
 		
 		summon_skeletons(summonCount, summonType)
 	}

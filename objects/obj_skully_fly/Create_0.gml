@@ -2,14 +2,14 @@
 
 event_inherited()
 
+apply_base_tier_stats(baddieTiers.pest)
+
 hpMax = 5
 hp = hpMax
 
 shadowSprite = spr_shadow_sm
 
 floatRange = 2
-
-xp = 5
 
 image_speed = 1
 
@@ -20,3 +20,6 @@ deathParticles = [
 ]
 
 add_loot_gold(2, 4, 0.08)
+
+
+

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"display_level_trinket_prompt",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_vec2_midpoint",
   "isCompatibility":false,
   "isDnD":false,

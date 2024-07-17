@@ -36,6 +36,8 @@ run_lifecycle_events(enumLifeCycleEvents.stepBegin, {
 	projectile: id
 })
 
+impactSoundFrameSkip = false
+
 spawnPeriodicFx()
 
 calcVelocity()
@@ -161,6 +163,7 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	critMultiplier = owner.critMultiplier + obj_buff_controller.getBuffValue(buffValueTypes.bonusCritMultiplier)
 
 	onCollideFx(target)
+	queueImpactSound()
 	
 	if (target.markedForCrit || (random(1) < critChance)) {
 		critHit = true
@@ -209,6 +212,13 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		destroy = true
 		break
 	}
+}
+
+if (impactSoundsCount > 0) {
+	audio_play_sound(array_random(impactSounds), 0, false)
+	
+	impactSoundsCount--
+	impactSoundsMax--
 }
 
 ds_list_clear(validTargetList)

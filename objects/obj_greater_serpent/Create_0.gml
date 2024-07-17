@@ -9,6 +9,7 @@ bossScale = 1
 
 hpMax = 2000
 hp = hpMax
+hpBarDisplay = baddieHpBarTypes.small
 
 add_loot_gold(500, 600, 1)
 

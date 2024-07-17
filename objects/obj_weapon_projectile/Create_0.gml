@@ -1,4 +1,5 @@
-/// @description Init
+/// @description	Largely defines shape and crit behavior. Stats should be driven by the obj_weapon
+///					producing the projectile
 
 event_inherited()
 
@@ -40,7 +41,7 @@ hitList = []
 setScale = function(_owner, _weapon = noone) {
 	var _buffScale = obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
 	var _bonusAoeScale = _owner.bonusWeaponAoeScalar
-	var _weaponBonus = (_weapon != noone) ? _weapon.aoeScalar : 0
+	var _weaponBonus = (_weapon != noone) ? _weapon.projectileScale : 0
 	var _scale = baseScale * (_buffScale + _bonusAoeScale + _weaponBonus)
 
 	image_xscale = _scale

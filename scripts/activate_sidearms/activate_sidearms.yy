@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_sidearms",
   "isCompatibility":false,
   "isDnD":false,

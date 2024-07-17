@@ -20,6 +20,7 @@ lateralSpeed = 0
 minBounceVelocity = 1.4
 
 shadow = spr_shadow_med
+shadowOffset = 0
 singleCycle = false
 
 bounces = 0
@@ -40,6 +41,8 @@ zVelInitMax = -3
 
 angleInit = 0				// Should be set by incoming damage
 magMultiplier = 1			// Should be set by incoming damage
+
+onBounce = function() {}
 
 applyInitialProps = function() {
 	var _angle = angleInit + random_range(-angleInitVariance, angleInitVariance)

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"talent_is_valid",
   "isCompatibility":false,
   "isDnD":false,

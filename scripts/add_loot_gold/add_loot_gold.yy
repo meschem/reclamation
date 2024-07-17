@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_loot_gold",
   "isCompatibility":false,
   "isDnD":false,

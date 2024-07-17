@@ -35,11 +35,11 @@ stats = [
 	new abilityStat(
 		"Damage", 
 		"projectileDamage", 
-		[20, 23, 26, 29, 32]
+		[20, 30, 30, 45, 60]
 	),
 	new abilityStat(
 		"Projectiles",
-		"projectileCount", 
+		"projectileCount",
 		[3, 3, 4, 4, 5]
 	)
 ]

@@ -5,12 +5,18 @@
 
 function player_walk_to_location(xVel, yVel) {
 	var hitWall = false;
+	var steps = 0
 	
 	if (!phases && place_meeting(x + xVel, y, [obj_pit, obj_player_clip])) {
 		hitWall = true;
 		
 	    while(!place_meeting(x + sign(xVel), y, [obj_pit, obj_player_clip])) {
 	        x += sign(xVel)
+			steps++
+			
+			if (steps > abs(xVel)) {
+				break
+			}
 	    }
 	   
 	    xVel = 0
@@ -19,10 +25,17 @@ function player_walk_to_location(xVel, yVel) {
 	}
 	
 	if (!phases && place_meeting(x, y + yVel, [obj_pit, obj_player_clip])) {
+		steps = 0
 		hitWall = true
 		
 	    while(!place_meeting(x, y + sign(yVel), [obj_pit, obj_player_clip])) {
 	        y += sign(yVel)
+			
+			steps++
+			
+			if (steps > abs(yVel)) {
+				break
+			}
 	    }
 	   
 	    yVel = 0;

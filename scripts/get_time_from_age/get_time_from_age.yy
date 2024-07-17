@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_time_from_age",
   "isCompatibility":false,
   "isDnD":false,

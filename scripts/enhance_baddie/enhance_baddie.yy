@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"enhance_baddie",
   "isCompatibility":false,
   "isDnD":false,

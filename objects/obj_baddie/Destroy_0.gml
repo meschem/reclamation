@@ -11,13 +11,14 @@ if (!killedByBounds) {
 	if (soundOnDeath >= 0 && !audio_is_playing(soundOnDeath)) {
 		audio_play_sound(soundOnDeath, 1, false)
 	}
-
+	
+	/// FIXME: Uses obj_player
+	add_run_stat_kill(id, obj_player)
+	
 	/// FIXME: Hack
 	obj_player.xp += xp
-	obj_player.addUltimateCharge(25)
+	obj_player.addUltimateCharge(ultimateCharge)
 	
-	//obj_player.ultimateCharge = min(obj_player.ultimateCharge + (xp * 1), obj_player.ultimateChargeMax)
-
 	check_for_level_up()
 
 	for (var i = 0; i < array_length(loot); i++) {

@@ -11,3 +11,5 @@ shadowOffset = -1
 onDestroy = function() {
 	instance_create_depth(x, y, depths.enemyFloorFx, obj_poison_pit)
 }
+
+add_baddie_gold_fodder

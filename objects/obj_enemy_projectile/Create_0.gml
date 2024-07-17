@@ -19,7 +19,8 @@ maxBounces = 0
 //moving = true
 //lateralSpeed = 0
 
-shadow = spr_shadow_med
+shadowSprite = spr_shadow_enemy_shot_basic
+shadowOffset = 12
 
 damageOnHit = 10
 

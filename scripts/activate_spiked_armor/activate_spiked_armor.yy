@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_spiked_armor",
   "isCompatibility":false,
   "isDnD":false,

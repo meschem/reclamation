@@ -45,20 +45,34 @@ if (keyboard_check_pressed(vk_f10)) {
 	}
 }
 
-if (keyboard_check_pressed(vk_f11)) { 
-	show_message(obj_player.attackSpeedScalar)
+//if (keyboard_check_pressed(vk_f11)) { 
+//	create_shop_menu()
+//}
+
+if (keyboard_check_pressed(ord("I"))) {
+	if (instance_number(obj_equipment_menu) > 0) {
+		obj_equipment_menu.close()
+	} else {
+		open_player_inventory()
+	}
 }
 
 if (keyboard_check_pressed(ord("Z"))) {
 	spawn_baddie_at_location(
-		obj_skeleton, mouse_x, mouse_y
+		obj_banshee, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("X"))) {
+	//var _baddie =
+	
 	spawn_baddie_at_location(
-		obj_skully_fly, mouse_x, mouse_y
+		obj_skeleton_warrior, mouse_x, mouse_y
 	)
+	
+	//create_elite_health_bar(_baddie)
+	//enhance_baddie(baddieSpecialTypes.elite, _baddie)
+	//apply_random_elite_buff(_baddie, 2)
 }
 
 if (keyboard_check_pressed(ord("C"))) {
@@ -69,13 +83,13 @@ if (keyboard_check_pressed(ord("C"))) {
 
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
-		obj_gold_skeleton_warrior, mouse_x, mouse_y
+		obj_fire_mage, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("B"))) {
 	spawn_baddie_at_location(
-		obj_skeleton_warrior, mouse_x, mouse_y
+		obj_necromancer, mouse_x, mouse_y
 	)
 }
 
@@ -87,7 +101,7 @@ if (keyboard_check_pressed(ord("N"))) {
 
 if (keyboard_check_pressed(ord("M"))) {
 	spawn_baddie_at_location(
-		obj_wraith, mouse_x, mouse_y
+		obj_lich, mouse_x, mouse_y
 	)
 }
 
@@ -101,7 +115,6 @@ if (keyboard_check_pressed(ord("O"))) {
 
 
 
-if (mouse_check_button_pressed(mb_middle)) {
-	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
-	//enhance_baddie(baddieSpecialTypes.boss, inst)
-}
+//if (mouse_check_button_pressed(mb_middle)) {
+//	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
+//}

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"push_baddies_away",
   "isCompatibility":false,
   "isDnD":false,

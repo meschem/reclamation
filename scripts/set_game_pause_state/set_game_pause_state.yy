@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"set_game_pause_state",
   "isCompatibility":false,
   "isDnD":false,

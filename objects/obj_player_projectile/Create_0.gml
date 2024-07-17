@@ -92,6 +92,12 @@ previousFramePos = new vec2()
 
 lifeCycleEvents = []
 
+impactSounds = []			//List of sounds that are randomly played
+impactSoundsLeft = 0
+impactSoundsCount = 0
+impactSoundsMax = 3
+impactSoundsMaxPerFrame = 1
+
 owner = noone
 
 setup_lifecycle_events()
@@ -178,4 +184,14 @@ onCollideFx = function(target = noone)
 
 onDeathFx = function () {
 
+}
+
+queueImpactSound = function() {
+	if (array_length(impactSounds) == 0) {
+		return false
+	}
+	
+	if (impactSoundsCount < impactSoundsMax) {
+		impactSoundsCount++
+	}
 }

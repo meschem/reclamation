@@ -5,7 +5,7 @@
 /// @param {id.Instance}	target		Target to deal direct damage to
 
 function charge_collision(xPos, yPos, angle, target = noone) {
-	var _chargeAbility = id
+	var _chargeAbility = get_ability_instance(id, obj_ability_charge)
 	
 	var directDamage = _chargeAbility.impactDamage[_chargeAbility.level - 1]
 	var stunLength = _chargeAbility.stunLength[_chargeAbility.level - 1]
@@ -27,7 +27,7 @@ function charge_collision(xPos, yPos, angle, target = noone) {
 		//	isCrit = true
 		//}
 		
-		damage_baddie(target, directDamage, isCrit)
+		damage_baddie(target, directDamage, isCrit, 2, 2)
 				
 		if (obj_player.chargeShockFrames > 0) {
 			var shockDamage = obj_ability_charge.getShockDamage(chargeShockFrames)

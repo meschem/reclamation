@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"slime",
-    "path":"folders/Sprites/fx/particles/slime.yy",
+    "name":"liquids",
+    "path":"folders/Sprites/fx/particles/liquids.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

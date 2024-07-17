@@ -40,6 +40,8 @@ enum enumRarity {
 
 name = "Unnamed"
 description = "No description"
+icon = spr_inv_icon_hands
+iconSpriteIndex = 1
 
 isEquipment = true
 template = true
@@ -194,6 +196,7 @@ equip = function() {
 ///@description						Unequips an item
 unequip = function () {
 	equipped = false
+	
 	onUnequip()
 }
 

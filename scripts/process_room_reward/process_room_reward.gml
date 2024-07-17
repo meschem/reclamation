@@ -20,20 +20,20 @@ function process_room_reward(_reward) {
 		break
 		
 		case roomRewards.gold:
-			var _loops = 10 + (get_current_difficulty_level() * 2)
+			var _loops = 6 + (get_current_difficulty_level() * 2)
 			var _amount = 1
 			var _x, _y, _inst
 			
 			overtimeLength = seconds_to_frames(12)
 			
 			for (var i = 0; i < _loops; i++) {
-				_amount = irandom_range(5, 10)
+				_amount = irandom_range(3, 6)
 				_x = obj_player_spawn.x + irandom_range(-60, 60)
 				_y = obj_player_spawn.y + irandom_range(-60, 60)
 				_inst = instance_create_depth(_x, _y, depths.enemy, obj_coin)
 				_inst.pickupValue = _amount
 				
-				_amount = irandom_range(30, 60)
+				_amount = irandom_range(15, 20)
 				_x = obj_player_spawn.x + irandom_range(-45, 45)
 				_y = obj_player_spawn.y + irandom_range(-45, 45)
 				_inst = instance_create_depth(_x, _y, depths.enemy, obj_coin_stack)

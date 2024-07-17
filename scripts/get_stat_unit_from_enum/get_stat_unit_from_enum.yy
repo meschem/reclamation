@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_stat_unit_from_enum",
   "isCompatibility":false,
   "isDnD":false,

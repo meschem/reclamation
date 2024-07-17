@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"view_width",
   "isCompatibility":false,
   "isDnD":false,

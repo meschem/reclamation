@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"close_ability_selection_menu",
   "isCompatibility":false,
   "isDnD":false,

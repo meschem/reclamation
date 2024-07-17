@@ -64,6 +64,7 @@ build = function () {
 			createFloorFromConfig(i, i + 1)
 		}
 	} else {
+		// NOT REALLY USED ATM...
 		for (var i = 0; i < floorCount; i++) {
 			//createFloor(i, baseDifficulty + (i * difficultyIncrement))
 			createFloor(i, i + 1)
@@ -77,16 +78,17 @@ build = function () {
 ///@param {real} _index				Index of the floor
 ///@param {real} _difficulty		Difficulty of the floor
 createFloorFromConfig = function(_index, _difficulty) {
-	var _room, _configs, _type, _reward
+	var _room, _configs, _type, _reward, _phaseCount
 	var _floor = new dungeonFloor()
 
 	_configs = obj_dungeon_biome.floorStructure[_index].roomConfigs
-		
+	
 	for (var i = 0; i < array_length(_configs); i++) {
 		_type = array_random(_configs[i].types)
 		_reward = array_random(_configs[i].rewards)
+		_phaseCount = _configs[i].phaseCount
 		
-		_room = createRoom(_type, _difficulty, _reward)
+		_room = createRoom(_type, _difficulty, _reward, _phaseCount)
 		_floor.addRoom(_room)
 	}
 	
@@ -139,11 +141,12 @@ createFloor = function(_index, _difficulty = 1) {
 	floors[_index] = _floor
 }
 
-///@description				Creates a dungeon room
-///@param {real} _roomType
-///@param {real} _difficulty
+///@description						Creates a dungeon room
+///@param {real} _roomType			Type of room, uses enum roomTypes
+///@param {real} _difficulty		Difficulty number to use
+///@param {real} _phaseCount		Number of phases
 ///@return {struct.dungeonRoom}
-createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
+createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket, _phaseCount) {
 	/*
 		1. Get a random spawn for each potential baddie slot (pest -> veryLarge / boss)
 		2. Calls the biome instance "createRoom" function to get a room
@@ -155,24 +158,28 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 		medium: biomeInst.getSpawnFromTier(baddieTiers.medium, _difficulty),
 		large: biomeInst.getSpawnFromTier(baddieTiers.large, _difficulty),
 		veryLarge: biomeInst.getSpawnFromTier(baddieTiers.veryLarge, _difficulty),
-		boss: biomeInst.getSpawnFromTier(baddieTiers.boss, _difficulty)
+		boss: biomeInst.getSpawnFromTier(baddieTiers.boss, _difficulty),
+		elite: biomeInst.getEliteSpawn(_difficulty)
 	}
 	
 	var _room
 	
 	switch (_roomType) {
 		case roomTypes.intro:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				roomSizes.small,
 				_difficulty,
 				{
 					base: _spawns.small
-				}
+				},
+				_phaseCount
 			)
 		break
 		
 		case roomTypes.normal:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.medium,
 					roomSizes.large
@@ -181,12 +188,14 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				{
 					base: _spawns.small,
 					tough: _spawns.medium,
-				}
+				},
+				_phaseCount
 			)			
 		break
 		
 		case roomTypes.horde:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.large,
 					roomSizes.veryLarge,
@@ -196,12 +205,14 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				{
 					base: _spawns.pest,
 					tough: _spawns.medium,
-				}
+				},
+				_phaseCount
 			)			
 		break
 		
 		case roomTypes.heavy:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.medium,
 					roomSizes.large
@@ -210,7 +221,8 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				{
 					base: _spawns.medium,
 					tough: _spawns.large
-				}
+				},
+				_phaseCount
 			)
 			
 			//_room.baseSpawn.spawnCountMultiplier *= 0.3
@@ -218,7 +230,8 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 		break
 		
 		case roomTypes.brutal:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.medium,
 					roomSizes.large,
@@ -229,12 +242,14 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 					base: _spawns.small,
 					tough: _spawns.medium,
 					brutal: _spawns.veryLarge,
-				}
+				},
+				_phaseCount
 			)
 		break
 		
 		case roomTypes.elite:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.medium,
 					roomSizes.large,
@@ -244,13 +259,18 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 				{
 					base: _spawns.small,
 					tough: _spawns.medium,
-					elite: _spawns.large,
-				}
+					elite: _spawns.elite,
+				},
+				_phaseCount
 			)
+			
+			_room.baseSpawn.spawnCountMultiplier *= 0.5
+			_room.toughSpawn.spawnCountMultiplier *= 0.3
 		break
 		
 		case roomTypes.boss:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.large,
 					roomSizes.veryLarge,
@@ -260,12 +280,14 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket) {
 					base: _spawns.small,
 					tough: _spawns.medium,
 					boss: _spawns.boss,
-				}
+				},
+				_phaseCount
 			)
 		break
 		
 		case roomTypes.shop:
-			_room = biomeInst.createRoom(
+			_room = create_dungeon_room_from_biome(
+				biomeInst,
 				[
 					roomSizes.shop
 				],

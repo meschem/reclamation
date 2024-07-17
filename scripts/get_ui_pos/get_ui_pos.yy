@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_ui_pos",
   "isCompatibility":false,
   "isDnD":false,

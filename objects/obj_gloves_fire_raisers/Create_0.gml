@@ -2,6 +2,8 @@
 event_inherited()
 
 slot = equipmentSlots.gloves
+icon = spr_inv_icon_hands
+iconSpriteIndex = 4
 
 //bonusAttackSpeed = [10, 20]
 

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_select_wupg_button",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_shockwave",
   "isCompatibility":false,
   "isDnD":false,

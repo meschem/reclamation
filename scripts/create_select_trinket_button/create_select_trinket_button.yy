@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_select_trinket_button",
   "isCompatibility":false,
   "isDnD":false,

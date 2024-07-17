@@ -1,34 +1,40 @@
 // Draw Ult Meter
 if (drawUltimateBar) {
-	draw_set_color(c_white)
+	if (obj_player.ultimateChargeDelay > 0) {
+		create_toaster(
+			obj_player.ultimateChargeDelay
+		)
+	} else {
+		draw_set_color(c_white)
 	
-	draw_rectangle(
-		(cameraViewWidth / 2) - (ultimateBarWidth / 2) - 1,
-		cameraViewHeight - 30 - (ultimateBarHeight) - 1,
-		(cameraViewWidth / 2) + (ultimateBarWidth / 2) + 1,
-		cameraViewHeight - 29,
-		false
-	)
+		draw_rectangle(
+			(cameraViewWidth / 2) - (ultimateBarWidth / 2) - 1,
+			cameraViewHeight - 30 - (ultimateBarHeight) - 1,
+			(cameraViewWidth / 2) + (ultimateBarWidth / 2) + 1,
+			cameraViewHeight - 29,
+			false
+		)
 	
-	draw_set_color(c_black)
+		draw_set_color(c_black)
 	
-	draw_rectangle(
-		(cameraViewWidth / 2) - (ultimateBarWidth / 2),
-		cameraViewHeight - 30 - (ultimateBarHeight),
-		(cameraViewWidth / 2) + (ultimateBarWidth / 2),
-		cameraViewHeight - 30,
-		false
-	)
+		draw_rectangle(
+			(cameraViewWidth / 2) - (ultimateBarWidth / 2),
+			cameraViewHeight - 30 - (ultimateBarHeight),
+			(cameraViewWidth / 2) + (ultimateBarWidth / 2),
+			cameraViewHeight - 30,
+			false
+		)
 	
-	draw_set_color(get_color(colors.aqua))
+		draw_set_color(get_color(colors.aqua))
 
-	draw_rectangle(
-		(cameraViewWidth / 2) - (ultimateBarWidth / 2),
-		cameraViewHeight - 30 - (ultimateBarHeight),
-		((cameraViewWidth / 2) - (ultimateBarWidth / 2) + ultimateBarWidth * ultimateFillPercent) ,
-		cameraViewHeight - 30,
-		false
-	)
+		draw_rectangle(
+			(cameraViewWidth / 2) - (ultimateBarWidth / 2),
+			cameraViewHeight - 30 - (ultimateBarHeight),
+			((cameraViewWidth / 2) - (ultimateBarWidth / 2) + ultimateBarWidth * ultimateFillPercent) ,
+			cameraViewHeight - 30,
+			false
+		)
+	}
 }
 
 // Draw XP Bar
@@ -97,6 +103,8 @@ draw_text(
 	2,
 	"Gold: " + string(obj_player.gold)
 )
+
+// DEBUG STUFFS
 
 // Draw FPS
 draw_text(

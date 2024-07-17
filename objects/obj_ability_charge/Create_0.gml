@@ -82,8 +82,10 @@ collision = function(_target) {
 finalCollision = function(_target) {
 	var xOffset = get_angle_xvel(owner.moveAngle) * 6
 	var yOffset = get_angle_yvel(owner.moveAngle) * 6
-					
-	charge_collision(x + xOffset, y + yOffset, owner.moveAngle, _target)
+	
+	with (obj_player) {
+		charge_collision(x + xOffset, y + yOffset, moveAngle, _target)
+	}
 }
 
 ///@description						Calculates shock damage

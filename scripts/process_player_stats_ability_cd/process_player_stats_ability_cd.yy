@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"process_player_stats_ability_cd",
   "isCompatibility":false,
   "isDnD":false,

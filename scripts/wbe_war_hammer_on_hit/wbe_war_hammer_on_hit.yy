@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"wbe_war_hammer_on_hit",
   "isCompatibility":false,
   "isDnD":false,

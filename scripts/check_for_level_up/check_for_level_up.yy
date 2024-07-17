@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"check_for_level_up",
   "isCompatibility":false,
   "isDnD":false,

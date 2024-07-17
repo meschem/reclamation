@@ -1,28 +1,44 @@
+///@description				Init
 
 event_inherited()
 
 name = "Great Maul"
 description = "Big swings in wide arcs. Every third target in a single swing is hit with critical damage."
+icon = sprite_index
+iconIndex = 0
 
 spawnDistance = 32
 spawnObject = obj_greataxe_swipe
 maxCd = 72
 
+baseDamage = 15
+baseKnockback = 16
+projectileCount = 1
+
 stats = [
-	new abilityStat(
-		"Damage", "damage",
-		[15]
-	),
-	new abilityStat(
-		"Cooldown", "maxCd",
-		[50]
-	),
-	new abilityStat(
-		"Range", "range",
-		[70], true,
-		statUnits.length
-	)
+	new weaponStat(enumWeaponStats.damage, id),
+	new weaponStat(enumWeaponStats.knockback, id),
+	new weaponStat(enumWeaponStats.projectileCount, id),
+	new weaponStat(enumWeaponStats.cooldown, id)
 ]
+
+///@description					Gets a weapon stat value
+///@param {real} _stat			Stat, uses enumWeaponStats
+//getWeaponStatValue = function(_stat) {
+//	switch (_stat) {
+//		case enumWeaponStats.damage:
+//			return (baseDamage + bonusDamage) * damageScalar
+			
+//		case enumWeaponStats.knockback:
+//			return (baseKnockback + bonusKnockback) * knockbackScalar
+			
+//		case enumWeaponStats.projectileCount:
+//			return (projectileCount)
+			
+//		case enumWeaponStats.cooldown:
+//			return (maxCd)
+//	}		
+//}
 
 reverseSwipe = false
 

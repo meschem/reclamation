@@ -1,5 +1,5 @@
 if (shadow) {
-	draw_sprite(shadow, 0, x, y - yGroundOffset)
+	draw_sprite(shadow, 0, x, y - yGroundOffset + shadowOffset)
 }
 
 draw_sprite_ext(

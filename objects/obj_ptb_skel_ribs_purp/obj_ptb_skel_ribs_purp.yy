@@ -2,14 +2,14 @@
   "$GMObject":"",
   "%Name":"obj_ptb_skel_ribs_purp",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ptb_skel_ribs_purp",
   "overriddenProperties":[],
   "parent":{
-    "name":"particles",
-    "path":"folders/Objects/particles.yy",
+    "name":"skellies",
+    "path":"folders/Objects/particles/skellies.yy",
   },
   "parentObjectId":{
     "name":"obj_particle_bouncer",

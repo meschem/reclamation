@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"process_player_stats_crit_chance",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_abilities_with_tag",
   "isCompatibility":false,
   "isDnD":false,

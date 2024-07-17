@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_walk_to_location",
   "isCompatibility":false,
   "isDnD":false,

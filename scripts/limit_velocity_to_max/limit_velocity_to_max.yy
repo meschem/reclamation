@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"limit_velocity_to_max",
   "isCompatibility":false,
   "isDnD":false,

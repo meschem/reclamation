@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_room_select_button",
   "isCompatibility":false,
   "isDnD":false,

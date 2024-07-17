@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_current_difficulty_level",
   "isCompatibility":false,
   "isDnD":false,

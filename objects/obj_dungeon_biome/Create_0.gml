@@ -28,18 +28,10 @@ enum spawnTiers {
 	boss
 }
 
-enum spawnTypes {
-	standard,
-	internal,
-	horde,
-	waveLinear,
-	waveCharge,
-	waveCollapse,
-}
-
 persistent = true
 
 baddieList = []
+eliteList = []					// array of structs with obj/min/max level
 roomList = []
 spawnList = []
 floorStructure = []				// predefined setup for room types and rewards
@@ -48,8 +40,10 @@ floorStructure = []				// predefined setup for room types and rewards
 ///@param {array<Real>} _sizes				Uses enum roomSizes
 ///@param {real} _difficulty				Difficulty level
 ///@param {struct.biomeSpawnList} _spawns	Spawns to reference for use
-createRoom = function(_sizes, _difficulty, _spawns) {
-	var _room = new dungeonRoom(getRoomAsset(_sizes), _difficulty)
+///@param {real} _phaseCount
+///@return {struct.dungeonRoom}
+createRoom = function(_sizes, _difficulty, _spawns, _phaseCount = 1) {
+	var _room = new dungeonRoom(getRoomAsset(_sizes), _difficulty, _phaseCount)
 	
 	//if (_sizes[0] == roomSizes.shop) {
 	//	_room.roomType = roomTypes.shop
@@ -127,7 +121,7 @@ getHordeSpawn = function() {
 	var _spawns = []
 	
 	for (var i = 0; i < array_length(spawnList); i++ ) {
-		if (baddieList[i].spawnType == spawnTypes.horde) {
+		if (baddieList[i].spawnType == spawnerTypes.horde) {
 			array_push(_spawns, spawnList[i])
 		}
 	}
@@ -157,15 +151,31 @@ getSpawnFromTier = function(_tier, _difficulty = -1) {
 	}
 	
 	if (array_length(_spawns) == 0) {
+		//create_toaster("Spawn type defaulted. no valid spawn found", errorLevels.error)
 		return new biomeSpawn(obj_skeleton_summoned, _tier)
-		
-		//show_message([
-		//	"No spawns of type found",
-		//	get_baddie_tier_from_enum(_tier),
-		//	_difficulty,
-		//])
-		//show_error("No spawns of type found", true)
-		
+	}
+	
+	_spawns = array_shuffle(_spawns)
+	
+	return _spawns[0]
+}
+
+///@description							Gets elite spawns from the biome
+///@param {real} _difficulty
+getEliteSpawn = function(_difficulty = -1) {
+	var _spawns = []
+	
+	for (var i = 0; i < array_length(eliteList); i++) {
+		if (
+			_difficulty >= eliteList[i].minDifficulty &&
+			_difficulty <= eliteList[i].maxDifficulty
+		) {
+			array_push(_spawns, eliteList[i])
+		}
+	}
+	
+	if (array_length(_spawns) == 0) {
+		return new biomeSpawn(obj_skeleton_summoned, 1)
 	}
 	
 	_spawns = array_shuffle(_spawns)
@@ -217,16 +227,18 @@ addRoom = function(_roomName, _size, _props = {}) {
 ///@param {real} _spawnCountMultiplier	Constant applied to spawn count
 ///@param {real} _spawnType				Uses enum spawnTypes
 ///@param {struct} _props				Additional properties to add.
-addBaddie = function(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spawnTypes.standard, _props = {}) {
+addBaddie = function(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spawnerTypes.standard, _props = {}) {
 	var _spawn = new biomeSpawn(_baddie, _tier, _spawnCountMultiplier, _spawnType, _props)
 	
 	array_push(spawnList, _spawn)
 }
 
+///@description							Creates a baddie spawn from a struct
+///@param {struct} _props				Struct of props
 addBaddieStruct = function(_props) {
 	var _spawnTier = variable_struct_exists(_props, "spawnTier") ? _props.spawnTier : baddieTiers.small
-	var _spawnMultipler = variable_struct_exists(_props, "spawnMultiplier") ? _props.spawnMultiplier : 1
-	var _spawnType = variable_struct_exists(_props, "spawnType") ? _props.spawnType : spawnTypes.standard
+	var _spawnMultipler = variable_struct_exists(_props, "spawnCountMultiplier") ? _props.spawnCountMultiplier : 1
+	var _spawnType = variable_struct_exists(_props, "spawnType") ? _props.spawnType : spawnerTypes.standard
 	var _properties = variable_struct_exists(_props, "props") ? _props.props : {}
 	
 	if (variable_struct_exists(_props, "difficultyMin")) {
@@ -263,7 +275,7 @@ addCustomRoom = function(_spawnStruct, _floorMin, _floorMax = -1,  _rooms = []) 
 ///@param {real} _spawnCountMultiplier	Constant applied to spawn count
 ///@param {real} _spawnType				Uses enum spawnTypes
 ///@param {struct} _props				Additional properties to add.
-function biomeSpawn(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spawnTypes.standard, _props = {}) constructor {
+function biomeSpawn(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spawnerTypes.standard, _props = {}) constructor {
 	baddie = _baddie
 	tier = _tier
 	spawnCountMultiplier = _spawnCountMultiplier
@@ -309,4 +321,52 @@ function biomeSpawnList(_base, _tough, _brutal, _elite, _boss) constructor {
 	brutal = _brutal
 	elite = _elite
 	boss = _boss
+}
+
+///@description										Adds an elite to be selected in elite rooms
+///@param {struct<eliteListMember>}	_eliteMember	Member to add
+addElite = function(_eliteMember) {
+	_eliteMember.active = true
+	array_push(eliteList, _eliteMember)
+}
+
+
+addElites = function(_eliteMembers) {
+	for (var i = 0; i < array_length(_eliteMembers); i++) {
+		addElite(_eliteMembers[i])
+	}
+}
+
+///@description										Creates a floor with multiple room configs
+///@param {array<struct.roomConfig>} _roomConfigs	Type of room uses enum roomTypes
+addFloorConfig = function(_roomConfigs) {
+	var _floor = new floorConfig(_roomConfigs)
+	
+	array_push(floorStructure, _floor)
+}
+
+///@description										Creates a floor with multiple room configs
+///@param {array<struct.roomConfig>} _roomConfigs	Type of room uses enum roomTypes
+function floorConfig(_roomConfigs) constructor {
+	roomConfigs = _roomConfigs
+}
+
+///@description								Template used to create a room during dungeon creation
+///@param {array<real>} _roomTypes			Type of room uses enum roomTypes
+///@param {array<real>} _roomRewards		Type of room uses enum roomTypes
+///@param {real} _phaseCount				Amount of phases for the room
+function roomConfig(_roomTypes, _roomRewards, _phaseCount = 1) constructor {
+	types = _roomTypes
+	rewards = _roomRewards
+	phaseCount = _phaseCount
+}
+
+///@description								Template for setting up an elite that's selectable
+///@param {asset.GMObject} _baddie			Baddie to reference
+///@param {real} _minDifficulty				Min room difficulty they will be selected for
+///@param {real} _maxDifficulty				Max room difficulty they will be selected for
+function eliteListMember(_baddie, _minDifficulty, _maxDifficulty) constructor {
+	baddie = _baddie
+	minDifficulty = _minDifficulty
+	maxDifficulty = _maxDifficulty
 }

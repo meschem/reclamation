@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_chain_lightning_fx",
   "isCompatibility":false,
   "isDnD":false,

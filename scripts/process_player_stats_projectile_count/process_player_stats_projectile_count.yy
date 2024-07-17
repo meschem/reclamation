@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"process_player_stats_projectile_count",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"normalize_vector",
   "isCompatibility":false,
   "isDnD":false,

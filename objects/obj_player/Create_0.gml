@@ -34,7 +34,7 @@ reticles = [
 reticleIndex = 0
 
 baseMaxHp = 50
-baseMoveSpeedMax = 1
+baseMoveSpeedMax = 1.2
 baseMaxArmor = 0
 baseCritChance = 0.1
 baseCritMultiplier = 1.5
@@ -92,6 +92,8 @@ attackAngle = 0
 flies = false
 phases = false
 
+ultimateChargeDelayMax = seconds_to_frames(6)
+ultimateChargeDelay = 0
 ultimateCharge = 0
 ultimateChargeMax = 1000
 hasUltimate = false
@@ -199,6 +201,7 @@ addWeapon = function(_weapon) {
 	//ds_list_add(weaponList, inst)
 	
 	equipment.weapon = _inst
+	_inst.equipped = true
 	
 	_inst.owner = id
 }
@@ -220,7 +223,7 @@ equipItem = function(item) {
 }
 
 ///@description							Removes an item from a slot
-///@param {string} structKey			Equipment struct key
+///@param {string} structKey			Equipment struct key or equipmentSlots enum
 removeEquipment = function(structKey) {
 	var equippedItem = struct_get(equipment, structKey)
 	
@@ -258,5 +261,9 @@ canUseUltimate = function() {
 ///@description					Adds to the player's ultimate meter (maxes at 1000)
 ///@param {real} _amount		Amount to add
 addUltimateCharge = function(_amount) {
+	if (ultimateChargeDelay > 0) {
+		return 0
+	}
+	
 	ultimateCharge = min(ultimateCharge + _amount, ultimateChargeMax)
 }

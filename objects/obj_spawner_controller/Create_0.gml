@@ -8,6 +8,11 @@
 
 enum spawnerTypes {
 	standard,
+	flybyLinear,
+	flybyCharge,
+	flybyChargeCluster,
+	horde,
+	elite,
 	boss
 }
 
@@ -43,6 +48,8 @@ setupBossSpawn = function(enemyType) {
 	inst.spawnCount = 1
 	inst.singleSpawn = true
 	inst.bossSpawn = true
+	
+	return inst
 }
 
 ///@description							Sets up a spawner for an Elite enemy
@@ -53,6 +60,8 @@ setupEliteSpawn = function(enemyType) {
 	inst.spawnCount = 1
 	inst.singleSpawn = true
 	inst.eliteSpawn = true
+	
+	return inst
 }
 
 ///@description							Sets up a spawner for an single basic enemy
@@ -68,7 +77,7 @@ setupSingleSpawn = function(enemyType) {
 ///@param {asset.GMObject} enemyType	Type of enemy to spawn
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)
 ///@param {real} waveCount				Amount of waves (8)
-///@param {real} type					Uses enum spawnTypes() (spawnTypes.waves)
+///@param {real} type					Uses enum spawnTypes() (spawnerTypes.waves)
 ///@return {id.Instance}
 setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8) {
 	var inst = setup_spawner(
@@ -87,22 +96,15 @@ setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8) {
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)
 ///@param {real} waveCount				Amount of waves (8)
 ///@return {id.Instance}
-setupFlybySpawn = function(enemyType, targetPlayer = true, enemiesPerWave = 10, waveCount = 8) {
+setupFlybySpawn = function(enemyType, spawnType = spawnerTypes.flybyLinear, enemiesPerWave = 10, waveCount = 8) {
 	var inst = setup_spawner(
 		enemyType,
 		phase,
 		enemiesPerWave,
-		floor(phaseFrames / waveCount)
+		max(1, floor(phaseFrames / waveCount))
 	)
 	
-	// !!!add flags to inst!!!
-	array_push(inst.spawnFlags, enumSpawnFlags.noTarget)
-	
-	if (targetPlayer) {
-		array_push(inst.spawnFlags, enumSpawnFlags.chargeTarget)
-	} else {
-		array_push(inst.spawnFlags, enumSpawnFlags.chargeOpposite)
-	}	
+	inst.spawnType = spawnType
 	
 	return inst
 }

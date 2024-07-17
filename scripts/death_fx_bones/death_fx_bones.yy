@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"death_fx_bones",
   "isCompatibility":false,
   "isDnD":false,

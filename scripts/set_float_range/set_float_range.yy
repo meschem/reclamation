@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"set_float_range",
   "isCompatibility":false,
   "isDnD":false,

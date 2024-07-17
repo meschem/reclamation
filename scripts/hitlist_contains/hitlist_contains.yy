@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"hitlist_contains",
   "isCompatibility":false,
   "isDnD":false,

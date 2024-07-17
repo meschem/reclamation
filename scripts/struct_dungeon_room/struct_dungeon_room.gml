@@ -2,9 +2,11 @@ function struct_dungeon_room() {}
 
 #macro spawnSizeHorde 40
 #macro spawnSizeBase 12
-#macro spawnSizeTough 4
-#macro spawnSizeBrutal 2
+#macro spawnSizeTough 2
+#macro spawnSizeBrutal 1
 
+#macro spawnWavesBase 8
+#macro spawnWavesTough 6
 #macro spawnWavesBrutal 4
 
 ///@description							Dungeon room is built based off list of tiered enemies
@@ -40,12 +42,22 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 			setup_spawn(bossSpawn.baddie, 1, 1, spawnerTypes.boss)
 		}
 		
+		if (eliteSpawn.active) {
+			setup_spawn(
+				eliteSpawn.baddie,
+				1, //eliteSpawn.spawnCountMultiplier,
+				1,
+				spawnerTypes.elite
+			)
+		}
+		
 		for (var i = 0; i < phases; i++) {
 			if (baseSpawn.active) {				
 				setup_spawn(
 					baseSpawn.baddie,
 					baseSpawn.spawnCountMultiplier * spawnSizeBase * _countScalar,
-					_wavesScalar * 8
+					_wavesScalar * spawnWavesBase,
+					baseSpawn.spawnType
 				)
 			}
 			
@@ -53,7 +65,8 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 				setup_spawn(
 					toughSpawn.baddie,
 					toughSpawn.spawnCountMultiplier * spawnSizeTough * _countScalar,
-					_wavesScalar * 8				
+					_wavesScalar * spawnWavesTough,
+					toughSpawn.spawnType
 				)
 			}
 			
@@ -61,13 +74,19 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 				setup_spawn(
 					brutalSpawn.baddie,
 					brutalSpawn.spawnCountMultiplier * spawnSizeBrutal * _countScalar,
-					_wavesScalar * spawnWavesBrutal
+					_wavesScalar * spawnWavesBrutal,
+					brutalSpawn.spawnType
 				)
 			}
 			
-			if (eliteSpawn.active) {
-				setup_spawn(eliteSpawn.baddie, eliteSpawn.spawnCountMultiplier, 1)
-			}
+			//if (eliteSpawn.active) {
+			//	setup_spawn(
+			//		eliteSpawn.baddie,
+			//		eliteSpawn.spawnCountMultiplier,
+			//		1,
+			//		spawnerTypes.elite
+			//	)
+			//}
 			
 			obj_spawner_controller.phase++
 		}

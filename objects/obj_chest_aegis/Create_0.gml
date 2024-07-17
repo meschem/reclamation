@@ -2,6 +2,8 @@
 event_inherited()
 
 slot = equipmentSlots.chest
+icon = spr_inv_icon_chest
+iconSpriteIndex = 3
 
 maxLevel = 2
 

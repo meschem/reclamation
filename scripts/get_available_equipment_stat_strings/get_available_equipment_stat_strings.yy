@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_available_equipment_stat_strings",
   "isCompatibility":false,
   "isDnD":false,

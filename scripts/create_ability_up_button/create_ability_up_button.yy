@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_ability_up_button",
   "isCompatibility":false,
   "isDnD":false,

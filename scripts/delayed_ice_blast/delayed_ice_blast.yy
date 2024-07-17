@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"delayed_ice_blast",
   "isCompatibility":false,
   "isDnD":false,

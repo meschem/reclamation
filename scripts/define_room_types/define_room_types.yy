@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"define_room_types",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"define_room_types",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

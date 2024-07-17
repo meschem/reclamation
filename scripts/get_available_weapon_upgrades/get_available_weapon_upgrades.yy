@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_available_weapon_upgrades",
   "isCompatibility":false,
   "isDnD":false,

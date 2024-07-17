@@ -31,9 +31,22 @@ enum baddieHpBarTypes {
 	boss,
 }
 
+enum baddieWalkAnimTypes {
+	sprite,		// frame-based, driven by sprite
+	curves		// uses curves to hop and angle
+}
+
 name = "Unnamed"
+description = ""
 
 moveBehavior = enemyMoveBehaviors.charge
+
+walkAge = 0
+walkAnimType = baddieWalkAnimTypes.sprite
+walkAnimHeight = 3
+walkAnimRotation = 6
+
+walkCurveCycleLength = seconds_to_frames(1)
 
 facingAngle = 0
 
@@ -48,10 +61,13 @@ damageReactionCurveYScale = animcurve_get_channel(damageReactionCurve, 1)
 damageXScaleMultiplier = 1
 damageYScaleMultiplier = 1
 
-moveSpeedMax = 0.35
+moveSpeedMax = baddie_move_speed_medium
 moveSpeed = 0
 moveRotationRate = -1 // -1 is "infinite"
 moveAccel = 0.1
+
+minionType = object_index
+minionCount = 12
 
 spawnSide = "unset"
 
@@ -72,6 +88,8 @@ floatRange = 0
 
 xVel = 0
 yVel = 0
+lastX = 0
+lastY = 0
 
 hitWall = false
 
@@ -85,7 +103,9 @@ lifeSpan = -1
 
 hpMax = 100
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.small
+
+hpBarDisplay = baddieHpBarTypes.none
+hpBarInst = noone
 hpBarInfo = {
 	setup: false,
 	yPos: 0,
@@ -99,17 +119,20 @@ damagedOn = -10
 weight = 3
 
 soundOnDeath = snd_wood_roll
+collidesWith = baddie_collision_walker
 
 debuffShockAmount = 0
 
 xp = 25
+ultimateCharge = 25
 
 damageOnHit = 10
 
 shadowSprite = -1 // -1 is no sprite
 shadowOffset = 3 // vertical offset
 
-pushRadius = 6
+pushRadius = 8
+pushForce = 5
 
 stunLength = 0
 shockedLength = 0
@@ -129,6 +152,8 @@ killedByBounds = false
 
 lastDamageAngle = 0
 lastDamageForce = 1
+
+deathParticleSpawnRange = new vec2(0, 0)
 deathParticles = []
 
 markedForCrit = false // Guarantees crit, removed when activated

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_spawn_vec",
   "isCompatibility":false,
   "isDnD":false,

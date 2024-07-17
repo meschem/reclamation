@@ -1,18 +1,42 @@
-///@description   Description
+///@description				Used by baddies to push everyone away from each other
+///@param {real} _x			X
+///@param {real} _y			Y
+///@param {real} _radius	Distance to push
 
-function push_baddies_away() {
-	var enemies = ds_list_create()
-	var count = collision_circle_list(x, y, pushRadius, obj_baddie, false, true, enemies, false)
+function push_baddies_away(_x, _y, _radius = 8, _force = 5) {
+	var _baddies = ds_list_create()
+	var _count = collision_circle_list(_x, _y, _radius, obj_baddie, false, true, _baddies, false)
+	var _minForce = 0.2
+	var _enemy, _distance, _pushDistance, _angle, _pushVec2, _collided
 	
-	if (count > 0) {
-		for (var i = 0; i < count; ++i;)
+	if (_count > 0) {
+		for (var i = 0; i < _count; i++)
 	    {
-			var enemy = enemies[| i]
+			_enemy = _baddies[| i]
+			_distance = point_distance(_x, _y, _enemy.x, _enemy.y) // 0 -> _radius
+			_angle = point_direction(_x, _y, _enemy.x, _enemy.y)
+			_pushDistance = max(_minForce, _force * (1 - (_distance / _radius)))
+			_pushVec2 = get_vec2_from_angle_mag(_angle, _pushDistance)
 			
-			enemy.x += sign(enemy.x - x)
-			enemy.y += sign(enemy.y - y)
+			if (_pushDistance >= 1) {
+				_pushVec2 = get_vec2_normal(_pushVec2.x, _pushVec2.y)
+			}
+			
+			_collided = false
+			
+			with (_enemy) {
+				while (
+					!place_meeting(x + _pushVec2.x, y + _pushVec2.y, _enemy.collidesWith) &&
+					_pushDistance > 0				
+				) {
+					x += _pushVec2.x
+					y += _pushVec2.y
+					
+					_pushDistance--
+				}
+			}
 	    }
 	}
 	
-	ds_list_destroy(enemies)
+	ds_list_destroy(_baddies)
 }

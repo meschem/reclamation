@@ -1,9 +1,20 @@
-///@description   Description
-function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14) {
+///@description							Draws stats block for some stats
+///@param {real} _x						X coordinate to draw
+///@param {real} _y						Y coordinate to draw
+///@param {struct<itemStat>} _stats		Stats block to use
+///@param {real} _level					Level of the item
+///@param {real} _spacing				Spacing between stats
+///@return {real}						Amount of lines drawn
+function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14, _equip = 0) {
 	var _baseColor = draw_get_color()
 	
 	for (var i = 0; i < array_length(_stats); i++) {
-		var nameString = _stats[i].getDisplayName() + ": "
+		try {
+			var nameString = _stats[i].getDisplayName() + ": "
+		} catch (_err) {
+			show_message(_equip.name)
+			return 0
+		}
 	
 		draw_set_color(_baseColor)
 	
@@ -21,4 +32,6 @@ function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14) {
 			_stats[i].getDisplayValue(_level - 1)
 		)
 	}
+	
+	return i
 }

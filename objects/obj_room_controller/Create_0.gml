@@ -27,6 +27,7 @@ state = roomStates.init
 age = 0
 
 isPaused = false
+pauseDelay = 0
 timeDisplay = "0:00"
 
 overtimeLength = seconds_to_frames(5)
@@ -37,6 +38,7 @@ nextLevel = rm_start_dev
 create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
 create_instance(obj_particle_controller)
+create_instance(obj_sound_controller)
 
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false
@@ -76,7 +78,7 @@ initCombat = function() {
 
 completeCombat = function() {
 	var _reward = get_current_room_reward()
-	
+
 	process_room_reward(_reward)
 
 	initOvertime()
@@ -115,7 +117,8 @@ completeOvertime = function() {
 				
 			if (currentFloor == dungeon.floorCount) {
 				show_message("restarting run floorCount")
-				restart_run()
+				room_goto(rm_dungeon_end)
+				//restart_run()
 			}
 				
 			var _success = display_room_select_prompt()

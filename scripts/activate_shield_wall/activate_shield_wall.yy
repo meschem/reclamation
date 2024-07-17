@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_shield_wall",
   "isCompatibility":false,
   "isDnD":false,

@@ -2,12 +2,18 @@
 
 event_inherited();
 
+shadowSprite = spr_shadow_lg
+shadowOffset = -3
+
 moveSpeedMax = baddie_move_speed_medium
 
-xp = 150
-hpMax = 150
+walkAnimType = baddieWalkAnimTypes.curves
+
+xp = baddie_xp_tough
+hpMax = 120
 hp = hpMax
 weight = baddie_weight_med
+hpBarDisplay = baddieHpBarTypes.small
 
 deathParticles = [
 	obj_ptb_skel_bone_purp,
@@ -19,4 +25,4 @@ deathParticles = [
 	//obj_ptb_skel_sword,
 ]
 
-add_loot_gold(5, 10)
+add_baddie_gold_tough

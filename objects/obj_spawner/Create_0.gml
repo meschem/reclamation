@@ -19,7 +19,12 @@ enum spawnBehaviors {
 enum enumSpawnFlags {
 	chargeOpposite,
 	chargeTarget,
-	noTarget
+	noTarget,
+	clusterSpawn
+}
+
+enum enumSides {
+	top, bottom, left, right
 }
 
 spawnSelectionType = spawnBehaviors.cycle
@@ -31,6 +36,10 @@ spawnIndex = 0
 singleSpawn = false
 eliteSpawn = false
 bossSpawn = false
+spawnType = spawnerTypes.standard
+
+//clusterSpawnProcessed = false
+//clusterSpawnFactor = 10
 
 spawnFlags = []
 

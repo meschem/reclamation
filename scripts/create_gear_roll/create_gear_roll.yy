@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_gear_roll",
   "isCompatibility":false,
   "isDnD":false,

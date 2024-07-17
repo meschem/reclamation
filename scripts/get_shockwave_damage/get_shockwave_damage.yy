@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_shockwave_damage",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"launch_projectile",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_angle_xvel",
   "isCompatibility":false,
   "isDnD":false,

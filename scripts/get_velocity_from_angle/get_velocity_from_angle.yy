@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_velocity_from_angle",
   "isCompatibility":false,
   "isDnD":false,

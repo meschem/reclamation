@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"damage_baddies_in_radius",
   "isCompatibility":false,
   "isDnD":false,

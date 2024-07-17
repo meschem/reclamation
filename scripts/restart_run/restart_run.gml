@@ -9,7 +9,8 @@ function restart_run() {
 		obj_player,
 		obj_ability,
 		obj_ability_tree,
-		obj_equipment
+		obj_equipment,
+		obj_run_stats_controller,
 	]
 	
 	for (var i = 0; i < array_length(cleanupObjects); i++) {

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_equipment_var_by_enum",
   "isCompatibility":false,
   "isDnD":false,

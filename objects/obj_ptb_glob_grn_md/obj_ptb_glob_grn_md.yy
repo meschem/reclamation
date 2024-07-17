@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_ptb_glob_grn_md",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ptb_glob_grn_md",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_slime_bit_green_md",
-    "path":"sprites/spr_slime_bit_green_md/spr_slime_bit_green_md.yy",
+    "name":"spr_blood_bit_md",
+    "path":"sprites/spr_blood_bit_md/spr_blood_bit_md.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"baddie_teleport_setup_points",
   "isCompatibility":false,
   "isDnD":false,

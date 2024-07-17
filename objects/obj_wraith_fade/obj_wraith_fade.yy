@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_devil_trail",
-    "path":"sprites/spr_devil_trail/spr_devil_trail.yy",
+    "name":"spr_wraith_trail",
+    "path":"sprites/spr_wraith_trail/spr_wraith_trail.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_player_on_hit_abilities",
   "isCompatibility":false,
   "isDnD":false,

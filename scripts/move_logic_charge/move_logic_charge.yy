@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_logic_charge",
   "isCompatibility":false,
   "isDnD":false,

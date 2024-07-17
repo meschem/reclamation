@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_buff_attack_speed_scalar",
   "isCompatibility":false,
   "isDnD":false,

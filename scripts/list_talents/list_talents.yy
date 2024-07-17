@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"list_talents",
   "isCompatibility":false,
   "isDnD":false,

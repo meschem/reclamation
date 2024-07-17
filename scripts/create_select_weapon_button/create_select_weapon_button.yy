@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_select_weapon_button",
   "isCompatibility":false,
   "isDnD":false,

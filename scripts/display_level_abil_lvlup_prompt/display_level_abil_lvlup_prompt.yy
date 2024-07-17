@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"display_level_abil_lvlup_prompt",
   "isCompatibility":false,
   "isDnD":false,

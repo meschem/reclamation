@@ -9,10 +9,10 @@ function mouse_is_over_hitbox(inst = noone) {
 	var camOffsetY = camera_get_view_y(view_camera[0])
 	
 	var isOver = (
-		mouse_x > bbox_left + camOffsetX &&
-		mouse_x < bbox_right + camOffsetX &&
-		mouse_y > bbox_top + camOffsetY &&
-		mouse_y < bbox_bottom + camOffsetY
+		mouse_x > inst.bbox_left + camOffsetX &&
+		mouse_x < inst.bbox_right + camOffsetX &&
+		mouse_y > inst.bbox_top + camOffsetY &&
+		mouse_y < inst.bbox_bottom + camOffsetY
 	)
 	
 	return isOver

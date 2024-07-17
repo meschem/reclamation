@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"setup_level_busy",
   "isCompatibility":false,
   "isDnD":false,

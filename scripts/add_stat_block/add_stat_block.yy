@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_stat_block",
   "isCompatibility":false,
   "isDnD":false,

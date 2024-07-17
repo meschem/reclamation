@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"enums_button_states",
   "isCompatibility":false,
   "isDnD":false,

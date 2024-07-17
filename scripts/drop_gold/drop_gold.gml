@@ -2,23 +2,34 @@
 ///@param {real} amount		Amount of gold to drop
 ///@param {real} _x			X location
 ///@param {real} _y			Y location
-function drop_gold(amount, _x, _y) {
-	var spawnObject
+function drop_gold(_amount, _x, _y) {
+	var _spawnObject, _inst
+	var _value = 0
+	var _range = 0
+	var _xOffset, _yOffset
 
-	if (amount <= 0) {
+	if (_amount <= 0) {
 		return 0
-	} else if (amount < 10) {
-		spawnObject = obj_coin
-	} else if (amount < 30) {
-		spawnObject = obj_coin_stack
-	} else {
-		spawnObject = obj_coin_stack
 	}
 
-	_x += irandom_range(-5, 5)
-	_y += irandom_range(-5, 5)
 	
-	var inst = instance_create_depth(_x, _y, depths.enemy, spawnObject)
-	
-	inst.pickupValue = amount
+	while (_amount > 0) {
+		if (_amount < 30) {
+			_value = _amount
+		} else {
+			_value = min(irandom_range(6, 80), _amount)
+		}
+		
+		_range = min((_amount / 2), 30)
+		
+		_xOffset = irandom_range(-_range, _range)
+		_yOffset = irandom_range(-_range, _range)
+		
+		_spawnObject = (_value < 20) ? obj_coin : obj_coin_stack
+		
+		_inst = instance_create_depth(_x + _xOffset, _y + _yOffset, depths.enemy, _spawnObject)
+		_inst.pickupValue = _value
+		
+		_amount -= _value
+	}
 }

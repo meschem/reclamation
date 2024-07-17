@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_fx_fading_circle",
   "isCompatibility":false,
   "isDnD":false,

@@ -23,3 +23,7 @@ function create_menu(_title = "", _subTitle = "", _centered = true) {
 		
 	return _menu
 }
+
+function create_pause_menu() {
+	instance_create_depth(-999, -999, depths.ui, obj_pause_menu)
+}

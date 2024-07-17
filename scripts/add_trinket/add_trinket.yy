@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_trinket",
   "isCompatibility":false,
   "isDnD":false,

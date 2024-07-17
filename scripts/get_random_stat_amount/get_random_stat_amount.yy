@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_random_stat_amount",
   "isCompatibility":false,
   "isDnD":false,

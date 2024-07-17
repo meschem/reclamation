@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"dd_array_obj",
   "isCompatibility":false,
   "isDnD":false,

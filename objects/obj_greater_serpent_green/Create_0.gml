@@ -2,14 +2,38 @@
 // Inherit the parent event
 event_inherited()
 
-moveSpeedMax = 0.35
+name = "Greater Serpent"
+
+moveSpeedMax = baddie_move_speed_medium
 weight = baddie_weight_massive
+
+walkAnimType = baddieWalkAnimTypes.curves
 
 bossScale = 1
 
-hpBarInfo.yOffset = -23
+shadowSprite = spr_greater_serpent_shadow
+shadowOffset = -30
 
-hpMax = 1000
+hpBarInfo.yOffset = -23
+hpBarDisplay = baddieHpBarTypes.small
+
+hpMax = 220
 hp = hpMax
 
-add_loot_gold(500, 600, 1)
+deathParticles = [
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_chunk_grn,
+	obj_ptb_serpent_skull
+]
+
+deathParticleSpawnRange.x = 20
+deathParticleSpawnRange.y = 20
+
+add_baddie_gold_brutal

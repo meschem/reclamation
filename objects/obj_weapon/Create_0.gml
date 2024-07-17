@@ -12,15 +12,20 @@ maxCdScalar = 1
 
 attackSpeedScalar = 0 // used to calc max cd scalar
 
+baseDamage = 15
 bonusDamage = 0
 damageScalar = 1
 
+baseKnockback = 0
 bonusKnockback = 0
 knockbackScalar = 1
 
 bonusAoeScalar = 0
 
 velocityScalar = 1
+
+projectileCount = 1
+projectileScale = 1
 
 bonusCritMultiplier = 0
 // End upgrade props
@@ -33,6 +38,8 @@ upgrades = []
 upgradesMinor = []
 upgradesMajor = []
 upgradesEvolution = []
+
+stats = []
 
 upgradePath = [
 	weaponUpgradeTypes.minor,
@@ -47,6 +54,27 @@ upgradePath = [
 ]
 
 owner = noone
+
+///@description					Gets a weapon stat value
+///@param {real} _stat			Stat, uses enumWeaponStats
+getWeaponStatValue = function(_stat) {
+	switch (_stat) {
+		case enumWeaponStats.damage:
+			return (baseDamage + bonusDamage) * damageScalar
+			
+		case enumWeaponStats.knockback:
+			return (baseKnockback + bonusKnockback) * knockbackScalar
+			
+		case enumWeaponStats.projectileScale:
+			return (projectileScale)
+			
+		case enumWeaponStats.projectileCount:
+			return (projectileCount)
+			
+		case enumWeaponStats.cooldown:
+			return (maxCd)
+	}		
+}
 
 processUpgrades = function() {
 	var i, _inst
@@ -69,7 +97,6 @@ processUpgrades = function() {
 			break
 		}
 	}
-
 }
 
 ///@description						Attacks with the weapon. Set this.
@@ -80,7 +107,7 @@ use = function(_attackAngle) {
 	return []
 }
 
-///@description						Parent function for attacking. Don't overwrite.
+///@description						Parent function for attacking. Don't overwrite. Called by obj_player.
 ///@param {real} _attackAngle		Angle to launch attack at
 ///@param {bool} _bypassCd			Bypass setting cooldown
 ///@param {bool} _baseAttack		True if caused directly by player, vs an ability or trinket
@@ -96,6 +123,7 @@ attack = function(_attackAngle = 0, _bypassCd = false, _baseAttack = true) {
 		var _projectiles = use(_attackAngle)
 			
 		for (var i = 0; i < array_length(_projectiles); i++) {
+			applyStatsToInstance(_projectiles[i])
 			applyUpgradesToInstance(_projectiles[i])
 		}
 		
@@ -141,6 +169,13 @@ launch = function(obj, velocity, offset = new vec2(0, 0)) {
 	return inst
 }
 
+///@description						Applies base stats to a projectile
+///@param {Id.Instance} _inst		Instances to apply upgrades to
+applyStatsToInstance = function(_inst) {
+	_inst.damageDirect = baseDamage
+	_inst.knockback = baseKnockback
+}
+
 ///@description						Applies upgrade to a projectile
 ///@param {Id.Instance} _inst		Instances to apply upgrades to
 applyUpgradesToInstance = function(_inst) {
@@ -154,7 +189,7 @@ applyUpgradesToInstance = function(_inst) {
 	_inst.knockback *= knockbackScalar
 	
 	_inst.critMultiplier += bonusCritMultiplier
-	_inst.setScale(owner)
+	_inst.setScale(owner) // from obj_weapon_projectile
 }
 
 ///@description						Creates a weapon upgrade bar

@@ -1,28 +1,6 @@
 // Inherit the parent event
 event_inherited()
 
-///@description										Creates a floor with multiple room configs
-///@param {array<struct.roomConfig>} _roomConfigs	Type of room uses enum roomTypes
-addFloorConfig = function(_roomConfigs) {
-	var _floor = new floorConfig(_roomConfigs)
-	
-	array_push(floorStructure, _floor)
-}
-
-///@description										Creates a floor with multiple room configs
-///@param {array<struct.roomConfig>} _roomConfigs	Type of room uses enum roomTypes
-function floorConfig(_roomConfigs) constructor {
-	roomConfigs = _roomConfigs
-}
-
-///@description								Template used to create a room during dungeon creation
-///@param {array<real>} _roomTypes			Type of room uses enum roomTypes
-///@param {array<real>} _roomRewards		Type of room uses enum roomTypes
-function roomConfig(_roomTypes, _roomRewards) constructor {
-	types = _roomTypes
-	rewards = _roomRewards
-}
-
 // FLOORS //
 // 1
 addFloorConfig([
@@ -76,11 +54,13 @@ addFloorConfig([
 addFloorConfig([
 	new roomConfig(
 		[roomTypes.elite],
-		[roomRewards.trinket]
+		[roomRewards.trinket],
+		2
 	),
 	new roomConfig(
 		[roomTypes.elite],
-		[roomRewards.gold]
+		[roomRewards.gold],
+		2
 	)
 ])
 
@@ -88,11 +68,13 @@ addFloorConfig([
 addFloorConfig([
 	new roomConfig(
 		[roomTypes.horde],
-		[roomRewards.abilityLevel, roomRewards.weaponUpgrade]
+		[roomRewards.abilityLevel, roomRewards.weaponUpgrade],
+		2
 	),
 	new roomConfig(
 		[roomTypes.heavy],
-		[roomRewards.abilityLevel, roomRewards.weaponUpgrade]
+		[roomRewards.abilityLevel, roomRewards.weaponUpgrade],
+		2
 	)
 ])
 
@@ -100,11 +82,13 @@ addFloorConfig([
 addFloorConfig([
 	new roomConfig(
 		[roomTypes.normal],
-		[roomRewards.trinket]
+		[roomRewards.trinket],
+		2
 	),
 	new roomConfig(
 		[roomTypes.brutal],
-		[roomRewards.trinketRare]
+		[roomRewards.trinketRare],
+		2
 	)
 ])
 
@@ -112,7 +96,8 @@ addFloorConfig([
 addFloorConfig([
 	new roomConfig(
 		[roomTypes.boss],
-		[roomRewards.gold]
+		[roomRewards.gold],
+		2
 	)
 ])
 
@@ -125,14 +110,29 @@ addRoom(rm_combat_testing_f, roomSizes.medium)
 addRoom(rm_shop_testing, roomSizes.shop)
 
 // BADDIES //
-addBaddie(obj_skully_fly, baddieTiers.pest, 10, spawnTypes.horde)
+addBaddie(obj_skully_fly, baddieTiers.pest, 10, spawnerTypes.horde)
 addBaddie(obj_skeleton, baddieTiers.small)
+
+//addBaddieStruct({
+//	baddie: obj_devil,
+//	spawnTier: baddieTiers.small,
+//	spawnType: spawnerTypes.flybyCharge,
+//	difficultyMin: 2
+//})
 
 addBaddieStruct({
 	baddie: obj_slime_green,
 	spawnTier: baddieTiers.small,
 	spawnCountMultiplier: 0.5,
 	difficultyMin: 5
+})
+
+addBaddieStruct({
+	baddie: obj_wraith_charger,
+	spawnTier: baddieTiers.medium,
+	spawnCountMultiplier: 3,
+	spawnType: spawnerTypes.flybyChargeCluster,
+	difficultyMin: 3
 })
 
 addBaddieStruct({
@@ -167,5 +167,38 @@ addBaddieStruct({
 	difficultyMin: 2
 })
 
-addBaddie(obj_greater_serpent_green, baddieTiers.boss)
+addBaddieStruct({
+	baddie: obj_greater_serpent_green,
+	spawnTier: baddieTiers.veryLarge,
+	difficultyMin: 5
+})
+
+//addBaddie(obj_greater_serpent_green, baddieTiers.boss)
 addBaddie(obj_lich, baddieTiers.boss)
+
+addElites([
+	new eliteListMember(
+		obj_skeleton_warrior,
+		1, 10
+	),
+	new eliteListMember(
+		obj_wraith,
+		1, 10
+	),
+	new eliteListMember(
+		obj_zombie,
+		1, 10
+	),
+	new eliteListMember(
+		obj_burning_skeleton,
+		1, 10
+	),
+	//new eliteListMember(
+	//	obj_fire_mage,
+	//	1, 10
+	//),
+	new eliteListMember(
+		obj_poison_skeleton,
+		1, 10
+	)
+])

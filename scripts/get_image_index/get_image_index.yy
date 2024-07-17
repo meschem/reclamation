@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_image_index",
   "isCompatibility":false,
   "isDnD":false,

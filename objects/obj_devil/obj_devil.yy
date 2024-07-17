@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_devil",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_devil",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_reaper",
-    "path":"sprites/spr_reaper/spr_reaper.yy",
+    "name":"spr_devil",
+    "path":"sprites/spr_devil/spr_devil.yy",
   },
   "spriteMaskId":null,
   "visible":true,

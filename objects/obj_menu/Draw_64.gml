@@ -1,5 +1,6 @@
 
 if (!display) {
+	display = true
 	return 0
 }
 

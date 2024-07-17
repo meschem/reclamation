@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_cooldown_from_inverse_scalar",
   "isCompatibility":false,
   "isDnD":false,

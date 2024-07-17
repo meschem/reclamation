@@ -20,7 +20,7 @@ knockback = 16
 
 animSpeed = 1
 
-onHitSounds = [
+impactSounds = [
 	snd_punch_1, snd_punch_2, snd_punch_3
 ]
 
@@ -45,7 +45,7 @@ preDamage = function(enemyList) {
 
 onDeathFx = function() {
 	if (hitCount > 0) {
-		owner.addUltimateCharge(15)
+		owner.addUltimateCharge(5)
 	}
 }
 
@@ -55,8 +55,4 @@ onCollideFx = function(_target)
 	if (global.createParticleFx) {
 		create_burst_particles(pts_greataxe_impact, _target.x, _target.y, image_angle)
 	}
-	
-	var i = irandom(array_length(onHitSounds) - 1)
-	
-	audio_play_sound(onHitSounds[i], 0, false)
 }

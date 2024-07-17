@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"charge_collision",
   "isCompatibility":false,
   "isDnD":false,

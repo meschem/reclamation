@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"display_weapon_upgrade_prompt",
   "isCompatibility":false,
   "isDnD":false,

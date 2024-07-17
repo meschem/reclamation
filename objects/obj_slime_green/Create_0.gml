@@ -1,12 +1,13 @@
 
 event_inherited();
 
-hpMax = 30
+hpMax = 20
 hp = hpMax
+hpBarDisplay = baddieHpBarTypes.none
 
-weight = baddie_weight_heavy
-moveAccel = baddie_move_accel_very_slow
-moveSpeedMax = baddie_move_speed_medium
+weight = baddie_weight_med
+moveAccel = baddie_move_accel_slow
+moveSpeedMax = baddie_move_speed_slow
 
 shadowSprite = spr_shadow_lg
 shadowOffset = -4
@@ -23,7 +24,7 @@ deathParticles = [
 onDestroy = function() {
 	var inst, i
 	
-	for (i = 0; i < 1; i ++) {
+	for (i = 0; i < 2; i ++) {
 		inst = spawn_baddie_at_location(obj_slime_green_small, x + 5, y + 5)
 		inst.parentBaddie = id		
 	}

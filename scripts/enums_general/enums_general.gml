@@ -3,7 +3,7 @@
 function enums_general() {
 	enum depths {
 		playerAura = -1500,
-		enemyFloorFx = -1500,
+		enemyFloorFx = -500,
 		enemy = -2000,
 		player = -2000,
 		playerProjectile = -2000,

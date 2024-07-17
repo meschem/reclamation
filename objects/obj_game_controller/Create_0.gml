@@ -13,6 +13,8 @@ global.createParticleFx = true
 
 //talents = []
 
+//random_set_seed(4)
+
 activeAbilityControllers = []
 
 init_run_globals()
@@ -24,14 +26,13 @@ display_reset(8, true)
 instance_create_depth(100, 0, depths.ui, obj_trinket_controller)
 create_instance(obj_toaster_controller)
 create_instance(obj_run_controller)
+create_instance(obj_input_controller)
 //create_instance(obj_camera_controller)
 
 //init_talents_jonah()
 define_colors()
 define_item_stats()
 //set_available_talents()
-
-// some of these will need to be made global
 
 //playerTotalGold = 0
 //playerGold = 0
@@ -74,12 +75,12 @@ enum levelUpRewards {
 
 levelUpRewardTable = [
 	levelUpRewards.abilitySelect,
-	levelUpRewards.trinket,
+	//levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
-	levelUpRewards.abilityLevelUp,
-	levelUpRewards.trinket,
+	//levelUpRewards.abilityLevelUp,
+	//levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
-	levelUpRewards.trinket,
+	//levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,

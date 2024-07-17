@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"create_dungeon",
   "isCompatibility":false,
   "isDnD":false,

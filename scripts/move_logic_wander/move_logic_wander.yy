@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"move_logic_wander",
   "isCompatibility":false,
   "isDnD":false,

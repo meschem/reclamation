@@ -9,8 +9,8 @@ function spawn_baddie_at_location(enemy, _x, _y, _applyScaling = true) {
 	
 	_inst = instance_create_depth(_x, _y, depths.enemy, enemy)
 	
-	with (_inst)
-		move_until_free(collisionSearchTypes.radial)
+	//with (_inst)
+	//	move_until_free(collisionSearchTypes.radial)
 		
 	if (_applyScaling)
 		apply_baddie_scaling(_inst)

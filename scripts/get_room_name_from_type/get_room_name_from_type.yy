@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_room_name_from_type",
   "isCompatibility":false,
   "isDnD":false,

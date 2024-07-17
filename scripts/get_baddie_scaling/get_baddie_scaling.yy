@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_baddie_scaling",
   "isCompatibility":false,
   "isDnD":false,

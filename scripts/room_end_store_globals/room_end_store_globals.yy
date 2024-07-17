@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"room_end_store_globals",
   "isCompatibility":false,
   "isDnD":false,

@@ -13,19 +13,12 @@ function move_logic_charge() {
 		targetPoint.y = target.y
 	}
 
-	//if (moveRotationRate < 0) {
-	//	var targetAngle = point_direction(x, y, targetPoint.x, targetPoint.y)
-	//	var velocity = get_velocity_from_angle(targetAngle, moveSpeedMax)
+	accel_towards_point(targetPoint.x, targetPoint.y, frameAccel)
 	
-	//	xVel = velocity[0]
-	//	yVel = velocity[1]
-	//} else {
-		accel_towards_point(targetPoint.x, targetPoint.y, frameAccel)
-		var mag = point_distance(0, 0, xVel, yVel)
+	var mag = point_distance(0, 0, xVel, yVel)
 		
-		if (mag > moveSpeedMax) {
-			set_velocity_magnitude(frameMoveSpeedMax)
-		}
-		//turn_towards_point([obj_player.x, obj_player.y], moveRotationRate)				
-	//}
+	if (mag > moveSpeedMax) {
+		set_velocity_magnitude(frameMoveSpeedMax)
+	}
+
 }

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"setup_lifecycle_events",
   "isCompatibility":false,
   "isDnD":false,

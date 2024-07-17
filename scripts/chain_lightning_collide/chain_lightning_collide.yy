@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"chain_lightning_collide",
   "isCompatibility":false,
   "isDnD":false,

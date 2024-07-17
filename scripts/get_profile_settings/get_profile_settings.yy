@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_profile_settings",
   "isCompatibility":false,
   "isDnD":false,

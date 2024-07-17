@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"instance_rotate",
   "isCompatibility":false,
   "isDnD":false,

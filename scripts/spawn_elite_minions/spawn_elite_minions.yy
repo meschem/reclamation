@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_elite_minions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_elite_minions",
+  "parent":{
+    "name":"elite_buffs",
+    "path":"folders/Scripts/baddies/elite_buffs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

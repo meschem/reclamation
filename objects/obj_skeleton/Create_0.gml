@@ -2,6 +2,8 @@
 
 event_inherited();
 
+Name = "Skeleton"
+
 hpMax = 20
 hp = hpMax
 
@@ -9,6 +11,8 @@ shadowSprite = spr_shadow_med
 shadowOffset = -1
 
 hpBarDisplay = baddieHpBarTypes.none
+
+walkAnimType = baddieWalkAnimTypes.curves
 
 deathParticles = [
 	obj_ptb_skel_bone_purp,
@@ -19,7 +23,7 @@ deathParticles = [
 	obj_ptb_skel_skull_purp,
 ]
 
-add_loot_gold(-2, 2)
+add_baddie_gold_fodder
 
 //deathFx = function() {
 //	spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"clean_hit_list",
   "isCompatibility":false,
   "isDnD":false,

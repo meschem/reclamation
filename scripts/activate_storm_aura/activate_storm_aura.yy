@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"activate_storm_aura",
   "isCompatibility":false,
   "isDnD":false,

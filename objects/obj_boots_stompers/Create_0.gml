@@ -2,6 +2,8 @@
 event_inherited()
 
 slot = equipmentSlots.boots
+icon = spr_inv_icon_boots
+iconSpriteIndex = 3
 
 //bonusMoveSpeed = [0.1, 0.1]
 

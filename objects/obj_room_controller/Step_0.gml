@@ -1,7 +1,7 @@
 if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-	if (!game_is_paused()) {
+	if (!game_is_paused() && pauseDelay <= 0) {
 		set_game_pause_state(true)
-		create_menu(obj_pause_menu)
+		create_pause_menu()
 	}
 }
 
@@ -15,6 +15,10 @@ if (keyboard_check_pressed(vk_f9)) {
 }
 
 age++
+
+if (pauseDelay > 0) {
+	pauseDelay--
+}
 
 if (state == roomStates.init) {
 	if (category == roomCategories.combat) {
