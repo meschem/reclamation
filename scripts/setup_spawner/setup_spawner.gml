@@ -9,9 +9,10 @@
 function setup_spawner(enemyType, phase, count = 10, period = 240) {
 	var inst = instance_create_depth(0, 0, 0, obj_spawner)
 	var phaseLength = get_spawner_phase_length()
+	var initialDelay = seconds_to_frames(4)
 	
 	inst.enemyTypes[0] = enemyType
-	inst.spawnStartFrame = phase * phaseLength
+	inst.spawnStartFrame = (phase * phaseLength) + initialDelay
 	inst.spawnEndFrame = inst.spawnStartFrame + phaseLength
 	inst.spawnCount = count
 	inst.spawnPeriod = period

@@ -25,6 +25,8 @@ bonusAoeScalar = 0
 velocityScalar = 1
 
 projectileCount = 1
+bonusProjectiles = 0	// handled on a per weapon basis
+
 projectileScale = 1
 
 bonusCritMultiplier = 0
@@ -163,8 +165,6 @@ launch = function(obj, velocity, offset = new vec2(0, 0)) {
 	inst.knockback *= knockbackScalar
 	
 	inst.critMultiplier += bonusCritMultiplier
-	
-	//run_lifecycle_events(enumLifeCycleEvents.create, inst)
 	
 	return inst
 }

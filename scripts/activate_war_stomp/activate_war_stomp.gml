@@ -16,7 +16,7 @@ function activate_war_stomp(level) {
 
 		var radius = _abilityObj.baseRadius[_abilityObj.level - 1]
 		var amount = _abilityObj.baseDamage[_abilityObj.level - 1]
-		var pushDistance = _abilityObj.runes[enumRunes.voldan].enabled ? 10 : 0
+		var pushDistance = _abilityObj.runes[enumRunes.voldan].enabled ? 40 : 0
 		var stunLength = _abilityObj.stunLength[_abilityObj.level - 1]
 
 		var count = collision_circle_list(
@@ -30,8 +30,6 @@ function activate_war_stomp(level) {
 			false
 		)
 	
-		//var fxCircle = spawn_fx_circle(radius)
-		
 		inst = create_fx_fading_circle(x, y, radius, 30)
 		inst.alphaStart = 0.4
 		
@@ -42,7 +40,7 @@ function activate_war_stomp(level) {
 		if (count > 0) {
 			if (_abilityObj.runes[enumRunes.dreygoth].enabled) {
 				var dmgScalePerEnemy = 0.10
-				var maxEnemyCount = 10
+				var maxEnemyCount = 20
 				var bonusDamage = amount * min(count, maxEnemyCount) * dmgScalePerEnemy
 
 				amount += bonusDamage

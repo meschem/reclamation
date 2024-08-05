@@ -1,3 +1,7 @@
+if (spawnDelay > 0) {
+	return 0
+}
+
 draw_sprite_ext(
 	shadowSprite, 0,
 	x, y + 5,
@@ -10,4 +14,3 @@ if (trail) {
 }
 
 draw_self()
-

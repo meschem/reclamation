@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function display_level_talent_prompt() {
+function display_level_talent_prompt(_player) {
 	var availableTalentIndexes = get_available_talents()
 	var shuffledTalents = array_shuffle(availableTalentIndexes)
 	var selectionSize = min(array_length(shuffledTalents), 3)

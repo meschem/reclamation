@@ -4,6 +4,8 @@ event_inherited()
 
 apply_base_tier_stats(baddieTiers.pest)
 
+name = "Skuffly"
+
 hpMax = 5
 hp = hpMax
 

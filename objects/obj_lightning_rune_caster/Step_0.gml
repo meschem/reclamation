@@ -6,8 +6,12 @@ if (game_is_paused()) {
 
 age++
 
+if (age < initialDelay) {
+	return 0
+}
+
 if (age >= duration) {
-	damage_baddies_in_radius(new vec2(x, y), explosionRadius, explosionDamage, owner)
+	damage_baddies_in_radius(new vec2(x, y), explosionRadius, explosionDamage, owner, critChance, maxCrits)
 
 	create_fx_fading_circle(x, y, explosionRadius)
 	
@@ -22,7 +26,7 @@ if (age >= duration) {
 	
 	instance_destroy()
 } else if (age % tickRate == 0) {
-	damage_baddies_in_radius(new vec2(x, y), radius, damagePerTick, owner)
+	damage_baddies_in_radius(new vec2(x, y), radius, damagePerTick, owner, critChance, maxCrits)
 	
 	create_fx_fading_circle(x, y, radius)
 	

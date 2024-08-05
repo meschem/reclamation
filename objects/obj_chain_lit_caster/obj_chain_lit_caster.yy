@@ -11,8 +11,8 @@
   "name":"obj_chain_lit_caster",
   "overriddenProperties":[],
   "parent":{
-    "name":"projectiles",
-    "path":"folders/Objects/abilities/jonah/projectiles.yy",
+    "name":"_projectiles",
+    "path":"folders/Objects/abilities/jonah/_projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

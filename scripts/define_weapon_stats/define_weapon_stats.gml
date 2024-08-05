@@ -3,6 +3,7 @@ function define_weapon_stats() {
 	enum enumWeaponStats {
 		damage,
 		knockback,
+		critDamage,
 		projectileScale,
 		projectileCount,
 		projectileSpeed,
@@ -56,6 +57,11 @@ function get_weapon_stat_type(_enumStat) {
 		case enumWeaponStats.knockback:
 			_displayName = "Knockback"
 			_statUnit = statUnits.meters
+		break
+		
+		case enumWeaponStats.critDamage:
+			_displayName = "Crit Damage Multiplier"
+			_statUnit = statUnits.percent
 		break
 		
 		case enumWeaponStats.projectileCount:

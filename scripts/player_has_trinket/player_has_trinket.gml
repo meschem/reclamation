@@ -5,7 +5,7 @@
 
 function player_has_trinket(trinket, player = noone) {
 	if (player == noone) {
-		player = get_player_target()
+		player = obj_player
 	}
 	
 	for (var i = 0; i < array_length(player.trinkets); i++) {

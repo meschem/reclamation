@@ -15,12 +15,13 @@ bonusAttackArea = 0
 disarm = false
 invuln = false
 permanent = false
+shield = false
 
 timer = 60
 
 age = 0
 
-owner = obj_player
+owner = obj_player.id
 
 onAdd = function() {
 	// Do Nothing

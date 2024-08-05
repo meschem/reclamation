@@ -18,7 +18,7 @@ onStrikeAbility = false
 active = false
 curCharges = 1
 maxCharges = 1
-owner = obj_player
+owner = obj_player.id
 ultimate = false
 
 age = 0
@@ -40,7 +40,7 @@ controllerIcon = spr_btn_xbox_y
 
 selectionIcon = spr_abil_select_icon_unset
 
-owner = get_player_target()
+owner = obj_player.id // get_player_target()
 
 runes = []
 
@@ -88,7 +88,7 @@ activate = function() {
 	use()
 }
 
-activateOnHit = function() {
+activateOnHit = function(_hitBy) {
 	show_message("activateOnHit() not set on ability object")
 }
 

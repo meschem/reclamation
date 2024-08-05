@@ -23,7 +23,7 @@ stats = [
 	),
 	new abilityStat(
 		"Bonus Damage", "bonusDamage",
-		[20, 30, 40]
+		[5, 10, 15]
 	)
 ]
 

@@ -3,14 +3,15 @@
 function process_room_reward(_reward) {
 	overtimeLength = seconds_to_frames(5)
 	
+	var _player = get_first_player()
+	
 	switch (_reward) {
 		case roomRewards.trinket:
-			
-			display_level_trinket_prompt()
+			display_level_trinket_prompt(_player)
 		break
 		
 		case roomRewards.abilityLevel:
-			display_level_abil_lvlup_prompt()
+			display_level_abil_lvlup_prompt(_player)
 		break
 		
 		case roomRewards.fullHeal:
@@ -47,11 +48,11 @@ function process_room_reward(_reward) {
 		
 		case roomRewards.trinketRare:
 			create_toaster("Rare trinket drop not setup yet")
-			display_level_trinket_prompt()
+			display_level_trinket_prompt(_player)
 		break
 		
 		case roomRewards.weaponUpgrade:
-			display_weapon_upgrade_prompt()
+			display_weapon_upgrade_prompt(_player)
 		break
 	}
 }

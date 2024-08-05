@@ -5,7 +5,7 @@ attackAngle = obj_player.attackAngle
 
 age = 0
 
-owner = get_player_target()
+owner = obj_player.id // get_player_target()
 
 buff = instance_create_depth(
 	0, 0, 0,

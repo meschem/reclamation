@@ -2,6 +2,8 @@
 
 event_inherited();
 
+name = "Skeleton Warrior"
+
 shadowSprite = spr_shadow_lg
 shadowOffset = -3
 

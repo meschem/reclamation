@@ -3,7 +3,7 @@
 ///@return {real}
 function get_random_rarity(_bonusMultiplier = 1) {
 	var _maxMultiplier = (1 / _bonusMultiplier)
-	var _constant = 0.18
+	var _constant = 0.8
 	
 	if (random(1) < _constant * _maxMultiplier) {
 		return enumRarity.normal

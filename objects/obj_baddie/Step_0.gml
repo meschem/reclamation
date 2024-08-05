@@ -18,6 +18,10 @@ if (hp <= 0) {
 	return
 }
 
+if (!instance_exists(target) || age % 5 == 0) {
+	target = get_player_target()
+}
+
 beginStep()
 
 lastX = x
@@ -130,7 +134,6 @@ if (phases) {
 if (age % 2 == 0) {
 	push_baddies_away(x, y, pushRadius, pushForce)
 }
-
 
 if (floatRange > 0) {
 	var length = 60

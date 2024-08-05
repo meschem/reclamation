@@ -6,7 +6,7 @@ upgrade = noone
 
 onClick = function () {
 	//FIXME Multiplayer: Assumes single player. Selection window needs owner.
-	var player = get_player_target()
+	var player = obj_player // get_player_target()
 	
 	if (upgrade == noone) {
 		show_error("Upgrade == noone", true)

@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_lightning_rune",
   "bboxMode":0,
-  "bbox_bottom":31,
+  "bbox_bottom":32,
   "bbox_left":3,
   "bbox_right":29,
   "bbox_top":3,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":33,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"ac9cddd1-a45e-46bb-9d7d-4850305d9975","blendMode":0,"displayName":"default","isLocked":false,"name":"ac9cddd1-a45e-46bb-9d7d-4850305d9975","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

@@ -29,6 +29,8 @@ projectileType = projectileTypes.unset
 angleSpriteToVelocity = false
 facingAngle = 0
 
+spawnDelay = 0
+draw = true
 lifeSpan = -1
 age = 0
 
@@ -106,7 +108,7 @@ weaponRef = noone // reference to obj_weapon that points to this object
 
 reseekBehavior = reseekBehaviors.deactivateSeek
 
-run_lifecycle_events(enumLifeCycleEvents.create, {
+run_wupg_lifecycle_events(enumLifeCycleEvents.create, {
 	projectile: id
 })
 

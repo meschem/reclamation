@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"get_player_target",
   "parent":{
-    "name":"player",
-    "path":"folders/Scripts/player.yy",
+    "name":"targeting",
+    "path":"folders/Scripts/baddies/targeting.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

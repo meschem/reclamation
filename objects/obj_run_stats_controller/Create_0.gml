@@ -1,20 +1,62 @@
 ///@description		Init
 
-statsKills = ds_list_create()
+enum enumRunStats {
+	kills,
+	goldGained,
+	oreGained,
+	xpGained,
+	runesGained,
+}
+
+owner = noone
+
+statsKills = {}
+statsKillsTotal = 0
 statsGoldGained = 0
+statsOreGained = 0
+statsXpGained = 0
+statsRunesGained = 0
 
-///@description						Adds a kill stat
-///@param {id.Instance} _baddie		Baddie that was killed
-///@param {id.Instance} _player		Player who got the kill
-//function ffadd_stat_kill(_baddie, _player) {
-//	var _killStat = new killStat(_baddie.name)
-	
-//	_killStat.baddieTier = _baddie.tier
-//	_killStat.player = _player
-	
-//	with (obj_run_controller) {
-//		ds_list_add(statsKills, _killStat)
-//	}
-//}
+///@description				Gets the NAME of a stat to base used for score screen
+///@param {real} _stat		Stat to get. Uses enum enumRunStats
+///@return {string}
+getRunStatStringName = function(_stat) {
+	switch (_stat) {
+		case enumRunStats.kills:
+			return "Kills"
+			
+		case enumRunStats.goldGained:
+			return "Gold"
+			
+		case enumRunStats.oreGained:
+			return "Ore"
+			
+		case enumRunStats.xpGained:
+			return "Experience"
+			
+		case enumRunStats.runesGained:
+			return "Runes"
+	}
+}
 
-///@param {string} _baddieName		Name of the baddie
+///@description				Gets the AMOUNT of a stat to base used for score screen
+///@param {real} _stat		Stat to get. Uses enum enumRunStats
+///@return {string}
+getRunStatStringAmount = function(_stat) {
+		switch (_stat) {
+		case enumRunStats.kills:
+			return statsKillsTotal
+			
+		case enumRunStats.goldGained:
+			return statsGoldGained
+			
+		case enumRunStats.oreGained:
+			return statsOreGained
+			
+		case enumRunStats.xpGained:
+			return statsXpGained
+			
+		case enumRunStats.runesGained:
+			return statsRunesGained
+	}
+}

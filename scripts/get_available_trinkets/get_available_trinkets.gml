@@ -9,7 +9,7 @@ function get_available_trinkets(player = noone) {
 	var availableTrinkets = []
 	
 	if (player == noone) {
-		player = get_player_target()
+		player = get_first_player()
 	}
 	
 	var validTrinkets = obj_trinket_controller.validTrinkets
@@ -17,14 +17,14 @@ function get_available_trinkets(player = noone) {
 	// Get UN-OWNED trinkets
 	if (array_length(player.trinkets) < player.maxTrinkets) {
 		for (var i = 0; i < array_length(validTrinkets); i++) {
-			if (!player_has_trinket(validTrinkets[i].object_index)) {
+			if (!player_has_trinket(validTrinkets[i].object_index, player)) {
 				array_push(availableTrinkets, validTrinkets[i])
 			}
 		}
 	}
-	
+
 	// Get OWNED trinkets
-	with (obj_trinket) {
+	with (obj_trinket) {		
 		if (owner == player && level < maxLevel) {
 			array_push(availableTrinkets, id)
 		}

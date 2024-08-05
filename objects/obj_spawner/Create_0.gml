@@ -1,6 +1,7 @@
 /// @description Vars
 
 age = 0
+spawnAge = 0
 
 enemyTypes = [
 	obj_skeleton

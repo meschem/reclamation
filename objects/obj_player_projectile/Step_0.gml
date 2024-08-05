@@ -6,10 +6,24 @@ if (game_is_paused()) {
 	image_speed = animSpeed
 }
 
+if (spawnDelay > 0) {
+	spawnDelay--
+	
+	if (spawnDelay == 0) {
+		draw = true
+		image_index = 0
+		image_speed = animSpeed
+	} else {
+		draw = false
+		image_speed = 0
+		return 0
+	}
+}
+
 var i, j
 
 if (age == 0) {
-	run_lifecycle_events(enumLifeCycleEvents.stepFirst, {
+	run_wupg_lifecycle_events(enumLifeCycleEvents.stepFirst, {
 		projectile: id
 	})
 }
@@ -32,7 +46,7 @@ if (distanceMax > 0) {
 	}
 }
 
-run_lifecycle_events(enumLifeCycleEvents.stepBegin, {
+run_wupg_lifecycle_events(enumLifeCycleEvents.stepBegin, {
 	projectile: id
 })
 
@@ -169,7 +183,7 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		critHit = true
 	}
 	
-	run_lifecycle_events(enumLifeCycleEvents.targetHit, {
+	run_wupg_lifecycle_events(enumLifeCycleEvents.targetHit, {
 		owner: owner,
 		target: target,
 		critHit: critHit
@@ -224,7 +238,7 @@ if (impactSoundsCount > 0) {
 ds_list_clear(validTargetList)
 ds_list_clear(targetCollisionList)
 
-run_lifecycle_events(enumLifeCycleEvents.stepEnd, {
+run_wupg_lifecycle_events(enumLifeCycleEvents.stepEnd, {
 	projectile: id
 })
 

@@ -8,7 +8,7 @@ homingAccel = 0.2
 
 /// FIXME: MULTIPLAYER
 
-target = get_player_target()
+target = obj_player // get_player_target()
 
 age = 0
 

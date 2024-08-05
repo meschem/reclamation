@@ -5,7 +5,7 @@ gameFrame++
 if (keyboard_check_pressed(vk_f2))
 	game_restart()
 
-if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderr)) {
+if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderrb)) {
 	window_set_fullscreen(!window_get_fullscreen())
 }
 
@@ -22,11 +22,12 @@ if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) 
 if (keyboard_check_pressed(vk_f6)) {
 	//create_shop_menu()
 	//var lvl = obj_player.getTrinketLevel(obj_trinket_golden_puzzlebox)
-	display_room_select_prompt()
+	//display_room_select_prompt()
+	obj_run_stats_controller.getTotalKills()
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
-	display_weapon_select_prompt()
+	display_level_rune_prompt()
 }
 
 if (keyboard_check_pressed(vk_f8)) {

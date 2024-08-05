@@ -10,8 +10,8 @@
   "name":"obj_jonah_stomp_aftershock",
   "overriddenProperties":[],
   "parent":{
-    "name":"projectiles",
-    "path":"folders/Objects/abilities/jonah/projectiles.yy",
+    "name":"_projectiles",
+    "path":"folders/Objects/abilities/jonah/_projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":true,

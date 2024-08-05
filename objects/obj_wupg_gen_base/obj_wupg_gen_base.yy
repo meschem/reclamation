@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_wupg_gen_weapon_size",
+  "%Name":"obj_wupg_gen_base",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_wupg_gen_weapon_size",
+  "name":"obj_wupg_gen_base",
   "overriddenProperties":[],
   "parent":{
     "name":"upgrades",

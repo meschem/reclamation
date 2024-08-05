@@ -8,7 +8,7 @@ function get_available_weapon_upgrades(_player = noone, _type = weaponUpgradeTyp
 	var _weaponUpgrades
 	
 	if (_player == noone) {
-		_player = get_player_target()
+		_player = obj_player // get_player_target()
 	}
 	
 	switch (_type) {

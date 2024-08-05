@@ -8,6 +8,6 @@ bonusDamage = obj_ability_flurry.bonusDamage
 totalSpread = 30
 splitFromMiddle = false
 
-owner = get_player_target()
+owner = obj_player.id // get_player_target()
 
 

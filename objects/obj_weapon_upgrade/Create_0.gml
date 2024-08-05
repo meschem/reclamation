@@ -57,8 +57,6 @@ applyStatsToWeapon = function () {
 			var _val = _values[_index]		
 			var _curVal = variable_instance_get(weapon, _var)
 		
-			// show_message([_val, _var, _curVal])
-		
 			var _result = _val + _curVal
 	
 			variable_instance_set(weapon, _var, _result)

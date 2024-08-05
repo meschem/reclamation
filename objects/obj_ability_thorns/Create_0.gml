@@ -6,14 +6,20 @@
 event_inherited();
 
 name = "Thorns"
-description = "Become invulnerable and deal damage on touching enemies."
+description = "Shoots out spikes in all directions. Fires off automatically when taking damage, ignoring cooldown."
 onHitAbility = true
 active = true
 selectionIcon = spr_abil_select_icon_thorns
 
+lastGaspAvailable = true
+
 treeLevel = 2
 
-maxCd = seconds_to_frames(15)
+curCd = 0
+maxCd = seconds_to_frames(3)
+
+spikesCurCd = 0
+spikesMaxCd = seconds_to_frames(1)
 
 autoCast = true
 canAutoCast = true
@@ -21,41 +27,49 @@ canAutoCast = true
 buffTimeSeconds = 6
 activationCdMax = 40
 
-spikeDamage = 30
+spikeDamage = 15
+spikeCount = 4
 spikeLifeSpan = 60
-spikeCount = 8
+spikeAngleOffset = 0
 
 spiralRotationSpeed = 3
-lightningShockAmount = 180
+//lightningShockAmount = 180
+
+projectile = obj_armor_spike
+projectileCharged = obj_armor_spike_charged
 
 stats = [
 	new abilityStat(
 		"Spike Count", "spikeCount", 
-		[8, 8, 12, 12, 12]
+		[4, 4, 6, 6, 8, 8]
 	),
 	new abilityStat(
 		"Damage", "spikeDamage", 
-		[20, 40, 40, 60, 80]
-	),
-	new abilityStat(
-		"Cooldown", "maxCd", 
-		[900, 840, 780, 720, 640]
+		[15, 25, 25, 35, 40]
 	)
 ]
 
 addRune("Spirals", "Spikes spin out in a spiral pattern and increases distance")
 addRune("Lightning Tipped", "Spikes deal lightning damage to targets")
-addRune("Last Gasp", "Once per run, instead of dying, release a huge burst of spikes")
+addRune("Last Gasp", "Upon receiving a fatal blow, heal to full and release spikes. Usable once per run."	)
 
 use = function () {
-	buff_player_invuln(buffTimeSeconds)
 	activate_spiked_armor(owner)
+	//var _inst = create_instance(obj_buff_thorns_shield)
+	
+	//_inst.owner = owner
+	//_inst.timer = seconds_to_frames(buffTimeSeconds)
+	//_inst.hp = owner.maxHp
+	//_inst.hpMax = owner.maxHp
 }
 
-activateOnHit = function() {
-	if (canActivate()) {
-		activate_spiked_armor(owner)
-		activationCdCur = activationCdMax
+activateOnHit = function(_hitBy) {
+	activate_spiked_armor(owner)
+
+	if (owner.hp <= 0 && lastGaspAvailable && runes[enumRunes.voldan].enabled) {
+		owner.hp = owner.maxHp
+		lastGaspAvailable = false
+		create_toaster("Last Gasp Activated!!")
 	}
 }
 

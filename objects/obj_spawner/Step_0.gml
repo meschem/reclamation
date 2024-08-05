@@ -8,8 +8,14 @@ if (game_is_paused())
 //	clusterSpawnProcessed = true
 //	create_toaster("Cluster Spawn processed")
 //}
-	
-if (age > spawnStartFrame && age % spawnPeriod == 0) {
+
+age++
+
+if (age < spawnStartFrame) {
+	return 0
+}
+
+if (spawnAge % spawnPeriod == 0) {
 	var spawns, i, j
 	var _spawnCount = spawnCount // * get_baddie_scaling(baddieScalars.spawnCount)
 	
@@ -68,7 +74,7 @@ if (age > spawnStartFrame && age % spawnPeriod == 0) {
 	}
 }
 
-age++
+spawnAge++
 
 if (age > spawnEndFrame) {
 	instance_destroy()

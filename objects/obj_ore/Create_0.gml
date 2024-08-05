@@ -19,6 +19,8 @@ onPickup = function(_player) {
 	
 	audio_play_sound(snd_clang_clang, 0, false)
 	
+	add_run_stat(enumRunStats.oreGained)
+	
 	if (_weapon.level >= _weapon.maxLevel) {
 		create_toaster("Weapon at max level. No behavior set", errorLevels.warning)
 	}

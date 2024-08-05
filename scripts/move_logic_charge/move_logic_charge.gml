@@ -3,7 +3,7 @@
 function move_logic_charge() {
 	var targetPoint = new vec2()
 	
-	if (target == obj_none) {
+	if (target == obj_none || !instance_exists(target)) {
 		var addVec = get_vec2_from_angle_mag(facingAngle, 128)
 		
 		targetPoint.x = x + addVec.x

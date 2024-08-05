@@ -3,7 +3,7 @@ function baddie_teleport_try(){
 	var findingSpot = true
 	var sanityCount = 0
 	var spot = new vec2()
-	var player = get_player_target()
+	var player = obj_player // get_player_target()
 
 	while(findingSpot) {
 		sanityCount++

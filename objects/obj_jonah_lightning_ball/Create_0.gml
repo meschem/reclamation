@@ -21,7 +21,7 @@ distanceOffset = 0
 
 explodeOnDeath = false
 
-owner = get_player_target()
+owner = obj_player.id // get_player_target()
 
 calcVelocity = function () {
 	angle += rotationRate

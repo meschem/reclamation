@@ -6,7 +6,7 @@ event_inherited()
 width = 100
 height = 60
 
-player = get_player_target() //FIXME: MULTIPLAYER
+player = obj_player // get_player_target() //FIXME: MULTIPLAYER
 
 item = noone
 

@@ -4,7 +4,7 @@
 ///@return {id.Instance}
 function attack_war_hammer(attacker = noone, angleModifier = 0) {
 	if (attacker == noone) {
-		attacker = get_player_target()
+		attacker = obj_player // get_player_target()
 	}
 
 	var proj = instance_create_depth(attacker.x, attacker.y, depths.playerProjectile, obj_war_hammer)

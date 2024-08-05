@@ -6,11 +6,8 @@ angleSpriteToVelocity = true
 
 //weaponType = playerWeapons.warHammer
 
-targetsMax = 0
-
-// damageFrameCooldown = 60 // not used yet...
-
-knockback = 10
+targetsMax = 1
+knockback = 0
 
 shadowSprite = spr_armor_spike_shadow
 

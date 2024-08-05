@@ -11,6 +11,8 @@ spawnDistance = 32
 spawnObject = obj_greataxe_swipe
 maxCd = 72
 
+multiProjSpawnDelay = 10
+
 baseDamage = 15
 baseKnockback = 16
 projectileCount = 1
@@ -19,7 +21,8 @@ stats = [
 	new weaponStat(enumWeaponStats.damage, id),
 	new weaponStat(enumWeaponStats.knockback, id),
 	new weaponStat(enumWeaponStats.projectileCount, id),
-	new weaponStat(enumWeaponStats.cooldown, id)
+	new weaponStat(enumWeaponStats.cooldown, id),
+	new weaponStat(enumWeaponStats.critDamage, id)
 ]
 
 ///@description					Gets a weapon stat value
@@ -42,12 +45,14 @@ stats = [
 
 reverseSwipe = false
 
-owner = get_player_target()
+owner = obj_player.id // get_player_target()
 
 upgrades = [
-	obj_wupg_gen_damage,
-	obj_wupg_gen_knockback,
-	obj_wupg_gen_weapon_size,
+	obj_wupg_gen_reinforced,
+	obj_wupg_gen_sharpened,
+	obj_wupg_gen_hefty,
+	obj_wupg_gen_hastened,
+	obj_wupg_gen_rapid_swings,
 
 	obj_wupg_wh_lit_crits,
 	obj_wupg_wh_extra_push,
@@ -57,26 +62,33 @@ upgrades = [
 processUpgrades()
 
 use = function(_attackAngle) {
-	var spawnPoint = get_vec2_from_angle_mag(_attackAngle, spawnDistance)
+	var _projectiles = []
 	
-	var inst = instance_create_depth(
-		owner.x + spawnPoint.x,
-		owner.y + spawnPoint.y,
-		depths.fx,
-		spawnObject
-	)
+	for (var i = 0; i < projectileCount + bonusProjectiles; i++) {
+		var spawnPoint = get_vec2_from_angle_mag(_attackAngle, spawnDistance)
 	
-	inst.image_angle = owner.attackAngle
-	inst.facingAngle = owner.attackAngle
-	inst.owner = owner
+		var _inst = instance_create_depth(
+			owner.x + spawnPoint.x,
+			owner.y + spawnPoint.y,
+			depths.fx,
+			spawnObject
+		)
 	
-	if (reverseSwipe) {
-		inst.reverseSwipe = true
-	}
+		_inst.image_angle = owner.attackAngle
+		_inst.facingAngle = owner.attackAngle
+		_inst.owner = owner
+		_inst.spawnDelay = multiProjSpawnDelay * i
+	
+		if (reverseSwipe) {
+			_inst.reverseSwipe = true
+		}
 
-	reverseSwipe = !reverseSwipe
+		reverseSwipe = !reverseSwipe
 	
-	audio_play_sound(snd_woosh, 1, false)
+		//audio_play_sound(snd_woosh, 1, false)
+		
+		array_push(_projectiles, _inst)
+	}
 	
-	return [inst]
+	return _projectiles
 }

@@ -1,8 +1,8 @@
 
-function display_weapon_upgrade_prompt() {
+function display_weapon_upgrade_prompt(_player) {
 	set_game_pause_state(true)
 	
-	var _player = get_player_target()
+	//var _player = obj_player // get_player_target()
 	var _weapon = _player.equipment.weapon
 	
 	if (_weapon == noone) {

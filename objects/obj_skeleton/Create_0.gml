@@ -2,7 +2,7 @@
 
 event_inherited();
 
-Name = "Skeleton"
+name = "Skeleton"
 
 hpMax = 20
 hp = hpMax

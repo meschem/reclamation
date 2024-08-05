@@ -3,7 +3,7 @@
 ///@param {id.Instance} menu			Menu to attach to
 
 function create_ability_lvlup_button(ability, menu = noone) {	
-	var player = get_player_target()
+	var player = obj_player // get_player_target()
 		
 	with (ability) {
 		var button = instance_create_depth(0, 0, depths.ui, obj_card_ability_lvlup_selection)

@@ -6,7 +6,7 @@
 ///@return {bool}					Returns whether or not the target is killed
 
 function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force = 1) {
-	var attacker = get_player_target()
+	var attacker = obj_player // get_player_target()
 	
 	amount *= attacker.bonusDamageScalar
 	

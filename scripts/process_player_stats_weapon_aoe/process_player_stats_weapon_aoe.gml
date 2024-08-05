@@ -31,7 +31,6 @@ function process_player_stats_weapon_aoe() {
 		with (obj_weapon_upgrade) {
 			if (active) {
 				rollingScalar += bonusWeaponAoe
-				create_toaster(rollingScalar)
 			}
 		}
 		

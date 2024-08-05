@@ -2,7 +2,7 @@
 ability = playerAbilities.null
 index = 0
 icon = spr_ability_icon_null
-owner = obj_player
+owner = obj_player.id
 
 cooldown = 0
 maxCd = 60

@@ -1,13 +1,19 @@
 function struct_dungeon_room() {}
 
-#macro spawnSizeHorde 40
+#macro spawnSizeHorde 80
 #macro spawnSizeBase 12
 #macro spawnSizeTough 2
 #macro spawnSizeBrutal 1
 
+#macro spawnWavesHorde 4
 #macro spawnWavesBase 8
 #macro spawnWavesTough 6
 #macro spawnWavesBrutal 4
+
+// HORDE COUNT DEFAULT: 320
+// BASE COUNT DEFAULT:  96
+// TOUGH COUNT DEFAULT: 12
+// BRUTAL COUNT DEFALUT: 4
 
 ///@description							Dungeon room is built based off list of tiered enemies
 ///										and the type of room. 
@@ -35,9 +41,6 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 
 	///@description						Sets up spawns for a room
 	function setupSpawner() {
-		var _countScalar = (roomType == roomTypes.horde) ? 0.25 : 1
-		var _wavesScalar = 1 / _countScalar
-		
 		if (bossSpawn.active) {
 			setup_spawn(bossSpawn.baddie, 1, 1, spawnerTypes.boss)
 		}
@@ -52,20 +55,29 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 		}
 		
 		for (var i = 0; i < phases; i++) {
-			if (baseSpawn.active) {				
-				setup_spawn(
-					baseSpawn.baddie,
-					baseSpawn.spawnCountMultiplier * spawnSizeBase * _countScalar,
-					_wavesScalar * spawnWavesBase,
-					baseSpawn.spawnType
-				)
+			if (baseSpawn.active) {
+				if (baseSpawn.spawnType == spawnerTypes.horde) {
+					setup_spawn(
+						baseSpawn.baddie,
+						baseSpawn.spawnCountMultiplier * spawnSizeHorde,
+						spawnWavesHorde,
+						baseSpawn.spawnType
+					)
+				} else {
+					setup_spawn(
+						baseSpawn.baddie,
+						baseSpawn.spawnCountMultiplier * spawnSizeBase,
+						spawnWavesBase,
+						baseSpawn.spawnType
+					)
+				}				
 			}
 			
 			if (toughSpawn.active) {
 				setup_spawn(
 					toughSpawn.baddie,
-					toughSpawn.spawnCountMultiplier * spawnSizeTough * _countScalar,
-					_wavesScalar * spawnWavesTough,
+					toughSpawn.spawnCountMultiplier * spawnSizeTough, // * _countScalar,
+					spawnWavesTough, // * _wavesScalar ,
 					toughSpawn.spawnType
 				)
 			}
@@ -73,8 +85,8 @@ function dungeonRoom(_roomId, _difficulty = 1, _phases = 1, _spawnScript = -1) c
 			if (brutalSpawn.active) {
 				setup_spawn(
 					brutalSpawn.baddie,
-					brutalSpawn.spawnCountMultiplier * spawnSizeBrutal * _countScalar,
-					_wavesScalar * spawnWavesBrutal,
+					brutalSpawn.spawnCountMultiplier * spawnSizeBrutal, // * _countScalar,
+					spawnWavesBrutal, // * _wavesScalar,
 					brutalSpawn.spawnType
 				)
 			}

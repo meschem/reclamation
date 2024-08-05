@@ -2,7 +2,7 @@
 /// @param {real}	amount	Amount to add
 
 function add_gold(_amount) {
-	var _player = get_player_target()
+	var _player = obj_player // get_player_target()
 	
 	_player.gold += _amount
 	_player.totalGold += _amount

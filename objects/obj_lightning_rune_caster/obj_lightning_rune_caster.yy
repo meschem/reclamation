@@ -4,13 +4,14 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_lightning_rune_caster",
   "overriddenProperties":[],
   "parent":{
-    "name":"projectiles",
-    "path":"folders/Objects/abilities/jonah/projectiles.yy",
+    "name":"_projectiles",
+    "path":"folders/Objects/abilities/jonah/_projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

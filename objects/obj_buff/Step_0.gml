@@ -9,4 +9,3 @@ if (age == 1) {
 if (!permanent && timer <= 0) {
 	instance_destroy()
 }
-

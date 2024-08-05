@@ -41,12 +41,9 @@ stats = [
 
 addRune("Aftershock", "After a short period of time, a second stomp hits.")
 addRune("Pushback", "Knocks targets back a distance")
-addRune("Echo Slam", "Deals more damage the more targets that are hit")
+addRune("Echo Slam", "Deals 10% more damage the more targets that are hit")
 
 use = function() {
 	owner.sprite_index = owner.sprSlam
 	owner.image_index = 0
-	
-	//animAbilityQueue = activate_war_stomp(level)
-	//ability is activated on the stomp animation for sprSlam
 }

@@ -2,7 +2,7 @@ event_inherited()
 
 title = "Player Gear"
 
-owner = get_player_target() //FIXME: MULTIPLAYER
+owner = obj_player.id // get_player_target() //FIXME: MULTIPLAYER
 
 padding = 4
 lineHeight = 14

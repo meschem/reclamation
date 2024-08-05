@@ -22,6 +22,9 @@ controllerIndex = 0
 
 inputFocus = enumInputTypes.keyboardMouse
 
+runStatsController = create_instance(obj_run_stats_controller)
+runStatsController.owner = id
+
 depth = depths.player
 
 age = 0
@@ -30,6 +33,8 @@ reticles = [
 	spr_reticle_arrow_sm,
 	spr_reticle_crossbow
 ]
+
+//add_player_target(id)
 
 reticleIndex = 0
 

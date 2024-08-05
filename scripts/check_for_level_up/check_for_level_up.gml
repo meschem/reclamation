@@ -3,12 +3,12 @@
 
 function check_for_level_up(player = noone) {
 	if (player == noone) {
-		player = get_player_target()
+		player = get_first_player() // obj_player // get_player_target()
 	}
 	
 	var leveled = false
 
-	with (player) {
+	with (obj_player) {
 		if (xp >= obj_game_controller.playerXpLevelTable[level - 1]) {
 			xp -= obj_game_controller.playerXpLevelTable[level - 1]
 			level++			

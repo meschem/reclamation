@@ -12,15 +12,19 @@ enum baddieScalars {
 }
 
 create_instance(obj_equipment_controller)
-create_instance(obj_run_stats_controller)
+//create_instance(obj_run_stats_controller)
 
 type = runTypes.normal
+
+finalLevelRoom = rm_dungeon_end
+endScreen = false
 
 dungeon = noone
 currentFloor = 0
 currentRoom = -1
 
 displayRunInfo = true
+displayRunStats = true
 displayStateSpacing = 10
 
 // Difficulty Scalars

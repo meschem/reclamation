@@ -8,8 +8,8 @@
   "name":"obj_ptb_glob_grn_md",
   "overriddenProperties":[],
   "parent":{
-    "name":"particles",
-    "path":"folders/Objects/particles.yy",
+    "name":"slimes",
+    "path":"folders/Objects/particles/slimes.yy",
   },
   "parentObjectId":{
     "name":"obj_particle_bouncer",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blood_bit_md",
-    "path":"sprites/spr_blood_bit_md/spr_blood_bit_md.yy",
+    "name":"spr_slime_bit_green_md",
+    "path":"sprites/spr_slime_bit_green_md/spr_slime_bit_green_md.yy",
   },
   "spriteMaskId":null,
   "visible":true,

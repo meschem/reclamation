@@ -40,8 +40,8 @@ stats = [
 	)
 ]
 
-//addRune("Growing Rage", "Each attack increases damage by 5")
-//addRune("Blood Fueled", "Kills extend duration by 0.1 seconds. Max +3 seconds.")
+addRune("Attraction", "Draws nearby enemies in. Halves duration but doubles attack speed.")
+addRune("Criticality", "Deals 3x critical damage to a random enemy in the area.")
 
 use = function() {
 	var _rune = instance_create_depth(owner.x, owner.y, depths.enemyFloorFx, obj_lightning_rune_caster)
@@ -53,4 +53,18 @@ use = function() {
 	_rune.explosionRadius = radius[level - 1] * 1.35
 	_rune.explosionDamage = explosionDamage[level - 1]
 	_rune.owner = owner
+	
+	if (runes[enumRunes.magdela].enabled) {
+		add_player_target(_rune)
+		
+		_rune.duration /= 2
+		_rune.tickRate /= 2
+		_rune.initialDelay /= 2
+		_rune.playerTarget = true
+	}
+	
+	if (runes[enumRunes.voldan].enabled) {
+		_rune.critChance = 1
+		_rune.maxCrits = 1
+	}
 }

@@ -9,8 +9,8 @@
   "name":"obj_wupg_wh_extra_push",
   "overriddenProperties":[],
   "parent":{
-    "name":"upgrades",
-    "path":"folders/Objects/equipment/weapons/upgrades.yy",
+    "name":"major",
+    "path":"folders/Objects/equipment/weapons/upgrades/major.yy",
   },
   "parentObjectId":{
     "name":"obj_weapon_upgrade",

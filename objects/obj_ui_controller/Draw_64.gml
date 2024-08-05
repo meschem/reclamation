@@ -1,9 +1,6 @@
 // Draw Ult Meter
 if (drawUltimateBar) {
 	if (obj_player.ultimateChargeDelay > 0) {
-		create_toaster(
-			obj_player.ultimateChargeDelay
-		)
 	} else {
 		draw_set_color(c_white)
 	

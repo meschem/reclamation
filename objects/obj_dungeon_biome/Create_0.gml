@@ -284,6 +284,7 @@ function biomeSpawn(_baddie, _tier, _spawnCountMultiplier = 1, _spawnType = spaw
 	difficultyMax = variable_struct_exists(_props, "difficultyMax") ? _props.difficultyMax : 99
 	spawnType = _spawnType
 	props = _props
+	phase = 1
 	
 	///@description			Checks if this can be spawned on a given floor number
 	///@return {bool}

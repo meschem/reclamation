@@ -1,7 +1,7 @@
 
 function display_level_abil_select_prompt(player = noone) {
 	if (player == noone) {
-		player = get_player_target()
+		player = obj_player // get_player_target()
 	}
 
 	set_game_pause_state(true)

@@ -2,6 +2,8 @@
 
 event_inherited()
 
+spawnDelay = 0
+
 distanceMax = 150
 hitCount = 0
 
@@ -11,6 +13,7 @@ targetsMaxPerFrame = -1
 damageLostPerTarget = 0
 hitsWalls = false
 reverseSwipe = false
+critChance = 0
 
 damageFrameCooldown = 120
 
@@ -19,6 +22,8 @@ enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
 knockback = 16
 
 animSpeed = 1
+
+audio_play_sound(snd_woosh, 1, false)
 
 impactSounds = [
 	snd_punch_1, snd_punch_2, snd_punch_3

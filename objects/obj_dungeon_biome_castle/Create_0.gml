@@ -110,7 +110,7 @@ addRoom(rm_combat_testing_f, roomSizes.medium)
 addRoom(rm_shop_testing, roomSizes.shop)
 
 // BADDIES //
-addBaddie(obj_skully_fly, baddieTiers.pest, 10, spawnerTypes.horde)
+//addBaddie(obj_skully_fly, baddieTiers.pest, 10, spawnerTypes.horde)
 addBaddie(obj_skeleton, baddieTiers.small)
 
 //addBaddieStruct({
@@ -119,6 +119,13 @@ addBaddie(obj_skeleton, baddieTiers.small)
 //	spawnType: spawnerTypes.flybyCharge,
 //	difficultyMin: 2
 //})
+
+addBaddieStruct({
+	baddie: obj_skully_fly,
+	spawnTier: baddieTiers.pest,
+	spawnCountMultiplier: 1,
+	spawnType: spawnerTypes.horde
+})
 
 addBaddieStruct({
 	baddie: obj_slime_green,

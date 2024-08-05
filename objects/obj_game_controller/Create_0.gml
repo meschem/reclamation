@@ -16,6 +16,7 @@ global.createParticleFx = true
 //random_set_seed(4)
 
 activeAbilityControllers = []
+baddieTargets = [] // used for targeting by baddies
 
 init_run_globals()
 
@@ -60,7 +61,37 @@ playerXpLevelTable = [
 	10000,
 	12000,
 	14000,
-	16000
+	16000,
+	19000,
+	22000,
+	25000,
+	29000,
+	33000,
+	37000,
+	41000,
+	45000,
+	50000,
+	55000,
+	60000,
+	76000,
+	83000,
+	90000,
+	100000,
+	110000,
+	120000,
+	130000,
+	140000,
+	150000,
+	170000,
+	190000,
+	210000,
+	250000,
+	300000,
+	350000,
+	400000,
+	450000,
+	500000
+	
 ]
 
 enum levelUpRewards {
@@ -74,37 +105,55 @@ enum levelUpRewards {
 }
 
 levelUpRewardTable = [
+	//levelUpRewards.weaponUpgrade,
+	//levelUpRewards.weaponUpgrade,
+	//levelUpRewards.weaponUpgrade,
+	//levelUpRewards.weaponUpgrade,
+	//levelUpRewards.weaponUpgrade,
+	
 	levelUpRewards.abilitySelect,
-	//levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
-	//levelUpRewards.abilityLevelUp,
-	//levelUpRewards.trinket,
+	levelUpRewards.trinket,
 	levelUpRewards.abilitySelect,
-	//levelUpRewards.trinket,
+	levelUpRewards.weaponUpgrade,
 	levelUpRewards.abilitySelect,
+	
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,
 	levelUpRewards.abilityLevelUp,
+	levelUpRewards.weaponUpgrade,
 	levelUpRewards.trinket,
+	
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,
 	levelUpRewards.abilityLevelUp,
+	levelUpRewards.weaponUpgrade,
 	levelUpRewards.trinket,
+	
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,
 	levelUpRewards.abilityLevelUp,
+	levelUpRewards.weaponUpgrade,
 	levelUpRewards.trinket,
+	
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,
 	levelUpRewards.abilityLevelUp,
+	levelUpRewards.weaponUpgrade,
 	levelUpRewards.trinket,
+	
 	levelUpRewards.abilityLevelUp,
 	levelUpRewards.trinket,
 	levelUpRewards.abilityLevelUp,
+	levelUpRewards.weaponUpgrade,
+	levelUpRewards.trinket,
 ]
 
 window_set_cursor(cr_none)
 
 cursor_sprite = spr_cursor_aiming
 
-spawn_player()
+var _inst = spawn_player()
+
+add_player_target(_inst)
+

@@ -1,5 +1,5 @@
 onDeathFx()
 
-run_lifecycle_events(enumLifeCycleEvents.destroy, {
+run_wupg_lifecycle_events(enumLifeCycleEvents.destroy, {
 	projectile: id
 })

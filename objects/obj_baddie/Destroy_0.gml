@@ -14,6 +14,7 @@ if (!killedByBounds) {
 	
 	/// FIXME: Uses obj_player
 	add_run_stat_kill(id, obj_player)
+	add_run_stat(enumRunStats.xpGained, xp)
 	
 	/// FIXME: Hack
 	obj_player.xp += xp
@@ -27,11 +28,11 @@ if (!killedByBounds) {
 		delete loot[i]
 	}
 
-	var _player = get_player_target()
+	//var _player = get_player_target()
 
-	if (_player.hp < _player.maxHp) {
-		if (random(1) < 0.02) {
-			instance_create_depth(x, y, depths.enemy, obj_health_globe_sm)
-		}
-	}
+	//if (_player.hp < _player.maxHp) {
+	//	if (random(1) < 0.02) {
+	//		instance_create_depth(x, y, depths.enemy, obj_health_globe_sm)
+	//	}
+	//}
 }

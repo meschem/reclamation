@@ -31,7 +31,7 @@ shadowSprite = spr_war_hammer_shadow
 
 soundOnHit = snd_clack
 
-var owner = get_player_target()
+var owner = obj_player.id // get_player_target()
 
 critChance = owner.critChance
 

@@ -2,6 +2,8 @@
 
 event_inherited();
 
+name = "Wraith"
+
 xp = baddie_xp_tough
 hpMax = 40
 hp = hpMax

@@ -12,4 +12,4 @@ rotationSpeed = 2
 
 radius = 100
 
-owner = obj_player
+owner = obj_player.id

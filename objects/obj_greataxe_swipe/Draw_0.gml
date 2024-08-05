@@ -1,3 +1,7 @@
+if (spawnDelay > 0) {
+	return 0
+}
+
 if (reverseSwipe && image_yscale > 0) image_yscale *= -1
 
 draw_sprite_ext(

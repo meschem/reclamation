@@ -75,7 +75,8 @@ pushDeaccel = 0.075
 
 state = enemyStates.normal
 
-target = obj_player
+target = get_player_target()
+
 
 flies = false
 phases = false

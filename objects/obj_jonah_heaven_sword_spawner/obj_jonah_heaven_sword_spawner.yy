@@ -10,8 +10,8 @@
   "name":"obj_jonah_heaven_sword_spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"projectiles",
-    "path":"folders/Objects/abilities/jonah/projectiles.yy",
+    "name":"_projectiles",
+    "path":"folders/Objects/abilities/jonah/_projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

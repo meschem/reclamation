@@ -1,5 +1,5 @@
 ///@description   Description
-function get_abilities_for_lvlup() {
+function get_abilities_for_lvlup(_player) {
 	var abilities = []
 	
 	for (var i = 0; i < instance_number(obj_ability); i++) {

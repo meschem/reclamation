@@ -11,6 +11,7 @@ enum roomStates {
 	upgradeMenu,
 	overtime,
 	completed,
+	endScreen,
 }
 
 enum roomCategories {
@@ -34,6 +35,8 @@ overtimeLength = seconds_to_frames(5)
 overtimeAge = 0
 
 nextLevel = rm_start_dev
+
+hihihihihi = false
 
 create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
@@ -61,6 +64,12 @@ initStats = function() {
 }
 
 initCombat = function() {
+	if (obj_run_controller.endScreen) {
+		state = roomStates.endScreen
+		create_toaster("End Screen. No Combat.")
+		return 0
+	}
+	
 	create_toaster("Initiating Combat")
 	if (instance_number(obj_dungeon) > 0) {
 		create_toaster("Setting up Spawner")
@@ -116,15 +125,15 @@ completeOvertime = function() {
 			currentFloor++
 				
 			if (currentFloor == dungeon.floorCount) {
-				show_message("restarting run floorCount")
-				room_goto(rm_dungeon_end)
-				//restart_run()
+				endScreen = true
+				room_goto(finalLevelRoom)
 			}
 				
 			var _success = display_room_select_prompt()
 				
 			if (!_success) {
-				room_goto(rm_dungeon_end)
+				endRunCombat()
+				room_goto(finalLevelRoom)
 			}
 				
 			//loadRoom(dungeon.floors[currentFloor].rooms[0])

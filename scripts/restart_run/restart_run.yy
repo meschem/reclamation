@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"restart_run",
   "parent":{
-    "name":"run_cleanup",
-    "path":"folders/Scripts/general/run_cleanup.yy",
+    "name":"run_mgmt",
+    "path":"folders/Scripts/general/run_mgmt.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

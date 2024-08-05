@@ -2,6 +2,8 @@
 
 event_inherited();
 
+name = "Banshee"
+
 xp = baddie_xp_brutal
 hpMax = 120
 hp = hpMax

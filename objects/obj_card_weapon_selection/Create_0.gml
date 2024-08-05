@@ -26,7 +26,7 @@ image_yscale = height / sprite_height
 
 onClick = function () {
 	//FIXME Multiplayer: Assumes single player. Selection window needs owner.
-	var _player = get_player_target()
+	var _player = obj_player // get_player_target()
 	
 	_player.addWeapon(weapon.object_index)
 
