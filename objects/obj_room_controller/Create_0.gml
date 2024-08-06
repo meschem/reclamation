@@ -19,6 +19,7 @@ enum roomCategories {
 	shop,
 	stats,
 	inactive,
+	endScreen,
 }
 
 category = roomCategories.combat
@@ -36,7 +37,7 @@ overtimeAge = 0
 
 nextLevel = rm_start_dev
 
-hihihihihi = false
+pauseMenuEnabled = true
 
 create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
@@ -91,6 +92,13 @@ completeCombat = function() {
 	process_room_reward(_reward)
 
 	initOvertime()
+}
+
+initEndScreen = function() {
+	stats = roomStates.endScreen
+	disable_pause_menu()
+	disable_player_controls()
+	create_run_stats_menu()
 }
 
 initShopping = function() {

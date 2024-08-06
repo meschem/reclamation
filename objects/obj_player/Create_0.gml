@@ -71,6 +71,7 @@ attackSpeedScalar = baseAttackSpeedScalar
 autoAttack = false
 autoAttackMaxRange = 180
 isAttacking = false
+inputEnabled = true
 
 maxHp = baseMaxHp
 hp = maxHp

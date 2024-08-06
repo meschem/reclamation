@@ -10,7 +10,9 @@ if (keyboard_check_pressed(ord("P"))) {
 	create_toaster("Auto Attack " + enabledText)
 }	
 
-player_movement_input()
+if (inputEnabled) {
+	player_movement_input()
+}
 
 hitWall = player_walk_to_location(xVel, yVel)
 

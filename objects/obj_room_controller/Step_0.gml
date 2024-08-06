@@ -1,5 +1,5 @@
 if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-	if (!game_is_paused() && pauseDelay <= 0) {
+	if (!game_is_paused() && pauseMenuEnabled && pauseDelay <= 0) {
 		set_game_pause_state(true)
 		create_pause_menu()
 	}
@@ -31,6 +31,10 @@ if (state == roomStates.init) {
 	
 	if (category == roomCategories.stats) {
 		initStats()
+	}
+	
+	if (category == roomCategories.endScreen) {
+		initEndScreen()
 	}
 }
 

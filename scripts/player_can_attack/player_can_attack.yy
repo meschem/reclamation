@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script213",
+  "%Name":"player_can_attack",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script213",
+  "name":"player_can_attack",
   "parent":{
     "name":"input",
     "path":"folders/Scripts/player/input.yy",

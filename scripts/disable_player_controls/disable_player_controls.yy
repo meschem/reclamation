@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"spawn_ability_trees",
+  "%Name":"disable_player_controls",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"spawn_ability_trees",
+  "name":"disable_player_controls",
   "parent":{
-    "name":"room_config",
-    "path":"folders/Scripts/room_config.yy",
+    "name":"input",
+    "path":"folders/Scripts/player/input.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

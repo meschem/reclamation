@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"spawn_ability_trees",
+  "%Name":"disable_pause_menu",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"spawn_ability_trees",
+  "name":"disable_pause_menu",
   "parent":{
-    "name":"room_config",
-    "path":"folders/Scripts/room_config.yy",
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
