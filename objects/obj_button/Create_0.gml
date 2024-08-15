@@ -22,8 +22,9 @@ image_speed = 0
 menu = noone
 textAlign = enumAligns.left
 textString = ""
-textPosition = new vec2(x + paddingX, y + paddingY)
+textPosition = new vec2(paddingX, paddingY)
 textFont = font_pxlxxl_m
+textCentered = false
 
 display = true
 
@@ -63,7 +64,7 @@ setText = function(str, align = enumAligns.center) {
 		
 		textPosition.x = (width / 2) - (textWidth / 2)
 		textPosition.y = (height / 2) - (textHeight / 2)
-	}	
+	}
 }
 
 ///@description				Sets a button's height and width

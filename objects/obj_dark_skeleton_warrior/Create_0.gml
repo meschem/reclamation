@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Dark Skeleton Warrior"
 
 xp = 300
 hpMax = 300

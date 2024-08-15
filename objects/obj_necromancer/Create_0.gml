@@ -2,6 +2,8 @@
 
 event_inherited()
 
+name = "Necromancer"
+
 apply_base_tier_stats(baddieTiers.large)
 
 xp = 200

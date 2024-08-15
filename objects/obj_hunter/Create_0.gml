@@ -19,7 +19,7 @@ baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
 
 availableWeapons = [
-	obj_weapon_throwng_knives
+	obj_weapon_throwing_knives
 ]
 
 sprIdle = spr_hunter

@@ -5,6 +5,8 @@ enum menuWidths {
 	talents = 320
 }
 
+age = 0
+
 title = ""
 
 parentMenu = noone
@@ -25,7 +27,7 @@ marginY = 0
 
 buttonMarginY = 4
 
-display = false
+display = true
 focused = true
 enabled = true
 

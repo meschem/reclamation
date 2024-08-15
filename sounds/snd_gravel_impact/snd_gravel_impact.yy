@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_gravel_impact",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.258254,
+  "name":"snd_gravel_impact",
+  "parent":{
+    "name":"hits",
+    "path":"folders/Sounds/hits.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_gravel_impact.wav",
+  "type":0,
+  "volume":0.7,
+}

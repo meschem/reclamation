@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Cycloskel"
 
 hpMax = 30
 hp = hpMax

@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Toxic Dead"
 
 hpMax = 25
 hp = hpMax

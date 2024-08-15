@@ -54,14 +54,14 @@ getItemsByRolling = function(_count, _rarityMultiplier = 1) {
 	for (var i = 0; i < _count; i++) {
 		_rarity = get_random_rarity()
 		
-		for (var i = 0; i < array_length(_equipment); i++) {
-			if (_equipment[i].rarity == _rarity) {
-				_inst = create_instance(_equipment[i].object_index)
+		for (var j = 0; j < array_length(_equipment); j++) {
+			if (_equipment[j].rarity == _rarity) {
+				_inst = create_instance(_equipment[j].object_index)
 				
 				array_push(_selected, _inst)
 				break
 			}
-			
+						
 			if (i == array_length) {
 				create_toaster("Item not found of rarity", _rarity)
 			}

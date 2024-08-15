@@ -95,7 +95,7 @@ completeCombat = function() {
 }
 
 initEndScreen = function() {
-	stats = roomStates.endScreen
+	state = roomStates.endScreen
 	disable_pause_menu()
 	disable_player_controls()
 	create_run_stats_menu()

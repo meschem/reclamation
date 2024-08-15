@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Gilded Skeleton Warrior"
 
 xp = 350
 hpMax = 450

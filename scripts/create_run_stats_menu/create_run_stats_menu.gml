@@ -1,5 +1,10 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+///@description						Create run stats menu
 function create_run_stats_menu() {
+	var _menu = instance_create_depth(0, 0, depths.ui, obj_run_stats_menu)
 	
+	_menu.title = ""
+	_menu.subTitle = ""
+	_menu.centered = true
+	
+	_menu.display = true
 }

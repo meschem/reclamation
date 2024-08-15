@@ -1,4 +1,4 @@
-/// @description				Creates a button that can be used for a menu
+/// @description					Creates a button that can be used for a menu
 /// @param {string} displayText		Text to display on the button
 /// @param {real}	behavior		On click behavior. Uses enum buttonOnClickBehaviors.
 /// @param {real}	style			Display style. Uses enum buttonStyles.

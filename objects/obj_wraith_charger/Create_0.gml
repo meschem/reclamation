@@ -2,6 +2,8 @@
 
 event_inherited()
 
+name = "Wraith (Swarm)"
+
 xp = baddie_xp_tough / 1.5
 hpMax = 40
 hp = hpMax

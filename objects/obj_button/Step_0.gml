@@ -1,4 +1,3 @@
-
 if (state == buttonStates.normal) {
 	if (mouseIsOver()) {
 		

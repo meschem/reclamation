@@ -53,8 +53,6 @@ use = function(_coin) {
 launch = function(_seekTarget, _launchAngle) {
 	var _proj = launch_projectile(obj_golden_bolt, _launchAngle, launchSpeed, owner)
 	
-	create_toaster("launching")
-	
 	_proj.seekTarget = _seekTarget
 	_proj.damageDirect = damageDirect[level - 1]
 	

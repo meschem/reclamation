@@ -11,10 +11,7 @@
     "name":"weapons",
     "path":"folders/Objects/projectiles/weapons.yy",
   },
-  "parentObjectId":{
-    "name":"obj_chain_lit_bolt",
-    "path":"objects/obj_chain_lit_bolt/obj_chain_lit_bolt.yy",
-  },
+  "parentObjectId":null,
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

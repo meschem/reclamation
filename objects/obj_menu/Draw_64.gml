@@ -1,6 +1,6 @@
 
-if (!display) {
-	display = true
+if (!display || age < 2) {
+	//display = true
 	return 0
 }
 

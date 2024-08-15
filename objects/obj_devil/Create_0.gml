@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Devil"
 
 xp = 60
 hpMax = 60

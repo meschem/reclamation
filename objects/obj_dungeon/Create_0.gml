@@ -225,7 +225,7 @@ createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket, _ph
 				_phaseCount
 			)
 			
-			//_room.baseSpawn.spawnCountMultiplier *= 0.3
+			_room.baseSpawn.spawnCountMultiplier *= 0.2
 			//_room.toughSpawn.spawnCountMultiplier *= 0.3
 		break
 		

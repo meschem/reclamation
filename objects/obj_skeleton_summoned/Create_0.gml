@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Summoned Skeleton"
 
 deathParticles = [
 	obj_ptb_skel_bone_blue,

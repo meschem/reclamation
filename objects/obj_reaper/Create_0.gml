@@ -2,6 +2,8 @@
 
 event_inherited();
 
+name = "Reaper"
+
 xp = 100
 hpMax = 100
 hp = hpMax

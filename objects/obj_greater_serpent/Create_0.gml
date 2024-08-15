@@ -2,6 +2,8 @@
 // Inherit the parent event
 event_inherited()
 
+name = "Greater Fire Serpent"
+
 moveSpeedMax = 0.35
 weight = 20
 

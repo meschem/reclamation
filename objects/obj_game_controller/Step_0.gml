@@ -2,8 +2,9 @@
 
 gameFrame++
 
-if (keyboard_check_pressed(vk_f2))
+if (keyboard_check_pressed(vk_f2)) {
 	game_restart()
+}
 
 if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderrb)) {
 	window_set_fullscreen(!window_get_fullscreen())
@@ -23,7 +24,12 @@ if (keyboard_check_pressed(vk_f6)) {
 	//create_shop_menu()
 	//var lvl = obj_player.getTrinketLevel(obj_trinket_golden_puzzlebox)
 	//display_room_select_prompt()
-	obj_run_stats_controller.getTotalKills()
+	//obj_run_stats_controller.getTotalKills()
+	with (obj_run_stats_menu) {
+		instance_destroy()
+	}
+	
+	create_run_stats_menu()
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
@@ -45,10 +51,6 @@ if (keyboard_check_pressed(vk_f10)) {
 		hp = maxHp
 	}
 }
-
-//if (keyboard_check_pressed(vk_f11)) { 
-//	create_shop_menu()
-//}
 
 if (keyboard_check_pressed(ord("I"))) {
 	if (instance_number(obj_equipment_menu) > 0) {

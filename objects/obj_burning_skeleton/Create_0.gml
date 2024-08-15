@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Burning Dead"
 
 hpMax = 20
 hp = hpMax

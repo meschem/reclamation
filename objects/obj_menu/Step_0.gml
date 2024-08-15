@@ -2,6 +2,8 @@
 /// shouldn't cause expense issues since game is almost always
 /// paused during menus
 
+age++
+
 if (!focused) {
 	return 0
 }

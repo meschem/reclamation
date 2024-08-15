@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"define_level_xp_table",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"define_level_xp_table",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

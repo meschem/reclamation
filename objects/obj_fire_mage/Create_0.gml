@@ -1,6 +1,8 @@
 /// @description Init
 
-event_inherited();
+event_inherited()
+
+name = "Fire Mage"
 
 apply_base_tier_stats(baddieTiers.large)
 
