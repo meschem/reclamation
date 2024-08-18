@@ -11,7 +11,7 @@ if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulder
 }
 
 if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) {
-	if (instance_number(obj_big_selection_menu == 0)) {
+	if (instance_number(obj_big_selection_menu) == 0) {
 		obj_player.xp = playerXpLevelTable[obj_player.level]
 		check_for_level_up()
 	}

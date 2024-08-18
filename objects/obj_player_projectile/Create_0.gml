@@ -48,6 +48,9 @@ xVel = 0
 yVel = 0
 moveSpeedMax = 100
 
+xAccel = 0
+yAccel = 0
+
 rotationSpeed = 0 // rotation per frame
 
 knockback = 0
@@ -101,6 +104,9 @@ impactSoundsMax = 3
 impactSoundsMaxPerFrame = 1
 
 owner = noone
+
+poisonStacksOnHit = 0
+poisonDuration = seconds_to_frames(6)
 
 setup_lifecycle_events()
 

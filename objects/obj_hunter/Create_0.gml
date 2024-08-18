@@ -18,6 +18,11 @@ baseAreaOfEffectScalar = 1
 baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
 
+abilityTrees = [
+	create_instance(obj_abil_tree_hunter_nature),
+	create_instance(obj_abil_tree_hunter_survival)
+]
+
 availableWeapons = [
 	obj_weapon_throwing_knives
 ]
@@ -25,4 +30,5 @@ availableWeapons = [
 sprIdle = spr_hunter
 sprWalking = spr_hunter
 sprSlam = spr_hunter
-abilityTrees = playerCharacters.jonah
+//abilityTrees = playerCharacters.jonah
+

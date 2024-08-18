@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_projectile_1",
+  "%Name":"obj_ability_poison_wave",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_projectile_1",
+  "name":"obj_ability_poison_wave",
   "overriddenProperties":[],
   "parent":{
-    "name":"projectiles",
-    "path":"folders/Objects/projectiles.yy",
+    "name":"nature",
+    "path":"folders/Objects/abilities/hunter/nature.yy",
   },
   "parentObjectId":{
-    "name":"obj_projectile_1",
-    "path":"objects/obj_projectile_1/obj_projectile_1.yy",
+    "name":"obj_ability",
+    "path":"objects/obj_ability/obj_ability.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ability_icon_poison_wave",
+    "path":"sprites/spr_ability_icon_poison_wave/spr_ability_icon_poison_wave.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

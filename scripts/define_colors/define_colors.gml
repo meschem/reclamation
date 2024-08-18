@@ -2,6 +2,7 @@
 function define_colors() {
 	with (obj_game_controller) {
 		color_red = make_color_rgb(230, 40, 106)
+		color_orange = make_color_rgb(255, 137, 118)
 		color_blue = make_color_rgb(32, 129, 204)
 		color_yellow = make_color_rgb(254, 237, 88)
 		color_green = make_color_rgb(85, 255, 129)
@@ -10,5 +11,6 @@ function define_colors() {
 		color_aqua = make_color_rgb(85, 213, 255)
 		color_black = make_color_rgb(5, 0, 57)
 		color_dark_purple = make_color_rgb(88, 66, 177)
+		color_light_green = make_color_rgb(110, 255, 150)
 	}
 }

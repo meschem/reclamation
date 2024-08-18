@@ -183,6 +183,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		critHit = true
 	}
 	
+	if (poisonStacksOnHit > 0) {
+		apply_poison(target, poisonStacksOnHit, poisonDuration, owner)
+	}
+	
 	run_wupg_lifecycle_events(enumLifeCycleEvents.targetHit, {
 		owner: owner,
 		target: target,
@@ -222,7 +226,6 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	damageDirect -= damageLostPerTarget
 	
 	if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
-		//instance_destroy()
 		destroy = true
 		break
 	}

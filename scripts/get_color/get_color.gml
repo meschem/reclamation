@@ -10,11 +10,13 @@ function get_color(color) {
 		blue,
 		yellow,
 		green,
+		light_green,
 		teal,
 		purple,
 		aqua,
 		dark,
 		dark_purple,
+		orange,
 		length
 	}
 	
@@ -42,9 +44,15 @@ function get_color(color) {
 						
 		case colors.aqua:
 			return obj_game_controller.color_aqua
+			
+		case colors.orange:
+			return obj_game_controller.color_orange
 						
 		case colors.dark:
 			return obj_game_controller.color_black
+			
+		case colors.light_green:
+			return obj_game_controller.color_light_green
 						
 		case colors.white:
 			return c_white

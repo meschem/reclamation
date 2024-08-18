@@ -131,7 +131,7 @@ function weaponStat(_stat, _weapon, _customType = {}) constructor {
 ///@param {string} _variable		Variable to adjust
 ///@param {array<real>} _values		Values to apply at different levels
 ///@param {bool} _display			Display value in tooltips and prompts
-///@param {real} _unitEnum			Uses enum statUnit. Defaults to none.
+///@param {real} _unitEnum			Uses enum statUnits. Defaults to none.
 ///@param {real} _multiplier		Display multplier if statsUnits is none
 function abilityStat(_name, _variable, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
 	name = _name

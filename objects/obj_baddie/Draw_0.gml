@@ -24,8 +24,8 @@ draw_sprite_ext(
 	image_xscale * damageXScaleMultiplier,
 	image_yscale * damageYScaleMultiplier,
 	rotation,
-	c_white,
-	1
+	image_blend,
+	image_alpha
 )
 
 if (stunLength > 0) {

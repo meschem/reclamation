@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_weapon_projectile_1",
+  "%Name":"obj_abil_tree_hunter_survival",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_weapon_projectile_1",
+  "name":"obj_abil_tree_hunter_survival",
   "overriddenProperties":[],
   "parent":{
-    "name":"weapons",
-    "path":"folders/Objects/projectiles/weapons.yy",
+    "name":"trees",
+    "path":"folders/Objects/abilities/hunter/trees.yy",
   },
-  "parentObjectId":null,
-  "persistent":false,
+  "parentObjectId":{
+    "name":"obj_ability_tree",
+    "path":"objects/obj_ability_tree/obj_ability_tree.yy",
+  },
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

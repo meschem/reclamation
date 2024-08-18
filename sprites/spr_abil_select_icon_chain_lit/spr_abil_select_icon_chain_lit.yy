@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"ability_icons",
-    "path":"folders/Sprites/ui/ability_icons.yy",
+    "name":"jonah",
+    "path":"folders/Sprites/ui/ability_icons/jonah.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

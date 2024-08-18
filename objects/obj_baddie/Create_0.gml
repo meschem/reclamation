@@ -78,6 +78,7 @@ state = enemyStates.normal
 target = get_player_target()
 
 
+
 flies = false
 phases = false
 
@@ -137,6 +138,12 @@ pushForce = 5
 
 stunLength = 0
 shockedLength = 0
+
+poisonStacks = 0
+poisonDamageCdMax = seconds_to_frames(1)
+poisonDamageCdCur = poisonDamageCdMax
+poisonLength = 0
+poisonInflictor = noone
 
 knockbackSlowRatio = 1
 knockbackSlowDuration = 0

@@ -31,7 +31,7 @@ if (moveBehavior == enemyMoveBehaviors.simple) {
 	target = obj_none
 }
 
-var appliedVel = new vec2(xVel, yVel) 
+var appliedVel = new vec2(xVel, yVel)
 
 if (debuffShockAmount > 0)
 	debuffShockAmount--
@@ -107,6 +107,26 @@ if (shockedLength > 0) {
 	}
 
 	shockedLength--
+}
+
+if (poisonLength > 0) {
+	image_blend = get_color(colors.light_green)
+	
+	if (poisonInflictor == noone) {
+		poisonInflictor = get_first_player()
+	}
+	
+	if (poisonDamageCdCur <= 0) {
+		poisonDamageCdCur = poisonDamageCdMax
+		
+		apply_damage(id, poisonStacks, poisonInflictor, 0, damageTextStyles.poison)
+	} else {
+		poisonDamageCdCur--
+	}
+	
+	poisonLength--
+} else {
+	image_blend = c_white
 }
 
 if (stunLength > 0) {
