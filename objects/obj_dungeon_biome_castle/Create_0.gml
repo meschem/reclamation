@@ -135,7 +135,7 @@ addBaddieStruct({
 })
 
 addBaddieStruct({
-	baddie: obj_wraith_charger,
+	baddie: obj_abaddon,
 	spawnTier: baddieTiers.medium,
 	spawnCountMultiplier: 3,
 	spawnType: spawnerTypes.flybyChargeCluster,
