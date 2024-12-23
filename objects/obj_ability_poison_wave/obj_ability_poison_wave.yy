@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"nature",
-    "path":"folders/Objects/abilities/hunter/nature.yy",
+    "path":"folders/Objects/abilities/ophelia/nature.yy",
   },
   "parentObjectId":{
     "name":"obj_ability",

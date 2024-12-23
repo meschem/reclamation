@@ -1,7 +1,8 @@
 event_inherited()
 
 pickupValue = 10
-lifeSpan = seconds_to_frames(12)
+//lifeSpan = seconds_to_frames(12)
+lifeSpan = -1
 
 shadowSprite = spr_shadow_med
 shadowOffset = 6

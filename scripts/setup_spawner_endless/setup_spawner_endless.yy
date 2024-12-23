@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setup_spawner_endless",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_spawner_endless",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Scripts/baddies/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

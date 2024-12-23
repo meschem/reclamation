@@ -4,7 +4,7 @@
 function create_weapon_select_button(_weapon, _menu = noone) {
 	with (_weapon) {
 		var _button = instance_create_depth(0, 0, depths.ui, obj_card_weapon_selection)
-
+		
 		_button.titleText.body = name
 		_button.bodyText.body = description
 		_button.weapon = id

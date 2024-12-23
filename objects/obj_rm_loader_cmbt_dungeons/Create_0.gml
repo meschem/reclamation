@@ -1,2 +1,2 @@
 
-loadRoom = rm_combat_testing_d
+loadRoom = rm_combat_testing_b

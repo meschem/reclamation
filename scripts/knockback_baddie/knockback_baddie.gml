@@ -4,6 +4,10 @@
 /// @param {real} angle				Angle in degrees to push it
 
 function knockback_baddie(target, distance, angle) {
+	if (target.weight >= baddie_weight_immovable) {
+		return 0
+	}
+	
 	distance -= target.weight
 	
 	if (distance <= 0) {

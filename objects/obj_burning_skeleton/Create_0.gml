@@ -21,4 +21,6 @@ moveSpeedMax = 0.5
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 
+walkAnimType = entityWalkAnimTypes.curves
+
 add_baddie_gold_fodder

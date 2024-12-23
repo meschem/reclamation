@@ -1,7 +1,7 @@
 ///@description   Description
 function setup_level_e() {
 	spawner.addPhase([
-		spawner.setupSpawn(obj_fire_mage, 1),
+		spawner.setupSpawn(obj_skeleton, 1),
 		spawner.setupSpawn(obj_zombie, 24),
 	])
 

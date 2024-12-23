@@ -1,3 +1,4 @@
+
 if (game_is_paused()) {
 	image_speed = 0
 
@@ -50,6 +51,10 @@ run_wupg_lifecycle_events(enumLifeCycleEvents.stepBegin, {
 	projectile: id
 })
 
+var destroy = false
+
+stepBegin()
+
 impactSoundFrameSkip = false
 
 spawnPeriodicFx()
@@ -92,7 +97,11 @@ if (seeking && seekTarget != noone) {
 	}
 	
 	if (seekTarget != noone) {
-		turn_towards_point([seekTarget.x, seekTarget.y], maxTurnRate)
+		if (seekStyle == projectileSeekStyles.wide) {
+			turn_towards_point([seekTarget.x, seekTarget.y], maxTurnRate)
+		} else if (seekStyle == projectileSeekStyles.sharp) {
+			accel_towards_point(seekTarget.x, seekTarget.y, seekAccel)
+		}
 		
 		maxTurnRate += maxTurnRateGain
 	}
@@ -100,6 +109,38 @@ if (seeking && seekTarget != noone) {
 
 if (rotationSpeed != 0) {
 	instance_rotate(rotationSpeed, id)
+}
+
+// Solid Collision
+if (solidCollisionBehavior == projSolidCollisionBehaviors.bounce) {
+	var bounced = false
+	var solidTargetX = instance_position(x + xVel, y, obj_solid)
+	
+	if (solidTargetX != noone || is_oob(x + xVel, y)) {
+		if (bouncesCur < bouncesMax) {
+			bouncesCur++
+			xVel = -xVel
+			bounced = true
+		} else {
+			destroy = true
+		}
+	}
+	
+	var solidTargetY = instance_position(x, y + yVel, obj_solid)
+	
+	if (solidTargetY != noone || is_oob(x, y + yVel)) {
+		if (bouncesCur < bouncesMax) {
+			bouncesCur++
+			yVel = -yVel
+			bounced = true
+		} else {
+			destroy = true
+		}
+	}
+	
+	if (bounced) {
+		onBounce()
+	}
 }
 
 if (movementType = projMovementTypes.velocity) {
@@ -125,6 +166,17 @@ if (movementType = projMovementTypes.velocity) {
 	}
 } 
 
+if (moveSpeedMax >= 0) {
+	//var _angle = point_direction(0, 0, xVel, yVel)
+	var _mag = point_distance(0, 0, xVel, yVel)
+	//var _velocity = get_vec2_from_angle_mag(_angle, _mag)
+	//create_toaster(_velocity)
+	if (_mag > moveSpeedMax) {
+		
+		set_velocity_magnitude(moveSpeedMax)
+	}
+}
+
 if (targetsMax > 0) {
 	clean_hit_list(hitList)
 }
@@ -135,19 +187,35 @@ if (angleSpriteToVelocity)
 var target = noone
 var targetType = targetTypes.none
 var critHit = false
-var destroy = false
 var critMultiplier = 1
+var _damage					// used to calaculate dmg target hit
 
-if (onlyHitsSeekTarget) {
-	if (place_meeting(x, y, seekTarget)) {
-		target = seekTarget
+//if (solidCollisionBehavior == projSolidCollisionBehaviors.bounce) {
+//	var solidTarget = instance_place(x, y, obj_solid)
+	
+//	if (solidTarget != noone) {
+//		if (bouncesCur < bouncesMax) {
+			
+//		} else {
+//			destroy = true
+//		}
+//	}
+//}
+
+if (collisionDelay <= 0) {
+	if (onlyHitsSeekTarget) {
+		if (place_meeting(x, y, seekTarget)) {
+			target = seekTarget
+		}
+	} else {
+		if (canHitMultipleTargets) {
+			instance_place_list(x, y, [obj_baddie], targetCollisionList, true)
+		} else {
+			target = instance_place(x, y, [obj_baddie])
+		}
 	}
 } else {
-	if (canHitMultipleTargets) {
-		instance_place_list(x, y, [obj_baddie, obj_solid], targetCollisionList, true)
-	} else {
-		target = instance_place(x, y, [obj_baddie, obj_solid])
-	}
+	collisionDelay--
 }
 
 if (target != noone) {
@@ -157,7 +225,7 @@ if (target != noone) {
 // FIXME: Perf - using 2 ds_lists, ran into weird bug when trying to cull a single list
 for (i = 0; i < ds_list_size(targetCollisionList); i++) {
 	target = targetCollisionList[| i]
-
+	
 	if (
 		target.targetType == targetTypes.baddie &&
 		target.hp > 0 &&
@@ -169,6 +237,7 @@ for (i = 0; i < ds_list_size(targetCollisionList); i++) {
 }
 
 preDamage(validTargetList)
+
 
 for (i = 0; i < ds_list_size(validTargetList); i++) {
 	target = validTargetList[| i]
@@ -183,15 +252,21 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		critHit = true
 	}
 	
-	if (poisonStacksOnHit > 0) {
-		apply_poison(target, poisonStacksOnHit, poisonDuration, owner)
+	_damage = getScaledDamage(target)
+	
+	if (poisons || poisonStacksOnHit > 0) {
+		apply_poison(target, poisonDuration, owner)
 	}
 	
 	run_wupg_lifecycle_events(enumLifeCycleEvents.targetHit, {
 		owner: owner,
+		projectile: id,
 		target: target,
-		critHit: critHit
+		critHit: critHit,
+		scaledDamage: _damage
 	})
+	
+	onHit(target)
 	
 	// FIXME disconnected from script
 	if (applyShock > 0 && target.shockedLength < applyShock) {
@@ -206,7 +281,7 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		create_toaster("Owner not set on projectile: " + object_get_name(object_index), errorLevels.error)
 		owner = get_player_target()
 	}
-	
+		
 	//if (critHit) {
 	//	run_lifecycle_events(enumLifeCycleEvents.criticalHit, {
 	//		owner: owner,
@@ -214,7 +289,7 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	//	})
 	//}
 	
-	var killed = damage_baddie(target, damageDirect, critHit, critMultiplier)
+	var killed = damage_baddie(target, _damage, critHit, critMultiplier)
 	
 	if (!killed && knockback > 0) {
 		//var pushAngle = point_direction(0, 0, xVel, yVel)
@@ -226,8 +301,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	damageDirect -= damageLostPerTarget
 	
 	if (targetsMax > 0 && targetsHit >= targetsMax) || (damageDirect <= 0) {
-		destroy = true
-		break
+		if (random(1) > pierceChance) {
+			destroy = true
+			break
+		}
 	}
 }
 
@@ -244,5 +321,7 @@ ds_list_clear(targetCollisionList)
 run_wupg_lifecycle_events(enumLifeCycleEvents.stepEnd, {
 	projectile: id
 })
+
+stepEnd()
 
 if (destroy) instance_destroy()

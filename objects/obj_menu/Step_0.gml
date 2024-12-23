@@ -31,9 +31,9 @@ if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_star
 	buttonPressed = true
 } else {
 	if (keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0, gp_padd)) {
-		var buttonFocus = 1
+		buttonFocus = 1
 	} else if (keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(0, gp_padu)) {
-		var buttonFocus = -1
+		buttonFocus = -1
 	}
 }
 

@@ -1,6 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description On destroy
+event_inherited()
 
-// Inherit the parent event
-event_inherited();
-
+with (owner) {
+	alphaScalar = 1
+	image_blend = c_white
+}

@@ -19,10 +19,11 @@ function apply_elite_name(_baddie, _buffs) {
 	]
 	
 	var _randomBuff = array_random(_buffs)
+	var _suffix = "Unknown"
 	
 	switch (_randomBuff.object_index) {
 		case obj_elite_buff_fast:
-			var _suffix = [
+			_suffix = [
 				"Quick",
 				"Aggressive",
 				"Haunting"
@@ -30,7 +31,7 @@ function apply_elite_name(_baddie, _buffs) {
 		break
 		
 		case obj_elite_buff_tough:
-			var _suffix = [
+			_suffix = [
 				"Unrelenting",
 				"Wall",
 				"Mighty"
@@ -38,7 +39,7 @@ function apply_elite_name(_baddie, _buffs) {
 		break
 		
 		case obj_elite_buff_spawner:
-			var _suffix = [
+			_suffix = [
 				"Spawning",
 				"Multiplying",
 				"Teeming"
@@ -46,7 +47,7 @@ function apply_elite_name(_baddie, _buffs) {
 		break
 		
 		case obj_elite_buff_shielding:
-			var _suffix = [
+			_suffix = [
 				"Shield",
 				"Bracing",
 				"Protector"
@@ -54,7 +55,7 @@ function apply_elite_name(_baddie, _buffs) {
 		break
 		
 		default:
-			var _suffix = [
+			_suffix = [
 				"Unknown"
 			]
 		break

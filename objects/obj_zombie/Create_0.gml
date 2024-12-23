@@ -4,7 +4,7 @@ event_inherited();
 
 name = "Zombie"
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 moveSpeedMax = baddie_move_speed_slow
 xp = baddie_xp_fodder

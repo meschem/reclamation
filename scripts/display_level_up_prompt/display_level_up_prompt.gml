@@ -1,5 +1,5 @@
-///@description		Provides talent selection to player
-///@param {id.Instance} player
+///@description				Provides talent selection to player
+///@param {id.Instance}		_player
 
 function display_level_up_prompt(_player = noone) {
 	if (_player == noone) {

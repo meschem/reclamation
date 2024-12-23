@@ -21,7 +21,8 @@ if (cooldown > 0) {
 	if (owner.inputFocus == enumInputTypes.keyboardMouse) {
 		draw_text(x + 9, y + yOffset + 1, hotkey)
 	} else {
-		draw_sprite(x + 9, 0, y + yOffset + 1, controllerIcon)
+		//draw_sprite(x + 9, 0, y + yOffset + 1, controllerIcon)
+		draw_sprite(controllerIcon, 0, x + 9, y + yOffset + 1)
 	}
 	
 	draw_set_color(c_white)
@@ -29,7 +30,8 @@ if (cooldown > 0) {
 	if (owner.inputFocus == enumInputTypes.keyboardMouse) {
 		draw_text(x + 8, y + yOffset, hotkey)
 	} else {
-		draw_sprite(x + 8, 0, y + yOffset + 1, controllerIcon)
+		//draw_sprite(x + 8, 0, y + yOffset + 1, controllerIcon)
+		draw_sprite(controllerIcon, 0, x + 8, y + yOffset + 1)
 	}
 	
 }

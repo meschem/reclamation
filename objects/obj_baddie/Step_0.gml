@@ -13,7 +13,7 @@ if (lifeSpan > 0 && age >= lifeSpan) {
 	hp = 0
 }
 
-if (hp <= 0) {
+if (hp <= 0 && diesAtZeroHp) {
 	instance_destroy()
 	return
 }
@@ -27,7 +27,7 @@ beginStep()
 lastX = x
 lastY = y
 
-if (moveBehavior == enemyMoveBehaviors.simple) {
+if (moveBehavior == entityMoveBehaviors.simple) {
 	target = obj_none
 }
 
@@ -54,18 +54,26 @@ if (knockbackSlowDuration > 0) {
 
 if (state == enemyStates.normal) {
 	switch (moveBehavior) {
-		case enemyMoveBehaviors.charge:
-		case enemyMoveBehaviors.simple:
+		case entityMoveBehaviors.charge:
+		case entityMoveBehaviors.simple:
 			move_logic_charge()
 		break
 		
-		case enemyMoveBehaviors.wander:
+		case entityMoveBehaviors.fourDir:
+			move_logic_four_dir()
+		break
+		
+		case entityMoveBehaviors.chargeToStop:
+			move_logic_charge_to_stop()
+		break
+		
+		case entityMoveBehaviors.wander:
 			move_logic_wander()
 		break
 	}
 
 	switch (rotationBehavior) {
-		case enemyRotateBehavior.flipTowardsPlayer:
+		case entityRotateBehavior.flipTowardsTarget:
 			xScale = (x <= target.x) ? 1 : -1
 		break
 	}
@@ -140,7 +148,7 @@ if (stunLength > 0) {
 	}
 }
 
-depth = depths.enemy - y
+depth = depths.enemy - y - feetOffset
 
 if (phases) {
 	x += appliedVel.x
@@ -148,7 +156,7 @@ if (phases) {
 //} else if (flies) {
 //	hitWall = fly_to_location(appliedVel.x, appliedVel.y)
 } else {
-	hitWall = baddie_walk_to_location_new(appliedVel.x, appliedVel.y)
+	hitWall = entity_walk_to_location(appliedVel.x, appliedVel.y)
 }
 
 if (age % 2 == 0) {
@@ -164,7 +172,7 @@ if (floatRange > 0) {
 }
 
 // Bouncy walking
-if (walkAnimType == baddieWalkAnimTypes.curves) {
+if (walkAnimType == entityWalkAnimTypes.curves) {
 	var stopped = baddie_is_stopped()
 	
 	var walkFrame = (walkAge % walkCurveCycleLength)
@@ -205,7 +213,7 @@ if (age - damagedOn <= damageReactionLength) {
 }
 
 // HP Bar
-if (hpBarDisplay == baddieHpBarTypes.small) {
+if (hpBarDisplay == entityHpBarTypes.small) {
 	hpBarInfo.xPos = round((x - camera_get_view_x(view_camera[0])) - (sprite_width / 2))
 	hpBarInfo.yPos = round((y - camera_get_view_y(view_camera[0])) - (sprite_height / 2) + hpBarInfo.yOffset)
 	hpBarInfo.width = sprite_width

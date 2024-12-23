@@ -12,7 +12,8 @@ lifeSpan = 480
 targetsMax = -1
 damageDirect = obj_ability_lightning_ball.projectileDamage
 fxRate = 7
-shadowSprite = spr_none
+shadowSprite = spr_shadow_enemy_shot_basic
+shadowOffsetY = 15
 
 // set on obj_ability_lightning_ball.use()
 angle = 0

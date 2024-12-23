@@ -62,7 +62,7 @@ if (keyboard_check_pressed(ord("I"))) {
 
 if (keyboard_check_pressed(ord("Z"))) {
 	spawn_baddie_at_location(
-		obj_banshee, mouse_x, mouse_y
+		obj_skeleton, mouse_x, mouse_y
 	)
 }
 
@@ -70,7 +70,7 @@ if (keyboard_check_pressed(ord("X"))) {
 	//var _baddie =
 	
 	spawn_baddie_at_location(
-		obj_skeleton_warrior, mouse_x, mouse_y
+		obj_wraith, mouse_x, mouse_y
 	)
 	
 	//create_elite_health_bar(_baddie)
@@ -80,31 +80,31 @@ if (keyboard_check_pressed(ord("X"))) {
 
 if (keyboard_check_pressed(ord("C"))) {
 	spawn_baddie_at_location(
-		obj_slime_green, mouse_x, mouse_y
+		obj_u_abaddon, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
-		obj_fire_mage, mouse_x, mouse_y
+		obj_big_wizard, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("B"))) {
 	spawn_baddie_at_location(
-		obj_necromancer, mouse_x, mouse_y
+		obj_skull_head_frozen, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("N"))) {
 	spawn_baddie_at_location(
-		obj_greater_serpent_green, mouse_x, mouse_y
+		obj_naga_slayer, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("M"))) {
 	spawn_baddie_at_location(
-		obj_lich, mouse_x, mouse_y
+		obj_wraith, mouse_x, mouse_y
 	)
 }
 

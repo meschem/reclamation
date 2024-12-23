@@ -67,6 +67,10 @@ canActivate = function() {
 		
 	if (ultimate && !owner.canUseUltimate())
 		return false
+		
+	if (!validateUse()) {
+		return false
+	}
 	
 	return true
 }
@@ -86,6 +90,13 @@ activate = function() {
 	}
 	
 	use()
+}
+
+
+///@description				Used to validate use. If validation fails, will not use CD
+///@return {bool}
+validateUse = function() {
+	return true
 }
 
 activateOnHit = function(_hitBy) {

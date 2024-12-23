@@ -4,23 +4,23 @@ event_inherited();
 
 name = "Skeleton"
 
-hpMax = 20
+hpMax = 40
 hp = hpMax
 
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 
-hpBarDisplay = baddieHpBarTypes.none
+hpBarDisplay = entityHpBarTypes.none
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 deathParticles = [
-	obj_ptb_skel_bone_purp,
-	obj_ptb_skel_bone_purp,
-	obj_ptb_skel_bone_purp,
-	obj_ptb_skel_bone_purp,
-	obj_ptb_skel_ribs_purp,
-	obj_ptb_skel_skull_purp,
+	obj_ptb_skel_bone_yel,
+	obj_ptb_skel_bone_yel,
+	obj_ptb_skel_bone_yel,
+	obj_ptb_skel_bone_yel,
+	obj_ptb_skel_ribs_yel,
+	obj_ptb_skel_skull_yel,
 ]
 
 add_baddie_gold_fodder

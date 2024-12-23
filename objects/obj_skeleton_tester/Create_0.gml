@@ -2,7 +2,7 @@
 
 event_inherited();
 
-moveBehavior = enemyMoveBehaviors.none
+moveBehavior = entityMoveBehaviors.none
 
 hpMax = 1000
 hp = hpMax

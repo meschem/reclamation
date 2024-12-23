@@ -10,6 +10,7 @@ global.playerCount = 1
 
 activeAbilityControllers = []
 baddieTargets = [] // used for targeting by baddies
+levelUpRewardTable = []
 
 init_run_globals()
 

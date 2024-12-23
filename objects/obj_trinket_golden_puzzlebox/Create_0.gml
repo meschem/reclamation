@@ -55,6 +55,7 @@ launch = function(_seekTarget, _launchAngle) {
 	
 	_proj.seekTarget = _seekTarget
 	_proj.damageDirect = damageDirect[level - 1]
+	_proj.damageDirect *= owner.bonusDamageScalar
 	
 	if (_proj.object_index == obj_coin_stack) {
 		_proj.critChance = 1

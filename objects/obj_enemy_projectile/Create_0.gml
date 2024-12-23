@@ -22,21 +22,27 @@ maxBounces = 0
 shadowSprite = spr_shadow_enemy_shot_basic
 shadowOffset = 12
 
+damageOnCollide = true
 damageOnHit = 10
 
 beingSummoned = false
 summoningCdMax = 90
 summoningCd = 0
 
+feetOffset = 13
+
 accel = 0.2
 moveSpeedMax = 5
 turnRate = 1
 velocity = 0
 
+destroyOnHit = true
 markForDestroy = false
 
 target = get_player_target()
 
 onInstanceCollision = function(inst) {
-	instance_destroy()
+	if (destroyOnHit) {
+		instance_destroy()
+	}
 }

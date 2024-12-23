@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_crossbow_loose",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.749796,
+  "name":"snd_crossbow_loose",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Sounds/abilities.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_crossbow_loose.wav",
+  "type":0,
+  "volume":1.0,
+}

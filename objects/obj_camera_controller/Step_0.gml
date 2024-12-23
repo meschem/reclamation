@@ -1,18 +1,24 @@
 
-if (focusObject == noone)
+if (focusObject == noone) {
 	return 0
+}
 	
-var xOffset = 0
-var yOffset = 0
+var _xOffset = 0
+var _yOffset = 0
 	
 if (shakeForce > 0) {
-	var r = shakeForce * sqrt(random(1))
-	var theta = random(1) * 2 * pi
+	var _r = shakeForce * sqrt(random(1))
+	var _theta = random(1) * 2 * pi
 	
-	xOffset = r * cos(theta)
-	yOffset = r * sin(theta)
+	_xOffset = _r * cos(_theta)
+	_yOffset = _r * sin(_theta)
 	
 	shakeForce -= max(shakeDecay, 0)
 }
-	
-center_view(focusObject, xOffset, yOffset)
+
+with (obj_room_controller) {
+	_xOffset += cameraOffset.x
+	_yOffset += cameraOffset.y
+}
+
+center_view(focusObject, _xOffset, _yOffset)

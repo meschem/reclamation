@@ -1,5 +1,5 @@
 ///@description										Spawns bouncers
-///@param {id.Instance|array<Id.Instance>} _objs	Objects to spawn from
+///@param {asset.GMObject|array<asset.GMObject>}	_objs	Objects to spawn from
 ///@param {real} _angle								Angle to apply force from
 ///@param {real} _magMultiplier						Magnitude multiplier to apply
 ///@param {id.Instance} _inst						Instance spawning the FX
@@ -18,6 +18,6 @@ function spawn_fx_bouncers(_objs, _angle, _magMultiplier = 1, _inst = id) {
 		
 		_inst = instance_create_depth(_spawnX + x, _spawnY + y, depths.fx, _objs[i])
 		_inst.angleInit = _angle
-		_inst.magMultiplier = _magMultiplier
+		_inst.magMultiplier = max(0.5, _magMultiplier)
 	}
 }

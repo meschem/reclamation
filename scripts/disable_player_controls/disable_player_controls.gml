@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function disable_player_controls() {
 	with (obj_player) {
+		xVel = 0
+		yVel = 0
 		inputEnabled = false
 	}
 }

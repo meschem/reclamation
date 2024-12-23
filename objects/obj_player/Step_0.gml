@@ -16,6 +16,11 @@ if (inputEnabled) {
 
 hitWall = player_walk_to_location(xVel, yVel)
 
+if (hitWall) {
+	player_check_doodad_collision(xVel, yVel)
+}
+
+
 if (ultimateChargeDelay > 0) {
 	ultimateChargeDelay--
 }
@@ -101,8 +106,11 @@ if (hp <= 0) {
 	player_death()
 }
 
+image_alpha *= alphaScalar
+
 if (xVel > 0.05) {
 	image_xscale = 1
 } else if (xVel < -0.05) {
 	image_xscale = -1
 }
+

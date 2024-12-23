@@ -6,9 +6,14 @@ homingActive = false
 homingRadius = 40
 homingAccel = 0.2
 
+floatOffset = 0
+
 /// FIXME: MULTIPLAYER
 
 target = obj_player // get_player_target()
+
+shadowSprite = spr_none
+shadowOffset = 6
 
 age = 0
 
@@ -20,4 +25,3 @@ floats = false
 onPickup = function(_player) {
 
 }
-

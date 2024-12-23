@@ -10,9 +10,13 @@ curCd = max(curCd - 1, 0)
 
 if (curCd <= 0) {
 	if (autoCast) {
-		resetCooldown()
+		var _valid = validateUse()
 		
-		activate()
+		if (_valid) {
+			resetCooldown()
+		
+			activate()
+		}
 	} else if (curCharges < maxCharges) {
 		curCharges++
 		

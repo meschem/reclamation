@@ -7,7 +7,7 @@ name = "Wraith"
 xp = baddie_xp_tough
 hpMax = 40
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.small
+hpBarDisplay = entityHpBarTypes.small
 
 pushRadius = 11
 pushForce = 10
@@ -18,8 +18,7 @@ deathParticles = [
 	obj_ptb_wraith_scythe_head,
 ]
 
-moveAccel = baddie_move_accel_slow
-//moveSpeedMax = baddie_move_speed_ultra_fast
+moveAccel = baddie_move_accel_med
 moveSpeedMax = baddie_move_speed_very_fast
 collidesWith = baddie_collision_flier
 

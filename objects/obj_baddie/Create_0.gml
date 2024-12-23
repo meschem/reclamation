@@ -1,10 +1,13 @@
 /// @description Init
 
-enum enemyMoveBehaviors {
+enum entityMoveBehaviors {
 	none,
 	simple,
 	charge,
 	wander,
+	fourDir,
+	chargeToStop,
+	custom,
 }
 
 enum deathFxTypes {
@@ -12,43 +15,49 @@ enum deathFxTypes {
 	bones
 }
 
-enum enemyRotateBehavior {
+enum entityRotateBehavior {
 	none,
-	flipTowardsPlayer,
-	rotateTowardsPlayer
+	flipTowardsTarget,
+	rotateTowardsTarget,
 }
 
 enum enemyStates {
 	normal,
 	pushed,
 	stunned,
+	abilityRage,
 }
 
-enum baddieHpBarTypes {
+enum enemyMoveStates {
+	moving,
+	slowing,
+	stopped,
+}
+
+enum entityHpBarTypes {
 	none,
 	small,
 	bigCenter,
 	boss,
 }
 
-enum baddieWalkAnimTypes {
+enum entityWalkAnimTypes {
 	sprite,		// frame-based, driven by sprite
 	curves		// uses curves to hop and angle
 }
 
-name = "Unnamed"
-description = ""
+enum entityCollisionTypes {
+	none,
+	baddie,
+	playerSummon,
+}
 
-moveBehavior = enemyMoveBehaviors.charge
+event_inherited()
 
-walkAge = 0
-walkAnimType = baddieWalkAnimTypes.sprite
-walkAnimHeight = 3
-walkAnimRotation = 6
+moveBehavior = entityMoveBehaviors.charge
+collisionType = entityCollisionTypes.baddie
 
-walkCurveCycleLength = seconds_to_frames(1)
-
-facingAngle = 0
+damageOnCollide = true
 
 targetType = targetTypes.baddie
 
@@ -62,9 +71,8 @@ damageXScaleMultiplier = 1
 damageYScaleMultiplier = 1
 
 moveSpeedMax = baddie_move_speed_medium
-moveSpeed = 0
-moveRotationRate = -1 // -1 is "infinite"
-moveAccel = 0.1
+moveDeaccel = 1
+moveState = enemyMoveStates.moving
 
 minionType = object_index
 minionCount = 12
@@ -77,52 +85,6 @@ state = enemyStates.normal
 
 target = get_player_target()
 
-
-
-flies = false
-phases = false
-
-frameAccel = moveAccel
-frameMoveSpeedMax = moveSpeedMax
-
-floatOffset = 0
-floatRange = 0
-
-xVel = 0
-yVel = 0
-lastX = 0
-lastY = 0
-
-hitWall = false
-
-xScale = 1
-yScale = 1
-
-rotation = 1
-
-age = 0
-lifeSpan = -1
-
-hpMax = 100
-hp = hpMax
-
-hpBarDisplay = baddieHpBarTypes.none
-hpBarInst = noone
-hpBarInfo = {
-	setup: false,
-	yPos: 0,
-	xPos: 0,
-	width: 0,
-	yOffset: -5
-}
-
-damagedOn = -10
-
-weight = 3
-
-soundOnDeath = snd_wood_roll
-collidesWith = baddie_collision_walker
-
 debuffShockAmount = 0
 
 xp = 25
@@ -130,14 +92,13 @@ ultimateCharge = 25
 
 damageOnHit = 10
 
-shadowSprite = -1 // -1 is no sprite
-shadowOffset = 3 // vertical offset
-
-pushRadius = 8
-pushForce = 5
+// START BUFFS
 
 stunLength = 0
 shockedLength = 0
+
+slowLength = 0
+slowMoveScalar = 0.5
 
 poisonStacks = 0
 poisonDamageCdMax = seconds_to_frames(1)
@@ -145,24 +106,12 @@ poisonDamageCdCur = poisonDamageCdMax
 poisonLength = 0
 poisonInflictor = noone
 
-knockbackSlowRatio = 1
-knockbackSlowDuration = 0
-knockbackSlowHitFrame = 0
-knockbackMaxSpeedRatio = 0.25
-
-rotationBehavior = enemyRotateBehavior.none
+// END BUFFS
 
 bossScale = 2
 isElite = false
 isBoss = false
 outlineColor = c_black
-killedByBounds = false
-
-lastDamageAngle = 0
-lastDamageForce = 1
-
-deathParticleSpawnRange = new vec2(0, 0)
-deathParticles = []
 
 markedForCrit = false // Guarantees crit, removed when activated
 
@@ -172,14 +121,3 @@ outline_init()
 
 loot = []
 
-onDestroyList = []	// List of functions executed on death
-
-beginStep = function() {}
-endStep = function() {}
-onDestroy = function() {}
-
-deathFx = function() {
-	if (global.createDeathParticles) {
-		spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)
-	}
-}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"aggressive_wander_movement",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"aggressive_wander_movement",
+  "parent":{
+    "name":"player_summons",
+    "path":"folders/Scripts/player_summons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

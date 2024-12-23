@@ -4,3 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
+tellDuration = stf(0.75)
+lifeSpan = -1
+duration = stf(2)

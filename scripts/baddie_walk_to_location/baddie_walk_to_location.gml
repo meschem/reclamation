@@ -72,7 +72,7 @@ function baddie_walk_to_location(xVel, yVel) {
 	}
 }
 
-function baddie_walk_to_location_new(xVel, yVel) {
+function entity_walk_to_location(xVel, yVel) {
 	var colliders = collidesWith
 	//var sanity = 0
 	var distance = point_distance(0, 0, xVel, yVel)

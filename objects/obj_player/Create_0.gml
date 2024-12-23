@@ -6,10 +6,6 @@ enum playerStates {
 	charging
 }
 
-enum playerCharacters {
-	jonah
-}
-
 enum enumInputTypes {
 	none,
 	keyboardMouse,
@@ -36,6 +32,24 @@ reticles = [
 
 //add_player_target(id)
 
+enum enumPlayerStats {
+	maxHp,
+	moveSpeedMax,
+	maxArmor,
+	critChance,
+	critDamageMultiplier,
+	areaOfEffectScalar,
+	abilityCooldownScalar,
+	attackSpeedScalar,
+	knockbackScalar,
+	bonusProjectileCount,
+	damageScalar,
+	pickupRangeScalar,
+	pickupRewardScalar,
+	weaponAoeScalar,
+	weaponKnockbackScalar,
+}
+
 reticleIndex = 0
 
 baseMaxHp = 50
@@ -47,6 +61,7 @@ baseAreaOfEffectScalar = 1
 baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
 baseKnockbackMultiplier = 1
+basePoisonDamage = 15
 
 bonusProjectileCount = 0
 bonusDamageScalar = 1
@@ -54,6 +69,7 @@ bonusPickupRangeScalar = 1
 bonusPickupRewardScalar = 1
 bonusWeaponAoeScalar = 1
 bonusWeaponKnockbackScalar = 1
+bonusPoisonDamage = 0
 
 totalGold = 0
 gold = 0
@@ -111,6 +127,8 @@ weaponList = ds_list_create()
 isAlwaysAttacking = false
 
 auraYOffset = 4
+
+alphaScalar = 1
 
 hitWall = false
 
@@ -171,6 +189,8 @@ equipment = {
 	ringLeft: noone,
 	ringRight: noone,
 }
+
+keys = []
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
 

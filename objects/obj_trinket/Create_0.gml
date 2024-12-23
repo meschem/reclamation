@@ -27,6 +27,8 @@ owner = noone
 slot = equipmentSlots.trinket
 rarity = enumRarity.normal
 
+show = true
+
 persistent = true
 
 ///@description					Creates stat info for leveling

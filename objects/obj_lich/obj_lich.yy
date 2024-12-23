@@ -9,8 +9,8 @@
   "name":"obj_lich",
   "overriddenProperties":[],
   "parent":{
-    "name":"baddies",
-    "path":"folders/Objects/baddies.yy",
+    "name":"bosses",
+    "path":"folders/Objects/baddies/bosses.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

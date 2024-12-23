@@ -19,4 +19,4 @@ trinketObjects = [
 	obj_trinket_visceral_mark
 ]
 
-//trinketObjects = [obj_trinket_golden_puzzlebox]
+poisonStacks = 0

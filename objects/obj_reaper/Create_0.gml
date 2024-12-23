@@ -7,7 +7,7 @@ name = "Reaper"
 xp = 100
 hpMax = 100
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.small
+hpBarDisplay = entityHpBarTypes.small
 
 pushRadius = 11
 pushForce = 10

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawner_add_phase",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawner_add_phase",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Scripts/baddies/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

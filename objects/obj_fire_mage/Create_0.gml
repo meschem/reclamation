@@ -19,8 +19,8 @@ deathParticles = [
 	obj_ptb_skel_skull_red,
 ]
 
-hpBarDisplay = baddieHpBarTypes.small
-walkAnimType = baddieWalkAnimTypes.curves
+hpBarDisplay = entityHpBarTypes.small
+walkAnimType = entityWalkAnimTypes.curves
 shadowSprite = spr_shadow_xl
 shadowOffset = -3
 

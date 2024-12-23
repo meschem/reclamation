@@ -9,4 +9,5 @@ if (obj_player.equipment.weapon == noone) {
 
 var _dungeon = create_dungeon(dungeonBiomes.castle)
 
+obj_run_controller.type = runTypes.dungeon
 obj_run_controller.loadRoom(_dungeon.floors[0].rooms[0])

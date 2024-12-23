@@ -16,8 +16,8 @@ function spawn_baddie(enemy, count = 1, spread = 16, flags = {}) {
 	var spawns = []
 	
 	//get random spot in zone
-	var spawnX = irandom(zone.bbox_right - zone.bbox_left) + zone.x
-	var spawnY = irandom(zone.bbox_bottom - zone.bbox_top) + zone.y
+	var spawnX = irandom(zone.bbox_right - zone.bbox_left) / 2 + zone.x
+	var spawnY = irandom(zone.bbox_bottom - zone.bbox_top) / 2 + zone.y
 	
 	// enemy radius to determine total area, average enemy size
 	

@@ -16,7 +16,7 @@ function player_collision() {
 	
 	// Checks collision with player coordinates with enemy bbox
 	for (var i = 0; i < baddieHitList; i++) {
-		if (place_meeting(x, y, hitByList[| i])) {
+		if (place_meeting(x, y, hitByList[| i]) && hitByList[| i].damageOnCollide) {
 			array_push(confirmedHitList, hitByList[| i])
 		}
 	}
@@ -25,8 +25,9 @@ function player_collision() {
 	for (var i = 0; i < array_length(confirmedHitList); i++) {
 		if (object_is_ancestor(confirmedHitList[i].object_index, obj_projectile)) {
 			// instance_destroy(confirmedHitList[i])
-			
-			confirmedHitList[i].markForDestroy = true
+			if (confirmedHitList[i].destroyOnHit) {
+				confirmedHitList[i].markForDestroy = true
+			}
 		}
 	}	
 	

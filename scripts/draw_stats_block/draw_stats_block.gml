@@ -1,16 +1,20 @@
 ///@description							Draws stats block for some stats
 ///@param {real} _x						X coordinate to draw
 ///@param {real} _y						Y coordinate to draw
-///@param {struct<itemStat>} _stats		Stats block to use
+///@param {array} _stats				Stats block to use
 ///@param {real} _level					Level of the item
 ///@param {real} _spacing				Spacing between stats
+///@param {id.Instance} _equip			Equipment to reference
 ///@return {real}						Amount of lines drawn
-function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14, _equip = 0) {
+function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14, _equip = noone) {
 	var _baseColor = draw_get_color()
+	var _nameString = ""
+	
+	show_message(_stats)
 	
 	for (var i = 0; i < array_length(_stats); i++) {
 		try {
-			var nameString = _stats[i].getDisplayName() + ": "
+			nameString = _stats[i].getDisplayName() + ": "
 		} catch (_err) {
 			show_message(_equip.name)
 			return 0

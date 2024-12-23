@@ -7,6 +7,7 @@ event_inherited()
 damageFrameCooldown = seconds_to_frames(20)
 angleSpriteToVelocity = true
 targetsMax = 0
+poisons = true
 poisonDuration = seconds_to_frames(12)
 distanceMax = 400
 yScalar = 1

@@ -144,6 +144,7 @@ createFloor = function(_index, _difficulty = 1) {
 ///@description						Creates a dungeon room
 ///@param {real} _roomType			Type of room, uses enum roomTypes
 ///@param {real} _difficulty		Difficulty number to use
+///@param {real} _reward			Uses enum roomRewards
 ///@param {real} _phaseCount		Number of phases
 ///@return {struct.dungeonRoom}
 createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket, _phaseCount) {

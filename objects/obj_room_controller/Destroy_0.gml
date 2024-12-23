@@ -1,4 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Destroy warning
 
 show_message("!!!! OBJ ROOM CONTROLLER DESTROYED !!!!")

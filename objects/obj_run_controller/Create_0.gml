@@ -2,6 +2,8 @@
 
 enum runTypes {
 	normal,
+	dungeon,
+	singleArea,
 	custom
 }
 
@@ -12,6 +14,7 @@ enum baddieScalars {
 }
 
 create_instance(obj_equipment_controller)
+create_instance(obj_mutator_controller)
 //create_instance(obj_run_stats_controller)
 
 type = runTypes.normal

@@ -1,6 +1,14 @@
-/// @description Insert description here
-// You can write your code in this editor
 
-// Inherit the parent event
-event_inherited();
+draw_self()
+
+draw_sprite_ext(
+	starSprite,
+	starImageIndex,
+	x, y,
+	starSpriteScaleX, 
+	starSpriteScaleY,
+	starAngle,
+	c_white,
+	1
+)
 

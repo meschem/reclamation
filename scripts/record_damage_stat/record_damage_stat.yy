@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"record_damage_stat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"record_damage_stat",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

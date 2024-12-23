@@ -1,2 +1,7 @@
-/// @description Insert description here
-// You can write your code in this editor
+var _poisonStacks = 0
+
+with (obj_player) {
+	_poisonStacks = get_player_poison_damage(id)
+}
+
+poisonStacks = _poisonStacks

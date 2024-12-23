@@ -6,8 +6,9 @@
 #macro baddie_weight_none 0
 #macro baddie_weight_light 4
 #macro baddie_weight_med 8
-#macro baddie_weight_heavy 20
-#macro baddie_weight_massive 60
+#macro baddie_weight_heavy 16
+#macro baddie_weight_massive 25
+#macro baddie_weight_immovable 999999
 
 // HP
 // Variable: hp / hpMax

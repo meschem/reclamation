@@ -8,7 +8,7 @@ function player_walk_to_location(xVel, yVel) {
 	var steps = 0
 	
 	if (!phases && place_meeting(x + xVel, y, [obj_pit, obj_player_clip, obj_doodad])) {
-		hitWall = true;
+		hitWall = true
 		
 	    while(!place_meeting(x + sign(xVel), y, [obj_pit, obj_player_clip, obj_doodad])) {
 	        x += sign(xVel)

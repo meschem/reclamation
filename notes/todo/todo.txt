@@ -1,7 +1,15 @@
 P0:
 
-* Replace spawner setup using structs
-* Setup text for displaying stats
+Change abilities to:
+	1 Offense
+	1 Defense / Utility?
+	1 Ultimate
+	
+Create Relics:
+	Permanent items that remain through runs
+	Can enable/disable in main area? Optional based on Relic?
+
+OTHER:
 
 1. Get basic game loop:
 	* Menu after death to restart

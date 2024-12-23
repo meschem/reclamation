@@ -1,5 +1,5 @@
 
-if (hpBarDisplay = baddieHpBarTypes.small && hp < hpMax) {
+if (hpBarDisplay = entityHpBarTypes.small && hp < hpMax) {
 	draw_set_color(c_black)
 	
 	draw_rectangle(

@@ -6,11 +6,12 @@ function activate_spiked_armor(caster, abilObj = id) {
 	var spikeCount = abilObj.spikeCount
 	var initAngle = abilObj.spikeAngleOffset
 	var vel = 4
+	var projObj = obj_none
 	
 	if (abilObj.runes[enumRunes.voldan].enabled) {
-		var projObj = abilObj.projectileCharged
+		projObj = abilObj.projectileCharged
 	} else {
-		var projObj = abilObj.projectile
+		projObj = abilObj.projectile
 	}
 	
 	spikeCount += caster.bonusProjectileCount

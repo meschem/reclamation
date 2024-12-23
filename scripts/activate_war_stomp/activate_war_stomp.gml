@@ -3,7 +3,10 @@
 
 function activate_war_stomp(level) {
 	with (obj_player) {
-		var target, inst, pushAngle
+		var target = noone
+		var inst = noone
+		var pushAngle = 0
+		//var target, inst, pushAngle
 		var enemies = ds_list_create()
 		var _owner = id
 		var _abilityObj = noone

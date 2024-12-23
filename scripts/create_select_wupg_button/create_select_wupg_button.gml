@@ -5,11 +5,16 @@
 function create_select_wupg_button(upgrade, menu = noone) {
 	with (upgrade) {
 		var button = instance_create_depth(0, 0, depths.ui, obj_card_weapon_upgrade_selection)
+		
+		//show_message(upgrade.level)
 
 		button.titleText.body = name
 		button.bodyText.body = description
 		button.upgrade = id
-	
+		
+		//button.displayLevel = upgrade.level + 1
+		// These use abilityStat structs, which show advancements from prev levels. Need to fix this on WUPGs
+			
 		menu.title = "Upgrade that weapon!"
 	
 		if (menu != noone) {

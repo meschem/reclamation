@@ -48,6 +48,7 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force
 	
 	target.markedForCrit = false
 	target.damagedOn = target.age
+	target.onDamaged()
 	
 	return false
 }

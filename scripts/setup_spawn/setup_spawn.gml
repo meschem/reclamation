@@ -1,9 +1,12 @@
+#macro spawnCpw 10
+#macro spawnWvs 8
+
 ///@description								Adds a spawner to the current phase
 ///@param {asset.GMObject} _baddieType		Type of enemy to spawn
 ///@param {real} _countPerWave				Number of waves to spawn in a phase (10)
 ///@param {real} _totalWaves				Amount of waves (8)
 ///@param {real} _type						Uses enum spawnerTypes
-function setup_spawn(_baddieType, _countPerWave = 10, _totalWaves = 8, _type = spawnerTypes.standard) {
+function setup_spawn(_baddieType, _countPerWave = spawnCpw, _totalWaves = spawnWvs, _type = spawnerTypes.standard) {
 	with (obj_spawner_controller) {
 		switch (_type) {
 			case spawnerTypes.standard:
@@ -36,3 +39,21 @@ function setup_spawn(_baddieType, _countPerWave = 10, _totalWaves = 8, _type = s
 
 	}
 }
+
+///@description								Simple spawn alias for a single enemy
+///@param {asset.GMObject} _baddieType		Type of enemy to spawn
+function setup_spawn_unique(_baddieType) {
+	with (obj_spawner_controller) {
+		setupSingleSpawn(_baddieType)
+	}
+}
+
+///@description								Use scalars instead of numbers for spawn
+///@param {asset.GMObject} _baddieType		Type of enemy to spawn
+///@param {real} _countPerWaveMult			Scalar for default count per wave
+///@param {real} _totalWavesMult			Scalar for default total waves
+///@param {real} _type						Uses enum spawnerTypes
+function setup_spawn_x(_baddieType, _countPerWaveMult = 1, _totalWavesMult = 1, _type = spawnerTypes.standard) {
+	setup_spawn(_baddieType, spawnCpw * _countPerWaveMult, spawnWvs * _totalWavesMult, _type)
+}
+

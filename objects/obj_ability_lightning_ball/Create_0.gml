@@ -35,7 +35,7 @@ stats = [
 	new abilityStat(
 		"Damage", 
 		"projectileDamage", 
-		[20, 30, 30, 45, 60]
+		[30, 30, 30, 45, 60]
 	),
 	new abilityStat(
 		"Projectiles",

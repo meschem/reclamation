@@ -65,7 +65,7 @@ buttons[0].onClick = function() {
 set_game_pause_state(true)
 
 ///@description							Adds a button to the menu
-///@param {asset.GMObject} equipment	Piece of equipment to add
+///@param {id.Instance} equipment	Piece of equipment to add
 addShopButton = function(equipment) {
 	var button = create_instance(obj_shop_menu_button)
 	
@@ -126,7 +126,7 @@ setButtonSpacing = function() {
 	//buttons[i].y = y + 4 + buttonSpacing
 	//i++
 	
-	for (var i = 0; i < array_length(buttons); i++) {
+	for (i = 0; i < array_length(buttons); i++) {
 		//buttons.display = true
 	}
 }

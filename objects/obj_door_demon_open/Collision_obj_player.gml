@@ -1,2 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description	Init
+
+room_goto(rm_combat_testing_single_room)

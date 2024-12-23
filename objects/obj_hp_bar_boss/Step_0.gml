@@ -12,3 +12,7 @@ nameString = baddie.name
 descString = baddie.description
 
 hpBarFillScaleX = (hpBarFillWidthMax / sprite_get_width(hpBarFillSprite)) * (baddie.hp / baddie.hpMax)
+
+if (hpBarFillScaleX < 0) {
+	hpBarFillScaleX = 0
+}

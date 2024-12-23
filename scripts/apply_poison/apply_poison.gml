@@ -1,9 +1,10 @@
 ///@description						Applies shocked to a target
 ///@param {id.Instance} _target		Target to apply poison to
-///@param {real} _amount			Amount to apply
 ///@param {real} _duration			Duration
 ///@param {id.Instance} _inflictor	Player inflicting poison
-function apply_poison(_target, _amount, _duration, _inflictor) {
+function apply_poison(_target, _duration, _inflictor) {
+	var _amount = get_player_poison_damage(_inflictor)
+	
 	if (_amount > _target.poisonStacks) {
 		_target.poisonStacks = _amount
 	}

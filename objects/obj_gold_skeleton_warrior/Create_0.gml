@@ -7,9 +7,9 @@ name = "Gilded Skeleton Warrior"
 xp = 350
 hpMax = 450
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.small
+hpBarDisplay = entityHpBarTypes.small
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 weight = baddie_weight_heavy
 

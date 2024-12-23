@@ -1,4 +1,4 @@
-if (shadowSprite >= 0) {
+if (shadowSprite >= 0 && shadowSprite != spr_none) {
 	draw_sprite(
 		shadowSprite,
 		0,

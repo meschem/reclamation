@@ -5,7 +5,7 @@ name = "Slime"
 
 hpMax = 20
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.none
+hpBarDisplay = entityHpBarTypes.none
 
 weight = baddie_weight_med
 moveAccel = baddie_move_accel_slow

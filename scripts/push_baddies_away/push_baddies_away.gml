@@ -5,7 +5,7 @@
 
 function push_baddies_away(_x, _y, _radius = 8, _force = 5) {
 	var _baddies = ds_list_create()
-	var _count = collision_circle_list(_x, _y, _radius, obj_baddie, false, true, _baddies, false)
+	var _count = collision_circle_list(_x, _y, _radius, obj_entity_parent, false, true, _baddies, false)
 	var _minForce = 0.2
 	var _enemy, _distance, _pushDistance, _angle, _pushVec2, _collided
 	
@@ -25,6 +25,10 @@ function push_baddies_away(_x, _y, _radius = 8, _force = 5) {
 			_collided = false
 			
 			with (_enemy) {
+				if (_enemy.immovable) {
+					continue
+				}
+				
 				while (
 					!place_meeting(x + _pushVec2.x, y + _pushVec2.y, _enemy.collidesWith) &&
 					_pushDistance > 0				

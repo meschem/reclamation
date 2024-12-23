@@ -76,6 +76,6 @@ if (spawnAge % spawnPeriod == 0) {
 
 spawnAge++
 
-if (age > spawnEndFrame) {
+if (!endless && age >= spawnEndFrame) {
 	instance_destroy()
 }

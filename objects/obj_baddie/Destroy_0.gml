@@ -13,7 +13,7 @@ if (!killedByBounds) {
 	}
 	
 	/// FIXME: Uses obj_player
-	add_run_stat_kill(id, obj_player)
+	add_run_stat_kill(id, get_first_player())
 	add_run_stat(enumRunStats.xpGained, xp)
 	
 	/// FIXME: Hack

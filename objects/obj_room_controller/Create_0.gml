@@ -32,6 +32,8 @@ isPaused = false
 pauseDelay = 0
 timeDisplay = "0:00"
 
+spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
+
 overtimeLength = seconds_to_frames(5)
 overtimeAge = 0
 
@@ -46,6 +48,8 @@ create_instance(obj_sound_controller)
 
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false
+cameraOffset = new vec2()
+
 
 // ROOM SETUP
 // use obj_dungeon to create spawn phases
@@ -130,6 +134,12 @@ completeOvertime = function() {
 		}
 		
 		with (obj_run_controller) {
+			if (dungeon == noone) {
+				endScreen = true
+				room_goto(finalLevelRoom)
+				return 0
+			}
+			
 			currentFloor++
 				
 			if (currentFloor == dungeon.floorCount) {

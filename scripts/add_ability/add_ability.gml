@@ -1,7 +1,6 @@
 /// @description				Adds an active ability for the player
 /// @param {real} ability		Ability enum from playerAbilities
 
-
 function add_ability(ability) {
 	
 	var index = array_length(obj_player.activeAbilities)	

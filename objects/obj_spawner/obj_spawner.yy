@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_spawner_basic",
+    "path":"sprites/spr_spawner_basic/spr_spawner_basic.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,7 +1,7 @@
 ///@description				Returns all available stats for a slot and rarity of equipment
 ///@param {real} _slot		Uses enum equipmentSlots
 ///@param {real} _rarity	Uses enum enumRarity
-///@return {real}
+///@return {array<real>}
 function get_random_available_stats(_slot, _rarity) {
 	var _stats = []
 	

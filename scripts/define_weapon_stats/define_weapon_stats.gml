@@ -7,6 +7,7 @@ function define_weapon_stats() {
 		projectileScale,
 		projectileCount,
 		projectileSpeed,
+		projectileSpread,
 		cooldown,
 		custom
 	}
@@ -82,6 +83,11 @@ function get_weapon_stat_type(_enumStat) {
 		case enumWeaponStats.cooldown:
 			_displayName = "Cooldown"
 			_statUnit = statUnits.frames	
+		break
+		
+		case enumWeaponStats.projectileSpread:
+			_displayName = "Projectile Spread"
+			_statUnit = statUnits.percent
 		break
 		
 		default:

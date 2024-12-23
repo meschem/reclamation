@@ -7,3 +7,5 @@ damageOnHit = 1
 
 drawColor = get_color(colors.red)
 drawAlpha = 0.5
+
+damageOnCollide = true

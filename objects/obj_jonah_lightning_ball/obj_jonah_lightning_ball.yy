@@ -12,8 +12,8 @@
     "path":"folders/Objects/abilities/jonah/_projectiles.yy",
   },
   "parentObjectId":{
-    "name":"obj_weapon_projectile_1",
-    "path":"objects/obj_weapon_projectile_1/obj_weapon_projectile_1.yy",
+    "name":"obj_weapon_projectile",
+    "path":"objects/obj_weapon_projectile/obj_weapon_projectile.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

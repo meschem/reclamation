@@ -9,13 +9,13 @@ shadowOffset = -3
 
 moveSpeedMax = baddie_move_speed_medium
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 xp = baddie_xp_tough
 hpMax = 120
 hp = hpMax
 weight = baddie_weight_med
-hpBarDisplay = baddieHpBarTypes.small
+//hpBarDisplay = entityHpBarTypes.small
 
 deathParticles = [
 	obj_ptb_skel_bone_purp,

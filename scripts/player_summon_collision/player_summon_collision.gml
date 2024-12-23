@@ -1,8 +1,6 @@
 /// @description   Collision code. Must be run by obj_player_summon
 
-function player_summon_collision() {
-	
-	
+function player_summon_collision() {	
 	if (age - lastHitOn < invulnFrames) {
 		image_alpha = (age % 3 = 0) ? 1 : 0
 	} else {

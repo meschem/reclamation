@@ -8,6 +8,8 @@ if (markForDestroy) {
 	return 0
 }
 
+depth = depths.enemy - y - feetOffset
+
 if (beingSummoned) {
 	summoningCd--
 	
@@ -56,5 +58,5 @@ if (beingSummoned) {
 	//}
 }
 
-if (age > lifeSpan)
+if (lifeSpan > 0 && age > lifeSpan)
 	instance_destroy()

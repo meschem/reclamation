@@ -1,7 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"obj_spawn_zone",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_spawn_zone",
   "overriddenProperties":[],
@@ -30,9 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_green",
-    "path":"sprites/spr_green/spr_green.yy",
+    "name":"spr_green_centered",
+    "path":"sprites/spr_green_centered/spr_green_centered.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

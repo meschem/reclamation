@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_check_doodad_collision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_check_doodad_collision",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

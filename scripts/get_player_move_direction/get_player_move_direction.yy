@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_player_move_direction",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_player_move_direction",
+  "parent":{
+    "name":"move_logic",
+    "path":"folders/Scripts/player/move_logic.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

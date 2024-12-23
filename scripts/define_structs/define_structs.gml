@@ -102,7 +102,7 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 
 ///@description						Adds a weapon stat. These always represent the current state of the weapon. Always visible.
 ///@param {real} _stat				uses enum enumWeaponStats
-///@param {real} _weapon				Value of stat
+///@param {id.Instance} _weapon		Value of stat
 ///@param {struct} _customType		Must include displayName (string), unitEnum (statUnits)
 function weaponStat(_stat, _weapon, _customType = {}) constructor {
 	weapon = _weapon
@@ -133,7 +133,7 @@ function weaponStat(_stat, _weapon, _customType = {}) constructor {
 ///@param {bool} _display			Display value in tooltips and prompts
 ///@param {real} _unitEnum			Uses enum statUnits. Defaults to none.
 ///@param {real} _multiplier		Display multplier if statsUnits is none
-function abilityStat(_name, _variable, _values, _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
+function abilityStat(_name, _variable, _values = [], _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
 	name = _name
 	variable = _variable
 	values = _values

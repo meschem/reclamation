@@ -12,7 +12,7 @@ if (outlineColor != c_black) {
 	outline_start(1, outlineColor, sprite_index, 200)
 }
 
-if (age - damagedOn <= 6) {
+if (age - damagedOn <= damagedFlashDuration) {
 	shader_set(shd_white_flash)
 }
 

@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tileset_blue_dungeon_alt",
   "bboxMode":0,
-  "bbox_bottom":95,
+  "bbox_bottom":191,
   "bbox_left":0,
   "bbox_right":255,
   "bbox_top":0,

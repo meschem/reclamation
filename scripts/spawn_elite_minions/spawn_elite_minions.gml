@@ -4,7 +4,8 @@
 function spawn_elite_minions(_baddie, _buffs) {
 	var _angle, _dist, _inst
 	var _spawn = new vec2(0, 0)
-	var baseHpBuff = 1
+	var _baseHpBuff = 1
+	var _baseMoveSpeedBuff = 1.33
 	
 	for (var i = 0; i < _baddie.minionCount; i++) {
 		_angle = (360 / _baddie.minionCount) * i
@@ -17,7 +18,8 @@ function spawn_elite_minions(_baddie, _buffs) {
 			_baddie.y + _spawn.y
 		)
 		
-		_inst.hpMax = baddie_hp_elite_minion * baseHpBuff
+		_inst.hpMax = baddie_hp_elite_minion * _baseHpBuff
+		_inst.moveSpeedMax *= _baseMoveSpeedBuff
 		//_inst.hpMax *= baseHpBuff
 		
 		for (var j = 0; j < array_length(_buffs); j++) {

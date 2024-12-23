@@ -8,7 +8,7 @@ description = "Freezing Death"
 xp = 250
 hpMax = 1000
 hp = hpMax
-hpBarDisplay = baddieHpBarTypes.small
+hpBarDisplay = entityHpBarTypes.small
 
 moveAccel = 0.08
 moveSpeedMax = 1
@@ -49,6 +49,5 @@ iceBlastSwarmCd = iceBlastSwarmCdMax
 iceBlastSwarmFiringCdMax = 60
 iceBlastSwarmFiringCd = 0
 iceBlastSwarmFireRate = 5
-//rotationBehavior = enemyRotateBehavior.flipTowardsPlayer
 
 //create_boss_health_bar(id)

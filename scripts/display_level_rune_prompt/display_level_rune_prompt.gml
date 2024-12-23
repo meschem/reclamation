@@ -1,5 +1,7 @@
+///@param {id.Instance} _player
 ///@param {string} title
-function display_level_rune_prompt(title = "(default)") {
+
+function display_level_rune_prompt(_player = noone, title = "(default)") {
 	set_game_pause_state(true)
 	
 	var menu = instance_create_depth(0, 0, depths.ui, obj_ability_selection_menu)

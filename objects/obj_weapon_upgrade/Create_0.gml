@@ -29,6 +29,7 @@ bonusWeaponAoe = 0
 lifeCycleEvents = []
 
 level = 0
+maxLevel = 99
 
 stats = []
 
@@ -60,6 +61,8 @@ applyStatsToWeapon = function () {
 			var _result = _val + _curVal
 	
 			variable_instance_set(weapon, _var, _result)
+		} else {
+			create_toaster("Variable not found on weapon: " + _var, errorLevels.error)
 		}
 	}
 }

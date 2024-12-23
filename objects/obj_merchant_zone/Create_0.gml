@@ -2,16 +2,18 @@ enum shopTypes {
 	equipment
 }
 
+event_inherited()
+
 equipmentList = []
 maxItems = 4
 merchant = noone					// window dressing for the moment
 shopType = shopTypes.equipment
 shopActive = false
-playerInArea = false
-controllerInput = gp_face1
-keyboardInput = "G"
+//playerInArea = false
+//controllerInput = gp_face1
+//keyboardInput = "G"
 
-infoTextOffset = new vec2(25, -17)
+//infoTextOffset = new vec2(25, -17)
 
 deactivate = function() {
 	shopActive = false

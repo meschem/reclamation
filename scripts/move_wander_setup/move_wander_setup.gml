@@ -3,7 +3,7 @@
 ///@param {real} _cdMax
 ///@param {real} _wanderTime
 function move_wander_setup(_cdMin = 30, _cdMax = 80, _wanderTime = 110) {
-	moveBehavior = enemyMoveBehaviors.wander
+	moveBehavior = entityMoveBehaviors.wander
 	
 	wanderCdMin = _cdMin
 	

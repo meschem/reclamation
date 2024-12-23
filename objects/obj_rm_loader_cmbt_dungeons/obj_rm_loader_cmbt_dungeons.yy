@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_room_loader_cmbt",
-    "path":"sprites/spr_room_loader_cmbt/spr_room_loader_cmbt.yy",
+    "name":"spr_room_loader_cmbt_dungeon",
+    "path":"sprites/spr_room_loader_cmbt_dungeon/spr_room_loader_cmbt_dungeon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

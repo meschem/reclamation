@@ -18,7 +18,6 @@ enum spawnerTypes {
 
 phase = 0
 secondsPerPhase = 30
-
 phaseFrames = seconds_to_frames(secondsPerPhase)
 
 debugDrawLoc = new vec2(
@@ -77,7 +76,6 @@ setupSingleSpawn = function(enemyType) {
 ///@param {asset.GMObject} enemyType	Type of enemy to spawn
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)
 ///@param {real} waveCount				Amount of waves (8)
-///@param {real} type					Uses enum spawnTypes() (spawnerTypes.waves)
 ///@return {id.Instance}
 setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8) {
 	var inst = setup_spawner(
@@ -92,7 +90,7 @@ setupSpawn = function(enemyType, enemiesPerWave = 10, waveCount = 8) {
 
 ///@description							Sets up a flyby spawner
 ///@param {asset.GMObject} enemyType	Type of enemy to spawn
-///@param {bool} targetPlayer			If true, flies to player, otherwise flies laterally (true)
+///@param {bool} spawnType				Type of spawn
 ///@param {real} enemiesPerWave			Number of waves to spawn in a phase (10)
 ///@param {real} waveCount				Amount of waves (8)
 ///@return {id.Instance}

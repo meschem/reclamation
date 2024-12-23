@@ -5,7 +5,4 @@ function outline_init() {
 	uni_acc = shader_get_uniform(sh_outline, "accuracy");
 	uni_tol = shader_get_uniform(sh_outline, "tol");
 	uni_uvs = shader_get_uniform(sh_outline, "uvs");
-
-
-
 }

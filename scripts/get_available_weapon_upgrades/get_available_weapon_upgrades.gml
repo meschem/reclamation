@@ -29,7 +29,9 @@ function get_available_weapon_upgrades(_player = noone, _type = weaponUpgradeTyp
 
 	for (var i = 0; i < array_length(_weaponUpgrades); i++) {
 		if (_weaponUpgrades[i].stackable || _weaponUpgrades[i].level == 0) {
-			array_push(availableUpgrades, _weaponUpgrades[i])
+			if (_weaponUpgrades[i].level < _weaponUpgrades[i].maxLevel) {
+				array_push(availableUpgrades, _weaponUpgrades[i])
+			}
 		}
 	}
 	

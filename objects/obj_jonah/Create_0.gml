@@ -12,6 +12,11 @@ name = "Jonah"
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
 sprSlam = spr_jonah_slam
+
+//sprIdle = spr_big_wizard
+//sprWalking = spr_big_wizard
+//sprSlam = spr_big_wizard
+
 //abilityTrees = playerCharacters.jonah
 
 //spawn_ability_trees()
@@ -20,3 +25,5 @@ abilityTrees = [
 	create_instance(obj_abil_tree_jonah_combat),
 	create_instance(obj_abil_tree_jonah_storm),
 ]
+
+basePoisonDamage = 0

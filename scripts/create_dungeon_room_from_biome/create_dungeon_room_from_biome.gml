@@ -1,8 +1,8 @@
-///@description								Creates a room for the biome
-///@param {id.Instance} _biome				Biome instance to reference
-///@param {asset.GMRoom} _room				Room to use
-///@param {real} _difficulty				Difficulty level
-///@param {struct.biomeSpawnList} _spawns	Spawns to reference for use
+///@description									Creates a room for the biome
+///@param {id.Instance} _biome					Biome instance to reference
+///@param {real|array<Real>} _room				Room to use
+///@param {real} _difficulty					Difficulty level
+///@param {struct.biomeSpawnList} _spawns		Spawns to reference for use
 ///@param {real} _phaseCount
 function create_dungeon_room_from_biome(_biome, _roomSizes, _difficulty, _spawns, _phaseCount = 1) {
 	var _roomAsset = get_room_from_biome(_biome, _roomSizes)

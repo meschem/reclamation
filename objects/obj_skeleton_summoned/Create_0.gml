@@ -18,7 +18,7 @@ hpMax = 20
 hp = hpMax
 lifeSpan = seconds_to_frames(random_range(9, 12))
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 shadowSprite = spr_shadow_med
 shadowOffset = -1

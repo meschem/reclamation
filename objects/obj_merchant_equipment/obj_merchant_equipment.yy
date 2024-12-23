@@ -8,8 +8,8 @@
   "name":"obj_merchant_equipment",
   "overriddenProperties":[],
   "parent":{
-    "name":"shops",
-    "path":"folders/Objects/shops.yy",
+    "name":"Shops",
+    "path":"folders/Objects/Shops.yy",
   },
   "parentObjectId":null,
   "persistent":false,

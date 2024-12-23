@@ -17,7 +17,7 @@ floatRange = 2
 flies = true
 phases = true
 
-moveBehavior = enemyMoveBehaviors.simple
+moveBehavior = entityMoveBehaviors.simple
 
 add_loot_gold(25, 30, 0.4)
 

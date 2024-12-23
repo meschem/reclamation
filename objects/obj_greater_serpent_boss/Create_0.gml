@@ -8,7 +8,7 @@ description = "Massive, Venomous"
 moveSpeedMax = baddie_move_speed_medium
 weight = baddie_weight_massive
 
-walkAnimType = baddieWalkAnimTypes.curves
+walkAnimType = entityWalkAnimTypes.curves
 
 bossScale = 1
 isBoss = true
@@ -17,7 +17,7 @@ shadowSprite = spr_greater_serpent_shadow
 shadowOffset = -30
 
 hpBarInfo.yOffset = -23
-hpBarDisplay = baddieHpBarTypes.small
+hpBarDisplay = entityHpBarTypes.small
 
 hpMax = 1000
 hp = hpMax

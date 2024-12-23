@@ -1,4 +1,4 @@
-/// @description Init
+ /// @description Init
 
 enum projMovementTypes {
 	velocity,
@@ -24,6 +24,11 @@ enum reseekBehaviors {
 	acquireNearest
 }
 
+enum projSolidCollisionBehaviors {
+	none,
+	bounce
+}
+
 projectileType = projectileTypes.unset
 
 angleSpriteToVelocity = false
@@ -46,7 +51,7 @@ attachedOrigin = new vec2(0, 0)
 attachedVelocity = new vec2(0, 0)
 xVel = 0
 yVel = 0
-moveSpeedMax = 100
+moveSpeedMax = -1
 
 xAccel = 0
 yAccel = 0
@@ -60,16 +65,20 @@ checkOnStrikeAbilities = false
 damageDirect = 1
 targetsMax = 1
 targetsHit = 0
+pierceChance = 0
 canHitMultipleTargets = true // true if projectile can hit multiple targets per frame
 targetCollisionList = ds_list_create() // used per frame
 validTargetList = ds_list_create() // used per frame for targets that are valid to damage
 damageLostPerTarget = 0
+
+solidCollisionBehavior = projSolidCollisionBehaviors.none
 
 applyShock = 0
 
 damageFrameCooldown = 60 // frames before the same target can be hit again
 
 shadowSprite = spr_war_hammer_shadow
+shadowOffsetY = 5
 
 soundOnHit = snd_clack
 
@@ -79,13 +88,17 @@ critMultiplier = 2
 hitList = []
 
 seeking = false
-maxTurnRate = -1
-maxTurnRateGain = 0
+seekStyle = projectileSeekStyles.wide
 seekDistanceMax = -1
 seekTarget = noone
+seekAccel = 0.5
 onlyHitsSeekTarget = false
 
+maxTurnRate = -1
+maxTurnRateGain = 0
+
 hitsWalls = true
+collisionDelay = 0
 
 trail = false
 trailSpawnWidth = 5
@@ -105,8 +118,10 @@ impactSoundsMaxPerFrame = 1
 
 owner = noone
 
+poisons = false
 poisonStacksOnHit = 0
 poisonDuration = seconds_to_frames(6)
+bonusPoisonDamageScalar = 0
 
 setup_lifecycle_events()
 
@@ -125,13 +140,13 @@ buildTrail = function() {
 	
 	// Add new segment
 	//_segment = new trailSegment(new vec2(x, y), previousFramePos)
-	_segment = new trailSegment(new vec2(x, y), new vec2(previousFramePos.x, previousFramePos.y), 3, 3)
+	_segment = new trailSegment(new vec2(x, y), new vec2(previousFramePos.x, previousFramePos.y), 3, 3, trailColor)
 	array_push(trailSegments, _segment)
 	_trailLengthCur++
 	
 	// Cull if needed	
 	if (_trailLengthCur > trailLength) {
-		for (i = 0; i < trailLength; i++) {
+		for (var i = 0; i < trailLength; i++) {
 			trailSegments[i].startPos.x = trailSegments[i + 1].startPos.x
 			trailSegments[i].startPos.y = trailSegments[i + 1].startPos.y
 			
@@ -169,6 +184,11 @@ setAngle = function(angle) {
 	yVel = angle_yvel(angle)
 }
 
+// Lifecycle functions
+onHit = function(target) {}
+stepBegin = function() {}
+stepEnd = function() {}
+
 ///@description					Applies FX or debuffs to enemy list that was hit
 ///								before damage is applied. Good place to mark for crit
 ///@param {id.DsList}			enemyList
@@ -182,6 +202,12 @@ calcVelocity = function() {
 
 spawnPeriodicFx = function() {
 	// override to spawn fx as needed
+}
+
+///@description					Specific to colliding with solids and not entities
+///								This does not activate if the solid collision behavior is none
+onBounce = function() {
+
 }
 
 ///@param {id.Instance} target		Target hit
@@ -202,4 +228,19 @@ queueImpactSound = function() {
 	if (impactSoundsCount < impactSoundsMax) {
 		impactSoundsCount++
 	}
+}
+
+
+///@description						Calculates scalars just prior to damage being applied.
+///									Returns damage that should be dealt.
+///@param {id.Instance} _target		Target instance
+///@return {real}
+getScaledDamage = function(_target) {
+	var _scalar = 1
+	
+	if (_target.poisonStacks > 0) {
+		_scalar += bonusPoisonDamageScalar
+	}
+	
+	return damageDirect * _scalar
 }
