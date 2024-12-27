@@ -42,7 +42,16 @@ use = function() {
 	var _pos = new vec2()
 	
 	for (var i = 0; i < swordCount[level - 1]; i++ ) {
-		_pos = get_random_play_point()
+		if (get_combat_room_type() == combatRoomTypes.dungeon) {
+			_pos = get_random_play_point()
+		} else {
+			_pos = get_random_point_in_circle(
+				owner.x,
+				owner.y,
+				180,
+				false
+			)
+		}
 		
 		var _inst = instance_create_depth(_pos.x, _pos.y, depths.playerProjectile, obj_jonah_heaven_sword_spawner)
 		_inst.owner = owner

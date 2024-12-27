@@ -822,6 +822,7 @@
     {"id":{"name":"get_buff_attack_speed_scalar","path":"scripts/get_buff_attack_speed_scalar/get_buff_attack_speed_scalar.yy",},},
     {"id":{"name":"get_button_sprite_from_input","path":"scripts/get_button_sprite_from_input/get_button_sprite_from_input.yy",},},
     {"id":{"name":"get_color","path":"scripts/get_color/get_color.yy",},},
+    {"id":{"name":"get_combat_room_type","path":"scripts/get_combat_room_type/get_combat_room_type.yy",},},
     {"id":{"name":"get_controller_movement","path":"scripts/get_controller_movement/get_controller_movement.yy",},},
     {"id":{"name":"get_cooldown_from_inverse_scalar","path":"scripts/get_cooldown_from_inverse_scalar/get_cooldown_from_inverse_scalar.yy",},},
     {"id":{"name":"get_current_difficulty_level","path":"scripts/get_current_difficulty_level/get_current_difficulty_level.yy",},},

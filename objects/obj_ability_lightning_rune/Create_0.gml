@@ -21,7 +21,7 @@ treeLevel = 3
 
 radius = [48, 48, 64, 64, 64]
 damagePerTick = [15, 25, 25, 50, 50]
-tickRate = seconds_to_frames(2)
+tickRate = seconds_to_frames(0.33)
 duration = tickRate * 4
 explosionDamage = [30, 50, 50, 100, 200]
 

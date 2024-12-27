@@ -16,7 +16,7 @@ lastGaspAvailable = true
 treeLevel = 2
 
 curCd = 0
-maxCd = seconds_to_frames(3)
+maxCd = seconds_to_frames(1.5)
 
 spikesCurCd = 0
 spikesMaxCd = seconds_to_frames(1)
@@ -29,7 +29,7 @@ activationCdMax = 40
 
 spikeDamage = 15
 spikeCount = 4
-spikeLifeSpan = 60
+spikeLifeSpan = 90
 spikeAngleOffset = 0
 
 spiralRotationSpeed = 3

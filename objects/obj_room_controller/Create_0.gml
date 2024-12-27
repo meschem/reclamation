@@ -22,7 +22,13 @@ enum roomCategories {
 	endScreen,
 }
 
+enum combatRoomTypes {
+	dungeon,
+	openArea
+}
+
 category = roomCategories.combat
+combatRoomType = combatRoomTypes.openArea
 
 state = roomStates.init
 

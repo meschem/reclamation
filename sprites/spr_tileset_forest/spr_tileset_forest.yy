@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tileset_forest",
   "bboxMode":0,
-  "bbox_bottom":351,
+  "bbox_bottom":639,
   "bbox_left":0,
   "bbox_right":639,
   "bbox_top":0,

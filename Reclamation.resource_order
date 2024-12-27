@@ -326,6 +326,7 @@
     {"name":"get_baddie_scaling","order":1,"path":"scripts/get_baddie_scaling/get_baddie_scaling.yy",},
     {"name":"get_buff_attack_speed_scalar","order":3,"path":"scripts/get_buff_attack_speed_scalar/get_buff_attack_speed_scalar.yy",},
     {"name":"get_button_sprite_from_input","order":4,"path":"scripts/get_button_sprite_from_input/get_button_sprite_from_input.yy",},
+    {"name":"get_combat_room_type","order":6,"path":"scripts/get_combat_room_type/get_combat_room_type.yy",},
     {"name":"get_current_room_reward","order":1,"path":"scripts/get_current_room_reward/get_current_room_reward.yy",},
     {"name":"get_equipment_struct_key_from_slot","order":6,"path":"scripts/get_equipment_struct_key_from_slot/get_equipment_struct_key_from_slot.yy",},
     {"name":"get_equipment_var_by_enum","order":3,"path":"scripts/get_equipment_var_by_enum/get_equipment_var_by_enum.yy",},
