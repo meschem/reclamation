@@ -10,7 +10,7 @@ hp = hpMax
 hpBarDisplay = entityHpBarTypes.small
 
 moveAccel = baddie_move_accel_med
-moveSpeedMax = baddie_move_speed_ultra_fast
+moveSpeedMax = baddie_move_speed_fast
 
 shadowSprite = spr_shadow_xl
 

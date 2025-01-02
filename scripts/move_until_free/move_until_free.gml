@@ -22,7 +22,7 @@ function move_until_free(
 		pushAngle = 0
 	}
 		
-	while (place_meeting(x, y, [obj_baddie, obj_solid, obj_pit])) {
+	while (place_meeting(x, y, [obj_baddie, obj_solid, obj_pit, obj_doodad, obj_destructible])) {
 		sanity++
 	
 		if (sanity > 1000) {

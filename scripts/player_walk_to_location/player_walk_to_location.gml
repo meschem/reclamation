@@ -6,11 +6,15 @@
 function player_walk_to_location(xVel, yVel) {
 	var hitWall = false;
 	var steps = 0
+	var layerId = layer_get_id("Collision_Tiles")
+	var tileId = layer_tilemap_get_id(layerId)
 	
-	if (!phases && place_meeting(x + xVel, y, [obj_pit, obj_player_clip, obj_doodad])) {
+	var collisionList = [obj_pit, obj_player_clip, obj_doodad, obj_destructible, tileId]
+	
+	if (!phases && place_meeting(x + xVel, y, collisionList)) {
 		hitWall = true
 		
-	    while(!place_meeting(x + sign(xVel), y, [obj_pit, obj_player_clip, obj_doodad])) {
+	    while(!place_meeting(x + sign(xVel), y, collisionList)) {
 	        x += sign(xVel)
 			steps++
 			
@@ -24,11 +28,11 @@ function player_walk_to_location(xVel, yVel) {
 		x += xVel
 	}
 	
-	if (!phases && place_meeting(x, y + yVel, [obj_pit, obj_player_clip, obj_doodad])) {
+	if (!phases && place_meeting(x, y + yVel, collisionList)) {
 		steps = 0
 		hitWall = true
 		
-	    while(!place_meeting(x, y + sign(yVel), [obj_pit, obj_player_clip, obj_doodad])) {
+	    while(!place_meeting(x, y + sign(yVel), collisionList)) {
 	        y += sign(yVel)
 			
 			steps++

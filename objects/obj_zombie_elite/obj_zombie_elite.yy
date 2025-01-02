@@ -8,8 +8,8 @@
   "name":"obj_zombie_elite",
   "overriddenProperties":[],
   "parent":{
-    "name":"baddies",
-    "path":"folders/Objects/baddies.yy",
+    "name":"zombies",
+    "path":"folders/Objects/baddies/zombies.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

@@ -2,7 +2,7 @@
 function setup_level_single_area_a() {
 	//1
 	spawner.addPhase([
-		setup_spawn(obj_skeleton)
+		setup_spawn(obj_skeleton, 10)
 	])
 	
 	//2

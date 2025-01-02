@@ -1,7 +1,12 @@
 {
   "$GMTileSet":"v1",
   "%Name":"tileset_blue_forest",
-  "autoTileSets":[],
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[41,44,43,21,24,40,6,20,23,5,42,22,61,60,62,80,],},
+    {"$GMAutoTileSet":"","%Name":"autotile_2","closed_edge":false,"name":"autotile_2","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,80,],},
+    {"$GMAutoTileSet":"","%Name":"autotile_3","closed_edge":false,"name":"autotile_3","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[107,110,109,87,90,106,10,86,89,9,108,88,127,126,128,80,],},
+    {"$GMAutoTileSet":"","%Name":"autotile_4","closed_edge":false,"name":"autotile_4","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[53,56,55,33,36,52,12,32,35,11,54,34,73,72,74,47,],},
+  ],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
@@ -21,7 +26,7 @@
     "name":"spr_tileset_forest",
     "path":"sprites/spr_tileset_forest/spr_tileset_forest.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

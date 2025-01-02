@@ -209,9 +209,9 @@ if (collisionDelay <= 0) {
 		}
 	} else {
 		if (canHitMultipleTargets) {
-			instance_place_list(x, y, [obj_baddie], targetCollisionList, true)
+			instance_place_list(x, y, [obj_baddie, obj_destructible], targetCollisionList, true)
 		} else {
-			target = instance_place(x, y, [obj_baddie])
+			target = instance_place(x, y, [obj_baddie, obj_destructible])
 		}
 	}
 } else {
@@ -227,7 +227,7 @@ for (i = 0; i < ds_list_size(targetCollisionList); i++) {
 	target = targetCollisionList[| i]
 	
 	if (
-		target.targetType == targetTypes.baddie &&
+		(target.targetType == targetTypes.baddie || target.targetType == targetTypes.destructible) &&
 		target.hp > 0 &&
 		!hitlist_contains(hitList, target)
 	) {

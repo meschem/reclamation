@@ -46,7 +46,7 @@ hitWall = false
 
 xScale = 1
 yScale = 1
-rotation = 1
+rotation = 0
 
 age = 0
 lifeSpan = -1
@@ -93,6 +93,7 @@ collidesWith = baddie_collision_walker
 pushRadius = 14
 pushForce = 6
 immovable = false
+poisonImmune = false
 
 outlineColor = c_black
 stunLength = -1

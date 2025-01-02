@@ -7,6 +7,21 @@ if (is_oob()) {
 	killedByBounds = true
 }
 
+// Temp wrap-around teleporting
+if (x > obj_player.x + 480) {
+	x = obj_player.x - 380
+	move_until_free()
+} else if (x < obj_player.x - 480) {
+	x = obj_player.x + 380
+	move_until_free()
+} else if (y > obj_player.y + 280) {
+	y = obj_player.y - 200
+	move_until_free()
+} else if (y < obj_player.y - 280) {
+	y = obj_player.y + 200
+	move_until_free()
+}
+
 if (lifeSpan > 0 && age >= lifeSpan) {
 	lastDamageAngle = 90
 	lastDamageForce = 0.66

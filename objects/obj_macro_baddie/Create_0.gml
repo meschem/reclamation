@@ -56,8 +56,8 @@
 // Collision Arrays
 // Variable: collidesWith
 // Array checked for instance_place
-#macro baddie_collision_walker [obj_pit]
-#macro baddie_collision_flier [obj_solid]
+#macro baddie_collision_walker [obj_pit, obj_doodad, obj_destructible]
+#macro baddie_collision_flier [obj_solid, obj_doodad, obj_destructible]
 #macro baddie_collision_phaser []
 
 // Minion Sizes

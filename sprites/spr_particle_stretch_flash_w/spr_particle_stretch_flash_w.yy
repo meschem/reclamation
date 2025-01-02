@@ -30,7 +30,7 @@
   "origin":4,
   "parent":{
     "name":"flashes",
-    "path":"folders/Sprites/fx/particles/flashes.yy",
+    "path":"folders/Sprites/particles/flashes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

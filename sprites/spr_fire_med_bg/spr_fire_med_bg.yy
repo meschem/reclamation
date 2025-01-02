@@ -31,7 +31,7 @@
   "origin":9,
   "parent":{
     "name":"particles",
-    "path":"folders/Sprites/fx/particles.yy",
+    "path":"folders/Sprites/particles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

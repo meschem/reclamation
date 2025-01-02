@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"liquids",
-    "path":"folders/Sprites/fx/particles/liquids.yy",
+    "path":"folders/Sprites/particles/liquids.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

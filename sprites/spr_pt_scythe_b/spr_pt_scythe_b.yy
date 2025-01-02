@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"solids",
-    "path":"folders/Sprites/fx/particles/solids.yy",
+    "path":"folders/Sprites/particles/solids.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -8,6 +8,7 @@ enum projMovementTypes {
 enum targetTypes {
 	none,
 	baddie,
+	destructible,
 	terrain,
 	length
 }
@@ -16,6 +17,7 @@ enum projectileTypes {
 	unset,
 	weapon,
 	ability,
+	enemy
 }
 
 enum reseekBehaviors {
@@ -115,6 +117,7 @@ impactSoundsLeft = 0
 impactSoundsCount = 0
 impactSoundsMax = 3
 impactSoundsMaxPerFrame = 1
+impactSoundFrameSkip = false
 
 owner = noone
 

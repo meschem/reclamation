@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"skellies",
-    "path":"folders/Sprites/baddies/skellies.yy",
+    "name":"zombies",
+    "path":"folders/Sprites/baddies/zombies.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

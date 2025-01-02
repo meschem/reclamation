@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_projectile_launcher",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_projectile_launcher",
+  "parent":{
+    "name":"projectiles",
+    "path":"folders/Scripts/projectiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

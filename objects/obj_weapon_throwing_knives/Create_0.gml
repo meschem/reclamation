@@ -15,7 +15,7 @@ pierceChance = 0
 spread = 30
 spreadScalar = 1
 
-range = 150
+range = 210
 rangeScalar = 1
 
 velocity = 5
@@ -24,7 +24,7 @@ velocityScalar = 1
 bounces = false
 poisons = false
 
-maxCd = 40
+maxCd = 50
 
 stats = [
 	new weaponStat(enumWeaponStats.damage, id),
@@ -55,55 +55,21 @@ processUpgrades()
 ///									that are created
 ///@return {array<Id.Instance>}
 use = function() {
-	var _spawnPoint = get_vec2_from_angle_mag(owner.attackAngle, spawnDistance)
-	var _totalSpread = spread * spreadScalar
-	var _spread, _angle, _inst
-	var _daggers = []
-	
-	if (spawnCount > 1) {
-		_spread = _totalSpread / (spawnCount - 1)
-		_angle = owner.attackAngle - (_totalSpread / 2)
-	} else {
-		_spread = 0
-		_angle = 0
-	}
-	
-	for (var i = 0; i < spawnCount; i++) {
-		_inst = instance_create_depth(
-			owner.x + _spawnPoint.x,
-			owner.y + _spawnPoint.y,
-			depths.fx,
-			spawnObject
-		)
-		
-		_inst.image_angle = _angle
-		_inst.facingAngle = _angle
-		_inst.owner = owner
-		_inst.distanceMax = range * rangeScalar
-		_inst.pierceChance = pierceChance
-		_inst.bonusPoisonDamageScalar = bonusPoisonDamageScalar
-		_inst.bouncesMax = (bounces) ? 10 : 0
-		_inst.bonusDamageOnBounce = bonusDamageOnBounce
-		
-		//set_velocity_from_angle(_inst, _angle, random_range(3, 6))
-		set_velocity_from_angle(_inst, _angle, velocity * velocityScalar)
-		
-		array_push(_daggers, _inst)
-		
-		_angle += _spread
-	}
-	
-	if (poisons) {
-		var _index = irandom(array_length(_daggers) - 1)
-		
-		with (_daggers[_index]) {
-			sprite_index = spr_dagger_poisoned
-			trailColor = get_color(colors.green)
-			poisons = true
-		}
-	}
+	var _launcher = create_projectile_launcher(
+		spawnObject,
+		spawnCount,
+		7,
+		velocity * velocityScalar,
+		velocity * velocityScalar,
+		owner,
+		launchAngleTypes.staticAngle,
+		owner.attackAngle
+	)
 
-	audio_play_sound(snd_woosh, 1, false)
+	_launcher.projectileType = projectileTypes.weapon
+	_launcher.launchInstance = owner
+	_launcher.weapon = id
+	_launcher.launchOffsetVariance = 12
 	
-	return _daggers
+	return []
 }
