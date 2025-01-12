@@ -4,11 +4,14 @@ event_inherited()
 
 name = "Devil"
 
+wrapAroundBehavior = wrapAroundBehaviors.destroy
+
 xp = 60
 hpMax = 60
 hp = hpMax
 
-moveSpeedMax = baddie_move_speed_very_fast
+moveSpeedMax = baddie_move_speed_charger_medium
+pushWeightScalar = 0.5
 
 shadowSprite = spr_shadow_lg
 

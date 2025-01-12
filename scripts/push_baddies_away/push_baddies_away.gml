@@ -15,7 +15,7 @@ function push_baddies_away(_x, _y, _radius = 8, _force = 5) {
 			_enemy = _baddies[| i]
 			_distance = point_distance(_x, _y, _enemy.x, _enemy.y) // 0 -> _radius
 			_angle = point_direction(_x, _y, _enemy.x, _enemy.y)
-			_pushDistance = max(_minForce, _force * (1 - (_distance / _radius)))
+			_pushDistance = max(_minForce, _force * (1 - (_distance / _radius)) * _enemy.pushWeightScalar)
 			_pushVec2 = get_vec2_from_angle_mag(_angle, _pushDistance)
 			
 			if (_pushDistance >= 1) {

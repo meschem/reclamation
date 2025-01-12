@@ -2,19 +2,22 @@
 
 event_inherited();
 
-name = "Abaddon"
+name = "Odinok"
 
 shadowSprite = spr_shadow_lg
 shadowOffset = -3
 
-moveSpeedMax = baddie_move_speed_medium
+moveSpeedMax = 1
+
+pushForce = baddie_push_force_massive
+pushRadius = baddie_push_radius_medium
 
 walkAnimType = entityWalkAnimTypes.curves
 
-xp = baddie_xp_elite
-hpMax = 50
+xp = 1000
+hpMax = 1000
 hp = hpMax
-weight = baddie_weight_med
+weight = baddie_weight_light
 hpBarDisplay = entityHpBarTypes.small
 
 deathParticles = [
@@ -31,5 +34,20 @@ outlineColor = get_color(colors.red)
 
 add_baddie_gold_brutal_plus
 
-add_loot(obj_ore)
+//add_loot(obj_ore)
 
+beginStep = function() {
+	moveSpeedMax += 0.005
+}
+
+onDamaged = function() {
+	moveSpeedMax = 1
+}
+
+onDestroy = function() {
+	with (obj_run_controller) {
+		enemyScalingMoveSpeed += 0.1
+	}
+	
+	create_toaster("ENEMY SPEED INCREASED BY 10%")
+}

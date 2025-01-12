@@ -266,7 +266,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		scaledDamage: _damage
 	})
 	
+	target.onDamaged()
+	
 	onHit(target)
+	
 	
 	// FIXME disconnected from script
 	if (applyShock > 0 && target.shockedLength < applyShock) {

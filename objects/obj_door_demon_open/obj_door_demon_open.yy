@@ -26,7 +26,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"loadRoom","filters":[],"listItems":[],"multiselect":false,"name":"loadRoom","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_start_dev","path":"rooms/rm_start_dev/rm_start_dev.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_start_dev","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

@@ -4,8 +4,8 @@ event_inherited()
 
 name = "Bugbear"
 
-moveSpeedMax = 0.35
-weight = 20
+moveSpeedMax = baddie_move_speed_slow
+weight = baddie_weight_heavy
 
 walkAnimType = entityWalkAnimTypes.curves
 
@@ -14,8 +14,7 @@ shadowOffset = -9
 
 bossScale = 1
 
-hpMax = 2000
+hpMax = baddie_hp_very_high
 hp = hpMax
-hpBarDisplay = entityHpBarTypes.small
 
-add_loot_gold(500, 600, 1)
+add_baddie_gold_brutal

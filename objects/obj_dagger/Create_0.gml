@@ -18,7 +18,7 @@ bouncesCur = 0
 
 // damageFrameCooldown = 60 // not used yet...
 
-knockback = 0
+knockback = 1
 
 shadowSprite = spr_dagger_shadow
 
@@ -30,3 +30,7 @@ trail = true
 onBounce = function() {
 	damageDirect += bonusDamageOnBounce
 }
+
+impactSounds = [snd_punch_1, snd_punch_2, snd_punch_3]
+
+audio_play_sound(snd_woosh, 1, false, 0.6, 0, random_range(0.8, 1.2))

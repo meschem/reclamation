@@ -12,6 +12,8 @@ xp = baddie_xp_brutal
 hpMax = baddie_hp_massive
 hp = hpMax
 
+pushRadius = baddie_push_radius_large
+
 shadowSprite = spr_shadow_xxl
 shadowOffset = -6
 

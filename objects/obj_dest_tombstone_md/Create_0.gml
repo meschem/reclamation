@@ -21,5 +21,3 @@ deathParticles = [
 	obj_ptb_dest_rock_purp_med,
 	obj_ptb_dest_rock_purp_med
 ]
-
-image_index = floor(random(6))

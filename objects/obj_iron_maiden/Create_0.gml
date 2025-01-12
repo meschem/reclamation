@@ -15,8 +15,8 @@ floatRange = 2
 weight = baddie_weight_massive
 xp = baddie_xp_brutal_plus
 
-pushRadius = 20
-pushForce = 14
+pushRadius = baddie_push_radius_large
+pushForce = baddie_push_force_heavy
 
 enragedAttackRate = stf(3)
 enragedHpRatio = 0.3

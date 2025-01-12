@@ -1,5 +1,13 @@
 /// @description Define baddie macros
 
+// Damage
+// Variable: damageOnHit
+// How much damage it does to a player. For player, 1 pip = 10hp
+#macro baddie_damage_normal 10
+#macro baddie_damage_high 20
+#macro baddie_damage_very_high 30
+#macro baddie_damage_massive 40
+
 // Weights
 // Variable: weight
 // Used to determine how heavy a character is. Customizable.
@@ -38,9 +46,13 @@
 #macro baddie_move_speed_slow 0.4
 #macro baddie_move_speed_medium 0.6
 #macro baddie_move_speed_fast 0.9
-#macro baddie_move_speed_very_fast 1.2
-#macro baddie_move_speed_very_fast_plus 1.5
-#macro baddie_move_speed_ultra_fast 1.8
+#macro baddie_move_speed_very_fast 1.5
+#macro baddie_move_speed_very_fast_plus 2
+#macro baddie_move_speed_ultra_fast 2.5
+
+#macro baddie_move_speed_charger_medium 1.8
+#macro baddie_move_speed_charger_fast 2.3
+#macro baddie_move_speed_charger_ultra_fast 2.8
 
 // Experience
 // Variable: xp
@@ -59,6 +71,23 @@
 #macro baddie_collision_walker [obj_pit, obj_doodad, obj_destructible]
 #macro baddie_collision_flier [obj_solid, obj_doodad, obj_destructible]
 #macro baddie_collision_phaser []
+
+// Baddie push AoE
+// Variable: pushRadius
+// How large of a radius this baddie pushes other baddies away
+#macro baddie_push_radius_tiny 8
+#macro baddie_push_radius_small 18
+#macro baddie_push_radius_medium 24
+#macro baddie_push_radius_large 36
+#macro baddie_push_radius_huge 48
+#macro baddie_push_radius_massive 60
+
+// Baddie push Force
+// Variable: pushForce
+// How hard baddies push away other baddies
+#macro baddie_push_force_medium 5
+#macro baddie_push_force_heavy 9
+#macro baddie_push_force_massive 13
 
 // Minion Sizes
 // Variable: minionCount

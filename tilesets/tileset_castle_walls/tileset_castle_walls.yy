@@ -21,7 +21,7 @@
     "name":"spr_tileset_castle_walls",
     "path":"sprites/spr_tileset_castle_walls/spr_tileset_castle_walls.yy",
   },
-  "spriteNoExport":true,
+  "spriteNoExport":false,
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

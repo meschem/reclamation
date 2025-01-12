@@ -19,7 +19,7 @@ deathParticles = [
 ]
 
 moveAccel = baddie_move_accel_med
-moveSpeedMax = baddie_move_speed_very_fast
+moveSpeedMax = baddie_move_speed_fast
 collidesWith = baddie_collision_flier
 
 weight = 0

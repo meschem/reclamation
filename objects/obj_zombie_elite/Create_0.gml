@@ -2,13 +2,28 @@
 
 event_inherited();
 
-moveSpeedMax = 0.25
-xp = 30
+name = "Decayed"
 
-isElite = true
+walkAnimType = entityWalkAnimTypes.curves
 
-hpMax = 300
+moveSpeedMax = baddie_move_speed_slow
+xp = baddie_xp_fodder
+
+hpMax = baddie_hp_high * 1.5
 hp = hpMax
 
-shadowSprite = spr_shadow_lg
-shadowOffset = -2
+shadowSprite = spr_shadow_med
+shadowOffset = -1
+
+add_loot_gold(6, 8)
+
+deathParticles = [
+	obj_ptb_zombie_head_grn,
+	obj_ptb_zombie_torso_grn,
+	obj_ptb_zombie_limb_grn,
+	obj_ptb_zombie_limb_grn,
+	obj_ptb_zombie_limb_grn,
+	obj_ptb_zombie_limb_grn,
+]
+
+add_baddie_gold_fodder

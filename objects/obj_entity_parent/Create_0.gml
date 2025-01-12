@@ -91,7 +91,8 @@ feetOffset = 14 // offset from sprite center to mark foot for depth adjustments
 
 collidesWith = baddie_collision_walker
 pushRadius = 14
-pushForce = 6
+pushForce = 5
+pushWeightScalar = 1
 immovable = false
 poisonImmune = false
 

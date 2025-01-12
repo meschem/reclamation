@@ -16,8 +16,6 @@ deathParticles = [
 	obj_ptb_skel_skull_red,
 ]
 
-moveSpeedMax = 0.5
-
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 

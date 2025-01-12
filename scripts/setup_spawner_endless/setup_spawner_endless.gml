@@ -1,5 +1,5 @@
 ///@description								Sets up an endless spawner
-///@param {asset.GMObject} enemyType		Type of enemy to spawn
+///@param {asset.GMObject} _enemyType		Type of enemy to spawn
 ///@param {real} _phase						Phase to spawn in (0)
 ///@param {real} _enemiesPerWave			Number of waves to spawn in a phase (10)
 ///@param {real} _period					How often to spawn in seconds (1)

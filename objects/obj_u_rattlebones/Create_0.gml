@@ -7,9 +7,11 @@ name = "Rattlebones"
 shadowSprite = spr_shadow_lg
 shadowOffset = -3
 
-moveSpeedMax = baddie_move_speed_medium
+moveSpeedMax = baddie_move_speed_fast
 
 walkAnimType = entityWalkAnimTypes.curves
+
+pushForce = baddie_push_force_heavy
 
 xp = baddie_xp_elite
 hpMax = 500
@@ -30,3 +32,11 @@ deathParticles = [
 outlineColor = get_color(colors.red)
 
 add_baddie_gold_brutal_plus
+
+onDestroy = function() {
+	with (obj_run_controller) {
+		enemyScalingHp += 0.15
+	}
+	
+	create_toaster("ENEMY HEALTH SCALING +15%")
+}

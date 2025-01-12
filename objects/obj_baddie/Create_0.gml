@@ -8,6 +8,7 @@ enum entityMoveBehaviors {
 	fourDir,
 	chargeToStop,
 	custom,
+	test,
 }
 
 enum deathFxTypes {
@@ -52,6 +53,12 @@ enum entityCollisionTypes {
 	playerSummon,
 }
 
+enum wrapAroundBehaviors {
+	none,
+	wrap,
+	destroy
+}
+
 event_inherited()
 
 moveBehavior = entityMoveBehaviors.charge
@@ -74,6 +81,8 @@ moveSpeedMax = baddie_move_speed_medium
 moveDeaccel = 1
 moveState = enemyMoveStates.moving
 
+wrapAroundBehavior = wrapAroundBehaviors.wrap
+
 minionType = object_index
 minionCount = 12
 
@@ -87,10 +96,10 @@ target = get_player_target()
 
 debuffShockAmount = 0
 
-xp = 25
-ultimateCharge = 25
+xp = baddie_xp_fodder
+ultimateCharge = baddie_ultimate_charge_fodder
 
-damageOnHit = 10
+damageOnHit = baddie_damage_normal
 
 // START BUFFS
 

@@ -8,6 +8,7 @@ walkAnimType = entityWalkAnimTypes.curves
 
 moveSpeedMax = baddie_move_speed_slow
 xp = baddie_xp_brutal
+pushRadius = baddie_push_radius_large
 
 hpMax = baddie_hp_very_high
 hp = hpMax
@@ -18,14 +19,16 @@ shadowOffset = -9
 image_index = floor(random(sprite_get_number(sprite_index)))
 
 deathParticles = [
-	obj_ptb_zombie_head_grn,
-	obj_ptb_zombie_torso_grn,
-	obj_ptb_zombie_torso_grn,
-	obj_ptb_zombie_torso_grn,
-	obj_ptb_zombie_limb_grn,
-	obj_ptb_zombie_limb_grn,
-	obj_ptb_zombie_limb_grn,
-	obj_ptb_zombie_limb_grn,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_bone_purp,
+	obj_ptb_skel_ribs_purp,
+	obj_ptb_skel_skull_purp,
 ]
 
 add_baddie_gold_brutal

@@ -6,6 +6,7 @@
     {"$GMAutoTileSet":"","%Name":"autotile_2","closed_edge":false,"name":"autotile_2","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,80,],},
     {"$GMAutoTileSet":"","%Name":"autotile_3","closed_edge":false,"name":"autotile_3","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[107,110,109,87,90,106,10,86,89,9,108,88,127,126,128,80,],},
     {"$GMAutoTileSet":"","%Name":"autotile_4","closed_edge":false,"name":"autotile_4","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[53,56,55,33,36,52,12,32,35,11,54,34,73,72,74,47,],},
+    {"$GMAutoTileSet":"","%Name":"autotile_5","closed_edge":false,"name":"autotile_5","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[113,116,115,93,96,112,14,92,95,14,114,94,133,132,134,80,],},
   ],
   "macroPageTiles":{
     "SerialiseHeight":0,

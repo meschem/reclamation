@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_punch_huge_1.wav",
   "type":0,
-  "volume":0.2,
+  "volume":0.15,
 }

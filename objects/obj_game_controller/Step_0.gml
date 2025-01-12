@@ -70,7 +70,7 @@ if (keyboard_check_pressed(ord("X"))) {
 	//var _baddie =
 	
 	spawn_baddie_at_location(
-		obj_zombie_huge, mouse_x, mouse_y
+		obj_skull_head_ruby, mouse_x, mouse_y
 	)
 	
 	//create_elite_health_bar(_baddie)
@@ -80,7 +80,7 @@ if (keyboard_check_pressed(ord("X"))) {
 
 if (keyboard_check_pressed(ord("C"))) {
 	spawn_baddie_at_location(
-		obj_hydra, mouse_x, mouse_y
+		obj_skeleton_champion, mouse_x, mouse_y
 	)
 }
 
@@ -98,7 +98,7 @@ if (keyboard_check_pressed(ord("B"))) {
 
 if (keyboard_check_pressed(ord("N"))) {
 	spawn_baddie_at_location(
-		obj_naga, mouse_x, mouse_y
+		obj_boarrior, mouse_x, mouse_y
 	)
 }
 

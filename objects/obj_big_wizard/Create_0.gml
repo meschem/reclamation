@@ -7,10 +7,11 @@ name = "Banshee"
 xp = baddie_xp_brutal
 hpMax = 120
 hp = hpMax
-hpBarDisplay = entityHpBarTypes.small
 
 moveAccel = baddie_move_accel_med
-moveSpeedMax = baddie_move_speed_fast
+moveSpeedMax = baddie_move_speed_very_fast
+pushRadius = baddie_push_radius_large
+pushForce = baddie_push_force_heavy
 
 shadowSprite = spr_shadow_xl
 

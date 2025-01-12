@@ -2,19 +2,22 @@
 
 event_inherited();
 
-name = "Rattlebones"
+name = "Cladius"
 
 shadowSprite = spr_shadow_lg
 shadowOffset = -3
 
 moveSpeedMax = baddie_move_speed_medium
 
+pushForce = baddie_push_force_massive
+pushRadius = baddie_push_radius_medium
+
 walkAnimType = entityWalkAnimTypes.curves
 
-xp = baddie_xp_elite
-hpMax = 500
+xp = 1000
+hpMax = 1000
 hp = hpMax
-weight = baddie_weight_med
+weight = baddie_weight_massive
 hpBarDisplay = entityHpBarTypes.small
 
 deathParticles = [
@@ -29,4 +32,8 @@ deathParticles = [
 
 outlineColor = get_color(colors.red)
 
-add_baddie_gold_brutal_plus
+onDestroy = function() {
+	var _inst = setup_spawner_endless(obj_dark_skeleton_warrior, 0, 1, 8)
+	
+	_inst.debug = true
+}

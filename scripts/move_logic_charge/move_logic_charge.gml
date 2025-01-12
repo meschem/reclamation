@@ -17,8 +17,7 @@ function move_logic_charge() {
 	
 	var mag = point_distance(0, 0, xVel, yVel)
 		
-	if (mag > moveSpeedMax) {
+	if (mag > frameMoveSpeedMax) {
 		set_velocity_magnitude(frameMoveSpeedMax)
 	}
-
 }

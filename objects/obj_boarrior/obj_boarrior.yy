@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_boarrior",
-    "path":"sprites/spr_boarrior/spr_boarrior.yy",
+    "name":"spr_boarrior_armored",
+    "path":"sprites/spr_boarrior_armored/spr_boarrior_armored.yy",
   },
   "spriteMaskId":null,
   "visible":true,

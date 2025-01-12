@@ -12,6 +12,9 @@ if (game_is_paused())
 age++
 
 if (age < spawnStartFrame) {
+	//if (debug) {
+	//	create_toaster($"age lt sSF, ${age}, ${spawnStartFrame}")
+	//}
 	return 0
 }
 

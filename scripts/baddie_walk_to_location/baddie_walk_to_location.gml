@@ -76,16 +76,24 @@ function entity_walk_to_location(xVel, yVel) {
 	var colliders = collidesWith
 	//var sanity = 0
 	var distance = point_distance(0, 0, xVel, yVel)
+	var angle = point_direction(0, 0, xVel, yVel)
+	var normalX = xVel / distance
+	var normalY = yVel / distance	
 	var remaining = distance
 	var xCollided = false
 	var yCollided = false
-	var stepX = (sign(xVel) == 1) ? min(1, xVel) : max(-1, xVel)
-	var stepY = (sign(yVel) == 1) ? min(1, yVel) : max(-1, yVel)
+	var stepX = normalX
+	var stepY = normalY
 	var originX = x
 	var originY = y
 	var frictionScalar = 0.5
 	
 	while (remaining > 0) {
+		if (remaining < 1) {
+			stepX = angle_xvel(angle) * remaining
+			stepY = angle_yvel(angle) * remaining
+		}
+		
 		if (place_meeting(x + stepX, y, colliders)) {
 			xCollided = true
 		} else {
@@ -100,6 +108,8 @@ function entity_walk_to_location(xVel, yVel) {
 		
 		remaining--
 	}
+	
+	//return (xCollided || yCollided)
 	
 	//if either X or Y collided, we know we have some remaining distance
 	if (xCollided || yCollided) {

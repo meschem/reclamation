@@ -39,6 +39,7 @@ eliteSpawn = false
 bossSpawn = false
 spawnType = spawnerTypes.standard
 endless = false
+debug = false
 
 //clusterSpawnProcessed = false
 //clusterSpawnFactor = 10

@@ -10,6 +10,9 @@ hpMax = 1000
 hp = hpMax
 hpBarDisplay = entityHpBarTypes.small
 
+pushRadius = baddie_push_radius_large
+pushForce = baddie_push_force_heavy
+
 moveAccel = 0.08
 moveSpeedMax = 1
 weight = 4

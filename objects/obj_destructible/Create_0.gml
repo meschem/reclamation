@@ -25,6 +25,7 @@ particleBurstPoints = [
 parentBaddie = noone // used for hitList stuff
 debuffShockAmount = 0
 shockedLength = 0
+poisonLength = 0
 poisonStacks = 0
 poisonImmune = true
 immovable = true
@@ -37,7 +38,7 @@ lastDamageForce = 1
 
 damageParticles = []
 deathParticles = []
-deathParticleSpawnRange = 12
+deathParticleSpawnRange = new vec2(12, 12)
 
 onDamaged = function() {}
 onDeath = function() {}

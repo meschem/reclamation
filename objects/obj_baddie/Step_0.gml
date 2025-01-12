@@ -2,24 +2,14 @@ if (game_is_paused()) return 0
 
 age++
 
-if (is_oob()) {
-	hp = 0
-	killedByBounds = true
-}
-
-// Temp wrap-around teleporting
-if (x > obj_player.x + 480) {
-	x = obj_player.x - 380
-	move_until_free()
-} else if (x < obj_player.x - 480) {
-	x = obj_player.x + 380
-	move_until_free()
-} else if (y > obj_player.y + 280) {
-	y = obj_player.y - 200
-	move_until_free()
-} else if (y < obj_player.y - 280) {
-	y = obj_player.y + 200
-	move_until_free()
+// Clean this up probably for oob behavior
+if (get_combat_room_type() == combatRoomTypes.dungeon) {
+	if (is_oob()) {
+		hp = 0
+		killedByBounds = true
+	}
+} else {
+	baddie_oob_behavior(wrapAroundBehavior)
 }
 
 if (lifeSpan > 0 && age >= lifeSpan) {
@@ -72,6 +62,7 @@ if (state == enemyStates.normal) {
 		case entityMoveBehaviors.charge:
 		case entityMoveBehaviors.simple:
 			move_logic_charge()
+			//accel_towards_point(target.x, target.y, 0.01)
 		break
 		
 		case entityMoveBehaviors.fourDir:
@@ -84,6 +75,11 @@ if (state == enemyStates.normal) {
 		
 		case entityMoveBehaviors.wander:
 			move_logic_wander()
+		break
+		
+		case entityMoveBehaviors.test:
+			xVel = 1
+			yVel = 0
 		break
 	}
 
@@ -105,6 +101,8 @@ if (state == enemyStates.normal) {
 } else if (state == enemyStates.pushed) {
 	accelerate(-pushDeaccel)	
 } 
+
+//var appliedVel = new vec2(xVel, yVel)
 
 // Change this to cold
 if (shockedLength > 0) {

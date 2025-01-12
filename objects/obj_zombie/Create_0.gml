@@ -9,7 +9,7 @@ walkAnimType = entityWalkAnimTypes.curves
 moveSpeedMax = baddie_move_speed_slow
 xp = baddie_xp_fodder
 
-hpMax = 60
+hpMax = baddie_hp_high
 hp = hpMax
 
 shadowSprite = spr_shadow_med

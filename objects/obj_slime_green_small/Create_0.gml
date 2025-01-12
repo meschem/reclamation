@@ -10,6 +10,7 @@ hpBarDisplay = false
 weight = baddie_weight_none
 moveAccel = baddie_move_accel_slow
 moveSpeedMax = baddie_move_speed_fast
+pushRadius = baddie_push_radius_tiny
 
 shadowSprite = spr_shadow_lg
 shadowOffset = -4
