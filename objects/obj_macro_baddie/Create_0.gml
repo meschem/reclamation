@@ -57,12 +57,12 @@
 // Experience
 // Variable: xp
 // Experience granted on killing the AI
-#macro baddie_xp_pest 10
-#macro baddie_xp_fodder 25
-#macro baddie_xp_tough 120
-#macro baddie_xp_brutal 250
-#macro baddie_xp_brutal_plus 500
-#macro baddie_xp_elite 1500
+#macro baddie_xp_pest 15
+#macro baddie_xp_fodder 40
+#macro baddie_xp_tough 200
+#macro baddie_xp_brutal 500
+#macro baddie_xp_brutal_plus 1000
+#macro baddie_xp_elite 2500
 #macro baddie_xp_boss 5000
 
 // Collision Arrays

@@ -10,6 +10,7 @@ paddingX = 8
 paddingY = 20
 statSpacing = 14
 maxTextWidth = width - (paddingX * 2)
+owner = get_first_player()
 
 generalFont = font_dogica_s
 
@@ -18,6 +19,6 @@ image_yscale = height / sprite_height
 
 onClick = function () {
 	ability.levelUp()
-	
+
 	close_ability_selection_menu()
 }

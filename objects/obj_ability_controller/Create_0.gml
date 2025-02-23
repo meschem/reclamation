@@ -1,17 +1,21 @@
 
-ability = playerAbilities.null
-index = 0
-icon = spr_ability_icon_null
-owner = obj_player.id
+// currently loaded via load_abilities_for_hero()
+allAbilities = [
+	obj_ability_shock,
+	obj_ability_lightning_rune,
+	obj_ability_lightning_ball,
+	obj_ability_war_stomp,
+	obj_ability_thorns,
+	
+	obj_ability_poison_wave,
+	obj_ability_spirit_wolf,
+	obj_ability_toxic_swarm,
+	obj_ability_bear_trap,
+	obj_ability_assassinate
+]
 
-cooldown = 0
-maxCd = 60
-age = 0
-
-hotkey = "Q"
-controllerIcon = spr_btn_xbox_rt
-
+availableAbilities = []
 //sprite_index = icon
 
-x = 1
-y = 46
+//x = 1
+//y = 46

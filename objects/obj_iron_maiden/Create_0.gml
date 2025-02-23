@@ -19,7 +19,7 @@ pushRadius = baddie_push_radius_large
 pushForce = baddie_push_force_heavy
 
 enragedAttackRate = stf(3)
-enragedHpRatio = 0.3
+enragedHpRatio = 0.4
 
 flies = true
 collidesWith = baddie_collision_flier

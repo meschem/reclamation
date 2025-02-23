@@ -10,3 +10,4 @@ for (var i = 0; i < global.playerCount; i++) {
 }
 
 spawn_players()
+

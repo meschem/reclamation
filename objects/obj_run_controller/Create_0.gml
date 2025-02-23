@@ -17,7 +17,12 @@ create_instance(obj_equipment_controller)
 create_instance(obj_mutator_controller)
 //create_instance(obj_run_stats_controller)
 
+storedBaddies = []
+
 type = runTypes.normal
+mainRoom = rm_start_dev
+runAge = 0
+mainRoomAge = 0
 
 finalLevelRoom = rm_dungeon_end
 endScreen = false
@@ -33,7 +38,8 @@ displayStateSpacing = 10
 // Difficulty Scalars
 enemyScalingHp = 1
 enemyScalingMoveSpeed = 1
-enemyScalingSpawnCount = 1
+enemyScalingSpawnCount = 0.5
+
 
 enemyScalingSpawnCountTable = [
 	0.5,
@@ -54,14 +60,16 @@ enemyScalingSpawnCountTable = [
 
 enemyScalingCdMax = seconds_to_frames(60)
 enemyScalingCdCur = enemyScalingCdMax
-enemyScalesWithTime = false
+enemyScalesWithTime = true
 
 enemyScalingHpIncrease = 0.1
-enemyScalingMoveSpeedIncrease = 0.1
+enemyScalingMoveSpeedIncrease = 0.05
 
 challengeLevel = 1
 
 resetRun = function() {
+	runAge = 0
+	mainRoomAge = 0
 	enemyScalingHp = 1
 	enemyScalingMoveSpeed = 1
 }
@@ -78,16 +86,18 @@ loadRoom = function(_dungeonRoom) {
 getBaddieScaling = function(_stat) {
 	switch (_stat) {
 		case baddieScalars.hp:
-			return (currentFloor * 0.1) + 1
+			return enemyScalingHp
 		
 		case baddieScalars.moveSpeed:
 			return enemyScalingMoveSpeed
 		
 		case baddieScalars.spawnCount:
-			if (currentFloor >= array_length(enemyScalingSpawnCountTable)) {
-				return array_last(enemyScalingSpawnCountTable)
-			}
+			return enemyScalingSpawnCount
 			
-			return enemyScalingSpawnCountTable[currentFloor]
+			//if (currentFloor >= array_length(enemyScalingSpawnCountTable)) {
+			//	return array_last(enemyScalingSpawnCountTable)
+			//}
+			
+			//return enemyScalingSpawnCountTable[currentFloor]
 	}
 }

@@ -19,3 +19,5 @@ onPickup = function(_player) {
 	instance_destroy()
 	//create_toaster("Obtained: DEFAULT KEY")
 }
+
+onDestroy = function () {}

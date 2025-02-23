@@ -135,6 +135,8 @@ hitWall = false
 razorCd = 240
 razorMaxCd = 480
 
+activeAbility = obj_none // default active ability to load for first slot
+
 activeAbilities = [
 	noone,
 	noone,
@@ -154,6 +156,8 @@ sprSlam = spr_jonah_slam
 
 animAbilityQueue = function() {}
 
+abilitiesMax = 4
+abilities = []
 onHitAbilities = []					// Array of instances that have activateOnHit() functions
 onAttackAbilities = []				// Array of instances that have activateOnAttak() functions
 onStrikeAbilities = []				// Array of instances that have activateOnStrike() functions, when attack lands

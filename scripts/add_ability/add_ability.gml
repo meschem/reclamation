@@ -1,9 +1,13 @@
-/// @description				Adds an active ability for the player
-/// @param {real} ability		Ability enum from playerAbilities
+/// @description					Adds an active ability for the player
+/// @param {real} ability			Ability enum from playerAbilities
+/// @param {id.Instance} player		Player to give the ability to
 
-function add_ability(ability) {
+function add_ability(ability, player = noone) {
+	if (player == noone) {
+		player = get_first_player()
+	}
 	
-	var index = array_length(obj_player.activeAbilities)	
+	var index = array_length(player.activeAbilities)	
 	var inst = instance_create_depth(0, 0, 0, obj_ability_controller)
 	var hotkeys = [
 		"Q",
@@ -12,7 +16,7 @@ function add_ability(ability) {
 		"T"
 	]
 	
-	obj_player.activeAbilities[index] = ability
+	player.activeAbilities[index] = ability
 	
 	inst.ability = ability
 	inst.x = (28 * index) + 1

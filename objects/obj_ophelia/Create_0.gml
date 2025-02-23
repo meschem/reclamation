@@ -22,6 +22,8 @@ baseAreaOfEffectScalar = 1
 baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
 
+activeAbility = obj_ability_shadow_step
+
 abilityTrees = [
 	create_instance(obj_abil_tree_ophelia_nature),
 	create_instance(obj_abil_tree_ophelia_survival)

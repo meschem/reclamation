@@ -1,10 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_door_demon_open",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_door_demon_open",
   "overriddenProperties":[],
@@ -12,7 +9,10 @@
     "name":"doodads",
     "path":"folders/Objects/doodads.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_room_exit",
+    "path":"objects/obj_room_exit/obj_room_exit.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

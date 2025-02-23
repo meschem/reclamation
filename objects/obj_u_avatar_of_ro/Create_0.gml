@@ -9,8 +9,10 @@ walkAnimType = entityWalkAnimTypes.curves
 moveSpeedMax = baddie_move_speed_medium
 xp = baddie_xp_boss
 
-hpMax = baddie_hp_boss
+hpMax = 1500 // baddie_hp_boss
 hp = hpMax
+
+create_boss_health_bar(id)
 
 shadowSprite = spr_shadow_xxl
 shadowOffset = -9

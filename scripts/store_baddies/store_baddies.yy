@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"store_baddies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"store_baddies",
+  "parent":{
+    "name":"storing",
+    "path":"folders/Scripts/baddies/storing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

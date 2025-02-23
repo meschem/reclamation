@@ -3,28 +3,53 @@ if (game_is_paused())
 
 age++
 
-if (homesOnPlayer) {
-	if (!homingActive && distance_to_object(target) < homingRadius * target.bonusPickupRangeScalar) {
-		homingActive = true
-	}
-	
-	if (homingActive) {
-		var mag = point_distance(0, 0, xVel, yVel)
-		var angle = point_direction(x, y, target.x, target.y)
+if (target == noone ) {
+	target = get_first_player()
+}
 
-		mag += homingAccel
+if (age % 1 == 0) {
+	if (target != noone) {
+		distanceToTarget = distance_to_object(target)
+		angleToTarget = point_direction(x, y, target.x, target.y)
+	
+		if (!homingActive && drawLocatorArrow) {
+			if (is_point_in_camera(x, y)) {
+				arrowDrawLocation.x = x + arrowDrawOffset.x
+				arrowDrawLocation.y = y + arrowDrawOffset.y
+				arrowDrawAngle = 270
+			} else {
+				arrowDrawLocation = get_screen_edge_pos_for_arrow(id)
+				arrowDrawAngle = angleToTarget + 180
+			}
 		
-		if (distance_to_object(target) < mag) {
-			xVel = 0
-			yVel = 0
-			x = target.x
-			y = target.y
-		} else {
-			xVel = angle_xvel(angle) * mag
-			yVel = angle_yvel(angle) * mag
+			//create_toaster($"Arr at ({arrowDrawLocation.x}, {arrowDrawLocation.y})")
+		}
+	
+		if (homesOnPlayer) {
+			if (!homingActive && distanceToTarget < homingRadius * target.bonusPickupRangeScalar) {
+				homingActive = true
+			}
+	
+			if (homingActive) {
+				var mag = point_distance(0, 0, xVel, yVel)
+				var angle = angleToTarget
+
+				mag += homingAccel
+		
+				if (distanceToTarget < mag) {
+					xVel = 0
+					yVel = 0
+					x = target.x
+					y = target.y
+				} else {
+					xVel = angle_xvel(angle) * mag
+					yVel = angle_yvel(angle) * mag
+				}
+			}
 		}
 	}
 }
+
 
 if (!homingActive && lifeSpan >= 0) {
 	if (lifeSpan - age < 120) {

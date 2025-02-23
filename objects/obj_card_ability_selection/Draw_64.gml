@@ -1,9 +1,10 @@
 /// @description Draw Info
-
 var runningOffset = 0
 
+// Draw Sprite
 draw_self()
 
+// Draw Icon
 draw_sprite(
 	ability.selectionIcon,
 	0,
@@ -11,10 +12,9 @@ draw_sprite(
 	y + menuOffset.y - 9
 )
 
+// Draw Name
 draw_set_font(font_pixellari)
 draw_set_color(get_color(colors.blue))
-
-draw_text(x, y, state)
 
 runningOffset = y + menuOffset.y + 32
 
@@ -34,8 +34,34 @@ draw_text(
 	ability.name
 )
 
-// linebreak
-runningOffset += 25
+// Draw Level
+runningOffset += 19
+draw_set_font(generalFont)
+
+if (ability.level == 0) {
+	draw_set_color(get_color(colors.red))
+	
+	draw_text(
+		x + menuOffset.x + 45,
+		runningOffset,
+		"New Ability!"
+	)		
+} else {
+	draw_text(
+		x + menuOffset.x + 45,
+		runningOffset,
+		"Level"
+	)
+
+	draw_text(
+		x + menuOffset.x + 95,
+		runningOffset,
+		ability.level
+	)
+}
+
+// Draw Linebreak
+runningOffset += 13
 
 draw_sprite(
 	spr_card_line_break, 0,
@@ -44,8 +70,8 @@ draw_sprite(
 )
 
 runningOffset += 17
-// end linebreak
 
+// Draw Description
 draw_set_font(generalFont)
 draw_set_color(get_color(colors.dark))
 
@@ -57,6 +83,7 @@ draw_text_ext(
 	maxTextWidth
 )
 
+// Draw Stats
 for (var i = 0; i < array_length(ability.stats); i++) {
 	var nameString = ability.stats[i].name + ": "
 	

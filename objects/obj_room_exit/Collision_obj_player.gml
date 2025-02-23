@@ -3,4 +3,7 @@ if (game_is_paused()) {
 	return 0
 }
 
-obj_room_controller.completeOvertime()
+store_main_room_stats()
+store_baddies()
+
+room_goto(loadRoom)

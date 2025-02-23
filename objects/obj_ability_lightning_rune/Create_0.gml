@@ -8,7 +8,7 @@ event_inherited();
 name = "Lightning Rune"
 description = "Spawns a lightning rune at your location that deals damage over time and then erupts."
 active = true
-//selectionIcon = spr_abil_select_icon_flurry
+selectionIcon = spr_abil_select_icon_lit_rune
 
 curCd = 0
 maxCd = seconds_to_frames(12)

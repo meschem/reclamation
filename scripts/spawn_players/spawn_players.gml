@@ -18,5 +18,6 @@ function spawn_players() {
 		offset.x += 30
 		
 		add_player_target(_inst)
+		load_abilities_for_hero(_inst)
 	}
 }

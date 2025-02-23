@@ -1,5 +1,11 @@
 if (game_is_paused()) return
 
+runAge++
+
+if (is_main_room_active()) {
+	mainRoomAge++
+}
+
 enemyScalingCdCur--
 
 if (enemyScalesWithTime) {

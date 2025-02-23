@@ -323,21 +323,21 @@ function keyMouseInput() constructor {
 	useWeaponSecondary = mb_right
 	
 	useAbility = [
-		ord("Q"),
+		ord("R"), // always active
 		ord("E"),
-		ord("R"),
-		ord("T"),
-		ord("G")
+		ord("L"),
+		ord("G"),
+		ord("T")  // always ault
 	]
 }
 
 function gamepadInput() constructor {
 	useAbility = [
+		gp_shoulderr, // always active
+		gp_shoulderl,
 		gp_shoulderrb,
 		gp_shoulderlb,
-		gp_shoulderr,
-		gp_shoulderl,
-		gp_face2
+		gp_face2	   // always ult
 	]
 }
 

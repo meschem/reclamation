@@ -53,21 +53,23 @@ function spawn_baddie(enemy, count = 1, spread = 16, flags = {}) {
 		}
 	}
 	
-	for (i = 0; i < array_length(spawns); i++) {
-		if (array_contains(spawnFlags, enumSpawnFlags.noTarget)) {
-			spawns[i].target = noone
-		} else {
-			spawns[i].target = target
-		}
+	if (variable_instance_exists(id, "spawnFlags")) {
+		for (i = 0; i < array_length(spawns); i++) {
+			if (array_contains(spawnFlags, enumSpawnFlags.noTarget)) {
+				spawns[i].target = noone
+			} else {
+				spawns[i].target = target
+			}
 		
-		if (array_contains(spawnFlags, enumSpawnFlags.chargeOpposite)) {
-			spawns[i].facingAngle = get_facing_angle_from_spawn_side(zone.spawnSide)
-		}
+			if (array_contains(spawnFlags, enumSpawnFlags.chargeOpposite)) {
+				spawns[i].facingAngle = get_facing_angle_from_spawn_side(zone.spawnSide)
+			}
 		
-		if (array_contains(spawnFlags, enumSpawnFlags.chargeTarget)) {
-			spawns[i].facingAngle = point_direction(spawns[i].x, spawns[i].y, target.x, target.y)
-		}
-	}	
+			if (array_contains(spawnFlags, enumSpawnFlags.chargeTarget)) {
+				spawns[i].facingAngle = point_direction(spawns[i].x, spawns[i].y, target.x, target.y)
+			}
+		}	
+	}
 	
 	apply_baddie_scaling(spawns)
 	

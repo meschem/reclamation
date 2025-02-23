@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_for_max_abilities",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_for_max_abilities",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

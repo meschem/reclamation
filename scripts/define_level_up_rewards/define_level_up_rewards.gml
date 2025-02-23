@@ -3,8 +3,12 @@ function define_level_up_rewards(){
 	levelUpRewardTable = [
 		levelUpRewards.abilitySelect,
 		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
+		levelUpRewards.abilitySelect,
 		levelUpRewards.trinket,
+		
+		levelUpRewards.trinket,
+		levelUpRewards.abilitySelect,
+		levelUpRewards.abilityLevelUp,
 		levelUpRewards.weaponUpgrade,
 		
 		levelUpRewards.abilitySelect,

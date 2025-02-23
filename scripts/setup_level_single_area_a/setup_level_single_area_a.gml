@@ -2,33 +2,31 @@
 function setup_level_single_area_a() {
 	//1
 	spawner.addPhase([
-		setup_spawn(obj_skeleton, 10)
+		setup_spawn(obj_skeleton, 6)
 	])
 	
 	//2
 	spawner.addPhase([
-		setup_spawn(obj_skeleton, 12),
-		setup_spawn(obj_skeleton_warrior, 3),
-		
+		setup_spawn(obj_skeleton, 8),
+		setup_spawn(obj_skeleton_warrior, 2),
 	])
 
 	//3
 	spawner.addPhase([
-		setup_spawn(obj_skeleton, 12),
-		setup_spawn(obj_skeleton_warrior, 2),
-		setup_spawn_unique(obj_u_rattlebones)
+		setup_spawn(obj_skeleton, 10),
+		setup_spawn(obj_skeleton_warrior, 2)
 	])
 	
 	//4
 	spawner.addPhase([
 		setup_spawn(obj_skeleton, 12),
+		setup_spawn_unique(obj_u_rattlebones),
 		setup_spawn(obj_boarrior, 6)
 	])
 	
 	//5
 	spawner.addPhase([
-		setup_spawn(obj_skeleton, 15),
-		setup_spawn(obj_skeleton_warrior, 4)
+		setup_spawn(obj_zombie, 6),
 	])
 	
 	//6
@@ -36,7 +34,17 @@ function setup_level_single_area_a() {
 		setup_spawn(obj_zombie, 6),
 		setup_spawn(obj_skeleton_warrior, 2),
 		setup_spawn(obj_skeleton, 4),
-		setup_spawn(obj_skeleton, 1, 1, spawnerTypes.elite)
+	])
+	
+	//7
+	spawner.addPhase([
+		setup_spawn(obj_zombie, 12)
+	])
+	
+	//8
+	spawner.addPhase([
+		setup_spawn(obj_zombie, 12),
+		setup_spawn(obj_devil, 15, spawnWvs, spawnerTypes.flybyChargeCluster)
 	])
 	
 	//7
@@ -47,7 +55,8 @@ function setup_level_single_area_a() {
 	
 	//8
 	spawner.addPhase([
-		setup_spawn(obj_zombie, 12),
+		setup_spawn(obj_zombie, 6),
+		setup_spawn(obj_zombie_huge, 3),
 		setup_spawn(obj_devil, 15, spawnWvs, spawnerTypes.flybyChargeCluster)
 	])
 	

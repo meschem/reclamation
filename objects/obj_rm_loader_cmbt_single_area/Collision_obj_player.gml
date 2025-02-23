@@ -7,7 +7,6 @@ if (obj_player.equipment.weapon == noone) {
 	obj_player.addWeapon(obj_weapon_greataxe)
 }
 
-room_end_store_globals()
-	
-obj_run_controller.type = runTypes.singleArea
+start_single_room_run(loadRoom)
+
 room_goto(loadRoom)

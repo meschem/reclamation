@@ -14,7 +14,13 @@ function display_level_up_prompt(_player = noone) {
 
 		switch (levelUpRewardTable[_player.level - 2]) {
 			case levelUpRewards.abilitySelect:
-				display_level_abil_select_prompt(_player)
+				// var _success = display_level_abil_select_prompt(_player)
+				var _success = display_level_abil_select_new_prompt(_player)
+				
+				if (!_success) {
+					// need to handle this at some point...
+					create_toaster("No abilities found for level up", errorLevels.error)
+				}
 			break
 				
 			case levelUpRewards.trinket:

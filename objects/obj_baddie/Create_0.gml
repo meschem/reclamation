@@ -121,6 +121,7 @@ bossScale = 2
 isElite = false
 isBoss = false
 outlineColor = c_black
+roomBoss = false
 
 markedForCrit = false // Guarantees crit, removed when activated
 

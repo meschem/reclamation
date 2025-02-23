@@ -14,7 +14,7 @@ function setup_spawner(enemyType, phase, count = 10, period = 240) {
 	inst.enemyTypes[0] = enemyType
 	inst.spawnStartFrame = (phase * phaseLength) + initialDelay
 	inst.spawnEndFrame = inst.spawnStartFrame + phaseLength
-	inst.spawnCount = count
+	inst.spawnCount = count * get_baddie_scaling(baddieScalars.spawnCount)
 	inst.spawnPeriod = period
 	
 	return inst

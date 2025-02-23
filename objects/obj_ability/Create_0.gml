@@ -118,6 +118,12 @@ levelUp = function () {
 	
 	enabled = true
 	
+	if (level == 1) {
+		array_push(owner.abilities, id)
+		
+		treeLevel = array_length(owner.abilities)
+	}
+	
 	iconX = 1 + (26 * (treeLevel - 1))
 	iconY = 42
 	

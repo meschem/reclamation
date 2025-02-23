@@ -13,3 +13,17 @@ draw_sprite(
 	x,
 	y + floatOffset
 )
+
+if (drawLocatorArrow) {
+	draw_sprite_ext(
+		arrowSprite,
+		0,
+		arrowDrawLocation.x,
+		arrowDrawLocation.y,
+		1, 1,
+		arrowDrawAngle,
+		c_white,
+		1
+	)
+}
+

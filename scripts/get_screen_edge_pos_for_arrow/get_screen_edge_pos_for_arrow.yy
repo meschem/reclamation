@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_screen_edge_pos_for_arrow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_screen_edge_pos_for_arrow",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

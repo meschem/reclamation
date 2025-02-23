@@ -35,4 +35,14 @@ if (!killedByBounds) {
 	//		instance_create_depth(x, y, depths.enemy, obj_health_globe_sm)
 	//	}
 	//}
+	
+	if (roomBoss) {
+		with (obj_spawner) {
+			instance_destroy()
+		}
+		
+		with (obj_baddie) {
+			instance_destroy()
+		}
+	}
 }

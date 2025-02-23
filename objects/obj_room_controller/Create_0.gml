@@ -19,6 +19,7 @@ enum roomCategories {
 	shop,
 	stats,
 	inactive,
+	boss,
 	endScreen,
 }
 
@@ -33,6 +34,8 @@ combatRoomType = combatRoomTypes.openArea
 state = roomStates.init
 
 age = 0
+
+
 
 isPaused = false
 pauseDelay = 0
@@ -81,7 +84,17 @@ initCombat = function() {
 		return 0
 	}
 	
-	create_toaster("Initiating Combat")
+	if (is_main_room_active()) {
+		age = obj_run_controller.mainRoomAge
+		
+		with (obj_spawner) {
+			age = obj_run_controller.mainRoomAge
+			
+		}
+		
+		spawn_stored_baddies()
+	}
+	
 	if (instance_number(obj_dungeon) > 0) {
 		create_toaster("Setting up Spawner")
 		obj_run_controller.currentRoom.setupSpawner()
@@ -140,6 +153,13 @@ completeOvertime = function() {
 		}
 		
 		with (obj_run_controller) {
+			if (type == runTypes.singleArea) {
+				if (!is_main_room_active()) {
+					room_goto(mainRoom)
+					return 0
+				}
+			}
+			
 			if (dungeon == noone) {
 				endScreen = true
 				room_goto(finalLevelRoom)

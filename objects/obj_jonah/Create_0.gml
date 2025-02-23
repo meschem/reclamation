@@ -21,6 +21,8 @@ sprSlam = spr_jonah_slam
 
 //spawn_ability_trees()
 
+activeAbility = obj_ability_charge
+
 abilityTrees = [
 	create_instance(obj_abil_tree_jonah_combat),
 	create_instance(obj_abil_tree_jonah_storm),
