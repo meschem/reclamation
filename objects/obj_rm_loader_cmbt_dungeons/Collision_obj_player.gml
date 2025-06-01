@@ -4,7 +4,7 @@
 // TEMP STORING GLOBALS
 
 if (obj_player.equipment.weapon == noone) {
-	obj_player.addWeapon(obj_weapon_greataxe)
+	obj_player.addWeapon(obj_player.defaultWeapon)
 }
 
 var _dungeon = create_dungeon(dungeonBiomes.castle)

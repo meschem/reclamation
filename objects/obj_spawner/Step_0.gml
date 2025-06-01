@@ -51,9 +51,10 @@ if (spawnAge % spawnPeriod == 0) {
 	
 	if (!bossSpawn && !eliteSpawn && !singleSpawn) {
 		_spawnCount *= get_baddie_scaling(baddieScalars.spawnCount)
+		create_toaster(_spawnCount)
 	}
 	
-	create_toaster($"{spawnCount}, {get_baddie_scaling(baddieScalars.spawnCount)}, {_spawnCount}")
+	//create_toaster($"{spawnCount}, {get_baddie_scaling(baddieScalars.spawnCount)}, {_spawnCount}")
 	
 	if (array_contains(spawnFlags, enumSpawnFlags.clusterSpawn)) {
 		spawnIndex = random(array_length(enemyTypes))
@@ -87,7 +88,3 @@ if (spawnAge % spawnPeriod == 0) {
 }
 
 spawnAge++
-
-//if (!endless && age >= spawnEndFrame) {
-//	instance_destroy()
-//}

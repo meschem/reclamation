@@ -23,6 +23,7 @@ type = runTypes.normal
 mainRoom = rm_start_dev
 runAge = 0
 mainRoomAge = 0
+mainRoomInit = false
 
 finalLevelRoom = rm_dungeon_end
 endScreen = false

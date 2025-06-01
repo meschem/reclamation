@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dagger",
-    "path":"sprites/spr_dagger/spr_dagger.yy",
+    "name":"spr_arrow",
+    "path":"sprites/spr_arrow/spr_arrow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

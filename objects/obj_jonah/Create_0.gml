@@ -21,6 +21,13 @@ sprSlam = spr_jonah_slam
 
 //spawn_ability_trees()
 
+availableWeapons = [
+	obj_weapon_greataxe,
+	obj_weapon_war_hammer
+]
+
+defaultWeapon = obj_weapon_greataxe
+
 activeAbility = obj_ability_charge
 
 abilityTrees = [

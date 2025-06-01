@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_hp_bar",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_hp_bar",
+  "parent":{
+    "name":"hp_bars",
+    "path":"folders/Scripts/ui/hp_bars.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

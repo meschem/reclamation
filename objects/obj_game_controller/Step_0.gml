@@ -70,7 +70,7 @@ if (keyboard_check_pressed(ord("X"))) {
 	//var _baddie =
 	
 	spawn_baddie_at_location(
-		obj_skull_head_ruby, mouse_x, mouse_y
+		obj_butterfly, mouse_x, mouse_y
 	)
 	
 	//create_elite_health_bar(_baddie)

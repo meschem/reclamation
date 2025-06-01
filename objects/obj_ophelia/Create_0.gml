@@ -30,10 +30,10 @@ abilityTrees = [
 ]
 
 availableWeapons = [
-	obj_weapon_throwing_knives
+	obj_weapon_throwing_knives,
+	obj_weapon_hunting_bow
 ]
 
-
+defaultWeapon = obj_weapon_throwing_knives
 
 //abilityTrees = playerCharacters.jonah
-

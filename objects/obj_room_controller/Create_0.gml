@@ -15,12 +15,12 @@ enum roomStates {
 }
 
 enum roomCategories {
-	combat,
-	shop,
-	stats,
-	inactive,
-	boss,
-	endScreen,
+	combat,				// normal combat, ends when combat is over
+	shop,				// a shop!
+	stats,				// shows stats. unused?
+	inactive,			// player is inactive
+	boss,				// driven by killing a boss
+	endScreen,			// score screen
 }
 
 enum combatRoomTypes {
@@ -54,6 +54,7 @@ create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
 create_instance(obj_particle_controller)
 create_instance(obj_sound_controller)
+create_instance(obj_event_controller)
 
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false
@@ -90,6 +91,11 @@ initCombat = function() {
 		with (obj_spawner) {
 			age = obj_run_controller.mainRoomAge
 			
+		}
+		
+		if (!obj_run_controller.mainRoomInit) {
+			process_map_events()
+			obj_run_controller.mainRoomInit = true
 		}
 		
 		spawn_stored_baddies()

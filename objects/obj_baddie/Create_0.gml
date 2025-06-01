@@ -65,6 +65,7 @@ moveBehavior = entityMoveBehaviors.charge
 collisionType = entityCollisionTypes.baddie
 
 damageOnCollide = true
+provideKillRewards = true
 
 targetType = targetTypes.baddie
 

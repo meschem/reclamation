@@ -13,7 +13,7 @@ onPickup = function(_player) {
 	var _weapon = _player.equipment.weapon
 	
 	if (_weapon == noone) {
-		obj_player.addWeapon(obj_weapon_greataxe)
+		obj_player.addWeapon(obj_player.defaultWeapon)
 		_weapon = _player.equipment.weapon
 	}
 	

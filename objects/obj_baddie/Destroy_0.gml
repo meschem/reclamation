@@ -12,20 +12,24 @@ if (!killedByBounds) {
 		audio_play_sound(soundOnDeath, 1, false)
 	}
 	
-	/// FIXME: Uses obj_player
-	add_run_stat_kill(id, get_first_player())
-	add_run_stat(enumRunStats.xpGained, xp)
+	if (provideKillRewards) {
+		/// FIXME: Uses obj_player
+		add_run_stat_kill(id, get_first_player())
+		add_run_stat(enumRunStats.xpGained, xp)
 	
-	/// FIXME: Hack
-	obj_player.xp += xp
-	obj_player.addUltimateCharge(ultimateCharge)
+		/// FIXME: Hack
+		obj_player.xp += xp
+		obj_player.addUltimateCharge(ultimateCharge)
 	
-	check_for_level_up()
+		check_for_level_up()
+	
+		check_for_soul_gate()
 
-	for (var i = 0; i < array_length(loot); i++) {
-		loot[i].drop()
+		for (var i = 0; i < array_length(loot); i++) {
+			loot[i].drop()
 	
-		delete loot[i]
+			delete loot[i]
+		}
 	}
 
 	//var _player = get_player_target()

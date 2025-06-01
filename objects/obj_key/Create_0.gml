@@ -8,6 +8,8 @@ homesOnPlayer = false
 lifeSpan = -1
 floats = true
 
+mapIcon = spr_key_icon
+
 init_floating(2, 90)
 
 shadowSprite = spr_shadow_med

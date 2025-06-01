@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_room_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_room_map",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

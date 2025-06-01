@@ -16,10 +16,10 @@ if (obj_game_controller.debugMode = true) {
 		
 		spawnName = object_get_name(enemyTypes[0])
 		
-		draw_text(
-			drawX, drawY,
-			$"Spawning {spawnCount * scalar} {spawnName} every {frames_to_seconds(spawnPeriod)}s"
-		)
+		//draw_text(
+		//	drawX, drawY,
+		//	$"Spawning {spawnCount * scalar} {spawnName} every {frames_to_seconds(spawnPeriod)}s"
+		//)
 		
 		drawY += 20
 	}

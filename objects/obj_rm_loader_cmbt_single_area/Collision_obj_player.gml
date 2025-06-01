@@ -4,7 +4,7 @@
 // TEMP STORING GLOBALS
 
 if (obj_player.equipment.weapon == noone) {
-	obj_player.addWeapon(obj_weapon_greataxe)
+	obj_player.addWeapon(obj_player.defaultWeapon)
 }
 
 start_single_room_run(loadRoom)

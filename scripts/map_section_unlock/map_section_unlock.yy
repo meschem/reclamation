@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"map_section_unlock",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"map_section_unlock",
+  "parent":{
+    "name":"world_map",
+    "path":"folders/Scripts/world_map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

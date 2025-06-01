@@ -62,7 +62,9 @@ hpBarInfo = {
 	yPos: 0,
 	xPos: 0,
 	width: 0,
-	yOffset: -5
+	yOffset: -5,
+	bgColor: get_color(colors.dark_purple),
+	fillColor: get_color(colors.red)
 }
 
 
@@ -83,6 +85,7 @@ knockbackMaxSpeedRatio = 0.25
 soundOnDeath = snd_wood_roll
 deathParticleSpawnRange = new vec2(0, 0)
 deathParticles = []
+spawnedBy = noone
 
 rotationBehavior = entityRotateBehavior.none
 shadowSprite = -1 // -1 is no sprite

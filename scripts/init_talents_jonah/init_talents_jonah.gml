@@ -14,7 +14,8 @@ function init_talents_jonah() {
 	
 	enum heroes {
 		any,
-		jonah
+		jonah,
+		ophelia,
 	}
 	
 	enum genTalents {

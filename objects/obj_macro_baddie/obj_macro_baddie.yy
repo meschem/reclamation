@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"macros",
-    "path":"folders/Objects/macros.yy",
+    "path":"folders/Objects/player_characters/macros.yy",
   },
   "parentObjectId":null,
   "persistent":false,

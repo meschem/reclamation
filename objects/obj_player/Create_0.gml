@@ -52,6 +52,8 @@ enum enumPlayerStats {
 
 reticleIndex = 0
 
+mapIcon = spr_player_icon
+
 baseMaxHp = 50
 baseMoveSpeedMax = 1.2
 baseMaxArmor = 0
@@ -121,6 +123,7 @@ ultimateChargeMax = 1000
 hasUltimate = false
 
 weaponList = ds_list_create()
+defaultWeapon = obj_weapon_greataxe
 
 //warHammerEquipped = false
 //daggerEquipped = false

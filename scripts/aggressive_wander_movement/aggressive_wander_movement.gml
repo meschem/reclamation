@@ -4,7 +4,7 @@ function aggressive_wander_movement() {
 		target = instance_nearest(x, y, obj_baddie)
 		
 		if (target != noone) {
-			create_toaster($"New Target: {target.name}")
+			//create_toaster($"New Target: {target.name}")
 		}
 	}
 	

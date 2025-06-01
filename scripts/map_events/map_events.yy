@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"map_events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"map_events",
+  "parent":{
+    "name":"map_events",
+    "path":"folders/Scripts/map_events.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

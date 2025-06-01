@@ -102,7 +102,7 @@ function define_room_types() {
 	)
 }
 
-function roomType(_sizes, _spawns) constructor {
-	sizes = _sizes
-	spawns = _spawns
-}
+//function roomType(_sizes, _spawns) constructor {
+//	sizes = _sizes
+//	spawns = _spawns
+//}

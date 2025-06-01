@@ -14,3 +14,5 @@ onDestroy = function() {
 		spawn_baddie_at_location(obj_grub_small, _player.x + _vec.x, _player.y + _vec.y)
 	}
 }
+
+add_map_poi()

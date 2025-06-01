@@ -1,21 +1,21 @@
 ///@description			Init
 event_inherited()
 
-name = "Throwing Knives"
-description = "Throws daggers in an arc. Every 5th dagger deals critical damage."
+name = "Hunting Bow"
+description = "Fires multiple projectiles in a spread."
 spawnDistance = 16
 baseDamage = 10
-spawnObject = obj_dagger
+spawnObject = obj_hunting_arrow
 spawnCount = 3
 bonusPoisonDamageScalar = 0
 bonusDamageOnBounce = 0
 
 pierceChance = 0
 
-spread = 30
+spread = 40
 spreadScalar = 1
 
-range = 150
+range = 220
 rangeScalar = 1
 
 velocity = 5

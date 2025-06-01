@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_circle_adv",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_circle_adv",
+  "parent":{
+    "name":"drawing",
+    "path":"folders/Scripts/drawing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
