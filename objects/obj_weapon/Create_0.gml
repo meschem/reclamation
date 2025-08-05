@@ -55,26 +55,64 @@ upgradePath = [
 	weaponUpgradeTypes.major
 ]
 
+damageStatBoostStr = 0
+damageStatBoostDex = 0
+damageStatBoostInt = 0
+
 owner = noone
+
+///@description					Gets damage the projectile should deal
+///@return {real}
+getDamage = function() {
+	var _damage = getBaseDamage()
+	
+	_damage += bonusDamage
+	_damage *= damageScalar
+	
+	return _damage
+}
+
+///@description						Calculates the base damage with any additives
+///@return {real}					Returned damage to start calculating with
+getBaseDamage = function() {
+	var _damage = baseDamage
+	
+	_damage += damageStatBoostStr * (owner.baseStr + owner.bonusStr)
+	_damage += damageStatBoostDex * (owner.baseDex + owner.bonusDex)
+	_damage += damageStatBoostInt * (owner.baseInt + owner.bonusInt)
+	
+	return _damage
+}
+
+///@description						Gets knockback for the weapon
+///@return {real}
+getKnockback = function() {
+	var _knockback = baseKnockback + (owner.baseStr + owner.bonusStr)
+	
+	_knockback += bonusKnockback
+	_knockback *= knockbackScalar
+	
+	return _knockback
+}
 
 ///@description					Gets a weapon stat value
 ///@param {real} _stat			Stat, uses enumWeaponStats
 getWeaponStatValue = function(_stat) {
 	switch (_stat) {
 		case enumWeaponStats.damage:
-			return (baseDamage + bonusDamage) * damageScalar
+			return getDamage()
 			
 		case enumWeaponStats.knockback:
-			return (baseKnockback + bonusKnockback) * knockbackScalar
+			return getKnockback()
 			
 		case enumWeaponStats.projectileScale:
-			return (projectileScale)
+			return projectileScale
 			
 		case enumWeaponStats.projectileCount:
-			return (projectileCount)
+			return projectileCount
 			
 		case enumWeaponStats.cooldown:
-			return (maxCd)
+			return maxCd
 	}		
 }
 
@@ -182,11 +220,15 @@ applyUpgradesToInstance = function(_inst) {
 	_inst.xVel *= velocityScalar
 	_inst.yVel *= velocityScalar
 	
-	_inst.damageDirect += bonusDamage
-	_inst.damageDirect *= damageScalar
+	//_inst.damageDirect += bonusDamage
+	//_inst.damageDirect *= damageScalar
 	
-	_inst.knockback += bonusKnockback
-	_inst.knockback *= knockbackScalar
+	_inst.damageDirect = getDamage()
+	
+	//_inst.knockback += bonusKnockback
+	//_inst.knockback *= knockbackScalar
+	
+	_inst.knockback = getKnockback()
 	
 	_inst.critMultiplier += bonusCritMultiplier
 	_inst.setScale(owner) // from obj_weapon_projectile

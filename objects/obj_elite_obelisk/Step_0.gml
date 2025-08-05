@@ -1,4 +1,10 @@
 
+if (game_is_paused()) {
+	return 0
+}
+
+age++
+
 if (
 	obj_player.x > x + activationArea.x1 &&
 	obj_player.x < x + activationArea.x2 &&
@@ -8,6 +14,10 @@ if (
 	charge++
 } else {
 	charge = charge - max(0, charge)
+}
+
+if (floats) {
+	set_float_range()
 }
 
 drawUiLoc = get_ui_pos(id)

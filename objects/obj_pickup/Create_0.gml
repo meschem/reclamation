@@ -24,11 +24,16 @@ lifeSpan = seconds_to_frames(8)
 
 floats = false
 
+active = false // can be picked up
+pickupDelay = 20
+
 drawLocatorArrow = false
 arrowSprite = spr_locator_arrow
 arrowDrawLocation = new vec2(0, 0)
 arrowDrawAngle = 0
 arrowDrawOffset = new vec2(0, -20)
+
+beginStep = function() {}
 
 ///@param {id.Instance}	_player		Player picking up the item
 onPickup = function(_player) {

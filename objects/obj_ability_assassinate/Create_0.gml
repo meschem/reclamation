@@ -5,6 +5,12 @@ event_inherited()
 
 name = "Assassinate"
 description = "Deals heavy damage to a nearby unit. 25% chance to crit with base crit multiplier."
+
+statBonuses = {
+	str: "Increases Damage",
+	dex: "Increases Crit Chance"
+}
+
 //onHitAbility = true
 active = true
 //selectionIcon = spr_abil_select_icon_bear_trap

@@ -9,6 +9,20 @@ enum explicitInputTypes {
 	controller
 }
 
+enum bindActions {
+	toggleInventory
+}
+
+bindToggleInventory = {
+	controller: XBOX_INPUT_Y,
+	keyboard: ord("I")
+}
+
+bindToggleFullscreen = {
+	controller: gp_shoulderrb,
+	keyboard: vk_f3
+}
+
 lastMouseX = mouse_x
 lastMouseY = mouse_y
 

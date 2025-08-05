@@ -36,6 +36,10 @@ if (state == roomStates.init) {
 	if (category == roomCategories.endScreen) {
 		initEndScreen()
 	}
+	
+	if (category == roomCategories.inactive) {
+		initInactive()
+	}
 }
 
 if (state == roomStates.overtime) {
@@ -55,6 +59,13 @@ if (
 	instance_number(obj_ability_selection_menu) == 0 &&
 	instance_number(obj_baddie) == 0 &&
 	instance_number(obj_spawner) == 0
+) {
+	completeCombat()
+}
+
+if (
+	category == roomCategories.combatSingle &&
+	singleRoomCombatComplete
 ) {
 	completeCombat()
 }

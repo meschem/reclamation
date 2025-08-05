@@ -1,1 +1,0 @@
-drawLocatorArrow = true

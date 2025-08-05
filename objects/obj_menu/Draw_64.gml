@@ -10,7 +10,8 @@ draw_sprite_ext(
 	x, y,
 	scaleX, 
 	scaleY, 
-	0, c_white, 1
+	0, c_white, 
+	image_alpha
 )
 
 draw_set_font(font_pxlxxl_m)

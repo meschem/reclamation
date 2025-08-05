@@ -7,6 +7,15 @@ function create_item_stat_from_var(_var, _amount) {
 	}
 	
 	switch (_var) {
+		case "bonusStr":
+			return new itemStat(enumItemStats.bonusStr, _amount)
+			
+		case "bonusDex":
+			return new itemStat(enumItemStats.bonusDex, _amount)
+			
+		case "bonusInt":
+			return new itemStat(enumItemStats.bonusInt, _amount)
+			
 		case "bonusAbilityCooldown":
 			return new itemStat(enumItemStats.bonusAbilityCooldown, _amount)
 		

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_backpack_for_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_backpack_for_player",
+  "parent":{
+    "name":"merger_item",
+    "path":"folders/Scripts/player/merger_item.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

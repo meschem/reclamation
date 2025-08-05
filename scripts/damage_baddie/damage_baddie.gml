@@ -20,24 +20,15 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force
 
 	// If show dmg numbers is on
 	if (true) {
-		var inst = instance_create_depth(
-			target.x + irandom_range(-5, 5),
-			target.y + irandom_range(-5, 5),
-			depths.ui,
-			obj_moving_text
-		)
-		
-		//inst.yVel = -2
-		inst.xVel = random_range(-0.5, 0.5)
-		
-		var displayAmount = round(amount)
+		var displayAmount = round(amount * 10)
+		var damageStyle = damageTextStyles.normal
 		
 		if (isCrit) {
-			inst.displayText = string(round(displayAmount)) + "!"
-			inst.fontColor = c_orange
-		} else {
-			inst.displayText = string(round(displayAmount))
+			damageStyle = damageTextStyles.crit
 		}
+		
+		create_damage_text(target.x, target.y, amount, damageStyle)
+
 	}
 
 	if (target.hp <= 0) {

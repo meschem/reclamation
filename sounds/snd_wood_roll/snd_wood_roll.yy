@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.510227,
+  "duration":0.5102268,
   "name":"snd_wood_roll",
   "parent":{
     "name":"deaths",

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_maul_icon",
-    "path":"sprites/spr_maul_icon/spr_maul_icon.yy",
+    "name":"spr_greataxe_icon",
+    "path":"sprites/spr_greataxe_icon/spr_greataxe_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

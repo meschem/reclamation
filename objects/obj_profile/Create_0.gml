@@ -2,8 +2,12 @@
 
 name = "Matt"
 
+
+
+// list of map section enums
 unlockedMapSections = [
 ]
+
 
 heroSaves = [
 	

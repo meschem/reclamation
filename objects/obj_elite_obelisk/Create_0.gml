@@ -1,5 +1,8 @@
 
+age = 0
 mapIcon = spr_poi_obelisk
+
+floats = false
 
 activationArea = {
 	x1: -60,

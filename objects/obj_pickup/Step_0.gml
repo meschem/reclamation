@@ -7,6 +7,30 @@ if (target == noone ) {
 	target = get_first_player()
 }
 
+if (floats) {
+	set_float_range()
+}
+
+if (!active) {
+	if (age >= pickupDelay) {
+		active = true
+	} else {
+		return 0
+	}
+}
+
+beginStep()
+
+if (!homingActive && lifeSpan >= 0) {
+	if (lifeSpan - age < 120) {
+		image_alpha = (age % 6 <= 2) ? 0 : 1
+	}
+
+	if (age >= lifeSpan) {
+		instance_destroy()
+	}
+}
+
 if (age % 1 == 0) {
 	if (target != noone) {
 		distanceToTarget = distance_to_object(target)
@@ -50,19 +74,6 @@ if (age % 1 == 0) {
 	}
 }
 
-
-if (!homingActive && lifeSpan >= 0) {
-	if (lifeSpan - age < 120) {
-		image_alpha = (age % 6 <= 2) ? 0 : 1
-	}
-
-	if (age >= lifeSpan) {
-		instance_destroy()
-	}
-}
-
-
-
 x += xVel
 y += yVel
 
@@ -78,8 +89,4 @@ if (inst != noone) {
 	//txt.fontColor = get_color(colors.red)
 	
 	//instance_destroy()
-}
-
-if (floats) {
-	set_float_range()
 }

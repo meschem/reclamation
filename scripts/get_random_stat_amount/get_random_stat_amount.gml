@@ -15,6 +15,36 @@ function get_random_stat_amount(_stat, _rarity) {
 	}
 
 	switch (_stat) {
+		case equipmentStats.bonusStr:
+			_digits = 0
+			_statStruct = {
+				normal: [1, 3],
+				magic: [2, 5],
+				rare: [4, 7],
+				legendary: [6, 10]
+			}
+		break
+		
+		case equipmentStats.bonusDex:
+			_digits = 0
+			_statStruct = {
+				normal: [1, 3],
+				magic: [2, 5],
+				rare: [4, 7],
+				legendary: [6, 10]
+			}
+		break
+		
+		case equipmentStats.bonusInt:
+			_digits = 0
+			_statStruct = {
+				normal: [1, 3],
+				magic: [2, 5],
+				rare: [4, 7],
+				legendary: [6, 10]
+			}
+		break
+		
 		case equipmentStats.bonusAbilityCooldown:
 			// std
 		break

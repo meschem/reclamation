@@ -2,6 +2,9 @@
 ///@return {array<String>}
 function get_available_equipment_stat_strings() {
 	return [
+		"bonusStr",
+		"bonusDex",
+		"bonusInt",
 		"bonusAbilityCooldown",
 		"bonusArmor",
 		"bonusAttackSpeed",

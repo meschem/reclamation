@@ -40,5 +40,5 @@
     "path":"sprites/spr_trinket_debug/spr_trinket_debug.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

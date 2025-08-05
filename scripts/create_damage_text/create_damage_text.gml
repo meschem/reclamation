@@ -8,7 +8,7 @@ function create_damage_text(_x, _y, _amount, _style) {
 			_x + irandom_range(-5, 5),
 			_y + irandom_range(-5, 5),
 			depths.ui,
-			obj_moving_text
+			obj_dmg_numbers
 		)
 		
 		//inst.yVel = -2
@@ -17,12 +17,11 @@ function create_damage_text(_x, _y, _amount, _style) {
 		var _displayAmount = round(_amount)
 		
 		if (_style == damageTextStyles.crit) {
-			_inst.displayText = string(round(_displayAmount)) + "!"
-			_inst.fontColor = get_color(colors.orange)
+			_inst.setValue(_displayAmount, true)
 		} else if (_style == damageTextStyles.poison) {
-			_inst.displayText = string(round(_displayAmount))
-			_inst.fontColor = get_color(colors.green)
+			_inst.setValue(_displayAmount)
+			_inst.image_blend = get_color(colors.green)
 		} else {
-			_inst.displayText = string(round(_displayAmount))
+			_inst.setValue(_displayAmount)
 		}
 }

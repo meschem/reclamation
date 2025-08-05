@@ -3,7 +3,14 @@
 ///@param {real} _rarityMultiplier	Improves drop rarity by a %
 ///@return {array<id.Instance>}
 
-function create_gear_roll(_count = 1, _rarityMultiplier = 0) {
+function create_gear_roll(_count = 1, _rarityMultiplier = 0, _validSlots = []) {
+	/*
+		Equipment Filter example:
+		{
+			slot: [equipmentSlots.none],
+			rarity: = [enumRarity.normal]
+		}
+	*/
 	//if (slot == -1) {
 	//	var slotSelection = [
 	//		equipmentSlots.boots,
@@ -35,7 +42,7 @@ function create_gear_roll(_count = 1, _rarityMultiplier = 0) {
 	//	array_push(gear, obj_equipment_controller.createItemFromTemplate(gearTemplates[i]))
 	//}
 	
-	var _gear = obj_equipment_controller.getItemsByRolling(_count, _rarityMultiplier)
+	var _gear = obj_equipment_controller.getItemsByRolling(_count, _rarityMultiplier, _validSlots)
 	
 	return _gear
 }

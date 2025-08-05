@@ -5,4 +5,10 @@ function check_for_soul_gate(_baddie = id) {
 			eatSoul(_baddie)
 		}
 	}
+	
+	with (obj_infernal_wave_summoner) {
+		killCount++
+		
+		create_toaster("Infernal Wave Fed")
+	}
 }

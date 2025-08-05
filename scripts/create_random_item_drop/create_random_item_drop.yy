@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_random_item_drop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_random_item_drop",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

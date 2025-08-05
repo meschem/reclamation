@@ -21,6 +21,7 @@ instance_create_depth(100, 0, depths.ui, obj_trinket_controller)
 create_instance(obj_toaster_controller)
 create_instance(obj_run_controller)
 create_instance(obj_input_controller)
+create_instance(obj_recipe_controller)
 
 spawn_players()
 

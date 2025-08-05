@@ -4,7 +4,7 @@
 ///@return {id.Instance}				Menu that's created
 function open_player_inventory(_parentMenu = noone, _player = noone){
 	if (_player == noone) {
-		_player = obj_player
+		_player = get_first_player()
 	}
 	
 	var _menu = instance_create_depth(0, 0, depths.ui, obj_equipment_menu)

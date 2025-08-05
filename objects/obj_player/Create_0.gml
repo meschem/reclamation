@@ -32,6 +32,12 @@ reticles = [
 
 //add_player_target(id)
 
+enum enumCharStats {
+	str,
+	dex,
+	int,
+}
+
 enum enumPlayerStats {
 	maxHp,
 	moveSpeedMax,
@@ -54,6 +60,14 @@ reticleIndex = 0
 
 mapIcon = spr_player_icon
 
+baseStr = 5
+baseDex = 5
+baseInt = 5
+
+bonusStr = 0
+bonusDex = 0
+bonusInt = 0
+
 baseMaxHp = 50
 baseMoveSpeedMax = 1.2
 baseMaxArmor = 0
@@ -72,6 +86,7 @@ bonusPickupRewardScalar = 1
 bonusWeaponAoeScalar = 1
 bonusWeaponKnockbackScalar = 1
 bonusPoisonDamage = 0
+bonusMagicFind = 0
 
 totalGold = 0
 gold = 0
@@ -197,9 +212,16 @@ equipment = {
 	ringRight: noone,
 }
 
+backpack = create_backpack_for_player()
+
 keys = []
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
+
+///@description							Gets a calculate character stat
+getCharStat = function(_stat) {
+	
+}
 
 applyHeal = function(_amount) {
 	hp += _amount
@@ -241,16 +263,26 @@ addWeapon = function(_weapon) {
 
 ///@description							Equip an item
 ///@param {id.Instance}	item			Item to equipment
-equipItem = function(item) {
+///@param {bool} replace				Replaces equipped item in that slot if there is one
+equipItem = function(item, replace = true) {
 	var structKey = getSlotStringFromEnum(item.slot)
 	var equippedItem = struct_get(equipment, structKey)
 	
-	if (equippedItem != noone) {
-		equippedItem.equipped = false
-	}
+	if (replace) {
+		if (equippedItem != noone) {
+			equippedItem.equipped = false
+		}
 	
-	item.equip()	
-	struct_set(equipment, structKey, item)
+		item.equip()	
+		struct_set(equipment, structKey, item)
+	} else {
+		if (equippedItem == noone) {
+			item.equip()
+			struct_set(equipment, structKey, item)
+		} else {
+			item.unequip()
+		}
+	}
 	
 	process_player_stats()
 }

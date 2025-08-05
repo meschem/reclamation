@@ -8,6 +8,9 @@ if (game_is_paused()) {
 
 age++
 
+x += xVel
+y += yVel
+
 var ageRatio = age / lifeSpan
 
 if (changeAlpha) {
@@ -17,7 +20,8 @@ if (changeAlpha) {
 
 if (changeScale) {
 	var scaleChange = scaleEnd - scaleStart
-	image_alpha = scaleStart + (ageRatio * scaleChange)
+	image_xscale = scaleStart + (ageRatio * scaleChange)
+	image_yscale = image_xscale
 }
 
 if (age >= lifeSpan)

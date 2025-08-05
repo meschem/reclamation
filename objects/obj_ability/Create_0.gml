@@ -10,6 +10,8 @@ icon = sprite_index
 iconX = -999
 iconY = -999
 
+image_alpha = 0
+
 autoCast = false
 canAutoCast = false
 enabled = false
@@ -41,6 +43,7 @@ controllerIcon = spr_btn_xbox_y
 selectionIcon = spr_abil_select_icon_unset
 
 owner = obj_player.id // get_player_target()
+drawGui = true
 
 runes = []
 

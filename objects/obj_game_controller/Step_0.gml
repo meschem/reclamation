@@ -6,11 +6,11 @@ if (keyboard_check_pressed(vk_f2)) {
 	game_restart()
 }
 
-if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderrb)) {
-	window_set_fullscreen(!window_get_fullscreen())
-}
+//if (keyboard_check_pressed(vk_f3) || gamepad_button_check_pressed(0, gp_shoulderrb)) {
+//	window_set_fullscreen(!window_get_fullscreen())
+//}
 
-if (keyboard_check_pressed(vk_f4) || gamepad_button_check_pressed(0, gp_face4)) {
+if (keyboard_check_pressed(vk_f4)) {
 	if (instance_number(obj_big_selection_menu) == 0) {
 		obj_player.xp = playerXpLevelTable[obj_player.level]
 		check_for_level_up()
@@ -33,7 +33,8 @@ if (keyboard_check_pressed(vk_f6)) {
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
-	display_level_rune_prompt()
+	instance_create_depth(mouse_x, mouse_y, depth, obj_equipment_chest)
+	//create_random_item_drop(mouse_x, mouse_y, 5)
 }
 
 if (keyboard_check_pressed(vk_f8)) {
@@ -52,13 +53,17 @@ if (keyboard_check_pressed(vk_f10)) {
 	}
 }
 
-if (keyboard_check_pressed(ord("I"))) {
-	if (instance_number(obj_equipment_menu) > 0) {
-		obj_equipment_menu.close()
-	} else {
-		open_player_inventory()
-	}
-}
+//if (keyboard_check_pressed(ord("I"))) {
+//	with (obj_player) {
+//		backpack.toggle()
+//	}
+	
+//	//if (instance_number(obj_equipment_menu) > 0) {
+//	//	obj_equipment_menu.close()
+//	//} else {
+//	//	open_player_inventory()
+//	//}
+//}
 
 if (keyboard_check_pressed(ord("Z"))) {
 	spawn_baddie_at_location(
@@ -70,7 +75,7 @@ if (keyboard_check_pressed(ord("X"))) {
 	//var _baddie =
 	
 	spawn_baddie_at_location(
-		obj_butterfly, mouse_x, mouse_y
+		obj_zombie_fat, mouse_x, mouse_y
 	)
 	
 	//create_elite_health_bar(_baddie)

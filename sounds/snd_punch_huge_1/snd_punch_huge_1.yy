@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.440113,
+  "duration":0.44011337,
   "name":"snd_punch_huge_1",
   "parent":{
     "name":"punches",

@@ -233,6 +233,17 @@ queueImpactSound = function() {
 	}
 }
 
+///@description						Calculates the base damage with any additives
+///@return {real}					Returned damage to start calculating with
+//getBaseDamage = function() {
+//	var _damage = damageDirect
+	
+//	_damage += damageStatBoostStr * (owner.baseStr + owner.bonusStr)
+//	_damage += damageStatBoostDex * (owner.baseDex + owner.bonusDex)
+//	_damage += damageStatBoostInt * (owner.baseInt + owner.bonusInt)
+	
+//	return _damage
+//}
 
 ///@description						Calculates scalars just prior to damage being applied.
 ///									Returns damage that should be dealt.
@@ -240,10 +251,11 @@ queueImpactSound = function() {
 ///@return {real}
 getScaledDamage = function(_target) {
 	var _scalar = 1
+	var _baseDamage = damageDirect
 	
 	if (_target.poisonStacks > 0) {
 		_scalar += bonusPoisonDamageScalar
 	}
 	
-	return damageDirect * _scalar
+	return _baseDamage * _scalar
 }

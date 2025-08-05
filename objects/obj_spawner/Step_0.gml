@@ -28,7 +28,6 @@ if (spawnAge % spawnPeriod == 0) {
 	var spawns, i, j
 	var _spawnCount = spawnCount // * get_baddie_scaling(baddieScalars.spawnCount)
 	
-	
 	active = true
 	
 	if (spawnType == spawnerTypes.flybyLinear) {
@@ -51,7 +50,7 @@ if (spawnAge % spawnPeriod == 0) {
 	
 	if (!bossSpawn && !eliteSpawn && !singleSpawn) {
 		_spawnCount *= get_baddie_scaling(baddieScalars.spawnCount)
-		create_toaster(_spawnCount)
+		//	create_toaster(_spawnCount)
 	}
 	
 	//create_toaster($"{spawnCount}, {get_baddie_scaling(baddieScalars.spawnCount)}, {_spawnCount}")

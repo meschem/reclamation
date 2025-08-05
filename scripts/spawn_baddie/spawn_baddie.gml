@@ -10,6 +10,10 @@ function spawn_baddie(enemy, count = 1, spread = 16, flags = {}) {
 	var randomY = irandom_range(-20, room_height + 20)
 	var target = get_player_target()
 	
+	if (enemy == obj_none) {
+		throw ("obj_none set as spawn type")
+	}
+	
 	var zone = get_random_instance(obj_spawn_zone)
 	
 	var inst, i

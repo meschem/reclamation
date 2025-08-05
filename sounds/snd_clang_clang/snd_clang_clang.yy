@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.454558,
+  "duration":1.4545578,
   "name":"snd_clang_clang",
   "parent":{
     "name":"pickup",

@@ -24,6 +24,13 @@ mainRoom = rm_start_dev
 runAge = 0
 mainRoomAge = 0
 mainRoomInit = false
+runIsActive = false
+
+curseAge = 0
+curseActive = false
+curseBoostCd = mtf(1)		// How often the curse "boost" stats kick in
+curseAgeMax = mtf(4)		// When the curse kicks in
+curseAgeFinal = mtf(12)		// The absolute max lenght the curse can be extended to
 
 finalLevelRoom = rm_dungeon_end
 endScreen = false
@@ -40,7 +47,6 @@ displayStateSpacing = 10
 enemyScalingHp = 1
 enemyScalingMoveSpeed = 1
 enemyScalingSpawnCount = 0.5
-
 
 enemyScalingSpawnCountTable = [
 	0.5,
@@ -61,7 +67,8 @@ enemyScalingSpawnCountTable = [
 
 enemyScalingCdMax = seconds_to_frames(60)
 enemyScalingCdCur = enemyScalingCdMax
-enemyScalesWithTime = true
+enemyScalesWithTime = false
+enemyScalesWithCurse = true
 
 enemyScalingHpIncrease = 0.1
 enemyScalingMoveSpeedIncrease = 0.05
@@ -70,6 +77,7 @@ challengeLevel = 1
 
 resetRun = function() {
 	runAge = 0
+	curseAge = 0
 	mainRoomAge = 0
 	enemyScalingHp = 1
 	enemyScalingMoveSpeed = 1

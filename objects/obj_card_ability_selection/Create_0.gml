@@ -12,7 +12,7 @@ statSpacing = 14
 maxTextWidth = width - (paddingX * 2)
 owner = get_first_player()
 
-generalFont = font_dogica_s
+generalFont = font_pixelmix_s // font_dogica_s
 
 image_xscale = width / sprite_width
 image_yscale = height / sprite_height

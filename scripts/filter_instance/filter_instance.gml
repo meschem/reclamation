@@ -8,10 +8,20 @@ function filter_instance(instance, filter) {
 	returnValue = true
 	
 	struct_foreach(filter, function(_key, _value) {
-		var key = variable_instance_get(refInstance, _key)
+		if (is_array(_value)) {
+			show_message("filtering by array not in yet")
+		} else {
+			if (variable_instance_exists(refInstance, _key)) {
+				var key = variable_instance_get(refInstance, _key)
+			} else {
+				create_toaster("Bad key lookup for equipment filter: " + _key)
+			}
+			
+			show_message($"{key} _vs_ {_value}")
 	
-		if (key != _value) {
-			returnValue = false
+			if (key != _value) {
+				returnValue = false
+			}
 		}
 	})
 	

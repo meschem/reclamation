@@ -10,8 +10,6 @@ function draw_stats_block(_x, _y, _stats, _level = 1, _spacing = 14, _equip = no
 	var _baseColor = draw_get_color()
 	var _nameString = ""
 	
-	show_message(_stats)
-	
 	for (var i = 0; i < array_length(_stats); i++) {
 		try {
 			nameString = _stats[i].getDisplayName() + ": "

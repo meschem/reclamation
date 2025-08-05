@@ -1,3 +1,6 @@
+if (!drawGui) {
+	return
+}
 
 if (enabled) {
 	draw_sprite(spr_ability_icon_backing, 0, iconX, iconY)

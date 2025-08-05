@@ -18,7 +18,7 @@ usingController = (
 
 if (usingController) {
 	lastInputType = explicitInputTypes.controller
-	window_set_cursor(spr_none)
+	window_set_cursor(cr_none)
 	cursor_sprite = spr_none
 } else if (usingKeyboard) {
 	lastInputType = explicitInputTypes.keyboard
@@ -27,10 +27,18 @@ if (usingController) {
 	cursor_sprite = spr_cursor_aiming
 }
 
-//if (inputFocus == enumInputTypes.controller) {
-//	window_set_cursor(spr_none)
-//	cursor_sprite = spr_none
-//} else {
-//	//window_set_cursor(spr_cursor_aiming)
-//	cursor_sprite = spr_cursor_aiming
-//}
+if (
+	keyboard_check_pressed(bindToggleInventory.keyboard) ||
+	gamepad_button_check_pressed(0, bindToggleInventory.controller)
+) {
+	with (obj_player) {
+		backpack.toggle()
+	}
+}
+
+if (
+	keyboard_check_pressed(bindToggleFullscreen.keyboard) ||
+	gamepad_button_check_pressed(0, bindToggleFullscreen.controller)
+) {
+	window_set_fullscreen(!window_get_fullscreen())
+}

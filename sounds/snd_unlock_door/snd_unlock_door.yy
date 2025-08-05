@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.696463,
+  "duration":0.6964626,
   "name":"snd_unlock_door",
   "parent":{
     "name":"environment",

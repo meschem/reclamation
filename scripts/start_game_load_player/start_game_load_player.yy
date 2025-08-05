@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"start_game_load_player",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"start_game_load_player",
+  "parent":{
+    "name":"save_profiles",
+    "path":"folders/Scripts/save_profiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

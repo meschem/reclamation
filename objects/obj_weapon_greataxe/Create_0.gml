@@ -17,6 +17,8 @@ baseDamage = 15
 baseKnockback = 16
 projectileCount = 1
 
+damageStatBoostStr = 1
+
 stats = [
 	new weaponStat(enumWeaponStats.damage, id),
 	new weaponStat(enumWeaponStats.knockback, id),
@@ -78,7 +80,7 @@ use = function(_attackAngle) {
 		_inst.facingAngle = owner.attackAngle
 		_inst.owner = owner
 		_inst.spawnDelay = multiProjSpawnDelay * i
-	
+		
 		if (reverseSwipe) {
 			_inst.reverseSwipe = true
 		}

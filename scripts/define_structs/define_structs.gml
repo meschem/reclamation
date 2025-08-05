@@ -2,6 +2,11 @@
 
 function define_structs() { }
 
+#macro XBOX_INPUT_A gp_face1
+#macro XBOX_INPUT_B gp_face2
+#macro XBOX_INPUT_X gp_face3
+#macro XBOX_INPUT_Y gp_face4
+
 enum enumLootType {
 	gold,
 	equipment,
@@ -85,7 +90,7 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 	}
 	
 	///@param {real} _level
-	getDisplayValue = function(_level) {
+	getDisplayValue = function(_level = 0) {
 		var _rawValue = values[_level]
 		var _numeric = _rawValue * unit.multiplier
 		

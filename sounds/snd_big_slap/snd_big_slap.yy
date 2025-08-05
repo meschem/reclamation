@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.395374,
+  "duration":0.39537415,
   "name":"snd_big_slap",
   "parent":{
     "name":"Sounds",

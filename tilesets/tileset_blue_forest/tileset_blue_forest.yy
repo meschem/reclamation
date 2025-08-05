@@ -9,9 +9,14 @@
     {"$GMAutoTileSet":"","%Name":"autotile_5","closed_edge":false,"name":"autotile_5","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[113,116,115,93,96,112,14,92,95,14,114,94,133,132,134,80,],},
   ],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":20,
+    "SerialiseWidth":20,
+    "TileCompressedData":[
+      -6,47,1,104,-33,47,1,104,-3,47,1,84,-28,47,1,103,-3,47,1,104,-32,47,1,85,-5,47,1,83,-25,47,1,84,-25,
+      47,1,104,-32,47,1,103,-30,47,1,84,-7,47,1,85,-9,47,1,123,-39,47,1,104,-26,47,1,103,-7,47,1,83,-15,47,
+      1,103,-13,47,1,104,-26,47,1,104,-16,47,1,71,
+    ],
+    "TileDataFormat":1,
   },
   "name":"tileset_blue_forest",
   "out_columns":20,

@@ -63,7 +63,6 @@ activateButton = function(_index) {
 	
 	var _structKey = get_equipment_struct_key_from_slot(_equipment.slot)
 
-
 	if (_equipment.equipped) {
 		// Moves equipment from equipped to inventory
 		var _inventoryButtonIndex = findNextInventorySlot()
@@ -140,12 +139,12 @@ setupButtons = function(_player) {
 	
 	var _inventoryEquipment = []
 	
-	with (obj_equipment) {
+	with (obj_equipment) {	
 		if (owner == _player && !equipped) {
 			array_push(_inventoryEquipment, id)
 		}
 	}
-	
+
 	var _rowIndex = 0
 	var _colIndex = 0
 	var _colsPerRow = 6	

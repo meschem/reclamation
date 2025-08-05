@@ -6,7 +6,7 @@
 event_inherited()
 
 name = "War Stomp"
-description = "Stuns and damages an area around Jonah"
+description = "Stuns and damages an area around Jonah\nStr Boosts"
 selectionIcon = spr_abil_select_icon_war_stomp
 active = true
 

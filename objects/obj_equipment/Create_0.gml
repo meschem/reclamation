@@ -1,5 +1,8 @@
 ///@description		Equipment
 enum equipmentStats {
+	bonusStr,
+	bonusDex,
+	bonusInt,
 	bonusAttackSpeed,
 	bonusAttackArea,
 	bonusDamageScalar,
@@ -52,6 +55,10 @@ level = 1
 maxLevel = 1
 cost = 100
 rarity = enumRarity.normal
+
+bonusStr = 0
+bonusDex = 0
+bonusInt = 0
 
 bonusAttackSpeed = 0
 bonusAttackArea = 0

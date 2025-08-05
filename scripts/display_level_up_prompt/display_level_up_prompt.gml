@@ -40,7 +40,7 @@ function display_level_up_prompt(_player = noone) {
 			break
 			
 			case levelUpRewards.statPoint:
-				show_message("stat point prompt goes here")
+				display_level_stat_point_prompt(_player)
 			break
 			
 			case levelUpRewards.weaponUpgrade:

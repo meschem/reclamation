@@ -7,7 +7,7 @@ event_inherited()
 
 //level_up_abils_from_global()'
 
-name = "Hunter"
+name = "Ophelia"
 
 sprIdle = spr_ophelia
 sprWalking = spr_ophelia_walking

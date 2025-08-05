@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.215533,
+  "duration":0.21553288,
   "name":"snd_woosh",
   "parent":{
     "name":"Sounds",

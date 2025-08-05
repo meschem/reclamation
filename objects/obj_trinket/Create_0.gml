@@ -8,6 +8,9 @@ statTextList = [] // Array of stat text
 level = 1
 maxLevel = 4
 
+bonusStr = []
+bonusDex = []
+bonusInt = []
 bonusHealth = []
 bonusArmor = []
 bonusProjectileCount = []

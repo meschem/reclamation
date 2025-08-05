@@ -10,8 +10,8 @@
   "name":"obj_merchant_zone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Shops",
-    "path":"folders/Objects/Shops.yy",
+    "name":"shops",
+    "path":"folders/Objects/shops.yy",
   },
   "parentObjectId":{
     "name":"obj_selection_zone_parent",

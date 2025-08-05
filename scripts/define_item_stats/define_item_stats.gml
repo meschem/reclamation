@@ -1,6 +1,10 @@
 ///@description   Defines all stats
 function define_item_stats() {
 	enum enumItemStats {
+		bonusStr,
+		bonusDex,
+		bonusInt,
+		
 		bonusHealth,
 		bonusArmor,
 		bonusProjectileCount,
@@ -46,16 +50,41 @@ function define_item_stats() {
 		
 		new itemStatType("Damage", "bonusDamageScalar", "bonusDamageScalar", statUnits.percent),
 		new itemStatType("Weapon AOE", "bonusWeaponAoe", "bonusWeaponAoe", statUnits.percent),
+		
+		new itemStatType("Strength", "bonusStr", "bonusStr"),
+		new itemStatType("Dexterity", "bonusDex", "bonusStr"),
+		new itemStatType("Intelligence", "bonusInt", "bonusStr"),
 	]
 }
 
 ///@description					Gets an item stat
-///@param {string} enumStat		Uses enumItemStats
+///@param {string} _enumStat		Uses enumItemStats
 ///@return {struct}
 function get_item_stat_type(_enumStat) {
 	var _displayName, _bonusVar, _playerVar, _statUnit, _prepend
 	
 	switch (_enumStat) {
+		case enumItemStats.bonusStr:
+			_displayName = "Strength"
+			_bonusVar = "bonusStr"
+			_playerVar = "bonusStr"
+			_statUnit = statUnits.none
+		break
+		
+		case enumItemStats.bonusDex:
+			_displayName = "Dexterity"
+			_bonusVar = "bonusDex"
+			_playerVar = "bonusDex"
+			_statUnit = statUnits.none
+		break
+		
+		case enumItemStats.bonusInt:
+			_displayName = "Intelligence"
+			_bonusVar = "bonusInt"
+			_playerVar = "bonusInt"
+			_statUnit = statUnits.none
+		break
+		
 		case enumItemStats.bonusHealth:
 			_displayName = "Hit Points"
 			_bonusVar = "bonusHealth"

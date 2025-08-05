@@ -3,6 +3,15 @@
 ///@return {string}
 function get_equipment_var_by_enum(_statEnum){
 	switch (_statEnum) {
+		case equipmentStats.bonusStr:
+			return "bonusStr"
+			
+		case equipmentStats.bonusDex:
+			return "bonusDex"
+			
+		case equipmentStats.bonusInt:
+			return "bonusInt"
+			
 		case equipmentStats.bonusAbilityCooldown:
 			return "bonusAbilityCooldown"
 			

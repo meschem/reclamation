@@ -30,6 +30,7 @@ buttonMarginY = 4
 display = true
 focused = true
 enabled = true
+canClose = true
 
 buttons = []		// array of obj_menu_botton
 

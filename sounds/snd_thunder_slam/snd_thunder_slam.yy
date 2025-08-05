@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.729887,
+  "duration":1.7298867,
   "name":"snd_thunder_slam",
   "parent":{
     "name":"Sounds",

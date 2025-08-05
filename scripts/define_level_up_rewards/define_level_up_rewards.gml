@@ -1,7 +1,7 @@
 ///@description   Description
 function define_level_up_rewards(){
 	levelUpRewardTable = [
-		levelUpRewards.abilitySelect,
+		//levelUpRewards.statPoint,
 		levelUpRewards.trinket,
 		levelUpRewards.abilitySelect,
 		levelUpRewards.trinket,

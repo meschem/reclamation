@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.239093,
+  "duration":0.23909298,
   "name":"snd_swishy_small",
   "parent":{
     "name":"Sounds",

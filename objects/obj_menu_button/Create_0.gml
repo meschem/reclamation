@@ -28,7 +28,7 @@ offsetY = 0
 offsetX = 0
 
 enabled = true
-menu = -1
+menu = noone
 
 state = buttonStates.normal
 

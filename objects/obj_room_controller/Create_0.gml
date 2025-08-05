@@ -15,7 +15,8 @@ enum roomStates {
 }
 
 enum roomCategories {
-	combat,				// normal combat, ends when combat is over
+	combat,				// normal combat, ends when no enemies or spawners are alive
+	combatSingle,		// normal combat, ends when told
 	shop,				// a shop!
 	stats,				// shows stats. unused?
 	inactive,			// player is inactive
@@ -35,11 +36,12 @@ state = roomStates.init
 
 age = 0
 
-
-
 isPaused = false
 pauseDelay = 0
 timeDisplay = "0:00"
+timerActive = true
+showTimeDisplay = true
+singleRoomCombatComplete = false
 
 spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
 
@@ -79,6 +81,18 @@ initStats = function() {
 }
 
 initCombat = function() {
+	showTimeDisplay = true
+	timerActive = true
+	runIsActive = true
+	
+	with (obj_ui_controller) {
+		drawStatBars = true
+	}
+	
+	with (obj_ability) {
+		drawGui = true
+	}
+	
 	if (obj_run_controller.endScreen) {
 		state = roomStates.endScreen
 		create_toaster("End Screen. No Combat.")
@@ -125,16 +139,54 @@ completeCombat = function() {
 
 initEndScreen = function() {
 	state = roomStates.endScreen
+	showTimeDisplay = false
+	timerActive = false
+	runIsActive = false
+	
 	disable_pause_menu()
 	disable_player_controls()
 	create_run_stats_menu()
+	
+	with (obj_ui_controller) {
+		drawStatBars = false
+	}
+	
+	with (obj_ability) {
+		drawGui = true
+	}
 }
 
 initShopping = function() {
 	state = roomStates.shopping
+	showTimeDisplay = false
+	timerActive = false
+	runIsActive = false
 	
 	with (obj_merchant_zone) {
 		addEquipment(get_current_difficulty_level())
+	}
+	
+	with (obj_ui_controller) {
+		drawStatBars = true
+	}
+	
+	with (obj_ability) {
+		drawGui = true
+	}
+}
+
+initInactive = function() {
+	state = roomStates.playing
+	showTimeDisplay = false
+	timerActive = false
+	runIsActive = false
+	
+	with (obj_ui_controller) {
+		drawStatBars = false
+	}
+	
+	with (obj_ability) {
+		drawGui = false
 	}
 }
 

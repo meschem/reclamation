@@ -12,7 +12,8 @@ function restart_run() {
 		obj_equipment,
 		obj_run_stats_controller,
 		obj_mutator_controller,
-		obj_ability_controller
+		obj_ability_controller,
+		obj_curse_bar
 	]
 	
 	for (var i = 0; i < array_length(cleanupObjects); i++) {

@@ -1,4 +1,8 @@
 
+if (game_is_paused()) {
+	return
+}
+
 age++
 
 if (age >= lifeSpan) {

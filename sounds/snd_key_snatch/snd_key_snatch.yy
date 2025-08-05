@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.715465,
+  "duration":0.71546483,
   "name":"snd_key_snatch",
   "parent":{
     "name":"pickup",

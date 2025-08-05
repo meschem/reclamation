@@ -8,7 +8,7 @@ enum mapDrawStyles {
 
 drawStyle = mapDrawStyles.small
 
-sprite_index = spr_map_single_room_test_simple
+sprite_index = spr_minimap_plains_east
 image_alpha = 0.66
 
 pois = []

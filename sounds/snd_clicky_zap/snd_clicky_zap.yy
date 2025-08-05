@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.372222,
+  "duration":0.37222221,
   "name":"snd_clicky_zap",
   "parent":{
     "name":"abilities",

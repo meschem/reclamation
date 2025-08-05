@@ -1,6 +1,11 @@
 ///@description infobox p0
 
+
 if (equipment != noone && drawEquipmentInfo) {
+	if (equipment.slot == equipmentSlots.weapon) {
+		return 0
+	}
+
 	drawLine = 0
 	
 	draw_sprite_ext(

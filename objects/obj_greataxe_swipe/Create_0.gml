@@ -23,6 +23,8 @@ knockback = 16
 
 animSpeed = 1
 
+damageStatBoostStr = 1
+
 audio_play_sound(snd_woosh, 1, false)
 
 impactSounds = [

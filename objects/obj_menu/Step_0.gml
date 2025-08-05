@@ -26,7 +26,9 @@ if (keyboard_check_released(vk_enter) || gamepad_button_check_released(0, gp_fac
 }
 
 if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_start)) {
-	close()
+	if (canClose) {
+		close()
+	}
 } else if (keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1)) {
 	buttonPressed = true
 } else {
@@ -37,7 +39,18 @@ if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_star
 	}
 }
 
-selectedButtonIndex = clamp(selectedButtonIndex + buttonFocus, 0, array_length(buttons) - 1)
+// currently has wrap-around behavior for button selection
+if (buttonFocus != 0) {
+	do {
+		selectedButtonIndex += buttonFocus
+		
+		if (selectedButtonIndex >= array_length(buttons)) {
+			selectedButtonIndex = 0
+		} else if (selectedButtonIndex < 0) {
+			selectedButtonIndex = array_length(buttons) - 1
+		}
+	} until (buttons[selectedButtonIndex].enabled)
+}
 
 if (dynamicHeight) {
 	menuHeight = 0
