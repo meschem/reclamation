@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"baddie_attack_lob_shot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_attack_lob_shot",
+  "parent":{
+    "name":"projectiles",
+    "path":"folders/Scripts/projectiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

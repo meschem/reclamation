@@ -12,8 +12,28 @@ if (age >= lifeSpan) {
 	return 0
 }
 
+beginStep()
+
 image_angle += rotationSpeed
 depth = depths.enemy - y + 60
+
+if (rotationSpeedDeaccel > 0) {
+	if (rotationSpeed > 0) {
+		rotationSpeed -= rotationSpeedDeaccel
+		
+		if (rotationSpeed <= rotationSpeedMin) {
+			rotationSpeed = rotationSpeedMin
+			rotationSpeedDeaccel = 0
+		}
+	} else {
+		rotationSpeed += rotationSpeedDeaccel
+		
+		if (rotationSpeed >= -rotationSpeedMin) {
+			rotationSpeed = -rotationSpeedMin
+			rotationSpeedDeaccel = 0
+		}
+	}
+}
 
 if (moving) {
 	zOffset += zVel
@@ -22,9 +42,11 @@ if (moving) {
 	if (zOffset > yGroundOffset) {
 		var _vel = sqrt(sqr(xVel) + sqr(yVel) + sqr(zVel))
 		
-		//show_message($"minVel: {minBounceVelocity}, curVel: {_vel}")
-		//show_message($"xyzVel: ({xVel}, {yVel}, {zVel})")
-		//show_message($"zOff: {zOffset}")
+		if (firstBounce) {
+			firstBounce = false
+			
+			onFirstBounce()
+		}
 		
 		if (_vel < minBounceVelocity) {
 			// stop
@@ -47,9 +69,7 @@ if (moving) {
 			yVel *= bounceRatio
 			
 			zOffset = yGroundOffset // LAZY
-			
-			//create_toaster(string(_vel))
-			
+						
 			rotationSpeed = clamp(
 				random_range(-_vel, _vel),
 				-rotationSpeedMax,
@@ -60,12 +80,12 @@ if (moving) {
 				instance_destroy()
 			}
 		}
-		
-		//show_message($"minVel: {minBounceVelocity}, curVel: {_vel}")
-		//show_message($"xyzVel: ({xVel}, {yVel}, {zVel})")
-		//show_message($"zOff: {zOffset}")
 	} else {
-		zVel += gravAccel
+		zVel = min(zVel + gravAccel, zVelMax)
+	}
+	
+	if (deaccel != 0) {
+		deaccelerate(deaccel)
 	}
 	
 	x += xVel

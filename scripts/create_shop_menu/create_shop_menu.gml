@@ -1,6 +1,9 @@
 ///@description   Description
-function create_shop_menu(_equipmentList = [], _merchant = noone) {
-	var menu = create_instance(obj_shop_menu)
+///@param {array} _equipmentList			List of equipment
+///@param {id.Instance} _merchantZone		Zone to reference
+///@param {asset.GMObject} _menuType		Type of shop menu to create
+function create_shop_menu(_equipmentList = [], _merchantZone = noone, _menuType = obj_shop_menu) {
+	var menu = create_instance(_menuType)
 	
 	if (array_length(_equipmentList) == 0) {
 		_equipmentList = create_gear_roll(4)
@@ -12,5 +15,5 @@ function create_shop_menu(_equipmentList = [], _merchant = noone) {
 	
 	menu.setButtonSpacing()
 	menu.display = true	
-	menu.merchant = _merchant
+	menu.merchant = _merchantZone
 }

@@ -4,6 +4,7 @@ function restart_run() {
 	cleanupObjects = [
 		obj_game_controller,
 		obj_equipment_controller,
+		obj_merger_item_controller,
 		obj_run_controller,
 		obj_dungeon,
 		obj_player,
@@ -13,7 +14,9 @@ function restart_run() {
 		obj_run_stats_controller,
 		obj_mutator_controller,
 		obj_ability_controller,
-		obj_curse_bar
+		obj_input_controller,
+		obj_curse_bar,
+		obj_backpack
 	]
 	
 	for (var i = 0; i < array_length(cleanupObjects); i++) {

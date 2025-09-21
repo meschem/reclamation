@@ -5,11 +5,39 @@ for (var i = 0; i < array_length(onDestroyList); i++) {
 	onDestroyList[i](id)
 }
 
+if (roomBoss) {
+	/// FIXME: Perf? Ugly Code. May be OK.
+	var _complete = true
+	var _self = id
+	
+	with (obj_baddie) {
+		if (id != _self && roomBoss) {
+			_complete = false
+		}
+	}
+	
+	if (_complete) {
+		with (obj_baddie) {
+			if (id != _self) {
+				instance_destroy()
+			}
+		}
+		
+		with (obj_spawner) {
+			instance_destroy()
+		}
+	}
+}
+
 if (!killedByBounds) {
 	deathFx()
 
 	if (soundOnDeath >= 0 && !audio_is_playing(soundOnDeath)) {
 		audio_play_sound(soundOnDeath, 1, false)
+	}
+	
+	if (eventParent != noone) {
+		eventParent.eventAlertBaddieDeath(id)
 	}
 	
 	if (provideKillRewards) {
@@ -31,14 +59,6 @@ if (!killedByBounds) {
 			delete loot[i]
 		}
 	}
-
-	//var _player = get_player_target()
-
-	//if (_player.hp < _player.maxHp) {
-	//	if (random(1) < 0.02) {
-	//		instance_create_depth(x, y, depths.enemy, obj_health_globe_sm)
-	//	}
-	//}
 	
 	if (roomBoss) {
 		with (obj_spawner) {

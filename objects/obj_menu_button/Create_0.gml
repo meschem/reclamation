@@ -21,6 +21,9 @@ centeredX = true
 paddingY = 7
 paddingX = 10
 
+fontType = font_pxlxxl_m
+fontColor = c_white
+
 marginY = 0
 marginX = 0
 

@@ -25,15 +25,15 @@ chargeBarInfo = {
 }
 
 baddies = [
+	obj_cyclo_skeleton,
 	obj_skeleton_warrior,
-	obj_skeleton_champion,
 	obj_boarrior,
-	obj_iron_maiden,
 	obj_slime_green,
+	obj_slime_blue,
 	obj_wraith,
 	obj_zombie_elite,
-	obj_zombie_huge,
-	obj_skull_head_ruby
+	obj_skull_head_ruby,
+	obj_reaper
 ]
 
 drawUiLoc = get_ui_pos(id)
@@ -42,8 +42,10 @@ drawString = $"{charge} / {chargeMax}"
 
 activate = function() {
 	var _spawn = array_random(baddies)
-	var _spawns = spawn_baddie(_spawn, 1, 20, [])
-
+	
+	// this ultimate spawns one, and enhance_baddie() creates the supporting  units
+	var _spawns = spawn_baddie(_spawn, 1, 20)
+	
 	for (var i = 0; i < array_length(_spawns); i++) {
 		create_elite_health_bar(_spawns[i])
 		enhance_baddie(baddieSpecialTypes.elite, _spawns[i])

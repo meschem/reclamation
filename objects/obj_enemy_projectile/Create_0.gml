@@ -46,3 +46,7 @@ onInstanceCollision = function(inst) {
 		instance_destroy()
 	}
 }
+
+beginStep = function() {
+
+}

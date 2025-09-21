@@ -1,21 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
 
-//if (backpack.isOpen) {
-//	draw_sprite_ext(
-//		sprite_index,
-//		image_index,
-//		drawPos.x,
-//		drawPos.y,
-//		image_xscale,
-//		image_yscale,
-//		image_angle,
-//		image_blend,
-//		image_alpha
-//	)
-//} else {
 
-//}
+if (obj_ui_controller.skipPlayerUi || image_alpha == 0) {
+	return 0
+}
 
 draw_self()
 
@@ -25,12 +12,11 @@ if (item != noone && !instance_exists(item)) {
 	sprite_index = spr_abil_select_icon_thorns
 }
 
-
-if (item != noone && image_alpha != 0) {
+if (item != noone) {
 	draw_sprite(
 		item.sprite_index,
 		1,
 		x + itemPadding,
-		y + itemPadding
+		y + itemPadding + 1
 	)
 }

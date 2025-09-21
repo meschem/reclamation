@@ -103,10 +103,10 @@ if (drawStatBars) {
 	)
 	
 	draw_text(
-	camera_get_view_width(view_camera[0]) - 80,
-	22,
-	"FPS: " + string(floor(drawFps))
-)
+		camera_get_view_width(view_camera[0]) - 80,
+		22,
+		"FPS: " + string(floor(drawFps))
+	)
 }
 
 // DEBUG STUFFS

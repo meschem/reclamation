@@ -17,8 +17,8 @@ floatRange = 2
 
 weight = baddie_weight_med
 
-pushRadius = 10
-pushForce = 10
+//pushRadius = 10
+//pushForce = 10
 
 flies = true
 collidesWith = baddie_collision_flier

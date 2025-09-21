@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_combat_testing_z_boss",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rm_combat_testing_z_boss/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -122,8 +122,8 @@
   ],
   "name":"rm_combat_testing_z_boss",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Boss Zones",
+    "path":"folders/Rooms/Boss Zones.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -8,8 +8,8 @@
   "name":"obj_enemy_laser_quick",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy_projectiles",
-    "path":"folders/Objects/baddies/enemy_projectiles.yy",
+    "name":"lasers",
+    "path":"folders/Objects/baddies/enemy_projectiles/lasers.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_laser_blue",

@@ -54,5 +54,9 @@ function process_room_reward(_reward) {
 		case roomRewards.weaponUpgrade:
 			display_weapon_upgrade_prompt(_player)
 		break
+		
+		default:
+			create_toaster("No reward set in room", errorLevels.warning)
+		break
 	}
 }

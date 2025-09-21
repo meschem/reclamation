@@ -12,3 +12,12 @@ draw_sprite_ext(
 	1
 )
 
+draw_sprite_ext(
+	laserSpriteEndPiece,
+	floor(age / 15),
+	laserSpriteEndPiecePos.x,
+	laserSpriteEndPiecePos.y,
+	1.5, 1.5, 0,
+	image_blend,
+	image_alpha
+)

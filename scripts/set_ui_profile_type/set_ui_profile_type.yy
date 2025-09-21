@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_ui_profile_type",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_ui_profile_type",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

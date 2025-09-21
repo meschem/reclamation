@@ -14,6 +14,8 @@ moveSpeedMax = baddie_move_speed_slow
 shadowSprite = spr_shadow_lg
 shadowOffset = -4
 
+image_index = irandom(sprite_get_number(spr_slime_blue))
+
 deathParticles = [
 	obj_ptb_glob_blue_lg,
 	obj_ptb_glob_blue_md,

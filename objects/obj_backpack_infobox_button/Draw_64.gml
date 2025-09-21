@@ -1,5 +1,9 @@
 
-if (infobox.item == noone || infobox.image_alpha == 0) {
+if (skipDraw) {
+	return 0
+}
+
+if (image_alpha == 0 || infobox.item == noone || infobox.image_alpha == 0) {
 	return 0
 }
 

@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":3,
   "parent":{
-    "name":"banshee_queen",
-    "path":"folders/Sprites/baddies/end_bosses/banshee_queen.yy",
+    "name":"blue",
+    "path":"folders/Sprites/baddies/projectiles/lasers/blue.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

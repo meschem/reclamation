@@ -54,9 +54,11 @@ attachedVelocity = new vec2(0, 0)
 xVel = 0
 yVel = 0
 moveSpeedMax = -1
+moveSpeedMin = 0
 
 xAccel = 0
 yAccel = 0
+acceleration = 0
 
 rotationSpeed = 0 // rotation per frame
 

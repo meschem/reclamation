@@ -17,6 +17,10 @@ function define_item_stats() {
 		bonusAttackSpeed,
 		bonusAbilityCooldown,
 		
+		bonusPoisonDamage,
+		bonusRecoveryTime,
+		bonusBurningStacks,
+		
 		bonusDamageScalar,
 		bonusWeaponAoe,
 		custom, // used any time a custom stat property is used
@@ -47,6 +51,10 @@ function define_item_stats() {
 		new itemStatType("Move Speed", "bonusMoveSpeed", "moveSpeedMax", statUnits.moveSpeed),
 		new itemStatType("Attack Speed", "bonusAttackSpeed", "attackSpeedScalar", statUnits.percent),
 		new itemStatType("Ability Cooldown", "bonusAbilityCooldown", "abilityCooldownScalar", statUnits.percent),
+		
+		new itemStatType("Poison Damage", "bonusPoisonDamage", "bonusPoisonDamage"),
+		new itemStatType("Recovery Time", "bonusRecoveryTime", "bonusRecoveryTime", statUnits.seconds),
+		new itemStatType("Burning Stacks", "bonusBurningStacks", "bonusBurningStacks"),
 		
 		new itemStatType("Damage", "bonusDamageScalar", "bonusDamageScalar", statUnits.percent),
 		new itemStatType("Weapon AOE", "bonusWeaponAoe", "bonusWeaponAoe", statUnits.percent),
@@ -169,8 +177,29 @@ function get_item_stat_type(_enumStat) {
 			_statUnit = statUnits.percent
 		break
 		
+		case enumItemStats.bonusPoisonDamage:
+			_displayName = "Poison Dmg"
+			_bonusVar = "bonusPoisonDamage"
+			_playerVar = _bonusVar
+			_statUnit = statUnits.none
+		break
+		
+		case enumItemStats.bonusRecoveryTime:
+			_displayName = "Recovery Time"
+			_bonusVar = "bonusRecoveryTime"
+			_playerVar = _bonusVar
+			_statUnit = statUnits.seconds
+		break
+		
+		case enumItemStats.bonusBurningStacks:
+			_displayName = "Burning Stacks"
+			_bonusVar = "bonusBurningStacks"
+			_playerVar = _bonusVar
+			_statUnit = statUnits.none
+		break
+		
 		default:
-			throw("Invalid enumItemStats unit")
+			throw("Undefined enumItemStats unit")
 		break
 	}
 	

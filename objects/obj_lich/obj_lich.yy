@@ -9,8 +9,8 @@
   "name":"obj_lich",
   "overriddenProperties":[],
   "parent":{
-    "name":"bosses",
-    "path":"folders/Objects/baddies/bosses.yy",
+    "name":"baddies",
+    "path":"folders/Objects/baddies.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lich",
-    "path":"sprites/spr_lich/spr_lich.yy",
+    "name":"spr_lich_yoklir",
+    "path":"sprites/spr_lich_yoklir/spr_lich_yoklir.yy",
   },
   "spriteMaskId":null,
   "visible":true,

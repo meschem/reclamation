@@ -2,7 +2,7 @@ if (!display) {
 	return 0
 }
 
-draw_set_color(c_white)
+draw_set_color(fontColor)
 
 draw_sprite_ext(
 	sprite_index,
@@ -13,7 +13,7 @@ draw_sprite_ext(
 	0, c_white, 1
 )
 
-draw_set_font(font_pxlxxl_m)
+draw_set_font(fontType)
 
 draw_text_ext(
 	x + paddingX + offsetX,

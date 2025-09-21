@@ -3,3 +3,4 @@
 
 instance_destroy(buttonSwap)
 instance_destroy(buttonCombine)
+instance_destroy(buttonPurchase)

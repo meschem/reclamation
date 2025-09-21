@@ -37,6 +37,7 @@ add_baddie_gold_tough
 outlineColor = get_color(colors.red)
 
 add_loot(obj_ore)
+add_loot(obj_merger_item_chest)
 
 beginStep = function() {
 	if (age % 20 == 0) {

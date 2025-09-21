@@ -13,6 +13,8 @@ skullSprLg = spr_curse_bar_skull_md
 skullBotPadding = 0
 skullBotY = y + sprite_height
 
+skipDraw = false
+
 updateMax = function() {
 	skullCount = ftm(obj_run_controller.curseAgeMax)
 	

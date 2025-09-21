@@ -14,7 +14,7 @@ sprWalking = spr_ophelia_walking
 sprSlam = spr_ophelia
 
 baseMaxHp = 30
-baseMoveSpeedMax = 1.25
+baseMoveSpeedMax = 1.5
 baseMaxArmor = 0
 baseCritChance = 0.1
 baseCritMultiplier = 2

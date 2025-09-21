@@ -8,6 +8,5 @@ name = "Unformed Mass"
 description = "Rife with potential"
 
 bonusStr = 2
-bonusInt = 1
 
 addCharStatBlocks()

@@ -1,0 +1,1 @@
+loadRoom = rm_combat_boss_hydra

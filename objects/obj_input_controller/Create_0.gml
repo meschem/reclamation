@@ -10,7 +10,19 @@ enum explicitInputTypes {
 }
 
 enum bindActions {
-	toggleInventory
+	toggleInventory,
+	right,
+	up,
+	left,
+	down,
+	confirm,
+	back
+}
+
+enum pressType {
+	down,
+	release,
+	hold
 }
 
 bindToggleInventory = {
@@ -21,6 +33,36 @@ bindToggleInventory = {
 bindToggleFullscreen = {
 	controller: gp_shoulderrb,
 	keyboard: vk_f3
+}
+
+bindUp = {
+	controller: gp_padu,
+	keyboard: ord("W")
+}
+
+bindRight = {
+	controller: gp_padr,
+	keyboard: ord("D")
+}
+
+bindDown = {
+	controller: gp_padd,
+	keyboard: ord("S")
+}
+
+bindLeft = {
+	controller: gp_padl,
+	keyboard: ord("A")
+}
+
+bindConfirm = {
+	controller: XBOX_INPUT_A,
+	keyboard: vk_enter
+}
+
+bindBack = {
+	controller: XBOX_INPUT_B,
+	keyboard: vk_escape
 }
 
 lastMouseX = mouse_x

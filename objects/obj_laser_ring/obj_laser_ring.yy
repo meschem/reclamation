@@ -10,8 +10,8 @@
   "name":"obj_laser_ring",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy_projectiles",
-    "path":"folders/Objects/baddies/enemy_projectiles.yy",
+    "name":"lasers",
+    "path":"folders/Objects/baddies/enemy_projectiles/lasers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

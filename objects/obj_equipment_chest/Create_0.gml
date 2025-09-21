@@ -2,13 +2,6 @@
 
 event_inherited()
 
-enum chestStates {
-	spawning,
-	closed,
-	open,
-	despawning
-}
-
 lifeSpan = 9999
 homesOnPlayer = false
 dropCount = 3

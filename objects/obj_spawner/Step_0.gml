@@ -57,12 +57,12 @@ if (spawnAge % spawnPeriod == 0) {
 	
 	if (array_contains(spawnFlags, enumSpawnFlags.clusterSpawn)) {
 		spawnIndex = random(array_length(enemyTypes))
-		spawns = spawn_baddie(enemyTypes[spawnIndex], _spawnCount, 2, spawnFlags)
+		spawns = spawn_baddie(enemyTypes[spawnIndex], _spawnCount, 2) //, spawnFlags)
 	} else {
 		for (i = 0; i < _spawnCount; i++) {
 			spawnIndex = random(array_length(enemyTypes))
 		
-			spawns = spawn_baddie(enemyTypes[spawnIndex], 1, 20, spawnFlags)
+			spawns = spawn_baddie(enemyTypes[spawnIndex], 1, 20) //, spawnFlags)
 		
 			if (eliteSpawn) {
 				for (j = 0; j < array_length(spawns); j++) {

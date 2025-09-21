@@ -8,7 +8,13 @@ if (keyboard_check_pressed(ord("P"))) {
 	var enabledText = autoAttack ? "ENABLED" : "DISABLED"
 	
 	create_toaster("Auto Attack " + enabledText)
-}	
+}
+
+stepBegin()
+
+if (floats) {
+	set_float_range()
+}
 
 if (inputEnabled) {
 	player_movement_input()

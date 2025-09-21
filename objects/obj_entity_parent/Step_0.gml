@@ -140,8 +140,8 @@ if (walkAnimType == entityWalkAnimTypes.curves) {
 if (age - damagedOn <= damageReactionLength) {
 	var ratio = (age - damagedOn) / damageReactionLength
 
-	damageXScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveXScale, ratio)
-	damageYScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveYScale, ratio)
+	damageXScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveXScale, ratio) * damageReactionScaleScalar
+	damageYScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveYScale, ratio) * damageReactionScaleScalar
 } else {
 	damageXScaleMultiplier = 1
 	damageYScaleMultiplier = 1

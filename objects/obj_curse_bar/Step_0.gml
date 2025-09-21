@@ -3,3 +3,4 @@ fillDrawHeight = floor(sprite_height * (obj_run_controller.curseAge / obj_run_co
 
 skullFullCount = floor(ftm(obj_run_controller.curseAge))
 
+skipDraw = !obj_ui_controller.drawCurseBar

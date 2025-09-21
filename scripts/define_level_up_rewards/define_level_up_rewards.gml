@@ -1,10 +1,41 @@
 ///@description   Description
 function define_level_up_rewards(){
 	levelUpRewardTable = [
-		//levelUpRewards.statPoint,
-		levelUpRewards.trinket,
 		levelUpRewards.abilitySelect,
-		levelUpRewards.trinket,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		
+		levelUpRewards.abilitySelect,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		
+		levelUpRewards.abilitySelect,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
+		levelUpRewards.statPoint,
 		
 		levelUpRewards.trinket,
 		levelUpRewards.abilitySelect,
@@ -22,36 +53,6 @@ function define_level_up_rewards(){
 		levelUpRewards.abilityLevelUp,
 		levelUpRewards.trinket,
 		levelUpRewards.weaponUpgrade,
-		
-		levelUpRewards.abilitySelect,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.weaponUpgrade,
-		
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
-		levelUpRewards.abilityLevelUp,
-		levelUpRewards.trinket,
 	]
 }
 

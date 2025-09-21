@@ -1,5 +1,5 @@
 
-if (!isOpen) {
+if (!isOpen || !focused) {
 	return 0
 }
 

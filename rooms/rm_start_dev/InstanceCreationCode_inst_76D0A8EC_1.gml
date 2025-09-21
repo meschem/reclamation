@@ -1,1 +1,1 @@
-category = roomCategories.inactive
+category = roomCategories.shop

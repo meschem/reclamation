@@ -21,6 +21,10 @@ if (!active) {
 
 beginStep()
 
+if (player_backpack_is_full()) {
+	return 0
+}
+
 if (!homingActive && lifeSpan >= 0) {
 	if (lifeSpan - age < 120) {
 		image_alpha = (age % 6 <= 2) ? 0 : 1

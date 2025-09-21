@@ -33,7 +33,8 @@ if (keyboard_check_pressed(vk_f6)) {
 }
 
 if (keyboard_check_pressed(vk_f7)) { 
-	instance_create_depth(mouse_x, mouse_y, depth, obj_equipment_chest)
+	//instance_create_depth(mouse_x, mouse_y, depth, obj_equipment_chest)
+	instance_create_depth(mouse_x, mouse_y, depth, obj_merger_item_chest)
 	//create_random_item_drop(mouse_x, mouse_y, 5)
 }
 
@@ -75,7 +76,7 @@ if (keyboard_check_pressed(ord("X"))) {
 	//var _baddie =
 	
 	spawn_baddie_at_location(
-		obj_zombie_fat, mouse_x, mouse_y
+		obj_skeleton_tester, mouse_x, mouse_y
 	)
 	
 	//create_elite_health_bar(_baddie)
@@ -83,11 +84,11 @@ if (keyboard_check_pressed(ord("X"))) {
 	//apply_random_elite_buff(_baddie, 2)
 }
 
-if (keyboard_check_pressed(ord("C"))) {
-	spawn_baddie_at_location(
-		obj_grub_small, mouse_x, mouse_y
-	)
-}
+//if (keyboard_check_pressed(ord("C"))) {
+//	spawn_baddie_at_location(
+//		obj_grub_small, mouse_x, mouse_y
+//	)
+//}
 
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
@@ -108,21 +109,24 @@ if (keyboard_check_pressed(ord("N"))) {
 }
 
 if (keyboard_check_pressed(ord("M"))) {
-	spawn_baddie_at_location(
-		obj_skeleton_champion, mouse_x, mouse_y
-	)
+	for (var i = 0; i < 1; i++) {
+		var _leaf = instance_create_depth(mouse_x, mouse_y, depths.fx, obj_ptb_dest_leaf_falling_a)
+		
+		_leaf.angleInit = random(360)
+	}
 }
 
 if (keyboard_check_pressed(ord("K"))) {
 	kill_all_baddies_in_room()
 }
 
-if (keyboard_check_pressed(ord("O"))) {
-	toggle_ability_autocast()
-}
-
-
-
-//if (mouse_check_button_pressed(mb_middle)) {
-//	var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
+//if (keyboard_check_pressed(ord("O"))) {
+//	toggle_ability_autocast()
 //}
+
+if (mouse_check_button_pressed(mb_middle)) {
+	//var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
+	with (obj_player) {
+		create_random_merger_item_drop(mouse_x, mouse_y)
+	}
+}

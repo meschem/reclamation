@@ -8,8 +8,8 @@
   "name":"obj_recipe_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"mergers",
-    "path":"folders/Objects/equipment/mergers.yy",
+    "name":"controllers",
+    "path":"folders/Objects/controllers.yy",
   },
   "parentObjectId":null,
   "persistent":true,

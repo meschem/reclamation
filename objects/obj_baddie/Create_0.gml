@@ -87,6 +87,8 @@ wrapAroundBehavior = wrapAroundBehaviors.wrap
 minionType = object_index
 minionCount = 12
 
+eventParent = noone
+
 spawnSide = "unset"
 
 pushDeaccel = 0.075

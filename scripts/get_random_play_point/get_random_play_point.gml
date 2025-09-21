@@ -1,9 +1,10 @@
-///@description		 Uses obj_play_area objects to get a random point in the play area
+///@description								Uses obj_play_area objects to get a random point in the play area
+///@param {asset.GMObject} _objectFilter	Objects to use for selection
 ///@return {struct.vec2}
 
-function get_random_play_point() {
+function get_random_play_point(_objectFilter = obj_play_area) {
 	var totalArea = 0;
-	var areaCount = instance_number(obj_play_area)
+	var areaCount = instance_number(_objectFilter)
 	var areas = []
 	var areaSize = 0
 	var area = obj_none
@@ -14,7 +15,7 @@ function get_random_play_point() {
 	var i, roll
 	
 	if (areaCount == 1) {
-		area = obj_play_area
+		area = _objectFilter
 		
 		returnVec.x = irandom(area.sprite_width) + area.x
 		returnVec.y = irandom(area.sprite_height) + area.y
@@ -23,7 +24,7 @@ function get_random_play_point() {
 	}
 	
 	for (i = 0; i < areaCount; i++) {
-		area = instance_find(obj_play_area, i)
+		area = instance_find(_objectFilter, i)
 		areaSize = area.sprite_width * area.sprite_height
 		
 		areaWeights[i] = {
@@ -50,4 +51,20 @@ function get_random_play_point() {
 	}
 	
 	show_error("Error in selecting valid area", true)
+}
+
+///@description						Gets multiple random play points
+///@param {real} _count				Amount of points to grab
+///@return {array<struct.vec2>}
+function get_random_play_points(_count = 4) {
+	var _points = []
+	var _point = new vec2()
+	
+	for (var i = 0; i < _count; i++) {
+		_point = get_random_play_point()
+		
+		array_push(_points, _point)
+	}
+	
+	return _points
 }

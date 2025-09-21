@@ -1,10 +1,18 @@
 ///@description				Init
-event_inherited();
+event_inherited()
+
+damageOnCollide = false
+destroyOnHit = false
 
 zVel = 3
+zVelMax = 5.25
+
+zVelMinDistance = 50
+zVelMaxDistance = 275
+
 z = 1
-moveSpeedMax = 3.5
-gravityAccel = 0.07
+moveSpeedMax = 10
+gravityAccel = 0.01
 
 useZAxis = true
 
@@ -14,11 +22,23 @@ shadow = spr_shadow_med
 ///@param {real} targetX
 ///@param {real} targetY
 calculateVelocity = function(targetX, targetY) {
-	var _z = z
-	var _zVel = zVel
+	var _z = z	
+	var _zVel = 0
 	var totalFrames = 0
 	var distance = point_distance(x, y, targetX, targetY)
 	var angle = point_direction(x, y, targetX, targetY)
+	
+	if (distance < zVelMinDistance) {
+		_zVel = zVel
+	} else if (distance >= zVelMaxDistance) {
+		_zVel = zVelMax
+	} else {
+		var _normalized = (distance - zVelMinDistance) / (zVelMaxDistance - zVelMinDistance)
+		_zVel = zVel + (_normalized * (zVelMax - zVel))
+				//show_message([distance, _normalized])
+	}
+	
+	zVel = _zVel
 	
 	while (_z > 0) {
 		_zVel -= gravAccel

@@ -6,10 +6,8 @@ persistent = true
 slots = []
 
 randomItems = [
-	obj_mg_ebony_pendant,
-	obj_mg_glass_feather,
-	obj_mg_opaque_hourglass,
-	obj_mg_unformed_mass
+	obj_mg_ice_salt,
+	//obj_mg_aetherblight
 ]
 
 inputsKeyboard = {
@@ -31,6 +29,8 @@ drawMain = false
 drawCombining = false
 selectedSlot = noone
 isOpen = false
+simpleDisplay = false
+focused = true
 owner = noone
 
 selectChange = new vec2()
@@ -76,6 +76,8 @@ mergingSlotsMax = 3
 swapping = -1
 swapper = noone
 
+isFull = false
+
 image_alpha = 0
 
 ///@descriptoin			Gets a slot given coordinates. Returns the index in the slots[] array
@@ -92,12 +94,24 @@ getSlot = function(_x, _y) {
 	return -1
 }
 
+///@description			Equips or Unequips items based on activeSlot and current equipped bool
 updateEquippedItems = function() {
+	var _isFull = true
+	
 	for (var i = 0; i < array_length(slots); i++) {
 		if (slots[i].item != noone) {
-			slots[i].item.equipped = (slots[i].activeSlot)
+			if (slots[i].activeSlot && !slots[i].item.equipped) {
+				slots[i].item.equip()
+			} else if (!slots[i].activeSlot && slots[i].item.equipped) {
+				slots[i].item.unequip()
+				//slots[i].item.equipped = (slots[i].activeSlot)
+			}
+		} else {
+			_isFull = false
 		}
 	}
+	
+	isFull = _isFull
 }
 
 ///@description				Adds item to the merge pool
@@ -139,6 +153,8 @@ toggleMergeForSelected = function() {
 	audio_play_sound(snd_leathery_thud, 1, 0)
 	
 	checkMergingItems()
+	
+	updateRecipeValidation()
 }
 
 ///@description				Checks items in merging selection
@@ -169,8 +185,20 @@ clearSwap = function() {
 	swapper = noone
 }
 
+///@description				Clears a merge selection
+clearMerge = function() {
+	mergerBox.clear()	
+	mergingSlots = []
+	
+	with (obj_backpack_slot) {
+		image_index = 0
+	}
+}
+
 ///@description				Swap input. Adds item to queue or swaps
 activateSwap = function() {
+	clearMerge()
+	
 	if (swapping == -1) {
 		swapper = instance_create_depth(
 			slots[selectedSlot].x,
@@ -184,7 +212,11 @@ activateSwap = function() {
 	
 		swapping = selectedSlot
 	} else if (swapping == selectedSlot) {
-		clearSwap()
+		if (slots[selectedSlot].item == noone) {
+			clearSwap()
+		} else {
+			createDestroyPrompt()
+		}
 	} else {
 		var _tempSwap = slots[swapping].item
 		
@@ -215,6 +247,7 @@ activateMerge = function() {
 	}
 	
 	var _newItem = create_instance(_recipe.result)
+	_newItem.owner = owner
 	
 	mergerBox.clear()
 	
@@ -232,9 +265,33 @@ activateMerge = function() {
 	addItem(_newItem)
 	
 	updateEquippedItems()
-	process_player_stats()
+	//process_player_stats()
 	
 	audio_play_sound(snd_merging_mix, 1, 0)
+	audio_play_sound(snd_merge_powerup, 1, 0)
+}
+
+///@description			Creates the prompt to destroy an item
+createDestroyPrompt = function() {
+	var _menu = instance_create_depth(-999, -999, depths.ui, obj_destroy_merger_confirm_menu)
+	
+	_menu.destroySlotIndex = selectedSlot
+	_menu.backpackOwner = owner
+	
+	focused = false
+}
+
+///@description				Destroys an item
+///@param {real} _index		Index to destroy. Must be selected, unlike most other functions here.
+destroyItem = function(_index) {
+	instance_destroy(slots[_index].item)
+	slots[_index].item = noone
+	
+	clearSwap()
+	
+	create_toaster("Item destroyed. Reward not setup yet", errorLevels.warning)
+	
+	updateRecipeValidation()
 }
 
 ///@description			Clears selected slots
@@ -268,7 +325,7 @@ addItem = function(_item) {
 	for (var i = 0; i < array_length(slots); i++) {
 		if (slots[i].item == noone) {
 			slots[i].item = _item
-			exit
+			break
 		}
 	}
 	
@@ -306,6 +363,31 @@ open = function() {
 	audio_play_sound(snd_leather_heavy, 1, 0)
 	
 	isOpen = true
+	
+	set_ui_focus_type(uiFocusTypes.inventory)
+	
+	updateRecipeValidation()
+}
+
+///@description			Updates items and recipes
+updateRecipeValidation = function() {
+	var _items = getItemList()
+	var _recipes = obj_recipe_controller.getValidRecipes(_items)
+	obj_recipe_controller.markValidIngredients(_recipes, _items)
+}
+
+///@description			Gets an array of all items in the backpack
+///@return {array<Id.Instance>}
+getItemList = function() {
+	var _items = []
+	
+	for (var i = 0; i < array_length(slots); i++) {
+		if (slots[i].item != noone) {
+			array_push(_items, slots[i].item)
+		}
+	}
+	
+	return _items
 }
 
 ///@description			Closes the backpack
@@ -330,13 +412,11 @@ close = function() {
 	instance_destroy(itemInfoBox)
 	itemInfoBox = noone
 	
-	//itemInfoBox.hide()
-	//mergerBox.hide()
-	
 	set_game_pause_state(false)
 	audio_play_sound(snd_leather_heavy, 1, 0)
 		
 	isOpen = false
+	set_ui_focus_type(uiFocusTypes.none)
 }
 
 ///@description						Initializes the backpack after setting slots
@@ -439,7 +519,7 @@ setupPositioning = function() {
 	y = (view_height() / 2) - (height / 2)
 }
 
-setupMergeInfoBoxPositioning = function () {
+setupMergeInfoBoxPositioning = function() {
 	itemInfoBox.x = x + width + 2
 	itemInfoBox.y = y
 
@@ -451,4 +531,26 @@ setupMergeInfoBoxPositioning = function () {
 	
 	mergerBox.x = (view_width() / 2) - (mergerBox.width / 2)
 	mergerBox.y = y - mergerBox.height - 3
+}
+
+///@description						Displays backpack, but does not enable interaction
+///@param {real} _x					X position to display
+///@param {real} _y					Y position to display
+activateSimpleDisplay = function(_x, _y) {
+	simpleDisplay = true
+	
+	image_alpha = 1
+	
+	x = _x
+	y = _y
+}
+
+///@description						Resumes basic display
+deactivateSimpleDisplay = function() {
+	simpleDisplay = false
+	
+	image_alpha = 0
+	
+	x = (view_width() / 2) - (width / 2)
+	y = (view_height() / 2) - (height / 2)
 }

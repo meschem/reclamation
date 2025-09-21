@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tileset_castle_carpet",
   "bboxMode":0,
-  "bbox_bottom":126,
+  "bbox_bottom":254,
   "bbox_left":1,
   "bbox_right":255,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":32,
   "gridY":32,
-  "height":129,
+  "height":256,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"2e67e79e-3967-41ab-9d5c-1e5441ad3191","blendMode":0,"displayName":"default","isLocked":false,"name":"2e67e79e-3967-41ab-9d5c-1e5441ad3191","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -63,6 +63,8 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":256.0,
+    "seqWidth":512.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
@@ -95,5 +97,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":256,
+  "width":512,
 }

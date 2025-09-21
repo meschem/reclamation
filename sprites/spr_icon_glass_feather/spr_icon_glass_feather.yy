@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"trinkets",
-    "path":"folders/Sprites/equipment/trinkets.yy",
+    "name":"items",
+    "path":"folders/Sprites/equipment/items.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_merge_powerup",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.1271882,
+  "name":"snd_merge_powerup",
+  "parent":{
+    "name":"backpack",
+    "path":"folders/Sounds/backpack.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_merge_powerup.wav",
+  "type":0,
+  "volume":0.25,
+}

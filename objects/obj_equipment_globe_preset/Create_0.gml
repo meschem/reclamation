@@ -13,6 +13,7 @@ homingRadius = 16
 pickupDelay = 30
 
 equipment = noone
+isMergerItem = false
 
 shadowSprite = spr_shadow_med
 shadowOffset = 6
@@ -33,10 +34,13 @@ onPickup = function(_player) {
 		create_toaster("Gear not attached!", errorLevels.error)
 		instance_destroy()
 		return
+	} else if (isMergerItem) {
+		equipment.owner = _player
+		_player.backpack.addItem(equipment)		
+	} else {		
+		equipment.owner = _player
+		_player.equipItem(equipment, false)
 	}
-		
-	equipment.owner = _player
-	_player.equipItem(equipment, false)
 	
 	create_toaster(get_rarity_string(equipment.rarity) + " " + equipment.name + " acquired!")
 	

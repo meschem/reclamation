@@ -59,6 +59,8 @@ impactSoundFrameSkip = false
 
 spawnPeriodicFx()
 
+
+
 calcVelocity()
 
 if (trail && age > 1) {
@@ -72,7 +74,7 @@ if (xVel != 0 && yVel != 0) {
 	facingAngle = get_angle(xVel, yVel)
 }
 
-// Seeking behavior
+// Seeking behavior. Accelerate is also calculated in this block if no seeking behavior exists
 if (seeking && seekTarget != noone) {
 	seekDistanceMax--
 	
@@ -105,6 +107,10 @@ if (seeking && seekTarget != noone) {
 		
 		maxTurnRate += maxTurnRateGain
 	}
+}
+
+if (!seeking && acceleration != 0) {
+	accelerate(acceleration, id, moveSpeedMin, moveSpeedMax)
 }
 
 if (rotationSpeed != 0) {
@@ -143,7 +149,7 @@ if (solidCollisionBehavior == projSolidCollisionBehaviors.bounce) {
 	}
 }
 
-if (movementType = projMovementTypes.velocity) {
+if (movementType = projMovementTypes.velocity) {	
 	if (attachedTo == noone) {
 		x += xVel
 		y += yVel
@@ -164,7 +170,7 @@ if (movementType = projMovementTypes.velocity) {
 		x = xVel
 		y = yVel
 	}
-} 
+}
 
 if (moveSpeedMax >= 0) {
 	//var _angle = point_direction(0, 0, xVel, yVel)
@@ -181,8 +187,9 @@ if (targetsMax > 0) {
 	clean_hit_list(hitList)
 }
 
-if (angleSpriteToVelocity)
+if (angleSpriteToVelocity) {
 	image_angle = get_angle(xVel, yVel)
+}
 
 var target = noone
 var targetType = targetTypes.none

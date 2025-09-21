@@ -1,9 +1,9 @@
 /// @description	Launches a number of projectiles over a period of time
 
 enum launchAngleTypes {
-	attackAngle,
-	movementAngle,
-	staticAngle
+	attackAngle,				// uses attackAngle var on the owner
+	movementAngle,				// uses the movementAngle var on the owner
+	staticAngle					// uses a set static angle that doesn't change
 }
 
 age = 0

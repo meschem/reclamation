@@ -2,14 +2,15 @@
 ///@param {asset.GMObject} enemy	Enemy to spawn
 ///@param {real} count				Amount of enemies to spawn
 ///@param {real} spread				Distance between enemies if count > 1
-///@param {array} flags				Flags of enumSpawnFlags
+///@param {bool} isSpawner			Set to false if not spawned by a spawner
 ///@return {array<id.Instance>}
-function spawn_baddie(enemy, count = 1, spread = 16, flags = {}) {
+function spawn_baddie(enemy, count = 1, spread = 16, isSpawner = true) {
 	var spawnDir = irandom(3)
 	var randomX = irandom_range(-20, room_width + 20)
 	var randomY = irandom_range(-20, room_height + 20)
-	var target = get_player_target()
 	
+	var target = isSpawner ? get_player_target() : get_first_player()
+		
 	if (enemy == obj_none) {
 		throw ("obj_none set as spawn type")
 	}
@@ -57,7 +58,7 @@ function spawn_baddie(enemy, count = 1, spread = 16, flags = {}) {
 		}
 	}
 	
-	if (variable_instance_exists(id, "spawnFlags")) {
+	if (isSpawner && variable_instance_exists(id, "spawnFlags")) {
 		for (i = 0; i < array_length(spawns); i++) {
 			if (array_contains(spawnFlags, enumSpawnFlags.noTarget)) {
 				spawns[i].target = noone

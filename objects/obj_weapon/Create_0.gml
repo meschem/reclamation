@@ -20,6 +20,9 @@ baseKnockback = 0
 bonusKnockback = 0
 knockbackScalar = 1
 
+baseBurningStacks = 0
+bonusBurningStacks = 0
+
 bonusAoeScalar = 0
 
 velocityScalar = 1
@@ -93,6 +96,15 @@ getKnockback = function() {
 	_knockback *= knockbackScalar
 	
 	return _knockback
+}
+
+///@description						Gets burning stacks for a weapon
+///@return {real}
+getBurningStacks = function() {
+	var _selfStacks = baseBurningStacks + bonusBurningStacks
+	var _ownerStacks = owner.baseBurningStacks + owner.bonusBurningStacks
+	
+	return _selfStacks + _ownerStacks
 }
 
 ///@description					Gets a weapon stat value
@@ -204,6 +216,8 @@ launch = function(obj, velocity, offset = new vec2(0, 0)) {
 	
 	inst.critMultiplier += bonusCritMultiplier
 	
+	show_message("launch() used")
+	
 	return inst
 }
 
@@ -220,17 +234,11 @@ applyUpgradesToInstance = function(_inst) {
 	_inst.xVel *= velocityScalar
 	_inst.yVel *= velocityScalar
 	
-	//_inst.damageDirect += bonusDamage
-	//_inst.damageDirect *= damageScalar
-	
 	_inst.damageDirect = getDamage()
-	
-	//_inst.knockback += bonusKnockback
-	//_inst.knockback *= knockbackScalar
-	
 	_inst.knockback = getKnockback()
-	
+	_inst.burningStacks = getBurningStacks()
 	_inst.critMultiplier += bonusCritMultiplier
+	
 	_inst.setScale(owner) // from obj_weapon_projectile
 }
 

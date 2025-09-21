@@ -30,10 +30,15 @@ abilityTrees = [
 ]
 
 availableWeapons = [
-	obj_weapon_throwing_knives,
-	obj_weapon_hunting_bow
+	obj_weapon_chakram
 ]
 
-defaultWeapon = obj_weapon_throwing_knives
+defaultWeapon = obj_weapon_chakram
+
+init_floating(2, stf(2))
+
+shadowSprite = spr_shadow_lg
+shadowOffsetY = 15
+shadowScale = 1
 
 //abilityTrees = playerCharacters.jonah

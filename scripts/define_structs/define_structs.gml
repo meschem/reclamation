@@ -24,6 +24,65 @@ enum enumTrailStyle {
 	line
 }
 
+///@description									A recipe combined to make a new item
+///@param {asset.GMObject} _result				Resultant Item
+///@param {string} _name						Name of result
+///@param {asset.GMSprite} _icon				Sprite to show for result
+///@param {array<asset.GMObject>} _ingredients	Ingredients to the recipe
+function recipe(_result, _name, _icon, _ingredients) constructor {
+	result = _result
+	name = _name
+	icon = _icon
+	
+	ingredients = _ingredients
+	array_sort(ingredients, true)
+}
+
+///description						Merger item
+///@param {string} _name			Name of item
+///@param {string} _description		Description of item
+///@param {asset.GMObject} _object	Object to use
+///@param {asset.GMSprite} _icon	Icon of item
+///@param {real} _rarity			Rarity of item, enumRarity
+function mergerItemTemplate(_name, _description, _object, _icon, _rarity = enumRarity.normal) constructor {
+	name = _name
+	description = _description
+	object = _object
+	icon = _icon
+	rarity = _rarity
+	
+	///@description						Creates the item for the player
+	///@param {id.Instance} _player		Player to create the object for
+	///@return {id.Instance}
+	create = function(_player) {
+		var _inst = create_instance(object)
+		
+		_inst.name = name
+		_inst.description = description
+		_inst.sprite_index = icon
+		_inst.rarity = rarity
+		
+		_inst.owner = _player
+		
+		if (_player != noone) {
+			_player.backpack.addItem(_inst)
+		}
+		
+		return _inst
+	}
+	
+	///@description						Gets text for stat info
+	///@return [array<string>]
+	getStatText = function() {
+		var _stats = [
+			"+1 Fake Stat",
+			"+10 Other Fake Stat"
+		]
+		
+		return _stats
+	}
+}
+
 ///@description							Trail segment drawn behind objects
 ///@param {struct.vec2} _startPos
 ///@param {struct.vec2} _endPos
@@ -83,22 +142,30 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 		// FIXME: GENERAL - does not support bonusVar and playerVar members. Will crash if referenced
 		type = _customType
 		unit = get_stat_unit_from_enum(type.unitEnum)
+		
+		if (!variable_struct_exists(type, "prepend")) {
+			type.prepend = false
+		}
 	}
 
+	///@return {string}
 	getDisplayName = function() {
 		return type.displayName
 	}
 	
 	///@param {real} _level
+	///@return {string}
 	getDisplayValue = function(_level = 0) {
 		var _rawValue = values[_level]
 		var _numeric = _rawValue * unit.multiplier
+		var _prepend = ""
 		
 		if (type.prepend) {
-			var _prepend = (_numeric > 0) ? "+" : "" 
-		} else {
-			var _prepend = ""
-		}
+			_prepend = (_numeric > 0) ? "+" : "" 
+		} 
+		//else {
+		//	_prepend = ""
+		//}
 		
 		return $"{_prepend}{_numeric}{unit.displayUnit}"
 	}

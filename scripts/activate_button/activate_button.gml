@@ -1,5 +1,5 @@
 ///@description						Activates a button
-///@param {id.Instance}	button		Button to activate
+///@param {id.Instance}	_button		Button to activate
 
 function activate_button(_button = id) {
 	switch (_button.onClick) {

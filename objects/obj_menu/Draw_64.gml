@@ -14,8 +14,8 @@ draw_sprite_ext(
 	image_alpha
 )
 
-draw_set_font(font_pxlxxl_m)
-draw_set_color(c_white)
+draw_set_font(fontType)
+draw_set_color(fontColor)
 draw_text(x + paddingX, y + paddingTop, title)
 
 /*

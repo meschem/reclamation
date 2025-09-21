@@ -8,8 +8,8 @@
   "name":"obj_mg_pinion_of_war",
   "overriddenProperties":[],
   "parent":{
-    "name":"mergers",
-    "path":"folders/Objects/equipment/mergers.yy",
+    "name":"legendary",
+    "path":"folders/Objects/equipment/mergers/legendary.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

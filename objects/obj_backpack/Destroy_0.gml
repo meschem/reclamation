@@ -1,9 +1,10 @@
 /// @description Cleanup
 
-show_message("destroying backpack")
+//show_message("destroying backpack")
 
 for (var i = 0; i < array_length(slots); i++) {
-	instance_destroy()
+	//slots[i].backpack = noone
+	instance_destroy(slots[i])
 }
 
 instance_destroy(itemInfoBox)

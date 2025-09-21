@@ -2,6 +2,10 @@
 ///@param {real} _amount	Amount to slow down
 ///@return {real}
 function deaccelerate(_amount) {
+	if (xVel == 0 && yVel == 0) {
+		return 0
+	}
+	
 	var angle = point_direction(0, 0, xVel, yVel)
 	var mag = point_distance(0, 0, xVel, yVel)
 	

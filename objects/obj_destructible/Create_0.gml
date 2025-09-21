@@ -40,6 +40,8 @@ damageParticles = []
 deathParticles = []
 deathParticleSpawnRange = new vec2(12, 12)
 
+revealList = []
+
 onDamaged = function() {}
 onDeath = function() {}
 

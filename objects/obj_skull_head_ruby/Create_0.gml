@@ -17,7 +17,7 @@ floatRange = 2
 
 weight = baddie_weight_none
 moveSpeedMax = baddie_move_speed_fast
-pushRadius =- baddie_push_radius_small
+pushRadius = baddie_push_radius_small
 
 flies = true
 collidesWith = baddie_collision_flier

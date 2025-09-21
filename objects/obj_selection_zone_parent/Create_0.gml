@@ -1,3 +1,8 @@
+enum shopTypes {
+	equipment,
+	mergers
+}
+
 playerInArea = false
 controllerInput = gp_face1
 keyboardInput = "G"

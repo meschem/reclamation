@@ -2,7 +2,8 @@
 ///@param {real} radius						Radius to select enemies in
 ///@param {real} amount						Amount of damage
 ///@param {asset.GMObject} spawnObject		Object to spawn on enemies for extra effects
-function damage_baddies_in_area(radius, amount, spawnObject = obj_none) {
+///@param {real} maxCount					Max amount of enemies that are hit. -1 for no limit.
+function damage_baddies_in_area(radius, amount, spawnObject = obj_none, maxCount = -1) {
 	var target, inst
 	var enemies = ds_list_create()	
 
@@ -16,10 +17,11 @@ function damage_baddies_in_area(radius, amount, spawnObject = obj_none) {
 		enemies,
 		false
 	)
+	
+	count = min(count, maxCount)
 
 	if (count > 0) {
-		for (var i = 0; i < count; i++)
-		{
+		for (var i = 0; i < count; i++) {
 		    target = enemies[| i]
 			
 			if (spawnObject != obj_none) {
@@ -27,9 +29,6 @@ function damage_baddies_in_area(radius, amount, spawnObject = obj_none) {
 			}
 		
 			damage_baddie(target, amount)
-			
-			//inst = instance_create_depth(target.x, target.y, depths.fx, obj_particle_single_cycle)
-			//inst.sprite_index = spr_particle_lightning_medium
 		}
 	}
 

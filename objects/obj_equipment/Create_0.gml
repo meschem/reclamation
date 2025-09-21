@@ -16,7 +16,8 @@ enum equipmentStats {
 	bonusProjectileCount ,
 	bonusPickupRange,
 	bonusPickupReward,
-	bonusWeaponAoe
+	bonusWeaponAoe,
+	bonusRecoveryTime,
 }
 
 enum equipmentSlots {
@@ -75,8 +76,10 @@ bonusPickupRange = 0
 bonusPickupReward = 0
 bonusWeaponAoe = 0
 bonusCritMultiplier = 0
+bonusRecoveryTime = 0
 
 stats = []
+statsSpecial = []
 
 rawStatDisplay = []
 
@@ -176,6 +179,11 @@ onLevelUp = function() {
 	// unset
 }
 
+///@description						Actions to perform on step
+onStep = function() {
+	// unset
+}
+
 ///@description						Actions to perform on equipped
 onEquip = function() {
 	// unset
@@ -218,4 +226,8 @@ makeTemplate = function() {
 ///@return {string}
 getRarityString = function() {
 	return get_rarity_string(rarity)
+}
+
+onDestroy = function() {
+	
 }

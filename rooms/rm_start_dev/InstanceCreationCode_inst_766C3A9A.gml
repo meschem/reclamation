@@ -1,0 +1,1 @@
+loadRoom = rm_combat_arena_skeleton_hall

@@ -21,7 +21,15 @@ if (pauseDelay > 0) {
 }
 
 if (state == roomStates.init) {
+	if (category == roomCategories.boss) {
+		initBoss()
+	}
+	
 	if (category == roomCategories.combat) {
+		initCombat()
+	}
+	
+	if (category == roomCategories.combatSingle) {
 		initCombat()
 	}
 	
@@ -40,6 +48,14 @@ if (state == roomStates.init) {
 	if (category == roomCategories.inactive) {
 		initInactive()
 	}
+	
+	
+}
+
+if (state == roomStates.bossFlourish) {
+	if (instance_number(obj_boss_flourish_controller) == 0) {
+		state = initCombat()
+	}
 }
 
 if (state == roomStates.overtime) {
@@ -57,14 +73,25 @@ if (
 	category == roomCategories.combat &&
 	state != roomStates.overtime &&
 	instance_number(obj_ability_selection_menu) == 0 &&
-	instance_number(obj_baddie) == 0 &&
-	instance_number(obj_spawner) == 0
+	instance_number(obj_spawner) == 0 &&
+	instance_number(obj_baddie) == 0	
+) {
+	completeCombat()
+}
+
+if (
+	category == roomCategories.boss &&
+	state != roomStates.overtime &&
+	instance_number(obj_ability_selection_menu) == 0 &&
+	instance_number(obj_spawner) == 0 &&
+	instance_number(obj_baddie) == 0	
 ) {
 	completeCombat()
 }
 
 if (
 	category == roomCategories.combatSingle &&
+	state != roomStates.overtime &&
 	singleRoomCombatComplete
 ) {
 	completeCombat()

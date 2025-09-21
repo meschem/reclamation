@@ -17,3 +17,5 @@ scaleEnd = 0
 singleCycle = false
 
 animSpeed = 1
+
+parent = noone

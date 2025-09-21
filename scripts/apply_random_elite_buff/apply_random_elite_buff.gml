@@ -1,4 +1,4 @@
-///@description						Sets up an elite baddie with a random buff
+///@description						Sets up an elite baddie with a random buff, and spawns group of minions
 ///@param {id.Instance} _baddie		Baddie to apply buff to
 ///@param {real} _count				Amount of buffs to apply, max 1 atm
 function apply_random_elite_buff(_baddie, _count = 1) {

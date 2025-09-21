@@ -8,8 +8,8 @@
   "name":"obj_mg_glass_feather",
   "overriddenProperties":[],
   "parent":{
-    "name":"mergers",
-    "path":"folders/Objects/equipment/mergers.yy",
+    "name":"uncommon",
+    "path":"folders/Objects/equipment/mergers/uncommon.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

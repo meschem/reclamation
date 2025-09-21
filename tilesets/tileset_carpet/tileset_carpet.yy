@@ -10,7 +10,7 @@
     "TileSerialiseData":[],
   },
   "name":"tileset_carpet",
-  "out_columns":6,
+  "out_columns":11,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -36,5 +36,5 @@
   "tileWidth":32,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":32,
+  "tile_count":128,
 }

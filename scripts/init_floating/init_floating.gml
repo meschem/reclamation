@@ -7,4 +7,5 @@ function init_floating(_floatRange = 2, _phaseLength = 60) {
 	floatOffset = 0
 	floatRange = _floatRange
 	phaseLength = _phaseLength
+	shadowScale = 1
 }

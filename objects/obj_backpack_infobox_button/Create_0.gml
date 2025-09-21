@@ -14,9 +14,12 @@ iconFont = font_aseprite
 iconSwap = spr_btn_xbox_y
 iconCombine = spr_btn_xbox_x
 iconDrop = spr_btn_xbox_b
+iconPurchase = spr_btn_xbox_a
 iconTextOffset = new vec2(4 + 17, 4)
 
 infobox = noone
+
+skipDraw = false
 
 padding = {
 	top: 4,

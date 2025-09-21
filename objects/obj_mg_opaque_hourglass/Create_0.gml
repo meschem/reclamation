@@ -7,6 +7,6 @@ event_inherited()
 name = "Opaque Hourglass"
 description = "Sparks curiosity, but not so useful for telling time."
 
-bonusInt = 3
+bonusInt = 2
 
 addCharStatBlocks()

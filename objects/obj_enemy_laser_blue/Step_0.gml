@@ -8,11 +8,25 @@ if (game_is_paused()) {
 	return 0
 }
 
+age++
+
+beginStep()
+
+range += laserGrowthRate
 starAngle += starRotationRate
 image_angle += laserRotationRate
+image_xscale = range / 10
+
+if (drawEndPiece) {
+	var _x = angle_xvel(image_angle) * range
+	var _y = angle_yvel(image_angle) * range
+	
+	laserSpriteEndPiecePos.x = x + _x
+	laserSpriteEndPiecePos.y = y + _y
+}
 
 if (state == laserStates.full && age % ringSpawnRate == 0) {
-	var _inst = instance_create_depth(x, y, depth - 1, obj_laser_ring)
+	var _inst = instance_create_depth(x, y, depth - 1, ringObject)
 	_inst.parentLaser = id
 }
 

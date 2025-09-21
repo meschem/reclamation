@@ -109,6 +109,7 @@ damageReactionCurveXScale = animcurve_get_channel(damageReactionCurve, 0)
 damageReactionCurveYScale = animcurve_get_channel(damageReactionCurve, 1)
 damageXScaleMultiplier = 1
 damageYScaleMultiplier = 1
+damageReactionScaleScalar = 1
 
 onDestroyList = []	// List of functions executed on death
 

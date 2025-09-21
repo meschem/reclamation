@@ -10,6 +10,8 @@ if (markForDestroy) {
 
 depth = depths.enemy - y - feetOffset
 
+beginStep()
+
 if (beingSummoned) {
 	summoningCd--
 	

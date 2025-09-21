@@ -28,8 +28,9 @@ if (usingController) {
 }
 
 if (
-	keyboard_check_pressed(bindToggleInventory.keyboard) ||
-	gamepad_button_check_pressed(0, bindToggleInventory.controller)
+	(keyboard_check_pressed(bindToggleInventory.keyboard) ||
+	gamepad_button_check_pressed(0, bindToggleInventory.controller)) &&
+	(get_ui_focus_type() == uiFocusTypes.none || get_ui_focus_type() == uiFocusTypes.inventory)
 ) {
 	with (obj_player) {
 		backpack.toggle()

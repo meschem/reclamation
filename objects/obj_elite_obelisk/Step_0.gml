@@ -5,6 +5,8 @@ if (game_is_paused()) {
 
 age++
 
+depth = depths.player - y
+
 if (
 	obj_player.x > x + activationArea.x1 &&
 	obj_player.x < x + activationArea.x2 &&

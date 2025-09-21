@@ -10,24 +10,24 @@ templateEquipment = []
 
 validEquipment = [
 	obj_boots_basic,
-	obj_boots_stompers,
-	obj_boots_steeled_toes,
-	obj_boots_fleet_feet,
+	//obj_boots_stompers,
+	//obj_boots_steeled_toes,
+	//obj_boots_fleet_feet,
 	
-	obj_chest_aegis,
-	obj_chest_leather,
+	//obj_chest_aegis,
+	//obj_chest_leather,
 	
-	obj_gloves_leather,
-	obj_gloves_fire_raisers,
+	//obj_gloves_leather,
+	//obj_gloves_fire_raisers,
 	
-	obj_head_leather_cap,
-	obj_head_sallet,
-	obj_head_tiara,
-	obj_head_full_helm,
+	//obj_head_leather_cap,
+	//obj_head_sallet,
+	//obj_head_tiara,
+	//obj_head_full_helm,
 	
-	obj_neck_silver_chain,
-	obj_neck_rose_amulet,
-	obj_neck_hungering_pendant,
+	//obj_neck_silver_chain,
+	//obj_neck_rose_amulet,
+	//obj_neck_hungering_pendant,
 ]
 
 for (var i = 0; i < array_length(validEquipment); i++) {

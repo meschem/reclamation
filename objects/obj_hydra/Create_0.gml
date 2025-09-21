@@ -11,7 +11,7 @@ bossScale = 1
 
 hpMax = 5000
 hp = hpMax
-hpBarDisplay = entityHpBarTypes.small
+create_boss_health_bar(id)
 
 add_loot_gold(500, 600, 1)
 

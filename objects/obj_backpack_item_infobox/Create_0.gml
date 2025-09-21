@@ -19,15 +19,20 @@ padding = {
 	top: 9,
 	left: 10,
 	right: 10,
-	bottom: 15             
+	bottom: 10
 }
 
 rarityColor = get_color(colors.light_green)
 lineSpacing = -1
+lineSpacingSm = -4
 statLineSpacing = 30
 
 width = 0
 height = 0
+
+showButtonSwap = true
+showButtonCombine = true
+showButtonPurchase = false
 
 buttonSwap = create_instance(obj_backpack_infobox_button)
 buttonSwap.infobox = id
@@ -39,11 +44,19 @@ buttonCombine.infobox = id
 buttonCombine.setInput(buttonSwap.iconCombine, "Combine")
 buttonCombine.depth = depth - 10
 
+buttonPurchase = create_instance(obj_backpack_infobox_button)
+buttonPurchase.infobox = id
+buttonPurchase.setInput(buttonSwap.iconPurchase, "Purchase")
+buttonPurchase.depth = depth - 10
+buttonPurchase.image_alpha = 0
+
 ///@description					Shows the infobox and its buttons
 show = function() {
 	image_alpha = 1
-	buttonSwap.image_alpha = 1
-	buttonCombine.image_alpha = 1
+	
+	buttonSwap.image_alpha = showButtonSwap
+	buttonCombine.image_alpha = showButtonCombine
+	buttonPurchase.image_alpha = showButtonPurchase
 }
 
 ///@description					Hides the infobox and its buttons
@@ -51,6 +64,7 @@ hide = function() {
 	image_alpha = 0
 	buttonSwap.image_alpha = 0
 	buttonCombine.image_alpha = 0
+	buttonPurchase.image_alpha = 0
 }
 
 ///@description					Setup the infobox with an item
@@ -81,6 +95,10 @@ updateItem = function(_item) {
 		array_push(_stats, _item.stats[i].getDisplayValue() + " " + _item.stats[i].getDisplayName())
 	}
 	
+	for (var i = 0; i < array_length(_item.statsSpecial); i++) {
+		array_push(_stats, _item.statsSpecial[i])
+	}
+	
 	statTextLines = _stats
 	
 	updateSize()
@@ -99,12 +117,16 @@ updateSize = function() {
 	height += string_height(rarityText) + lineSpacing
 	
 	draw_set_font(descriptionFont)
-	height += string_height_ext(descriptionText, lineSpacing, width - padding.left - padding.right)
+	height += string_height_ext(descriptionText, lineSpacingSm, width - padding.left - padding.right)
 	
 	height += statLineSpacing
 	
-	if (array_length(statTextLines) > 0) {
-		height += (string_height(statTextLines[0]) * (array_length(statTextLines) - 1)) + (lineSpacing * (array_length(statTextLines) - 1))
+	for (var i = 0; i < array_length(statTextLines); i++) {
+		height += string_height_ext(
+			statTextLines[i],
+			lineSpacingSm,
+			width - padding.left - padding.right
+		)
 	}
 	
 	height += padding.bottom
@@ -116,6 +138,9 @@ updateSize = function() {
 updateButtons = function() {
 	buttonCombine.x = x + (padding.left)
 	buttonCombine.y = y + height - (buttonSwap.height / 2) - 2
+	
+	buttonPurchase.x = x + (padding.left)
+	buttonPurchase.y = y + height - (buttonSwap.height / 2) - 2
 	
 	buttonSwap.x = x + width - (padding.right) - buttonSwap.width
 	buttonSwap.y = y + height - (buttonSwap.height / 2) - 2

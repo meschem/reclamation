@@ -10,7 +10,7 @@ description = "A feather brimming with power, touched by the burning heavens abo
 rarity = enumRarity.legendary
 bonusInt = 20
 bonusStr = 10
-bonusMoveSpeed = 0.5
+bonusMoveSpeed = 0.2
 
 addCharStatBlocks()
 

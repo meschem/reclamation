@@ -11,6 +11,7 @@ enum roomStates {
 	upgradeMenu,
 	overtime,
 	completed,
+	bossFlourish,
 	endScreen,
 }
 
@@ -32,6 +33,10 @@ enum combatRoomTypes {
 category = roomCategories.combat
 combatRoomType = combatRoomTypes.openArea
 
+bossName = "Unset on obj_room_controller"
+bossTitle = "Unset on obj_room_controller"
+bossSprite = spr_none
+
 state = roomStates.init
 
 age = 0
@@ -42,6 +47,7 @@ timeDisplay = "0:00"
 timerActive = true
 showTimeDisplay = true
 singleRoomCombatComplete = false
+allowBaddieWrap = true
 
 spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
 
@@ -52,6 +58,8 @@ nextLevel = rm_start_dev
 
 pauseMenuEnabled = true
 
+reward = roomRewards.gold
+
 create_instance(obj_buff_controller)
 create_instance(obj_camera_controller)
 create_instance(obj_particle_controller)
@@ -61,7 +69,6 @@ create_instance(obj_event_controller)
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false
 cameraOffset = new vec2()
-
 
 // ROOM SETUP
 // use obj_dungeon to create spawn phases
@@ -80,6 +87,16 @@ initStats = function() {
 	state = roomStates.statsMenu
 }
 
+initBoss = function() {
+	var _inst = create_instance(obj_boss_flourish_controller)
+	
+	_inst.bossName = bossName
+	_inst.bossTitle = bossTitle
+	_inst.bossSprite = bossSprite
+	
+	state = roomStates.bossFlourish
+}
+
 initCombat = function() {
 	showTimeDisplay = true
 	timerActive = true
@@ -87,6 +104,7 @@ initCombat = function() {
 	
 	with (obj_ui_controller) {
 		drawStatBars = true
+		skipPlayerUi = false
 	}
 	
 	with (obj_ability) {
@@ -107,9 +125,20 @@ initCombat = function() {
 			
 		}
 		
+		// Run once per map init in a run
 		if (!obj_run_controller.mainRoomInit) {
 			process_map_events()
 			obj_run_controller.mainRoomInit = true
+			
+			with (obj_room_exit) {
+				add_map_poi()
+			}
+			
+			with (obj_merchant_merger_zone) {
+				add_map_poi()
+			}
+		} else {
+			cleanup_map_events()
 		}
 		
 		spawn_stored_baddies()
@@ -131,7 +160,7 @@ initCombat = function() {
 
 completeCombat = function() {
 	var _reward = get_current_room_reward()
-
+	
 	process_room_reward(_reward)
 
 	initOvertime()
@@ -180,11 +209,12 @@ initInactive = function() {
 	showTimeDisplay = false
 	timerActive = false
 	runIsActive = false
-	
+		
 	with (obj_ui_controller) {
 		drawStatBars = false
+		skipPlayerUi = true
 	}
-	
+		
 	with (obj_ability) {
 		drawGui = false
 	}

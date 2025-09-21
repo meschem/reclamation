@@ -13,7 +13,10 @@ enum baddieScalars {
 	spawnCount
 }
 
+usedObjects = []
+
 create_instance(obj_equipment_controller)
+create_instance(obj_merger_item_controller)
 create_instance(obj_mutator_controller)
 //create_instance(obj_run_stats_controller)
 
@@ -25,6 +28,10 @@ runAge = 0
 mainRoomAge = 0
 mainRoomInit = false
 runIsActive = false
+
+// modifies main room spawn location
+modifySpawnPos = false
+modifySpawnLocation = new vec2()
 
 curseAge = 0
 curseActive = false

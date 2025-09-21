@@ -23,6 +23,10 @@ create_instance(obj_run_controller)
 create_instance(obj_input_controller)
 create_instance(obj_recipe_controller)
 
+//if (debug_mode) {
+	create_instance(obj_debug_controller)
+//}
+
 spawn_players()
 
 define_colors()

@@ -33,7 +33,10 @@ outlineColor = get_color(colors.red)
 
 add_baddie_gold_brutal_plus
 
+add_loot(obj_merger_item_chest)
+
 onDestroy = function() {
+	
 	with (obj_run_controller) {
 		enemyScalingHp += 0.15
 	}

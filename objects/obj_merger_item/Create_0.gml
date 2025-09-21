@@ -2,9 +2,13 @@
 
 event_inherited()
 
+inValidRecipe = false		// modified if found to be in a craftable recipe
+
 bonusStr = 0
 bonusDex = 0
 bonusInt = 0
+
+cost = 200
 
 addCharStatBlocks = function() {
 	if (bonusStr > 0) {

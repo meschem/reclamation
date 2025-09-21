@@ -11,10 +11,9 @@ if (age >= lifeSpan) {
 }
 
 if (age % spawnRate == 0) {
-	var _spawns = spawn_baddie(spawnBaddie, spawnCount, 4, spawnFlags)
+	var _spawns = spawn_baddie(spawnBaddie, spawnCount, 4) //, spawnFlags)
 	
 	for (var i = 0; i < array_length(_spawns); i++) {
 		_spawns[i].spawnedBy = id
 	}
-	
 }

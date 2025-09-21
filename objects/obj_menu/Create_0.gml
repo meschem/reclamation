@@ -25,6 +25,9 @@ paddingTop = 9
 marginX = 0
 marginY = 0
 
+fontType = font_pxlxxl_m
+fontColor = c_white
+
 buttonMarginY = 4
 
 display = true

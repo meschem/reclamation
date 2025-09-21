@@ -9,8 +9,8 @@
   "name":"obj_greater_serpent",
   "overriddenProperties":[],
   "parent":{
-    "name":"baddies",
-    "path":"folders/Objects/baddies.yy",
+    "name":"serpents",
+    "path":"folders/Objects/baddies/serpents.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

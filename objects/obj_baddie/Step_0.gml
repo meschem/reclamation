@@ -220,6 +220,9 @@ if (age - damagedOn <= damageReactionLength) {
 
 	damageXScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveXScale, ratio)
 	damageYScaleMultiplier = animcurve_channel_evaluate(damageReactionCurveYScale, ratio)
+	
+	damageXScaleMultiplier = 1 + damageReactionScaleScalar * (damageXScaleMultiplier - 1)
+	damageYScaleMultiplier = 1 + damageReactionScaleScalar * (damageYScaleMultiplier - 1)
 } else {
 	damageXScaleMultiplier = 1
 	damageYScaleMultiplier = 1

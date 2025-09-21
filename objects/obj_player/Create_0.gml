@@ -69,7 +69,7 @@ bonusDex = 0
 bonusInt = 0
 
 baseMaxHp = 50
-baseMoveSpeedMax = 1.2
+baseMoveSpeedMax = 1.4
 baseMaxArmor = 0
 baseCritChance = 0.1
 baseCritMultiplier = 1.5
@@ -78,6 +78,8 @@ baseAbilityCooldownScalar = 1
 baseAttackSpeedScalar = 1
 baseKnockbackMultiplier = 1
 basePoisonDamage = 15
+baseRecoveryTime = 1.5
+baseBurningStacks = 0
 
 bonusProjectileCount = 0
 bonusDamageScalar = 1
@@ -87,6 +89,8 @@ bonusWeaponAoeScalar = 1
 bonusWeaponKnockbackScalar = 1
 bonusPoisonDamage = 0
 bonusMagicFind = 0
+bonusRecoveryTime = 0
+bonusBurningStacks = 0
 
 totalGold = 0
 gold = 0
@@ -123,13 +127,14 @@ accelY = 0
 xVel = 0
 yVel = 0
 controllerIndex = 0
-invulnFrames = 90
+invulnFrames = stf(baseRecoveryTime)
 lastHitOn = -1 - invulnFrames
 
 attackAngle = 0
 
 flies = false
 phases = false
+floats = false
 
 ultimateChargeDelayMax = seconds_to_frames(6)
 ultimateChargeDelay = 0
@@ -217,6 +222,8 @@ backpack = create_backpack_for_player()
 keys = []
 
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
+
+stepBegin = function() {}
 
 ///@description							Gets a calculate character stat
 getCharStat = function(_stat) {

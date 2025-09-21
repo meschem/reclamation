@@ -451,7 +451,7 @@
           -2,1,-2,10,-2,1,5,8,10,10,1,1,-188,-2147483648,5,37,10,18,1,8,-3,1,5,17,1,1,10,35,-187,-2147483648,2,
           37,17,-8,1,3,9,1,35,-187,-2147483648,6,46,29,1,9,1,16,-3,1,4,8,1,27,47,-188,-2147483648,1,46,-9,28,1,
           47,-2814,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"tileset_blue_dungeon_c2","path":"tilesets/tileset_blue_dungeon_c2/tileset_blue_dungeon_c2.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"tileset_blue_dungeon_c2","path":"tilesets/tileset_blue_dungeon_c2/tileset_blue_dungeon_c2.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRTileLayer":"","%Name":"Collision_Tiles","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Collision_Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":150,"SerialiseWidth":200,"TileCompressedData":[
           -259,41,2,23,24,-198,41,2,42,60,-3,61,1,24,-194,41,1,42,-4,0,1,40,-63,41,1,23,-9,61,3,24,41,23,-3,61,
           1,24,-4,41,1,23,-31,61,1,24,-49,41,1,23,-27,61,1,62,-4,0,2,60,24,-61,41,2,23,62,-9,0,3,60,61,62,-3,0,

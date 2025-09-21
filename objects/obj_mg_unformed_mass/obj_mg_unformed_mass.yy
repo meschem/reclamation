@@ -8,8 +8,8 @@
   "name":"obj_mg_unformed_mass",
   "overriddenProperties":[],
   "parent":{
-    "name":"mergers",
-    "path":"folders/Objects/equipment/mergers.yy",
+    "name":"common",
+    "path":"folders/Objects/equipment/mergers/common.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

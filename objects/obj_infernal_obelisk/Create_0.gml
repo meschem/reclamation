@@ -10,6 +10,8 @@ eventLength = stf(30)
 targetKillCount = 100
 spawnSize = 12
 
+mapIcon = spr_poi_obelisk
+
 spriteMiddle = spr_infernal_obelisk_middle
 spriteTop = spr_infernal_obelisk_top
 
