@@ -4,7 +4,7 @@
 
 function create_select_trinket_button(_trinket, _menu = noone) {
 	with (_trinket) {
-		var _button = instance_create_depth(0, 0, depths.ui, obj_card_trinket_selection)
+		var _button = instance_create_depth(0, 0, depths.ui, obj_card_merger_selection)
 
 		_button.titleText.body = name
 		_button.bodyText.body = description

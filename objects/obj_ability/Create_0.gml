@@ -22,6 +22,7 @@ curCharges = 1
 maxCharges = 1
 owner = obj_player.id
 ultimate = false
+hotkeySet = false
 
 age = 0
 
@@ -39,6 +40,7 @@ activationCdMax = 0
 treeLevel = 2
 hotkey = -1
 controllerIcon = spr_btn_xbox_y
+kbIcon = spr_btn_kb_shift
 
 selectionIcon = spr_abil_select_icon_unset
 
@@ -48,6 +50,8 @@ drawGui = true
 runes = []
 
 tags = []
+
+charStatBonuses = []
 
 resetCooldown = function () {
 	var cdModifier = max(maxCd * baseCdModifier, 0.25)
@@ -75,6 +79,14 @@ canActivate = function() {
 		return false
 	}
 	
+	if (!activateCustomCheck()) {
+		return false
+	}
+	
+	return true
+}
+
+activateCustomCheck = function() {
 	return true
 }
 
@@ -93,6 +105,15 @@ activate = function() {
 	}
 	
 	use()
+	
+	var _ability = id
+	var _owner = owner
+	
+	with (obj_equipment) {
+		if (equipped && owner == _owner) {
+			onAbilityUse(_ability)
+		}
+	}
 }
 
 
@@ -111,9 +132,11 @@ use = function() {
 }
 
 applyStats = function () {
-	//for (var i = 0; i < array_length(stats); i++) {
-	//	variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
-	//}
+	for (var i = 0; i < array_length(stats); i++) {
+		
+			variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
+		
+	}
 }
 
 levelUp = function () {
@@ -123,6 +146,12 @@ levelUp = function () {
 	
 	if (level == 1) {
 		array_push(owner.abilities, id)
+		
+		if (ultimate) {
+			
+			owner.ultimateAbility = id
+			kbIcon = spr_btn_kb_t
+		}
 		
 		treeLevel = array_length(owner.abilities)
 	}
@@ -150,6 +179,8 @@ levelUp = function () {
 			obj_ui_controller.drawUltimateBar = true
 		}
 	}
+	
+	//applyStats()
 	
 	onLevel()
 }

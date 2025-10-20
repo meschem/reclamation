@@ -8,12 +8,6 @@ function process_player_stats_char(){
 
 	with (obj_player) {
 		var player = id
-				
-		//with (backpack) {
-		//	for (i = 0; i < slots; i++) {
-		//		if (slots
-		//	}
-		//}
 		// Process Trinkets
 		
 		/** Does not process Trinkets atm  **/
@@ -41,14 +35,6 @@ function process_player_stats_char(){
 			}
 		}
 		
-		//with (obj_merger_item) {
-		//	if (owner == player && equipped) {
-		//		rollingStr += bonusStr
-		//		rollingDex += bonusDex
-		//		rollingInt += bonusInt
-		//	}
-		//}
-		
 		with (obj_weapon_upgrade) {
 			if (active) {
 				//rollingScalar += bonusDamageScalar
@@ -58,8 +44,6 @@ function process_player_stats_char(){
 		// Process Talents
 		
 		// Process Items
-		
-		//var addedHp = (baseMaxHp * rollingScalar + rollingStatic) - maxHp
 		
 		bonusStr = rollingStr
 		bonusDex = rollingDex

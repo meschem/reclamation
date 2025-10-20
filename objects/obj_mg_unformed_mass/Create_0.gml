@@ -7,6 +7,6 @@ event_inherited()
 name = "Unformed Mass"
 description = "Rife with potential"
 
-bonusStr = 2
+bonusAbilityDamage = 0.1
 
-addCharStatBlocks()
+//addCharStatBlocks()

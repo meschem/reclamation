@@ -9,6 +9,11 @@ if (hp <= 0) {
 	return 0
 }
 
+if (lifeSpan > 0 && age >= lifeSpan) {
+	instance_destroy()
+	return 0
+}
+
 depth = depths.enemy - y - heightOffset
 
 for (var i = 0; i < array_length(particleBurstPoints); i++) {

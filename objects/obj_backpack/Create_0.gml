@@ -6,8 +6,15 @@ persistent = true
 slots = []
 
 randomItems = [
-	obj_mg_ice_salt,
-	//obj_mg_aetherblight
+	//obj_mg_venomleaf,
+	//obj_mg_black_ichor
+	//obj_mg_opaque_hourglass
+	//obj_mg_goldleaf
+	//obj_mg_golden_puzzlebox,
+	//obj_mg_frost_walkers,
+	//obj_mg_fire_salt,
+	//obj_mg_cinder_stone,
+	obj_mg_crown_of_destruction
 ]
 
 inputsKeyboard = {
@@ -284,6 +291,7 @@ createDestroyPrompt = function() {
 ///@description				Destroys an item
 ///@param {real} _index		Index to destroy. Must be selected, unlike most other functions here.
 destroyItem = function(_index) {
+	//slots[_index].item.onUnequip()
 	instance_destroy(slots[_index].item)
 	slots[_index].item = noone
 	

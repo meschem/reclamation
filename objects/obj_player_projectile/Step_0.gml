@@ -59,8 +59,6 @@ impactSoundFrameSkip = false
 
 spawnPeriodicFx()
 
-
-
 calcVelocity()
 
 if (trail && age > 1) {
@@ -115,6 +113,11 @@ if (!seeking && acceleration != 0) {
 
 if (rotationSpeed != 0) {
 	instance_rotate(rotationSpeed, id)
+	
+	if (rotationSpeedDeaccel > 0) {
+		var _rotationSpeedAbs = max(abs(rotationSpeed) - rotationSpeedDeaccel, 0)
+		rotationSpeed = _rotationSpeedAbs * sign(rotationSpeed)
+	}
 }
 
 // Solid Collision
@@ -272,11 +275,12 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 		critHit: critHit,
 		scaledDamage: _damage
 	})
+
+	run_on_hit_player_projectile_effects(id, target, critHit, _damage)
 	
 	target.onDamaged()
 	
 	onHit(target)
-	
 	
 	// FIXME disconnected from script
 	if (applyShock > 0 && target.shockedLength < applyShock) {
@@ -299,10 +303,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	//	})
 	//}
 	
-	var killed = damage_baddie(target, _damage, critHit, critMultiplier)
+	//var killed = damage_baddie(target, _damage, critHit, critMultiplier)
+	var killed = damage_baddie_with_type(target, _damage, damageType, owner, critHit, critMultiplier)
 	
 	if (!killed && knockback > 0) {
-		//var pushAngle = point_direction(0, 0, xVel, yVel)
 		knockback_baddie(target, knockback, facingAngle)
 	}
 	

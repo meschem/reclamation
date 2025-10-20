@@ -14,6 +14,7 @@ function enhance_baddie(type, inst = id) {
 			
 			//add_loot(obj_rune_pickup, 1, inst)
 			
+			add_loot(obj_health_globe_sm, 1, inst)
 			add_loot(obj_merger_item_chest, 1, inst)
 		break
 		
@@ -33,6 +34,8 @@ function enhance_baddie(type, inst = id) {
 
 			inst.outlineColor = get_color(colors.red)
 			
+			add_loot(obj_health_globe_sm, 1, inst)
+			add_loot(obj_health_globe_sm, 1, inst)
 			add_loot(obj_ore, 1, inst)
 		break
 	}

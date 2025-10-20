@@ -24,6 +24,19 @@ enum enumTrailStyle {
 	line
 }
 
+///@description						Provides bonus functionality for abilities when stat reqs are met
+///@param {real} _stat				Stat to check. Uses enumCharStats
+///@param {real} _requiredAmount	Amount of stat required to activate
+///@param {string} _name			Name display to player
+///@param {string} _description		Description of what this bonus does
+function abilityStatBonus(_stat, _requiredAmount, _name, _description) constructor {
+	stat = _stat
+	active = false
+	amount = _requiredAmount
+	name = _name
+	description = _description
+}
+
 ///@description									A recipe combined to make a new item
 ///@param {asset.GMObject} _result				Resultant Item
 ///@param {string} _name						Name of result
@@ -54,7 +67,7 @@ function mergerItemTemplate(_name, _description, _object, _icon, _rarity = enumR
 	///@description						Creates the item for the player
 	///@param {id.Instance} _player		Player to create the object for
 	///@return {id.Instance}
-	create = function(_player) {
+	create = function(_player = noone) {
 		var _inst = create_instance(object)
 		
 		_inst.name = name
@@ -88,7 +101,7 @@ function mergerItemTemplate(_name, _description, _object, _icon, _rarity = enumR
 ///@param {struct.vec2} _endPos
 ///@param {real} _startWidth
 ///@param {real} _endWidth
-///@param {color} _color
+///@param {constant.Color} _color
 ///@param {real} _style
 function trailSegment(_startPos, _endPos, _startWidth = 0, _endWidth = 0, _color = c_yellow, _style = enumTrailStyle.line) constructor {
 	startPos = _startPos
@@ -100,6 +113,17 @@ function trailSegment(_startPos, _endPos, _startWidth = 0, _endWidth = 0, _color
 	
 	// Currently basic with lines
 	draw = function() {
+		//show_message([
+		//	point_distance(
+		//		startPos.x,
+		//		startPos.y,
+		//		endPos.x,
+		//		endPos.y,
+		//	),
+		//	startPos,
+		//	endPos,
+		//	startWidth
+		//])
 		draw_line_width_color(
 			startPos.x,
 			startPos.y,
@@ -132,7 +156,8 @@ function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) cons
 ///@param {struct} _customType		Must include displayName (string), unitEnum (statUnits)
 function itemStat(_stat, _values, _display = true, _customType = {}) constructor {
 	stat = _stat
-	values = _values
+	
+	values = (is_array(_values)) ? _values : [_values]
 	display = _display
 		
 	if (_stat != enumItemStats.custom) {
@@ -395,12 +420,15 @@ function keyMouseInput() constructor {
 	useWeaponSecondary = mb_right
 	
 	useAbility = [
-		ord("R"), // always active
+		vk_shift, // always active
 		ord("E"),
 		ord("L"),
 		ord("G"),
-		ord("T")  // always ault
+		//ord("T")  // always ault
 	]
+	
+	useDefensive = vk_shift
+	useUltimate = ord("T")
 }
 
 function gamepadInput() constructor {
@@ -411,6 +439,9 @@ function gamepadInput() constructor {
 		gp_shoulderlb,
 		gp_face2	   // always ult
 	]
+	
+	useDefensive = XBOX_INPUT_B
+	useUltimate = XBOX_INPUT_Y
 }
 
 ///@param {real} _top

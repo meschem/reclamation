@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"trail_setup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"trail_setup",
+  "parent":{
+    "name":"trails",
+    "path":"folders/Scripts/projectiles/trails.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

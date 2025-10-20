@@ -18,6 +18,9 @@ function create_item_stat_from_var(_var, _amount) {
 			
 		case "bonusAbilityCooldown":
 			return new itemStat(enumItemStats.bonusAbilityCooldown, _amount)
+			
+		case "bonusAbilityDamage":
+			return new itemStat(enumItemStats.bonusAbilityDamage, _amount)
 		
 		case "bonusArmor":
 			return new itemStat(enumItemStats.bonusArmor, _amount)

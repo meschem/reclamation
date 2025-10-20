@@ -1,4 +1,6 @@
 
+//show_message(damageBounceModifier)
+
 if (target == noone) {
 	var baddieList = ds_list_create()
 	var closestBaddie = noone
@@ -24,17 +26,25 @@ if (target == noone) {
 }
 
 if (target == noone) {
-	if (debug) {
-		create_toaster("No CL target found.")
+	if (canTargetOwner && owner != noone && instance_exists(owner)) {
+		var _distance = point_distance(x, y, owner.x, owner.y)
+		
+		if (_distance < maxJumpDistance) {
+			target = owner
+			hitList = []
+		}		
 	}
-		
-	return
-}
-	
-array_push(hitList, target)
+} else {	
+	array_push(hitList, target)
 
-damage_baddie(target, damage, false, 2, 0.5)
-		
+	//damage_baddie(target, damage, false, 2, 0.5)
+	damage_baddie_with_type(target, damage, enumDamageTypes.lightning, owner, false, 2, 0.5)
+}
+
+if (target == noone) {
+	return 0
+}
+
 create_chain_lightning_fx(spawnPoint, new vec2(target.x, target.y))
 
 audio_play_sound(
@@ -46,6 +56,8 @@ if (bounces > 0) {
 		
 	inst.bounces = bounces - 1
 	inst.damage = damage * damageBounceModifier
+	inst.damageBounceModifier = damageBounceModifier
 	inst.hitList = hitList
+	inst.canTargetOwner = canTargetOwner
+	inst.owner = owner
 }
-

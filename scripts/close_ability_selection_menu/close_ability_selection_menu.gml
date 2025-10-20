@@ -7,7 +7,5 @@ function close_ability_selection_menu() {
 		}
 		
 		instance_destroy()
-	}
-	
-	set_game_pause_state(false)
+	}	
 }

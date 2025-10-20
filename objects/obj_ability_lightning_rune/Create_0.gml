@@ -19,11 +19,13 @@ canAutoCast = true
 enabled = false
 treeLevel = 3
 
-radius = [48, 48, 64, 64, 64]
 damagePerTick = [15, 25, 25, 50, 50]
+explosionDamage = [30, 50, 50, 100, 200]
+radius = [48, 48, 64, 64, 64]
+
+
 tickRate = seconds_to_frames(0.33)
 duration = tickRate * 4
-explosionDamage = [30, 50, 50, 100, 200]
 
 stats = [
 	new abilityStat(
@@ -40,6 +42,26 @@ stats = [
 	)
 ]
 
+statBonusAttraction = new abilityStatBonus(
+	enumCharStats.dex, 10,
+	"Criticality",
+	"Deals critical damage to a random enemy in the area"
+)
+
+statBonusCriticality = new abilityStatBonus(
+	enumCharStats.str, 30,
+	"Criticality",
+	"Draws units into the area. Halves duration, but doubles attack rate."
+)
+
+statBonusFulmination = new abilityStatBonus(
+	enumCharStats.str, 20,
+	"Fulmination",
+	"Final blast applies Shock to enemies in the area"
+)
+
+charStatBonuses = [statBonusAttraction, statBonusCriticality, statBonusFulmination]
+
 addRune("Attraction", "Draws nearby enemies in. Halves duration but doubles attack speed.")
 addRune("Criticality", "Deals 3x critical damage to a random enemy in the area.")
 
@@ -54,7 +76,7 @@ use = function() {
 	_rune.explosionDamage = explosionDamage[level - 1]
 	_rune.owner = owner
 	
-	if (runes[enumRunes.magdela].enabled) {
+	if (statBonusAttraction.active) {
 		add_player_target(_rune)
 		
 		_rune.duration /= 2
@@ -63,8 +85,12 @@ use = function() {
 		_rune.playerTarget = true
 	}
 	
-	if (runes[enumRunes.voldan].enabled) {
+	if (statBonusCriticality.active) {
 		_rune.critChance = 1
 		_rune.maxCrits = 1
+	}
+	
+	if (statBonusFulmination.active) {
+		_rune.shockingFinale = true
 	}
 }

@@ -22,10 +22,12 @@ knockback = 1
 
 shadowSprite = spr_dagger_shadow
 
-trailColor = get_color(colors.orange)
-trailSpawnWidth = 3
-trailLength = 8
-trail = true
+//trailColor = get_color(colors.orange)
+//trailSpawnWidth = 3
+//trailLength = 8
+//trail = true
+
+create_ribbon(id)
 
 onBounce = function() {
 	damageDirect += bonusDamageOnBounce

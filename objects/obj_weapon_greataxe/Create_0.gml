@@ -9,7 +9,7 @@ iconIndex = 0
 
 spawnDistance = 32
 spawnObject = obj_greataxe_swipe
-maxCd = 72
+maxCd = 55
 
 multiProjSpawnDelay = 10
 
@@ -80,6 +80,8 @@ use = function(_attackAngle) {
 		_inst.facingAngle = owner.attackAngle
 		_inst.owner = owner
 		_inst.spawnDelay = multiProjSpawnDelay * i
+		
+		set_velocity_from_angle(_inst, owner.attackAngle, 3)
 		
 		if (reverseSwipe) {
 			_inst.reverseSwipe = true

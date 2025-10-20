@@ -38,6 +38,13 @@ drawStatBars = true
 drawCurseBar = true
 drawPlayerSkills = true
 
+healthPips = []
+healthCurrent = 0
+healthUpdateRate = 4
+healthUpdateCd = 0
+healthPerIcon = 10
+healthPlayer = noone
+
 // OTHER INFO IS DRAWN FROM obj_run_controller
 
 ///@description					Sets a ui profile type for visibility

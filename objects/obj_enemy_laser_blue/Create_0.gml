@@ -13,6 +13,8 @@ shadowSprite = spr_none
 
 state = laserStates.tell
 
+indestructible = true
+
 laserSpriteGrowing = spr_laser_beam_growing
 laserSpriteFull = spr_laser_beam
 laserSpriteTell = spr_laser_beam_tell

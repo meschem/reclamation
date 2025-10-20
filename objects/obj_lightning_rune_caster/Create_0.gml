@@ -9,10 +9,19 @@ damagePerTick = 1
 ticks = 4
 tickCd = 0
 tickRate = seconds_to_frames(0.33)
+critChance = 0
+critMultiplier = 2
+maxCrits = 0
+
 explosionDamage = 1
 explosionRadius = 72
+
 owner = noone
 playerTarget = false
-critChance = 0
-maxCrits = 0
+
 active = false
+
+shockingFinale = false
+
+collisionList = ds_list_create()
+targets = [obj_baddie, obj_destructible]

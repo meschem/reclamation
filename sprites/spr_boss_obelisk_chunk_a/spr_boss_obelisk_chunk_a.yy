@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"doodads",
-    "path":"folders/Sprites/particles/doodads.yy",
+    "name":"doodad_chunks",
+    "path":"folders/Sprites/fx/doodad_chunks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -8,7 +8,6 @@ if (enabled) {
 	draw_set_font(font_pxlxxl_m)
 
 	var yOffset = 25
-
 	
 	if (active) {
 		// Draw Cooldown or Hotkey		
@@ -30,11 +29,12 @@ if (enabled) {
 			draw_text(iconX + 5, iconY + yOffset, drawString)
 		} else {
 			if (owner.inputFocus == enumInputTypes.keyboardMouse) {
-				draw_set_color(c_black)
-				draw_text(iconX + 9, iconY + yOffset + 1, hotkey)
+				//draw_set_color(c_black)
+				//draw_text(iconX + 9, iconY + yOffset + 1, hotkey)
 				
-				draw_set_color(c_white)
-				draw_text(iconX + 8, iconY + yOffset, hotkey)
+				//draw_set_color(c_white)
+				//draw_text(iconX + 8, iconY + yOffset, hotkey)
+				draw_sprite(kbIcon, 0, iconX + 10, iconY + yOffset + 4) 
 			} else {
 				draw_sprite(controllerIcon, 0, iconX + 14, iconY + yOffset + 2) 
 			}			

@@ -14,7 +14,7 @@ moveSpeedMax = baddie_move_speed_fast
 shadowSprite = spr_shadow_lg
 shadowOffset = -4
 
-add_loot_gold(2, 4, 0.75)
+add_loot_gold(2, 4, 0.35)
 
 deathParticles = [
 	obj_ptb_glob_grn_md,

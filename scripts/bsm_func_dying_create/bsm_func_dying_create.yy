@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bsm_func_dying_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bsm_func_dying_create",
+  "parent":{
+    "name":"bsm",
+    "path":"folders/Scripts/bsm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

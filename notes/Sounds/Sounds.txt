@@ -20,3 +20,6 @@ https://freesound.org/people/plasterbrain/sounds/464902/
 bush-cut
 https://freesound.org/people/egomassive/sounds/536767/
 https://freesound.org/people/Kreastricon62/sounds/327894/
+
+ice-hit, destroy
+https://freesound.org/people/tim.kahn/sounds/28658/

@@ -5,8 +5,8 @@
 event_inherited()
 
 name = "War Bracer"
-description = ""
+description = "Strong bracer"
 
 bonusStr = 2
 
-addCharStatBlocks()
+//addCharStatBlocks()

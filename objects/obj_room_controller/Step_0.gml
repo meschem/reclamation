@@ -5,6 +5,10 @@ if (keyboard_check_pressed(vk_f5) || keyboard_check_pressed(vk_escape) || gamepa
 	}
 }
 
+if (hitStun > 0) {
+	hitStun--
+}
+
 if (game_is_paused()) {
 	return 0
 }

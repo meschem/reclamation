@@ -8,10 +8,36 @@ name = "Pinion of War"
 description = "A feather brimming with power, touched by the burning heavens above."
 
 rarity = enumRarity.legendary
-bonusInt = 20
-bonusStr = 10
-bonusMoveSpeed = 0.2
+bonusAbilityCooldown = 0.2
+bonusInt = 10
 
-addCharStatBlocks()
+statsSpecial = [
+	"+1 Charges to Active Ability",
+	"Casts a random Passive Ability on Active Ability use"
+]
 
-array_push(stats, new itemStat(enumItemStats.bonusMoveSpeed, [bonusMoveSpeed]))
+onEquip = function() {
+	if (owner.activeAbility != noone) {
+		owner.activeAbility.maxCharges++
+	}
+}
+
+onUnequip = function() {
+	if (owner.activeAbility != noone) {
+		owner.activeAbility.maxCharges--
+	}
+}
+
+onAbilityUse = function(_ability) {
+	if (owner.activeAbility == noone) {
+		return 0
+	}
+	
+	var _abils = array_shuffle(owner.abilities)
+	
+	for (var i = 0; i < array_length(_abils); i++) {
+		if (_abils[i].autoCast) {
+			_abils[i].use()
+		}
+	}
+}

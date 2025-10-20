@@ -1,3 +1,4 @@
+///@description	Init
 xVel = 0
 yVel = 0
 
@@ -10,6 +11,11 @@ distanceToTarget = 0
 angleToTarget = 0
 
 floatOffset = 0
+
+flashBlendDuration = 0		// fades from white to base color over X frames, 0 is no blend
+flashBlendRatio = 1
+
+spawning = false			// used for lob or other instances handling a delayed spawn
 
 /// FIXME: MULTIPLAYER
 
@@ -38,4 +44,14 @@ beginStep = function() {}
 ///@param {id.Instance}	_player		Player picking up the item
 onPickup = function(_player) {
 
+}
+
+///@description						Spawns the instance at the location
+///@param {real} _x
+///@param {real} _y
+spawn = function(_x, _y) {
+	image_alpha = true
+	spawning = false
+	x = _x
+	y = _y
 }

@@ -120,10 +120,6 @@ if (keyboard_check_pressed(ord("K"))) {
 	kill_all_baddies_in_room()
 }
 
-//if (keyboard_check_pressed(ord("O"))) {
-//	toggle_ability_autocast()
-//}
-
 if (mouse_check_button_pressed(mb_middle)) {
 	//var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
 	with (obj_player) {

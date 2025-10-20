@@ -48,6 +48,8 @@ if (!killedByBounds) {
 		/// FIXME: Hack
 		obj_player.xp += xp
 		obj_player.addUltimateCharge(ultimateCharge)
+		
+		run_on_baddie_death_effects(id)
 	
 		check_for_level_up()
 	

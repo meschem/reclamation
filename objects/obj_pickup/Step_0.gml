@@ -1,6 +1,10 @@
 if (game_is_paused())
 	return 0
 
+if (spawning) {
+	return 0
+}
+
 age++
 
 if (target == noone ) {
@@ -9,6 +13,22 @@ if (target == noone ) {
 
 if (floats) {
 	set_float_range()
+}
+
+if (flashBlendDuration > 0) {
+	flashBlendRatio = max(0, 1 - (age / flashBlendDuration))
+}
+
+if (flashBlendRatio > 0.25 && flashBlendRatio < 1) {
+		if (age % 2 == 0) {
+		var _angle = random(360)
+		var _mag = random_range(0.4, 1.8)
+		var _inst = instance_create_depth(x, y, depth + 10, obj_particle_single_cycle)
+		_inst.sprite_index = random(1) < 0.3 ? spr_particle_line_ray_2px_w : spr_particle_line_ray_w
+		_inst.image_angle = _angle
+		_inst.xVel = angle_xvel(_angle) * _mag
+		_inst.yVel = angle_yvel(_angle) * _mag
+	}
 }
 
 if (!active) {

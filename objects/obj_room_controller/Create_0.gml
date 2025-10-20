@@ -41,13 +41,14 @@ state = roomStates.init
 
 age = 0
 
-isPaused = false
+
 pauseDelay = 0
 timeDisplay = "0:00"
 timerActive = true
 showTimeDisplay = true
 singleRoomCombatComplete = false
 allowBaddieWrap = true
+
 
 spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
 
@@ -82,6 +83,24 @@ cameraOffset = new vec2()
 	//	nextLevel = obj_dungeon.floors[obj_run_controller.currentFloor + 1].rooms[0].roomId
 	//}
 //}
+
+
+pause = false
+hitStun = 0
+
+isPaused = function() {
+	if (hitStun > 0) {
+		return true
+	}
+	
+	return pause
+}
+
+createHitStun = function(_amount) {
+	if (!pause && hitStun < _amount) {
+		hitStun = _amount	
+	}
+}
 
 initStats = function() {
 	state = roomStates.statsMenu

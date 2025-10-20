@@ -2,10 +2,6 @@
 event_inherited()
 
 name = "Leather Doublet"
-description = "Protection against glancing blows, but little more."
+description = "Protection against glancing blows."
 
-bonusRecoveryTime = 0.2
-
-stats = [
-	new itemStat(enumItemStats.bonusHealth, [bonusHealth])
-]
+bonusHealth = 10

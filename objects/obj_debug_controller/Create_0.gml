@@ -21,5 +21,5 @@ bgAlpha = 1
 textBlobs = []
 
 objectChecks = [
-	obj_spawner
+	obj_dmg_numbers
 ]

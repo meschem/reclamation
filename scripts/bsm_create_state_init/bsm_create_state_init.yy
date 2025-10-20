@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"bsm_create_state_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bsm_create_state_init",
+  "parent":{
+    "name":"bsm",
+    "path":"folders/Scripts/bsm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

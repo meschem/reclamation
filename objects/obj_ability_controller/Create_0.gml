@@ -15,6 +15,7 @@ allAbilities = [
 ]
 
 availableAbilities = []
+availableUltimateAbilities = []
 //sprite_index = icon
 
 //x = 1

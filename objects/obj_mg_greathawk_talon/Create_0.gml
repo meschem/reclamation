@@ -6,4 +6,4 @@ description = "Formed to match the prowess of fierce birds of war."
 
 bonusDex = 6
 
-addCharStatBlocks()
+//addCharStatBlocks()

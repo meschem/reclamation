@@ -3,6 +3,10 @@
 /// @param {real} lengthSeconds		Length in seconds
 
 function stun_baddie(baddie, lengthSeconds) {
+	if (baddie.targetType != targetTypes.baddie) {
+		return 0
+	}
+	
 	var stunFrames = lengthSeconds * fps
 
 	with (baddie) {

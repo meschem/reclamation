@@ -52,6 +52,8 @@ if (knockbackSlowDuration > 0) {
 		
 		frameAccel = moveAccel * appliedRatio
 	}
+} else if (slowLength > 0) {
+	frameMoveSpeedMax = moveSpeedMax * slowMoveScalar
 } else {
 	frameMoveSpeedMax = moveSpeedMax
 	frameAccel = moveAccel
@@ -131,7 +133,7 @@ if (shockedLength > 0) {
 }
 
 if (poisonLength > 0) {
-	image_blend = get_color(colors.light_green)
+	
 	
 	if (poisonInflictor == noone) {
 		poisonInflictor = get_first_player()
@@ -146,6 +148,14 @@ if (poisonLength > 0) {
 	}
 	
 	poisonLength--
+} else {
+	
+}
+
+if (poisonLength > 0) {
+	image_blend = get_color(colors.light_green)
+} else if (slowLength > 0) {
+	image_blend = get_color(colors.blue)
 } else {
 	image_blend = c_white
 }
@@ -170,6 +180,15 @@ if (phases) {
 //	hitWall = fly_to_location(appliedVel.x, appliedVel.y)
 } else {
 	hitWall = entity_walk_to_location(appliedVel.x, appliedVel.y)
+}
+
+if (damageDoodads > 0 && age % 3 == 0) {
+	var _doodad = instance_place(x + xVel, y + xVel, obj_destructible)
+	
+	if (_doodad != noone) {
+		_doodad.hp -= damageDoodads
+		_doodad.onDamaged()
+	}	
 }
 
 if (age % 2 == 0) {

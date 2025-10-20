@@ -46,6 +46,7 @@ enum enumPlayerStats {
 	critDamageMultiplier,
 	areaOfEffectScalar,
 	abilityCooldownScalar,
+	abilityDamageScalar,
 	attackSpeedScalar,
 	knockbackScalar,
 	bonusProjectileCount,
@@ -54,6 +55,7 @@ enum enumPlayerStats {
 	pickupRewardScalar,
 	weaponAoeScalar,
 	weaponKnockbackScalar,
+	magicFind,
 }
 
 reticleIndex = 0
@@ -74,12 +76,13 @@ baseMaxArmor = 0
 baseCritChance = 0.1
 baseCritMultiplier = 1.5
 baseAreaOfEffectScalar = 1
-baseAbilityCooldownScalar = 1
+baseAbilityDamageScalar = 1
 baseAttackSpeedScalar = 1
 baseKnockbackMultiplier = 1
 basePoisonDamage = 15
 baseRecoveryTime = 1.5
 baseBurningStacks = 0
+baseMagicFind = 0
 
 bonusProjectileCount = 0
 bonusDamageScalar = 1
@@ -91,6 +94,8 @@ bonusPoisonDamage = 0
 bonusMagicFind = 0
 bonusRecoveryTime = 0
 bonusBurningStacks = 0
+bonusAbilityCooldownScalar = 0
+bonusAbilityDamageScalar = 0
 
 totalGold = 0
 gold = 0
@@ -102,7 +107,7 @@ critChance = baseCritChance
 critMultiplier = 1.5
 //projectileBonus = baseAbilityProjectileBonus
 areaOfEffectScalar = baseAreaOfEffectScalar
-abilityCooldownScalar = baseAbilityCooldownScalar
+abilityCooldownScalar = 1		// this is a "% faster" scalar
 attackSpeedScalar = baseAttackSpeedScalar
 
 autoAttack = false
@@ -158,7 +163,8 @@ hitWall = false
 razorCd = 240
 razorMaxCd = 480
 
-activeAbility = obj_none // default active ability to load for first slot
+activeAbility = noone // default active ability to load for first slot
+ultimateAbility = noone // ultimate ability
 
 activeAbilities = [
 	noone,

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited()
 
-mapIcon = spr_poi_obelisk
+mapIcon = spr_poi_obelisk_red
 
 eventName = "Swarm Gate"
 eventDescription = "Defeat the swarm!"

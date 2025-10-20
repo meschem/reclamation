@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_pickup_with_lob",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_pickup_with_lob",
+  "parent":{
+    "name":"pickups",
+    "path":"folders/Scripts/pickups.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

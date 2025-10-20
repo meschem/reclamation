@@ -1,6 +1,6 @@
 event_inherited()
 
-pickupValue = 10
+pickupValue = 500
 
 lifeSpan = -1
 
@@ -10,15 +10,6 @@ shadowOffset = 6
 init_floating(2, 90)
 
 onPickup = function(_player) {
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
-	obj_player.xp += baddie_xp_elite
+	obj_player.xp += pickupValue
 	check_for_level_up()
 }

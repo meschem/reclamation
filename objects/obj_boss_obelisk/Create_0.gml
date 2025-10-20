@@ -4,6 +4,9 @@ event_inherited()
 
 boss = obj_naga_boss
 
+mapIcon = spr_poi_obelisk
+add_map_poi()
+
 deathParticleSpawnRange = new vec2(20, 30)
 
 deathParticles = [

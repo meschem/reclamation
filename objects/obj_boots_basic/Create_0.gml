@@ -12,5 +12,3 @@ maxLevel = 2
 name = "Leather Boots"
 description = "Comfy and stylish."
 cost = 200
-
-addRandomStats()

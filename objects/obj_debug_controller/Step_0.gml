@@ -9,8 +9,6 @@ if (keyboard_check_pressed(vk_f11)) {
 	}
 }
 
-
-
 if (state != debugControllerStates.hidden) {
 	// Active Debugging Stuff	
 	var _txt = []

@@ -46,7 +46,7 @@ wrapAroundBehavior = wrapAroundBehaviors.none
 
 bossScale = 1
 
-hpMax = 1500
+hpMax = 2500
 hp = hpMax
 
 accel = baddie_move_accel_med
@@ -265,5 +265,5 @@ stateDying = function() {
 		hp = 0
 	}
 	
-	lichState = lichBossStates.dying
+	hydraState = hydraLordStates.dying
 }

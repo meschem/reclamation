@@ -31,6 +31,15 @@ impactSounds = [
 	snd_punch_1, snd_punch_2, snd_punch_3
 ]
 
+hitStun = false
+
+onHit = function(_target) {
+	if (!hitStun) {
+		hitStun = true
+		create_hit_stun(2)
+	}
+}
+
 ///@description						Marks enemies for crit
 ///@param {id.DsList} enemyList
 preDamage = function(enemyList) {
@@ -52,11 +61,11 @@ preDamage = function(enemyList) {
 
 onDeathFx = function() {
 	if (hitCount > 0) {
-		owner.addUltimateCharge(5)
+		owner.addUltimateCharge(50)
 	}
 }
 
-///@param {id.Instance} target		Target being hit
+///@param {id.Instance} _target		Target being hit
 onCollideFx = function(_target)
 {
 	if (global.createParticleFx) {

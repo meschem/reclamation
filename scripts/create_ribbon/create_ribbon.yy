@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_ribbon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_ribbon",
+  "parent":{
+    "name":"fx",
+    "path":"folders/Scripts/fx.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

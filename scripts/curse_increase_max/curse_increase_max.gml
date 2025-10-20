@@ -6,5 +6,7 @@ function curse_increase_max(_minutes){
 		curseAgeMax = min(curseAgeMax, curseAgeFinal)
 	}
 	
-	obj_curse_bar.updateMax()
+	with (obj_curse_bar) {
+		updateMax()
+	}
 }

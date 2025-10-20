@@ -3,6 +3,7 @@ function process_player_stats() {
 	process_player_stats_move_speed()
 	process_player_stats_max_health()
 	process_player_stats_ability_cd()
+	process_player_stats_ability_dmg()
 	process_player_stats_attack_speed()
 	process_player_stats_projectile_count()
 	//process_player_stats_crit_chance()
@@ -12,4 +13,5 @@ function process_player_stats() {
 	process_player_stats_crit_multiplier()
 	process_player_stats_misc()
 	process_player_stats_char()
+	process_ability_char_stat_bonuses()
 }

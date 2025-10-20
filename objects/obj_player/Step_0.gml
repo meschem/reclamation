@@ -97,17 +97,10 @@ player_collision()
 
 depth = depths.player - y
 
-//if (inputFocus == enumInputTypes.controller) {
-//	window_set_cursor(spr_none)
-//	cursor_sprite = spr_none
-//} else {
-//	//window_set_cursor(spr_cursor_aiming)
-//	cursor_sprite = spr_cursor_aiming
-//}
-
 uiDrawOffset = get_ui_pos(id)
 
 if (hp <= 0) {
+	
 	set_game_pause_state(true)
 	player_death()
 }

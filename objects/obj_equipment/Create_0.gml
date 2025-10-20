@@ -77,9 +77,14 @@ bonusPickupReward = 0
 bonusWeaponAoe = 0
 bonusCritMultiplier = 0
 bonusRecoveryTime = 0
+bonusAbilityDamage = 0
+bonusPoisonDamage = 0
 
 stats = []
 statsSpecial = []
+statsDisplay = []
+
+statsProcessed = false
 
 rawStatDisplay = []
 
@@ -231,3 +236,16 @@ getRarityString = function() {
 onDestroy = function() {
 	
 }
+
+onAbilityUse = function(_ability) {
+
+}
+
+onPickup = function(_pickup) {
+
+}
+
+///Uses _data struct for projectile, target, damage, critHit
+onWeaponHit = function(_data) {}
+onAbilityHit = function(_data) {}
+onBaddieDeath = function(_data) {}

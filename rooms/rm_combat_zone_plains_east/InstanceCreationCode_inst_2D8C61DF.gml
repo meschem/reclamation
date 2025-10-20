@@ -1,0 +1,1 @@
+boss = obj_skeleton_champion_boss

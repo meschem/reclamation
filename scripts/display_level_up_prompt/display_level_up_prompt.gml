@@ -22,9 +22,17 @@ function display_level_up_prompt(_player = noone) {
 					create_toaster("No abilities found for level up", errorLevels.error)
 				}
 			break
+			
+			case levelUpRewards.ultimateSelect:
+				display_level_abil_select_ultimate(_player)
+			break
 				
 			case levelUpRewards.trinket:
 				display_level_trinket_prompt(_player)
+			break
+			
+			case levelUpRewards.merger:
+				display_level_merger_prompt(_player)
 			break
 				
 			case levelUpRewards.rune:

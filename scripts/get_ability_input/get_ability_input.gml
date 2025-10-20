@@ -5,7 +5,7 @@ function get_ability_input() {
 	var controller	
 	var validated = false
 	var canUse
-	var maxHotkeys = 5
+	var maxHotkeys = 4
 	
 	for (var i = 0; i < maxHotkeys; i++) {
 		if (
@@ -21,6 +21,27 @@ function get_ability_input() {
 					activeAbilities[i].activate()
 				}
 			}			
+		}
+	}
+	
+	if (
+		keyboard_check_pressed(kmInput.useDefensive) ||
+		gamepad_button_check_pressed(controllerIndex, controllerInput.useDefensive)
+	) {
+		if (activeAbility.canActivate()) {
+			activeAbility.activate()
+		}
+	}
+	
+			
+	if (
+		instance_exists(ultimateAbility) && (
+			keyboard_check_pressed(kmInput.useUltimate) ||
+			gamepad_button_check_pressed(controllerIndex, controllerInput.useUltimate)
+		)
+	) {
+		if (ultimateAbility.canActivate()) {
+			ultimateAbility.activate()
 		}	
 	}
 		

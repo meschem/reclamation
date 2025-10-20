@@ -31,6 +31,16 @@ enum projSolidCollisionBehaviors {
 	bounce
 }
 
+enum enumDamageTypes {
+	normal,
+	piercing,
+	heavy,
+	fire,
+	cold,
+	lightning,
+	poison
+}
+
 projectileType = projectileTypes.unset
 
 angleSpriteToVelocity = false
@@ -61,12 +71,14 @@ yAccel = 0
 acceleration = 0
 
 rotationSpeed = 0 // rotation per frame
+rotationSpeedDeaccel = 0
 
 knockback = 0
 
 checkOnStrikeAbilities = false
 
 damageDirect = 1
+damageType = enumDamageTypes.normal
 targetsMax = 1
 targetsHit = 0
 pierceChance = 0

@@ -2,10 +2,10 @@
 
 function process_player_stats_damage_scalar() {
 	var i, trinketLevel
-	var rollingScalar = 1
-
+	
 	with (obj_player) {
 		var player = id
+		var rollingScalar = 1
 				
 		// Process Trinkets
 		for (i = 0; i < array_length(trinkets); i++) {

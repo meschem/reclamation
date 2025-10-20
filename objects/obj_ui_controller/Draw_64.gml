@@ -66,41 +66,41 @@ if (drawStatBars) {
 	)
 
 	// Draw Health Pips
-	var maxPips = ceil(obj_player.maxHp / playerHealthPerPip)
-	var fillPips = floor(obj_player.hp / playerHealthPerPip)
-	var sprWidth = sprite_get_width(spr_health_pip) - 2
-	var healthBarX = 2
-	var healthBarY = 18
+	//var maxPips = ceil(obj_player.maxHp / playerHealthPerPip)
+	//var fillPips = floor(obj_player.hp / playerHealthPerPip)
+	//var sprWidth = sprite_get_width(spr_health_pip) - 2
+	//var healthBarX = 2
+	//var healthBarY = 18
 
-	for (var i = 0; i < maxPips; i++) {
-		var yOffset = (i % 2 = 0) ? 0 : 3
+	//for (var i = 0; i < maxPips; i++) {
+	//	var yOffset = (i % 2 = 0) ? 0 : 3
 
-		draw_sprite(
-			spr_health_pip_outline, 0,
-			healthBarX + (i * sprWidth), 
-			healthBarY + yOffset
-		)
-	}
+	//	draw_sprite(
+	//		spr_health_pip_outline, 0,
+	//		healthBarX + (i * sprWidth), 
+	//		healthBarY + yOffset
+	//	)
+	//}
 
-	for (var i = 0; i < maxPips; i++) {
-		var yOffset = (i % 2 = 0) ? 0 : 3
-		var pipFrame = (i < fillPips) ? 0 : 1
+	//for (var i = 0; i < maxPips; i++) {
+	//	var yOffset = (i % 2 = 0) ? 0 : 3
+	//	var pipFrame = (i < fillPips) ? 0 : 1
 	
-		draw_sprite(
-			spr_health_pip, pipFrame,
-			healthBarX + (i * sprWidth), 
-			healthBarY + yOffset
-		)
-	}
+	//	draw_sprite(
+	//		spr_health_pip, pipFrame,
+	//		healthBarX + (i * sprWidth), 
+	//		healthBarY + yOffset
+	//	)
+	//}
 
 	draw_set_font(font_dogica_s)
 
 	// Draw Gold
-	draw_text(
-		camera_get_view_width(view_camera[0]) - 80,
-		2,
-		"Gold: " + string(obj_player.gold)
-	)
+	//draw_text(
+	//	camera_get_view_width(view_camera[0]) - 80,
+	//	2,
+	//	"Gold: " + string(obj_player.gold)
+	//)
 	
 	draw_text(
 		camera_get_view_width(view_camera[0]) - 80,

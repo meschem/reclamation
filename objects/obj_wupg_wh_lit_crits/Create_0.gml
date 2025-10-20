@@ -2,7 +2,7 @@
 event_inherited()
 
 name = "Lit Crit"
-description = "Sent out a bolt of chain lightning on critical hits"
+description = "Sends out a bolt of chain lightning on critical hits"
 
 damage = 20
 bounces = 5

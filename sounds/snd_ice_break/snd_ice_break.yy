@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_ice_break",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.1257143,
+  "name":"snd_ice_break",
+  "parent":{
+    "name":"environment",
+    "path":"folders/Sounds/environment.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_ice_break.wav",
+  "type":0,
+  "volume":1.0,
+}

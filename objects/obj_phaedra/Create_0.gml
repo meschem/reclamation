@@ -33,6 +33,18 @@ availableWeapons = [
 	obj_weapon_chakram
 ]
 
+availableAbilities = [
+	obj_ability_assassinate,
+	obj_ability_poison_wave,
+	obj_ability_spirit_wolf,
+	obj_ability_toxic_swarm,
+	obj_ability_bear_trap
+]
+
+availableUltimateAbilities = [
+	obj_ability_dragonfang_shot,
+]
+
 defaultWeapon = obj_weapon_chakram
 
 init_floating(2, stf(2))

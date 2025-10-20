@@ -7,9 +7,9 @@ function get_recipe_list() {
 			"Ebony Pendant",
 			spr_icon_aegis_pendant,
 			[
-				obj_mg_unformed_mass,
-				obj_mg_unformed_mass,
-				obj_mg_opaque_hourglass
+				obj_mg_imp_skull,
+				obj_mg_beast_blood,
+				obj_mg_war_bracer
 			]
 		),
 
@@ -28,9 +28,19 @@ function get_recipe_list() {
 			"Pinion of War",
 			spr_icon_pinion_of_war,
 			[
-				obj_mg_glass_feather,
-				obj_mg_glass_feather,
+				obj_mg_imp_skull,
+				obj_mg_opaque_hourglass,
 				obj_mg_glass_feather
+			]
+		),
+		
+		new recipe(
+			obj_mg_goldleaf,
+			"Goldleaf",
+			spr_icon_goldleaf,
+			[
+				obj_mg_venomleaf,
+				obj_mg_goldleaf
 			]
 		),
 	
@@ -74,25 +84,15 @@ function get_recipe_list() {
 			]
 		),
 
-		new recipe(
-			obj_mg_black_ichor,
-			"Black Ichor",
-			spr_icon_black_ichor_mg,
-			[
-				obj_mg_unformed_mass,
-				obj_mg_unformed_mass
-			]
-		),
-
-		new recipe(
-			obj_mg_timepiece,
-			"Timepiece",
-			spr_icon_timepiece,
-			[
-				obj_mg_opaque_hourglass,
-				obj_mg_opaque_hourglass
-			]
-		),
+		//new recipe(
+		//	obj_mg_timepiece,
+		//	"Timepiece",
+		//	spr_icon_timepiece,
+		//	[
+		//		obj_mg_opaque_hourglass,
+		//		obj_mg_opaque_hourglass
+		//	]
+		//),
 
 		new recipe(
 			obj_mg_iron_cuirass,
@@ -100,7 +100,7 @@ function get_recipe_list() {
 			spr_icon_iron_cuirass,
 			[
 				obj_mg_ironsilk,
-				obj_mg_ironsilk,
+				obj_mg_war_bracer,
 				obj_mg_leather_doublet
 			]
 		),
@@ -123,6 +123,17 @@ function get_recipe_list() {
 				obj_mg_ice_salt,
 				obj_mg_ice_salt,
 				obj_mg_simple_boots
+			]
+		),
+		
+		new recipe(
+			obj_mg_crown_of_destruction,
+			"Meizer's Crown",
+			spr_icon_crown_of_destruction,
+			[
+				obj_mg_evercandle,
+				obj_mg_evercandle,
+				obj_mg_ebony_pendant
 			]
 		)
 	]

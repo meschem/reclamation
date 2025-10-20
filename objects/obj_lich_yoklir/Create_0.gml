@@ -34,7 +34,7 @@ wrapAroundBehavior = wrapAroundBehaviors.none
 
 bossScale = 1
 
-hpMax = 1500
+hpMax = 2000
 hp = hpMax
 
 accel = baddie_move_accel_med

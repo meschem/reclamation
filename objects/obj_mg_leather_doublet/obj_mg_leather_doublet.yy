@@ -8,8 +8,8 @@
   "name":"obj_mg_leather_doublet",
   "overriddenProperties":[],
   "parent":{
-    "name":"common",
-    "path":"folders/Objects/equipment/mergers/common.yy",
+    "name":"uncommon",
+    "path":"folders/Objects/equipment/mergers/uncommon.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

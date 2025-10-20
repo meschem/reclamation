@@ -8,10 +8,16 @@ name = "Glass Feather"
 description = "Fused with magic that can be uniquely bound to glass."
 
 rarity = enumRarity.magic
-bonusInt = 5
-bonusStr = 3
-bonusMoveSpeed = 0.1
+statsSpecial = ["+1 Charges to Active Ability"]
 
-addCharStatBlocks()
+onEquip = function() {
+	if (owner.activeAbility != noone) {
+		owner.activeAbility.maxCharges++
+	}
+}
 
-array_push(stats, new itemStat(enumItemStats.bonusMoveSpeed, [bonusMoveSpeed]))
+onUnequip = function() {
+	if (owner.activeAbility != noone) {
+		owner.activeAbility.maxCharges--
+	}
+}

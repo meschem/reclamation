@@ -29,4 +29,12 @@ onDeath = function() {
 	} else {
 		audio_play_sound(snd_stone_crunch_02, 1, false, _vol)
 	}
+	
+	var _random = random(1)
+	
+	if (_random < 0.3) {
+		var _lob = create_pickup_with_lob(obj_health_globe_sm, x, y, get_color(colors.red))
+	} else if (_random < 0.6) {
+		var _lob = create_pickup_with_lob(obj_xp_globe_sm, x, y, get_color(colors.blue))
+	}
 }

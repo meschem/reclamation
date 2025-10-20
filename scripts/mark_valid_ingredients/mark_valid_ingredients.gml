@@ -11,6 +11,10 @@ function mark_valid_ingredients(_recipes, _items) {
 ///@param {array<Id.Instance>} _items		Items to check for marking
 function unmark_ingredients(_items) {
 	for (var i = 0; i < array_length(_items); i++) {
-		_items[i].inValidRecipe = false
+		try {
+			_items[i].inValidRecipe = false
+		} catch(err) {
+			create_toaster("valid check recipe failed", errorLevels.error)
+		}
 	}
 }

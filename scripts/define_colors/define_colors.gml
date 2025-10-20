@@ -13,4 +13,16 @@ function define_colors() {
 		color_dark_purple = make_color_rgb(88, 66, 177)
 		color_light_green = make_color_rgb(110, 255, 150)
 	}
+	
+	global.colorRed = make_color_rgb(230, 40, 106)
+	global.colorOrange = make_color_rgb(255, 137, 118)
+	global.colorBlue = make_color_rgb(32, 129, 204)
+	global.colorYellow = make_color_rgb(254, 237, 88)
+	global.colorGreen = make_color_rgb(85, 255, 129)
+	global.colorTeal = make_color_rgb(37, 190, 127)
+	global.colorPurple = make_color_rgb(159, 118, 255)
+	global.colorAqua = make_color_rgb(85, 213, 255)
+	global.colorDark = make_color_rgb(5, 0, 57)
+	global.colorDarkPurple = make_color_rgb(88, 66, 177)
+	global.colorLightGreen = make_color_rgb(110, 255, 150)
 }

@@ -6,7 +6,12 @@
 ///@return {bool}					Returns whether or not the target is killed
 
 function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force = 1) {
-	var attacker = obj_player // get_player_target()
+	var attacker = obj_player
+	
+	if (target == noone) {
+		create_toaster("No target found for damage_baddie()", errorLevels.warning)
+		return false
+	}
 	
 	amount *= attacker.bonusDamageScalar
 	

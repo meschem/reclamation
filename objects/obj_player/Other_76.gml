@@ -5,9 +5,9 @@ if event_data[? "event_type"] == "sprite event" // or you can check "sprite even
         case "activateWarStomp":
 			var ownerId = id
 			
-			with (obj_ability_war_stomp) {
+			with (obj_ability_war_stomp_active) {
 				if (ownerId == owner) {
-					activate_war_stomp(level)	
+					activate_war_stomp_active(level)	
 				}
 			}
         break

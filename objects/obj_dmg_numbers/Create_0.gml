@@ -2,7 +2,7 @@
 gravAccel = 0.08
 
 xVel = 0
-yVel = -1.4
+yVel = -1.7
 yVelSign = sign(yVel)
 
 age = 0
@@ -13,19 +13,21 @@ valueSet = false
 value = 0
 digits = []
 crit = false
+icon = spr_none
 sprite_index = spr_dmg_numbers
 
-///@description				Sets value, must be done to do this
-///@param {real} _amount	Amount to set value to
-setValue = function(_amount, _crit = false) {
+///@description						Sets value, must be done to do this
+///@param {real} _amount			Amount to set value to
+///@param {bool} _crit				If it is a crit or not
+///@param {constant.Color} _color	Color to apply
+///@param {asset.GMSprite} _icon	Icon to use
+setValue = function(_amount, _crit = false, _color = c_white, _icon = spr_none) {
 	valueSet = true
 	value = _amount
 	digits = convertDigits(_amount)
 	crit = _crit
-		
-	if (crit) {		
-		image_blend = get_color(colors.orange)
-	}
+	icon = _icon
+	image_blend = _color
 }
 
 /// @function get_digits(n)

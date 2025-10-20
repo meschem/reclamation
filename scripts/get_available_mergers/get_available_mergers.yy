@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_available_mergers",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_available_mergers",
+  "parent":{
+    "name":"trinkets",
+    "path":"folders/Scripts/trinkets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

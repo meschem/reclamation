@@ -7,6 +7,8 @@ function get_player_stat(_playerStat, _player = noone) {
 		_player = get_first_player()
 	}
 	
+	var _runningBonus = 0
+	
 	switch (_playerStat) {
 		case enumPlayerStats.maxHp:
 			return _player.maxHp
@@ -39,7 +41,12 @@ function get_player_stat(_playerStat, _player = noone) {
 	        return _player.bonusProjectileCount
 
 		case enumPlayerStats.damageScalar:
-	        return _player.damageScalar
+			with (obj_buff_stats) {
+				if (owner == _player) {
+					_runningBonus += bonusDamageScalar
+				}
+			}
+	        return _player.bonusDamageScalar + _runningBonus
 
 		case enumPlayerStats.pickupRangeScalar:
 	        return _player.pickupRangeScalar
@@ -52,10 +59,15 @@ function get_player_stat(_playerStat, _player = noone) {
 
 		case enumPlayerStats.weaponKnockbackScalar:
 	        return _player.weaponKnockbackScalar
+			
+		case enumPlayerStats.abilityDamageScalar:
+			return _player.baseAbilityDamageScalar + _player.bonusAbilityDamageScalar
+			
+		case enumPlayerStats.magicFind:
+			return _player.baseMagicFind + _player.bonusMagicFind
 		
 		default:
 			show_message("Invalid player stat requested")
 			return 1
-		break		
 	}
 }

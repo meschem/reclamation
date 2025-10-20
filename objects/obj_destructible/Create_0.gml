@@ -6,6 +6,7 @@ hpMax = hp
 lastHp = hp
 
 age = 0
+lifeSpan = -1
 damagedOn = -99
 
 heightOffset = 6

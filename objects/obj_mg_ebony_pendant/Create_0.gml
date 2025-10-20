@@ -4,17 +4,17 @@
 // Inherit the parent event
 event_inherited()
 
-name = "Ebony Pendant"
-description = "Emanates with a powerful, life-giving energy"
+name = "Power Amulet"
+description = "Emanates powerful energies"
 
-rarity = enumRarity.rare
+rarity = enumRarity.magic
 
-bonusInt = 3
-bonusStr = 6
-bonusHealth = 30
+bonusInt = 8
+bonusStr = 8
+bonusDex = 8
 
-stats = [
-	new itemStat(enumItemStats.bonusHealth, [bonusHealth])
-]
+//stats = [
+//	new itemStat(enumItemStats.bonusHealth, [bonusHealth])
+//]
 
-addCharStatBlocks()
+//addCharStatBlocks()

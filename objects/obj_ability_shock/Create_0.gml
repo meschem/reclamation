@@ -22,9 +22,11 @@ treeLevel = 2
 damage = [32, 48, 64, 96, 96]
 maxBounces = [4, 4, 8, 8, 12]
 maxDistance = 260
+damageBounceReduction = 0.9
+damageBounceReductionEnhanced = 1.1
 criticalDistance = 60
 
-baseMaxBounces = 3
+bonusBounces = 2
 
 stats = [
 	new abilityStat(
@@ -39,9 +41,29 @@ stats = [
 	)
 ]
 
-addRune("Bonus Bounce", "Adds extra bounce(s)")
-addRune("Extra Charges", "Adds extra max charge(s), reduces CD")
-addRune("Closed Loop", "No longer bounces, but hits the same target repeatedly")
+//addRune("Bonus Bounce", "Adds extra bounce(s)")
+//addRune("Extra Charges", "Adds extra max charge(s), reduces CD")
+//addRune("Closed Loop", "No longer bounces, but hits the same target repeatedly")
+
+statBonusBounces = new abilityStatBonus(
+	enumCharStats.int, 15,
+	"Extra Bounces",
+	"Bounces to additional targets"
+)
+
+statBonusResonance = new abilityStatBonus(
+	enumCharStats.int, 30,
+	"Voltaic Resonance",
+	"Deals increased damage per target instead of decreased damage."
+)
+
+statBonusClosedLoop = new abilityStatBonus(
+	enumCharStats.str, 30,
+	"Closed Loop",
+	"Allows the lightning to harmlessly bounce off the player if no enemy targets are nearby"
+)
+
+charStatBonuses = [statBonusBounces, statBonusResonance, statBonusClosedLoop]
 
 use = function() {
 	var _inst = instance_create_depth(owner.x, owner.y, depths.fx, obj_chain_lit_caster)
@@ -50,25 +72,22 @@ use = function() {
 	_inst.spawnTarget = owner
 	_inst.damage = damage[level - 1]
 	_inst.bounces = maxBounces[level - 1]
-}
-
-getMaxBounces = function() {
-	var _base = baseMaxBounces
+	_inst.canTargetOwner = statBonusClosedLoop.active
+	_inst.damageBounceModifier = statBonusResonance.active ? damageBounceReductionEnhanced : damageBounceReduction
 	
-	if (runes[enumRunes.magdela].enabled) {
-		_base += 2
-	}
-	
-	_base += owner.bonusProjectileCount
-	
-	return baseMaxBounces
-}
-
-///@description				When any rune is added, this function is run
-///@param {real} rune		Rune to apply from enumRunes
-applyRune = function(rune) {
-	if (rune == enumRunes.voldan) {
-		maxCharges = 4
-		maxCd = maxCd * 0.8
+	if (statBonusBounces.active) {
+		_inst.bounces += bonusBounces
 	}
 }
+
+//getMaxBounces = function() {
+//	var _base = baseMaxBounces
+	
+//	if (statBonusBounces.active) {
+//		_base += bonusBounces
+//	}
+	
+//	_base += owner.bonusProjectileCount
+	
+//	return baseMaxBounces
+//}

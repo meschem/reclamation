@@ -29,6 +29,18 @@ abilityTrees = [
 	create_instance(obj_abil_tree_ophelia_survival)
 ]
 
+availableAbilities = [
+	obj_ability_assassinate,
+	obj_ability_poison_wave,
+	obj_ability_spirit_wolf,
+	obj_ability_toxic_swarm,
+	obj_ability_bear_trap
+]
+
+availableUltimateAbilities = [
+	obj_ability_dragonfang_shot,
+]
+
 availableWeapons = [
 	obj_weapon_throwing_knives,
 	obj_weapon_hunting_bow

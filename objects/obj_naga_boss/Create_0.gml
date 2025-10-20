@@ -18,13 +18,14 @@ enum nagaBossStates {
 name = "Vileborne Naga"
 description = "Venomous Serpent Mother"
 
-moveSpeedMax = 0.35
+moveSpeedMax = 0.4
+chargeSpeedMax = 1.2
 weight = 25
 immovable = true
 
 bossScale = 1
 
-hpMax = 800
+hpMax = 1200
 hp = hpMax
 
 accel = baddie_move_accel_med
@@ -37,10 +38,14 @@ target = noone
 create_boss_health_bar(id)
 
 onDestroy = function() {
-	curse_increase_max(1)
-	
+	curse_increase_max(1)		
 	instance_create_depth(x, y, depths.enemy, obj_ore)
 }
+
+dyingDrops = [
+	obj_health_globe_sm,
+	obj_health_globe_sm
+]
 
 deathParticles = [
 	obj_ptb_serpent_chunk_grn,
@@ -157,7 +162,7 @@ stateChargeToLaser = new bsmState(
 		if (moveDistance > moveDistanceMax || bsm.stateAge >= stf(4)) {
 			bsm.state.transition(genericBossStates.attackTwo)
 		} else {
-			accelerate(accel, id, 0, moveSpeedMax * 3)
+			accelerate(accel, id, 0, chargeSpeedMax)
 		}	
 	}
 )
@@ -187,48 +192,61 @@ stateAttackTwo = new bsmState(
 	}
 )
 
-stateDying = new bsmState(
-	genericBossStates.dying,
-	function() {
-		xVel = 0
-		yVel = 0
-		moveBehavior = entityMoveBehaviors.none
-		isDying = true
-	},
-	function() {
-		if (bsm.stateAge % 14 == 0) {
-			var _boom = instance_create_depth(
-				x + irandom_range(-20, 20),
-				y + irandom_range(-20, 20),
-				depth - 100,
-				obj_particle_single_cycle
-			)
-			
-			_boom.sprite_index = explosionSprite
-		
-			audio_play_sound(snd_fireball_impact_short, 0, false)
-		
-			spawn_fx_bouncers(
-				array_random(deathParticles),
-				random(360),
-				random_range(0.6, 1.2)
-			)
-		}
-		
-		if (bsm.stateAge > 14 * 16 - 1) {
-			var _boom = instance_create_depth(x, y, depth - 110, obj_particle_single_cycle)
-			_boom.sprite_index = explosionSprite
-			_boom.image_xscale = 2
-			_boom.image_yscale = 2
-		
-			audio_play_sound(snd_fireball_impact_crunchy_echo, 0, false)
-			
-			instance_destroy()
-		}
-	}
-)
+//stateDying = new bsmState(
+//	genericBossStates.dying,
+//	bsm_func_dying_create(),
+//	bsm_func_dying_step()
+	//function() {
+	//	xVel = 0
+	//	yVel = 0
+	//	moveBehavior = entityMoveBehaviors.none
+	//	isDying = true
+	//	stateAgeMax = 14 * 16 - 1
+	//	dropCdMax = (14 * 16) / (array_length(dyingDrops) + 1)
+	//	dropCd = 0
+	//},
+	//function() {
+	//	dropCd++
 
-bsm = new bossStateMachine(id)
+	//	if (dropCd >= dropCdMax && array_length(dyingDrops) > 0) {
+	//		create_pickup_with_lob(dyingDrops[0], x, y, get_color(colors.red))
+	//		array_delete(dyingDrops, 0, 1)
+	//		dropCd = 0
+	//	}
+			
+	//	if (bsm.stateAge % 14 == 0) {
+	//		var _boom = instance_create_depth(
+	//			x + irandom_range(-20, 20),
+	//			y + irandom_range(-20, 20),
+	//			depth - 100,
+	//			obj_particle_single_cycle
+	//		)
+			
+	//		_boom.sprite_index = explosionSprite
+		
+	//		audio_play_sound(snd_fireball_impact_short, 0, false)
+		
+	//		spawn_fx_bouncers(
+	//			array_random(deathParticles),
+	//			random(360),
+	//			random_range(0.6, 1.2)
+	//		)
+	//	}
+		
+	//	if (bsm.stateAge > 14 * 16 - 1) {
+	//		var _boom = instance_create_depth(x, y, depth - 110, obj_particle_single_cycle)
+	//		_boom.sprite_index = explosionSprite
+	//		_boom.image_xscale = 2
+	//		_boom.image_yscale = 2
+		
+	//		audio_play_sound(snd_fireball_impact_crunchy_echo, 0, false)
+			
+	//		instance_destroy()
+	//	}
+	//}
+//)
+
+stateDying = bsm_create_state_dying()
 
 bsm.addState(stateInit)
 bsm.addState(stateIdle)

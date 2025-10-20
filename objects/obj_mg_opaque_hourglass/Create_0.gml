@@ -7,6 +7,6 @@ event_inherited()
 name = "Opaque Hourglass"
 description = "Sparks curiosity, but not so useful for telling time."
 
-bonusInt = 2
+bonusAbilityCooldown = 0.1
 
-addCharStatBlocks()
+//array_push(stats, new itemStat(enumItemStats.bonusAbilityCooldown, [bonusAbilityCooldown]))

@@ -33,10 +33,16 @@ function apply_damage(_target, _amount, _attacker = noone, _force = 1, _textStyl
 	return false
 }
 
+
+
 enum damageTextStyles {
 	none,
 	normal,
 	crit,
 	poison,
-	fire
+	fire,
+	cold,
+	pierce,
+	heavy,
+	lightning
 }

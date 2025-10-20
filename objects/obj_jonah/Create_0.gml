@@ -26,9 +26,21 @@ availableWeapons = [
 	obj_weapon_war_hammer
 ]
 
+availableAbilities = [
+	obj_ability_thorns,
+	obj_ability_lightning_ball,
+	obj_ability_lightning_rune,
+	obj_ability_shock,
+	obj_ability_storm_aura
+]
+
+availableUltimateAbilities = [
+	obj_ability_sword_of_heavens
+]
+
 defaultWeapon = obj_weapon_greataxe
 
-activeAbility = obj_ability_charge
+activeAbility = obj_ability_war_stomp_active
 
 abilityTrees = [
 	create_instance(obj_abil_tree_jonah_combat),

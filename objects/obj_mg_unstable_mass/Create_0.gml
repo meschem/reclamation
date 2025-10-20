@@ -7,12 +7,14 @@ event_inherited()
 name = "Unstable Mass"
 description = "Violatile and ready to burst."
 
+rarity = enumRarity.rare
+
 bonusStr = 5
 bonusInt = 2
 
 damage = 50
 
-addCharStatBlocks()
+//addCharStatBlocks()
 
 stats = [
 	new itemStat(

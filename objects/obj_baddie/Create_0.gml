@@ -65,6 +65,7 @@ moveBehavior = entityMoveBehaviors.charge
 collisionType = entityCollisionTypes.baddie
 
 damageOnCollide = true
+damageDoodads = 0
 provideKillRewards = true
 
 targetType = targetTypes.baddie
@@ -110,7 +111,7 @@ stunLength = 0
 shockedLength = 0
 
 slowLength = 0
-slowMoveScalar = 0.5
+slowMoveScalar = 0.75
 
 poisonStacks = 0
 poisonDamageCdMax = seconds_to_frames(1)

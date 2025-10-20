@@ -8,8 +8,8 @@
   "name":"obj_mg_unstable_mass",
   "overriddenProperties":[],
   "parent":{
-    "name":"uncommon",
-    "path":"folders/Objects/equipment/mergers/uncommon.yy",
+    "name":"rare",
+    "path":"folders/Objects/equipment/mergers/rare.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

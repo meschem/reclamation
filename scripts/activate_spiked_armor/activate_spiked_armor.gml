@@ -1,14 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function activate_spiked_armor(caster, abilObj = id) {
-	var damage = abilObj.spikeDamage
-	var lifeSpan = abilObj.getLifeSpan()
-	var spikeCount = abilObj.spikeCount
+	var damage = abilObj.spikeDamage[abilObj.level - 1]
+	var spikeCount = abilObj.spikeCount[abilObj.level - 1]
+	
+	var lifeSpan = abilObj.getLifeSpan()	
 	var initAngle = abilObj.spikeAngleOffset
 	var vel = 4
 	var projObj = obj_none
 	
-	if (abilObj.runes[enumRunes.voldan].enabled) {
+	if (abilObj.statBonusLightningTipped.active) {
 		projObj = abilObj.projectileCharged
 	} else {
 		projObj = abilObj.projectile
@@ -33,8 +34,11 @@ function activate_spiked_armor(caster, abilObj = id) {
 		proj.lifeSpan = lifeSpan
 		proj.owner = caster
 		
-		if (abilObj.runes[enumRunes.magdela].enabled) {
-			proj.rotationSpeed = abilObj.spiralRotationSpeed
+		if (abilObj.statBonusSpiralikes.active) {
+			//proj.rotationSpeed = abilObj.spiralRotationSpeed
+			attach_projectile(proj, caster)
+			proj.rotationSpeed = 5.2
+			proj.rotationSpeedDeaccel = 0.1
 		}
 	}
 	

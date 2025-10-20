@@ -1,2 +1,6 @@
 
+if (equipped) {
+	onUnequip()
+}
+
 onDestroy()

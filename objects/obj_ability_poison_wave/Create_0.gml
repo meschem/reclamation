@@ -47,14 +47,14 @@ addRune("Nova", "Shoots 8 smaller projectiles in a circular pattern")
 addRune("Crawling Toxin", "Slows projectiles while increasing distance")
 addRune("Pools of Pain", "Projectiles leave trails of damaging pools")
 
-onLevel = function() {
-	if (level == 1) {
-		owner.bonusPoisonDamage += poisonDamageBonus[level - 1]
-	} else {
-		var _diff = poisonDamageBonus[level - 1] - poisonDamageBonus[level - 2]
-		owner.bonusPoisonDamage += _diff
-	}
-}
+//onLevel = function() {
+//	if (level == 1) {
+//		owner.bonusPoisonDamage += poisonDamageBonus[level - 1]
+//	} else {
+//		var _diff = poisonDamageBonus[level - 1] - poisonDamageBonus[level - 2]
+//		owner.bonusPoisonDamage += _diff
+//	}
+//}
 
 use = function () {
 	var _inst = instance_create_depth(owner.x + 20, owner.y, depths.playerProjectile, projectile)

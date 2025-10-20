@@ -23,3 +23,7 @@ addCharStatBlocks = function() {
 		array_push(stats, new itemStat(enumItemStats.bonusInt, [bonusInt]))
 	}
 }
+
+addSpecialStats = function() {
+	
+}

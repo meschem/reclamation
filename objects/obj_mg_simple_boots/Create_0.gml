@@ -6,4 +6,4 @@ description = "Humble boots for quick-footed warriors."
 
 bonusMoveSpeed = 0.05
 
-array_push(stats, new itemStat(enumItemStats.bonusMoveSpeed, [bonusMoveSpeed]))
+//array_push(stats, new itemStat(enumItemStats.bonusMoveSpeed, [bonusMoveSpeed]))

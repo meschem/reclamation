@@ -23,7 +23,6 @@ poisonDamageBonus = [5, 10, 15, 20, 30]
 maxSummons = [4, 4, 6, 6, 10]
 
 
-
 sleepDuration = stf(2)
 
 //spawnRate = stf(0.25)
@@ -43,14 +42,14 @@ stats = [
 	)
 ]
 
-onLevel = function() {
-	if (level == 1) {
-		owner.bonusPoisonDamage += poisonDamageBonus[level - 1]
-	} else {
-		var _diff = poisonDamageBonus[level - 1] - poisonDamageBonus[level - 2]
-		owner.bonusPoisonDamage += _diff
-	}
-}
+//onLevel = function() {
+//	if (level == 1) {
+//		owner.bonusPoisonDamage += poisonDamageBonus[level - 1]
+//	} else {
+//		var _diff = poisonDamageBonus[level - 1] - poisonDamageBonus[level - 2]
+//		owner.bonusPoisonDamage += _diff
+//	}
+//}
 
 use = function () {
 	var _count = 0

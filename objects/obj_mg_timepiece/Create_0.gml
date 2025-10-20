@@ -9,4 +9,4 @@ description = "A marvel of both engineering and magic."
 
 bonusInt = 6
 
-addCharStatBlocks()
+//addCharStatBlocks()

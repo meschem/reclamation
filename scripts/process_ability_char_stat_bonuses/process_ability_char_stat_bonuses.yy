@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"process_ability_char_stat_bonuses",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_ability_char_stat_bonuses",
+  "parent":{
+    "name":"process_stats",
+    "path":"folders/Scripts/player/process_stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
