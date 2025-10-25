@@ -16,6 +16,8 @@ if (age > stf(12) && age % spawnRateChamp == 0) {
 	spawn_baddie(obj_skeleton_champion_cursed, 1)
 }
 
+
+
 if (curseLayerDraw) {
 	curseBlend = min(1, age / curseBlendAgeMax)
 	

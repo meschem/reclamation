@@ -38,12 +38,16 @@ drawStatBars = true
 drawCurseBar = true
 drawPlayerSkills = true
 
-healthPips = []
-healthCurrent = 0
-healthUpdateRate = 4
-healthUpdateCd = 0
-healthPerIcon = 10
-healthPlayer = noone
+
+
+//healthPips = []
+//healthCurrent = 0
+//healthUpdateRate = 4
+//healthUpdateCd = 0
+//healthPerIcon = 10
+//healthPlayer = noone
+//healthDrawStart = new vec2(20, 39)
+//healthIconSpacing = 23
 
 // OTHER INFO IS DRAWN FROM obj_run_controller
 

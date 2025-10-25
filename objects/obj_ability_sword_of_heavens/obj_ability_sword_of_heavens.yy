@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ability_icon_heaven_sword",
-    "path":"sprites/spr_ability_icon_heaven_sword/spr_ability_icon_heaven_sword.yy",
+    "name":"spr_ability_icon_sword_of_heavens",
+    "path":"sprites/spr_ability_icon_sword_of_heavens/spr_ability_icon_sword_of_heavens.yy",
   },
   "spriteMaskId":null,
   "visible":true,

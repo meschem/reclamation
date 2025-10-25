@@ -52,8 +52,6 @@ if (state == roomStates.init) {
 	if (category == roomCategories.inactive) {
 		initInactive()
 	}
-	
-	
 }
 
 if (state == roomStates.bossFlourish) {

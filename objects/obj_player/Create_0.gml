@@ -18,8 +18,8 @@ controllerIndex = 0
 
 inputFocus = enumInputTypes.keyboardMouse
 
-runStatsController = create_instance(obj_run_stats_controller)
-runStatsController.owner = id
+//runStatsController = create_instance(obj_run_stats_controller)
+//runStatsController.owner = id
 
 depth = depths.player
 
@@ -102,6 +102,7 @@ gold = 0
 xp = 0
 level = 1
 abilityTreeLevel = 1
+levelingUp = false
 
 critChance = baseCritChance
 critMultiplier = 1.5
@@ -210,6 +211,18 @@ controllerAimingCursorOffset = 50
 uiDrawOffset = new vec2()
 
 state = playerStates.idle
+
+healthUiController = create_instance(obj_health_ui_controller)
+healthUiController.setup(id)
+
+coinUiController = create_instance(obj_coin_ui_controller)
+coinUiController.setup(id)
+
+xpUiController = create_instance(obj_xp_ui_controller)
+xpUiController.setup(id)
+
+runStatsController = create_instance(obj_run_stats_controller)
+runStatsController.owner = id
 
 equipment = {
 	head: noone,

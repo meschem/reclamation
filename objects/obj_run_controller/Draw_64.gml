@@ -6,13 +6,13 @@ if (displayRunInfo) {
 	draw_set_color(c_white)
 	draw_set_font(font_dogica_s)
 	
-	draw_text(
-		_viewWidthOffset,
-		34 + (displayStateSpacing * i),
-		$"Floor: {currentFloor}"
-	)
+	//draw_text(
+	//	_viewWidthOffset,
+	//	34 + (displayStateSpacing * i),
+	//	$"Floor: {currentFloor}"
+	//)
 	
-	i++
+	//i++
 	
 	draw_text(
 		_viewWidthOffset,

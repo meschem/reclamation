@@ -27,3 +27,9 @@ for (var i = 0; i < skullCount; i++) {
 		}
 	}
 }
+
+if (showTimeDisplay) {
+	draw_set_font(font_alagard)
+	draw_text_with_outline(timeDrawLoc.x, timeDrawLoc.y, timeDisplay)
+}
+

@@ -29,6 +29,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"c643cca0-141a-4cf3-a8e5-f932ba0cb00c","blendMode":0,"displayName":"default","isLocked":false,"name":"c643cca0-141a-4cf3-a8e5-f932ba0cb00c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c4c154b7-0fe4-471a-b561-1bc359aa8321","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c4c154b7-0fe4-471a-b561-1bc359aa8321","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_ui_heart_damage",
   "nineSlice":null,

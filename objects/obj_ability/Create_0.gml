@@ -1,5 +1,14 @@
 ///@description Ability parent setup
 
+enum enumAbilityColor {
+	red,
+	orange,
+	yellow,
+	green,
+	blue,
+	purple
+}
+
 persistent = true
 
 name = "No Name"
@@ -9,6 +18,14 @@ icon = spr_ability_icon_null
 icon = sprite_index
 iconX = -999
 iconY = -999
+iconColor = enumAbilityColor.blue
+iconCdFillRatio = 0
+iconFillHeight = 30
+
+iconUiBackdrop = spr_ui_ability_backdrop
+iconUiBorder = spr_ui_ability_border
+iconUiFill = spr_ui_ability_cd_fill
+iconLargeSet = false
 
 image_alpha = 0
 
@@ -156,8 +173,11 @@ levelUp = function () {
 		treeLevel = array_length(owner.abilities)
 	}
 	
-	iconX = 1 + (26 * (treeLevel - 1))
-	iconY = 42
+	iconX = get_ability_icon_position_x(treeLevel - 1)
+	iconY = get_ability_icon_position_y(treeLevel - 1)
+	
+	//iconX = 1 + (26 * (treeLevel - 1))
+	//iconY = 42
 	
 	if (active) {
 		owner.activeAbilities[treeLevel - 1] = id

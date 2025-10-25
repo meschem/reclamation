@@ -28,10 +28,10 @@ function damage_player(hitBy, damage = -1, _player = noone) {
 	
 	activate_player_on_hit_abilities(_player, hitBy)
 	
-	inst = instance_create_depth(x, y - 4, depths.ui, obj_moving_text)
+	//inst = instance_create_depth(x, y - 4, depths.ui, obj_moving_text)
 	
-	inst.displayText = "-" + string(hitBy.damageOnHit)
-	inst.fontColor = c_red
+	//inst.displayText = "-" + string(hitBy.damageOnHit)
+	//inst.fontColor = c_red
 	
 	if (obj_player.hp <= 0)
 		return true

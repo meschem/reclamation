@@ -17,7 +17,7 @@ function draw_sprite_bottom_n(_spr, _subimg, _x, _y, _n){
     draw_sprite_part(
         _spr,
         _subimg,
-        0, sy,                      // source x, y (top-left of the cropped area)
+        0, sy,           // source x, y (top-left of the cropped area)
         spr_width, 
 		_n,              // width, height of the cropped area
         _x, 

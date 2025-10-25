@@ -15,6 +15,10 @@ skullBotY = y + sprite_height
 
 skipDraw = false
 
+showTimeDisplay = true
+timeDisplay = ""
+timeDrawLoc = new vec2(601, 259)
+
 updateMax = function() {
 	skullCount = ftm(obj_run_controller.curseAgeMax)
 	

@@ -15,6 +15,8 @@ lastGaspAvailable = true
 
 treeLevel = 2
 
+iconColor = enumAbilityColor.orange
+
 curCd = 0
 maxCd = seconds_to_frames(1.5)
 maxCdLightningTipped = stf(1)

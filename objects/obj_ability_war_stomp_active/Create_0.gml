@@ -10,6 +10,8 @@ description = "Stuns and damages an area around Jonah"
 selectionIcon = spr_abil_select_icon_war_stomp
 active = true
 
+iconColor = enumAbilityColor.orange
+
 curCd = 0
 maxCd = 440
 treeLevel = 1

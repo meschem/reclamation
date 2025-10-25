@@ -17,6 +17,7 @@ function check_for_level_up(player = noone) {
 	}	
 	
 	if (leveled) {
+		player.levelingUp = true
 		display_level_up_prompt(player)
 	}
 	

@@ -47,7 +47,7 @@ currentFloor = 0
 currentRoom = -1
 
 displayRunInfo = true
-displayRunStats = true
+displayRunStats = false
 displayStateSpacing = 10
 
 // Difficulty Scalars
