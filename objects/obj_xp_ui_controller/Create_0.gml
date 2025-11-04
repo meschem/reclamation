@@ -2,7 +2,7 @@
 
 age = 0
 
-setup = false
+isSetup = false
 
 xpCurrent = 0
 xpTarget = 0
@@ -38,7 +38,7 @@ setup = function(_player) {
 	player = _player
 	xpCurLevel = 0
 	xpTarget = player.xp
-	setup = true
+	isSetup = true
 }
 
 playerIsLevelingUp = function() {

@@ -20,6 +20,8 @@ function define_item_stats() {
 		bonusDamageScalar,
 		
 		bonusWeaponAoe,
+		bonusKnockback,
+		bonusMagicFind,
 		
 		bonusStr,
 		bonusDex,
@@ -61,6 +63,8 @@ function define_item_stats() {
 		new itemStatType("Damage", "bonusDamageScalar", "bonusDamageScalar", statUnits.percent),
 		
 		new itemStatType("Weapon AOE", "bonusWeaponAoe", "bonusWeaponAoe", statUnits.percent),
+		new itemStatType("Knockback", "bonusKnockback", "bonusKnockbackMultiplier", statUnits.percent),
+		new itemStatType("Magic Find", "bonusMagicFind", "bonusMagicFind", statUnits.percent),
 		
 		new itemStatType("Strength", "bonusStr", "bonusStr"),
 		new itemStatType("Dexterity", "bonusDex", "bonusStr"),
@@ -187,6 +191,21 @@ function get_item_stat_type(_enumStat) {
 			_statUnit = statUnits.percent
 		break
 		
+		//kb //mf
+		case enumItemStats.bonusKnockback:
+			_displayName = "Knockback"
+			_bonusVar = "bonusKnockback"
+			_playerVar = _bonusVar
+			_statUnit = statUnits.percent
+		break
+		
+		case enumItemStats.bonusMagicFind:
+			_displayName = "Magic Find"
+			_bonusVar = "bonusMagicFind"
+			_playerVar = _bonusVar
+			_statUnit = statUnits.percent
+		break
+		
 		case enumItemStats.bonusPoisonDamage:
 			_displayName = "Poison Dmg"
 			_bonusVar = "bonusPoisonDamage"
@@ -209,7 +228,7 @@ function get_item_stat_type(_enumStat) {
 		break
 		
 		default:
-			throw("Undefined enumItemStats unit")
+			throw("Undefined enumItemStats unit: " + string(_enumStat))
 		break
 	}
 	

@@ -27,9 +27,9 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"spawnDelay","filters":[],"listItems":[],"multiselect":false,"name":"spawnDelay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"groupIndex","filters":[],"listItems":[],"multiselect":false,"name":"groupIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"projectile","filters":[],"listItems":[],"multiselect":false,"name":"projectile","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_enemy_laser_blue","path":"objects/obj_enemy_laser_blue/obj_enemy_laser_blue.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_enemy_laser_blue","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"spawnDelay","filters":[],"listItems":[],"multiselect":false,"name":"spawnDelay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"groupIndex","filters":[],"listItems":[],"multiselect":false,"name":"groupIndex","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"projectile","filters":[],"listItems":[],"multiselect":false,"name":"projectile","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_enemy_laser_blue","path":"objects/obj_enemy_laser_blue/obj_enemy_laser_blue.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_enemy_laser_blue","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

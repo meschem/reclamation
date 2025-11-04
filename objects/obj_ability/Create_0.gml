@@ -6,7 +6,8 @@ enum enumAbilityColor {
 	yellow,
 	green,
 	blue,
-	purple
+	purple,
+	survival
 }
 
 persistent = true
@@ -40,6 +41,8 @@ maxCharges = 1
 owner = obj_player.id
 ultimate = false
 hotkeySet = false
+
+focused = false
 
 age = 0
 

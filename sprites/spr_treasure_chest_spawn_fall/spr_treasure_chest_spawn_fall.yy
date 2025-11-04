@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_treasure_chest_spawn_fall",
   "bboxMode":2,
   "bbox_bottom":74,
@@ -12,22 +12,22 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"decab95c-5107-4c01-b04a-f6a3c4da6349","name":"decab95c-5107-4c01-b04a-f6a3c4da6349","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"bd8373be-0034-4108-a85b-78ec4321fa80","name":"bd8373be-0034-4108-a85b-78ec4321fa80","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"85490d58-9175-42d6-bf80-73afe1e0458c","name":"85490d58-9175-42d6-bf80-73afe1e0458c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"d1167aae-e362-4471-8f59-01769cfc2206","name":"d1167aae-e362-4471-8f59-01769cfc2206","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"00285987-7076-4e2b-b475-2768bea7fce1","name":"00285987-7076-4e2b-b475-2768bea7fce1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"9254fa92-b5d0-4244-948a-fe686a164ed4","name":"9254fa92-b5d0-4244-948a-fe686a164ed4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"03584a11-a23a-4368-8b32-84dfa9bacf02","name":"03584a11-a23a-4368-8b32-84dfa9bacf02","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"decab95c-5107-4c01-b04a-f6a3c4da6349","name":"decab95c-5107-4c01-b04a-f6a3c4da6349","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bd8373be-0034-4108-a85b-78ec4321fa80","name":"bd8373be-0034-4108-a85b-78ec4321fa80","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"85490d58-9175-42d6-bf80-73afe1e0458c","name":"85490d58-9175-42d6-bf80-73afe1e0458c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"d1167aae-e362-4471-8f59-01769cfc2206","name":"d1167aae-e362-4471-8f59-01769cfc2206","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"00285987-7076-4e2b-b475-2768bea7fce1","name":"00285987-7076-4e2b-b475-2768bea7fce1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"9254fa92-b5d0-4244-948a-fe686a164ed4","name":"9254fa92-b5d0-4244-948a-fe686a164ed4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"03584a11-a23a-4368-8b32-84dfa9bacf02","name":"03584a11-a23a-4368-8b32-84dfa9bacf02","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -85,54 +85,22 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"859db4c7-87e7-4aa5-b549-7814366b9ba5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9a79678a-60d7-4eb9-9066-ea88aaa4cdd5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"decab95c-5107-4c01-b04a-f6a3c4da6349","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0d32b7a4-08ea-4fba-8f76-3eb135939700","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd8373be-0034-4108-a85b-78ec4321fa80","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"46777569-5625-462a-8584-749582184d07","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2b6a82a1-c001-4c0e-b816-f2b7971d55d4","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"85490d58-9175-42d6-bf80-73afe1e0458c","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c701bf1-9ed8-4c6a-8452-a7a286205e28","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d1167aae-e362-4471-8f59-01769cfc2206","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ab2aacb6-e4c4-4dd1-b7a1-76549422f9eb","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d55f2df1-b347-45b8-99a9-195e3e614204","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"00285987-7076-4e2b-b475-2768bea7fce1","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0ca5b062-8a49-49c4-bc88-367c4e0c984f","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9a636263-d04d-4e86-8bb6-1e6ec82c2c48","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c72485fb-aad1-4791-b589-5395767eb698","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"07e96996-b6cd-46fa-afb0-4d5e02ccbce0","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9254fa92-b5d0-4244-948a-fe686a164ed4","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"313a0575-aaf1-42cc-8d62-7bcab757574f","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e6b7ca4e-b610-4bf9-ad1c-efc2ac380320","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"03584a11-a23a-4368-8b32-84dfa9bacf02","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1508614b-4c76-4057-907b-c3aeed4b5e2f","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8eade66d-da74-417d-95c3-ec54c2f90cc2","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3ee639c-d527-4f03-a064-28fe7ce3bdd7","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"859db4c7-87e7-4aa5-b549-7814366b9ba5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c9ad21be-044e-40fd-a6f7-8030e2b6c7a0","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9a79678a-60d7-4eb9-9066-ea88aaa4cdd5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"decab95c-5107-4c01-b04a-f6a3c4da6349","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0d32b7a4-08ea-4fba-8f76-3eb135939700","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"bd8373be-0034-4108-a85b-78ec4321fa80","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"46777569-5625-462a-8584-749582184d07","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"117967ef-f9bc-450a-bcab-a6b6f8ab3604","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2b6a82a1-c001-4c0e-b816-f2b7971d55d4","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"85490d58-9175-42d6-bf80-73afe1e0458c","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8c701bf1-9ed8-4c6a-8452-a7a286205e28","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"d1167aae-e362-4471-8f59-01769cfc2206","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ab2aacb6-e4c4-4dd1-b7a1-76549422f9eb","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"99d29abe-56f5-44c3-bbc6-3d844baa67ed","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d55f2df1-b347-45b8-99a9-195e3e614204","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"00285987-7076-4e2b-b475-2768bea7fce1","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0ca5b062-8a49-49c4-bc88-367c4e0c984f","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"adec8e5a-7aa1-4f8d-96d8-854d4edc050f","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9a636263-d04d-4e86-8bb6-1e6ec82c2c48","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"77306b2d-2e87-4688-a2bf-c1f7f63c304e","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c72485fb-aad1-4791-b589-5395767eb698","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"1e6601b0-0ce4-496e-8faf-ddad1dc1b800","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"07e96996-b6cd-46fa-afb0-4d5e02ccbce0","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9254fa92-b5d0-4244-948a-fe686a164ed4","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"313a0575-aaf1-42cc-8d62-7bcab757574f","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1087539-ebf9-4ea8-9a1f-db3a67c42f38","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e6b7ca4e-b610-4bf9-ad1c-efc2ac380320","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"03584a11-a23a-4368-8b32-84dfa9bacf02","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1508614b-4c76-4057-907b-c3aeed4b5e2f","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b0ce6c54-ca8e-4ca9-9ce2-52dd00b8da18","path":"sprites/spr_treasure_chest_spawn_fall/spr_treasure_chest_spawn_fall.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8eade66d-da74-417d-95c3-ec54c2f90cc2","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

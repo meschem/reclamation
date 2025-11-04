@@ -11,10 +11,8 @@ init_floating(2, 90)
 
 onPickup = function() {
 	add_player_health(pickupValue)
-	
-	var txt = create_moving_text(pickupValue, x, y, movingTextTypes.floating)
-	
-	txt.fontColor = get_color(colors.red)
+
+	create_pickup_text(x, y, pickupValue, pickupTextStyles.hp)
 	
 	instance_destroy()
 }

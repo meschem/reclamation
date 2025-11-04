@@ -28,7 +28,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"spawnSide","filters":[],"listItems":[],"multiselect":false,"name":"spawnSide","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"left","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"spawnSide","filters":[],"listItems":[],"multiselect":false,"name":"spawnSide","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"left","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

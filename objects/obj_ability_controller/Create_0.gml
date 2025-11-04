@@ -18,5 +18,6 @@ availableAbilities = []
 availableUltimateAbilities = []
 //sprite_index = icon
 
-//x = 1
-//y = 46
+focused = false
+
+uiController = create_instance(obj_ability_ui_controller)

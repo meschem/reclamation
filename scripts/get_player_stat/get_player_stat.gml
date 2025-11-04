@@ -3,71 +3,27 @@
 ///@param {id.Instance} _player		Player to get stat for
 ///@return {real}
 function get_player_stat(_playerStat, _player = noone) {
-	if (_player == noone) {
-		_player = get_first_player()
+	if (instance_number(obj_player_stat_controller) == 0) {
+		create_toaster("obj_player_stat_controller not available", errorLevels.error)
+		return 0
 	}
 	
-	var _runningBonus = 0
+	var _val = obj_player_stat_controller.getPlayerStatValue(_playerStat, _player)
 	
-	switch (_playerStat) {
-		case enumPlayerStats.maxHp:
-			return _player.maxHp
+	return _val
+}
 
-		case enumPlayerStats.moveSpeedMax:
-	        return _player.moveSpeedMax
+function get_player_stat_name(_enum) {
+	var _val = obj_player_stat_controller.getPlayerStatName(_enum)
+	return _val
+}
 
-		case enumPlayerStats.maxArmor:
-	        return _player.maxArmor
+function get_player_stat_description(_enum) {
+	var _val = obj_player_stat_controller.getPlayerStatDescription(_enum)
+	return _val
+}
 
-		case enumPlayerStats.critChance:
-	        return _player.critChance
-
-		case enumPlayerStats.critDamageMultiplier:
-	        return _player.critMultiplier
-
-		case enumPlayerStats.areaOfEffectScalar:
-	        return _player.areaOfEffectScalar
-
-		case enumPlayerStats.abilityCooldownScalar:
-	        return _player.abilityCooldownScalar
-
-		case enumPlayerStats.attackSpeedScalar:
-	        return _player.attackSpeedScalar
-
-		case enumPlayerStats.knockbackScalar:
-	        return _player.knockbackScalar
-
-		case enumPlayerStats.bonusProjectileCount:
-	        return _player.bonusProjectileCount
-
-		case enumPlayerStats.damageScalar:
-			with (obj_buff_stats) {
-				if (owner == _player) {
-					_runningBonus += bonusDamageScalar
-				}
-			}
-	        return _player.bonusDamageScalar + _runningBonus
-
-		case enumPlayerStats.pickupRangeScalar:
-	        return _player.pickupRangeScalar
-
-		case enumPlayerStats.pickupRewardScalar:
-	        return _player.pickupRewardScalar
-
-		case enumPlayerStats.weaponAoeScalar:
-	        return _player.weaponAoeScalar
-
-		case enumPlayerStats.weaponKnockbackScalar:
-	        return _player.weaponKnockbackScalar
-			
-		case enumPlayerStats.abilityDamageScalar:
-			return _player.baseAbilityDamageScalar + _player.bonusAbilityDamageScalar
-			
-		case enumPlayerStats.magicFind:
-			return _player.baseMagicFind + _player.bonusMagicFind
-		
-		default:
-			show_message("Invalid player stat requested")
-			return 1
-	}
+function get_player_stat_value_readable(_enum) {
+	var _val = obj_player_stat_controller.getPlayerStatValueReadable(_enum)
+	return _val
 }

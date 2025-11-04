@@ -12,6 +12,9 @@ enum enumInputTypes {
 	controller
 }
 
+name = "Unnamed"
+className = "Unskilled"
+
 kmInput = new keyMouseInput()
 controllerInput = new gamepadInput()
 controllerIndex = 0
@@ -56,6 +59,9 @@ enum enumPlayerStats {
 	weaponAoeScalar,
 	weaponKnockbackScalar,
 	magicFind,
+	str,
+	dex,
+	int,
 }
 
 reticleIndex = 0
@@ -83,11 +89,13 @@ basePoisonDamage = 15
 baseRecoveryTime = 1.5
 baseBurningStacks = 0
 baseMagicFind = 0
+basePickupRewardScalar = 1
+basePickupRangeScalar = 1
 
 bonusProjectileCount = 0
 bonusDamageScalar = 1
-bonusPickupRangeScalar = 1
-bonusPickupRewardScalar = 1
+bonusPickupRangeScalar = 0
+bonusPickupRewardScalar = 0
 bonusWeaponAoeScalar = 1
 bonusWeaponKnockbackScalar = 1
 bonusPoisonDamage = 0
@@ -96,6 +104,9 @@ bonusRecoveryTime = 0
 bonusBurningStacks = 0
 bonusAbilityCooldownScalar = 0
 bonusAbilityDamageScalar = 0
+bonusKnockbackMultiplier = 0
+bonusAreaOfEffectScalar = 0
+bonusCritChance = 0
 
 totalGold = 0
 gold = 0
@@ -224,6 +235,9 @@ xpUiController.setup(id)
 runStatsController = create_instance(obj_run_stats_controller)
 runStatsController.owner = id
 
+statsMenu = create_instance(obj_player_stats_menu)
+statsMenu.setup(id)
+
 equipment = {
 	head: noone,
 	chest: noone,
@@ -243,11 +257,6 @@ keys = []
 gamepad_set_axis_deadzone(controllerIndex, 0.2)
 
 stepBegin = function() {}
-
-///@description							Gets a calculate character stat
-getCharStat = function(_stat) {
-	
-}
 
 applyHeal = function(_amount) {
 	hp += _amount

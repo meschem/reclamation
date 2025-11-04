@@ -13,6 +13,8 @@ description = "Rains down swords over the battlefield"
 active = true
 ultimate = true
 
+iconColor = enumAbilityColor.orange
+
 curCd = 0
 maxCd = 60
 treeLevel = 1

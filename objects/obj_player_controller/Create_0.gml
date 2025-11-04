@@ -4,7 +4,9 @@
 enum playerCharacters {
 	jonah,
 	ophelia,
-	phaedra
+	phaedra,
+	caco,
+	cow
 }
 
 player = -1
@@ -14,5 +16,7 @@ activeCharacterIndex = 0
 unlockedCharacters = [
 	obj_jonah,
 	obj_ophelia,
-	obj_phaedra
+	obj_phaedra,
+	obj_caco,
+	obj_cow
 ]

@@ -1,5 +1,5 @@
 
-if (!setup) {
+if (!isSetup) {
 	return 0
 }
 

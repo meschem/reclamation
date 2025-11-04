@@ -1,5 +1,5 @@
 {
-  "$GMNotes":"",
+  "$GMNotes":"v1",
   "%Name":"Default Inputs",
   "name":"Default Inputs",
   "parent":{

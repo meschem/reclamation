@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_jonah_storm_walking",
   "bboxMode":2,
   "bbox_bottom":34,
@@ -12,12 +12,12 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"549e3a4f-1186-4d4f-9a01-89b561790c37","name":"549e3a4f-1186-4d4f-9a01-89b561790c37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"83493ff9-b835-4742-8a20-066181fa2976","name":"83493ff9-b835-4742-8a20-066181fa2976","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"914dc17a-146a-40ec-b44b-af6169968156","name":"914dc17a-146a-40ec-b44b-af6169968156","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"549e3a4f-1186-4d4f-9a01-89b561790c37","name":"549e3a4f-1186-4d4f-9a01-89b561790c37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"83493ff9-b835-4742-8a20-066181fa2976","name":"83493ff9-b835-4742-8a20-066181fa2976","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"914dc17a-146a-40ec-b44b-af6169968156","name":"914dc17a-146a-40ec-b44b-af6169968156","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -73,24 +73,12 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e804a2e6-20b0-4666-8140-d1ea34810586","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"549e3a4f-1186-4d4f-9a01-89b561790c37","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e46f8132-96c1-4db5-a8bd-9b66d6789b97","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"83493ff9-b835-4742-8a20-066181fa2976","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"729c1dde-e266-4180-a697-14e073e44fea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e244bc37-9aaa-4f16-b255-da096c35e5f8","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"914dc17a-146a-40ec-b44b-af6169968156","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"94e1f87f-43a7-4ba4-ab4e-4b4be39651d5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ef136f72-18dd-43df-a8ee-1910ab580102","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"dad8842f-ea6d-4dbf-b362-bba85c4b9ea2","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e804a2e6-20b0-4666-8140-d1ea34810586","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"549e3a4f-1186-4d4f-9a01-89b561790c37","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e46f8132-96c1-4db5-a8bd-9b66d6789b97","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"83493ff9-b835-4742-8a20-066181fa2976","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"729c1dde-e266-4180-a697-14e073e44fea","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7ce9f26c-a449-4ae1-a130-2dca840e3cc3","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e244bc37-9aaa-4f16-b255-da096c35e5f8","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"914dc17a-146a-40ec-b44b-af6169968156","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"94e1f87f-43a7-4ba4-ab4e-4b4be39651d5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b6f41a31-4ae3-42a2-ac1d-05689f20c386","path":"sprites/spr_jonah_storm_walking/spr_jonah_storm_walking.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ef136f72-18dd-43df-a8ee-1910ab580102","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

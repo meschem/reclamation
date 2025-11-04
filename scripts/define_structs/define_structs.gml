@@ -24,6 +24,15 @@ enum enumTrailStyle {
 	line
 }
 
+function abilityStatInfoTextBlock() constructor {
+	name = "Unset Name"
+	description = "Unset Description"
+	statString = "Level -1"
+	nameColor = c_white
+	checked = false
+	statBonuses = []
+}
+
 ///@description						Provides bonus functionality for abilities when stat reqs are met
 ///@param {real} _stat				Stat to check. Uses enumCharStats
 ///@param {real} _requiredAmount	Amount of stat required to activate
@@ -141,7 +150,6 @@ function trailSegment(_startPos, _endPos, _startWidth = 0, _endWidth = 0, _color
 ///@param {string} _bonusVar		Variable which references the bonus provides (on player and item)
 ///@param {string} _playerVar		Variable which references the players current value
 ///@param {string} _unit			Uses enumStatUnits. Unit used to display data.
-///@param {real} _previousAmount	If this is an upgrade, previous amount
 function itemStatType(_name, _bonusVar, _playerVar, _unit = statUnits.none) constructor {
 	displayName = _name
 	bonusVar = _bonusVar
@@ -496,4 +504,20 @@ function text(_body, _font, _color, _location, _centered = false, _maxWidth = -1
 ///@param {asset.GMObject} object	Object to reference
 function equipmentSlot(slot, object = obj_none) constructor {
 	
+}
+
+///@description							Defines a new player stat. Recommended to also set a description string.
+///@param {real} _enum					enumPlayerStat to use
+///@param {string} _name				Readable name of the stat
+///@param {function} _getReadableValue	Function get the readable value of the stat
+///@param {string} _description			Description of 
+function playerStat(_enum, _name, _getReadableValue, _description = "None") constructor {
+	statEnum = _enum
+	statName = _name
+	getReadableValue = _getReadableValue
+	statDescription = _description
+	
+	getValue = function() {
+		return get_player_stat(statEnum)
+	}
 }

@@ -40,15 +40,6 @@ function create_damage_text(_x, _y, _amount, _style) {
 			_inst.setValue(_displayAmount)
 		break
 	}
-		
-		//if (_style == damageTextStyles.crit) {
-		//	_inst.setValue(_displayAmount, true)
-		//} else if (_style == damageTextStyles.poison) {
-		//	_inst.setValue(_displayAmount)
-		//	_inst.image_blend = get_color(colors.green)
-		//} else {
-		//	_inst.setValue(_displayAmount)
-		//}
 }
 
 ///@description					Gets the sprite of the icon to display next to txt damage

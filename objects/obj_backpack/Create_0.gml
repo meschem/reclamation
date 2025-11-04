@@ -87,9 +87,9 @@ isFull = false
 
 image_alpha = 0
 
-///@descriptoin			Gets a slot given coordinates. Returns the index in the slots[] array
-///@param {real} _x		X
-///@param {real} _y		Y
+///@description			Gets a slot given coordinates. Returns the index in the slots[] array
+///@param {real} _x		X movement
+///@param {real} _y		Y movement
 ///@return {real}
 getSlot = function(_x, _y) {
 	for (var i = 0; i < array_length(slots); i++) {
@@ -99,6 +99,31 @@ getSlot = function(_x, _y) {
 	}
 	
 	return -1
+}
+
+setFocusState = function(_focused) {
+	focused = _focused
+	
+	if (focused) {
+		selector.image_alpha = 1
+	} else {
+		selector.image_alpha = 0
+	}
+}
+
+///@description			Determines if there needs to be a shift in focus in the UI
+///@param {real} _x		X movement
+///@param {real} _y		Y movement
+///@return {real}		
+selectChangeFocusShift = function(_x, _y) {
+	//show_message([_x, _y, slots[selectedSlot].backpackCoordinate.x, slots[selectedSlot].backpackCoordinate.y])
+	if (_x == -1 && slots[selectedSlot].backpackCoordinate.x == 0) {
+		obj_ui_controller.getUiFocusFromDirection(-1, 0)
+	} else if (_y == 1 && slots[selectedSlot].backpackCoordinate.y == rows - 1) {
+		obj_ui_controller.getUiFocusFromDirection(0, 1)
+	}
+	
+	setFocusState(obj_ui_controller.focusType == uiFocusTypes.inventory)
 }
 
 ///@description			Equips or Unequips items based on activeSlot and current equipped bool
@@ -343,7 +368,9 @@ addItem = function(_item) {
 
 ///@description			Opens the backpack, displaying it on screen
 open = function() {
+	owner.statsMenu.open()
 	selectedSlot = 0
+	focused = true
 		
 	image_alpha = 1
 	
@@ -400,6 +427,7 @@ getItemList = function() {
 
 ///@description			Closes the backpack
 close = function() {
+	owner.statsMenu.close()
 	image_alpha = 0
 	
 	for (var i = 0; i < array_length(slots); i++) {

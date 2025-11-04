@@ -54,18 +54,6 @@ if (keyboard_check_pressed(vk_f10)) {
 	}
 }
 
-//if (keyboard_check_pressed(ord("I"))) {
-//	with (obj_player) {
-//		backpack.toggle()
-//	}
-	
-//	//if (instance_number(obj_equipment_menu) > 0) {
-//	//	obj_equipment_menu.close()
-//	//} else {
-//	//	open_player_inventory()
-//	//}
-//}
-
 if (keyboard_check_pressed(ord("Z"))) {
 	spawn_baddie_at_location(
 		obj_skeleton, mouse_x, mouse_y

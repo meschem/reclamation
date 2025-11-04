@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (obj_ui_controller.skipPlayerUi) {
+if (obj_ui_controller.skipPlayerUi || image_alpha == 0) {
 	return 0
 }
 

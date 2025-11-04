@@ -6,9 +6,7 @@ if (_inst != noone) {
 	audio_play_sound(snd_soft_click, 1, false)
 	add_gold(pickupValue * target.bonusPickupRewardScalar)
 	
-	var _txt = create_moving_text(pickupValue, x, y, movingTextTypes.floating)
-	
-	_txt.fontColor = c_yellow
+	create_pickup_text(x, y, pickupValue, pickupTextStyles.gold)
 	
 	with (obj_equipment) {
 		if (owner == other.target) {

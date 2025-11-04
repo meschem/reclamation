@@ -8,6 +8,7 @@ event_inherited()
 //level_up_abils_from_global()'
 
 name = "Jonah"
+className = "Templar Knight"
 
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking

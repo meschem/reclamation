@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_phaedra",
   "bboxMode":2,
   "bbox_bottom":32,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a4c85a52-2b2c-46da-99f4-761490c3781b","name":"a4c85a52-2b2c-46da-99f4-761490c3781b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a4c85a52-2b2c-46da-99f4-761490c3781b","name":"a4c85a52-2b2c-46da-99f4-761490c3781b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,

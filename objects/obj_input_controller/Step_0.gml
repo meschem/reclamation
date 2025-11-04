@@ -42,4 +42,5 @@ if (
 	gamepad_button_check_pressed(0, bindToggleFullscreen.controller)
 ) {
 	window_set_fullscreen(!window_get_fullscreen())
+	display_reset(8, true)
 }

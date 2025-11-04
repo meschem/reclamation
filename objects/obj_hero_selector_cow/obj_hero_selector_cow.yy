@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_reward_numbers",
+  "%Name":"obj_hero_selector_cow",
   "eventList":[],
   "managed":true,
-  "name":"obj_reward_numbers",
+  "name":"obj_hero_selector_cow",
   "overriddenProperties":[],
   "parent":{
-    "name":"text",
-    "path":"folders/Objects/ui/text.yy",
+    "name":"selection",
+    "path":"folders/Objects/player_characters/selection.yy",
   },
-  "parentObjectId":{
-    "name":"obj_dmg_numbers",
-    "path":"objects/obj_dmg_numbers/obj_dmg_numbers.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_cow",
+    "path":"sprites/spr_cow/spr_cow.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

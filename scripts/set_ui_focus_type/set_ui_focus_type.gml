@@ -16,5 +16,9 @@ function get_ui_focus_type() {
 		_type = focusType
 	}
 	
+	if (_type == -1) {
+		create_toaster("Error retrieving focusType, returning -1", errorLevels.error)
+	}
+	
 	return _type
 }

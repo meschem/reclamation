@@ -1,5 +1,13 @@
 
-if (!isOpen || !focused) {
+if (!isOpen) {
+	return 0
+}
+
+if (!focused) {
+	if (obj_ui_controller.focusType == uiFocusTypes.inventory) {
+		setFocusState(true)
+	}
+	
 	return 0
 }
 
@@ -48,15 +56,22 @@ if (
 ) {
 	activateSwap()
 	itemInfoBox.updateItem(slots[selectedSlot].item)
-} else if (
-	keyboard_check_pressed(inputsKeyboard.close) ||
-	gamepad_button_check_pressed(0, inputsController.close)
-) {
-	close()
-	return 0
 }
 
+//				CLOSE FUNCTIONALITY SHOULD BE IN UI CONTROLLER
+//else if (
+//	keyboard_check_pressed(inputsKeyboard.close) ||
+//	gamepad_button_check_pressed(0, inputsController.close)
+//) {
+//	close()
+//	return 0
+//}
+
 var _testSlot = noone
+
+if ((selectChange.x != 0) || (selectChange.y != 0)) {
+	selectChangeFocusShift(selectChange.x, selectChange.y)
+}
 
 if (selectChange.x != 0) {
 	_testSlot = getSlot(selector.position.x + selectChange.x, selector.position.y)

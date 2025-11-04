@@ -2,7 +2,9 @@
 
 enum uiFocusTypes {
 	none,
-	inventory,
+	inventory,			// managed via obj_backpack
+	skillDetails,		// managed via obj_ability_controller
+	statDetails,
 	menu,
 	shop
 }
@@ -27,27 +29,12 @@ skipPlayerUi = false
 cameraViewHeight = 1000
 cameraViewWidth = 1000
 
-ultimateFillPercent = 0
-ultimateBarWidth = 100
-ultimateBarHeight = 10
-
 drawDungeonInfo = true
-
 drawUltimateBar = false
 drawStatBars = true
 drawCurseBar = true
 drawPlayerSkills = true
 
-
-
-//healthPips = []
-//healthCurrent = 0
-//healthUpdateRate = 4
-//healthUpdateCd = 0
-//healthPerIcon = 10
-//healthPlayer = noone
-//healthDrawStart = new vec2(20, 39)
-//healthIconSpacing = 23
 
 // OTHER INFO IS DRAWN FROM obj_run_controller
 
@@ -55,6 +42,31 @@ drawPlayerSkills = true
 ///@param {real} _type			Uses enum uiFocusTypes
 setUiFocusType = function(_type) {
 	focusType = _type
+}
+
+///@description					Sets ui focus type based on movement and current state			
+///@param {real} _x				X Coordinate
+///@param {real} _y				Y Coordinate
+getUiFocusFromDirection = function(_x, _y) {
+	//create_toaster($"({_x}, {_y}) with focusType {focusType}")
+	// INVENTORY GROUP
+	if (focusType == uiFocusTypes.inventory) {
+		if (_x == -1) {
+			focusType = uiFocusTypes.statDetails
+		} else if (_y == 1) {
+			focusType = uiFocusTypes.skillDetails
+		}
+	} else if (focusType == uiFocusTypes.statDetails) {
+		if (_x == 1) {
+			focusType = uiFocusTypes.inventory
+		}
+	} else if (focusType == uiFocusTypes.skillDetails) {
+		if (_y == -1) {
+			focusType = uiFocusTypes.inventory
+		}
+	}
+	
+	//create_toaster("Focus type ID changed to: " + string(focusType))
 }
 
 ///@description					Sets a ui profile type for visibility
@@ -90,3 +102,4 @@ setUiProfileType = function(_type) {
 		break
 	}
 }
+

@@ -8,6 +8,7 @@ event_inherited()
 //level_up_abils_from_global()'
 
 name = "Phaedra"
+className = "Dancer"
 
 sprIdle = spr_phaedra
 sprWalking = spr_phaedra

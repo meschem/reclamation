@@ -22,6 +22,8 @@ create_instance(obj_toaster_controller)
 create_instance(obj_run_controller)
 create_instance(obj_input_controller)
 create_instance(obj_recipe_controller)
+create_instance(obj_player_stat_controller)
+create_instance(obj_text_controller)
 
 //if (debug_mode) {
 	create_instance(obj_debug_controller)
