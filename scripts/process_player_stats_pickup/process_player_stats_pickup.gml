@@ -1,8 +1,8 @@
 ///@description   Description
 function process_player_stats_pickup(){
 	var i, trinketLevel
-	var rollingScalarRange = 1
-	var rollingScalarReward = 1
+	var rollingScalarRange = 0
+	var rollingScalarReward = 0
 
 	with (obj_player) {
 		var player = id
@@ -53,6 +53,7 @@ function process_player_stats_pickup(){
 		bonusPickupRangeScalar = rollingScalarRange
 		bonusPickupRewardScalar = rollingScalarReward
 		
-		show_debug_message("Damage Scalar: " + string(bonusDamageScalar))
+		show_debug_message("Reward Scalar: " + string(bonusPickupRewardScalar))
+		show_debug_message("Range Scalar: " + string(bonusPickupRangeScalar))
 	}
 }

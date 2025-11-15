@@ -6,6 +6,7 @@ enum chestStates {
 	spawning,
 	closed,
 	open,
+	locked,
 	despawning
 }
 
@@ -21,7 +22,7 @@ active = false
 onPickup = function(_player) {
 	active = false
 	
-	display_level_merger_prompt()
+	display_level_merger_prompt(_player)
 	
 	audio_play_sound(snd_unlock_door, 1, false)
 	

@@ -17,6 +17,8 @@ hpBarDisplay = entityHpBarTypes.none
 
 walkAnimType = entityWalkAnimTypes.curves
 
+impactMaterial = enumImpactMaterials.bone
+
 deathParticles = [
 	obj_ptb_skel_bone_yel,
 	obj_ptb_skel_bone_yel,

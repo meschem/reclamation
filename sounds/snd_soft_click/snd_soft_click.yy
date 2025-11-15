@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.361066,
+  "duration":0.36106575,
   "exportDir":"",
   "name":"snd_soft_click",
   "parent":{

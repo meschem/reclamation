@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.447211,
+  "duration":0.44721088,
   "exportDir":"",
   "name":"snd_paper_slap",
   "parent":{

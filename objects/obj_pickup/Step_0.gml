@@ -55,6 +55,8 @@ if (!homingActive && lifeSpan >= 0) {
 	}
 }
 
+depth = depths.enemy - y - shadowOffset
+
 if (age % 1 == 0) {
 	if (target != noone) {
 		distanceToTarget = distance_to_object(target)
@@ -74,8 +76,12 @@ if (age % 1 == 0) {
 		}
 	
 		if (homesOnPlayer) {
-			if (!homingActive && distanceToTarget < homingRadius * target.bonusPickupRangeScalar) {
-				homingActive = true
+			if (!homingActive && age % 2 == 0) {
+				var _playerScalar = get_player_stat(enumPlayerStats.pickupRangeScalar)
+				
+				if (distanceToTarget < homingRadius * _playerScalar) {
+					homingActive = true
+				}
 			}
 	
 			if (homingActive) {

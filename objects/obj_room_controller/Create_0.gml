@@ -41,13 +41,19 @@ state = roomStates.init
 
 age = 0
 
-
 pauseDelay = 0
 timeDisplay = "0:00"
 timerActive = true
 showTimeDisplay = true
 singleRoomCombatComplete = false
 allowBaddieWrap = true
+
+chestSpawnRange = {
+	xMin: 0,
+	xMax: -1,
+	yMin: 0,
+	yMax: -1
+}
 
 
 spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
@@ -74,22 +80,34 @@ cameraOffset = new vec2()
 // ROOM SETUP
 // use obj_dungeon to create spawn phases
 
-//if (instance_number(obj_dungeon) > 0) {
-//	obj_run_controller.currentRoom.setupSpawner()
-	
-	//if (obj_run_controller.currentFloor == array_length(obj_dungeon.floors) - 1) {
-	//	finalLevel = true
-	//} else {
-	//	nextLevel = obj_dungeon.floors[obj_run_controller.currentFloor + 1].rooms[0].roomId
-	//}
-//}
-
-
 pause = false
 hitStun = 0
 
+///@description			Manual checks pause state based on active UI components
+updatePauseState = function() {
+	var _paused = false
+	
+	with (obj_menu) {
+		if (!closing) {
+			_paused = true
+		}
+	}
+	
+	with (obj_backpack) {
+		if (isOpen) {
+			_paused = true
+		}
+	}
+	
+	pause = _paused
+}
+
 isPaused = function() {
 	if (hitStun > 0) {
+		return true
+	}
+	
+	if (category == roomCategories.inactive) {
 		return true
 	}
 	
@@ -147,6 +165,8 @@ initCombat = function() {
 		// Run once per map init in a run
 		if (!obj_run_controller.mainRoomInit) {
 			process_map_events()
+			setup_chests_on_map()
+			
 			obj_run_controller.mainRoomInit = true
 			
 			with (obj_room_exit) {

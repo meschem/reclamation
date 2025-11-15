@@ -4,15 +4,15 @@ event_inherited()
 name = "Fire Orb"
 description = "Spins in place after hitting a target or traveling a max distance."
 spawnDistance = 8
-baseDamage = 10
+baseDamage = 15
 spawnObject = obj_firespit
-spawnCount = 5
+spawnCount = 1
 bonusPoisonDamageScalar = 0
 bonusDamageOnBounce = 0
 
 pierceChance = 0
 
-spread = 50
+spread = 25
 spreadScalar = 1
 
 range = 220
@@ -24,7 +24,7 @@ velocityScalar = 1
 bounces = false
 poisons = false
 
-maxCd = 50
+maxCd = 5
 
 stats = [
 	new weaponStat(enumWeaponStats.damage, id),
@@ -63,8 +63,8 @@ use = function() {
 		_spread = _totalSpread / (spawnCount - 1)
 		_angle = owner.attackAngle - (_totalSpread / 2)
 	} else {
-		_spread = 0
-		_angle = owner.attackAngle
+		_spread = _totalSpread
+		_angle = owner.attackAngle + (random_sign() * random(_spread / 2))
 	}
 	
 	for (var i = 0; i < spawnCount; i++) {

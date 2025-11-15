@@ -25,7 +25,7 @@ function get_random_talents(count) {
 			
 			
 		for (i = 0; i < min(count, length); i++) {
-			var randomIndex = irandom(array_length(refIndex) - i - 1)
+			randomIndex = irandom(array_length(refIndex) - i - 1)
 
 			selectedTalents[i] = availableTalents[refIndex[randomIndex]]
 				

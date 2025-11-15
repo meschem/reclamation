@@ -19,7 +19,7 @@ function filter_instance(instance, filter) {
 			
 			show_message($"{key} _vs_ {_value}")
 	
-			if (key != _value) {
+			if (_key != _value) {
 				returnValue = false
 			}
 		}

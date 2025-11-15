@@ -20,7 +20,7 @@ updateCd = 0
 player = noone
 playerIsLeveling = false
 
-drawStart = new vec2(228, 327)
+drawStart = new vec2(228, 330)
 drawWidth = 0
 drawHeight = sprite_get_height(spr_ui_xp_bar_back)
 drawWidthFilling = 0

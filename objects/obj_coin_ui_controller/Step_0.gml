@@ -1,5 +1,5 @@
 
-if (!setup || game_is_paused()) {
+if (!setup) {
 	return 0
 }
 
@@ -13,4 +13,10 @@ if (goldCurrent != player.gold) {
 	} else {
 		goldCurrent += _add * 0.1
 	}	
+}
+
+if (instance_number(obj_shop_menu_mergers) > 0) {
+	x = 216
+} else {
+	x = drawStart.x
 }

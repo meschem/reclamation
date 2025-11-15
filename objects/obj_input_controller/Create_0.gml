@@ -16,7 +16,8 @@ enum bindActions {
 	left,
 	down,
 	confirm,
-	back
+	back,
+	use
 }
 
 enum pressType {
@@ -63,6 +64,11 @@ bindConfirm = {
 bindBack = {
 	controller: XBOX_INPUT_B,
 	keyboard: vk_escape
+}
+
+bindUse = {
+	controller: XBOX_INPUT_A,
+	keyboard: ord("G")
 }
 
 lastMouseX = mouse_x

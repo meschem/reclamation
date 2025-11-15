@@ -20,8 +20,8 @@ lastCast = -99
 autoCast = false
 canAutoCast = false
 
-baseDamage = [50, 75, 100, 125, 150]
-baseRadius = [100, 100, 100, 125, 150]
+baseDamage = [25, 50, 75, 100, 100]
+baseRadius = [75, 75, 75, 75, 100]
 stunLength = [2, 3, 4, 4, 5]
 
 activate_war_stomp_active(-1) // not used, ease of reference

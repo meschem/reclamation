@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_locked_chest_cost",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_locked_chest_cost",
+  "parent":{
+    "name":"pickups",
+    "path":"folders/Scripts/pickups.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -48,8 +48,14 @@ if (target == noone) {
 create_chain_lightning_fx(spawnPoint, new vec2(target.x, target.y))
 
 audio_play_sound(
-	snd_clicky_zap, 0, false, 0.8, 0, random_range(0.9, 1.1)
+	snd_clicky_zap, 0, false, 0.6, 0, random_range(0.9, 1.1)
 )
+
+audio_play_random_sound([snd_punch_1, snd_punch_2, snd_punch_3], 1, false, random_range(1.2, 1.4))
+
+//audio_play_sound(
+//	snd_short_blip, 1, false, 0.1, 0.08, random_range(0.8, 1.2)
+//)
 		
 if (bounces > 0) {
 	var inst = instance_create_depth(target.x, target.y, depths.fx, obj_chain_lit_caster)

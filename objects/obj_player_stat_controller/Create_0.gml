@@ -25,7 +25,7 @@ getPlayerStatValue = function(_playerStat, _player = noone) {
 	}
 	
 	var _runningBonus = 0
-	
+
 	switch (_playerStat) {
 		case enumPlayerStats.maxHp:
 			return _player.maxHp

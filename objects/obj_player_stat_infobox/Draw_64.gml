@@ -20,6 +20,16 @@ _y += string_height(titleText)
 _y += descriptionPaddingTop
 
 draw_set_font(descriptionFont)
+draw_set_color(c_red)
+//draw_text_ext(x + padding.left, _y, descriptionText, lineSpacingSm, width - padding.left - padding.right)
+
 draw_set_color(c_white)
-draw_text_ext(x + padding.left, _y, descriptionText, lineSpacingSm, width - padding.left - padding.right)
+draw_highlighted_text(
+	x + padding.left,
+	_y, descriptionText,
+	width - padding.left - padding.right,
+	global.colorMapStruct,
+	13,
+)
+
 _y += string_height_ext(descriptionText, lineSpacingSm, width - padding.left - padding.right) + lineSpacing

@@ -13,7 +13,7 @@ maxTextWidth = width - (paddingX * 2)
 owner = get_first_player()
 
 statType = enumCharStats.str
-statAmount = 1
+statAmount = irandom_range(1, 3)
 
 stats = []
 

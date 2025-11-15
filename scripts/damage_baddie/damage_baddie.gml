@@ -22,6 +22,18 @@ function damage_baddie(target, amount, isCrit = false, critMultiplier = 2, force
 		amount *= critMultiplier
 	
 	target.hp -= amount
+	
+	with (obj_run_stats_controller) {
+		var _name = object_get_name(other.object_index)
+		
+		if (variable_struct_exists(damageStats, _name)) {
+			var _curAmount = struct_get(damageStats, _name)
+			var _newAmount = _curAmount + amount
+			struct_set(damageStats, _name, _newAmount)
+		} else {
+			struct_set(damageStats, _name,  amount)
+		}
+	}
 
 	// If show dmg numbers is on
 	if (true) {

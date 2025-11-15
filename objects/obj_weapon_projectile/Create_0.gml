@@ -29,7 +29,7 @@ damageFrameCooldown = 60 // not used yet...
 
 shadowSprite = spr_war_hammer_shadow
 
-soundOnHit = snd_clack
+soundOnHit = snd_thud_impact
 
 var owner = obj_player.id // get_player_target()
 

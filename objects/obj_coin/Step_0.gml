@@ -3,10 +3,12 @@ event_inherited()
 var _inst = instance_place(x, y, obj_player)
 
 if (_inst != noone) {
-	audio_play_sound(snd_soft_click, 1, false)
-	add_gold(pickupValue * target.bonusPickupRewardScalar)
+	var _goldToAdd = pickupValue * get_player_stat(enumPlayerStats.pickupRewardScalar, _inst)
 	
-	create_pickup_text(x, y, pickupValue, pickupTextStyles.gold)
+	audio_play_sound(snd_soft_click, 1, false)
+	add_gold(_goldToAdd)
+	
+	create_pickup_text(x, y, _goldToAdd, pickupTextStyles.gold)
 	
 	with (obj_equipment) {
 		if (owner == other.target) {

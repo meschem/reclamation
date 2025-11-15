@@ -18,3 +18,5 @@ hpMax = baddie_hp_very_high
 hp = hpMax
 
 add_baddie_gold_brutal
+
+impactMaterial = enumImpactMaterials.flesh

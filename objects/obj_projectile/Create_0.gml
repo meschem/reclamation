@@ -10,6 +10,8 @@ enum projectileSeekStyles {
 xVel = 0
 yVel = 0
 
+reflectOffsetY = 10
+
 ///@description			Gets the velocity of the object
 ///return {real}		
 getVelocity = function () {

@@ -105,6 +105,17 @@ ultimateCharge = baddie_ultimate_charge_fodder
 
 damageOnHit = baddie_damage_normal
 
+reflectOffsetY = 10
+
+enum enumImpactMaterials {
+	bone,
+	flesh,
+	metal,
+	stone
+}
+
+impactMaterial = enumImpactMaterials.bone
+
 // START BUFFS
 
 stunLength = 0

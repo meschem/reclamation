@@ -3,7 +3,7 @@
 ///param {real} xOffset			X offset to add
 ///param {real} yOffset			Y offset to add
 
-function center_view(inst, xOffset = 0, yOffset = 0) {
+function center_view(inst, xOffset = 0, yOffset = 0, _rate = 0.05) {
 	var viewHeight = view_height()
 	var viewWidth = view_width()
 	var minReposDistance = 0
@@ -27,7 +27,7 @@ function center_view(inst, xOffset = 0, yOffset = 0) {
 		resultVec = get_vec2_between_two_vec2(
 			new vec2(xCur, yCur),
 			new vec2(targetX, targetY),
-			0.05
+			_rate
 		)
 	} else {
 		resultVec = new vec2(targetX, targetY)

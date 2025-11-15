@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
 age++
 
 if (age % spawnRate == 0) {
@@ -15,8 +14,6 @@ if (age > stf(6) && age % spawnRateWraith == 0) {
 if (age > stf(12) && age % spawnRateChamp == 0) {
 	spawn_baddie(obj_skeleton_champion_cursed, 1)
 }
-
-
 
 if (curseLayerDraw) {
 	curseBlend = min(1, age / curseBlendAgeMax)

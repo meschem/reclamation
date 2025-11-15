@@ -17,7 +17,8 @@ statsOreGained = 0
 statsXpGained = 0
 statsRunesGained = 0
 
-damageStats = []
+damageStats = {}
+
 ///@description				Gets the NAME of a stat to base used for score screen
 ///@param {real} _stat		Stat to get. Uses enum enumRunStats
 ///@return {string}

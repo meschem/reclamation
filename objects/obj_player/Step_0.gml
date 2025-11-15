@@ -112,4 +112,3 @@ if (xVel > 0.05) {
 } else if (xVel < -0.05) {
 	image_xscale = -1
 }
-

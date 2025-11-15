@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.258254,
+  "duration":0.25825396,
   "exportDir":"",
   "name":"snd_gravel_impact",
   "parent":{

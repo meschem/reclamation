@@ -9,7 +9,7 @@ shopActive = false					// used for initialization
 shopOpen = false
 itemCountMax = 6
 
-mapIcon = spr_poi_generic
+mapIcon = spr_poi_shop
 
 ///@description					Sets up gear for the shop
 ///@param {real} _count			Amount of items to add

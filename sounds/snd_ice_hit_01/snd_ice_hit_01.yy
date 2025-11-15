@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.3752381,
+  "duration":0.58630383,
   "exportDir":"",
   "name":"snd_ice_hit_01",
   "parent":{

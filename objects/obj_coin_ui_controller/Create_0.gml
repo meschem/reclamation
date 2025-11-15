@@ -15,6 +15,8 @@ drawFont = font_alagard
 drawStart = new vec2(18, 18)
 drawTextOffset = new vec2(14, -7)
 
+drawFrameOffset = new vec2()
+
 persistent = true
 
 setup = function(_player) {

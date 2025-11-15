@@ -78,7 +78,12 @@ function activate_war_stomp_active(level) {
 					inst = instance_create_depth(target.x, target.y, depths.fx, obj_particle_single_cycle)
 					inst.sprite_index = spr_particle_lightning_medium
 
-					damage_baddie(target, amount, false, 2, 1.5)
+					with (obj_ability_war_stomp_active) {
+						if (id == _abilityObj) {
+							damage_baddie(target, amount, false, 2, 1.5)
+						}
+					}
+					
 				}
 			}
 		}

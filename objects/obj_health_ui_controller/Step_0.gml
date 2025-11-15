@@ -26,6 +26,7 @@ if (playerHealthMax < healthMax) {
 		var _heart = create_instance(obj_ui_player_heart)
 		_heart.x = drawStart.x + (array_length(pips) * iconSpacing)
 		_heart.y = drawStart.y
+		_heart.controller = id
 	
 		array_push(pips, _heart)
 	}
@@ -39,7 +40,10 @@ if (updateCd <= 0) {
 		updateCd = updateRate
 		
 		var _index = healthCurrent / healthPerIcon - 1
-		pips[_index].sprite_index = pips[_index].sprDamage
+		
+		if (_index < array_length(pips)) {
+			pips[_index].sprite_index = pips[_index].sprDamage	
+		}		
 		
 		healthCurrent -= healthPerIcon
 	} else if (playerHealthCur > healthCurrent) {

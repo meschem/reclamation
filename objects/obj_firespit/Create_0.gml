@@ -6,7 +6,7 @@ angleSpriteToVelocity = false
 
 distanceMax = 150
 
-damageDirect = 20
+damageDirect = 30
 targetsMax = 1
 targetsHit = 0
 

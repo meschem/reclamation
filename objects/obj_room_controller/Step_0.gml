@@ -9,8 +9,8 @@ if (hitStun > 0) {
 	hitStun--
 }
 
-if (game_is_paused()) {
-	return 0
+if (!game_is_paused()) {
+	age++
 }
 
 if (keyboard_check_pressed(vk_f9)) { 
@@ -18,13 +18,16 @@ if (keyboard_check_pressed(vk_f9)) {
 	completeOvertime()
 }
 
-age++
+//age++
 
 if (pauseDelay > 0) {
 	pauseDelay--
 }
 
+//create_toaster(category)
+
 if (state == roomStates.init) {
+	//show_message("initiating, " + string(category))
 	if (category == roomCategories.boss) {
 		initBoss()
 	}

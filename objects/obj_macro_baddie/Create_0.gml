@@ -22,14 +22,14 @@
 // Variable: hp / hpMax
 #macro baddie_hp_very_low 5
 #macro baddie_hp_low 20
-#macro baddie_hp_medium 35
-#macro baddie_hp_high 50
-#macro baddie_hp_very_high 100
-#macro baddie_hp_massive 200
-#macro baddie_hp_ultra_massive 500
-#macro baddie_hp_elite_minion 150
-#macro baddie_hp_elite 500
-#macro baddie_hp_boss 1000
+#macro baddie_hp_medium 40
+#macro baddie_hp_high 80
+#macro baddie_hp_very_high 150
+#macro baddie_hp_massive 400
+#macro baddie_hp_ultra_massive 800
+#macro baddie_hp_elite_minion 400
+#macro baddie_hp_elite 600
+#macro baddie_hp_boss 1500
 
 // Move Accel
 // Variable: moveAccel

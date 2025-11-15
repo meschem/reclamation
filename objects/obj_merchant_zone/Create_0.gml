@@ -6,8 +6,6 @@ merchant = noone					// window dressing for the moment
 shopType = shopTypes.equipment
 shopActive = false
 
-mapIcon = spr_poi_generic
-
 //playerInArea = false
 //controllerInput = gp_face1
 //keyboardInput = "G"

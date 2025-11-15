@@ -62,6 +62,8 @@ damageStatBoostStr = 0
 damageStatBoostDex = 0
 damageStatBoostInt = 0
 
+damager = id
+
 owner = noone
 
 ///@description					Gets damage the projectile should deal
@@ -94,6 +96,8 @@ getKnockback = function() {
 	
 	_knockback += bonusKnockback
 	_knockback *= knockbackScalar
+	
+	_knockback *= get_player_stat(enumPlayerStats.knockbackScalar)
 	
 	return _knockback
 }

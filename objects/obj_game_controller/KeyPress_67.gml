@@ -1,15 +1,20 @@
 
 //instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_coin_stack)
 
-with (obj_player) {
-	baseStr = 100
-	baseDex = 100
-	baseInt = 100
-}
+//with (obj_player) {
+//	baseStr = 100
+//	baseDex = 100
+//	baseInt = 100
+//}
 
-process_player_stats()
+//process_player_stats()
 
-create_toaster("Stats set to 100")
+//create_toaster("Stats set to 100")
+
+obj_debug_controller.checkType = debugCheckTypes.struct
+obj_debug_controller.structInfo = obj_run_stats_controller.damageStats
+
+//show_message(obj_run_stats_controller.damageStats)
 
 //var _rolls = []
 //var _roll = 0

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.208345,
+  "duration":0.20834467,
   "exportDir":"",
   "name":"snd_bottlecap_3",
   "parent":{

@@ -33,7 +33,7 @@ onStep = function() {
 			var _particle = instance_create_depth(_baddie.x, _baddie.y, depths.fx, obj_particle_single_cycle)
 			_particle.sprite_index = spr_flare_up
 			
-			var _particle = instance_create_depth(_baddie.x, _baddie.y, depths.fx, obj_particle_single_cycle)
+			_particle = instance_create_depth(_baddie.x, _baddie.y, depths.fx, obj_particle_single_cycle)
 			_particle.sprite_index = spr_flare_up_outline
 			_particle.image_blend = global.colorYellow
 		}

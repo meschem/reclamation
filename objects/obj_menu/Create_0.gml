@@ -34,6 +34,7 @@ display = true
 focused = true
 enabled = true
 canClose = true
+closing = false
 
 buttons = []		// array of obj_menu_botton
 
@@ -63,6 +64,8 @@ show = function() {
 }
 
 close = function() {
+	closing = true
+	
 	for (var i = 0; i < array_length(buttons); i++) {
 		instance_destroy(buttons[i])
 	}
@@ -73,9 +76,13 @@ close = function() {
 		parentMenu.show()
 	}
 	
-	if (instance_number(obj_menu) == 1) {
-		set_game_pause_state(false)
+	with (obj_room_controller) {
+		updatePauseState()
 	}
+	
+	//if (instance_number(obj_menu) == 1) {
+	//	set_game_pause_state(false)
+	//}
 	
 	instance_destroy()
 }

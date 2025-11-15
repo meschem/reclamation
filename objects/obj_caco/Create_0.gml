@@ -14,6 +14,8 @@ sprIdle = spr_caco
 sprWalking = spr_caco
 sprSlam = spr_caco
 
+hp = 40
+maxHp = 40
 baseMaxHp = 40
 baseMoveSpeedMax = 1.25
 baseMaxArmor = 0

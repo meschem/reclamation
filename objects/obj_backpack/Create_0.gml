@@ -3,18 +3,27 @@
 depth = -500
 persistent = true
 
+enum backpackStates {
+	active,
+	confirming,
+}
+
 slots = []
+
+state = backpackStates.active
 
 randomItems = [
 	//obj_mg_venomleaf,
-	//obj_mg_black_ichor
-	//obj_mg_opaque_hourglass
-	//obj_mg_goldleaf
+	//obj_mg_black_ichor,
+	//obj_mg_opaque_hourglass,
+	//obj_mg_goldleaf,
 	//obj_mg_golden_puzzlebox,
 	//obj_mg_frost_walkers,
 	//obj_mg_fire_salt,
 	//obj_mg_cinder_stone,
-	obj_mg_crown_of_destruction
+	//obj_mg_crown_of_destruction
+	obj_mg_ironsilk,
+	obj_mg_beast_blood
 ]
 
 inputsKeyboard = {
@@ -309,7 +318,9 @@ createDestroyPrompt = function() {
 	
 	_menu.destroySlotIndex = selectedSlot
 	_menu.backpackOwner = owner
+	_menu.focused = true
 	
+	state = backpackStates.confirming
 	focused = false
 }
 
@@ -398,6 +409,7 @@ open = function() {
 	audio_play_sound(snd_leather_heavy, 1, 0)
 	
 	isOpen = true
+	state = backpackStates.active
 	
 	set_ui_focus_type(uiFocusTypes.inventory)
 	

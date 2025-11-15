@@ -14,6 +14,18 @@ sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
 sprSlam = spr_jonah_slam
 
+hp = 50
+maxHp = 50
+baseMaxHp = 50
+
+baseMoveSpeedMax = 1.2
+baseMaxArmor = 0
+baseCritChance = 0
+baseCritMultiplier = 1.5
+baseAreaOfEffectScalar = 1
+baseAbilityCooldownScalar = 1
+baseAttackSpeedScalar = 1
+
 //sprIdle = spr_big_wizard
 //sprWalking = spr_big_wizard
 //sprSlam = spr_big_wizard
@@ -24,7 +36,8 @@ sprSlam = spr_jonah_slam
 
 availableWeapons = [
 	obj_weapon_greataxe,
-	obj_weapon_war_hammer
+	obj_weapon_war_hammer,
+	obj_weapon_throwing_hammer
 ]
 
 availableAbilities = [
@@ -39,7 +52,7 @@ availableUltimateAbilities = [
 	obj_ability_sword_of_heavens
 ]
 
-defaultWeapon = obj_weapon_greataxe
+defaultWeapon = obj_weapon_throwing_hammer
 
 activeAbility = obj_ability_war_stomp_active
 

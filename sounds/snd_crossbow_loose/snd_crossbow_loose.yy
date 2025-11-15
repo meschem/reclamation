@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.749796,
+  "duration":0.7497959,
   "exportDir":"",
   "name":"snd_crossbow_loose",
   "parent":{

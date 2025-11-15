@@ -47,6 +47,8 @@ angleInitVariance = 20
 zVelInitMin = -6			// Multiplied by magMultiplier
 zVelInitMax = -3
 
+reflectOffsetY = 6
+
 angleInit = 0				// Should be set by incoming damage
 magMultiplier = 1			// Should be set by incoming damage
 

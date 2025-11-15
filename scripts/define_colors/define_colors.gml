@@ -1,4 +1,4 @@
-///@description   Description
+///@description   Defines colors and color keyword struct
 function define_colors() {
 	with (obj_game_controller) {
 		color_red = make_color_rgb(230, 40, 106)
@@ -30,4 +30,36 @@ function define_colors() {
 	global.colorDarkRed = make_colour_rgb(231, 42, 127)
 	global.colorDarkGreen = make_color_rgb(47, 206, 141)
 	global.colorDarkBlue = make_color_rgb(32, 129, 204)
+	
+	global.colorMapStruct = {
+		Health: global.colorRed,
+		HP: global.colorRed,
+		Strength: global.colorOrange,
+		Str: global.colorOrange,
+		Dexterity: global.colorGreen,
+		Dex: global.colorGreen,
+		Intelligence: global.colorBlue,
+		Int: global.colorBlue,
+		Move_Speed: global.colorYellow,
+		Crit_Chance: global.colorOrange,
+		Crit_Multiplier: global.colorOrange,
+		Area_of_Effect: global.colorPurple,
+		AOE: global.colorPurple,
+		Ability_Cooldown: global.colorBlue,
+		Ability_CD: global.colorBlue,
+		Active_Ability_Cooldown: global.colorBlue,
+		Attack_Speed: global.colorGreen,
+		Knockback: global.colorOrange,
+		Projectile_Count: global.colorPurple,
+		Physical_Damage: global.colorOrange,
+		Magic_Damage: global.colorAqua,
+		Pickup_Range: global.colorYellow,
+		Pickup_Amount: global.colorYellow,
+		Pickup_Multiplier: global.colorYellow,
+		Luck: global.colorGreen,
+		Fire: global.colorRed,
+		Ice: global.colorBlue,
+		Lightning: global.colorYellow,
+		Ultimate_Charge_Rate: global.colorBlue,		
+	}
 }

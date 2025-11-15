@@ -76,7 +76,7 @@ bonusStr = 0
 bonusDex = 0
 bonusInt = 0
 
-baseMaxHp = 50
+baseMaxHp = 10
 baseMoveSpeedMax = 1.4
 baseMaxArmor = 0
 baseCritChance = 0.1
@@ -194,6 +194,8 @@ availableWeapons = [
 sprIdle = spr_jonah
 sprWalking = spr_jonah_walking
 sprSlam = spr_jonah_slam
+feetOffset = 8
+reflectOffsetY = 8
 
 animAbilityQueue = function() {}
 

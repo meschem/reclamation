@@ -82,7 +82,7 @@ knockbackSlowDuration = 0
 knockbackSlowHitFrame = 0
 knockbackMaxSpeedRatio = 0.25
 
-soundOnDeath = snd_wood_roll
+soundOnDeath = snd_punchy_pick
 deathParticleSpawnRange = new vec2(0, 0)
 deathParticles = []
 spawnedBy = noone

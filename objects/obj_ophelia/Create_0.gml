@@ -14,6 +14,8 @@ sprIdle = spr_ophelia
 sprWalking = spr_ophelia_walking
 sprSlam = spr_ophelia
 
+hp = 30
+maxHp = 30
 baseMaxHp = 30
 baseMoveSpeedMax = 1.5
 baseMaxArmor = 0

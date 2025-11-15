@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.231723,
+  "duration":0.23172335,
   "exportDir":"",
   "name":"snd_squishy_slice_assassinate",
   "parent":{

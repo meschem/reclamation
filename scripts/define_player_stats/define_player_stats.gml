@@ -1,7 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function define_player_stats() {
-	
 	var _key = 0
 	
 	_key = enumPlayerStats.maxHp
@@ -23,7 +22,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.str)
 			return string(statValue)
 		},
-		"Core stat. A precise representation of how many cinder blocks your can chop through in a single blow.\n\n * Increases |Physical Damage| by 1 per point.\n * Increases |Knockback| by 1 per point.\n * Increases |HP| by 1 per 10 points."
+		"Core stat. A precise representation of how many cinder blocks your can chop through in a single blow.\n\n * Increases |Physical_Damage| by 1 per point.\n * Increases |Knockback| by 1 per point.\n * Increases |HP| by 1 per 10 points."
 	)
 	
 	_key = enumPlayerStats.dex
@@ -34,7 +33,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.dex)
 			return string(statValue)
 		},
-		"Core stat. A marker for how quick you are on your feet and hands.\n\n * Increases |Attack Apeed|.\n * Improves |Active Ability Cooldown|.\n * Increases |Move Speed|."
+		"Core stat. A marker for how quick you are on your feet and hands.\n\n * Increases |Attack_Speed|.\n * Improves |Active_Ability_Cooldown|.\n * Increases |Move_Speed|."
 	)
 	
 	_key = enumPlayerStats.int
@@ -45,7 +44,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.int)
 			return string(statValue)
 		},
-		"Core stat. Represents how smart you actually are, not just how smart you think you are.\n\n * Increase |Magic Damage| by 1 per point.\n * Improves |Ability Cooldown|.\n * Improves |Ultimate Charge Rate|."
+		"Core stat. Represents how smart you actually are, not just how smart you think you are.\n\n * Increase |Magic_Damage| by 1 per point.\n * Improves |Ability_Cooldown|.\n * Improves |Ultimate_Charge_Rate|."
 	)
 	
 	_key = enumPlayerStats.damageScalar

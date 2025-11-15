@@ -21,4 +21,10 @@ with (obj_room_controller) {
 	_yOffset += cameraOffset.y
 }
 
-center_view(focusObject, _xOffset, _yOffset)
+var _centeringRate = centeringRate
+
+with (obj_room_controller) {
+	if (age < 2) _centeringRate = 1
+}
+
+center_view(focusObject, _xOffset, _yOffset, _centeringRate)

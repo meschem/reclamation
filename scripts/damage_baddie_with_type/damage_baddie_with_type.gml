@@ -11,7 +11,7 @@
 function damage_baddie_with_type(_target, _amount, _damageType, _attacker = noone, _isCrit = false, _critMultiplier = 2, _force = 1) {
 	if (_attacker == noone) {
 		_attacker = get_first_player()
-	}	
+	}
 
 	if (
 		_damageType == enumDamageTypes.normal ||
@@ -36,6 +36,18 @@ function damage_baddie_with_type(_target, _amount, _damageType, _attacker = noon
 	}
 	
 	_target.hp -= _amount
+		
+	with (obj_run_stats_controller) {
+		var _name = object_get_name(other.object_index)
+		
+		if (variable_struct_exists(damageStats, _name)) {
+			var _curAmount = struct_get(damageStats, _name)
+			var _newAmount = _curAmount + _amount
+			struct_set(damageStats, _name, _newAmount)
+		} else {
+			struct_set(damageStats, _name,  _amount)
+		}
+	}
 	
 	// If show dmg numbers is on
 	if (true) {

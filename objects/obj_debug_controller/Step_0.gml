@@ -14,14 +14,33 @@ if (state != debugControllerStates.hidden) {
 	var _txt = []
 	var _str = ""
 	
-	for (var i = 0; i < array_length(objectChecks); i++) {
-		_str = ""
-		_str += object_get_name(objectChecks[i])
-		_str += " - "
-		_str += string(instance_number(objectChecks[i]))
+	if (checkType == debugCheckTypes.objectCount) {
+		for (var i = 0; i < array_length(objectChecks); i++) {
+			_str = ""
+			_str += object_get_name(objectChecks[i])
+			_str += " - "
+			_str += string(instance_number(objectChecks[i]))
 		
-		array_push(_txt, _str)
-	}	
+			array_push(_txt, _str)
+		}	
+	} else if (checkType == debugCheckTypes.struct) {
+		var _names = struct_get_names(structInfo)
+		
+		//show_message(_names)
+		
+		for (var i = 0; i < array_length(_names); i++) {
+			var _val = struct_get(structInfo, _names[i])
+			//show_message(_val)
+			_str = ""
+			_str += _names[i]
+			_str += " - "
+			_str += string(_val)
+			
+			array_push(_txt, _str)
+		}
+		
+		//show_message(_names)
+	}
 	// End Active Debugging
 	
 	textBlobs = _txt

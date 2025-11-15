@@ -29,6 +29,8 @@ mainRoomAge = 0
 mainRoomInit = false
 runIsActive = false
 
+lockedChestsOpened = 0
+
 // modifies main room spawn location
 modifySpawnPos = false
 modifySpawnLocation = new vec2()
@@ -36,8 +38,8 @@ modifySpawnLocation = new vec2()
 curseAge = 0
 curseActive = false
 curseBoostCd = mtf(1)		// How often the curse "boost" stats kick in
-curseAgeMax = mtf(4)		// When the curse kicks in
-curseAgeFinal = mtf(12)		// The absolute max lenght the curse can be extended to
+curseAgeMax = mtf(10)		// When the curse kicks in
+curseAgeFinal = mtf(15)		// The absolute max length the curse can be extended to
 
 finalLevelRoom = rm_dungeon_end
 endScreen = false

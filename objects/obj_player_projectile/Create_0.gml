@@ -96,7 +96,7 @@ damageFrameCooldown = 60 // frames before the same target can be hit again
 shadowSprite = spr_war_hammer_shadow
 shadowOffsetY = 5
 
-soundOnHit = snd_clack
+soundOnHit = snd_thud_impact
 
 critChance = 0
 critMultiplier = 2
@@ -139,6 +139,8 @@ poisons = false
 poisonStacksOnHit = 0
 poisonDuration = seconds_to_frames(6)
 bonusPoisonDamageScalar = 0
+
+reflectOffsetY = 10
 
 setup_lifecycle_events()
 

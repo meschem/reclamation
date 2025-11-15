@@ -2,11 +2,12 @@
   "$GMTileSet":"v1",
   "%Name":"tileset_blue_forest",
   "autoTileSets":[
-    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[41,44,43,21,24,40,6,20,23,5,42,22,61,60,62,80,],},
-    {"$GMAutoTileSet":"","%Name":"autotile_2","closed_edge":false,"name":"autotile_2","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,80,],},
-    {"$GMAutoTileSet":"","%Name":"autotile_3","closed_edge":false,"name":"autotile_3","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[107,110,109,87,90,106,10,86,89,9,108,88,127,126,128,80,],},
-    {"$GMAutoTileSet":"","%Name":"autotile_4","closed_edge":false,"name":"autotile_4","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[53,56,55,33,36,52,12,32,35,11,54,34,73,72,74,47,],},
-    {"$GMAutoTileSet":"","%Name":"autotile_5","closed_edge":false,"name":"autotile_5","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[113,116,115,93,96,112,14,92,95,14,114,94,133,132,134,80,],},
+    {"$GMAutoTileSet":"","%Name":"Deep Water from Grass","closed_edge":false,"name":"Deep Water from Grass","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[41,44,43,21,24,40,6,20,23,5,42,22,61,60,62,80,],},
+    {"$GMAutoTileSet":"","%Name":"Shallow Water","closed_edge":false,"name":"Shallow Water","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,80,],},
+    {"$GMAutoTileSet":"","%Name":"Dirt","closed_edge":false,"name":"Dirt","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[107,110,109,87,90,106,10,86,89,9,108,88,127,126,128,80,],},
+    {"$GMAutoTileSet":"","%Name":"Deep Water from Shallow","closed_edge":false,"name":"Deep Water from Shallow","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[53,56,55,33,36,52,12,32,35,11,54,34,73,72,74,47,],},
+    {"$GMAutoTileSet":"","%Name":"Out of Bounds","closed_edge":false,"name":"Out of Bounds","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[113,116,115,93,96,112,14,92,95,14,114,94,133,132,134,80,],},
+    {"$GMAutoTileSet":"","%Name":"Dark Grass","closed_edge":false,"name":"Dark Grass","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[157,176,175,153,156,172,16,152,155,15,174,154,193,192,194,80,],},
   ],
   "macroPageTiles":{
     "SerialiseHeight":20,

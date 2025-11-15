@@ -28,6 +28,8 @@ yPos = 80
 shakeForce = 0
 shakeDecay = 0.25
 
+centeringRate = 0.05
+
 ///@description						Applies screenshake
 ///@param {real} _amount			Amount to apply. Try using screenshake_ macros.
 applyShake = function(_amount = screenshake_med) {

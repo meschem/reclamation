@@ -11,6 +11,7 @@ distanceToTarget = 0
 angleToTarget = 0
 
 floatOffset = 0
+reflectOffsetY = 10
 
 flashBlendDuration = 0		// fades from white to base color over X frames, 0 is no blend
 flashBlendRatio = 1

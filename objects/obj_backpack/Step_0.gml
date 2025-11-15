@@ -11,6 +11,12 @@ if (!focused) {
 	return 0
 }
 
+var _prompt = instance_number(obj_destroy_merger_confirm_menu) > 0
+
+if (_prompt) {
+	return 0
+}
+
 //Temp item testing
 if (keyboard_check_pressed(ord("O"))) {
 	var _item = create_instance(array_random(randomItems))
@@ -23,21 +29,46 @@ if (keyboard_check_pressed(ord("O"))) {
 selectChange.x = 0
 selectChange.y = 0
 
-if (keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)) {
-	selectChange.y = -1
+var _dir = get_player_4_direction_input()
+var _selectChange = false
+
+switch (_dir) {
+	case enumDirectionInput.up:
+		selectChange.y = -1
+		_selectChange = true		
+	break
+	
+	case enumDirectionInput.down:
+		selectChange.y = 1
+		_selectChange = true
+	break
+	
+	case enumDirectionInput.right:
+		selectChange.x = 1
+		_selectChange = true
+	break
+	
+	case enumDirectionInput.left:
+		selectChange.x = -1
+		_selectChange = true
+	break
 }
 
-if (keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl)) {
-	selectChange.x = -1
-}
+//if (keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)) {
+//	selectChange.y = -1
+//}
 
-if (keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd)) {
-	selectChange.y = 1
-}
+//if (keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl)) {
+//	selectChange.x = -1
+//}
 
-if (keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr)) {
-	selectChange.x = 1
-}
+//if (keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd)) {
+//	selectChange.y = 1
+//}
+
+//if (keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr)) {
+//	selectChange.x = 1
+//}
 
 if (
 	keyboard_check_pressed(inputsKeyboard.toggleMerge) ||
@@ -89,7 +120,7 @@ if (selectChange.x != 0) {
 	}
 }
 
-if (selector != noone) {
+if (selector != noone && instance_exists(selector)) {
 	selector.x = slots[selectedSlot].x
 	selector.y = slots[selectedSlot].y
 }

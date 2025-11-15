@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.57458,
+  "duration":0.5745805,
   "exportDir":"",
   "name":"snd_punch_1",
   "parent":{

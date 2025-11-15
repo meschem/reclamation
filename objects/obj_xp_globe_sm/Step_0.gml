@@ -1,8 +1,8 @@
 event_inherited()
 
-var inst = instance_place(x, y, obj_player)
+var _inst = instance_place(x, y, obj_player)
 
-if (inst != noone) {
+if (_inst != noone) {
 	//audio_play_sound(snd_soft_click, 1, false)
 	//add_player_health(pickupValue)
 	
@@ -10,9 +10,13 @@ if (inst != noone) {
 	
 	//txt.fontColor = get_color(colors.red)
 	
-	create_pickup_text(x, y, pickupValue, pickupTextStyles.xp)
+	var _value = pickupValue * get_player_stat(enumPlayerStats.pickupRewardScalar, _inst)
+	
+	obj_player.xp += _value	
+	create_pickup_text(x, y, _value, pickupTextStyles.xp)
 	
 	instance_destroy()
+	check_for_level_up()
 }
 
 set_float_range()

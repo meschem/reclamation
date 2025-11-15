@@ -5,6 +5,11 @@ enum debugControllerStates {
 	full
 }
 
+enum debugCheckTypes {
+	objectCount,
+	struct
+}
+
 drawX = 5
 drawY = 5
 padding = 4
@@ -14,6 +19,9 @@ width = 300
 height = 500
 draw = false
 state = debugControllerStates.hidden
+checkType = debugCheckTypes.objectCount
+
+structInfo = {} // must be set manually somewhere
 
 debugFont = font_dogica_s
 bgAlpha = 1

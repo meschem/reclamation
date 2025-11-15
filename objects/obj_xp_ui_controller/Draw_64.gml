@@ -1,4 +1,8 @@
 
+if (obj_ui_controller.skipPlayerUi) {
+	return 0
+}
+
 draw_sprite(sprBack, 0, drawStart.x, drawStart.y)
 draw_sprite_part(sprFilling, 0, 0, 0, drawWidthFilling, drawHeight, drawStart.x, drawStart.y)
 draw_sprite_part(sprFill, 0, 0, 0, drawWidth, drawHeight, drawStart.x, drawStart.y)

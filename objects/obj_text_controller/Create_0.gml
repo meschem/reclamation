@@ -11,6 +11,9 @@ colorStruct = {
     Level: c_fuchsia
 }
 
-textToDraw = "The |Health| of the target dropped to zero after a |Critical| hit. Use your |Mana| wisely. This text should wrap to multiple lines automatically if it exceeds the maximum width specified, allowing you to display large amounts of information such as new quests or item descriptions. You gained |XP| and are now |Level| 10."
-maxWidth = 300
+drawTest = false
+
+textToDraw = "Core stat.\n\nA precise representation of how many cinder blocks your can chop through in a single blow.\n\n * Increases |Physical_Damage| by 1 per point.\n * Increases |Knockback| by 1 per point.\n * Increases |HP| by 1 per 10 points."
+//textToDraw = "I did play and beat 2 Juris last night, I think I 2-0'd each. small pool and all, but I actually relied on being a bit aggressive myself which I think works fairly well against Juri. I didn't realize how her charges worked before"
+maxWidth = 200
 lineHeight = string_height("A")

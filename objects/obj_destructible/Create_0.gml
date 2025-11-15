@@ -43,6 +43,14 @@ deathParticleSpawnRange = new vec2(12, 12)
 
 revealList = []
 
+shakeLastHp = -1
+shakeOnHit = 7
+shakeCur = 0
+shakeOffsetX = 0
+shakeOffsetY = 0
+
+reflectOffsetY = 10
+
 onDamaged = function() {}
 onDeath = function() {}
 

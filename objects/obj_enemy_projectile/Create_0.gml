@@ -46,6 +46,8 @@ standardDeflectBlend = c_white
 
 target = get_player_target()
 
+reflectOffsetY = 10
+
 onInstanceCollision = function(inst) {
 	if (destroyOnHit) {
 		instance_destroy()

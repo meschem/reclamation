@@ -4,6 +4,6 @@ event_inherited()
 name = "Ironsilk"
 description = "Pliable and strong."
 
-bonusDex = 5
+bonusStr = 5
 
 //addCharStatBlocks()

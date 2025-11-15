@@ -147,7 +147,7 @@ createFloor = function(_index, _difficulty = 1) {
 ///@param {real} _reward			Uses enum roomRewards
 ///@param {real} _phaseCount		Number of phases
 ///@return {struct.dungeonRoom}
-createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket, _phaseCount) {
+createRoom = function(_roomType, _difficulty, _reward = roomRewards.trinket, _phaseCount = 4) {
 	/*
 		1. Get a random spawn for each potential baddie slot (pest -> veryLarge / boss)
 		2. Calls the biome instance "createRoom" function to get a room

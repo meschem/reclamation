@@ -19,6 +19,8 @@ if (mouse_check_button_released(mb_left)) {
 	}
 }
 
+var _dir = get_player_4_direction_input()
+
 if (keyboard_check_released(vk_enter) || gamepad_button_check_released(0, gp_face1)) {
 	activate_button(buttons[selectedButtonIndex])
 	buttonPressed = false
@@ -32,9 +34,9 @@ if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, gp_star
 } else if (keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(0, gp_face1)) {
 	buttonPressed = true
 } else {
-	if (keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0, gp_padd)) {
+	if (_dir == enumDirectionInput.down) {
 		buttonFocus = 1
-	} else if (keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(0, gp_padu)) {
+	} else if (_dir == enumDirectionInput.up) {
 		buttonFocus = -1
 	}
 }
