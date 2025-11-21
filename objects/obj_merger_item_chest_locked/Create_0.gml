@@ -26,6 +26,8 @@ contents = []
 active = false
 guiPos = get_ui_pos(id)
 
+reflectOffsetY = 8
+
 open = function() {
 	active = false
 	

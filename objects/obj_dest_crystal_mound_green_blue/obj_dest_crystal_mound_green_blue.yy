@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_key_royal",
+  "%Name":"obj_dest_crystal_mound_green_blue",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_key_royal",
+  "name":"obj_dest_crystal_mound_green_blue",
   "overriddenProperties":[],
   "parent":{
-    "name":"pickups",
-    "path":"folders/Objects/pickups.yy",
+    "name":"doodads",
+    "path":"folders/Objects/doodads.yy",
   },
   "parentObjectId":{
-    "name":"obj_key",
-    "path":"objects/obj_key/obj_key.yy",
+    "name":"obj_destructible",
+    "path":"objects/obj_destructible/obj_destructible.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_key_royal",
-    "path":"sprites/spr_key_royal/spr_key_royal.yy",
+    "name":"spr_crystal_mound_green_blue",
+    "path":"sprites/spr_crystal_mound_green_blue/spr_crystal_mound_green_blue.yy",
   },
   "spriteMaskId":null,
   "visible":true,

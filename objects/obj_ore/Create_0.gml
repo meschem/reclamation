@@ -7,6 +7,8 @@ shadowOffset = 6
 
 lifeSpan = -1
 
+reflectOffsetY = 14
+
 init_floating(2, 90)
 
 onPickup = function(_player) {

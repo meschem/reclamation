@@ -1,6 +1,6 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"tileset_blue_forest_backup",
+  "%Name":"tileset_blue_forest_with_water",
   "autoTileSets":[
     {"$GMAutoTileSet":"","%Name":"Deep Water from Grass","closed_edge":false,"name":"Deep Water from Grass","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[41,44,43,21,24,40,6,20,23,5,42,22,61,60,62,80,],},
     {"$GMAutoTileSet":"","%Name":"Shallow Water","closed_edge":false,"name":"Shallow Water","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,80,],},
@@ -19,7 +19,7 @@
     ],
     "TileDataFormat":1,
   },
-  "name":"tileset_blue_forest_backup",
+  "name":"tileset_blue_forest_with_water",
   "out_columns":20,
   "out_tilehborder":2,
   "out_tilevborder":2,

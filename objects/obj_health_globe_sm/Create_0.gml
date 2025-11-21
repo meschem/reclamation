@@ -7,6 +7,8 @@ lifeSpan = -1
 shadowSprite = spr_shadow_med
 shadowOffset = 6
 
+reflectOffsetY = 17
+
 init_floating(2, 90)
 
 onPickup = function() {

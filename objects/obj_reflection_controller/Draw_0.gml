@@ -1,4 +1,4 @@
-
+s
 if (!active) {
 	return 0
 }
@@ -17,8 +17,11 @@ if (!surface_exists(surfaceMirror)) {
 	return 0
 }
 
-var _alpha = 0.5
-var _color = c_aqua
+//var _alpha = 0.5
+//var _color = c_aqua
+
+var _alpha = 0.25
+var _color = c_white
 
 //draw_surface_stretched_ext(
 //	surfaceMirror, 0, 0, _pw, _ph, _color, _alpha

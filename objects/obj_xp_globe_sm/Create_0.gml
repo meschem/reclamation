@@ -4,6 +4,8 @@ pickupValue = 500
 
 lifeSpan = -1
 
+reflectOffsetY = 17
+
 shadowSprite = spr_shadow_med
 shadowOffset = 6
 

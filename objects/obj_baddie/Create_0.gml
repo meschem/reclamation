@@ -59,6 +59,13 @@ enum wrapAroundBehaviors {
 	destroy
 }
 
+enum enumImpactMaterials {
+	bone,
+	flesh,
+	metal,
+	stone
+}
+
 event_inherited()
 
 moveBehavior = entityMoveBehaviors.charge
@@ -105,14 +112,7 @@ ultimateCharge = baddie_ultimate_charge_fodder
 
 damageOnHit = baddie_damage_normal
 
-reflectOffsetY = 10
-
-enum enumImpactMaterials {
-	bone,
-	flesh,
-	metal,
-	stone
-}
+reflectOffsetY = 14
 
 impactMaterial = enumImpactMaterials.bone
 

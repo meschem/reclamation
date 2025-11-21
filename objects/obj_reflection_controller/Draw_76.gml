@@ -1,3 +1,5 @@
+///@description		Setup and draw to mirror surface
+
 draw_clear_alpha(c_black, 0)
 
 if (!active) {
