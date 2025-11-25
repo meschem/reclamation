@@ -75,16 +75,15 @@ itemDb = [
 		obj_mg_fire_salt,
 		spr_icon_fire_salt,
 	),
-	
-	// uncommon
-	
 	new mergerItemTemplate(
 		"Simple Boots",
 		"Humble boots for quick-footed warriors.",
 		obj_mg_simple_boots,
 		spr_icon_simple_boots,
-		enumRarity.magic
 	),
+	
+	// uncommon
+	
 	new mergerItemTemplate(
 		"Leather Doublet",
 		"Protection against glancing blows.",
@@ -191,6 +190,22 @@ itemDb = [
 		enumRarity.legendary
 	),
 ]
+
+///@description							Creates a specific type of item from the itemDb
+///@param {id.Instance} _player			Player to create item for, if anyone
+///@param {asset.GMObject} _item		Item to create	
+///@return {id.Instance}
+createSpecificItem = function(_player, _item) {
+	for (var i = 0; i < array_length(itemDb); i++) {
+		if (itemDb[i].object == _item) {
+			return itemDb[i].create(_player)
+		}
+	}
+	
+	show_message("specified item not found of ID: " + string(_item))
+	
+	return 0
+}
 
 ///@description							Creates an item of a specified rarity or rarities
 ///@param {id.Instance} _player			Player to create item for, if anyone

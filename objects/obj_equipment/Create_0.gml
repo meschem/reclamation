@@ -5,6 +5,7 @@ enum equipmentStats {
 	bonusInt,
 	bonusAttackSpeed,
 	bonusAttackArea,
+	bonusAreaOfEffect,
 	bonusDamageScalar,
 	bonusDamage,
 	bonusArmor,
@@ -63,6 +64,7 @@ bonusInt = 0
 
 bonusAttackSpeed = 0
 bonusAttackArea = 0
+bonusAreaOfEffect = 0
 bonusDamageScalar = 0
 bonusDamage = 0
 bonusArmor = 0

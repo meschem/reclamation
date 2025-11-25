@@ -33,6 +33,8 @@ function activate_spiked_armor(caster, abilObj = id) {
 		proj.damageDirect = damage
 		proj.lifeSpan = lifeSpan
 		proj.owner = caster
+		proj.image_xscale = get_player_stat(enumPlayerStats.areaOfEffectScalar)
+		proj.image_yscale = proj.image_xscale
 		
 		if (abilObj.statBonusSpiralikes.active) {
 			//proj.rotationSpeed = abilObj.spiralRotationSpeed
@@ -42,5 +44,5 @@ function activate_spiked_armor(caster, abilObj = id) {
 		}
 	}
 	
-	abilObj.spikeAngleOffset += 45
+	abilObj.spikeAngleOffset += 5
 }

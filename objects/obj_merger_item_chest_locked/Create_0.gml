@@ -36,12 +36,13 @@ open = function() {
 	obj_run_controller.lockedChestsOpened++
 	
 	with (obj_merger_item_chest_locked) {
-		cost = get_locked_chest_cost()
+		cost = get_locked_chest_cost()		// increase cost on OTHER chests
 	}
 	
 	for (var i = 0; i < dropCount; i++) {
 		//var _orb = instance_create_depth(x, y, depths.enemy, obj_merger_globe)
-		var _merger = create_random_merger_item_drop(x, y)
+		var _merger = create_random_merger_item_drop(x, y + 4)
+		_merger.depth = depth - 1
 	}
 	
 	audio_play_sound(snd_unlock_door, 1, false)

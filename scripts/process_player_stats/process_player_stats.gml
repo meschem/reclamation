@@ -13,5 +13,6 @@ function process_player_stats() {
 	process_player_stats_crit_multiplier()
 	process_player_stats_misc()
 	process_player_stats_char()
+	process_player_stats_aoe_scalar()
 	process_ability_char_stat_bonuses()
 }

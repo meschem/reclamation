@@ -12,7 +12,7 @@ function create_pickup_text(_x, _y, _amount, _style) {
 	)
 	
 	_inst.xVel = random_range(-0.3, 0.3)
-		
+
 	var _displayAmount = round(_amount)
 		
 	switch (_style) {
@@ -65,5 +65,8 @@ enum pickupTextStyles {
 	normal,
 	gold,
 	hp,
-	xp
+	xp,
+	str,
+	dex,
+	int
 }

@@ -65,9 +65,28 @@ if (player_can_attack() && !autoAttack) {
 }
 
 if (autoAttack) {
-	var target = instance_nearest(x, y, obj_baddie)
+	var maxRange = sqr(autoAttackMaxRange)
+	var target = noone
+	var dist = 0
 	
-	if (target != noone && point_distance(x, y, target.x, target.y) < autoAttackMaxRange) {
+	with (obj_baddie) {
+		dist = sqr(x - other.x) + sqr(y - other.y)
+		if (dist < maxRange) {
+			maxRange = dist
+			target = id
+		} 
+	}
+	
+	with (obj_destructible) {
+		dist = sqr(x - other.x) + sqr(y - other.y)
+		if (dist < maxRange) {
+			maxRange = dist
+			
+			target = id
+		} 
+	}
+	
+	if (target != noone) { // && point_distance(x, y, target.x, target.y) < autoAttackMaxRange) {
 		attackAngle = point_direction(x, y, target.x, target.y)
 		isAttacking = true
 	} else {

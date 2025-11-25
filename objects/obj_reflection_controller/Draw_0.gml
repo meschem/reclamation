@@ -1,4 +1,4 @@
-s
+
 if (!active) {
 	return 0
 }

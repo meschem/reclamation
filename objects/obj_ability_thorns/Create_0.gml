@@ -18,8 +18,8 @@ treeLevel = 2
 iconColor = enumAbilityColor.orange
 
 curCd = 0
-maxCd = seconds_to_frames(1.5)
-maxCdLightningTipped = stf(1)
+maxCd = seconds_to_frames(0.3)
+maxCdLightningTipped = stf(0.25)
 
 spikesCurCd = 0
 spikesMaxCd = seconds_to_frames(1)
@@ -30,9 +30,9 @@ canAutoCast = true
 buffTimeSeconds = 6
 activationCdMax = 40
 
-spikeDamage = [15, 20, 25, 30, 30]
-spikeCount = [4, 4, 6, 6, 8]
-spikeLifeSpan = 90
+spikeDamage = [10, 13, 15, 18, 20]
+spikeCount = [2, 2, 3, 3, 4]
+spikeLifeSpan = 75
 spikeAngleOffset = 0
 
 spiralRotationSpeed = 3

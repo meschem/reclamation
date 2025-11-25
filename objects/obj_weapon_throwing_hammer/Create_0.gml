@@ -4,7 +4,7 @@ event_inherited()
 name = "Throwing Hammer"
 description = "For those determined to stick with hammers in any situation."
 spawnDistance = 16
-baseDamage = 50
+baseDamage = 10
 spawnObject = obj_war_hammer
 spawnCount = 1
 

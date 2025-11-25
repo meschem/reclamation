@@ -51,6 +51,7 @@ enum enumPlayerStats {
 	abilityCooldownScalar,
 	abilityDamageScalar,
 	attackSpeedScalar,
+	areaOfEffectScalar,
 	knockbackScalar,
 	bonusProjectileCount,
 	damageScalar,
@@ -77,7 +78,7 @@ bonusDex = 0
 bonusInt = 0
 
 baseMaxHp = 10
-baseMoveSpeedMax = 1.4
+baseMoveSpeedMax = 1.1
 baseMaxArmor = 0
 baseCritChance = 0.1
 baseCritMultiplier = 1.5

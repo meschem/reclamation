@@ -104,6 +104,9 @@ use = function() {
 			
 		inst.explodeOnDeath = statBonusOverload.active
 		inst.distanceMax = -1	
+		
+		inst.image_xscale = get_player_stat(enumPlayerStats.areaOfEffectScalar)
+		inst.image_yscale = inst.image_xscale
 	}
 	
 	if (statBonusRagingStorm.active) {

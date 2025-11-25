@@ -21,7 +21,7 @@ function activate_war_stomp_active(level) {
 			}
 		}		
 
-		var radius = _abilityObj.baseRadius[_abilityObj.level - 1]
+		var radius = _abilityObj.baseRadius[_abilityObj.level - 1] * get_player_stat(enumPlayerStats.areaOfEffectScalar, _owner)
 		var amount = _abilityObj.baseDamage[_abilityObj.level - 1]
 		//var pushDistance = _abilityObj.runes[enumRunes.voldan].enabled ? 40 : 0
 		var pushDistance = 0

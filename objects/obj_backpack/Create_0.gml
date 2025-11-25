@@ -22,8 +22,7 @@ randomItems = [
 	//obj_mg_fire_salt,
 	//obj_mg_cinder_stone,
 	//obj_mg_crown_of_destruction
-	obj_mg_ironsilk,
-	obj_mg_beast_blood
+	obj_mg_war_bracer
 ]
 
 inputsKeyboard = {

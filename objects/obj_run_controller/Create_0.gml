@@ -41,6 +41,7 @@ curseBoostCd = mtf(1)		// How often the curse "boost" stats kick in
 curseAgeMax = mtf(10)		// When the curse kicks in
 curseAgeFinal = mtf(15)		// The absolute max length the curse can be extended to
 
+firstShopHit = false
 finalLevelRoom = rm_dungeon_end
 endScreen = false
 

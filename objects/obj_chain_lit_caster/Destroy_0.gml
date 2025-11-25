@@ -4,6 +4,7 @@
 if (target == noone) {
 	var baddieList = ds_list_create()
 	var closestBaddie = noone
+	var maxDistance = maxJumpDistance * get_player_stat(enumPlayerStats.areaOfEffectScalar, owner)
 		
 	var baddies = collision_circle_list(
 		x, y,

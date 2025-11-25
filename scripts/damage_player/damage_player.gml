@@ -21,6 +21,14 @@ function damage_player(hitBy, damage = -1, _player = noone) {
 		return false
 	}
 	
+	// check invuln protection, need to genericize this
+	with (obj_mg_war_bracer) {
+		if (owner == other.id && active) {
+			activate()
+			damage = 0
+		}
+	}
+	
 	var i, inst
 	
 	obj_player.hp -= damage

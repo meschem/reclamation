@@ -33,6 +33,8 @@ function create_random_merger_item_drop(_x, _y) {
 	
 	_orb.isMergerItem = true
 	_orb.attachEquipment(_item)
+	
+	return _orb
 }
 
 function create_random_item_drop_filtered(_location, _rarityMultiplier = 1, _filter = {}) {
