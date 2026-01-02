@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_drop_table",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_drop_table",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

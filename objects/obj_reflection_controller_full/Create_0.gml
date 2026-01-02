@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// NOT CURRENTLY USED, SEE obj_reflection_controller
 
 application_surface_draw_enable(false)
 gpu_set_tex_filter(false)

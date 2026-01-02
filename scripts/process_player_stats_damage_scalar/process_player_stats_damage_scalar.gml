@@ -27,15 +27,17 @@ function process_player_stats_damage_scalar() {
 			}
 		}
 		
-		with (obj_weapon_upgrade) {
-			if (active) {
-				rollingScalar += bonusDamageScalar
-			}
-		}
+		//with (obj_weapon_upgrade) {
+			//if (active) {
+				//rollingScalar += bonusDamageScalar
+			//}
+		//}
 		
 		// Process Talents
 		
 		// Process Items
+        
+        rollingScalar += (bonusStr + baseStr) / 100
 		
 		//var addedHp = (baseMaxHp * rollingScalar + rollingStatic) - maxHp
 		

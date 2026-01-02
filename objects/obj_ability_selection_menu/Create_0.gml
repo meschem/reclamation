@@ -1,4 +1,11 @@
+
 /// @description Init
+
+enum enumSelectionMenuStates {
+    opening,
+    normal,
+    closing,
+}
 
 event_inherited()
 
@@ -16,6 +23,13 @@ paddingX = 26
 paddingY = 2
 buttonCount = 3
 
+state = enumSelectionMenuStates.opening
+stateAge = 0
+stateOpeningDuration = stf(0.5)
+stateClosingDuration = stf(0.4)
+
+inputEnabled = false
+
 buttonSpacing = 120
 
 scaleX = menuWidth / sprite_width
@@ -26,4 +40,15 @@ buttonFocusIndex = -1
 center = function() {
 	x = (view_width() - menuWidth) / 2
 	y = (view_height() - menuHeight) / 2
+}
+
+enable = function() {
+    inputEnabled = true
+    state = enumSelectionMenuStates.normal
+}
+
+close = function() {
+    inputEnabled = false
+    stateAge = 0
+    state = enumSelectionMenuStates.closing
 }

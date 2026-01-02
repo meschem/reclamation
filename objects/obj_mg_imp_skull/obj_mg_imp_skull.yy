@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_icon_poison_stacks",
-    "path":"sprites/spr_icon_poison_stacks/spr_icon_poison_stacks.yy",
+    "name":"spr_icon_imp_skull",
+    "path":"sprites/spr_icon_imp_skull/spr_icon_imp_skull.yy",
   },
   "spriteMaskId":null,
   "visible":true,

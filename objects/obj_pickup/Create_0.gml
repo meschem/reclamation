@@ -7,6 +7,8 @@ homingActive = false
 homingRadius = 40
 homingAccel = 0.2
 
+partitioned = false
+
 distanceToTarget = 0
 angleToTarget = 0
 

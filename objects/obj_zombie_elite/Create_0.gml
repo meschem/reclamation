@@ -15,7 +15,7 @@ hp = hpMax
 shadowSprite = spr_shadow_med
 shadowOffset = -1
 
-add_loot_gold(6, 8)
+impactMaterial = enumImpactMaterials.flesh
 
 deathParticles = [
 	obj_ptb_zombie_head_grn,

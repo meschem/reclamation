@@ -5,6 +5,8 @@ enum buttonFocusTypes {
 	none
 }
 
+depth = depths.ui
+
 title = "Unnamed"
 
 menuWidth = view_width() - (x * 2)

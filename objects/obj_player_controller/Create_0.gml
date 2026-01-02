@@ -6,7 +6,8 @@ enum playerCharacters {
 	ophelia,
 	phaedra,
 	caco,
-	cow
+	cow,
+	zock
 }
 
 player = -1
@@ -18,5 +19,6 @@ unlockedCharacters = [
 	obj_ophelia,
 	obj_phaedra,
 	obj_caco,
-	obj_cow
+	obj_cow,
+	obj_zock
 ]

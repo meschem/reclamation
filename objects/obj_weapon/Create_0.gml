@@ -19,11 +19,14 @@ damageScalar = 1
 baseKnockback = 0
 bonusKnockback = 0
 knockbackScalar = 1
+bonusKnockbackScalar = 0
+pierceChance = 0
 
 baseBurningStacks = 0
 bonusBurningStacks = 0
 
 bonusAoeScalar = 0
+bonusTargetsMax = 0
 
 velocityScalar = 1
 
@@ -92,12 +95,12 @@ getBaseDamage = function() {
 ///@description						Gets knockback for the weapon
 ///@return {real}
 getKnockback = function() {
-	var _knockback = baseKnockback + (owner.baseStr + owner.bonusStr)
+	var _knockback = baseKnockback
 	
 	_knockback += bonusKnockback
-	_knockback *= knockbackScalar
+	_knockback *= 1 + bonusKnockbackScalar
 	
-	_knockback *= get_player_stat(enumPlayerStats.knockbackScalar)
+	_knockback *= get_player_stat(enumPlayerStats.knockbackScalar, owner)
 	
 	return _knockback
 }
@@ -242,6 +245,8 @@ applyUpgradesToInstance = function(_inst) {
 	_inst.knockback = getKnockback()
 	_inst.burningStacks = getBurningStacks()
 	_inst.critMultiplier += bonusCritMultiplier
+    _inst.pierceChance += pierceChance
+    _inst.targetsMax += bonusTargetsMax
 	
 	_inst.setScale(owner) // from obj_weapon_projectile
 }

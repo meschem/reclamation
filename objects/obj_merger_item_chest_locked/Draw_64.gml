@@ -4,10 +4,14 @@ if (!active) {
 	return 0
 }
 
+if (!drawUi) {
+    return 0
+}
+
 draw_set_font(font_dogica_s)
-draw_sprite(spr_coin_icon, 0, guiPos.x - 10, guiPos.y + 17)
+draw_sprite(spr_coin_icon, 0, guiPos.x + coinOffset.x, guiPos.y + coinOffset.y)
 draw_text_with_outline(
-	guiPos.x - 3, guiPos.y + 11, cost
+	guiPos.x + costTextOffset.x, guiPos.y + costTextOffset.y, cost
 )
 
 if (drawCantOpen) {

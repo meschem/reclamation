@@ -8,7 +8,7 @@ maxTargetDistance = 800		//search radius for targets on pickup
 launchSpeed = 5
 damageDirect = 20
 projectile = obj_golden_bolt
-statsSpecial = ["Fires damaging projectiles on coin pickups. Each deal 20 damage."]
+statsSpecial = ["Fires damaging projectiles on coin pickups."]
 
 ///@description							Uses Puzzlebox
 ///@param {id.Instance} _pickup			Instance picked up

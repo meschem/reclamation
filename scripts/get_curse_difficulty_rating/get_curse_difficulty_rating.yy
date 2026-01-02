@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_curse_difficulty_rating",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_curse_difficulty_rating",
+  "parent":{
+    "name":"curse",
+    "path":"folders/Scripts/curse.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

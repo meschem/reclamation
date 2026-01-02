@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function define_player_stats() {
 	var _key = 0
+    var _player = get_first_player()
 	
 	_key = enumPlayerStats.maxHp
 	stats[$ _key] = new playerStat(
@@ -11,7 +12,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.maxHp)
 			return (statValue / 10)
 		},
-		"Running out of HP is generally considered very poor for your health."
+		"Running out of HP is generally considered very poor for your health.\n\nImproved by |Strength|."
 	)
 	
 	_key = enumPlayerStats.str
@@ -22,7 +23,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.str)
 			return string(statValue)
 		},
-		"Core stat. A precise representation of how many cinder blocks your can chop through in a single blow.\n\n * Increases |Physical_Damage| by 1 per point.\n * Increases |Knockback| by 1 per point.\n * Increases |HP| by 1 per 10 points."
+		"Core stat. A precise representation of how many cinder blocks your can chop through in a single blow.\n\n * Increases |Physical_Damage| by 1% per point.\n * Increases |Knockback| by 1% per point.\n * Increases |HP| by 1 per 10 points."
 	)
 	
 	_key = enumPlayerStats.dex
@@ -33,7 +34,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.dex)
 			return string(statValue)
 		},
-		"Core stat. A marker for how quick you are on your feet and hands.\n\n * Increases |Attack_Speed|.\n * Improves |Active_Ability_Cooldown|.\n * Increases |Move_Speed|."
+		"Core stat. A marker for how quick you are on your feet and hands.\n\n * Increases |Attack_Speed| by 1% per point.\n * Improves |Crit_Multiplier| by 1% per point.\n * Increases |Move_Speed| by 0.1 per point."
 	)
 	
 	_key = enumPlayerStats.int
@@ -44,7 +45,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.int)
 			return string(statValue)
 		},
-		"Core stat. Represents how smart you actually are, not just how smart you think you are.\n\n * Increase |Magic_Damage| by 1 per point.\n * Improves |Ability_Cooldown|.\n * Improves |Ultimate_Charge_Rate|."
+		"Core stat. Represents how smart you actually are, not just how smart you think you are.\n\n * Increase |Magic_Damage| by 1% per point.\n * Improves |Ability_Cooldown| by 1% per point.\n * Improves |Area_of_Effect| by 1% per point."
 	)
 	
 	_key = enumPlayerStats.damageScalar
@@ -56,7 +57,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Scales up any damage marked as physical, including |Piercing| and |Crushing|."
+		"Scales up any damage marked as physical, including |Piercing| and |Crushing|.\n\nImproved by |Strength|."
 	)
 	
 	_key = enumPlayerStats.abilityDamageScalar
@@ -68,7 +69,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Scales up any damage marked as magical, including |Fire|, |Lightning|, and |Ice|.\n\nDoes NOT scale |Poison| damage."
+		"Scales up any damage marked as magical, including |Fire|, |Lightning|, and |Ice|.\n\nDoes NOT scale |Poison| damage.\n\nImproved by |Intelligence|."
 	)
 	
 	_key = enumPlayerStats.critChance
@@ -92,7 +93,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Determines how much damage critical hits deal. Affects all |Physical Damage|."
+		"Determines how much damage critical hits deal. Affects all |Physical Damage|.\n\nImproved by |Dexterity|."
 	)
 	
 	_key = enumPlayerStats.abilityCooldownScalar
@@ -104,7 +105,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Increases how fast your abilities activate. Includes |Item Passives| unless otherwise noted.\n\nDoes NOT improve |Ultimate Charge Rate|."
+		"Increases how fast your abilities activate. Includes Item Passives unless otherwise noted.\n\nDoes NOT improve |Ultimate_Charge_Rate|.\n\nImproved by |Intelligence|."
 	)
 	
 	_key = enumPlayerStats.areaOfEffectScalar
@@ -116,7 +117,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Increases the size of your abilities. Depending on the ability, this may affect size of projectiles and/or damage."
+		"Increases the size of your abilities. Depending on the ability, this may affect size of projectiles and/or damage.\n\nImproved by |Intelligence|."
 	)
 	
 	_key = enumPlayerStats.attackSpeedScalar
@@ -128,7 +129,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Increases how fast you attack with your weapon."
+		"Increases how fast you attack with your weapon.\n\nImproved by |Dexterity|."
 	)
 	
 	_key = enumPlayerStats.moveSpeedMax
@@ -139,7 +140,7 @@ function define_player_stats() {
 			var statValue = get_player_stat(enumPlayerStats.moveSpeedMax) * 10
 			return string(statValue)
 		},
-		"Determines how fast those little legs can move you around."
+		"Determines how fast those little legs can move you around.\n\nImproved by |Dexterity|."
 	)
 	
 	_key = enumPlayerStats.knockbackScalar
@@ -151,7 +152,7 @@ function define_player_stats() {
 			statValue = round(statValue * 100)
 			return string(statValue) + "%"
 		},
-		"Increases the pushback distance when knockback is applied to enemies."
+		"Increases the pushback distance when knockback is applied to enemies.\n\nImproved by |Strength|."
 	)
 	
 	_key = enumPlayerStats.bonusProjectileCount

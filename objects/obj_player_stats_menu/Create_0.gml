@@ -97,11 +97,13 @@ open = function() {
 close = function() {
 	image_alpha = 0
 	isOpen = false
+    
+    onEndFocus()
 }
 
 onFocus = function() {
 	focused = true
-	
+    
 	selector = instance_create_depth(-99, -99, depth - 999, obj_player_stat_selector)
 	selector.x = x + 3
 	infobox = instance_create_depth(-99, -99, depth - 999, obj_player_stat_infobox)

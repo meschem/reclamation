@@ -7,7 +7,7 @@ function set_ui_focus_type(_focusType) {
 }
 
 
-///@description							Gets what type of element is focused by the UI
+///@description							Gets what type of element is focused by the UI, returns uiFocusTypes
 ///@return {real}						Returns an enum uiFocusTypes
 function get_ui_focus_type() {
 	var _type = -1

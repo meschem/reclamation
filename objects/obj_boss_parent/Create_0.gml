@@ -3,6 +3,8 @@
 // Inherit the parent event
 event_inherited()
 
+dropType = enumDropType.baddieFieldBoss
+
 enum genericBossStates {
 	init,
 	chasing,

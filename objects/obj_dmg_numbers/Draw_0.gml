@@ -16,6 +16,6 @@ for (var i = 0; i < array_length(digits); i++) {
 }
 
 if (icon != spr_none) {
-	draw_sprite_ext(icon, 0, x - _offset - 3, y - 1, 1, 1, 0, c_white, image_alpha)
+	draw_sprite_ext(icon, 0, x - _offset + iconOffsetX, y - 1, 1, 1, 0, c_white, image_alpha)
 }
 

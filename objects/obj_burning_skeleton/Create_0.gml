@@ -4,8 +4,18 @@ event_inherited()
 
 name = "Burning Dead"
 
-hpMax = 20
+hpMax = 30
 hp = hpMax
+
+pushForce = 6
+pushRadius = 20
+
+shadowSprite = spr_shadow_med
+shadowOffset = -1
+
+walkAnimType = entityWalkAnimTypes.curves
+
+impactMaterial = enumImpactMaterials.bone
 
 deathParticles = [
 	obj_ptb_skel_bone_red,
@@ -15,10 +25,5 @@ deathParticles = [
 	obj_ptb_skel_ribs_red,
 	obj_ptb_skel_skull_red,
 ]
-
-shadowSprite = spr_shadow_med
-shadowOffset = -1
-
-walkAnimType = entityWalkAnimTypes.curves
 
 add_baddie_gold_fodder

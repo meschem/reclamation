@@ -46,7 +46,7 @@ for (var i = 0; i < array_length(itemPedestals); i++) {
 for (var i = 0; i < array_length(mergingItems); i++) {
 	draw_sprite(
 		mergingItems[i].sprite_index,
-		1, 
+		2 + mergingItems[i].rarity, 
 		x + itemPedestals[i].offset.x - 1,
 		y + itemPedestals[i].offset.y - mergingItems[i].sprite_height + 7
 	)
@@ -70,7 +70,7 @@ draw_sprite(
 
 draw_sprite(
 	combineSlotItemSprite,
-	1,
+	combineSlotItemImageIndex,
 	x + combineSlotOffset.x + 3,
 	y + combineSlotOffset.y + 3
 )

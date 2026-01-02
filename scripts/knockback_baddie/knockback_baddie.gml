@@ -13,33 +13,12 @@ function knockback_baddie(target, distance, angle) {
 	if (distance <= 0) {
 		return
 	}
-	
-	var hitForce = get_velocity_from_angle(angle, distance)
-	var stepVec = normalize_vector(hitForce[0], hitForce[1])
-	
-	with (target) {
-		for (var i = 0; i < distance; i++) {
-			if (
-					place_meeting(x + stepVec[0], y + stepVec[1], obj_baddie) ||
-					place_meeting(x + stepVec[0], y + stepVec[1], obj_pit)
-			) {
-				break
-			} else {
-				x += stepVec[0]
-				y += stepVec[1]
-			}
-		}
-	}
-		
+    
+    target.slideRemaining = distance
+    target.slideAngle = angle
 	target.damagedOn = target.age
-	
+    
 	target.knockbackSlowRatio = 0
 	target.knockbackSlowDuration = 60
 	target.knockbackSlowHitFrame = target.age
-	
-	var extra = target.weight - distance
-	var velocityRatio = max(0, extra / target.weight)
-	
-	target.xVel *= velocityRatio
-	target.yVel *= velocityRatio
 }

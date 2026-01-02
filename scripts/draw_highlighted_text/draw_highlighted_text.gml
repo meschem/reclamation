@@ -9,7 +9,7 @@
 function draw_highlighted_text(_x, _y, _text, _maxWidth, _colorMapStruct, _lineHeight, _defaultColor = c_white) {
     // --- Line Wrapping & Parsing ---
     
-    // Split the entire string by the pipe character (the delimiter)
+    // Split the entire string by the pipe character
 	if (string_pos(_text, "#") != 0) {
 		show_message("Hashtag found in string, illegal for highlight draws")
 	}
@@ -17,8 +17,7 @@ function draw_highlighted_text(_x, _y, _text, _maxWidth, _colorMapStruct, _lineH
     var _initialSegments = string_split(_convertedString, "|")
 	var _testString = "test"
     
-    // An array to hold the final wrapped lines, where each line is an array 
-    // of segment structs: [{text: "...", color: c_...}, ...]
+    // An array to hold the final wrapped lines, where each line is an array of structs
     var _wrappedLines = []
     var _currentLineSegments = []
     var _currentLineWidth = 0
@@ -43,8 +42,6 @@ function draw_highlighted_text(_x, _y, _text, _maxWidth, _colorMapStruct, _lineH
         // --- Handle Wrapping within the Segment ---
         var _words = string_split_ext(_segmentText, [" ", "#"]) //, "\n"])
 		
-		//show_message(_words)
-      
         for (var j = 0; j < array_length(_words); j++) {
             var _word = _words[j]
             var _wordWidth = string_width(_word)

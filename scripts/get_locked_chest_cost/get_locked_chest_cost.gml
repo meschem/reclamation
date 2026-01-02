@@ -17,7 +17,7 @@ function get_locked_chest_cost(_size = lockedChestSizes.small) {
 			return 50 + (_count * 50)
 		
 		case lockedChestSizes.large:
-			return 75 + (_count * 75)
+			return 100 + (_count * 75)
 	}
 	
 	return 0

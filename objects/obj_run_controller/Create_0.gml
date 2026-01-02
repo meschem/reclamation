@@ -53,6 +53,8 @@ displayRunInfo = true
 displayRunStats = false
 displayStateSpacing = 10
 
+spawnEventIndex = 0
+
 // Difficulty Scalars
 enemyScalingHp = 1
 enemyScalingMoveSpeed = 1

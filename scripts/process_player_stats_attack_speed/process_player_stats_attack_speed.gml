@@ -27,17 +27,18 @@ function process_player_stats_attack_speed() {
 			}
 		}
 		
-		with (obj_weapon_upgrade) {
-			if (active) {
-				rollingScalar += bonusAttackSpeed
-			}
-		}
+		//with (obj_weapon_upgrade) {
+			//if (active) {
+				//rollingScalar += bonusAttackSpeed
+			//}
+		//}
 		
 		// Process Talents
 		
 		// Process Items
 		
 		//var addedHp = (baseMaxHp * rollingScalar + rollingStatic) - maxHp
+        rollingScalar += (baseDex + bonusDex) / 100
 
 		attackSpeedScalar = rollingScalar
 		

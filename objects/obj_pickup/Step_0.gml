@@ -7,8 +7,12 @@ if (spawning) {
 
 age++
 
-if (target == noone ) {
+if (target == noone) {
 	target = get_first_player()
+}
+
+if (!instance_exists(target)) {
+	return 0
 }
 
 if (floats) {
@@ -77,7 +81,7 @@ if (age % 1 == 0) {
 	
 		if (homesOnPlayer) {
 			if (!homingActive && age % 2 == 0) {
-				var _playerScalar = get_player_stat(enumPlayerStats.pickupRangeScalar)
+				var _playerScalar = get_player_stat(enumPlayerStats.pickupRangeScalar, target)
 				
 				if (distanceToTarget < homingRadius * _playerScalar) {
 					homingActive = true

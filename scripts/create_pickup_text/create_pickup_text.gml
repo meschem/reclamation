@@ -38,6 +38,32 @@ function create_pickup_text(_x, _y, _amount, _style) {
 	}
 }
 
+///@description						Creates moving text using damage styles. Doesn't randomize position.
+///@param {real} _x					X Pos
+///@param {real} _y					Y Pos
+///@param {real} _amount			Number Value
+///@param {constant.Color} _color	Color of the text
+///@param {asset.GMSprite} _icon	Icon to use
+///@param {string} _text			Text to display, currently NOT SUPPORTED
+///@return {id.Instance}
+function create_pickup_text_custom(_x, _y, _amount, _color = c_white, _icon = spr_none, _text = "") {
+	var _inst = instance_create_depth(
+		_x,
+		_y,
+		depths.ui,
+		obj_pickup_numbers
+	)
+	
+	_inst.xVel = random_range(-0.3, 0.3)
+
+	var _displayAmount = round(_amount)
+	
+	_inst.setValue(_displayAmount, false, _color, _icon)
+	_inst.text = _text
+	
+	return _inst
+}
+
 ///@description					Gets the sprite of the icon to display next to txt damage
 ///@param {real} _pickupType	Pickup type
 function get_pickup_text_icon(_pickupType) {
@@ -54,7 +80,16 @@ function get_pickup_text_icon(_pickupType) {
 		
 		case pickupTextStyles.xp:
 			return spr_pickup_icon_xp
+			
+		case pickupTextStyles.str:
+			return obj_player_stats_stat_item_str
 		
+		case pickupTextStyles.dex:
+			return obj_player_stats_stat_item_dex
+			
+		case pickupTextStyles.int:
+			return obj_player_stats_stat_item_int
+			
 		default:
 			return spr_none
 	}

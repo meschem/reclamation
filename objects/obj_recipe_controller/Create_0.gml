@@ -10,12 +10,38 @@ invalidRecipe = new recipe(
 	[]
 )
 
+///@description                                 Creates an item from a recipe
+///@param {struct.recipe} _recipe               Recipe to use
+///@return {id.Instance}
+createItem = function(_recipe) {
+    var _item = create_instance(_recipe.result)
+    
+    _item.level = _recipe.resultLevel
+    _item.rarity = _recipe.rarity
+    
+    return _item
+}
+
 ///@description									Checks if a combo is a recipe
 ///@param {array<asset.GMObject>} _items		Items (instances) to check
-///@return {struct}								Returns standard invalid recipe if none are found
+///@return {struct<recipe>} 					Returns standard invalid recipe if none are found
 checkItems = function(_items) {
-	var _recipe = obj_none
 	array_sort(_items, true)
+    
+    //if (array_length(_items) > 1)
+        //show_message([_items[0].level, _items[1].level])
+    
+    // create custom recipe if items are the same type
+    if (
+        array_length(_items) == 2 &&
+        _items[0].object_index == _items[1].object_index &&
+        _items[0].level == _items[1].level &&                     // 
+        _items[0].rarity < enumRarity.rare                     // max rarity
+    ) {
+        var _recipe = createSimpleUpgradeRecipe(_items[0])
+        
+        return _recipe
+    }
 	
 	for (var i = 0; i < array_length(recipes); i++) {
 		if (array_equals(_items, recipes[i].ingredients)) {
@@ -24,6 +50,29 @@ checkItems = function(_items) {
 	}
 	
 	return invalidRecipe
+}
+
+///@description                     Creates a simple upgrade recipe that combines 2 likes
+///@param {id.Instance} _item       Must be of type obj_equipment_merger
+///@return {struct<recipe>} 
+createSimpleUpgradeRecipe = function(_item) {
+    var _recipe = new recipe(
+        _item.object_index,
+        _item.name,
+        _item.sprite_index,
+        [
+            _item.object_index,
+            _item.object_index
+        ]
+    )
+    
+    _recipe.levelUp = true
+    _recipe.resultLevel = _item.level + 1
+    
+    var _rarity = (_item.rarity == enumRarity.normal) ? enumRarity.magic : enumRarity.rare
+    _recipe.setRarity(_rarity)
+    
+    return _recipe
 }
 
 enum comboCheckTypes {

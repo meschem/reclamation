@@ -54,22 +54,6 @@ switch (_dir) {
 	break
 }
 
-//if (keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)) {
-//	selectChange.y = -1
-//}
-
-//if (keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl)) {
-//	selectChange.x = -1
-//}
-
-//if (keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd)) {
-//	selectChange.y = 1
-//}
-
-//if (keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr)) {
-//	selectChange.x = 1
-//}
-
 if (
 	keyboard_check_pressed(inputsKeyboard.toggleMerge) ||
 	gamepad_button_check_pressed(0, inputsController.toggleMerge)
@@ -88,15 +72,6 @@ if (
 	activateSwap()
 	itemInfoBox.updateItem(slots[selectedSlot].item)
 }
-
-//				CLOSE FUNCTIONALITY SHOULD BE IN UI CONTROLLER
-//else if (
-//	keyboard_check_pressed(inputsKeyboard.close) ||
-//	gamepad_button_check_pressed(0, inputsController.close)
-//) {
-//	close()
-//	return 0
-//}
 
 var _testSlot = noone
 

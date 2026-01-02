@@ -81,6 +81,7 @@ bonusCritMultiplier = 0
 bonusRecoveryTime = 0
 bonusAbilityDamage = 0
 bonusPoisonDamage = 0
+bonusKnockbackScalar = 0
 
 stats = []
 statsSpecial = []

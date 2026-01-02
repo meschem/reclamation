@@ -14,6 +14,7 @@ value = 0
 digits = []
 crit = false
 icon = spr_none
+iconOffsetX = -3
 sprite_index = spr_dmg_numbers
 
 ///@description						Sets value, must be done to do this

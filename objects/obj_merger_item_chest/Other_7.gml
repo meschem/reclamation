@@ -11,6 +11,6 @@ if (state == chestStates.spawning) {
 	active = true
 }
 
-sprite_index = spr_treasure_chest
+sprite_index = spr_treasure_chest_small
 image_speed = 0
 image_index = 0

@@ -6,6 +6,7 @@ y = -999
 
 parentMenu = noone
 
+bgSprite = spr_none
 state = buttonStates.normal
 index = 0
 enabled = true
@@ -15,16 +16,37 @@ statTextEnabled = false
 topIcon = spr_none
 iconOverlay = spr_none
 
+focusOffsetX = 0
+focusOffsetY = 0
+focusBoostX = 0
+focusBoostY = 0
+
 buttonXOffset = 34
 buttonYOffset = -13
 
 marginY = 0
 
+age = 0
+spawnDelay = 0
+spawnDuration = stf(0.3)
+spawnOffsetUseY = true		//if false, uses x
+drawOffsetY = 0
+flashFrame = 0
+flashSprite = spr_card_flash_huge
+
+mouseDelayEnable = false
+
 if (mouse_check_button(mb_left)) {
-	enabled = false
+	mouseDelayEnable = true            // If mouse is held when button is spawned, wait until release to allow mouse clicks
 }
 
 viewCamera = view_camera[camera_get_active()]
+
+titleBackgroundDraw = false
+titleBackgroundWidth = 112
+titleBackground = spr_none
+titleBackgroundDrawX = 10
+titleBackgroundDrawY = 22
 
 titleText = new text(
 	"No Title",

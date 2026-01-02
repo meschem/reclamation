@@ -6,25 +6,25 @@ description = "Increased speed, distance, and damage."
 active = false
 stackable = true
 
-damageScalar = [0.15]
-velocityScalar = [0.15]
-rangeScalar = [0.5]
+damageScalar = [0.1]
+velocityScalar = [0.2]
+rangeScalar = [0.2]
 
 stats = [
 	new abilityStat(
-		"Damage Bonus",
+		"Damage",
 		"damageScalar", 
 		damageScalar,
 		true, statUnits.percent
 	),
 	new abilityStat(
-		"Velocity Bonus",
+		"Velocity",
 		"velocityScalar",
 		velocityScalar,
 		true, statUnits.percent
 	),
 	new abilityStat(
-		"Range Bonus",
+		"Range",
 		"rangeScalar",
 		rangeScalar,
 		true, statUnits.percent

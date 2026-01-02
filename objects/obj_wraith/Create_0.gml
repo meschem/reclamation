@@ -7,7 +7,7 @@ name = "Wraith"
 xp = baddie_xp_tough
 hpMax = 40
 hp = hpMax
-hpBarDisplay = entityHpBarTypes.small
+//hpBarDisplay = entityHpBarTypes.small
 
 pushRadius = 11
 pushForce = 10

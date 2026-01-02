@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_icon_demon_claw",
-    "path":"sprites/spr_icon_demon_claw/spr_icon_demon_claw.yy",
+    "name":"spr_icon_twisted_horn",
+    "path":"sprites/spr_icon_twisted_horn/spr_icon_twisted_horn.yy",
   },
   "spriteMaskId":null,
   "visible":true,

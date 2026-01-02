@@ -6,7 +6,10 @@ enum uiFocusTypes {
 	skillDetails,		// managed via obj_ability_controller
 	statDetails,
 	menu,
-	shop
+	shop,
+    statPurchaseSelection,
+    abilityPurchaseSelection,
+    weaponUpgradeSelection
 }
 
 enum uiProfileTypes {
@@ -14,6 +17,7 @@ enum uiProfileTypes {
 	backpack,
 	shop,
 	minimal,
+	statsPurchase,
 }
 
 focusType = uiFocusTypes.none
@@ -34,9 +38,27 @@ drawUltimateBar = false
 drawStatBars = true
 drawCurseBar = true
 drawPlayerSkills = true
-
+drawBackpackSlots = true
 
 // OTHER INFO IS DRAWN FROM obj_run_controller
+///@description                 Determines whether or not the inventory can be opened
+///@return {bool}
+canOpenInventory = function() {
+    if (
+        focusType == uiFocusTypes.menu ||
+        focusType == uiFocusTypes.statPurchaseSelection ||
+        focusType == uiFocusTypes.abilityPurchaseSelection ||
+        focusType == uiFocusTypes.weaponUpgradeSelection
+    ) {
+        return false
+    }
+    
+    if (instance_number(obj_ability_selection_menu) > 0) {
+        return false
+    }
+    
+    return true
+}
 
 ///@description					Sets a ui profile type for visibility
 ///@param {real} _type			Uses enum uiFocusTypes
@@ -48,43 +70,59 @@ setUiFocusType = function(_type) {
 ///@param {real} _x				X Coordinate
 ///@param {real} _y				Y Coordinate
 getUiFocusFromDirection = function(_x, _y) {
-	//create_toaster($"({_x}, {_y}) with focusType {focusType}")
 	// INVENTORY GROUP
-	if (focusType == uiFocusTypes.inventory) {
-		if (_x == -1) {
-			focusType = uiFocusTypes.statDetails
-		} else if (_y == 1) {
-			focusType = uiFocusTypes.skillDetails
-		}
-	} else if (focusType == uiFocusTypes.statDetails) {
-		if (_x == 1) {
-			focusType = uiFocusTypes.inventory
-		}
-	} else if (focusType == uiFocusTypes.skillDetails) {
-		if (_y == -1) {
-			focusType = uiFocusTypes.inventory
-		}
-	}
-	
-	//create_toaster("Focus type ID changed to: " + string(focusType))
+    if (uiProfileType == uiProfileTypes.backpack) {
+       	if (focusType == uiFocusTypes.inventory) {
+       		if (_x == -1) {
+       			focusType = uiFocusTypes.statDetails
+       		} else if (_y == 1) {
+       			focusType = uiFocusTypes.skillDetails
+       		}
+       	} else if (focusType == uiFocusTypes.statDetails) {
+       		if (_x == 1) {
+       			focusType = uiFocusTypes.inventory
+       		}
+       	} else if (focusType == uiFocusTypes.skillDetails) {
+       		if (_y == -1) {
+       			focusType = uiFocusTypes.inventory
+       		}
+       	}
+    }
+    
+    // STAT PURCHASE MENU
+    if (uiProfileType == uiProfileTypes.statsPurchase) {
+        if (focusType == uiFocusTypes.statPurchaseSelection) {
+            if (_x == -1) {
+                focusType = uiFocusTypes.statPurchaseSelection
+            }
+        } else if (focusType == uiFocusTypes.statDetails) {
+            if (_x == 1){
+                focusType = uiFocusTypes.statDetails
+            }
+        }
+    }
 }
 
 ///@description					Sets a ui profile type for visibility
 ///@param {real} _type			Uses enum uiProfileTypes
 setUiProfileType = function(_type) {
+    uiProfileType = _type
+    
 	switch (_type) {
 		case uiProfileTypes.gameplay:
 			drawStatBars = true
 			drawUltimateBar = true
 			drawCurseBar = true
 			drawPlayerSkills = true
+			drawBackpackSlots = true
 		break
 		
 		case uiProfileTypes.backpack:
 			drawStatBars = true
 			drawUltimateBar = true
 			drawCurseBar = true
-			drawPlayerSkills = false
+			drawPlayerSkills = true
+			drawBackpackSlots = true
 		break
 		
 		case uiProfileTypes.shop:
@@ -92,6 +130,7 @@ setUiProfileType = function(_type) {
 			drawUltimateBar = false
 			drawCurseBar = false
 			drawPlayerSkills = false
+			drawBackpackSlots = true
 		break
 		
 		case uiProfileTypes.minimal:
@@ -99,6 +138,15 @@ setUiProfileType = function(_type) {
 			drawUltimateBar = false
 			drawCurseBar = false
 			drawPlayerSkills = false
+			drawBackpackSlots = true
+		break
+		
+		case uiProfileTypes.statsPurchase:
+			drawStatBars = false
+			drawUltimateBar = false
+			drawCurseBar = false
+			drawPlayerSkills = false
+			drawBackpackSlots = false
 		break
 	}
 }

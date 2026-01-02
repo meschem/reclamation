@@ -4,21 +4,20 @@
 // Inherit the parent event
 event_inherited()
 
-hpMax = 20
+hpMax = 10
 hp = hpMax
 
 damageParticles = [
-	obj_ptb_dest_leaf_falling_a
+	obj_ptb_dest_leaf_falling_md
 ]
 
 deathParticles = [
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a,
-	obj_ptb_dest_leaf_falling_a
+	obj_ptb_dest_leaf_falling_md,
+	obj_ptb_dest_leaf_falling_md,
+	obj_ptb_dest_leaf_falling_sm,
+	obj_ptb_dest_leaf_falling_sm,
+	obj_ptb_dest_leaf_falling_sm,
+	obj_ptb_dest_leaf_falling_sm
 ]
 
 onDeath = function() {

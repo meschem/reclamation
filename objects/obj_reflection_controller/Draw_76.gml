@@ -27,6 +27,10 @@ for (var i = 0; i < array_length(reflectedInstances); i++) {
 		if (variable_instance_exists(id, "floatOffset")) {
 			_yOffset -= floatOffset
 		}
+        
+        if (variable_instance_exists(id, "zOffset")) {
+			_yOffset -= zOffset
+		}
 
 		draw_sprite_ext(
 			sprite_index,

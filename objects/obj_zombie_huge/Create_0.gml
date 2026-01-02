@@ -12,6 +12,10 @@ xp = baddie_xp_brutal
 hpMax = baddie_hp_massive
 hp = hpMax
 
+impactMaterial = enumImpactMaterials.flesh
+
+weight = baddie_weight_heavy
+
 pushRadius = baddie_push_radius_large
 
 shadowSprite = spr_shadow_xxl

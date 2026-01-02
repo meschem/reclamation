@@ -30,10 +30,12 @@ draw_sprite_ext(
 
 if (stunLength > 0) {
 	draw_sprite(spr_stun_spiral, 0, x, y - (sprite_height) + 9)
+} else if (swarmIcon != spr_none) {
+    draw_sprite(swarmIcon, swarmIconIndex, x, y - (sprite_height) + 9)
 }
 
-if (markedForCrit) {
-	draw_text(x, y, "marked")
-}
+//if (markedForCrit) {
+	//draw_text(x, y, "marked")
+//}
 
 shader_reset()

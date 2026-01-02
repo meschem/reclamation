@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"array_contains_custom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_contains_custom",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

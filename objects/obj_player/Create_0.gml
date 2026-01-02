@@ -51,7 +51,6 @@ enum enumPlayerStats {
 	abilityCooldownScalar,
 	abilityDamageScalar,
 	attackSpeedScalar,
-	areaOfEffectScalar,
 	knockbackScalar,
 	bonusProjectileCount,
 	damageScalar,
@@ -108,6 +107,8 @@ bonusAbilityDamageScalar = 0
 bonusKnockbackMultiplier = 0
 bonusAreaOfEffectScalar = 0
 bonusCritChance = 0
+
+statProcessInit = false
 
 totalGold = 0
 gold = 0

@@ -16,7 +16,7 @@ stats = [
 		bonusProjectiles
 	),
 	new abilityStat(
-		"Bonus Damage",
+		"Damage",
 		"bonusDamage",
 		bonusDamage
 	)

@@ -1,4 +1,4 @@
-///@decription					Increases the run's max curse in minutes
+///@description					Increases the run's max curse in minutes
 ///@param {real} _minutes		Minutes to increase curse by. 1 would be a standard unit.
 function curse_increase_max(_minutes){
 	with (obj_run_controller) {

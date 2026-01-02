@@ -17,6 +17,8 @@ function process_player_stats_aoe_scalar() {
 				}
 			}
 		}
+        
+        rollingScalar += (baseInt + bonusInt) / 100
 		
 		bonusAreaOfEffectScalar = rollingScalar
 

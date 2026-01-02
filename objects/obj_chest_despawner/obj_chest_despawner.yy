@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_treasure_chest",
-    "path":"sprites/spr_treasure_chest/spr_treasure_chest.yy",
+    "name":"spr_treasure_chest_small",
+    "path":"sprites/spr_treasure_chest_small/spr_treasure_chest_small.yy",
   },
   "spriteMaskId":null,
   "visible":true,

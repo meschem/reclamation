@@ -18,7 +18,7 @@ state = chestStates.spawning
 contents = []
 active = false
 
-reflectOffsetY = 10
+reflectOffsetY = 14
 
 ///@param {id.Instance} _player
 onPickup = function(_player) {

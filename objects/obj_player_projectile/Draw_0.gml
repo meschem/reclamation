@@ -1,4 +1,4 @@
-if (spawnDelay > 0) {
+if (spawnDelay > 0 || image_alpha == 0) {
 	return 0
 }
 

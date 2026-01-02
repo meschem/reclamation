@@ -4,7 +4,7 @@
 ///@return {bool}
 function display_level_abil_select_new_prompt(player = noone) {
 	if (player == noone) {
-		player = obj_player // get_player_target()
+		player = get_first_player()
 	}
 	
 	var abilities = []
@@ -14,10 +14,10 @@ function display_level_abil_select_new_prompt(player = noone) {
 	
 	if (array_length(player.abilities) >= player.abilitiesMax) {
 		abilities = player.abilities
-	} else {
+    } else {
 		abilities = array_shuffle(obj_ability_controller.availableAbilities) // get_abilities_for_select(player)
 	}
-
+    
 	for (var i = 0; i < array_length(abilities); i++) {
 		if (abilities[i].level < abilities[i].maxLevel) {
 			array_push(abilitiesToDisplay, abilities[i])
@@ -33,6 +33,8 @@ function display_level_abil_select_new_prompt(player = noone) {
 		return false
 	}
 	
+    set_ui_focus_type(uiFocusTypes.abilityPurchaseSelection)
+    
 	var menu = instance_create_depth(0, 0, depths.ui, obj_ability_selection_menu_very_large)
 	menu.title = "Select a new ability"
 	menu.paddingTop = 16
@@ -45,7 +47,9 @@ function display_level_abil_select_new_prompt(player = noone) {
 		instance_destroy(menu)
 	} else {
 		for (var i = 0; i < array_length(abilitiesToDisplay); i++) {
-			create_ability_up_button(abilitiesToDisplay[i], menu, player)
+			var _button = create_ability_up_button(abilitiesToDisplay[i], menu, player)
+			
+			_button.spawnDelay = i * stf(0.2)
 		}
 	}
 	

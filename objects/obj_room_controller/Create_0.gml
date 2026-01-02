@@ -55,7 +55,6 @@ chestSpawnRange = {
 	yMax: -1
 }
 
-
 spawnerPhaseDuration = 60 * 30 // fps * 30 seconds
 
 overtimeLength = seconds_to_frames(5)
@@ -72,6 +71,7 @@ create_instance(obj_camera_controller)
 create_instance(obj_particle_controller)
 create_instance(obj_sound_controller)
 create_instance(obj_event_controller)
+create_instance(obj_dormancy_controller)
 
 spawner = create_instance(obj_spawner_controller)
 finalLevel = false

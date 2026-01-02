@@ -1,4 +1,8 @@
-///@Description Init
+///@description Init
+enum enumProfileSettings {
+    oreVeinCount,
+    unlockedMapSections,
+}
 
 // list of obj_projectile objects
 profiles = []
@@ -38,7 +42,7 @@ loadTempProfiles = function() {
 	array_push(_profile.unlockedMapSections, mapSections.islandSouthEast)
 	array_push(profiles, _profile)
 	
-	latestProfile = profiles[2]
+	latestProfile = profiles[0]
 }
 
 loadTempProfiles()

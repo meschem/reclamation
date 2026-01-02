@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_random_rarity_with_nodrop",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_random_rarity_with_nodrop",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

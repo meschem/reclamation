@@ -4,5 +4,4 @@ event_inherited()
 name = "Evercandle"
 description = "Burns for longer than you'd expect, unless you believe the name."
 
-bonusAreaOfEffect = 0.15
-
+bonusAreaOfEffect = [0.1, 0.2, 0.5]

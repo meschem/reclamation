@@ -5,6 +5,7 @@
 event_inherited();
 
 title = "Game Paused"
+canClose = false
 subTitle = ""
 centered = true
 buttons = []

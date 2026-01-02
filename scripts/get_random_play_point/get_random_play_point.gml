@@ -3,8 +3,9 @@
 ///@return {struct.vec2}
 
 function get_random_play_point(_objectFilter = obj_play_area) {
-	var totalArea = 0;
-	var areaCount = instance_number(_objectFilter)
+	var areaCount = instance_number(_objectFilter) 
+
+    var totalArea = 0
 	var areas = []
 	var areaSize = 0
 	var area = obj_none
@@ -13,6 +14,13 @@ function get_random_play_point(_objectFilter = obj_play_area) {
 	var areaWeights = []
 	var returnVec = new vec2()
 	var i, roll
+        
+    if (areaCount == 0) {
+        returnVec.x = random(view_width()) + camera_get_view_x(view_camera[0])
+        returnVec.x = random(view_height()) + camera_get_view_y(view_camera[0])
+        
+        return returnVec
+    } 
 	
 	if (areaCount == 1) {
 		area = _objectFilter
@@ -50,6 +58,7 @@ function get_random_play_point(_objectFilter = obj_play_area) {
 		roll -= areaWeights[i].weight
 	}
 	
+    show_message(areaWeights)
 	show_error("Error in selecting valid area", true)
 }
 

@@ -70,6 +70,7 @@ event_inherited()
 
 moveBehavior = entityMoveBehaviors.charge
 collisionType = entityCollisionTypes.baddie
+dropType = enumDropType.baddieFodder
 
 damageOnCollide = true
 damageDoodads = 0
@@ -78,6 +79,10 @@ provideKillRewards = true
 targetType = targetTypes.baddie
 
 parentBaddie = noone
+
+sliding = false
+slideAngle = 0
+slideRemaining = 0
 
 damageReactionLength = 16
 damageReactionCurve = animcurve_get(ac_baddie_hit_reaction)
@@ -129,6 +134,9 @@ poisonDamageCdMax = seconds_to_frames(1)
 poisonDamageCdCur = poisonDamageCdMax
 poisonLength = 0
 poisonInflictor = noone
+
+swarmIcon = spr_none
+swarmIconIndex = 0
 
 // END BUFFS
 

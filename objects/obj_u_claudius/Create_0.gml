@@ -32,7 +32,7 @@ deathParticles = [
 
 outlineColor = get_color(colors.red)
 
-add_loot(obj_merger_item_chest)
+dropType = enumDropType.baddieUnique
 
 onDestroy = function() {
 	var _inst = setup_spawner_endless(obj_dark_skeleton_warrior, 0, 1, 8)

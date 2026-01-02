@@ -1,6 +1,7 @@
 ///@description							Controls what type of element is focused by the UI
 ///@param {real} _profileType			Focus type to set, uses enum uiProfileTypes
 function set_ui_profile_type(_profileType) {
+	//create_toaster("Profile Type Updates: " + string(_profileType))
 	with (obj_ui_controller) {
 		setUiProfileType(_profileType)
 	}

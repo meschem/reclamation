@@ -1,20 +1,27 @@
 ///@description   Description
 ///@param {real} rarity		enumRarity to check for
+///@param {bool} useLight   uses the lighter color variant
 ///@return {constant.Color}
-function get_rarity_color(rarity){
+function get_rarity_color(rarity, useLight = false) {
+    var _color = c_white
+    
 	switch (rarity) {
 		case enumRarity.normal:
-			return get_color(colors.green)
+            _color = useLight ? c_white : global.colorGray
+        break
 		
 		case enumRarity.magic:
-			return get_color(colors.blue)
+			_color = useLight ? global.colorGreen : global.colorDarkGreen
+        break
 		
 		case enumRarity.rare:
-			return get_color(colors.purple)
+			_color = useLight ? global.colorBlue : global.colorDarkBlue
+        break
 		
 		case enumRarity.legendary:
-			return get_color(colors.red)
+			_color = useLight ? global.colorRed : global.colorDarkRed
+        break
 	}
-	
-	return get_color(colors.white)
+    
+    return _color
 }

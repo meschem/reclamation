@@ -1,12 +1,18 @@
 ///@description							Adds a poi for the map
 ///@param {id.Instance} _refInstance	Instance to add a POI for
-function add_map_poi(_refInstance = id) {
-	if (!variable_instance_exists(_refInstance, "mapIcon")) {
-		create_toaster("Generic map POI generated", errorLevels.warning)
-		_refInstance.mapIcon = spr_poi_generic
-	}
+///@param {asset.GMSprite} _mapIcon     Icon to use on the map
+function add_map_poi(_refInstance = id, _mapIcon = spr_poi_generic) {
+    var _poi = new mapPoi(_refInstance, _mapIcon)
 	
 	with (obj_map) {
-		array_push(pois, _refInstance)
+		array_push(pois, _poi)
 	}
+}
+
+///@description							Adds a poi for the map
+///@param {id.Instance} _refInstance	Instance to remove a POI for
+function remove_map_poi(_refInstance = id) {
+    with (obj_map) {
+        removePoi(_refInstance)
+    }
 }

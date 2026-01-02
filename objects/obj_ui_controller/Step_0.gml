@@ -2,26 +2,19 @@
 
 age++
 
-//with (obj_game_controller) {
-//	nextLevel = playerXpLevelTable[obj_player.level - 1]
-//	ratio = obj_player.xp / nextLevel
+//if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, XBOX_INPUT_B)) {
+	//if (
+		//focusType == uiFocusTypes.inventory ||
+		//focusType == uiFocusTypes.skillDetails ||
+		//focusType == uiFocusTypes.statDetails
+	//) {
+		//focusType = uiFocusTypes.none
+		//
+		//with (obj_backpack) {
+			//close()
+		//}
+	//}
 //}
-
-//xpRatio = ratio
-
-if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0, XBOX_INPUT_B)) {
-	if (
-		focusType == uiFocusTypes.inventory ||
-		focusType == uiFocusTypes.skillDetails ||
-		focusType == uiFocusTypes.statDetails
-	) {
-		focusType = uiFocusTypes.none
-		
-		with (obj_backpack) {
-			close()
-		}
-	}
-}
 
 if (age % 15 == 0 ) {
 	drawFps = fps_real

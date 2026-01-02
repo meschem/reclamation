@@ -4,12 +4,12 @@
 // Inherit the parent event
 event_inherited();
 
-draw_set_color(c_black)
+draw_set_color(c_white)
 
 for (var i = 0; i < array_length(upgrade.stats); i++) {
 	var nameString = upgrade.stats[i].name + ": "
 	
-	draw_set_color(get_color(colors.dark))
+	draw_set_color(c_white)
 	
 	draw_text(
 		x + menuOffset.x + paddingX,
@@ -17,7 +17,7 @@ for (var i = 0; i < array_length(upgrade.stats); i++) {
 		nameString
 	)
 	
-	draw_set_color(get_color(colors.red))
+	draw_set_color(global.colorGreen)
 	
 	draw_text(
 		x + menuOffset.x + paddingX + string_width(nameString),

@@ -1,5 +1,6 @@
 ///@description					Gets 4-directional input result of player. Useful for menus.
-///@return {real}				Returns an enum of enumDirectionInput
+///								 * Returns an enum of enumDirectionInput
+///@return {real}				
 function get_player_4_direction_input() {
 	enum enumDirectionInput {
 		none, up, right, down, left
@@ -8,19 +9,35 @@ function get_player_4_direction_input() {
 	var selectChangeX = 0
 	var selectChangeY = 0
 
-	if (keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(0, gp_padu)) {
+	if (
+		keyboard_check_pressed(ord("W")) ||
+		keyboard_check_pressed(vk_up) ||
+		gamepad_button_check_pressed(0, gp_padu)
+	) {
 		selectChangeY = -1
 	}
 
-	if (keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl)) {
+	if (
+		keyboard_check_pressed(ord("A")) ||
+		keyboard_check_pressed(vk_left) ||
+		gamepad_button_check_pressed(0, gp_padl)
+	) {
 		selectChangeX = -1
 	}
 
-	if (keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(0, gp_padd)) {
+	if (
+		keyboard_check_pressed(ord("S")) ||
+		keyboard_check_pressed(vk_down) ||
+		gamepad_button_check_pressed(0, gp_padd)
+	) {
 		selectChangeY = 1
 	}
 
-	if (keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr)) {
+	if (
+		keyboard_check_pressed(ord("D")) ||
+		keyboard_check_pressed(vk_right) ||
+		gamepad_button_check_pressed(0, gp_padr)
+	) {
 		selectChangeX = 1
 	}
 	

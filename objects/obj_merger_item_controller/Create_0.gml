@@ -7,7 +7,7 @@ itemDb = [
 		"Imp Skull",
 		"Remnants of demonic energy remain encased.",
 		obj_mg_imp_skull,
-		spr_icon_poison_stacks
+		spr_icon_imp_skull
 	),
 	new mergerItemTemplate(
 		"Beast Blood",
@@ -43,7 +43,7 @@ itemDb = [
 		"Great-hawk Claw",
 		"Capable of rending iron armor with a powerful enough blow.",
 		obj_mg_greathawk_claw,
-		spr_icon_demon_claw
+		spr_icon_twisted_horn
 	),
 	new mergerItemTemplate(
 		"War Bracer",
@@ -75,63 +75,72 @@ itemDb = [
 		obj_mg_fire_salt,
 		spr_icon_fire_salt,
 	),
-	new mergerItemTemplate(
-		"Simple Boots",
-		"Humble boots for quick-footed warriors.",
-		obj_mg_simple_boots,
-		spr_icon_simple_boots,
+
+    new mergerItemTemplate(
+		"Goldleaf",
+		"An investment to say the leaf. Oof.",
+		obj_mg_goldleaf,
+		spr_icon_goldleaf,
+		
 	),
 	
 	// uncommon
 	
-	new mergerItemTemplate(
-		"Leather Doublet",
-		"Protection against glancing blows.",
-		obj_mg_leather_doublet,
-		spr_icon_leather_armor,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Glass Feather",
-		"Fused with magic that can be uniquely bound to glass.",
-		obj_mg_glass_feather,
-		spr_icon_glass_feather,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Black Ichor",
-		"A thick, deeply dark substance.",
-		obj_mg_black_ichor,
-		spr_icon_black_ichor,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Timepiece",
-		"A marvel of both engineering and magic.",
-		obj_mg_timepiece,
-		spr_icon_timepiece,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Aetherblight",
-		"A boiled-down mixture from carefully selected prey.",
-		obj_mg_aetherblight,
-		spr_icon_acid_vial,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Ironclaw",
-		"Alchemical fusion of beast and iron.",
-		obj_mg_iron_claw,
-		spr_icon_iron_claw,
-		enumRarity.magic
-	),
-	new mergerItemTemplate(
-		"Power Amulet",
-		"Emanates powerful energies",
-		obj_mg_ebony_pendant,
-		spr_icon_aegis_pendant,
-		enumRarity.magic
+	//new mergerItemTemplate(
+		//"Leather Doublet",
+		//"Protection against glancing blows.",
+		//obj_mg_leather_doublet,
+		//spr_icon_leather_armor,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Glass Feather",
+		//"Fused with magic that can be uniquely bound to glass.",
+		//obj_mg_glass_feather,
+		//spr_icon_glass_feather,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Black Ichor",
+		//"A thick, deeply dark substance.",
+		//obj_mg_black_ichor,
+		//spr_icon_black_ichor,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Timepiece",
+		//"A marvel of both engineering and magic.",
+		//obj_mg_timepiece,
+		//spr_icon_timepiece,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Aetherblight",
+		//"A boiled-down mixture from carefully selected prey.",
+		//obj_mg_aetherblight,
+		//spr_icon_acid_vial,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Ironclaw",
+		//"Alchemical fusion of beast and iron.",
+		//obj_mg_iron_claw,
+		//spr_icon_iron_claw,
+		//enumRarity.magic
+	//),
+	//new mergerItemTemplate(
+		//"Power Amulet",
+		//"Emanates powerful energies",
+		//obj_mg_ebony_pendant,
+		//spr_icon_aegis_pendant,
+		//enumRarity.magic
+	//),
+    new mergerItemTemplate(
+		"Simple Boots",
+		"Humble boots for quick-footed warriors.",
+		obj_mg_simple_boots,
+		spr_icon_simple_boots,
+        enumRarity.magic
 	),
 	new mergerItemTemplate(
 		"Petrified Heart",
@@ -140,13 +149,7 @@ itemDb = [
 		spr_icon_petrified_heart,
 		enumRarity.magic
 	),
-	new mergerItemTemplate(
-		"Goldleaf",
-		"An investment to say the leaf. Oof.",
-		obj_mg_goldleaf,
-		spr_icon_goldleaf,
-		enumRarity.magic
-	),
+
 		new mergerItemTemplate(
 		"Puzzlebox",
 		"Highly reactive to valuables.",
@@ -170,14 +173,14 @@ itemDb = [
 		obj_mg_infernal_gauntlets,
 		spr_icon_infernal_gauntlets,
 		enumRarity.rare
-	),
-		new mergerItemTemplate(
-		"Frost Walkers",
-		"Slows down units that get close with a chilling aura.",
-		obj_mg_frost_walkers,
-		spr_icon_frost_walkers,
-		enumRarity.rare
-	),
+	), 
+    //new mergerItemTemplate(
+		//"Frost Walkers",
+		//"Slows down units that get close with a chilling aura.",
+		//obj_mg_frost_walkers,
+		//spr_icon_frost_walkers,
+		//enumRarity.rare
+	//),
 
 	
 	// legendary
@@ -215,26 +218,32 @@ createItem = function(_player = noone, _rarity = [enumRarity.normal]) {
 	var _shuffled = array_shuffle(itemDb)
 	
 	if (!is_array(_rarity)) {
+        if (_rarity = enumRarity.any) {
+            _rarity = enumRarity.normal
+        }
+        
 		_rarity = [_rarity]
 	}
-	
+    
 	for (var i = 0; i < array_length(_shuffled); i++) {
 		if (array_contains(_rarity, _shuffled[i].rarity)) {
 			return _shuffled[i].create(_player)			
 		}
 	}
 	
-	show_message("No item of rarity found")
+    show_message("No item of rarity found: ")
+    show_message(_rarity)
+    show_message(itemDb)
+    show_message(_shuffled)
 	
 	return noone
 }
 
 ///@description							Creates an item of a specified rarity or rarities
 ///@param {real} _count					Amount of items to get (3)
-///@param {real} _magicFind				Magic find bonus (0)
+///@param {real} _minRarity				Minimum rarity of the item
 ///@return {array<id.Instance>}
-
-createItems = function(_count = 3, _magicFind = 0) {
+createItems = function(_count = 3, _minRarity = 0) {
 	var _shuffled = array_shuffle(itemDb)
 	var _mergers = []
 	var _itemsFound = []
@@ -247,7 +256,7 @@ createItems = function(_count = 3, _magicFind = 0) {
 	}
 	
 	while (array_length(_itemsFound) < _count) {
-		var _rarity = get_random_rarity(_magicFind)
+		var _rarity = get_random_rarity(_minRarity)
 		
 		for (var i = 0; i < array_length(_shuffled); i++) {
 			if (array_contains(_skip, i)) {

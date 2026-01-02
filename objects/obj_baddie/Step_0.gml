@@ -41,7 +41,24 @@ var appliedVel = new vec2(xVel, yVel)
 if (debuffShockAmount > 0)
 	debuffShockAmount--
 
-if (knockbackSlowDuration > 0) {
+if (slideRemaining > 0) {
+    
+    xVel = 0
+    yVel = 0
+    
+    state = enemyStates.pushed
+    
+    var _slideAmount = slideRemaining * 0.15
+    
+    if (_slideAmount <= 1) {
+        slideRemaining = 0
+        state = enemyStates.normal
+    } else {
+        slideRemaining -= _slideAmount
+    }
+    
+    slide_baddie(id, slideAngle, _slideAmount)
+} else if (knockbackSlowDuration > 0) {
 	var knockbackAgeRatio = (age - knockbackSlowHitFrame) / knockbackSlowDuration
 
 	if (knockbackAgeRatio >= 1) {
@@ -132,9 +149,7 @@ if (shockedLength > 0) {
 	shockedLength--
 }
 
-if (poisonLength > 0) {
-	
-	
+if (poisonLength > 0) { 
 	if (poisonInflictor == noone) {
 		poisonInflictor = get_first_player()
 	}
@@ -164,7 +179,9 @@ if (stunLength > 0) {
 	appliedVel.x = 0
 	appliedVel.y = 0
 
-	stunLength--
+    if (slideRemaining <= 0) {
+	   stunLength--
+    }
 	
 	if (stunLength <= 0) {
 		state = enemyStates.normal

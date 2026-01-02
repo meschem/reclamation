@@ -23,5 +23,7 @@ if (age > fadeOutStartFrame) {
 x += xVel
 y += yVel
 
+iconOffsetX = -sprite_width + 4
+
 if (age > lifeSpan)
 	instance_destroy()

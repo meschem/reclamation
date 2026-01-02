@@ -23,15 +23,23 @@ function process_player_stats_char(){
 		// Process Items
 		with (obj_equipment) {
 			if (owner == player && equipped && slot != equipmentSlots.trinket) {
-				if (is_array(bonusDamageScalar)) {
+				if (is_array(bonusStr)) {
 					rollingStr += bonusStr[level - 1]
+                } else {
+                    rollingStr += bonusStr
+                }
+                
+                if (is_array(bonusDex)) {
 					rollingDex += bonusDex[level - 1]
+                } else {
+                    rollingDex += bonusDex
+                }
+                
+                if (is_array(bonusInt)) {
 					rollingInt += bonusInt[level - 1]
-				} else {
-					rollingStr += bonusStr
-					rollingDex += bonusDex
-					rollingInt += bonusInt
-				}
+                } else {
+                    rollingInt += bonusInt
+                }
 			}
 		}
 		

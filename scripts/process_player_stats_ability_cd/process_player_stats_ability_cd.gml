@@ -20,6 +20,7 @@ function process_player_stats_ability_cd() {
 		with (obj_equipment) {
 			if (owner == player && equipped && slot != equipmentSlots.trinket) {
 				if (is_array(bonusAbilityCooldown)) {
+                    i = min(level - 1, array_length(bonusAbilityCooldown) - 1)
 					rollingAmount += bonusAbilityCooldown[level - 1]
 				} else {
 					rollingAmount += bonusAbilityCooldown
@@ -34,6 +35,8 @@ function process_player_stats_ability_cd() {
 		// Process Talents
 		
 		// Process Items
+        
+        rollingAmount += (baseInt + bonusInt) / 100
 
 		//show_debug_message("Abil CD Scalar = " + string(obj_player.abilityCooldownScalar))
 	}

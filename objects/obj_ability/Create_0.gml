@@ -153,9 +153,7 @@ use = function() {
 
 applyStats = function () {
 	for (var i = 0; i < array_length(stats); i++) {
-		
-			variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
-		
+		variable_instance_set(id, stats[i].variable, stats[i].values[level - 1])
 	}
 }
 

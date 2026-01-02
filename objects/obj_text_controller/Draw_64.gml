@@ -10,15 +10,14 @@ draw_rectangle(300, 20, 300 + maxWidth, 500, false)
 
 draw_set_font(font_aseprite);
 
-// Call the script to draw the highlighted, wrapped text
 draw_highlighted_text(
-    300,             // x
-    20,             // y
-    textToDraw,   // text
-    maxWidth,      // max_width
-    global.colorMapStruct,   // color_map_struct (the struct we created)
-    12,    // line_height
-    global.COLOR_DEFAULT // default_color
+    300,             
+    20,             
+    textToDraw,  
+    maxWidth,      
+    global.colorMapStruct,
+    12,    
+    global.COLOR_DEFAULT 
 );
 
 draw_text_ext(

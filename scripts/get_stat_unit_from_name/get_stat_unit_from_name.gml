@@ -25,6 +25,9 @@ function get_stat_unit_from_name(_name) {
 		case "crit multiplier":
 		case "weapon aoe":
 		case "ability cooldown":
+        case "projectile size":
+        case "velocity":
+        case "knockback":
 			_enum = statUnits.percent
 		break
 		

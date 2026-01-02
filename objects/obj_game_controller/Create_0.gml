@@ -36,6 +36,7 @@ define_item_stats()
 define_characters()
 define_level_xp_table()
 define_level_up_rewards()
+define_biomes()
 
 window_set_cursor(cr_none)
 

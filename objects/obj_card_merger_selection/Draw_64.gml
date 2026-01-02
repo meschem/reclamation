@@ -21,12 +21,10 @@ for (var i = 0; i < array_length(merger.statsSpecial); i++) {
 	_statsSpecialHeight += 4
 }
 
-draw_set_color(c_black)
-
 for (var i = 0; i < array_length(merger.stats); i++) {
 	var nameString = merger.stats[i].getDisplayName() + ": "
 	
-	draw_set_color(get_color(colors.dark))
+	draw_set_color(get_color(colors.white))
 	
 	draw_text(
 		x + menuOffset.x + paddingX,
@@ -35,10 +33,14 @@ for (var i = 0; i < array_length(merger.stats); i++) {
 	)
 	
 	draw_set_color(get_color(colors.red))
+    
+    //show_message(displayLevel)
+    
+    var fff = merger.stats[i].getDisplayValue()
 	
 	draw_text(
 		x + menuOffset.x + paddingX + string_width(nameString),
 		y + menuOffset.y + height - paddingY - (i * statSpacing) - _statsSpecialHeight,
-		merger.stats[i].getDisplayValue(displayLevel - 1)
+		merger.stats[i].getDisplayValue()
 	)
 }

@@ -28,29 +28,23 @@ activate_war_stomp_active(-1) // not used, ease of reference
 
 charStatBonuses = []
 
-statBonusAftershock = {
-	stat: enumCharStats.str,
-	active: false,
-	amount: 30,
-	name: "Aftershock",
-	description: "Creates a secondary area of damage after a brief delay",
-}
+statBonusAftershock = new abilityStatBonus(
+    enumCharStats.str, 30,
+    "Aftershock",
+    "Creates a secondary area of damage after a brief delay"
+)
 
-statBonusEchoingPain = {
-	stat: enumCharStats.dex,
-	active: false,
-	amount: 30,
-	name: "Echoing Pain",
-	description: "Deals extra damage per target hit or critical if only 1 target is hit"
-}
+statBonusEchoingPain = new abilityStatBonus(
+    enumCharStats.dex, 30,
+    "Echoing Pain",
+    "Deals extra damage per target hit or critical if only 1 target is hit"
+)
 
-statBonusReflection = {
-	stat: enumCharStats.int,
-	active: false,
-	amount: 30,
-	name: "Reflection",
-	description: "Reflects projectiles back at enemies"
-}
+statBonusReflection = new abilityStatBonus(
+    enumCharStats.int, 30,
+    "Reflection",
+    "Reflects projectiles back at enemies"
+)
 
 array_push(charStatBonuses, statBonusAftershock, statBonusEchoingPain, statBonusReflection)
 

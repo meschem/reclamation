@@ -4,7 +4,7 @@ event_inherited()
 name = "Venomleaf"
 description = "Dangerous to consume, but far more to harvest."
 
-bonusPoisonDamage = 5
+bonusPoisonDamage = [5, 10, 25]
 //poisonChance = 0.1
 //poisonDuration = stf(3)
 statsSpecial = ["Only increases damage that applies poison."]

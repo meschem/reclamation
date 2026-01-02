@@ -8,6 +8,14 @@ if (state == chestStates.spawning) {
 	return 0
 }
 
+if (
+    get_ui_profile_type() == uiProfileTypes.gameplay
+) {
+    drawUi = true
+} else {
+    drawUi = false
+}
+
 depth = depths.enemy - y - 5
 
 openingPlayer = noone

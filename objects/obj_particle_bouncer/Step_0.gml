@@ -15,7 +15,7 @@ if (age >= lifeSpan) {
 beginStep()
 
 image_angle += rotationSpeed
-depth = depths.enemy - y + 60
+depth = depths.enemy - y - yGroundOffset
 
 if (rotationSpeedDeaccel > 0) {
 	if (rotationSpeed > 0) {

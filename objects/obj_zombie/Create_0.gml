@@ -12,10 +12,10 @@ xp = baddie_xp_fodder
 hpMax = baddie_hp_high
 hp = hpMax
 
+impactMaterial = enumImpactMaterials.flesh
+
 shadowSprite = spr_shadow_med
 shadowOffset = -1
-
-add_loot_gold(4, 6)
 
 deathParticles = [
 	obj_ptb_zombie_head_grn,
@@ -27,3 +27,5 @@ deathParticles = [
 ]
 
 add_baddie_gold_fodder
+
+

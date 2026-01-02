@@ -5,20 +5,26 @@
 event_inherited()
 
 name = "Goldleaf"
-description = "With neutralized poison, its alchemical properties are revealed."
+description = "The Sun-scorched leaf of a Venomfern that has clung on to life, bursting with alchemical properties."
 
-rarity = enumRarity.magic
+goldDropChance = [0.25, 0.3, 0.35]
+goldDropAmountMin = [1, 2, 3]
+goldDropAmountMax = [5, 10, 15]
+goldDropAmountDisplay = ["1 to 5", "2 to 10", "3 to 15"]
+maxLevel = 3
 
-bonusPickupReward = 0.5
-bonusPickupRange = 0.5
-goldDropChance = 1 // 0.1
-goldDropString = string(goldDropChance * 100) + "%" + " Chance for enemies to drop gold on weapon hit"
+stats = [
+    create_custom_item_stat(goldDropAmountDisplay, "Gold", statUnits.none),
+    create_custom_item_stat(goldDropChance, "Chance on Hit", statUnits.percent)
+]
 
-statsSpecial = [goldDropString]
+statsSpecial = "Enemies sometimes drop gold on Weapon hits"
 
 onWeaponHit = function(_data) {
 	if (_data.target.targetType == targetTypes.baddie) {
-		if (random(1) < goldDropChance) {
+        var _index = min(level - 1, array_length(goldDropChance) - 1)
+        
+		if (random(1) < goldDropChance[_index]) {
 			create_pickup_with_lob(obj_coin, _data.target.x, _data.target.y, get_color(colors.yellow))
 		}
 	}

@@ -4,4 +4,4 @@ event_inherited()
 name = "Beast Blood"
 description = "A boiled-down mixture from carefully selected prey."
 
-bonusDex = 5
+bonusDex = [3, 6, 14]

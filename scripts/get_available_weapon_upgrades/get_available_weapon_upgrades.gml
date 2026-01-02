@@ -26,6 +26,8 @@ function get_available_weapon_upgrades(_player = noone, _type = weaponUpgradeTyp
 	}
 	
 	//weaponUpgrades = _player.equipment.weapon.upgrades
+    
+    _weaponUpgrades = array_shuffle(_weaponUpgrades)
 
 	for (var i = 0; i < array_length(_weaponUpgrades); i++) {
 		if (_weaponUpgrades[i].stackable || _weaponUpgrades[i].level == 0) {

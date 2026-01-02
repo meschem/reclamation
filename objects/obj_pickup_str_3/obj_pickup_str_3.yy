@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_food_orange",
-    "path":"sprites/spr_food_orange/spr_food_orange.yy",
+    "name":"spr_food_steak",
+    "path":"sprites/spr_food_steak/spr_food_steak.yy",
   },
   "spriteMaskId":null,
   "visible":true,

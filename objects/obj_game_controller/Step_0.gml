@@ -86,6 +86,7 @@ if (keyboard_check_pressed(ord("V"))) {
 
 if (keyboard_check_pressed(ord("B"))) {
 	spawn_baddie_at_location(
+        
 		obj_bugbear, mouse_x, mouse_y
 	)
 }
@@ -97,11 +98,7 @@ if (keyboard_check_pressed(ord("N"))) {
 }
 
 if (keyboard_check_pressed(ord("M"))) {
-	for (var i = 0; i < 1; i++) {
-		var _leaf = instance_create_depth(mouse_x, mouse_y, depths.fx, obj_ptb_dest_leaf_falling_a)
-		
-		_leaf.angleInit = random(360)
-	}
+
 }
 
 if (keyboard_check_pressed(ord("K"))) {
@@ -109,8 +106,14 @@ if (keyboard_check_pressed(ord("K"))) {
 }
 
 if (mouse_check_button_pressed(mb_middle)) {
+    create_lob_drop_with_table(mouse_x, mouse_y, enumDropType.baddieFieldBoss)
+    //var _spawner = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_lob_drop_spawner)
+    //
+    //_spawner.lootDrops = get_drop_table(enumDropType.baddieFieldBoss)
 	//var inst = instance_create_depth(mouse_x, mouse_y, depths.enemy, obj_necromancer)
-	with (obj_player) {
-		create_random_merger_item_drop(mouse_x, mouse_y)
-	}
+	//with (obj_player) {
+        //var _magicFind = get_player_stat(enumPlayerStats.magicFind)
+		//create_random_merger_item_drop(mouse_x, mouse_y, _magicFind, enumRarity.legendary)
+        
+	//}
 }

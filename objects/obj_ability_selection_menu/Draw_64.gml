@@ -13,6 +13,10 @@ draw_sprite_ext(
 
 draw_text(x + paddingX, y + paddingY, title)
 
+draw_set_font(font_alagard)
+draw_set_color(c_white)
+draw_text(x, y, string(buttonFocusIndex))
+
 /*
 for (var i = 0; i < array_length(buttons); i++) {
 	draw_sprite_ext(

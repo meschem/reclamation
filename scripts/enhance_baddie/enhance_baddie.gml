@@ -11,6 +11,7 @@ function enhance_baddie(type, inst = id) {
 			inst.damageOnHit *= 2
 			inst.outlineColor = get_color(colors.yellow)
 			inst.moveSpeedMax *= 1.33
+            inst.dropType = enumDropType.baddieElite
 			
 			//add_loot(obj_rune_pickup, 1, inst)
 			
@@ -30,6 +31,7 @@ function enhance_baddie(type, inst = id) {
 				inst.image_xscale = inst.bossScale
 				inst.image_yscale = inst.bossScale
 				inst.moveSpeedMax *= 1.33
+                inst.dropType = enumDropType.baddieUnique
 			}
 
 			inst.outlineColor = get_color(colors.red)

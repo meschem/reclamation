@@ -2,10 +2,9 @@
 // Inherit the parent event
 event_inherited()
 
-boss = obj_naga_boss
+add_map_poi(id, spr_poi_obelisk)
 
-mapIcon = spr_poi_obelisk
-add_map_poi()
+boss = obj_naga_boss
 
 deathParticleSpawnRange = new vec2(20, 30)
 
@@ -17,8 +16,6 @@ deathParticles = [
 	obj_ptb_dest_rock_purp_small,
 	obj_ptb_dest_rock_purp_small,
 	obj_ptb_dest_rock_purp_small,
-	obj_ptb_dest_rock_purp_small,
-	obj_ptb_dest_rock_purp_med,
 	obj_ptb_dest_rock_purp_med,
 	obj_ptb_dest_rock_purp_med,
 	obj_ptb_dest_rock_purp_med,

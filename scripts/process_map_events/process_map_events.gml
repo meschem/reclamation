@@ -32,10 +32,31 @@ function process_map_events() {
 		
 		_event.persistent = true
 		
-		add_map_poi(_event)
+		//add_map_poi(_event)
 	}
 	
 	with (obj_event_location) {
 		instance_destroy()
 	}
+    
+    // DESTROY IRON VEINS
+    var _maxAllowed = get_profile_settings(enumProfileSettings.oreVeinCount)
+    var _allVeins = []
+
+    with (obj_dest_vein_iron) {
+        array_push(_allVeins, id)
+    }
+
+    var _currentCount = array_length(_allVeins)
+
+    if (_currentCount > _maxAllowed) {
+        _allVeins = array_shuffle(_allVeins)
+
+        var _numberToDestroy = _currentCount - _maxAllowed
+        
+        repeat(_numberToDestroy) {
+            var _instToDie = array_pop(_allVeins)
+            instance_destroy(_instToDie, false)
+        }
+    }
 }

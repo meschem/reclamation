@@ -13,12 +13,12 @@ function process_equipment_stats(_equipment = id){
 		var _set = false
 		
 		if (is_array(_value)) {
-				if (array_length(_value) > 0) {
-					//show_message("ARRAY")
-					//show_message(_value)
-					array_push(_equipment.stats, new itemStat(_itemStatEnum, _value))
-					_set = true
-				}	
+            if (array_length(_value) > 0) {
+                //show_message("ARRAY")
+                //show_message(_value)
+                array_push(_equipment.stats, new itemStat(_itemStatEnum, _value))
+                _set = true
+            }	
 		} else if (_value != 0 && _value != undefined) {
 			//show_message("NORMAL")
 			//show_message(_value)

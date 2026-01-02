@@ -42,21 +42,16 @@ for (var i = 0; i < instance_number(obj_player); i++) {
 } 
 
 for (var i = 0; i < array_length(pois); i++) {
-	if (!instance_exists(pois[i])) {
-		continue
-	}
-	
-	_posX = (pois[i].x / room_width) * sprite_width
-	_posY = (pois[i].y / room_height) * sprite_height
-	
-	array_push(
-		poiDrawInfo,
-		{
-			sprite: pois[i].mapIcon,
-			frame: 0,
-			x: _posX,
-			y: _posY
-		}
-	)
+    _posX = (pois[i].worldX / room_width) * sprite_width
+    _posY = (pois[i].worldY / room_height) * sprite_height
+    
+    array_push(
+        poiDrawInfo,
+        {
+            sprite: pois[i].icon,
+            frame: 0,
+            x: _posX,
+            y: _posY
+        }
+    )
 }
-

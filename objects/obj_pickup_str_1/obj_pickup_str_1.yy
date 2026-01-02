@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_food_apple",
-    "path":"sprites/spr_food_apple/spr_food_apple.yy",
+    "name":"spr_food_chicken",
+    "path":"sprites/spr_food_chicken/spr_food_chicken.yy",
   },
   "spriteMaskId":null,
   "visible":true,

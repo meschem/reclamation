@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_menu_3d",
-    "path":"sprites/spr_menu_3d/spr_menu_3d.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

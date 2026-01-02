@@ -1,6 +1,6 @@
 
 event_inherited()
 
-stat = enumPlayerStats.str
-pickupValue = 5
+name = "Steak"
 
+bonusStr = 4

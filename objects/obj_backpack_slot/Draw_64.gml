@@ -1,10 +1,16 @@
 
 
-if (obj_ui_controller.skipPlayerUi || image_alpha == 0) {
+if (!obj_ui_controller.drawBackpackSlots || obj_ui_controller.skipPlayerUi || image_alpha == 0) {
 	return 0
 }
 
 draw_self()
+
+draw_sprite(
+    borderSprite,
+    borderImageIndex,
+    x, y
+)
 
 if (item != noone && !instance_exists(item)) {
 	show_message([id, x, y])
@@ -13,10 +19,10 @@ if (item != noone && !instance_exists(item)) {
 }
 
 if (item != noone) {
-	draw_sprite(
-		item.sprite_index,
-		1,
-		x + itemPadding,
-		y + itemPadding + 1
-	)
+    draw_sprite(
+        item.sprite_index,
+        itemImageIndex,
+        x + itemPadding,
+        y + itemPadding + 1
+    )
 }

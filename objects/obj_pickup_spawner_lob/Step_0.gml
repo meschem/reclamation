@@ -18,6 +18,8 @@ if (age < lifeSpan) {
 	//z = lobHeight * (4 * _t * (1 - _t))
 	zVel += lobGravity
 	z += zVel
+    
+    depth = depths.enemy - y
 	
 	calculatedY = y + z * zRatio
 } else {

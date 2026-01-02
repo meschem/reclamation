@@ -26,9 +26,9 @@ function process_player_stats_projectile_count() {
 			}
 		}
 		
-		with (obj_weapon_upgrade) {
-			rollingCount += bonusProjectileCount
-		}
+		//with (obj_weapon_upgrade) {
+			//rollingCount += bonusProjectileCount
+		//}
 		
 		// Process Talents
 		

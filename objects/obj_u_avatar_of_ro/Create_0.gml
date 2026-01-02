@@ -21,7 +21,7 @@ outlineColor = get_color(colors.red)
 
 image_index = floor(random(sprite_get_number(sprite_index)))
 
-add_loot(obj_merger_item_chest)
+dropType = enumDropType.baddieDungeonBoss
 
 deathParticles = [
 	obj_ptb_skel_bone_purp,

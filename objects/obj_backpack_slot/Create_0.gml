@@ -3,12 +3,15 @@ depth = -600
 
 activeSlot = false
 item = noone
+itemImageIndex = 1
 selected = false
 backpack = noone
 combining = false
 swapping = false
 sprite = obj_backpack_slot
+borderSprite = spr_backpack_slot_active_border
 itemPadding = 3
+borderImageIndex = 0
 
 xOffset = 0
 

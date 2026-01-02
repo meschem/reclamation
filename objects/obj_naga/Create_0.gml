@@ -14,6 +14,8 @@ bossScale = 1
 shadowSprite = spr_shadow_naga
 shadowOffset = -12
 
+impactMaterial = enumImpactMaterials.flesh
+
 pushRadius = 30
 
 //hpBarInfo.yOffset = -23

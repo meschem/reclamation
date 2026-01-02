@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_food_watermelon",
-    "path":"sprites/spr_food_watermelon/spr_food_watermelon.yy",
+    "name":"spr_food_sausage",
+    "path":"sprites/spr_food_sausage/spr_food_sausage.yy",
   },
   "spriteMaskId":null,
   "visible":true,

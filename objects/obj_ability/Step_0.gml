@@ -1,4 +1,6 @@
 
+drawGui = obj_ui_controller.drawPlayerSkills
+
 if (!enabled || game_is_paused())
 	return 0
 	
@@ -14,8 +16,6 @@ if (ultimate && !iconLargeSet) {
 if (activationCdCur > 0) {
 	activationCdCur--
 }
-
-drawGui = obj_ui_controller.drawPlayerSkills
 
 curCd = max(curCd - 1, 0)
 

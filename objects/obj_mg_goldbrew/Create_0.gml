@@ -7,5 +7,5 @@ event_inherited()
 name = "Goldbrew"
 description = "A strange mix from exotic, purely organic ingredients that can convert materials into gold."
 
-bonusPickupReward = 0.25
+bonusPickupReward = [0.15, 0.30, 0.8]
 

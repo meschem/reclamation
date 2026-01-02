@@ -18,9 +18,11 @@ function process_player_stats_crit_multiplier() {
 			}
 		}
 		
-		with (obj_weapon_upgrade) {
-			rollingStatic += bonusCritMultiplier
-		}
+		//with (obj_weapon_upgrade) {
+			//rollingStatic += bonusCritMultiplier
+		//}
+        
+        rollingStatic += (baseDex + bonusDex) / 100
 		
 		// Process Talents
 		critMultiplier = baseCritMultiplier + rollingStatic

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"light_metal_hit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"light_metal_hit",
+  "parent":{
+    "name":"impact_fx",
+    "path":"folders/Scripts/fx/impact_fx.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

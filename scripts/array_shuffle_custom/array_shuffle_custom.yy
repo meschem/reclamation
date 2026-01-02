@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"array_shuffle_custom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_shuffle_custom",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

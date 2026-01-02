@@ -32,6 +32,8 @@ function process_player_stats_ability_dmg() {
 		}
 		
 		// Process Talents
+        
+        rollingAmount += (baseInt + bonusInt) / 100
 		
 		// Process Items
 

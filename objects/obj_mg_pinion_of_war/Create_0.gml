@@ -29,10 +29,10 @@ onUnequip = function() {
 }
 
 onAbilityUse = function(_ability) {
-	if (owner.activeAbility == noone) {
+	if (owner.activeAbility == noone || _ability != owner.activeAbility) {
 		return 0
 	}
-	
+    
 	var _abils = array_shuffle(owner.abilities)
 	
 	for (var i = 0; i < array_length(_abils); i++) {

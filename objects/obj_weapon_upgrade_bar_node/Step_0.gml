@@ -19,12 +19,14 @@ switch (state) {
 		
 			inst = instance_create_depth(x - xPosOffset, y - yPosOffset + 1, depth + 5, obj_particle_single_cycle_gui)
 			inst.sprite_index = sprite
+            inst.parent = id
 		
 			xPosOffset = floor(random(spriteHalfWidth))
 			yPosOffset = spriteHalfWidth - xPosOffset
 		
 			inst = instance_create_depth(x + xPosOffset, y - yPosOffset + 1, depth + 5, obj_particle_single_cycle_gui)
 			inst.sprite_index = sprite
+            inst.parent = id
 		}
 	break
 	

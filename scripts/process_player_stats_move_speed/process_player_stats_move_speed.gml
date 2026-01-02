@@ -35,6 +35,8 @@ function process_player_stats_move_speed() {
 		// Process Talents
 		
 		// Process Items
+        
+        rollingStatic += (baseDex + bonusDex) * 0.01
 		
 		obj_player.moveSpeedMax = obj_player.baseMoveSpeedMax * rollingScalar + rollingStatic
 	}

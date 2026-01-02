@@ -7,6 +7,8 @@ if (!instance_exists(menu)) {
 	}
 	
 	instance_destroy()
+    
+    return 0
 }
 
 if (state == weaponUpgradeBarStates.growing) {

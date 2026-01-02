@@ -92,7 +92,7 @@ updateItem = function(_item) {
 	var _stats = []
 	
 	for (var i = 0; i < array_length(_item.stats); i++) {
-		array_push(_stats, _item.stats[i].getDisplayValue() + " " + _item.stats[i].getDisplayName())
+		array_push(_stats, _item.stats[i].getDisplayValue(_item.level) + " " + _item.stats[i].getDisplayName())
 	}
 	
 	for (var i = 0; i < array_length(_item.statsSpecial); i++) {

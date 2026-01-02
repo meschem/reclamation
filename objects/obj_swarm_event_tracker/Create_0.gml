@@ -4,14 +4,17 @@
 active = false
 
 age = 0
+swarmIcon = spr_card_icons
+
 
 ///@description						Activates the swarm. Called after spawn
-///@param {real} _difficultyMin		Min difficulty for swarm type
-///@param {real} _difficultyMax		Max difficulty for swarm type
-activateSwarm = function(_difficultyMin = 0, _difficultyMax = 99) {
-	swarm = get_swarm_collection(_difficultyMin, _difficultyMax)
+///@param {real} _difficulty		Difficulty level of the game
+activateSwarm = function(_difficulty = 0) {
+	swarm = get_swarm_collection(_difficulty - 4, _difficulty)
 	
-	swarm.spawn(id)
+	swarm.spawn(id, obj_run_controller.spawnEventIndex)
+    
+    obj_run_controller.spawnEventIndex++
 }
 
 ///@description						Registers when a baddie in the swarm dies
@@ -29,8 +32,6 @@ eventAlertBaddieDeath = function(_baddie) {
 ///@description						Checks if the event is over based on baddie count
 checkBaddieCount = function() {
 	var _left = array_length(swarm.baddies)
-	
-	//create_toaster($"Baddie removed from swarm event, {_left} left")
 	
 	if (_left == 0) {
 		event_end("Swarm Destroyed!")

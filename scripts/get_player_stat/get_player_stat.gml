@@ -7,9 +7,13 @@ function get_player_stat(_playerStat, _player = noone) {
 		create_toaster("obj_player_stat_controller not available", errorLevels.error)
 		return 0
 	}
+    
+    if (_player == noone) {
+        _player = get_first_player()
+        //create_toaster("Player stat requested without player specified.", errorLevels.warning)
+    }
 	
 	var _val = obj_player_stat_controller.getPlayerStatValue(_playerStat, _player)
-	
 	return _val
 }
 

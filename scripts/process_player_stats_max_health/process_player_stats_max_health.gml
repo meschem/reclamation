@@ -34,6 +34,8 @@ function process_player_stats_max_health() {
 		}
 		
 		// Process Talents
+        
+        rollingStatic += floor((baseStr + bonusStr) / 10) * 10
 		
 		var addedHp = (baseMaxHp * rollingScalar + rollingStatic) - maxHp
 		

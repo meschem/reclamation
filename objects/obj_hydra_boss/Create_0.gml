@@ -28,6 +28,8 @@ attacksDefault = [
 	hydraLordStates.chaosSpit
 ]
 
+dropType = enumDropType.baddieDungeonBoss
+
 damageStage = 0
 
 attacksAvailable = []

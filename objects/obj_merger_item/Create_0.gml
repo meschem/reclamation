@@ -2,6 +2,9 @@
 
 event_inherited()
 
+outline_init()
+outlineColor = c_black
+
 inValidRecipe = false		// modified if found to be in a craftable recipe
 
 bonusStr = 0
@@ -9,6 +12,9 @@ bonusDex = 0
 bonusInt = 0
 
 cost = 200
+
+mergeLevel = 1
+mergeLevelMax = 3
 
 addCharStatBlocks = function() {
 	if (bonusStr > 0) {

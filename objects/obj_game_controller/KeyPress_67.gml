@@ -10,9 +10,18 @@
 //process_player_stats()
 
 //create_toaster("Stats set to 100")
+//create_lob_drop_with_table(mouse_x, mouse_y, enumDropType.baddieFieldBoss)
 
-obj_debug_controller.checkType = debugCheckTypes.struct
-obj_debug_controller.structInfo = obj_run_stats_controller.damageStats
+//with (obj_dest_tree_green) {
+    //instance_destroy()
+//}
+
+for (var i = 0; i < 1000; i++) {
+    instance_create_depth(100, 100, depths.enemy, obj_dest_bush)
+}
+
+//obj_debug_controller.checkType = debugCheckTypes.struct
+//obj_debug_controller.structInfo = obj_run_stats_controller.damageStats
 
 //show_message(obj_run_stats_controller.damageStats)
 

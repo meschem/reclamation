@@ -13,16 +13,18 @@ slots = []
 state = backpackStates.active
 
 randomItems = [
-	//obj_mg_venomleaf,
-	//obj_mg_black_ichor,
-	//obj_mg_opaque_hourglass,
-	//obj_mg_goldleaf,
-	//obj_mg_golden_puzzlebox,
-	//obj_mg_frost_walkers,
-	//obj_mg_fire_salt,
-	//obj_mg_cinder_stone,
-	//obj_mg_crown_of_destruction
-	obj_mg_war_bracer
+	obj_mg_venomleaf,
+	obj_mg_black_ichor,
+	obj_mg_opaque_hourglass,
+	obj_mg_goldleaf,
+	obj_mg_golden_puzzlebox,
+	obj_mg_frost_walkers,
+	obj_mg_fire_salt,
+	obj_mg_cinder_stone,
+	obj_mg_crown_of_destruction,
+	obj_mg_ice_salt,
+    obj_mg_war_bracer,
+    obj_mg_petrified_heart
 ]
 
 inputsKeyboard = {
@@ -202,16 +204,16 @@ checkMergingItems = function() {
 	var _mergingItems = []
 	
 	for (var i = 0; i < array_length(mergingSlots); i++) {
-		array_push(_mergingItems, slots[mergingSlots[i]].item.object_index)
+		array_push(_mergingItems, slots[mergingSlots[i]].item)
 	}
 	
 	var _recipe = obj_recipe_controller.checkItems(_mergingItems)
-	
+    
 	if (_recipe == obj_recipe_controller.invalidRecipe) {
 		mergerBox.setInvalidMerge()
 		
 	} else {
-		mergerBox.setValidMerge(_recipe.icon)
+		mergerBox.setValidMerge(_recipe.icon, _recipe.iconImageIndex) // obj_backpack_merger
 	}
 }
 
@@ -277,7 +279,7 @@ activateMerge = function() {
 	var _mergingItems = []
 	
 	for (var i = 0; i < array_length(mergingSlots); i++) {
-		array_push(_mergingItems, slots[mergingSlots[i]].item.object_index)
+		array_push(_mergingItems, slots[mergingSlots[i]].item)
 	}
 	
 	var _recipe = obj_recipe_controller.checkItems(_mergingItems)
@@ -286,7 +288,8 @@ activateMerge = function() {
 		return 0
 	}
 	
-	var _newItem = create_instance(_recipe.result)
+    var _newItem = obj_recipe_controller.createItem(_recipe)
+	//var _newItem = create_instance(_recipe.result)
 	_newItem.owner = owner
 	
 	mergerBox.clear()
@@ -378,6 +381,8 @@ addItem = function(_item) {
 
 ///@description			Opens the backpack, displaying it on screen
 open = function() {
+    set_ui_profile_type(uiProfileTypes.backpack)
+     
 	owner.statsMenu.open()
 	selectedSlot = 0
 	focused = true
@@ -438,6 +443,8 @@ getItemList = function() {
 
 ///@description			Closes the backpack
 close = function() {
+    set_ui_profile_type(uiProfileTypes.gameplay)
+    
 	owner.statsMenu.close()
 	image_alpha = 0
 	

@@ -42,10 +42,11 @@ availableWeapons = [
 
 availableAbilities = [
 	obj_ability_thorns,
-	obj_ability_lightning_ball,
+	//obj_ability_lightning_ball,
 	obj_ability_lightning_rune,
 	obj_ability_shock,
-	obj_ability_storm_aura
+	obj_ability_storm_aura,
+    obj_ability_shield_orbitals
 ]
 
 availableUltimateAbilities = [

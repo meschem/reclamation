@@ -1,7 +1,12 @@
 ///@description						Gets a random item rarity
 ///@param {real} _magicFind			Magic find to apply
+///@param {real} _minRarity         Minimum rarity of the item
 ///@return {real}
-function get_random_rarity(_magicFind = 0) {
+function get_random_rarity(_magicFind = 0, _minRarity = enumRarity.any) {
+    if (_minRarity == enumRarity.any) {
+        _minRarity = enumRarity.normal
+    }
+    
 	var _baseWeights = [
 		0.82,	// normal
 		0.1,	// magic
@@ -17,38 +22,35 @@ function get_random_rarity(_magicFind = 0) {
 	]
 	
 	var _rarityCount = 4
-	
 	var _adjustedWeights = []
-	var _sumOfAdjustedWeights = 0
+	var _sumOfWeights = 0
 	
-	for (var _rarityEnum = 0; _rarityEnum < _rarityCount; _rarityEnum++) {
-		var _baseWeight = _baseWeights[_rarityEnum]
-		var _multiplier = _multipliers[_rarityEnum]
-		var _boostFactor = 1 + (_magicFind / 100) * _multiplier
-		var _newWeight = _baseWeight * _boostFactor
-		
-		_adjustedWeights[_rarityEnum] = _newWeight
-		_sumOfAdjustedWeights += _newWeight
-	}
-	
-	var _normalizedWeights = []
-	var _cumulativeProbability = 0
-	
-	for (var _rarityEnum = 0; _rarityEnum < _rarityCount; _rarityEnum++) {
-        var _normalized = _adjustedWeights[_rarityEnum] / _sumOfAdjustedWeights;
+	// 1. Calculate boosted weights for eligible rarities
+    for (var i = 0; i < _rarityCount; i++) {
+        if (i < _minRarity) continue;
+
+        var _boostFactor = 1 + (_magicFind / 100) * _multipliers[i]
+        var _weight = _baseWeights[i] * _boostFactor
         
-        // Use a cumulative probability for the weighted random roll
-        _cumulativeProbability += _normalized;
-        _normalizedWeights[_rarityEnum] = _cumulativeProbability;
+        _adjustedWeights[i] = _weight
+        _sumOfWeights += _weight
     }
-	
-	var _roll = random(1)
-	
-	for (var _rarityEnum = 0; _rarityEnum < _rarityCount; _rarityEnum++) {
-		if (_roll < _normalizedWeights[_rarityEnum]) {
-			return _rarityEnum
-		}
-	}
-	
-	return enumRarity.normal
+    
+    // Safety check: If the total weight is 0, return the minimum rarity
+    if (_sumOfWeights <= 0) return _minRarity
+
+    // 2. Roll against the sum of the remaining weights
+    var _roll = random(_sumOfWeights)
+    var _cursor = 0
+    
+    for (var i = 0; i < _rarityCount; i++) {
+        if (_adjustedWeights[i] > 0) {
+            _cursor += _adjustedWeights[i]
+            if (_roll <= _cursor) {
+                return i
+            }
+        }
+    }
+    
+    return _minRarity
 }

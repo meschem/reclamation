@@ -26,6 +26,7 @@ bonusPickupRange = 0
 bonusPickupReward = 0
 bonusWeaponAoe = 0
 bonusAbilityDamage = 0
+bonusKnockbackScalar = 0
 
 lifeCycleEvents = []
 

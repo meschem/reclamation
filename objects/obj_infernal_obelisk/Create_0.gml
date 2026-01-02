@@ -4,13 +4,13 @@
 // Inherit the parent event
 event_inherited()
 
+add_map_poi(id, spr_poi_obelisk_red)
+
 eventName = "Infernal Obelisk"
 eventDescription = "Spawns waves of flying monsters until enough are killed"
 eventLength = stf(30)
 targetKillCount = 100
 spawnSize = 12
-
-mapIcon = spr_poi_obelisk
 
 spriteMiddle = spr_infernal_obelisk_middle
 spriteTop = spr_infernal_obelisk_top

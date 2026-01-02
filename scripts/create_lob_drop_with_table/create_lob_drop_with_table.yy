@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_lob_drop_with_table",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_lob_drop_with_table",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

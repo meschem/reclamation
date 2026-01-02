@@ -1,7 +1,5 @@
 event_inherited()
 
-reflectOffsetY = 6
-
-pickupValue = 50
+pickupValue = 30
 
 reflectOffsetY = 7

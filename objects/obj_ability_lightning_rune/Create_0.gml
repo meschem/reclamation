@@ -29,7 +29,7 @@ duration = tickRate * 4
 
 stats = [
 	new abilityStat(
-		"Damage Per Sec", "damagePerTick",
+		"Dmg Per Sec", "damagePerTick",
 		damagePerTick
 	),
 	new abilityStat(

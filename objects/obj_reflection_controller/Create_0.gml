@@ -23,7 +23,8 @@ reflectedObjectTypes = [
 	obj_baddie,
 	obj_destructible,
 	obj_particle_bouncer,
-	obj_pickup
+	obj_pickup,
+    obj_merger_item_chest_locked
 ]
 
 reflectedInstances = []

@@ -11,16 +11,16 @@ spreadScalar = [-0.4]
 maxLevel = 2
 
 stats = [
-	//new abilityStat(
-	//	"Damage Bonus",
-	//	"damageScalar",
-	//	damageScalar
-	//),
+	new abilityStat(
+		"Damage",
+		"damageScalar",
+		damageScalar,
+        true, statUnits.percent
+	),
 	new abilityStat(
 		"Spread",
 		"spreadScalar",
 		spreadScalar,
-		true,
-		statUnits.percent
+		true, statUnits.percent
 	)
 ]

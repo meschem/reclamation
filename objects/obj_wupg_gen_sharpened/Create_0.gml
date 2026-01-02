@@ -1,22 +1,23 @@
 
 event_inherited()
 
-name = "Sharpen"
+name = "Sharpened"
 description = "Increased weapon damage and speed."
 active = false
 stackable = true
 
-damageScalar = [0.3]
+damageScalar = [0.25]
 attackSpeedScalar = [0.15]
 
 stats = [
 	new abilityStat(
-		"Damage Bonus",
+		"Damage",
 		"damageScalar", 
-		damageScalar
+		damageScalar,
+        true, statUnits.percent
 	),
 	new abilityStat(
-		"Attack Speed Bonus",
+		"Attack Speed",
 		"attackSpeedScalar",
 		attackSpeedScalar
 	)

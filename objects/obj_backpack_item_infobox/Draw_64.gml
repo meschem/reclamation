@@ -12,7 +12,7 @@ var i = 0
 
 draw_set_font(titleFont)
 draw_set_color(c_white)
-draw_text(x + padding.left, _y, titleText)
+draw_text(x + padding.left, _y, titleText + " " + string(item.level))
 _y += string_height(titleText) + lineSpacing
 
 draw_set_font(rarityFont)

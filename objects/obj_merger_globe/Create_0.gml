@@ -7,6 +7,7 @@ rarityMultiplier = 1
 shadowSprite = spr_shadow_med
 shadowOffset = 6
 attachedMerger = noone
+spawning = false
 
 image_speed = 0
 

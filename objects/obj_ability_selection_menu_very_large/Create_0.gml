@@ -1,5 +1,5 @@
 // Inherit the parent event
-event_inherited();
+event_inherited()
 
 width = 600
 height = 300

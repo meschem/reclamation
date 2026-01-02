@@ -6,7 +6,7 @@ description = "Increased attack speed."
 active = false
 stackable = true
 
-attackSpeedScalar = [0.4]
+attackSpeedScalar = [0.25]
 
 stats = [
 	new abilityStat(

@@ -20,6 +20,8 @@ attackStates = [
 	lichBossStates.iceStorm
 ]
 
+dropType = enumDropType.baddieDungeonBoss
+
 damageStage = 0
 
 lastAttack = hydraLordStates.null

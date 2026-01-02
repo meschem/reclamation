@@ -8,8 +8,8 @@
   "name":"obj_mg_goldleaf",
   "overriddenProperties":[],
   "parent":{
-    "name":"uncommon",
-    "path":"folders/Objects/equipment/mergers/uncommon.yy",
+    "name":"common",
+    "path":"folders/Objects/equipment/mergers/common.yy",
   },
   "parentObjectId":{
     "name":"obj_merger_item",

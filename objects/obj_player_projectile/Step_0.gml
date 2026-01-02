@@ -212,7 +212,7 @@ var _damage					// used to calaculate dmg target hit
 //	}
 //}
 
-if (collisionDelay <= 0) {
+if (collisionDelay <= 0 && collisionActive) {
 	if (onlyHitsSeekTarget) {
 		if (place_meeting(x, y, seekTarget)) {
 			target = seekTarget
@@ -224,7 +224,7 @@ if (collisionDelay <= 0) {
 			target = instance_place(x, y, [obj_baddie, obj_destructible])
 		}
 	}
-} else {
+} else if (collisionDelay > 0) {
 	collisionDelay--
 }
 

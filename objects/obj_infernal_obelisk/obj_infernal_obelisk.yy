@@ -13,8 +13,8 @@
     "path":"folders/Objects/map_events.yy",
   },
   "parentObjectId":{
-    "name":"obj_elite_obelisk",
-    "path":"objects/obj_elite_obelisk/obj_elite_obelisk.yy",
+    "name":"obj_obelisk",
+    "path":"objects/obj_obelisk/obj_obelisk.yy",
   },
   "persistent":true,
   "physicsAngularDamping":0.1,

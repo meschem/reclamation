@@ -2,17 +2,18 @@
 event_inherited()
 
 name = "Piercing"
-description = "Chance to pierce through targets."
+description = "Pierces through targets."
 active = false
 stackable = true
 
-pierceChance = [0.3]
-maxLevel = 3
+bonusTargetsMax = [1, 3]
+
+maxLevel = 2
 
 stats = [
 	new abilityStat(
-		"Pierce Chance",
-		"pierceChance", 
-		pierceChance  
-	),
+		"Max Targets",
+		"bonusTargetsMax", 
+		bonusTargetsMax,
+	)
 ]

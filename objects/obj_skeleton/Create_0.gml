@@ -4,7 +4,7 @@ event_inherited();
 
 name = "Skeleton"
 
-hpMax = 40
+hpMax = 20
 hp = hpMax
 
 pushForce = 6

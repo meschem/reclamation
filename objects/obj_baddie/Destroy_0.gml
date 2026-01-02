@@ -42,12 +42,15 @@ if (!killedByBounds) {
 	
 	if (provideKillRewards) {
 		/// FIXME: Uses obj_player
-		add_run_stat_kill(id, get_first_player())
+        var _player = get_first_player()
+        
+		add_run_stat_kill(id, _player)
 		add_run_stat(enumRunStats.xpGained, xp)
+        create_lob_drop_with_table(x, y, dropType, _player)
 	
 		/// FIXME: Hack
-		obj_player.xp += xp
-		obj_player.addUltimateCharge(ultimateCharge)
+		_player.xp += xp
+		_player.addUltimateCharge(ultimateCharge)
 		
 		run_on_baddie_death_effects(id)
 	

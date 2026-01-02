@@ -11,8 +11,9 @@ upgradeType = weaponUpgradeTypes.major
 
 stats = [
 	new abilityStat(
-		"Damage", "damage",
-		[20, 25, 30]
+		"Damage",
+        "damage",
+		[20, 25, 30],
 	),
 	new abilityStat(
 		"Bounces", "bounces",

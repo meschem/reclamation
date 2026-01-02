@@ -52,30 +52,24 @@ stats = [
 	)
 ]
 
-statBonusLastGasp = {
-	stat: enumCharStats.str,
-	active: false,
-	amount: 60,
-	name: "Last Gasp",
-	description: "Upon receiving a fatal blow, heal to full and relase a huge wave of spikes. Single use.",
-}
+statBonusLastGasp = new abilityStatBonus(
+    enumCharStats.str, 30,
+    "Last Gasp",
+	"Upon receiving a fatal blow, heal to full and relase a huge wave of spikes. Single use."
+)
 
-statBonusSpiralikes = {
-	stat: enumCharStats.dex,
-	active: false,
-	amount: 20,
-	name: "Spiralikes",
-	description: "Spikes spiral outwards with increased range"
-}
+statBonusSpiralikes = new abilityStatBonus(
+    enumCharStats.dex, 20,
+	"Spiralikes",
+	"Spikes spiral outwards with increased range"
+)
 
-statBonusLightningTipped = {
-	stat: enumCharStats.int,
-	active: false,
-	amount: 40,
-	name: "Lightning Tipped",
-	description: "Converts damage to Lightning, lowers base cooldown."
-}
-	
+statBonusLightningTipped = new abilityStatBonus(
+	enumCharStats.int, 40,
+	"Lightning Tipped",
+	"Converts damage to Lightning, lowers base cooldown."
+)
+
 charStatBonuses = [
 	statBonusLastGasp,
 	statBonusSpiralikes,

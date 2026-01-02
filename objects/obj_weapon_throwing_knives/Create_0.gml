@@ -39,14 +39,13 @@ upgrades = [
 	obj_wupg_gen_sharpened,
 	obj_wupg_gen_hefty,
 	obj_wupg_gen_hastened,
-	obj_wupg_gen_pierced,
 	obj_wupg_gen_focused,
 	obj_wupg_gen_contoured,
 	obj_wupg_gen_multiplied,
 
-	obj_wupg_wh_toxic_cuts,
-	obj_wupg_wh_bouncing_mayhem,
-	obj_wupg_wh_poison_tipped,
+	obj_wupg_td_toxic_cuts,
+	obj_wupg_td_bouncing_mayhem,
+	obj_wupg_td_poison_tipped,
 ]
 
 processUpgrades()

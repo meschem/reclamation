@@ -16,7 +16,7 @@
     "name":"obj_pickup",
     "path":"objects/obj_pickup/obj_pickup.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

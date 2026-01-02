@@ -21,6 +21,10 @@ function enums_button_states(){
 		normal,
 		selected,
 		clicked,
-		disabled
+		disabled,
+		spawning,
+		flashing,
+		holding,
+        closing,
 	}
 }

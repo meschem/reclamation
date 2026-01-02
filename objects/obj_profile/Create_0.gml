@@ -2,16 +2,19 @@
 
 name = "Matt"
 
-
+oreVeinCount = 4
 
 // list of map section enums
 unlockedMapSections = [
+    
 ]
 
 
 heroSaves = [
 	
 ]
+
+
 
 ///@description					Data to store for a character in a save
 ///param {real} _character		Uses enum heroes

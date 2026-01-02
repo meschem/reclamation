@@ -9,6 +9,8 @@ age = 0
 lifeSpan = -1
 damagedOn = -99
 
+partitioned = false
+
 heightOffset = 6
 
 particleBurstPoints = [

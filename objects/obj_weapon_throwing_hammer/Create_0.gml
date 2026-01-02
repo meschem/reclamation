@@ -7,18 +7,19 @@ spawnDistance = 16
 baseDamage = 10
 spawnObject = obj_war_hammer
 spawnCount = 1
+runningSpawnCountBonus = 0
 
 damageStatBoostStr = 0.5
 damageStatBoostDex = 0.5
 
-baseKnockback = 10
+baseKnockback = 15
 
 pierceChance = 0
 
-spread = 20
+spread = 30
 spreadScalar = 1
 
-range = 240
+range = 200
 rangeScalar = 1
 
 velocity = 5
@@ -40,9 +41,14 @@ upgrades = [
 	obj_wupg_gen_hefty,
 	obj_wupg_gen_hastened,
 	obj_wupg_gen_pierced,
-	obj_wupg_gen_focused,
-	obj_wupg_gen_contoured,
-	obj_wupg_gen_multiplied,
+	//obj_wupg_gen_focused,
+	//obj_wupg_gen_contoured,
+	//obj_wupg_gen_multiplied,
+    //obj_wupg_gen_weighted,
+    
+    obj_wupg_wh_lit_crits,
+    obj_wupg_wh_stunning_blow,
+    obj_wupg_wh_shockwave
 ]
 
 processUpgrades()
@@ -51,20 +57,26 @@ processUpgrades()
 ///									that are created
 ///@return {array<Id.Instance>}
 use = function() {
+    runningSpawnCountBonus += bonusProjectiles
+    
+    var _bonusProjectiles = floor(runningSpawnCountBonus) 
 	var _spawnPoint = get_vec2_from_angle_mag(owner.attackAngle, spawnDistance)
 	var _totalSpread = spread * spreadScalar
 	var _spread, _angle, _inst
 	var _hammers = []
+    var _spawnCount = spawnCount + _bonusProjectiles
+    
+    runningSpawnCountBonus -= _bonusProjectiles
 	
-	if (spawnCount > 1) {
-		_spread = _totalSpread / (spawnCount - 1)
+	if (_spawnCount > 1) {
+		_spread = _totalSpread / (_spawnCount - 1)
 		_angle = owner.attackAngle - (_totalSpread / 2)
 	} else {
 		_spread = 0
 		_angle = owner.attackAngle
 	}
 	
-	for (var i = 0; i < spawnCount; i++) {
+	for (var i = 0; i < _spawnCount; i++) {
 		_inst = instance_create_depth(
 			owner.x + _spawnPoint.x,
 			owner.y + _spawnPoint.y,
@@ -76,7 +88,6 @@ use = function() {
 		_inst.facingAngle = _angle
 		_inst.owner = owner
 		_inst.distanceMax = range * rangeScalar
-		_inst.pierceChance = pierceChance
 		_inst.damager = id
 		
 		set_velocity_from_angle(_inst, _angle, velocity * velocityScalar)

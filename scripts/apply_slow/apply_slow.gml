@@ -2,6 +2,10 @@
 ///@param {id.Instance} _target		Target to apply slow to
 ///@param {real} _duration			Duration in frames
 function apply_slow(_target, _duration) {
+	if (!variable_instance_exists(_target, "slowLength")) {
+		return 0
+	}
+	
 	if (_duration > _target.slowLength) {
 		_target.slowLength = _duration
 	}

@@ -81,7 +81,7 @@ damageDirect = 1
 damageType = enumDamageTypes.normal
 targetsMax = 1
 targetsHit = 0
-pierceChance = 0
+pierceChance = 0                // pierce chance, checked if max target limit not hit
 canHitMultipleTargets = true // true if projectile can hit multiple targets per frame
 targetCollisionList = ds_list_create() // used per frame
 validTargetList = ds_list_create() // used per frame for targets that are valid to damage
@@ -115,6 +115,7 @@ maxTurnRateGain = 0
 
 hitsWalls = true
 collisionDelay = 0
+collisionActive = true      //Managed by individual projectiles that must turn it off AND on
 
 trail = false
 trailSpawnWidth = 5

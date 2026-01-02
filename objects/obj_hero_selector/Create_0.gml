@@ -14,6 +14,8 @@ activate = function() {
 	with (obj_player_controller) {
 		activeCharacterIndex = _hero
 	}
+	
+	
 		
 	restart_run()
 }

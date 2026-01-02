@@ -10,6 +10,7 @@ image_alpha = 0
 mergingItems = []
 
 combineSlotItemSprite = spr_none
+combineSlotItemImageIndex = 1
 combineSlotSprite = spr_backpack_slot_combine
 combineSlotIndex = 0
 combineSlotOffset = new vec2(164, 9)
@@ -107,9 +108,11 @@ updatePedestalStates = function() {
 	itemPedestals[2].draw = array_length(mergingItems) >= 2
 }
 
-///@description					Checks merging items
+///@description					Checks merging items --- THIS IS NOT USED CURRENTLY
 checkMergingItems = function() {
 	var _recipe = obj_recipe_controller.checkItems(mergingItems)
+    
+    //show_message(combineSlotItemImageIndex)
 	
 	if (_recipe == obj_recipe_controller.invalidRecipe) {
 		combineSlotIndex = 0
@@ -117,14 +120,19 @@ checkMergingItems = function() {
 	} else {
 		combineSlotIndex = 1
 		combineSlotItemSprite = _recipe.icon
+        combineSlotItemImageIndex = 2 + _recipe.rarity
+        
+        //show_message(combineSlotItemImageIndex)
 	}
 }
 
 ///@description						Sets if the merge is valid or not
 ///@param {asset.GMSprite} _icon	Icon to set for the merge slot
-setValidMerge = function(_icon) {
+///@param {real} _imageIndex        Index to use for the image
+setValidMerge = function(_icon, _imageIndex = 2) {
 	combineSlotIndex = 1
 	combineSlotItemSprite = _icon
+    combineSlotItemImageIndex = _imageIndex
 	mergeInputDraw = true
 	mergeIconImageIndex = 1
 }

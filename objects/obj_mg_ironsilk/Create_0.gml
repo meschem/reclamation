@@ -4,6 +4,7 @@ event_inherited()
 name = "Ironsilk"
 description = "Pliable and strong."
 
-bonusStr = 5
+bonusStr = [3, 6, 14]
 
 //addCharStatBlocks()
+//outlineColor = global.colorGreen

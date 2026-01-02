@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setup_spawn_elite",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_spawn_elite",
+  "parent":{
+    "name":"controller",
+    "path":"folders/Scripts/levels/setups/controller.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

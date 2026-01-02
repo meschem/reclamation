@@ -23,13 +23,18 @@ function define_colors() {
 	
 	global.colorTeal = make_color_rgb(37, 190, 127)
 	global.colorAqua = make_color_rgb(85, 213, 255)
-	global.colorDark = make_color_rgb(5, 0, 57)
-	
-	global.colorDarkPurple = make_color_rgb(88, 66, 177)
 	global.colorLightGreen = make_color_rgb(110, 255, 150)
-	global.colorDarkRed = make_colour_rgb(231, 42, 127)
+	
+	global.colorDarkRed = make_color_rgb(231, 42, 127)
+	global.colorDarkOrange = make_color_rgb(233, 92, 48)
+	global.colorDarkYellow = make_color_rgb(239, 189, 47)
 	global.colorDarkGreen = make_color_rgb(47, 206, 141)
 	global.colorDarkBlue = make_color_rgb(32, 129, 204)
+	global.colorDarkPurple = make_color_rgb(88, 66, 177)
+	
+	global.colorDark = make_color_rgb(5, 0, 57)
+    global.colorGray = make_color_rgb(134, 130, 179)
+    global.colorLight = make_color_rgb(216, 216, 244)
 	
 	global.colorMapStruct = {
 		Health: global.colorRed,

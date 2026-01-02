@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ability_selection_large",
-    "path":"sprites/spr_ability_selection_large/spr_ability_selection_large.yy",
+    "name":"spr_menu_button_dark_basic",
+    "path":"sprites/spr_menu_button_dark_basic/spr_menu_button_dark_basic.yy",
   },
   "spriteMaskId":null,
   "visible":true,

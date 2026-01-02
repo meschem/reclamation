@@ -24,6 +24,16 @@ enum enumTrailStyle {
 	line
 }
 
+///@description                         Map POI built from an instance
+///@param {id.Instance} _inst           Instance to register
+///@param {asset.GMSprite} _icon        Icon to use on the map
+function mapPoi(_inst, _icon) constructor  {
+    instance = _inst
+    worldX = _inst.x
+    worldY = _inst.y
+    icon = _icon
+}
+
 function abilityStatInfoTextBlock() constructor {
 	name = "Unset Name"
 	description = "Unset Description"
@@ -33,17 +43,96 @@ function abilityStatInfoTextBlock() constructor {
 	statBonuses = []
 }
 
-///@description						Provides bonus functionality for abilities when stat reqs are met
-///@param {real} _stat				Stat to check. Uses enumCharStats
-///@param {real} _requiredAmount	Amount of stat required to activate
-///@param {string} _name			Name display to player
-///@param {string} _description		Description of what this bonus does
+///@description                         Partition used for activity and collision
+///@param {real} _x                     X Position in the room in pixels
+///@param {real} _y                     Y Position in the room in pixels
+///@param {real} _gridX                 X Position on the level's parition grid where this exists
+///@param {real} _gridY                 Y Position on the level's parition grid where this exists
+///@param {real} _width                 Width of it
+///@param {real} _height                Height of it
+function spacePartition(_x, _y, _gridX, _gridY, _width, _height) constructor {
+    x = _x
+    y = _y
+    gridX = _gridX
+    gridY = _gridY
+    width = _width
+    height = _height
+    
+    active = true
+    instances = []
+    
+    addInstance = function(_inst) {
+        array_push(instances, _inst)
+        _inst.partitioned = true
+    }
+    
+    removeInstance = function(_inst) {
+        for (var i = 0; i < array_length(instances); i++) {
+            if (instances[i] == _inst) {
+                array_delete(instances, i, 1)
+            }
+        }
+    }
+    
+    containsInstance = function(_inst) { 
+        if (
+            _inst.x > x &&
+            _inst.x < x + width &&
+            _inst.y > y &&
+            _inst.y < y + height
+        ) {
+            return true
+        }
+        
+        return false
+    }
+}
+
+///@description                         Used for creating drops for baddies
+///@param {real} _dropChance            Chance this item drops
+///@param {real} _minRarity             Minimum rarity for the loot. Note that if noDropChance is GT 0, the item may not be dropped at all
+///@param {real} _bonusMagicFind        Additional magic to apply to this drop.
+function lootDropRoll(_dropChance = 0, _minRarity = enumRarity.normal, _bonusMagicFind = 0) constructor {
+    dropChance = _dropChance
+    minRarity = _minRarity
+    bonusMagicFind = _bonusMagicFind 
+    
+    dropped = false
+    
+    spawnDrop = function(_player = noone) {
+        dropped = true
+        
+        if (random(1) > dropChance) {
+            return 0
+        }
+        
+        var _magicFind = get_player_stat(enumPlayerStats.magicFind, _player) 
+		var _itemOrb = create_random_merger_item_drop(-99, -99, _magicFind + bonusMagicFind, minRarity)
+        var _color = get_rarity_color(_itemOrb.equipment.rarity, true)
+        
+        create_pickup_with_lob(_itemOrb, other.x, other.y, _color)
+    }
+}
+
+///@description						   Provides bonus functionality for abilities when stat reqs are met
+///@param {real} _stat				   Stat to check. Uses enumCharStats
+///@param {real} _requiredAmount	   Amount of stat required to activate
+///@param {string} _name			   Name display to player
+///@param {string} _description		   Description of what this bonus does
 function abilityStatBonus(_stat, _requiredAmount, _name, _description) constructor {
 	stat = _stat
 	active = false
 	amount = _requiredAmount
 	name = _name
 	description = _description
+    
+    onActivate = function() {
+        
+    }
+    
+    onDeactivate = function() {
+        
+    }
 }
 
 ///@description									A recipe combined to make a new item
@@ -55,9 +144,27 @@ function recipe(_result, _name, _icon, _ingredients) constructor {
 	result = _result
 	name = _name
 	icon = _icon
+    iconImageIndex = 0
+    
+    levelUp = false
+    resultLevel = 1
+    rarity = enumRarity.magic
 	
 	ingredients = _ingredients
 	array_sort(ingredients, true)
+    
+    ///@description                 Set rarity of recipe
+    ///@param {real} _rarity        Uses enumRarity
+    setRarity = function(_rarity) {
+        rarity = _rarity
+        
+        switch (_rarity) { 
+            case enumRarity.normal:     iconImageIndex = 2   break;
+            case enumRarity.magic:      iconImageIndex = 3   break;
+            case enumRarity.rare:       iconImageIndex = 4   break;
+            case enumRarity.legendary:  iconImageIndex = 6   break;
+        }
+    }
 }
 
 ///description						Merger item
@@ -188,17 +295,22 @@ function itemStat(_stat, _values, _display = true, _customType = {}) constructor
 	
 	///@param {real} _level
 	///@return {string}
-	getDisplayValue = function(_level = 0) {
-		var _rawValue = values[_level]
-		var _numeric = _rawValue * unit.multiplier
+	getDisplayValue = function(_level = 1) {
+        var _index = _level - 1
+        
+        if (_index > array_length(values) - 1) {
+            create_toaster("Invalid Stat request based on Item Level", errorLevels.error)
+            _index = 0
+        }
+        
+		var _rawValue = values[_index]
+        var _numeric = (is_string(_rawValue)) ? _rawValue : _rawValue * unit.multiplier
+		
 		var _prepend = ""
 		
 		if (type.prepend) {
 			_prepend = (_numeric > 0) ? "+" : "" 
 		} 
-		//else {
-		//	_prepend = ""
-		//}
 		
 		return $"{_prepend}{_numeric}{unit.displayUnit}"
 	}
@@ -249,11 +361,12 @@ function abilityStat(_name, _variable, _values = [], _display = true, _unitEnum 
 	} else {
 		unit = get_stat_unit_from_enum(_unitEnum)
 	}
-	
-	///@description			Gets the numeric value and unit as a single string
-	///@param {real} _level	Level of the ability to get
+    
+    ///@description			              Gets the numeric value and unit as a single string
+	///@param {real} _level	              Level of the ability to get
+    ///@param {bool} _fullLevelUpString   Shows the full level up string of "Cur > New" as a single string
 	///@return {string}
-	getDisplayValue = function(_level) {
+	getDisplayValue = function(_level, _fullLevelUpString = true) {
 		if (_level == 0) {
 			var _rawValue = values[_level]
 			var _numeric = _rawValue * unit.multiplier
@@ -269,6 +382,27 @@ function abilityStat(_name, _variable, _values = [], _display = true, _unitEnum 
 		
 		return $"{_numericOld} > {_numeric}{unit.displayUnit}"
 	}
+    
+    ///@description                         Gets a converted display value for the level
+    ///@param {real} _level                 Level of the value to get
+    ///@param {bool} _showUnit              Shows the unit of the stat type
+    ///@return {string}
+    getDisplayValueSimple = function(_level, _showUnit = false) {
+        if (_level < 0 || _level >= array_length(values)) {
+            create_toaster("Bad level retrieved for Ability Stat: " + string(_level))
+            return "Error!!"
+        }
+        
+        var _rawValue = values[_level]
+        var _numeric = _rawValue * unit.multiplier
+        var _str = string(_numeric)
+        
+        if (_showUnit) {
+            _str += unit.displayUnit
+        }
+        
+        return _str
+    }
 	
 	///@description			Determines if this should be displayed on a level up
 	///@param {real} _level	Level of the ability to get

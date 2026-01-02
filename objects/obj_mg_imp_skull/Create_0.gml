@@ -2,8 +2,8 @@
 event_inherited()
 
 name = "Imp Skull"
-description = "Remnants of demonic energy remain encased."
+description = "Remnants of demonic energy remain encasedd."
 
-bonusInt = 5
+bonusInt = [3, 6, 14]
 
 //addCharStatBlocks()

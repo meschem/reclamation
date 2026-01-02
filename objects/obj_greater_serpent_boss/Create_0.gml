@@ -19,6 +19,8 @@ shadowOffset = -30
 hpBarInfo.yOffset = -23
 hpBarDisplay = entityHpBarTypes.small
 
+impactMaterial = enumImpactMaterials.flesh
+
 hpMax = 1000
 hp = hpMax
 

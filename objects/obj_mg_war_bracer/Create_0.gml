@@ -7,10 +7,14 @@ event_inherited()
 name = "War Bracer"
 description = "Strong bracer"
 
-bonusStr = 2
-cdMax = stf(60)
+bonusStr = [1, 2, 5]
+cdMax = [stf(60), stf(50), stf(40)]
 cd = 0
 active = true
+
+stats = [
+    create_custom_item_stat(cdMax, "Cooldown", statUnits.frames)
+]
 
 statsSpecial = ["Negates 1 damage. 60 second cooldown."]
 
@@ -19,7 +23,7 @@ onStep = function() {
 		cd++
 	}
 	
-	if (cd >= cdMax) {
+	if (cd >= cdMax[level - 1]) {
 		active = true
 		cd = 0
 	}

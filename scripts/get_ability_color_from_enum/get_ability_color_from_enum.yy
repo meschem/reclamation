@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_ability_color_from_enum",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_ability_color_from_enum",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

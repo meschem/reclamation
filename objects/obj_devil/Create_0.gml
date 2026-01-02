@@ -22,7 +22,7 @@ phases = true
 
 moveBehavior = entityMoveBehaviors.simple
 
-add_loot_gold(25, 30, 0.4)
+add_loot_gold(12, 18, 0.4)
 
 beginStep = function() {
 	if (age % 15 == 0) {

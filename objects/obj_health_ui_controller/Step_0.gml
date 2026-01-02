@@ -29,6 +29,10 @@ if (playerHealthMax < healthMax) {
 		_heart.controller = id
 	
 		array_push(pips, _heart)
+        
+        if (playerHealthCur / 10 < array_length(pips)) {
+            _heart.sprite_index = sprEmpty
+        }
 	}
 	
 	healthMax = playerHealthMax

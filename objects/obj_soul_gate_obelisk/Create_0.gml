@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited()
 
+add_map_poi(id, spr_poi_obelisk)
+
 eventName = "Soul Gate"
 eventDescription = "Slay Ghosts in the circle to gain bonus XP"
 eventLength = stf(30)

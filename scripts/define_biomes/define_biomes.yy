@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"define_biomes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"define_biomes",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

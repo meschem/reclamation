@@ -6,7 +6,9 @@ function get_random_instance(obj) {
 	var count = instance_number(obj)
 	var inst = instance_find(obj, irandom(count - 1))
 	
-	if (inst < 0) show_error(string(inst), true)
+	if (inst < 0) {
+        return noone
+    }
 	
 	return inst
 }

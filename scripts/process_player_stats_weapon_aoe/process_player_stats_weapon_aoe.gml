@@ -28,11 +28,11 @@ function process_player_stats_weapon_aoe() {
 			}
 		}
 		
-		with (obj_weapon_upgrade) {
-			if (active) {
-				rollingScalar += bonusWeaponAoe
-			}
-		}
+		//with (obj_weapon_upgrade) {
+			//if (active) {
+				//rollingScalar += bonusWeaponAoe
+			//}
+		//}
 		
 		// Process Talents
 		

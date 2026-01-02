@@ -2,6 +2,11 @@
 event_inherited()
 
 if (age % spawnRate == 0) {
+    if (!instance_exists(owner)) {
+        instance_destroy()
+        return 0
+    }
+    
 	var mag = 20
 	var angle = irandom(360)
 	var point = new vec2()

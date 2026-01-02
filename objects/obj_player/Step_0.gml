@@ -10,6 +10,12 @@ if (keyboard_check_pressed(ord("P"))) {
 	create_toaster("Auto Attack " + enabledText)
 }
 
+if (!statProcessInit) {
+    process_player_stats() 
+    
+    statProcessInit = true
+}
+
 stepBegin()
 
 if (floats) {

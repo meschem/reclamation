@@ -8,10 +8,28 @@ bodyText.location.y = 37
 merger = noone
 iconOverlay = spr_none
 
+titleBackground = spr_ui_title_backdrop_lg
+
+titleText.color = c_white
+titleText.maxWidth = 88
+titleText.font = font_alagard
+titleText.location.x = 14
+titleText.location.y = 24
+
+subTitleText.color = c_white
+subTitleText.maxWidth = 88
+subTitleText.location.x = 12
+subTitleText.location.y = 38
+
+bodyText.color = c_white
+bodyText.maxWidth = 88
+bodyText.location.x = 12
+bodyText.location.y = 50
+
 width = 140
 height = 200
-paddingX = 8
-paddingY = 20
+paddingX = 12
+paddingY = 24
 statSpacing = 14
 maxTextWidth = width - (paddingX * 2)
 

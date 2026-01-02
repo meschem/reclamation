@@ -12,12 +12,13 @@ attackSpeedScalar = [-0.15]
 
 stats = [
 	new abilityStat(
-		"Damage Bonus",
+		"Damage",
 		"damageScalar",
-		damageScalar
+		damageScalar,
+        true, statUnits.percent
 	),
 	new abilityStat(
-		"Knockback Bonus",
+		"Knockback",
 		"knockbackScalar",
 		knockbackScalar
 	),
