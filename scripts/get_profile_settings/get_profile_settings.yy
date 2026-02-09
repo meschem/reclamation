@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_profile_settings",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_profile_settings",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

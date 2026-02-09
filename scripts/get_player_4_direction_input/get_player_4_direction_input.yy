@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_player_4_direction_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_player_4_direction_input",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

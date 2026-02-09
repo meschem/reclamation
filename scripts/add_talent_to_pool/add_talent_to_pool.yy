@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"add_talent_to_pool",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_talent_to_pool",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/talents/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

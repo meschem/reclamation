@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_stored_instances",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_stored_instances",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

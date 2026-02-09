@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"activate_flurry",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_flurry",
+  "parent":{
+    "name":"jonah",
+    "path":"folders/Scripts/abilities/jonah.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

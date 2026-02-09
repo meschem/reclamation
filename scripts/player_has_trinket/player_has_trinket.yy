@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_has_trinket",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_has_trinket",
+  "parent":{
+    "name":"trinkets",
+    "path":"folders/Scripts/trinkets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"add_run_stat_kill",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_run_stat_kill",
+  "parent":{
+    "name":"run_stats",
+    "path":"folders/Scripts/run_stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"view_width",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"view_width",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

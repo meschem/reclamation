@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"boss_attack_queue_random",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"boss_attack_queue_random",
+  "parent":{
+    "name":"bosses",
+    "path":"folders/Scripts/baddies/bosses.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

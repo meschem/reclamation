@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_stat_point_button",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_stat_point_button",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

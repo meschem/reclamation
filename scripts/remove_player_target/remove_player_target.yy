@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"remove_player_target",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"remove_player_target",
+  "parent":{
+    "name":"targeting",
+    "path":"folders/Scripts/baddies/targeting.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,51 @@
+///@description   Processes all map event type objects, only happens on initial main room load
+function process_map_events() {
+	var _eventLocations = []
+	var _events = []
+		
+	var _eventObjects = [
+		obj_elite_obelisk,
+		//obj_swarm_obelisk,
+		//obj_infernal_obelisk,
+	]
+
+	with (obj_event_location) {
+		if (get_map_object_used(id)) {
+			instance_destroy()
+		} else {
+			set_map_object_to_used(id)
+			array_push(_eventLocations, id)
+		}
+	}
+
+	var _maxEvents = min(6, array_length(_eventLocations))
+
+	_eventLocations = array_shuffle(_eventLocations)
+
+	for (var i = 0; i < _maxEvents; i++) {
+		var _event = instance_create_depth(
+			_eventLocations[i].x, 
+			_eventLocations[i].y,
+			0,
+			array_random(_eventObjects)
+		)
+		
+		_event.persistent = true
+	}
+	
+	with (obj_event_location) {
+		instance_destroy()
+	}
+    
+    // DESTROY SWARM OBELISKS
+    cull_instances(obj_swarm_obelisk, 12)
+    
+    // DESTROY IRON VEINS
+    var _maxAllowed = get_profile_settings(enumProfileSettings.oreVeinCount)
+    cull_instances(obj_dest_vein_iron, _maxAllowed)
+    
+    // DESTROY HEALTH CRYSTAL
+    _maxAllowed = get_profile_settings(enumProfileSettings.healthCrystalCount)
+    cull_instances(obj_dest_crystal_mound_health, _maxAllowed)
+}
+

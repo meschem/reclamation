@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"array_get_weighted_random",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_get_weighted_random",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"activate_war_stomp",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_war_stomp",
+  "parent":{
+    "name":"jonah",
+    "path":"folders/Scripts/abilities/jonah.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

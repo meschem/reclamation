@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"restart_run",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"restart_run",
+  "parent":{
+    "name":"run_mgmt",
+    "path":"folders/Scripts/general/run_mgmt.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

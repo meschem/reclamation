@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_custom_item_stat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_custom_item_stat",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_game_pause_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_game_pause_state",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

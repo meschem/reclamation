@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_is_using_mouse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_is_using_mouse",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_reflective_water",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"shallow_to_grass","closed_edge":false,"name":"shallow_to_grass","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[47,50,49,27,30,46,8,26,29,7,48,28,67,66,68,1,],},
+    {"$GMAutoTileSet":"","%Name":"deep_to_shallow","closed_edge":false,"name":"deep_to_shallow","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[53,56,55,33,36,52,12,32,35,11,54,34,73,72,74,47,],},
+    {"$GMAutoTileSet":"","%Name":"deep_to_grass","closed_edge":false,"name":"deep_to_grass","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[41,44,43,21,24,40,6,20,23,5,42,22,61,60,62,47,],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_reflective_water",
+  "out_columns":20,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tileset_plains_water",
+    "path":"sprites/spr_tileset_plains_water/spr_tileset_plains_water.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":400,
+}

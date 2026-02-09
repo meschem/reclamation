@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cull_instances",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cull_instances",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

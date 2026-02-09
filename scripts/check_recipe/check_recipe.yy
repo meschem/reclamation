@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_recipe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"check_recipe",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

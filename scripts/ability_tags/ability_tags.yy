@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ability_tags",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ability_tags",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Objects/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

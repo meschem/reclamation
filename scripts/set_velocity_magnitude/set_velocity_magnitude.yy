@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_velocity_magnitude",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_velocity_magnitude",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

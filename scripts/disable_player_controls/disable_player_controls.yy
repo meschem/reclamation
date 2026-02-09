@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"disable_player_controls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"disable_player_controls",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/player/input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

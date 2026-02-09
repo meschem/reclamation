@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tileset_carpet",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":true,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[13,16,17,7,22,12,11,6,23,5,14,8,19,18,20,4,],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tileset_carpet",
+  "out_columns":11,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tileset_castle_carpet",
+    "path":"sprites/spr_tileset_castle_carpet/spr_tileset_castle_carpet.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":32,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":32,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":128,
+}

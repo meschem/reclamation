@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"update_player_poison_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"update_player_poison_damage",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

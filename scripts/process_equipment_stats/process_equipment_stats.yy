@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"process_equipment_stats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_equipment_stats",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

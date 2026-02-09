@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"can_open_inventory",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"can_open_inventory",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

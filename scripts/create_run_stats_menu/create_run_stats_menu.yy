@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_run_stats_menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_run_stats_menu",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

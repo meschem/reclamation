@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_available_weapons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_available_weapons",
+  "parent":{
+    "name":"weapons",
+    "path":"folders/Scripts/weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

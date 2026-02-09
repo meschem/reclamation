@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"apply_random_elite_buff",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_random_elite_buff",
+  "parent":{
+    "name":"elite_buffs",
+    "path":"folders/Scripts/baddies/elite_buffs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

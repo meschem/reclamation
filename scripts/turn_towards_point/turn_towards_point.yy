@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"turn_towards_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"turn_towards_point",
+  "parent":{
+    "name":"commands",
+    "path":"folders/Scripts/baddies/movement/commands.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

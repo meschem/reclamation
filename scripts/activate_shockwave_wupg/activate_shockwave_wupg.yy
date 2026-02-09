@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"activate_shockwave_wupg",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"activate_shockwave_wupg",
+  "parent":{
+    "name":"activate",
+    "path":"folders/Scripts/talents/activate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

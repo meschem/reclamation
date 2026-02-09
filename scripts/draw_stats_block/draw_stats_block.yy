@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_stats_block",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_stats_block",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

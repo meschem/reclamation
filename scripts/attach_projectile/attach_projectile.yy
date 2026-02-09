@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"attach_projectile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attach_projectile",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

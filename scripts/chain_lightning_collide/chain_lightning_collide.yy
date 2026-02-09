@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"chain_lightning_collide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"chain_lightning_collide",
+  "parent":{
+    "name":"jonah",
+    "path":"folders/Scripts/abilities/jonah.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

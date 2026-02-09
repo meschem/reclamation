@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"trail_draw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"trail_draw",
+  "parent":{
+    "name":"trails",
+    "path":"folders/Scripts/projectiles/trails.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

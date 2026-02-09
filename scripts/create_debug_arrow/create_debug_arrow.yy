@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_debug_arrow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_debug_arrow",
+  "parent":{
+    "name":"debug",
+    "path":"folders/Scripts/debug.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

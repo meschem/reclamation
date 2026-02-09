@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"run_wupg_lifecycle_events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"run_wupg_lifecycle_events",
+  "parent":{
+    "name":"weapon_upgrades",
+    "path":"folders/Scripts/weapon_upgrades.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

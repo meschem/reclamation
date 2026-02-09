@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_abilities_for_lvlup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_abilities_for_lvlup",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_random_food_items",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_random_food_items",
+  "parent":{
+    "name":"stats",
+    "path":"folders/Scripts/levels/stats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setup_spawner",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_spawner",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Objects/controllers/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

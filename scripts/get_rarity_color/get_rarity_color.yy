@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_rarity_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_rarity_color",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

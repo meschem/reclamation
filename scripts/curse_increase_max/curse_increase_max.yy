@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"curse_increase_max",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"curse_increase_max",
+  "parent":{
+    "name":"curse",
+    "path":"folders/Scripts/curse.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

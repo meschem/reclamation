@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"filter_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"filter_instance",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

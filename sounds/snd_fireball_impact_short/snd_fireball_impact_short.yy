@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_fireball_impact_short",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.69138324,
+  "exportDir":"",
+  "name":"snd_fireball_impact_short",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Sounds/baddies.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_fireball_impact_short.wav",
+  "volume":0.5,
+}

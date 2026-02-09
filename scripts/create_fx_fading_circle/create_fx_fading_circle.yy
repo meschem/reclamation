@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_fx_fading_circle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_fx_fading_circle",
+  "parent":{
+    "name":"general",
+    "path":"folders/Objects/fx/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

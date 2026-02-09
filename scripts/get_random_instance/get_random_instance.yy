@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_random_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_random_instance",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

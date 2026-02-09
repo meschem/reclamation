@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"face_angle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"face_angle",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

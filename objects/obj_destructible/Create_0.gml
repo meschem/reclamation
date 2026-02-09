@@ -1,0 +1,80 @@
+
+weight = baddie_weight_immovable
+
+hp = 60
+hpMax = hp
+lastHp = hp
+
+age = 0
+lifeSpan = -1
+damagedOn = -99
+
+partitioned = false
+
+heightOffset = 6
+
+particleBurstPoints = [
+	{
+		hpRatio: 0.66,
+		triggered: false
+	},
+	{
+		hpRatio: 0.33,
+		triggered: false
+	}
+	
+]
+
+parentBaddie = noone // used for hitList stuff
+debuffShockAmount = 0
+shockedLength = 0
+poisonLength = 0
+poisonStacks = 0
+poisonImmune = true
+immovable = true
+markedForCrit = false
+
+targetType = targetTypes.destructible
+
+lastDamageAngle = 0
+lastDamageForce = 1
+
+damageParticles = []
+deathParticles = []
+deathParticleSpawnRange = new vec2(12, 12)
+
+revealList = []
+
+shakeLastHp = -1
+shakeOnHit = 7
+shakeCur = 0
+shakeOffsetX = 0
+shakeOffsetY = 0
+
+reflectOffsetY = 10
+
+onDamaged = function() {}
+onDeath = function() {}
+
+damageFx = function() {
+	if (global.createDeathParticles) {
+		spawn_fx_bouncers(damageParticles, 90, lastDamageForce)
+	}
+}
+
+deathFx = function() {
+	if (global.createDeathParticles) {
+		spawn_fx_bouncers(deathParticles, lastDamageAngle, lastDamageForce)
+	}
+}
+
+///@description Returns whether this instance is currently invulnerable
+isInvulnerable = function() {
+    return false
+}
+
+///@description Returns if an object can be partitioned for dormancy
+///@return {bool}
+canPartition = function() {
+    return true
+}

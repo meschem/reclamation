@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"knockback_baddie",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"knockback_baddie",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

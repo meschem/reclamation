@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_arrow_draw_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_arrow_draw_point",
+  "parent":{
+    "name":"math",
+    "path":"folders/Scripts/math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"baddie_oob_behavior",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_oob_behavior",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

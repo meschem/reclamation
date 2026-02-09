@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_squishy_slice_assassinate",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.23172335,
+  "exportDir":"",
+  "name":"snd_squishy_slice_assassinate",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Sounds/abilities.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_squishy_slice_assassinate.wav",
+  "volume":1.0,
+}

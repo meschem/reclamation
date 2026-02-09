@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_time_from_age",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_time_from_age",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

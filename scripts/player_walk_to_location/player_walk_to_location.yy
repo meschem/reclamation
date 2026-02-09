@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_walk_to_location",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_walk_to_location",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

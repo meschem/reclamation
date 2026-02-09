@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"hitlist_contains",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"hitlist_contains",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

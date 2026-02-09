@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_fireball_impact_crunchy",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.625034,
+  "exportDir":"",
+  "name":"snd_fireball_impact_crunchy",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Sounds/baddies.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_fireball_impact_crunchy.wav",
+  "volume":0.5,
+}

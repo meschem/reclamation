@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_angle_yvel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_angle_yvel",
+  "parent":{
+    "name":"math",
+    "path":"folders/Scripts/math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

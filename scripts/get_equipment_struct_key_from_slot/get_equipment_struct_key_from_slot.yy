@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_equipment_struct_key_from_slot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_equipment_struct_key_from_slot",
+  "parent":{
+    "name":"equipment",
+    "path":"folders/Scripts/equipment.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

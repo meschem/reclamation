@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"velocity_add",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"velocity_add",
+  "parent":{
+    "name":"math",
+    "path":"folders/Scripts/math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enable_mutator",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enable_mutator",
+  "parent":{
+    "name":"mutators",
+    "path":"folders/Objects/mutators.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

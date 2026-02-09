@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ping_map_location",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ping_map_location",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

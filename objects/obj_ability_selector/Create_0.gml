@@ -1,0 +1,2 @@
+
+position = new vec2()

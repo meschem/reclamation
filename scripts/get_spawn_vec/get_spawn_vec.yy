@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_spawn_vec",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_spawn_vec",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Scripts/baddies/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

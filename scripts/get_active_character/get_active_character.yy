@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_active_character",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_active_character",
+  "parent":{
+    "name":"weapons",
+    "path":"folders/Scripts/player/weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

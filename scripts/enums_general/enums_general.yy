@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enums_general",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enums_general",
+  "parent":{
+    "name":"enums",
+    "path":"folders/Scripts/enums.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

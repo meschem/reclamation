@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_ability_trees",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_ability_trees",
+  "parent":{
+    "name":"room_config",
+    "path":"folders/Scripts/room_config.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

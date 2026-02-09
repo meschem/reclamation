@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_spawner_phase_length",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_spawner_phase_length",
+  "parent":{
+    "name":"spawning",
+    "path":"folders/Objects/controllers/spawning.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_text_with_outline",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_text_with_outline",
+  "parent":{
+    "name":"text",
+    "path":"folders/Scripts/ui/text.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

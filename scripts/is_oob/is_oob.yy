@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"is_oob",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_oob",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

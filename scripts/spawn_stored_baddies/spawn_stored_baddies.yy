@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_stored_baddies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_stored_baddies",
+  "parent":{
+    "name":"storing",
+    "path":"folders/Scripts/baddies/storing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"apply_player_weapon_projectile_props",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"apply_player_weapon_projectile_props",
+  "parent":{
+    "name":"projectiles",
+    "path":"folders/Scripts/projectiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

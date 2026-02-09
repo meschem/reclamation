@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"generate_ability_instances",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"generate_ability_instances",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

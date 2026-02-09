@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"normalize_vector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"normalize_vector",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

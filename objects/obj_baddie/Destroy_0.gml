@@ -1,0 +1,78 @@
+
+onDestroy()
+
+for (var i = 0; i < array_length(onDestroyList); i++) {
+	onDestroyList[i](id)
+}
+
+if (roomBoss) {
+	/// FIXME: Perf? Ugly Code. May be OK.
+	var _complete = true
+	var _self = id
+	
+	with (obj_baddie) {
+		if (id != _self && roomBoss) {
+			_complete = false
+		}
+	}
+	
+	if (_complete) {
+		with (obj_baddie) {
+			if (id != _self) {
+				instance_destroy()
+			}
+		}
+		
+		with (obj_spawner) {
+			instance_destroy()
+		}
+	}
+}
+
+if (!killedByBounds) {
+	deathFx()
+
+	if (soundOnDeath >= 0 && !audio_is_playing(soundOnDeath)) {
+		audio_play_sound(soundOnDeath, 1, false)
+	}
+	
+	if (eventParent != noone) {
+		eventParent.eventAlertBaddieDeath(id)
+	}
+	
+	if (provideKillRewards) {
+		/// FIXME: Uses obj_player
+        var _player = get_first_player()
+        
+		add_run_stat_kill(id, _player)
+		add_run_stat(enumRunStats.xpGained, xp)
+        create_lob_drop_with_table(x, y, dropType, _player)
+	
+		/// FIXME: Hack
+		//_player.xp += xp
+        spawn_glint_pickups(x, y, xp)
+		_player.addUltimateCharge(ultimateCharge)
+		
+		run_on_baddie_death_effects(id)
+	
+		//check_for_level_up()
+	
+		check_for_soul_gate()
+
+		for (var i = 0; i < array_length(loot); i++) {
+			loot[i].drop()
+	
+			delete loot[i]
+		}
+	}
+	
+	if (roomBoss) {
+		with (obj_spawner) {
+			instance_destroy()
+		}
+		
+		with (obj_baddie) {
+			instance_destroy()
+		}
+	}
+}

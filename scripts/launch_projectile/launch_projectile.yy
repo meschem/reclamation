@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"launch_projectile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"launch_projectile",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

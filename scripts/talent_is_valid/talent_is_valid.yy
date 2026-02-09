@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"talent_is_valid",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"talent_is_valid",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/talents/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

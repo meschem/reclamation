@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"mark_valid_ingredients",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mark_valid_ingredients",
+  "parent":{
+    "name":"recipes",
+    "path":"folders/Scripts/equipment/recipes.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

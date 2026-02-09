@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"add_baddie_limb",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_baddie_limb",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_shockwave_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_shockwave_damage",
+  "parent":{
+    "name":"activate",
+    "path":"folders/Scripts/talents/activate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

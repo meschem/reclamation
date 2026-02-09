@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"round_ext",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"round_ext",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

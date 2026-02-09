@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"spawn_glint_pickups",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"spawn_glint_pickups",
+  "parent":{
+    "name":"loot",
+    "path":"folders/Scripts/baddies/loot.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

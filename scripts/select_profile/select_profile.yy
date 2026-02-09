@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"select_profile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"select_profile",
+  "parent":{
+    "name":"save_profiles",
+    "path":"folders/Scripts/save_profiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

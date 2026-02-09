@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"audio_play_random_sound",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"audio_play_random_sound",
+  "parent":{
+    "name":"audio",
+    "path":"folders/Scripts/audio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

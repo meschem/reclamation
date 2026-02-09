@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setup_lifecycle_events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_lifecycle_events",
+  "parent":{
+    "name":"projectiles",
+    "path":"folders/Scripts/projectiles.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

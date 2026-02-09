@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"_SETUP",
+  "name":"_SETUP",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Objects/dungeons.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

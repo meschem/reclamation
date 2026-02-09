@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setup_map_pois",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setup_map_pois",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

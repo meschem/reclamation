@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_velocity_from_angle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_velocity_from_angle",
+  "parent":{
+    "name":"math",
+    "path":"folders/Scripts/math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

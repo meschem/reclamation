@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"define_structs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"define_structs",
+  "parent":{
+    "name":"structs",
+    "path":"folders/Scripts/general/structs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

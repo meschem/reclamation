@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_can_attack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_can_attack",
+  "parent":{
+    "name":"input",
+    "path":"folders/Scripts/player/input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

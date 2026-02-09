@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"process_all_talents",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"process_all_talents",
+  "parent":{
+    "name":"talents",
+    "path":"folders/Scripts/talents.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

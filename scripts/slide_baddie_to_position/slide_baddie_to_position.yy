@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"slide_baddie_to_position",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"slide_baddie_to_position",
+  "parent":{
+    "name":"baddies",
+    "path":"folders/Scripts/baddies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

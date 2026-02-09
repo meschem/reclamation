@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_shop_gear",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_shop_gear",
+  "parent":{
+    "name":"menus",
+    "path":"folders/Scripts/equipment/menus.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

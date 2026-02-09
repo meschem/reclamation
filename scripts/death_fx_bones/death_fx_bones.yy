@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"death_fx_bones",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"death_fx_bones",
+  "parent":{
+    "name":"fx",
+    "path":"folders/Scripts/fx.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

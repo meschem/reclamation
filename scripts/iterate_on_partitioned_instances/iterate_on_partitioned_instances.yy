@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"iterate_on_partitioned_instances",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"iterate_on_partitioned_instances",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

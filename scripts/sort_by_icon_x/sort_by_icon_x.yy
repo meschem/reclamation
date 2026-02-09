@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sort_by_icon_x",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sort_by_icon_x",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/ui/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

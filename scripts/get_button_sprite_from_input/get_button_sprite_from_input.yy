@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_button_sprite_from_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_button_sprite_from_input",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

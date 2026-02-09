@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"buff_player_invuln",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"buff_player_invuln",
+  "parent":{
+    "name":"buffs",
+    "path":"folders/Scripts/buffs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

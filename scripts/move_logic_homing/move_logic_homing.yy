@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"move_logic_homing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"move_logic_homing",
+  "parent":{
+    "name":"wander",
+    "path":"folders/Scripts/baddies/movement/wander.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

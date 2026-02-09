@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"summon_skeletons",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"summon_skeletons",
+  "parent":{
+    "name":"specific_attacks",
+    "path":"folders/Scripts/baddies/specific_attacks.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

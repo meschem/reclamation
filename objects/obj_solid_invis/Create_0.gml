@@ -1,0 +1,1 @@
+targetType = targetTypes.terrain

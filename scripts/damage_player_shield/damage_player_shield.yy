@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"damage_player_shield",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"damage_player_shield",
+  "parent":{
+    "name":"buffs",
+    "path":"folders/Scripts/buffs.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

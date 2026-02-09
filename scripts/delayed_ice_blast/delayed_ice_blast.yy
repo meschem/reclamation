@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"delayed_ice_blast",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"delayed_ice_blast",
+  "parent":{
+    "name":"specific_attacks",
+    "path":"folders/Scripts/baddies/specific_attacks.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

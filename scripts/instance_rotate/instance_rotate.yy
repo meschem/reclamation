@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"instance_rotate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"instance_rotate",
+  "parent":{
+    "name":"math",
+    "path":"folders/Scripts/math.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

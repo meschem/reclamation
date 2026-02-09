@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_movement_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_movement_input",
+  "parent":{
+    "name":"move_logic",
+    "path":"folders/Scripts/player/move_logic.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

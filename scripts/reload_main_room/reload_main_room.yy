@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"reload_main_room",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"reload_main_room",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

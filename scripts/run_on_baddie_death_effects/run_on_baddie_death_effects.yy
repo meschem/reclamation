@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"run_on_baddie_death_effects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"run_on_baddie_death_effects",
+  "parent":{
+    "name":"on_event_effects",
+    "path":"folders/Scripts/equipment/on_event_effects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_level_abil_select_ultimate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_level_abil_select_ultimate",
+  "parent":{
+    "name":"levels",
+    "path":"folders/Scripts/levels.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

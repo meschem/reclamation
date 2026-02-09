@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_map_object_used",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_map_object_used",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

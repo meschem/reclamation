@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_ability_icon_position_x",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_ability_icon_position_x",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/ui/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

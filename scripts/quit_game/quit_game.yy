@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"quit_game",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"quit_game",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

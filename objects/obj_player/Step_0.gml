@@ -1,0 +1,151 @@
+if (game_is_paused()) {
+    if (storedAnimRate == -1) {
+        storedAnimRate = image_speed
+        image_speed = 0
+    }
+    
+    return 0
+}
+
+if (storedAnimRate != -1) {
+    image_speed = storedAnimRate
+    storedAnimRate = -1
+}
+
+age++
+
+if (keyboard_check_pressed(ord("P"))) {
+	autoAttack = !autoAttack
+	
+	var enabledText = autoAttack ? "ENABLED" : "DISABLED"
+	
+	create_toaster("Auto Attack " + enabledText)
+}
+
+if (!statProcessInit) {
+    process_player_stats() 
+    
+    statProcessInit = true
+}
+
+stepBegin()
+
+if (floats) {
+	set_float_range()
+}
+
+if (inputEnabled) {
+	player_movement_input()
+}
+
+hitWall = player_walk_to_location(xVel, yVel)
+
+if (hitWall) {
+	player_check_doodad_collision(xVel, yVel)
+}
+
+
+if (ultimateChargeDelay > 0) {
+	ultimateChargeDelay--
+}
+
+if (state == playerStates.charging) {
+	if (obj_ability_charge.runes[enumRunes.dreygoth].enabled) {
+		chargeShockFrames++
+		
+		if (age % 4 == 0) {
+			var inst = instance_create_depth(x, y, depths.fx, obj_particle_single_cycle)
+			
+			inst.sprite_index = spr_particle_lightning_medium
+			inst.image_angle = random(360)
+			inst.image_xscale = 0.5
+			inst.image_yscale = 0.5
+		}
+	}
+	
+	if (hitWall) {
+		state = playerStates.idle
+	
+		var xOffset = get_angle_xvel(moveAngle) * 6
+		var yOffset = get_angle_yvel(moveAngle) * 6
+	
+		charge_collision(x + xOffset, y + yOffset, moveAngle)
+	}	
+}
+
+if (player_can_attack() && !autoAttack) {
+	//if (autoAttack) {
+		// isAttacking = true 
+	//} else {
+		attackAngle = get_attack_input()
+	//}
+	
+}
+
+if (autoAttack) {
+	var maxRange = sqr(autoAttackMaxRange)
+	var target = noone
+	var dist = 0
+	
+	with (obj_baddie) {
+		dist = sqr(x - other.x) + sqr(y - other.y)
+		if (dist < maxRange) {
+			maxRange = dist
+			target = id
+		} 
+	}
+	
+	with (obj_destructible) {
+		dist = sqr(x - other.x) + sqr(y - other.y)
+		if (dist < maxRange) {
+			maxRange = dist
+			
+			target = id
+		} 
+	}
+	
+	if (target != noone) { // && point_distance(x, y, target.x, target.y) < autoAttackMaxRange) {
+		attackAngle = point_direction(x, y, target.x, target.y)
+		isAttacking = true
+	} else {
+		isAttacking = false
+	}
+}
+
+if (inputFocus == enumInputTypes.controller) {
+	controllerAimingCursorPos = get_vec2_from_angle_mag(attackAngle, controllerAimingCursorOffset)
+}
+
+// Currently does not change input context
+get_ability_input()
+
+if (isAttacking) {
+	if (equipment.weapon == noone) {
+		create_toaster("No Weapon. Adding Default.")
+		addWeapon(defaultWeapon)
+	} else {		
+		equipment.weapon.attack(attackAngle)
+	}	
+}
+
+//activate_sidearms()
+
+player_collision()
+
+depth = depths.player - y
+
+uiDrawOffset = get_ui_pos(id)
+
+if (hp <= 0) {
+	
+	set_game_pause_state(true)
+	player_death()
+}
+
+image_alpha *= alphaScalar
+
+if (xVel > 0.05) {
+	image_xscale = 1
+} else if (xVel < -0.05) {
+	image_xscale = -1
+}

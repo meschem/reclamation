@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"baddie_is_stopped",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"baddie_is_stopped",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

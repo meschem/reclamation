@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"add_button_to_menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"add_button_to_menu",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Scripts/ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

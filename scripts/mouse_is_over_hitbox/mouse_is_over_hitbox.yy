@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"mouse_is_over_hitbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mouse_is_over_hitbox",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

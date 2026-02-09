@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"war_stomp_collide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"war_stomp_collide",
+  "parent":{
+    "name":"jonah",
+    "path":"folders/Scripts/abilities/jonah.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

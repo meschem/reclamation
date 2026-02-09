@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"accel_towards_point",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"accel_towards_point",
+  "parent":{
+    "name":"movement",
+    "path":"folders/Scripts/baddies/movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

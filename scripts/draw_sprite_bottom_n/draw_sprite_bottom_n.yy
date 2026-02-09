@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_sprite_bottom_n",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_sprite_bottom_n",
+  "parent":{
+    "name":"general",
+    "path":"folders/Scripts/general.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

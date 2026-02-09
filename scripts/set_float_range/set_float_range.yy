@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"set_float_range",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"set_float_range",
+  "parent":{
+    "name":"floating",
+    "path":"folders/Scripts/general/floating.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

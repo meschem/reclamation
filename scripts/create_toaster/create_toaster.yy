@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_toaster",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_toaster",
+  "parent":{
+    "name":"toaster",
+    "path":"folders/Scripts/toaster.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

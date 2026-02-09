@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_map_section_struct",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_map_section_struct",
+  "parent":{
+    "name":"map",
+    "path":"folders/Scripts/map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

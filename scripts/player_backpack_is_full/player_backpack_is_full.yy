@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"player_backpack_is_full",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_backpack_is_full",
+  "parent":{
+    "name":"player",
+    "path":"folders/Scripts/player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

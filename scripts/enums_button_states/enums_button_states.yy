@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enums_button_states",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enums_button_states",
+  "parent":{
+    "name":"enums",
+    "path":"folders/Scripts/enums.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

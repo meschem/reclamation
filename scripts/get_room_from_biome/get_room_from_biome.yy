@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_room_from_biome",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_room_from_biome",
+  "parent":{
+    "name":"dungeons",
+    "path":"folders/Scripts/dungeons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

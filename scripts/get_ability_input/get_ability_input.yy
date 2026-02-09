@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_ability_input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_ability_input",
+  "parent":{
+    "name":"abilities",
+    "path":"folders/Scripts/abilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

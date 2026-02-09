@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"attack_dagger",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"attack_dagger",
+  "parent":{
+    "name":"weapons",
+    "path":"folders/Scripts/player/weapons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

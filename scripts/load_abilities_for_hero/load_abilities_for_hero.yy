@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"load_abilities_for_hero",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"load_abilities_for_hero",
+  "parent":{
+    "name":"selection",
+    "path":"folders/Objects/player_characters/selection.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

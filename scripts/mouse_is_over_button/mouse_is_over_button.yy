@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"mouse_is_over_button",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"mouse_is_over_button",
+  "parent":{
+    "name":"buttons",
+    "path":"folders/Scripts/ui/buttons.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

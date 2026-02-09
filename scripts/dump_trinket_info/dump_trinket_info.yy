@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dump_trinket_info",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dump_trinket_info",
+  "parent":{
+    "name":"trinkets",
+    "path":"folders/Scripts/trinkets.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

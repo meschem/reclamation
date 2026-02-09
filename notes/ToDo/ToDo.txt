@@ -1,0 +1,27 @@
+P0:
+
+Change abilities to:
+	1 Offense
+	1 Defense / Utility?
+	1 Ultimate
+	
+Create Relics:
+	Permanent items that remain through runs
+	Can enable/disable in main area? Optional based on Relic?
+
+OTHER:
+
+1. Get basic game loop:
+	* Menu after death to restart
+	* Ending a room:
+		* Detect all monsters killed
+		* Menu for map navigation?
+			- Zoom out, create exits after?
+2. Update talent screen
+	* Resize things
+	* Create talent icons
+	* Show talent icons (pause screen?)
+3. Create pause screen
+	* Restart game
+	
+
