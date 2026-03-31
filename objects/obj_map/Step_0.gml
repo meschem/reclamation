@@ -1,3 +1,9 @@
+if (!is_main_room_active()) {
+    drawStyle = mapDrawStyles.none
+    
+    return 0
+}
+
 poiDrawInfo = []
 
 var _posX = 0

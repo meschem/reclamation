@@ -35,6 +35,14 @@ function damage_player(hitBy, damage = -1, _player = noone) {
 	obj_player.lastHitOn = obj_player.age
 	
 	activate_player_on_hit_abilities(_player, hitBy)
+    
+    if (obj_player.hp > 0) {
+        var _fade = create_fade_overlay(global.colorDarkRed, 0, 1, 1, 20)
+        _fade.opacityScalar = 0.3
+        audio_play_sound(snd_grunt_jonah, 1, false)
+        audio_play_sound(snd_heavy_hit, 1, false)
+        create_hit_stun(8)
+    }
 	
 	//inst = instance_create_depth(x, y - 4, depths.ui, obj_moving_text)
 	

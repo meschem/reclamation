@@ -19,5 +19,9 @@ function reload_main_room() {
 		add_map_poi(id, mapIcon)
 	}
     
+    with (obj_waypoint) {
+        add_map_poi(id, mapIcon)
+    }
+    
     reactivate_waypoints()
 }

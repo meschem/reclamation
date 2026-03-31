@@ -6,9 +6,9 @@ description = "Harder to use but packs a lot more punch."
 active = false
 stackable = true
 
-damageScalar = [0.5]
-attackSpeedScalar = [-0.25]
+damageScalar = [0.3]
 bonusKnockbackScalar = [0.5]
+rangeScalar = [-0.3]
 
 stats = [
     new abilityStat(
@@ -17,14 +17,15 @@ stats = [
 		damageScalar
 	),
 	new abilityStat(
-		"Attack Speed",
-		"attackSpeedScalar",
-		attackSpeedScalar
+		"Range",
+		"rangeScalar",
+		rangeScalar,
+		true, statUnits.percent
 	),
     new abilityStat(
         "Knockback",
         "knockbackScalar",
-         bonusKnockbackScalar,
+        bonusKnockbackScalar,
         true, statUnits.percent
     )
 ]

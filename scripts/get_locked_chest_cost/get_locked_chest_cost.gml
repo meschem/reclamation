@@ -4,7 +4,8 @@ function get_locked_chest_cost(_size = lockedChestSizes.small) {
 	enum lockedChestSizes {
 		small,
 		medium,
-		large
+		large,
+        mega
 	}
 	
 	var _count = obj_run_controller.lockedChestsOpened
@@ -18,6 +19,9 @@ function get_locked_chest_cost(_size = lockedChestSizes.small) {
 		
 		case lockedChestSizes.large:
 			return 100 + (_count * 25)
+            
+        case lockedChestSizes.mega:
+			return 1000
 	}
 	
 	return 0

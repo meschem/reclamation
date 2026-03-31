@@ -4,7 +4,7 @@
 function get_player_target(_inst = id) {
 	var _targets = obj_game_controller.baddieTargets
 	
-	if (array_length(_targets) == 1) {
+	if (array_length(_targets) == 1 || !instance_exists(_inst)) {
 		return _targets[0]
 	}
 	

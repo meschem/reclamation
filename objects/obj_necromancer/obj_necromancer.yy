@@ -9,8 +9,8 @@
   "name":"obj_necromancer",
   "overriddenProperties":[],
   "parent":{
-    "name":"baddies",
-    "path":"folders/Objects/baddies.yy",
+    "name":"mages",
+    "path":"folders/Objects/baddies/mages.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

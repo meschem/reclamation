@@ -3,11 +3,13 @@ event_inherited()
 
 name = "Throwing Hammer"
 description = "For those determined to stick with hammers in any situation."
+
 spawnDistance = 16
 baseDamage = 10
 spawnObject = obj_war_hammer
 spawnCount = 1
 runningSpawnCountBonus = 0
+mainProjectile = true
 
 damageStatBoostStr = 0.5
 damageStatBoostDex = 0.5
@@ -22,10 +24,13 @@ spreadScalar = 1
 range = 200
 rangeScalar = 1
 
-velocity = 5
+velocity = 3
+velocityMax = 7
 velocityScalar = 1
 
 maxCd = 60
+
+wakes = 0
 
 stats = [
 	new weaponStat(enumWeaponStats.damage, id),
@@ -40,15 +45,15 @@ upgrades = [
 	obj_wupg_gen_sharpened,
 	obj_wupg_gen_hefty,
 	obj_wupg_gen_hastened,
-	obj_wupg_gen_pierced,
-	//obj_wupg_gen_focused,
-	//obj_wupg_gen_contoured,
-	//obj_wupg_gen_multiplied,
-    //obj_wupg_gen_weighted,
+	//obj_wupg_gen_pierced,
     
     obj_wupg_wh_lit_crits,
-    obj_wupg_wh_stunning_blow,
-    obj_wupg_wh_shockwave
+    //obj_wupg_wh_stunning_blow,
+    obj_wupg_wh_shockwave,
+    //obj_wupg_wh_extra_push,
+    //
+    //obj_wupg_wh_wake_sm,
+    obj_wupg_wh_fury_swing
 ]
 
 processUpgrades()
@@ -95,10 +100,13 @@ use = function() {
 		_inst.damager = id
 		
 		set_velocity_from_angle(_inst, _angle, velocity * velocityScalar)
+        _inst.moveSpeedMax = velocityMax * velocityScalar
 		
 		array_push(_hammers, _inst)
 		
 		_angle += _spread
+        
+        _inst.applyWakes(wakes)
 	}
 	
 	var _pCount = 6

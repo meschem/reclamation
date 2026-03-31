@@ -1,14 +1,14 @@
 ///@desc                                Metal hit for VFX and SFX
 ///@param {id.Instance} _target         Target being hit
 function heavy_metal_hit(_target) {
-    var _inst = instance_create_depth(_target.x, _target.y, depths.fx, obj_particle_additive_single_cycle)
-	var _angle = random(360)
-	_inst.sprite_index = spr_particle_long_cut_flash_blur	
-	_inst.image_angle = _angle
-	
-	_inst = instance_create_depth(_target.x, _target.y, depths.fx, obj_particle_additive_single_cycle)
-	_inst.sprite_index = spr_particle_long_cut_flash	
-	_inst.image_angle = _angle
+    //var _inst = instance_create_depth(_target.x, _target.y, depths.fx, obj_particle_additive_single_cycle)
+	//var _angle = random(360)
+	//_inst.sprite_index = spr_particle_long_cut_flash_blur	
+	//_inst.image_angle = _angle
+	//
+	//_inst = instance_create_depth(_target.x, _target.y, depths.fx, obj_particle_additive_single_cycle)
+	//_inst.sprite_index = spr_particle_long_cut_flash	
+	//_inst.image_angle = _angle
 	
 	var _gain = random_range(0.9, 1.1)
 	var _pitch = random_range(0.93, 1.07)

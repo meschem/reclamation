@@ -51,6 +51,8 @@ draw = true
 lifeSpan = -1
 age = 0
 
+mainProjectile = false      // used for various abilities to determine if it's a primary projectile
+
 animSpeed = 1
 
 distanceMax = 1200
@@ -143,6 +145,8 @@ bonusPoisonDamageScalar = 0
 
 reflectOffsetY = 10
 
+ignoreLifeCycleEvents = false
+
 setup_lifecycle_events()
 
 weaponRef = noone // reference to obj_weapon that points to this object
@@ -208,6 +212,7 @@ setAngle = function(angle) {
 onHit = function(target) {}
 stepBegin = function() {}
 stepEnd = function() {}
+onKill = function(target) {}
 
 ///@description					Applies FX or debuffs to enemy list that was hit
 ///								before damage is applied. Good place to mark for crit

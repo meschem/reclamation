@@ -72,8 +72,8 @@ getPlayerStatValue = function(_playerStat, _player = noone) {
 	        return _player.basePickupRewardScalar + _player.bonusPickupRewardScalar
 
 		case enumPlayerStats.weaponAoeScalar:
-	        return -1
-
+	        return 1
+            
 		case enumPlayerStats.weaponKnockbackScalar:
 	        return _player.weaponKnockbackScalar
 			

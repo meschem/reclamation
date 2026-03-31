@@ -18,8 +18,8 @@ treeLevel = 2
 iconColor = enumAbilityColor.orange
 
 curCd = 0
-maxCd = seconds_to_frames(0.3)
-maxCdLightningTipped = stf(0.25)
+maxCd = seconds_to_frames(5)
+maxCdLightningTipped = stf(4)
 
 spikesCurCd = 0
 spikesMaxCd = seconds_to_frames(1)
@@ -35,7 +35,7 @@ spikeCount = [2, 2, 3, 3, 4]
 spikeLifeSpan = 75
 spikeAngleOffset = 0
 
-spiralRotationSpeed = 3
+spiralRotationSpeed = 15
 //lightningShockAmount = 180
 
 projectile = obj_armor_spike
@@ -82,7 +82,11 @@ charStatBonuses = [
 //addRune("Last Gasp", "Upon receiving a fatal blow, heal to full and release spikes. Usable once per run."	)
 
 use = function () {
-	activate_spiked_armor(owner)
+	//activate_spiked_armor(owner)
+    var _inst = create_instance(obj_thorns_launcher)
+    
+    _inst.caster = owner
+    _inst.ability = id
 }
 
 // FIXME: Override on resetCooldown(), dangerous

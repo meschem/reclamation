@@ -7,10 +7,11 @@ event_inherited()
 name = "Unknown Boss Dungeon"
 
 openTextString = "OPENED"
-openTextLocation = new vec2(
-	(view_width() / 2) - (string_width(openTextString) / 2),
-	16
-)
+openTextLocation = new vec2()
+
+	//(view_width() / 2) - (string_width(openTextString) / 2),
+	//16
+//)
 
 // Set loadRoom = room_number to set a destination for a boss fight
 age = 1
@@ -25,7 +26,6 @@ door = instance_create_depth(
 
 door.exitDoor = id
 
-//add_map_poi(id, spr_dungeon_icon)
 mapIcon = spr_dungeon_icon
 
 openDoor = function() {
@@ -34,10 +34,9 @@ openDoor = function() {
     instance_destroy(door)
     openedOn = age
     
-    openTextString = $"The {name} Has Been Opened!"
+    var _openTextString = $"The {name} Has Been Opened!"
     
-    openTextLocation = new vec2(
-    	(view_width() / 2) - (string_width(openTextString) / 2),
-    	16
-    )
+    with (obj_ui_controller) {
+        createBigAlertText(_openTextString)
+    }
 }

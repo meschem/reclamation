@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"flashes",
-    "path":"folders/Sprites/particles/flashes.yy",
+    "name":"circles",
+    "path":"folders/Sprites/particles/flashes/circles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

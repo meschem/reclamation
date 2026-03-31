@@ -30,6 +30,9 @@ bonusKnockbackScalar = 0
 
 lifeCycleEvents = []
 
+unlockedUpgrades = []
+disabledUpgrades = []
+
 level = 0
 maxLevel = 99
 
@@ -45,16 +48,41 @@ enable = function() {
 	onLevel()
 	
 	applyStatsToWeapon()
-	
-	//process_player_stats()
+}
+
+///@description                 Unlocks listed upgrades
+processUnlocks = function() {
+    var _upg = noone
+    
+    if (!instance_exists(weapon)) {
+        create_toaster("Weapon not found for upgrade", errorLevels.error)
+        return
+    }
+    
+    for (var i = 0; i < array_length(unlockedUpgrades); i++) {
+        array_push(weapon.upgrades, unlockedUpgrades[i])
+    }
+    
+    for (var i = 0; i < array_length(disabledUpgrades); i++) {
+        array_remove_value(weapon.upgrades, disabledUpgrades[i], true)
+    }
 }
 
 ///@description					Applies default stats to attached weapon object
 applyStatsToWeapon = function () {
+    if (!instance_exists(weapon)) {
+        create_toaster("Attempted to apply stats to a non-existent weapon!", errorLevels.error);
+        return
+    }
+    
 	for (var i = 0; i < array_length(stats); i++) {
 		var _var = stats[i].variable
-		
-		if (variable_instance_exists(weapon, _var)) {
+        
+        if (_var == "") {
+            continue
+        }
+  
+        if (variable_instance_exists(weapon, _var)) {
 			var _values = stats[i].values  // [level - 1]
 			var _index = min(array_length(_values) - 1, level - 1)
 			var _val = _values[_index]		
@@ -63,6 +91,8 @@ applyStatsToWeapon = function () {
 			var _result = _val + _curVal
 	
 			variable_instance_set(weapon, _var, _result)
+            
+            create_toaster($"{_var}: {_result} = {_val} + {_curVal}")
 		} else {
 			create_toaster("Variable not found on weapon: " + _var, errorLevels.error)
 		}

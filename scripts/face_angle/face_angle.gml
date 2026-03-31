@@ -13,13 +13,13 @@ function face_angle(angle) {
 }
 
 /// @description returns the x velocity ratio from an angle (0 to 1)
-/// @param1 {real} angle
+/// @param {real} angle
 function angle_xvel(angle) {
 	return cos(degtorad(angle))
 }
 
 /// @description returns the x velocity ratio from an angle (0 to 1)
-/// @param1 {real} angle
+/// @param {real} angle
 function angle_yvel(angle) {
 	return sin(degtorad(angle)) * -1
 }

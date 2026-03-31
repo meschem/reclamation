@@ -25,7 +25,8 @@ randomItems = [
 	//obj_mg_ice_salt,
     //obj_mg_war_bracer,
     //obj_mg_petrified_heart
-    obj_mg_greathawk_talon
+    //obj_mg_greathawk_talon
+    obj_mg_goldleaf
 ]
 
 inputsKeyboard = {

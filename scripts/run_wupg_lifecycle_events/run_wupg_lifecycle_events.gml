@@ -3,6 +3,10 @@
 ///@param {any} _data			Data that is pulled from the events
 ///@param {id.Instance} _proj	Projectile calling the event
 function run_wupg_lifecycle_events(_eventType, _data, _proj = id) {
+    if (ignoreLifeCycleEvents) {
+        return 
+    }
+        
 	with (obj_weapon_upgrade) {
 		if (active) {
 			for (var i = 0; i < array_length(lifeCycleEvents); i++) {

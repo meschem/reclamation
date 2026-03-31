@@ -68,7 +68,7 @@ onDeathFx = function() {
 ///@param {id.Instance} _target		Target being hit
 onCollideFx = function(_target)
 {
-	if (global.createParticleFx) {
-		create_burst_particles(pts_greataxe_impact, _target.x, _target.y, image_angle)
-	}
+	//if (global.createParticleFx) {
+		//create_burst_particles(pts_greataxe_impact, _target.x, _target.y, image_angle)
+	//}
 }

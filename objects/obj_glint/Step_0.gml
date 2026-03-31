@@ -8,20 +8,22 @@ y += yVel
 starAngle += starRotationSpeed
 
 if (instance_exists(target)) {
-    // 1. Find the direction to the target
-    var _dir = point_direction(x, y, target.x, target.y);
+    var _targetDir = point_direction(0, 0, target.xVel, target.yVel)
+    var _distToTarget = point_distance(x, y, target.x, target.y)
+    var _mag = point_distance(0, 0, xVel, yVel)
+    var _timeToTarget = _distToTarget / _mag
     
-    // 2. Calculate "Desired" velocity (where we WANT to go)
+    var _targetX = lengthdir_x(target.moveSpeed, _targetDir * _timeToTarget)
+    var _targetY = lengthdir_y(target.moveSpeed, _targetDir * _timeToTarget)
+    
+    var _dir = point_direction(x, y, target.x + _targetX, target.y + _targetY);
     var _targetXVel = lengthdir_x(maxSpeed, _dir);
     var _targetYVel = lengthdir_y(maxSpeed, _dir);
-    
-    // 3. Gradually nudge current velocity toward desired velocity
-    // This creates the "Bending" effect
+
     xVel = lerp(xVel, _targetXVel, accel);
     yVel = lerp(yVel, _targetYVel, accel);
-    
-    // 4. Guaranteed Collection: If very close, just snap to player
-    if (point_distance(x, y, target.x, target.y) < 16) {
+
+    if (point_distance(x, y, target.x, target.y) < 24) {
         obj_player.xp += pickupValue * get_player_stat(enumPlayerStats.pickupRewardScalar, target)
         onPickup(target)
         check_for_level_up()

@@ -1,0 +1,2 @@
+
+drawStyle = mapDrawStyles.small

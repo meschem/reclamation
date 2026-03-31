@@ -20,6 +20,7 @@ bounceRatio = 0.8
 frictionRatio = 0.8
 minBounceVelocity = 0.25
 maxBounces = 0
+angleSpriteToVelocity = false
 //moving = true
 //lateralSpeed = 0
 
@@ -36,6 +37,7 @@ summoningCd = 0
 feetOffset = 13
 
 accel = 0.2
+moveSpeedScalar = 1
 moveSpeedMax = 5
 turnRate = 1
 velocity = 0

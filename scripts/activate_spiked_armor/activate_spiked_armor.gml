@@ -14,6 +14,9 @@ function activate_spiked_armor(caster, abilObj = id) {
 	} else {
 		projObj = abilObj.projectile
 	}
+    
+    var _gain = random_range(0.85, 1.15)
+    audio_play_sound(snd_paper_flip, 2, false, _gain)
 	
 	spikeCount += caster.bonusProjectileCount
 	
@@ -44,5 +47,5 @@ function activate_spiked_armor(caster, abilObj = id) {
 		}
 	}
 	
-	abilObj.spikeAngleOffset += 5
+	abilObj.spikeAngleOffset += 15
 }

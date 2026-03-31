@@ -33,6 +33,11 @@ skipPlayerUi = false
 cameraViewHeight = 1000
 cameraViewWidth = 1000
 
+bigAlertText = ""
+bigAlertTextTimer = -1
+bigAlertTextFont = font_alagard
+bigAlertTextLocation = new vec2()
+
 drawDungeonInfo = true
 drawUltimateBar = false
 drawStatBars = true
@@ -151,3 +156,16 @@ setUiProfileType = function(_type) {
 	}
 }
 
+///@description                 Sets some big alert text at the time of the screen
+///@param {string} _str         String to display
+createBigAlertText = function(_str = "Unset") {
+    bigAlertTextTimer = stf(15)
+    bigAlertText = _str
+    
+    draw_set_font(bigAlertTextFont)
+    
+    bigAlertTextLocation = new vec2(
+    	(view_width() / 2) - (string_width(bigAlertText) / 2),
+    	16
+    )
+}

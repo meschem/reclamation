@@ -7,6 +7,20 @@ if (game_is_paused()) {
 age++
 
 if (age < initialDelay) {
+    particleCd++
+    
+    if (particleCd >= particleRate) {
+        particleCd = 0
+       
+        var _particle = instance_create_depth(x, y, depth, obj_particle_single_cycle)
+        _particle.sprite_index = spr_particle_ring_huge_collapse
+        _particle.image_alpha = 0.5
+        
+        _particle = instance_create_depth(x, y, depth, obj_particle_additive_single_cycle)
+        _particle.sprite_index = spr_particle_ring_huge_collapse_blurred
+        _particle.image_alpha = 0.5
+    }
+    
 	return 0
 }
 

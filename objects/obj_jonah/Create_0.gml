@@ -18,7 +18,10 @@ hp = 50
 maxHp = 50
 baseMaxHp = 50
 
-baseMoveSpeedMax = 4.2
+baseMoveSpeedMax = 1.8
+moveAccel = 0.4
+moveDeaccel = 0.3
+
 baseMaxArmor = 0
 baseCritChance = 0
 baseCritMultiplier = 1.5

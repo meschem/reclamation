@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"array_remove_value",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"array_remove_value",
+  "parent":{
+    "name":"helper",
+    "path":"folders/Scripts/helper.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

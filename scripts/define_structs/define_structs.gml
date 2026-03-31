@@ -35,6 +35,8 @@ function storedInstance(_inst, _vars = []) constructor {
     
     varStructs = []
     
+    if (variable_instance_exists(_inst, ""))
+    
     for (var i = 0; i < array_length(_vars); i++) {
         if (variable_instance_exists(_inst, _vars[i])) {
             var _val = variable_instance_get(_inst, _vars[i])
@@ -455,8 +457,13 @@ function weaponStat(_stat, _weapon, _customType = {}) constructor {
 function abilityStat(_name, _variable, _values = [], _display = true, _unitEnum = statUnits.auto, _multiplier = 1) constructor {
 	name = _name
 	variable = _variable
-	values = _values
 	display = _display
+    
+    if (!is_array(_values)) {
+        _values = [_values]
+    }
+    
+    values = _values
 	
 	if (_unitEnum == statUnits.auto) {
 		unit = get_stat_unit_from_name(_name)
@@ -490,6 +497,8 @@ function abilityStat(_name, _variable, _values = [], _display = true, _unitEnum 
     ///@param {bool} _showUnit              Shows the unit of the stat type
     ///@return {string}
     getDisplayValueSimple = function(_level, _showUnit = false) {
+        //var _index = _level - 1
+        
         if (_level < 0 || _level >= array_length(values)) {
             create_toaster("Bad level retrieved for Ability Stat: " + string(_level))
             return "Error!!"

@@ -16,7 +16,8 @@ function restart_run() {
 		obj_ability_controller,
 		obj_input_controller,
 		obj_curse_bar,
-		obj_backpack
+		obj_backpack,
+        obj_map
 	]
 	
 	for (var i = 0; i < array_length(cleanupObjects); i++) {

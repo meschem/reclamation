@@ -1,6 +1,7 @@
 ///@description			Processes stats for all players
 
 function process_player_stats_weapon_aoe() {
+    show_message("Using process_player_stats_weapon_aoe(), invalid function")
 	var i, trinketLevel
 	var rollingScalar = 1
 	var rollingStatic = 0
@@ -33,10 +34,15 @@ function process_player_stats_weapon_aoe() {
 				//rollingScalar += bonusWeaponAoe
 			//}
 		//}
+        if (instance_exists(equipment.weapon)) {
+            rollingScalar += equipment.weapon.bonusWeaponAoeScalar
+        }
 		
 		// Process Talents
 		
 		// Process Items
 		bonusWeaponAoeScalar = rollingScalar + rollingStatic
+        
+        create_toaster("BONUS WEAPON AOE: " + string(bonusWeaponAoeScalar))
 	}
 }

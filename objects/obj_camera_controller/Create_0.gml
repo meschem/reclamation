@@ -27,6 +27,7 @@ yPos = 80
 
 shakeForce = 0
 shakeDecay = 0.25
+debug = false
 
 centeringRate = 0.05
 

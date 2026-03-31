@@ -96,7 +96,7 @@ bonusProjectileCount = 0
 bonusDamageScalar = 1
 bonusPickupRangeScalar = 0
 bonusPickupRewardScalar = 0
-bonusWeaponAoeScalar = 1
+//bonusWeaponAoeScalar = 1
 bonusWeaponKnockbackScalar = 1
 bonusPoisonDamage = 0
 bonusMagicFind = 0
@@ -206,7 +206,7 @@ animAbilityQueue = function() {}
 abilitiesMax = 4
 abilities = []
 onHitAbilities = []					// Array of instances that have activateOnHit() functions
-onAttackAbilities = []				// Array of instances that have activateOnAttak() functions
+onAttackAbilities = []				// Array of instances that have activateOnAttack() functions
 onStrikeAbilities = []				// Array of instances that have activateOnStrike() functions, when attack lands
 onHealAbilities = []				// Array of instances that have activateOnHeal() functions
 

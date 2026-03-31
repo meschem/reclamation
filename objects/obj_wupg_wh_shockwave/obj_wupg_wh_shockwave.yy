@@ -8,8 +8,8 @@
   "name":"obj_wupg_wh_shockwave",
   "overriddenProperties":[],
   "parent":{
-    "name":"major",
-    "path":"folders/Objects/equipment/weapons/upgrades/major.yy",
+    "name":"major_war_hammer",
+    "path":"folders/Objects/equipment/weapons/upgrades/major_war_hammer.yy",
   },
   "parentObjectId":{
     "name":"obj_weapon_upgrade",

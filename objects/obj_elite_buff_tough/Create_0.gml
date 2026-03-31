@@ -5,5 +5,5 @@ event_inherited()
 
 name = "Tough"
 
-hpScalar = 2
-weightScalar = 2
+hpScalar = 1.5
+weightScalar = 1.5

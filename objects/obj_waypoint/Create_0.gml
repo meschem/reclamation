@@ -9,6 +9,7 @@ name = "Waypoint"
 
 //add_map_poi(id, spr_poi_waypoint_disabled)
 mapIcon = spr_poi_waypoint_disabled
+poiAdded = false
 
 partitioned = false
 sendReceiveDisableDuration = stf(2.5)

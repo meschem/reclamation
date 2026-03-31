@@ -124,6 +124,8 @@ draw_text_ext(
 	maxTextWidth
 )
 
+//create_toaster(abilityLevel)
+
 // Draw Stats
 for (var i = 0; i < array_length(ability.stats); i++) {
     var stat = ability.stats[i]
@@ -154,12 +156,12 @@ for (var i = 0; i < array_length(ability.stats); i++) {
         // if ability has been acquired, new draw
         draw_set_color(global.colorGray)
         
-        drawString = stat.getDisplayValueSimple(abilityLevel) + " > "
+        drawString = stat.getDisplayValueSimple(abilityLevel - 1) + " > "
         draw_text(drawX, drawY, drawString)
         
         drawX += string_width(drawString)
         draw_set_color(statTextHighlightColor)
-        drawString = stat.getDisplayValueSimple(abilityLevel + 1, true)
+        drawString = stat.getDisplayValueSimple(abilityLevel, true)
         draw_text(drawX, drawY, drawString)
     }
 }

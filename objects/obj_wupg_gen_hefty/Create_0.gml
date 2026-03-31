@@ -6,8 +6,8 @@ description = "Increased size and damage."
 active = false
 stackable = true
 
-bonusAoeScalar = [0.5]
-damageScalar = [0.25]
+projectileScale = [0.25]
+damageScalar = [0.1]
 
 stats = [
 	new abilityStat(
@@ -18,7 +18,7 @@ stats = [
 	),
 	new abilityStat(
 		"Projectile Size",
-		"bonusAoeScalar", 
-		bonusAoeScalar
+		"projectileScale", 
+		projectileScale
 	)
 ]

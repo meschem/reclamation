@@ -6,7 +6,7 @@ description = "Narrows projectile spread and increases damage."
 active = false
 stackable = true
 
-damageScalar = [0.25]
+damageScalar = [0.2]
 spreadScalar = [-0.4]
 maxLevel = 2
 

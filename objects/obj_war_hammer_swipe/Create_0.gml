@@ -16,7 +16,7 @@ damageFrameCooldown = 120
 
 //enemiesPerCrit = 3		// Crits every X enemies struck, randomly selected
 
-knockback = 16
+knockback = 10
 
 animSpeed = 1
 

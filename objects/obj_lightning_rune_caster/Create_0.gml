@@ -13,6 +13,9 @@ critChance = 0
 critMultiplier = 2
 maxCrits = 0
 
+particleRate = stf(0.66)
+particleCd = particleRate
+
 explosionDamage = 1
 explosionRadius = 72
 

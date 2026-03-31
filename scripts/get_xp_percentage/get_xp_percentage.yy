@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"get_xp_percentage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"get_xp_percentage",
+  "parent":{
+    "name":"leveling",
+    "path":"folders/Scripts/player/leveling.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -22,7 +22,6 @@ particleBurstPoints = [
 		hpRatio: 0.33,
 		triggered: false
 	}
-	
 ]
 
 parentBaddie = noone // used for hitList stuff
@@ -33,6 +32,7 @@ poisonStacks = 0
 poisonImmune = true
 immovable = true
 markedForCrit = false
+poiAdded = false
 
 targetType = targetTypes.destructible
 

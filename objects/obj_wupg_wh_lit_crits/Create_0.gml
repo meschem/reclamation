@@ -13,16 +13,16 @@ stats = [
 	new abilityStat(
 		"Damage",
         "damage",
-		[20, 25, 30],
+		damage
 	),
 	new abilityStat(
 		"Bounces", "bounces",
-		[5, 6, 7]
+		bounces
 	)
 ]
 
 addLifeCycleEvent(enumLifeCycleEvents.targetHit, function(_data) {
-	if (!_data.critHit) {
+	if (!_data.critHit || !_data.projectile.mainProjectile) {
 		return 0
 	}
 	

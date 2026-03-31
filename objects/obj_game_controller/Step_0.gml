@@ -86,14 +86,13 @@ if (keyboard_check_pressed(ord("V"))) {
 
 if (keyboard_check_pressed(ord("B"))) {
 	spawn_baddie_at_location(
-        
-		obj_bugbear, mouse_x, mouse_y
+		obj_fire_mage, mouse_x, mouse_y
 	)
 }
 
 if (keyboard_check_pressed(ord("N"))) {
 	spawn_baddie_at_location(
-		obj_boarrior, mouse_x, mouse_y
+		obj_storm_mage, mouse_x, mouse_y
 	)
 }
 

@@ -109,8 +109,6 @@ with (obj_pickup) {
     instance_destroy()
 }
 
-
-
 ///@description				Gets a scaling stat
 ///@param {real} _stat		Stat type to retrieve		
 getBaddieScaling = function(_stat) {

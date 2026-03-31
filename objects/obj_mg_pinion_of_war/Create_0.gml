@@ -23,7 +23,7 @@ onEquip = function() {
 }
 
 onUnequip = function() {
-	if (owner.activeAbility != noone) {
+    if (instance_exists(owner) && owner.activeAbility != noone) {
 		owner.activeAbility.maxCharges--
 	}
 }

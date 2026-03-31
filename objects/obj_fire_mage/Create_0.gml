@@ -28,10 +28,17 @@ add_baddie_gold_brutal
 
 move_wander_setup()
 
-baddie_teleport_enable(seconds_to_frames(6))
+//baddie_teleport_enable(seconds_to_frames(6))
+impactMaterial = enumImpactMaterials.flesh
 
 fireCdMax = 320
 fireCdCur = fireCdMax
 fireCount = 4
-fireObject = obj_enemy_red_shot
-fireAngleOffset = 0
+fireObject = obj_enemy_fire_dagger
+fireAngleOffset = irandom(1) * 45
+
+fireWaveCountCur = 0
+fireWaveCountMax = 4
+fireWaveChargeCur = 0
+fireWaveChargeMax = stf(2)
+fireWaveChargeDrawOffset = new vec2(12, -11)

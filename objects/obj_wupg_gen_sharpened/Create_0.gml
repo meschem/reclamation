@@ -6,8 +6,8 @@ description = "Increased weapon damage and speed."
 active = false
 stackable = true
 
-damageScalar = [0.25]
-attackSpeedScalar = [0.15]
+damageScalar = [0.1]
+attackSpeedScalar = [0.1]
 
 stats = [
 	new abilityStat(

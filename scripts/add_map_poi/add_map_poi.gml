@@ -24,7 +24,6 @@ function remove_map_poi(_refInstance = id) {
     }
     
     with (obj_map) {
-        show_message("removing poi")
         removePoi(_refInstance)
     }
 }

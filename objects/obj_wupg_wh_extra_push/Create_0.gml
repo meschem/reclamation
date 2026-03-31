@@ -18,17 +18,17 @@ upgradeType = weaponUpgradeTypes.major
 
 stats = [
 	new abilityStat(
-		"Knocback Multiplier", "knockbackMultiplier",
-		[3, 3.5, 4]
+		"Knocback Multiplier", "", knockbackMultiplier
 	),
 	new abilityStat(
-		"Bonus Damage", "bonusDamage",
-		[5, 10, 15]
+		"Bonus Damage", "", bonusDamage
 	)
 ]
 
 addLifeCycleEvent(enumLifeCycleEvents.stepFirst, function(_data) {
 	swipeIndex++
+    
+    create_toaster("Swipe Count Max: " + string(swipeCountMax))
 	
 	if (swipeIndex >= swipeCountMax) {
 		swipeIndex = 0

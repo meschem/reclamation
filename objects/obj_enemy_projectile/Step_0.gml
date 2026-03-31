@@ -25,7 +25,19 @@ if (beingSummoned) {
 } else {
 	age++
 	
-	if  (accel != 0) {
+    if (moveSpeedScalar != 1) { 
+        var _mag = point_distance(0, 0, xVel, yVel)
+        var _angle = point_direction(0, 0, xVel, yVel)
+        
+        _mag = clamp(_mag * moveSpeedScalar, 0, moveSpeedMax)
+        
+        if (_mag < 0.2) {
+            _mag = 0
+        }
+        
+        xVel = lengthdir_x(_mag, _angle)
+        yVel = lengthdir_y(_mag, _angle)
+    } else if (accel != 0) {
 		velocity = get_velocity()
 	
 		if (velocity < moveSpeedMax) {
@@ -50,6 +62,10 @@ if (beingSummoned) {
 	
 	x += xVel
 	y += yVel
+    
+    if (angleSpriteToVelocity) {
+        image_angle = point_direction(0, 0, xVel, yVel) 
+    }
 	
 	//if (z == 0 && place_meeting(x, y, obj_player)) {
 	//	damage_player(id)

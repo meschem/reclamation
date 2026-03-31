@@ -12,6 +12,8 @@ if (age > lifeSpan) {
 	return 0
 }
 
+beginStep()
+
 if (cooldown > 0) {
 	return 0
 }

@@ -24,9 +24,9 @@ if (spawnDelay > 0) {
 var i, j
 
 if (age == 0) {
-	run_wupg_lifecycle_events(enumLifeCycleEvents.stepFirst, {
-		projectile: id
-	})
+    run_wupg_lifecycle_events(enumLifeCycleEvents.stepFirst, {
+        projectile: id
+    })
 }
 
 age++
@@ -109,6 +109,8 @@ if (seeking && seekTarget != noone) {
 
 if (!seeking && acceleration != 0) {
 	accelerate(acceleration, id, moveSpeedMin, moveSpeedMax)
+    //var _spd = point_distance(0, 0, xVel, yVel)
+    //create_toaster($"Cur Speed: {_spd} / {moveSpeedMax}")
 }
 
 if (rotationSpeed != 0) {
@@ -306,6 +308,10 @@ for (i = 0; i < ds_list_size(validTargetList); i++) {
 	//var killed = damage_baddie(target, _damage, critHit, critMultiplier)
 	var killed = damage_baddie_with_type(target, _damage, damageType, owner, critHit, critMultiplier)
 	
+    if (killed) {
+        onKill(target)
+    }
+    
 	if (!killed && knockback > 0) {
 		knockback_baddie(target, knockback, facingAngle)
 	}

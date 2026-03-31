@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_screenshake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_screenshake",
+  "parent":{
+    "name":"camera",
+    "path":"folders/Scripts/camera.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

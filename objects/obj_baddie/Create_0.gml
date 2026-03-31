@@ -27,6 +27,7 @@ enum enemyStates {
 	pushed,
 	stunned,
 	abilityRage,
+    abilityCharging,
 }
 
 enum enemyMoveStates {
@@ -155,6 +156,10 @@ outline_init()
 loot = []
 
 shieldBuffInvuln = false
+
+onDestroy = function() {
+    create_hit_stun(2)
+}
 
 isInvulnerable = function() {
     if (shieldBuffInvuln) {

@@ -12,6 +12,8 @@ stateAge = 0
 
 state = enumOverlayStates.waiting
 
+opacityScalar = 1
+
 fadeColor = c_black
 fadeOpacity = 0
 waitingDuration = 1

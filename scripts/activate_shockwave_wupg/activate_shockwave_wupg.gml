@@ -5,7 +5,6 @@
 ///@param {real} xPos
 ///@param {real} yPos
 ///@param {real} angle
-
 function activate_shockwave_wupg(owner, damage, xPos, yPos, angle) {
 	var inst = instance_create_depth(xPos, yPos, depths.fx, obj_particle_single_cycle)
 	var rangeScalar = get_player_stat(enumPlayerStats.weaponAoeScalar, owner) 

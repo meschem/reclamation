@@ -27,3 +27,6 @@ weapon = noone
 launchInstance = noone
 launchVector = new vec2()
 owner = noone
+
+beginStep = function() {}
+onFire = function() {}

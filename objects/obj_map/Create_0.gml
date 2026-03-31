@@ -30,9 +30,9 @@ removePoi = function(_inst) {
         }
     }
     
-    if (!_deleted) {
-        create_toaster("POI NOT FOUND")
-    } else {
-        create_toaster("POI REMOVED")
-    }
+    //if (!_deleted) {
+        //create_toaster("POI NOT FOUND")
+    //} else {
+        //create_toaster("POI REMOVED")
+    //}
 }

@@ -4,6 +4,7 @@
 ///@param {real} _durationIn        Time to fade TO the requested color
 ///@param {real} _durationHold      Time to hold the color
 ///@param {real} _durationOut       Time to fade out
+///@return {id.Instance}
 function create_fade_overlay(_color, _delay = 1, _durationIn = 60, _durationHold = 10, _durationOut = 60) {
     var _fader = create_instance(obj_full_overlay)
     
@@ -12,4 +13,6 @@ function create_fade_overlay(_color, _delay = 1, _durationIn = 60, _durationHold
     _fader.fadeToColorDuration = _durationIn
     _fader.fadeHoldDuration = _durationHold
     _fader.fadeFromColorDuration = _durationOut
+    
+    return _fader
 }

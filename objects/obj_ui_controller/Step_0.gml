@@ -20,6 +20,10 @@ if (age % 15 == 0 ) {
 	drawFps = fps_real
 }
 
+if (bigAlertTextTimer > 0) {
+    bigAlertTextTimer--
+}
+
 cameraViewHeight = camera_get_view_height(view_camera[0])
 cameraViewWidth = camera_get_view_width(view_camera[0])
 

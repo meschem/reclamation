@@ -6,11 +6,13 @@ event_inherited()
 projectileType = projectileTypes.weapon
 
 angleSpriteToVelocity = false
+ignoreLifeCycleEvents = false
 
 lifeSpan = -1
 age = 0
 
 baseScale = 1
+scaleSet = false
 
 distanceMax = 120
 distanceTraveled = 0
@@ -37,15 +39,17 @@ critChance = owner.critChance
 
 hitList = []
 
-///@param {id.Instance} _owner
+///@param {id.Instance} _owner                              // must be set after spawn for proper scaling
 setScale = function(_owner, _weapon = noone) {
 	var _buffScale = obj_buff_controller.getBuffValue(buffValueTypes.bonusAttackArea)
-	var _bonusAoeScale = _owner.bonusWeaponAoeScalar
-	var _weaponBonus = (_weapon != noone) ? _weapon.projectileScale : 0
-	var _scale = baseScale * (_buffScale + _bonusAoeScale + _weaponBonus)
+	//var _bonusAoeScale = _owner.bonusWeaponAoeScalar
+	var _weaponScale = (_weapon != noone) ? _weapon.projectileScale : 0
+	var _scale = baseScale * (_buffScale + _weaponScale)
 
 	image_xscale = _scale
 	image_yscale = _scale
+    
+    //create_toaster($"scale set: {baseScale} * (1 + {_buffScale} + {_weaponScale})")
 }
 
 onCollideFx = function()

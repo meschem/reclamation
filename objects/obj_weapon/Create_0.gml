@@ -240,15 +240,16 @@ applyStatsToInstance = function(_inst) {
 applyUpgradesToInstance = function(_inst) {
 	_inst.xVel *= velocityScalar
 	_inst.yVel *= velocityScalar
-	
+     
 	_inst.damageDirect = getDamage()
 	_inst.knockback = getKnockback()
 	_inst.burningStacks = getBurningStacks()
 	_inst.critMultiplier += bonusCritMultiplier
     _inst.pierceChance += pierceChance
     _inst.targetsMax += bonusTargetsMax
+    _inst.baseScale += bonusAoeScalar
 	
-	_inst.setScale(owner) // from obj_weapon_projectile
+	_inst.setScale(owner, id) // from obj_weapon_projectile
 }
 
 ///@description						Creates a weapon upgrade bar
