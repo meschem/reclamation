@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"zombies",
-    "path":"folders/Objects/particles/zombies.yy",
+    "path":"folders/Objects/destructible_particles/zombies.yy",
   },
   "parentObjectId":{
     "name":"obj_ptb_skel_bone_purp",

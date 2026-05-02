@@ -13,9 +13,6 @@ if (flashBlendRatio < 1) {
 		shader_get_uniform(shd_white_flash_blend, "u_flashRatio"),
 		flashBlendRatio
 	)
-	
-	
-
 }
 
 draw_sprite(

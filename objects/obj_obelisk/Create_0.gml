@@ -6,8 +6,9 @@ mapIcon = spr_poi_obelisk
 poiAdded = false
 
 floats = false
-
 partitioned = false
+playerInActiveRange = false
+pressToActivate = false
 
 activationArea = {
 	x1: -60,
@@ -44,6 +45,10 @@ baddies = [
 drawUiLoc = get_ui_pos(id)
 drawUiLoc.y -= 40
 drawString = $"{charge} / {chargeMax}"
+
+beginStep = function() {
+    
+}
 
 activate = function() {
 	var _spawn = array_random(baddies)

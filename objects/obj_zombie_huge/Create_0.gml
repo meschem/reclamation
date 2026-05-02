@@ -32,4 +32,9 @@ deathParticles = [
 	obj_ptb_zombie_limb_grn,
 ]
 
+onDestroy = function() {
+    audio_play_sound(snd_hard_hit_splatter, 1, false, 0.75, 0, random_range(0.9, 1.1))
+    create_hit_stun(3)
+}
+
 add_baddie_gold_brutal

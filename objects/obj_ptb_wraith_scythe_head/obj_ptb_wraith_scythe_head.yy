@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"wraiths",
-    "path":"folders/Objects/particles/wraiths.yy",
+    "path":"folders/Objects/destructible_particles/wraiths.yy",
   },
   "parentObjectId":{
     "name":"obj_ptb_skel_bone_purp",

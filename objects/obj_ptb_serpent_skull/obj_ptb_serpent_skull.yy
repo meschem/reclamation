@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"serpents",
-    "path":"folders/Objects/particles/serpents.yy",
+    "path":"folders/Objects/destructible_particles/serpents.yy",
   },
   "parentObjectId":{
     "name":"obj_ptb_skel_skull_purp",

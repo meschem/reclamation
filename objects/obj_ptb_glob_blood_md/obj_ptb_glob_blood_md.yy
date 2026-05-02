@@ -8,8 +8,8 @@
   "name":"obj_ptb_glob_blood_md",
   "overriddenProperties":[],
   "parent":{
-    "name":"particles",
-    "path":"folders/Objects/particles.yy",
+    "name":"liquids",
+    "path":"folders/Objects/destructible_particles/liquids.yy",
   },
   "parentObjectId":{
     "name":"obj_particle_bouncer",

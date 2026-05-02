@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_pickup_icon_xp",
   "bboxMode":0,
-  "bbox_bottom":10,
+  "bbox_bottom":11,
   "bbox_left":1,
-  "bbox_right":9,
+  "bbox_right":10,
   "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_pickup_icon_xp",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"pickup_icons",
     "path":"folders/Sprites/ui/pickup_icons.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":1,
     "yorigin":0,
   },
   "swatchColours":[
@@ -95,5 +95,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":11,
+  "width":12,
 }

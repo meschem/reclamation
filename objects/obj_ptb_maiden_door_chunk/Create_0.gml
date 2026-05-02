@@ -11,3 +11,4 @@ bounceRatio = 0.4
 yGroundOffset = -3
 zVelInitMin = -12
 zVelInitMax = -9
+mass = 2

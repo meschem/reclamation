@@ -14,7 +14,8 @@ staticObjects = [
     //obj_doodad,
     obj_destructible,
     obj_elite_obelisk,
-    obj_pickup
+    obj_pickup,
+    obj_particle_bouncer
 ]
 
 dynamicObjects = [

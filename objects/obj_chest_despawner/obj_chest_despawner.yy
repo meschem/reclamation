@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"misc",
-    "path":"folders/Objects/particles/misc.yy",
+    "path":"folders/Objects/destructible_particles/misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

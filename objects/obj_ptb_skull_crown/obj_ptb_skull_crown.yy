@@ -9,11 +9,11 @@
   "overriddenProperties":[],
   "parent":{
     "name":"skellies",
-    "path":"folders/Objects/particles/skellies.yy",
+    "path":"folders/Objects/destructible_particles/skellies.yy",
   },
   "parentObjectId":{
-    "name":"obj_ptb_skel_skull_purp",
-    "path":"objects/obj_ptb_skel_skull_purp/obj_ptb_skel_skull_purp.yy",
+    "name":"obj_destructible_bouncer",
+    "path":"objects/obj_destructible_bouncer/obj_destructible_bouncer.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

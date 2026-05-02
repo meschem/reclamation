@@ -9,11 +9,11 @@
   "overriddenProperties":[],
   "parent":{
     "name":"skellies",
-    "path":"folders/Objects/particles/skellies.yy",
+    "path":"folders/Objects/destructible_particles/skellies.yy",
   },
   "parentObjectId":{
-    "name":"obj_particle_bouncer",
-    "path":"objects/obj_particle_bouncer/obj_particle_bouncer.yy",
+    "name":"obj_destructible_bouncer",
+    "path":"objects/obj_destructible_bouncer/obj_destructible_bouncer.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

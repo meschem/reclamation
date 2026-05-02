@@ -39,10 +39,10 @@ var _screenCenterY = camera_get_view_y(view_camera[0]) + (height / 2)
 
 var _distToMouse = point_distance(_screenCenterX, _screenCenterY, mouse_x, mouse_y)
 
-var _deadzone = 16
-var _maxDist = 180
-var _maxOffset = 60
-var _aimLerp = 0.08 
+var _deadzone = deadzone
+var _maxDist = maxDist
+var _maxOffset = maxOffset
+var _aimLerp = aimLerp 
 
 var _scaledDist = clamp(_distToMouse - _deadzone, 0, _maxDist - _deadzone)
 var _aimStrength = _scaledDist / (_maxDist - _deadzone) // 0 to 1

@@ -28,6 +28,9 @@ shadowSprite = spr_war_hammer_shadow
 
 wakes = []
 
+var _puff = instance_create_depth(x, y, depths.fx, obj_particle_single_cycle)
+_puff.sprite_index = spr_smoke_puff_shade_md
+
 applyWakes = function(_count) {
     if (_count >= 1) {
         var _wake = instance_create_depth(x, y, depth, obj_war_hammer_wake_sm)
@@ -65,11 +68,11 @@ onHit = function(_target) {
 	//if (!hitStun) {
 		//hitStun = true
 	//create_hit_stun(1)
-	create_screenshake(screenshake_light)
+	create_screenshake(2)
 }
 
 onKill = function() {
-    create_hit_stun(2)
+    create_hit_stun(1)
 }
 
 onCollideFx = function(_target = noone)

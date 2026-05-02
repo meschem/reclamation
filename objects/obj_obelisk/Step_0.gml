@@ -5,6 +5,8 @@ if (game_is_paused()) {
 
 age++
 
+beginStep()
+
 depth = depths.player - y
 
 if (!poiAdded) {
@@ -24,8 +26,10 @@ if (
 	obj_player.y > y + activationArea.y1 &&
 	obj_player.y < y + activationArea.y2 
 ) {
+    playerInActiveRange = true
 	charge++
 } else {
+    playerInActiveRange = false
 	charge = charge - max(0, charge)
 }
 
@@ -41,6 +45,12 @@ drawUiLoc.x -= 15
 chargeBarInfo.xPos = round((x - camera_get_view_x(view_camera[0])) - (sprite_width / 2))
 chargeBarInfo.yPos = round((y - camera_get_view_y(view_camera[0])) - (sprite_height / 2) + chargeBarInfo.yOffset)
 
-if (charge >= chargeMax) {
+if (
+    pressToActivate &&
+    playerInActiveRange && 
+    keyboard_check_pressed(ord("G"))
+) {
+    activate()
+} else if (charge >= chargeMax) {
 	activate()
 }

@@ -17,6 +17,11 @@ height = camera_get_view_height(viewCamera)
 boundsPaddingX = (width * 0.5) - focusObjectBoundsX
 boundsPaddingY = (height * 0.5) - focusObjectBoundsY
 
+deadzone = 16
+maxDist = 180
+maxOffset = 30
+aimLerp = 0.08 
+
 accel = 0.2
 speedMax = 10
 xVel = 0

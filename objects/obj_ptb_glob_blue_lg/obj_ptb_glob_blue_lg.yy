@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"slimes",
-    "path":"folders/Objects/particles/slimes.yy",
+    "path":"folders/Objects/destructible_particles/slimes.yy",
   },
   "parentObjectId":{
     "name":"obj_particle_bouncer",

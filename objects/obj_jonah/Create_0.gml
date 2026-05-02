@@ -18,7 +18,7 @@ hp = 50
 maxHp = 50
 baseMaxHp = 50
 
-baseMoveSpeedMax = 1.8
+baseMoveSpeedMax = 1.6
 moveAccel = 0.4
 moveDeaccel = 0.3
 

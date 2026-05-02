@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"lich",
-    "path":"folders/Objects/particles/lich.yy",
+    "path":"folders/Objects/destructible_particles/lich.yy",
   },
   "parentObjectId":{
     "name":"obj_ptb_skel_skull_purp",

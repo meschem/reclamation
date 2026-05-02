@@ -57,7 +57,11 @@ if (moving) {
 			zVel = 0
 			rotationSpeed = 0
 			
-			age = (lifeSpan - 40)
+            image_blend = global.colorGray // make_colour_rgb(128, 128, 128)
+            
+            alarm_set(0, random_range(4, 7))
+            
+			//age = (lifeSpan - 40)
 		} else {
 			// bounce
 			bounces++

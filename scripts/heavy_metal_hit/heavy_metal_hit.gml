@@ -11,7 +11,7 @@ function heavy_metal_hit(_target) {
 	//_inst.image_angle = _angle
 	
 	var _gain = random_range(0.9, 1.1)
-	var _pitch = random_range(0.93, 1.07)
+	var _pitch = random_range(0.75, 0.85)
 	var _snd = snd_thud_impact
 	
 	if (_target != noone) {

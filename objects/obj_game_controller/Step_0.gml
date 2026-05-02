@@ -72,15 +72,15 @@ if (keyboard_check_pressed(ord("X"))) {
 	//apply_random_elite_buff(_baddie, 2)
 }
 
-//if (keyboard_check_pressed(ord("C"))) {
-//	spawn_baddie_at_location(
-//		obj_grub_small, mouse_x, mouse_y
-//	)
-//}
+if (keyboard_check_pressed(ord("C"))) {
+	spawn_baddie_at_location(
+		obj_zombie, mouse_x, mouse_y
+	)
+}
 
 if (keyboard_check_pressed(ord("V"))) {
 	spawn_baddie_at_location(
-		obj_big_wizard, mouse_x, mouse_y
+		obj_skeleton_archer, mouse_x, mouse_y
 	)
 }
 

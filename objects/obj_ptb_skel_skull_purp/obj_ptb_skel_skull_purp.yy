@@ -3,17 +3,18 @@
   "%Name":"obj_ptb_skel_skull_purp",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ptb_skel_skull_purp",
   "overriddenProperties":[],
   "parent":{
     "name":"skellies",
-    "path":"folders/Objects/particles/skellies.yy",
+    "path":"folders/Objects/destructible_particles/skellies.yy",
   },
   "parentObjectId":{
-    "name":"obj_particle_bouncer",
-    "path":"objects/obj_particle_bouncer/obj_particle_bouncer.yy",
+    "name":"obj_destructible_bouncer",
+    "path":"objects/obj_destructible_bouncer/obj_destructible_bouncer.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

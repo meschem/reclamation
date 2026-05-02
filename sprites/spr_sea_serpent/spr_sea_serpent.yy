@@ -19,8 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c9e1c22a-b8e0-4279-9ab2-0734d204f912","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c9e1c22a-b8e0-4279-9ab2-0734d204f912","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"883e9561-cd77-481f-b345-86e95830da98","blendMode":0,"displayName":"default","isLocked":false,"name":"883e9561-cd77-481f-b345-86e95830da98","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d50c2550-4dd3-4333-afcd-7905c2a5bc8d","blendMode":0,"displayName":"default","isLocked":false,"name":"d50c2550-4dd3-4333-afcd-7905c2a5bc8d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_sea_serpent",
   "nineSlice":null,

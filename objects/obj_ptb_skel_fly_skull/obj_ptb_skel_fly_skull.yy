@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"skellies",
-    "path":"folders/Objects/particles/skellies.yy",
+    "path":"folders/Objects/destructible_particles/skellies.yy",
   },
   "parentObjectId":{
     "name":"obj_particle_bouncer",

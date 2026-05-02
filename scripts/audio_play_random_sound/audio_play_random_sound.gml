@@ -1,4 +1,4 @@
-///@description   Description
+///@description   Plays a random sound using the normal play sound function, but with an array that selects a random element
 ///@param {array<real>} _soundIds
 ///@param {real} _priority
 ///@param {bool} _loops

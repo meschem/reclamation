@@ -2,7 +2,7 @@
 
 event_inherited()
 
-lifeSpan = random_range(400, 600)
+lifeSpan = random_range(4000, 6000)
 age = 0
 
 xVel = 0
@@ -12,6 +12,11 @@ zVelMax = 100
 
 deaccel = 0
 
+partitioned = false
+canPartition = function() {
+    return true
+}
+
 yGroundOffset = -6
 zOffset = yGroundOffset - 2
 
@@ -20,6 +25,8 @@ gravAccel = 0.3
 bounceRatio = 0.7
 frictionRatio = 0.7
 moving = true
+mass = 1 // used for scaling
+destroyedByHit = false
 
 lateralSpeed = 0
 minBounceVelocity = 1.4

@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_dmg_icon_cold",
   "bboxMode":0,
-  "bbox_bottom":10,
+  "bbox_bottom":11,
   "bbox_left":1,
-  "bbox_right":7,
+  "bbox_right":8,
   "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":9,
+  "width":10,
 }
